@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTD TechAnywhere Blackberry Setup</title>
+<meta name="generator" content="Adobe RoboHelp 10" />
+<link rel="StyleSheet" href="sampro.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("SAMPro Help\nService Management\nTechAnywhere  Blackberry\nRTD TechAnywhere Blackberry Setup / Overview");
+addAvenueInfo("RTDSETUP","","");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sampro.htm", "", "&gt;", "Home", "Contents.htm");
+document.write("<a href=\"Logging_On.htm\">SAMPro Help<\/a> &gt; <a href=\"Dispatch_Board_Overview.htm\">Service Management<\/a> &gt; <a href=\"RTD_TechAnywhere_Blackberry_Setup.htm\">TechAnywhere  Blackberry<\/a> &gt; RTD TechAnywhere Blackberry Setup / Overview<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('sampro.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<h1>RTD TechAnywhere Blackberry Setup</h1>
+<h2>Introduction</h2>
+<p>This functionality enables your firm to send work order information from SAM Pro to your technicians in the field on RTD’s (Remote Technician Devices) such as Blackberries. This document provides background information on how information is passed between SAM Pro and the RTD, setup information, and technical details on managed list operations.</p>
+<p>The registry entry needed to manage this functionality is described in <a href="Registry_Entry_RTD_Remote_Tech_Device.htm">Registry Entry RTD Remote Tech Device</a> .</p>
+<h2>Mirifex Overview</h2>
+<p>Mirifex will be providing</p>
+<p style="margin-left:18.00pt;">- The client application running on the Tech Device.</p>
+<p style="margin-left:18.00pt;">- A transfer mechanism which will be used to transfer data between Sampro and the Tech device.</p>
+<p>Shared folders will be used for the data transfer mechanism. Mirifex software will pick up outbound (from Sampro’s perspective) files from shared folders and transfer them to the Tech Device. Mirifex software will also pick up inbound files sent by the Tech Device and deposit them in shared folders.</p>
+<p>All files transferred in both directions will be properly formatted XML files. The contents and format of these files will conform to Data-Basics specifications.</p>
+<h2>Work Order Transfer and Posting Cycle</h2>
+<p style="margin-left:18.00pt;"><font style="font-weight:bold;">Sampro</font> <font style="font-weight:bold;">(Publishing</font> <font style="font-weight:bold;">Of</font> <font style="font-weight:bold;">New Work Order</font><font style="font-weight:bold;">s</font><font style="font-weight:bold;">)</font><font style="font-weight:bold;">:<br /></font>Whenever a Work Order is created or changed, SAM Pro’s Escalation Manger examines the Escalation Profile associated with the Work Order. Certain Escalation Events associated with the Profile can trigger the sending of the Work Order to the Tech Device.</p>
+<p style="margin-left:18.00pt;">When one of these events is detected, the Escalation Manager will queue up a Scheduled Event whose function is to initiate the writing of the outbound XML file representing the Work Order. That Scheduled Event will identify the Work Order Id and the Id of the Work Order’s Assigned Technician.</p>
+<p style="margin-left:18.00pt;">Scheduled Event Manager periodically examines its queue and identifies Pending events whose Scheduled Date and Scheduled Time has been exceeded. When it identifies the event queued as above, it invokes a routine which XML encodes the Work Order and writes the XML encoded Work Order to the Outbound XML folder. This folder is identified in the Sampro Registry.</p>
+<p style="margin-left:18.00pt;">The shared folder must be accessible by the Mirifex server. Mirifex software watches this folder for newly added documents. When Mirifex identifies a new work order (encoded as an XML document), it will automatically transfer the XML for the work order to the Tech Device corresponding to the Assigned Technician’s Email Address. It will then transfer the document from the Outbound folder to an Archive folder.</p>
+<p style="margin-left:18.00pt;"><font style="font-weight:bold;">Tech Device (Receiving</font> <font style="font-weight:bold;">New Work Orders</font><font style="font-weight:bold;">):</font><br />
+When the Tech Device receives a Work Order from Sampro, it places it in a folder which serves as an ‘open work order repository’.</p>
+<p style="margin-left:18.00pt;"><font style="font-weight:bold;">Tech Device (Updating of Work Information by Technician)<br /></font>The Mirifex Remote Tech application on the Tech Device is used by the technician to retrieve information about the work order, to make ‘Technician Entries’ such as labor and work completed against the work order, and to change the status of the work order.</p>
+<p style="margin-left:18.00pt;"><font style="font-weight:bold;">Tech Device</font> <font style="font-weight:bold;">(Publishing</font> <font style="font-weight:bold;">of Work Orders</font> <font style="font-weight:bold;">Changes</font><font style="font-weight:bold;">)</font><font style="font-weight:bold;">:<br /></font>When the technician changes the status of a Work Order on the Tech Device, the Tech Device application will XML encode the Work Order and cause the XML to be forwarded to Sampro. A list of valid Status Codes and their associated status categories will be supplied to the Tech Device as a ‘Managed List’ (Managed Lists are explained below).</p>
+<p style="margin-left:18.00pt;"><font style="font-weight:bold;">Sampro</font> <font style="font-weight:bold;">(Receiving</font> <font style="font-weight:bold;">Of Work Order Changes</font><font style="font-weight:bold;">)</font><font style="font-weight:bold;">:</font><font style="font-weight:bold;"><br /></font>A Sampro scheduled event periodically executes the Sampro function ‘Srtddcmntpst’ (Start Remote Tech Device Document Post). Srtddcmntpst polls the appropriate folder for XML files incoming from Tech Devices. This folder is identified in the sys-rtd Sampro registry.</p>
+<p style="margin-left:18.00pt;">When Sampro finds a Work Order XML document in the Inbound Document Source Folder, it attempts to post that document to the corresponding Work Order. The Sampro Class ‘WOFromRTDPost’ implements the posting logic.</p>
+<p style="margin-left:18.00pt;">There are two types of posting mechanisms. The posting mechanism is determined by the status category corresponding to the WorkOrderStatus value founding the XML.</p>
+<p style="margin-left:36.00pt;">If the status category is ‘open’, then the document is treated as a ‘status change’ document. The new status information is extracted from the XML and the Work Order is updated accordingly. This involves searching the Work Order’s Tech tab for the line referencing the Assigned Technician; emulating the entry of the appropriate information on the line, and emulating the pressing of the Save key.</p>
+<p style="margin-left:36.00pt;">If the status category is other than ‘open’, then the document is treated as a ‘completion’ document. The Work Order’s status updated as above. In addition, the Work Order is updated with information from the XML’s TechEntries tag. Note that where this process requires adding entries to any of the Work Order’s child tabs, the new entries will be appended to any entries already in place.</p>
+<p style="margin-left:18.00pt;">Finally, the file containing the XML is either deleted or is moved to an archive folder as directed by the Sampro ‘sys-rtd’ registry ‘disposition’ entries.</p>
+<p style="margin-left:18.00pt;"><font style="font-weight:bold;">Sampro</font> <font style="font-weight:bold;">(</font><font style="font-weight:bold;">Managed List</font> <font style="font-weight:bold;">Updating)<br /></font>The Mirifex application running on the RTD requires a number of ‘managed lists’. These are normally used to populate pull down lists displayed on the application’s forms. These lists are usually derived from Sampro tables. The contents of these lists may change from time to time. When a list changes, the new list must be uploaded to the tech devices. The shared folder used to hold the current set of managed lists is defined within the Sampro registry.</p>
+<p style="margin-left:18.00pt;">The Sampro class RTDManagedListWriter is used to generate XML for all the managed lists. It then compares the generated XML against that maintained in the OutboundManagedListFolder. If the generated entry is not already in the folder, or if it differs from the entry already in the folder, the newly generated XML document is written to the OutboundManagedListFolder.</p>
+<p style="margin-left:18.00pt;">The OutboundManagedListFolder must be visible to the Mirifex server software. The server software will recognize when a new document is created in the folder or an existing document is replaced, and cause the document is uploaded to all Tech Devices.</p>
+<p style="margin-left:18.00pt;">A Sampro scheduled event, periodically executes the Sampro function ‘srtdexprtmngdlsts’ which uses RTDManagerListWriter to update the OutboundManagedListFolder as necessary.</p>
+<p style="margin-left:18.00pt;"><font style="font-weight:bold;">Sampro</font> <font style="font-weight:bold;">(Housekeeping)<br /></font>If generated and received XML files are not deleted immediately after use, some mechanism must be provided to periodically delete files which are beyond a certain age. No such application currently exists and should be handled manually.</p>
+<p style="margin-left:18.00pt;"><font style="font-weight:bold;">Sampro</font> <font style="font-weight:bold;">(Logging)<br /></font>A logging mechanism can be enabled by appropriate entries in the ‘sys-rtd’ registry entry. A log entry is be generated whenever Sampro generates an XML file for publishing. A log entry is be generated whenever an XML file is retrieved from a Tech Device and posted. Any error conditions encountered in either of these operations will appear in the log.</p>
+<p style="margin-left:18.00pt;"><font style="font-weight:bold;">Sampro</font> <font style="font-weight:bold;">(Error Reporting)<br /></font>Any errors encountered by Sampro in the generating or posting of XML will be reported in the log.</p>
+<h3>Other Functions</h3>
+<p><font style="font-weight:bold;">Daily Work Order Export Function<br /></font>This function may be used to export XML for all Work Orders whose Technician tabs meet certain criteria. These criteria are defined in the sys-rtd Sampro registry entry. In particular, the administrator may specify an effective date (‘today’ or ‘tomorrow’) and a list of Log Type Ids. When this function is run, Technician Tab lines meeting the criteria trigger the generation of the corresponding outbound XML files. See <a href="Start_RTD_Daily_Work_Order_Export.htm">Start RTD Daily Work Order Export</a> for additional information.</p>
+<p>This function would normally be automatically run on a daily basis via Scheduled Event Manager entries.</p>
+<h2>Setup Steps for SAM Pro</h2>
+<p style="margin-left:54.00pt;">a. Make sure the installation has ‘RemoteTech’ enabled in the VRegistry. This step must be completed before logging on to set up the Technician records as described below.</p>
+<p style="margin-left:54.00pt;">b. Make all sys-rtd registry entries as specified in <a href="Registry_Entry_RTD_Remote_Tech_Device.htm">Registry Entry TechAnywhere / Mirifex RTD Remote Tech Device</a> .</p>
+<p style="margin-left:54.00pt;">c. Set up the Technician record for each technician who will carry a Tech Device (See Appendix E). This step assigns each technician a Email Address which will be the tie between the technician and his Tech Device.</p>
+<p style="margin-left:54.00pt;text-indent:18.00pt;">Set the Web Access field to ‘Technician’</p>
+<p style="margin-left:54.00pt;text-indent:18.00pt;">Set the Remote Device Type field to ‘CE’</p>
+<p style="margin-left:54.00pt;text-indent:18.00pt;">Set the Email Address field to the technician device’s e-mail address.</p>
+<p style="margin-left:54.00pt;text-indent:18.00pt;">Set the Remote Pin field to a non-blank value.</p>
+<p style="margin-left:54.00pt;">d. Configure a Sampro scheduled event to periodically run the starter function Srtddcmntpst. This function is responsible for posting all newly arrived XML files. See Appendix F.</p>
+<p style="margin-left:54.00pt;">e. Configure a Sampro scheduled event to periodically run the starter function Srtdexprtmngdlsts. This function is responsible for keeping the OutboundManagedListFolder up to date. See Appendix G.</p>
+<p style="margin-left:54.00pt;">f. Create a new Notification Category ‘TechAnywhere’.</p>
+<p style="margin-left:54.00pt;text-indent:18.00pt;">Set the Method field to ‘TechAnywhere’</p>
+<p style="margin-left:54.00pt;text-indent:18.00pt;">Set the Source field to ‘Technician’.</p>
+<p style="margin-left:54.00pt;">g. Check the ‘Ok to use’ check box (the Remote Technician Applet field) for any Payroll Period to which you want to be able to post Labor costs . Note that the System Administrator must continue to do this for any Payroll Period created.</p>
+<p style="margin-left:54.00pt;">h. For each escalation profile, add an Escalation Profile line which will be triggered when a work order is assigned (or reassigned) to a technician.</p>
+<p style="margin-left:54.00pt;text-indent:18.00pt;">Set the Source field to ‘workorder’</p>
+<p style="margin-left:54.00pt;text-indent:18.00pt;">Set the Action Type field to ‘notification’</p>
+<p style="margin-left:54.00pt;text-indent:18.00pt;">Set the Status From and Status To Fields as appropriate.</p>
+<p style="margin-left:54.00pt;text-indent:18.00pt;">Set the Notification Id field to the ‘TechAnywhere’ Notification Category created in the previous step.</p>
+<p>Sample Escalation profile lines follow:</p>
+<p><img src="image/IMG00037.gif" border="0" height="391" width="848" alt="image\IMG00037.gif" /></p>
+<p><img src="image/IMG00038.gif" border="0" height="498" width="903" alt="image\IMG00038.gif" /></p>
+<h2>Background Information: Managed Lists</h2>
+<p>The following managed lists will be made available for transfer to the Tech Device:</p>
+<p style="margin-top:0;margin-bottom:0">&#160;</p>
+<p style="margin-left:18.00pt;">WorkOrderStatusCode</p>
+<p style="margin-left:54.00pt;">StatusCode&#160;&#160;&#160;(External)</p>
+<p style="margin-left:54.00pt;">SamproStatusCode&#160;&#160;(Internal)</p>
+<p style="margin-left:54.00pt;">StatusCodeCategory<br /></p>
+<p style="margin-left:18.00pt;">Technician&#160;&#160;&#160;&#160;(From tchncn table)</p>
+<p style="margin-left:54.00pt;">TechnicianId</p>
+<p style="margin-left:54.00pt;">TechnicianName</p>
+<p style="margin-left:54.00pt;">DefaultLaborRateId</p>
+<p style="margin-left:54.00pt;">DefaultLaborRateName<br /></p>
+<p style="margin-left:18.00pt;">LaborRate&#160;&#160;&#160;&#160;(From lbrrte table)</p>
+<p style="margin-left:54.00pt;">LaborRateId</p>
+<p style="margin-left:54.00pt;">LaborRateName<br /></p>
+<p style="margin-left:18.00pt;">LaborRateTable&#160;&#160;&#160;(From lbrrtetble table)</p>
+<p style="margin-left:54.00pt;">LaborRateId</p>
+<p style="margin-left:54.00pt;">LaborRate</p>
+<p style="margin-left:54.00pt;">RateType<br /></p>
+<p style="margin-left:18.00pt;">OtherRate&#160;&#160;&#160;&#160;(From othrrte table)</p>
+<p style="margin-left:54.00pt;">OtherRateId</p>
+<p style="margin-left:54.00pt;">OtherRateName<br /></p>
+<p style="margin-left:18.00pt;">InventoryItem&#160;&#160;&#160;&#160;(From invntryitm table)</p>
+<p style="margin-left:54.00pt;">PartNumber</p>
+<p style="margin-left:54.00pt;">PartDescription</p>
+<p style="margin-left:54.00pt;">InventoryGroupId</p>
+<p style="margin-left:54.00pt;">InventoryGroupName<br /></p>
+<p style="margin-left:18.00pt;">Location&#160;&#160;&#160;&#160;(From lctn table)</p>
+<p style="margin-left:54.00pt;">LocationId</p>
+<p style="margin-left:54.00pt;">LocationName<br /></p>
+<p style="margin-left:18.00pt;">ResolutionCode&#160;&#160;&#160;(From rsltncde table)</p>
+<p style="margin-left:54.00pt;">ResolutionCodeId</p>
+<p style="margin-left:54.00pt;">ResolutionCodeName<br /></p>
+<p style="margin-left:18.00pt;">WorkCodes&#160;&#160;&#160;&#160;(from wrkcde table)</p>
+<p style="margin-left:54.00pt;">WorkCodeId</p>
+<p style="margin-left:54.00pt;">WorkCodeName</p>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

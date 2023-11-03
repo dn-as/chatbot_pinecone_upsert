@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Diagnostic Alert</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("SAM Pro Help\nRegistry Entries\nGeneral System / Security Registry Entries\nDiagnostic Alert **Support**");
+addTocInfo("Support Help\nSupport Functions\nDiagnostic Alert");
+addAvenueInfo("DIAGNOSTIC_ALERTS_MECHANISM","","");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Diagnostic Alert Registry</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Overview</FONT></P>
+ <P class="support" >The Alert mechanism is to be used for diagnostic purposes. Every alert has an id. The id controls the manner in which the alert is to be handled. The mechanisms for handling an alert are identified in the Sampro Registry. The registry may identify zero or more directives for handling a specific alert id.</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" >Directives for handling an alert include:</P>
+ <P class="support" style="text-indent:36.00pt;">Ignore the alert.</P>
+ <P class="support" style="text-indent:36.00pt;">Make an entry in the Smalltalk error log.</P>
+ <P class="support" style="text-indent:36.00pt;">Make an entry and a stack dump in the Smalltalk error log.</P>
+ <P class="support" style="text-indent:36.00pt;">Make a log entry into an identified log file.</P>
+ <P class="support" style="text-indent:36.00pt;">Notify the user of the alert via a MessageBox.</P>
+ <P class="support" style="text-indent:36.00pt;">Send an email.</P>
+ <P class="support" >An alert’s message may also include optional description lines which can be used to identify the specific nature of the alert.</P>
+ <P class="support" style="text-indent:36.00pt;">&nbsp;</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Programming Notes: </FONT><FONT style="font-weight:bold; " >Public</FONT><FONT style="font-weight:bold; " > Alert Methods</FONT></P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" style="text-indent:36.00pt;">Alert class&gt;&gt;alert:</P>
+ <P class="support" style="text-indent:36.00pt;">Invokes alert directives for the passed alert id.</P>
+ <P class="support" style="text-indent:36.00pt;">Alert class&gt;&gt; alert:description:</P>
+ <P class="support" style="margin-left:36.00pt;text-indent:36.00pt;">Invokes alert directives for the passed alert id and includes the passed description into the alert message in order to identify the specific nature of the alert. The description can be any of the following:</P>
+ <P class="support" style="margin-left:36.00pt;text-indent:36.00pt;">A value whose ‘asString’ value will be incorporated into the alert message.</P>
+ <P class="support" style="margin-left:36.00pt;text-indent:36.00pt;">An Array or OrderedCollection whose elements (asString) will be concatenated to form a message which will be incorporated into the alert message. A new line will be inserted between each element.</P>
+ <P class="support" style="margin-left:36.00pt;text-indent:36.00pt;">A dictionary the contents of which will be incorporated into the alert message. Each key/value pair will appear on a separate line. ‘asString’ will be used for both the key and the value.</P>
+ <P class="support" style="margin-left:36.00pt;text-indent:36.00pt;">Any other object which answers to ‘asString’.</P>
+ <P class="support" style="margin-left:36.00pt;text-indent:36.00pt;">Assert class&gt;&gt;assert:alert:</P>
+ <P class="support" style="margin-left:36.00pt;text-indent:36.00pt;">Invokes the ‘alert:’ method if the passed Boolean is false (i.e. the assertions fails).</P>
+ <P class="support" style="margin-left:36.00pt;text-indent:36.00pt;">Assert class&gt;&gt;assert:alert:description:</P>
+ <P class="support" style="margin-left:36.00pt;text-indent:36.00pt;">Invokes the ‘alert:description’ method if the passed Boolean is false.</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Force MessageBox Alerts</FONT></P>
+ <P class="support" >There are some occasions in which an Alert must display a message to the user regardless of the contents of the SamPro register. For example, the detection of the alert condition could issue an Alert and force a rollback. The user must be notified that the rollback is going to occur. This is true even if the alert system is turned off. </P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" >This situation can be handed with a forced MessageBox alert. To force the MessageBox, prefix the Alert Id with an exclamation point ‘!’ when passing to one of the above methods. This option will force a MessageBox to be displayed even if the Alert is disabled or does not contain a messagebox directive. If the Alert does contain a messagebox directive, only one MessageBox will be displayed.</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" >Do not include the leading ‘!’ in the registry entry defining the Alert. </P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" ><FONT style="font-weight:bold; " >The sys-alert Registry Entry</FONT></P>
+ <P class="support" >This optional registry entry contains general control information for the Alert mechanism.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Registry Key</FONT></P>
+ <P class="support" style="text-indent:36.00pt;">sys-alert</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Registry Contents</FONT></P>
+ <P class="support" style="text-indent:36.00pt;"><FONT style="font-weight:bold; " >Disable</FONT><FONT style="font-weight:bold; " >d</FONT><FONT style="font-weight:bold; " > = yes</FONT></P>
+ <P class="support" style="text-indent:36.00pt;">This is used to disable the Alert system. If this entry is missing or does not begin with a ‘y’ or a ‘Y’, the Alert system is enabled.</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >emailFrom = sendersEmailAddress<BR></FONT>This entry <FONT style="font-style:italic; " >must</FONT> be included if any alerts are to be emailed. The sendersEmailAddress must be a valid email address. In addition, the ‘sys-email’ registry entry must be correctly setup for emailing to work.</P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >mailFrom = sendersEmailAddress<BR></FONT>Synonymous with the emailFrom entry. Either may be used.</P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Registry Entries</FONT><FONT style="font-weight:bold; " > for a Specific Alert</FONT></P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Registry Id:</FONT><FONT style="font-weight:bold; " ><BR></FONT>The registry key for an alert ‘xxxx’ will be ‘sys-alert-xxxx’. If no registry entry is found, the alert will be ignored unless it is a Force MessageoBox alert. </P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >A Force MessageBox alert</FONT> (identified by a leading ! on the Alert Id) will force a MessageBox to be displayed even if the Alert is disabled or does not contain a messagebox directive. If the Alert does contain a messagebox directive, only one MessageBox will be displayed. Do <FONT style="text-decoration:underline;" >not</FONT> include the leading ‘!’ in the registry entry defining the Alert. </P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Contents / Additional Contents: </FONT><FONT style="font-weight:bold; " >Registry </FONT><FONT style="font-weight:bold; " >Directiv</FONT><FONT style="font-weight:bold; " >e</FONT><FONT style="font-weight:bold; " > </FONT><FONT style="font-weight:bold; " >Lines</FONT><FONT style="font-weight:bold; " > </FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >i</FONT><FONT style="font-weight:bold; " >gnore<BR></FONT>If the top registry line is ‘ignore’ the alert will be ignored. If ‘ignore’ is used on a line other than the first, the line itself will be ignored.</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >d</FONT><FONT style="font-weight:bold; " >escripton  </FONT><FONT style="font-weight:bold; " >dddd</FONT><FONT style="font-weight:bold; " ><BR></FONT>dddd is a description of the alert. This description will be incorporated into the alert message. This is independent from the description passed to the ‘alert:description:’ method. If multiple description directives are encountered, the descriptions will be concatenated with a line break separating them.</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >errorLog</FONT><FONT style="font-weight:bold; " ><BR></FONT>The alert will be written to the Smalltalk error log.</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >stackTrace<BR></FONT>The alert and a stack trace will be written to the Smalltalk error log.</P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >logtofile filename<BR></FONT>Writes the alert to the indicated file or path. <FONT style="text-decoration:underline;" >Make sure this is a valid file or path name</FONT>.</P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >e</FONT><FONT style="font-weight:bold; " >mailT</FONT><FONT style="font-weight:bold; " >o emailAddress</FONT><FONT style="font-weight:bold; " > subjectString</FONT><FONT style="font-weight:bold; " ><BR></FONT>Sends an email to the indicated email address. A default subject will be synthesized if the subjectString is omitted.</P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >mailTo emailAddress subjectString<BR></FONT>Synonymous with the emailTo directive.</P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >messageBox optionalMessage<BR></FONT>Displays a message box on the users screen. The optional message, if present, will precede the alert’s message.</P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" >Note that multiple registry directives are allowed. The directives will be processed in the order that they appear in the registry.</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" >Any of the descriptive text supplied in the directives may include backslash characters (‘\’). These will be converted to line breaks when the alert’s message is constructed.</P>
+ <P class="support" ><BR><IMG src="images/img00028.gif" border=0 height=1162 width=1090 alt="images\img00028.gif"> </P>
+ <P class="support" ><IMG src="images/img00029.gif" border=0 height=1162 width=1090 alt="images\img00029.gif"> </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

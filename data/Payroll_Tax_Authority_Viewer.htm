@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.3.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="MS-HKWD" content="payroll tax authority"/>
+<meta name="MS-HKWD" content="tax authority"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Tax Authority Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="employee,payroll tax authority,tax authority"/><meta name="brsnext" value="Payroll_Tax_Table_Viewer.htm"/><meta name="brsprev" value="Workers_Comp_State_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Tax Authority Viewer">
+        <span>Tax Authority Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Tax Authority Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain the records required for payroll tax calculations. 
+ Click <a href="Payroll_Tax_Reciprocity.htm">Payroll Tax Reciprocity</a> 
+ for an overview on this subject.</p>
+<h2>Example:</h2>
+<p>IRA, FUTA, SSA, Ohio Department of Taxation, Ohio SUTA, City Tax, etc.</p>
+<h2>Registry:</h2>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Use_Control_Records_GL_Entities_for_PR">Use 
+ Control Records&#39; GL Entities for PR Deductions, Earnings, Taxes, etc,.Instead 
+ of Employees&#39;</a>.</p>
+<h2>Usage:</h2>
+<p>Required for Payroll.</p>
+<p>Referenced in Records: Job, Work Order, Payroll Tax Table, and Employee.<br/>
+Referenced in Journals: Labor, Payroll Adjustment.</p>
+<p><a href="Canadian_Payroll_Notes.htm">Canadian Payroll Notes</a></p>
+<p>This release implements SDI (Box 14 on form W-2).  To do so, 
+ the User 1 field in the applicable Tax Authority must be set to SDI. Tax 
+ Authority must also be set up as type Other.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important 
+ Note: Box 14 -</font> <font style="font-weight: bold;">W2s:</font></p>
+<p style="margin-left: 36.00pt;">The system uses the Tax <font style="text-decoration: underline; ">Table</font> 
+ to handle unemployment insurance, disability, etc. The Tax Table User1 
+ fields may be used to specify the titles for unemployment, insurance, 
+ disability, etc. Only the Box 14 description should be entered, i.e FLI,TDI 
+ or SUI in the User1 field.</p>
+<p style="margin-left: 36.00pt;">In previous releases, users could implement 
+ SDI (Box 14 on form W-2) by setting the User 1 field in the applicable 
+ Tax <font style="text-decoration: underline; ">Authority</font> to SDI. 
+ This functionality is still supported.</p>
+<h2>Important Fields:</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Main Tab</p>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields that may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the order or status (required, optional, 
+ default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">Tax Authority Id:</font> (10 character, 
+ only . and - special characters)<br/>
+A unique Id for this record: This field is required.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Tip:</font> 
+ For Local Authorities, the Tax Authority Id and the corresponding Tax 
+ Table Id should be identical to correctly support employee withholding.</p>
+<p><font style="font-weight: bold;">Tax Authority Name:</font> (30 character)<br/>
+A brief description. This field is optional but recommended.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field displays the Security Id of the local 
+ user that created this record. If multiple location security is not implemented 
+ on your system, or if this record was created by a global user, this field 
+ will be blank.</p>
+<p><font style="font-weight: bold;">Tax Type:<br/>
+</font>In previous versions, this field was an option field (with radio 
+ buttons) rather than an Id field. It is now implemented as an Id field 
+ due to an expanded number of tax types. These Id’s are maintained from 
+ within the Data-Basics software, and may not be changed by the user. The 
+ following Tax Types Id’s are now available:</p>
+<p> EI  (Canadian Users Only - Employment Insurance)</p>
+<p> CPP  (Canadian Users Only - Canadian Pension Plan)</p>
+<p> Province  (Canadian Users Only - Provincial Income Tax)</p>
+<p> Federal  (Federal Tax - US or Canada)</p>
+<p> FICA  (US Users Only: Federal Insurance Contribution 
+ Act)</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"> FUTA  (US 
+ Users Only: Federal Unemployment Insurance)</p>
+<p> SUTA  (US Users Only: State Unemployment Insurance)</p>
+<p> State  (US Users Only: State Tax)</p>
+<p> Local  (US Users Only: Local Income Tax)</p>
+<p> Other  (Other Income Tax – US or Canada)</p>
+<p><font style="font-weight: bold;">Annualized Compute?</font><br/>
+If this box is checked, wages will be annualized before the appropriate 
+ tax table is applied to them. Generally, if the taxes imposed by this 
+ taxing authority are bracketed (e.g., federal or state taxes), or if annual 
+ limits are applicable, check this box (by double-clicking on it or pressing 
+ the Spacebar).</p>
+<p>An example of a taxing authority where the Annualized Compute? box should 
+ not be checked is for FICA tax: the associated tax table has only one 
+ tax rate detail line.</p>
+<p><font style="font-weight: bold;">Check Label:</font> (10 character)<br/>
+The label you wish to appear on payroll checks for deductions of this type.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Check 
+ Label – Special Note for Canadian Users<br/>
+</font>All forms of income tax get grouped for like labels – so labels 
+ must be carefully entered for FED and Provincial tax the label must be 
+ the same. FED, ON and ON Health – Label &quot;Tax&quot; or &quot;Income 
+ Tax&quot; all the same that these taxes are grouped to avoid confusing 
+ your employees.</p>
+<p><font style="font-weight: bold;">Employer Id:</font> (20 character)<br/>
+Your firm&#39;s TIN for this taxing authority.</p>
+<p><font style="font-weight: bold;">State</font><font style="font-weight: bold;">/Provincial</font><font style="font-weight: bold;">:</font><br/>
+If this is a state or municipal taxing authority, enter the appropriate 
+ two-character state code (OH, NY, CA, etc.).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Canadian 
+ Users:</font></p>
+<p style="margin-left: 36.00pt;">For any provincial Tax Authority Records, 
+ you need to put the province code in this field to support T4 printing.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold; text-decoration: underline; ">Deduction 
+ Records</font></p>
+<p style="margin-left: 36.00pt;">For the deduction records for Union Dues 
+ or Charitable, need to populate field ‘Deduction User 1’ with Dues or 
+ Charitable, respectively.</p>
+<p><font style="font-weight: bold;">Round Tax Amount?</font><br/>
+If payroll tax deductions should be rounded, check this box (by double-clicking 
+ on it or pressing the Spacebar). If exact dollar amounts are to be calculated, 
+ this box should remain blank.</p>
+<p><font style="font-weight: bold;">Credit Brackets By: Wage Tax<br/>
+</font>Reserved for future use.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Allowances for 
+ Other Deductions:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Allow 
+ Section 125?</font><br/>
+If Section 125 deductions are allowed by this authority, check this box 
+ (by double-clicking on it or pressing the Spacebar). If Section 125 deductions 
+ are taxed, this box should remain blank.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Allow 
+ Section 401(k)?</font><br/>
+If 401(k) deductions are allowed by this authority, check this box (by 
+ double-clicking on it or pressing the Spacebar). If 401(k) deductions 
+ are taxed, this box should remain blank.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Allow 
+ Other Pretax?</font><br/>
+If deductions flagged as &quot;Other Pretax&quot; are allowed by this authority, 
+ check this box (by double-clicking on it or pressing the Spacebar). If 
+ Other Pretax deductions are taxed, this box should remain blank.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Allow 
+ Federal Tax?</font><br/>
+If Federal Tax deductions are allowed by this authority, check this box 
+ (by double-clicking on it or pressing the Spacebar). If Federal Tax deductions 
+ are taxed, this box should remain blank.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Allow 
+ FICA Tax?</font><br/>
+If FICA tax deductions are allowed by this authority, check this box (by 
+ double-clicking on it or pressing the Spacebar). If FICA tax deductions 
+ are taxed, this box should remain blank.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Allow 
+ CPP?<br/>
+</font>Canadian Users Only: Check this field if Canadian Pension Plan deductions 
+ are allowed.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Allow 
+ EI?<br/>
+</font>Canadian Users Only: Check this field if Canadian Employment Insurance 
+ deductions are allowed.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Allow 
+ Provincial?<br/>
+</font>Canadian Users Only: Check this field if Provincial tax deductions 
+ are allowed.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Allow 
+ RRSP?<br/>
+</font>Canadian Users Only: Check this field if Registered Retirement Savings 
+ Plan deductions are allowed (check on Federal and Provincial tax authority 
+ records, and on Ontario Health Premium record).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Allow 
+ PPIP?<br/>
+</font>Canadian Users Only: check this field if Province of Quebec tax 
+ for parental leave is allowed.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Credits for Other 
+ Deductions:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Credit 
+ % 125:  <br/>
+Credit % 401:  <br/>
+Credit % Other:   <br/>
+Credit % Federal:<br/>
+Credit % FICA:<br/>
+Credit % State:<br/>
+</font>Reserved for future use.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Credit 
+ % CPP?<br/>
+</font>Canadian Users Only: Enter the applicable credit percentage for 
+ Canadian Pension Plan deductions (allowed in the Federal and Ontario Province 
+ Tax Authority records).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Credit 
+ % EI?<br/>
+</font>Canadian Users Only: Enter the applicable credit percentage for 
+ Employment Insurance deductions (allowed in the Federal and Ontario Province 
+ Tax Authority records).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Credit 
+ % Provincial?<br/>
+</font>Canadian Users Only: Enter the applicable credit percentage for 
+ Provincial Tax deductions.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Credit 
+ % RRSP? <br/>
+C</font>anadian Users Only: Enter the applicable credit percentage for 
+ Registered Retirement Savings Plan deductions.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Credit 
+ % PPIP?<br/>
+C</font>anadian Users Only: Enter the applicable credit percentage for 
+ Province of Quebec Tax deductions.</p>
+<p><font style="font-weight: bold;">Residual Withholding?<br/>
+</font>If this payroll authority allows its residents a payroll tax credit 
+ for wages earned in other authorities, this box should be checked.</p>
+<p><font style="font-weight: bold;">Residual Tax Credit %<br/>
+</font> The Residual Tax Credit as a percentage.</p>
+<p><font style="font-weight: bold;">Tax Authority User1:  Tax Authority 
+ User2:</font><br/>
+These optional fields may be used for entering any information your company 
+ wishes to retain (e.g., additional account numbers).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important 
+ Note: Box 14 -</font> <font style="font-weight: bold;">W2s:</font></p>
+<p style="margin-left: 36.00pt;">The system uses the Tax <font style="text-decoration: underline; ">Table</font> 
+ to handle unemployment insurance, disability, etc. The Tax Table User1 
+ fields may be used to specify the titles for unemployment, insurance, 
+ disability, etc. Only the Box 14 description should be entered, i.e FLI,TDI 
+ or SUI in the User1 field.</p>
+<p style="margin-left: 36.00pt;">In previous releases, users could implement 
+ SDI (Box 14 on form W-2) by setting the User 1 field in the applicable 
+ Tax <font style="text-decoration: underline; ">Authority</font> to SDI. 
+ This functionality is still supported.</p>
+<p style="margin-left: 36.00pt;"> </p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">General Ledger Tab</p>
+<p><font style="font-weight: bold;">GL Account Id:</font><br/>
+Enter the liability account for the employee&#39;s portion of the taxes.</p>
+<p><font style="font-weight: bold;">GL Entity Id</font><br/>
+Optional. The default Entity (department or profit center) to be credited 
+ during Compute Payroll. However, if a GL Entity Id has been entered in 
+ the Employee record, the credit will be applied to the Entity specified 
+ in the Employee record. If the GL Entity Id field is blank in the Employee 
+ record, the system will credit the GL Entity in the Tax Authority record 
+ (if the GL Entity is filled in). If the GL Entity is blank in both the 
+ Employee and Payroll Tax Authority records, a GL Entity will not be credited.</p>
+<p><span style="font-weight: bold;">This 
+ behavior may be overridden via</span> <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Use_Control_Records_GL_Entities_for_PR">Use 
+ Control Records&#39; GL Entities for PR Deductions, Earnings, Taxes, etc,.Instead 
+ of Employees&#39;</a>.</p>
+<p><font style="font-weight: bold;">GL Expense Account Id:</font><br/>
+If the employer is liable for this tax or a portion of this tax (e.g., 
+ FUTA, SUTA), enter the expense account for the employer&#39;s portion of the 
+ taxes. The GL Entity for the expense comes from the Job&#39;s Cost Code.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Note:  See 
+ Employee Child Taxes Tab&#39;s - GL Expense Account override option:</span><br/>
+The GL Expense Account Id in the Employee Child Taxes Tab enables the use 
+ of multiple GL Accounts for employer based taxes. This field can only 
+ be set if the selected P/R Tax Table has the Tax Employer? box checked 
+ (normally tax tables: FUTA, FICA-SSER, FICA-MC, SUTA).  If this 
+ field is completed, the Compute PR function will use it to post to GL 
+ History instead of using the GL Expense account in the associated Tax 
+ Authority.  If this field is blank, the system will continue 
+ to use the GL Expense Account in the Tax Authority. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Note:</span> 
+ the sys-compute-payroll registry PRExpenseAccount option trumps the 
+ GL Expense Accounts on the Tax Authority and Employee Taxes tab.</p>
+<p><span style="font-weight: bold;">Job Cost?</span><br/>
+Check this box if taxes paid to this Authority should be written to Job 
+ Cost when a payroll check is printed.</p>
+<p><font style="font-weight: bold;">Cost Category:<br/>
+</font>If the Job Cost? box is checked, enter the Cost Category to be used 
+ when this labor expense is written to Job History.</p>
+<p><font style="font-weight: bold;">W-2 Category Employee</font><font style="font-weight: bold;"><br/>
+</font>This field supercedes the use of the User 1 field for the handling 
+ of box 12 and 14 codes and titles for unemployment insurance. The User 
+ 1 field is still supported if this field is blank. </p>
+<p><font style="font-weight: bold;">W-2 Category Employer<br/>
+</font>Reserved for Future Use.</p>
+<p><font style="font-weight: bold;">PRS Tax</font> <font style="font-weight: bold;">Code:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Paycor 
+ Users:</font><br/>
+The Exc Dept column on the Paycor report specifies the local Tax Auth a 
+ line is associated with. If the PRS Tax Code is set in this local Tax 
+ Authority record, it will be used to complete the Exc Dept column; if 
+ the PRS Tax Code field in the Tax Authority Type record is blank, the 
+ Tax Authority Id will be used to set the Exc Dept column. It is not necessary 
+ to set this field for State, Federal or Other Tax Authorities as these 
+ are not needed for Paycor reporting.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Paychex 
+ Users:<br/>
+</font>Paychex uses the information in State and Local Tax Authority records 
+ to populate the Override State and Override Local columns of its report. 
+ If the PRS Tax Code is set in the Tax Authority record, it will be used 
+ to complete the applicable Override State or Override Local column; if 
+ the PRS Tax Code field in the Tax Authority Type record is blank, the 
+ Tax Authority Id will be used to set the State or Local Override column.</p>
+<p><font style="font-weight: bold;">Tax Authority</font> <font style="font-weight: bold;">User 
+ 1: Tax Authority User 2:</font><br/>
+These optional fields may be used to record additional information required 
+ by your company or for reporting purposes.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Reciprocity Agreements Tab</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Tax Auth Id:<br/>
+<font style="font-weight: normal;">This tab lists the authorities with 
+ which a reciprocal agreement exists for non-residents wages earned. Only 
+ authorities of a similar type (e.g., state, local or other) should be 
+ listed.</font> <font style="font-weight: normal;">The system now checks 
+ that the authorities entered on this tab are eligible for reciprocity 
+ with the Tax Authority on the Main tab.</font></p>
+<p><font style="font-weight: bold;">Type: Description:<br/>
+</font>These informational fields specify the type of reciprocity agreement.</p>
+<p>In a reciprocal situation, tax would be withheld for the authority of 
+ residence. The point of the reciprocity tab is to redirect withholding 
+ to the employee&#39;s authority of residence.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Example:</font></p>
+<p style="margin-left: 36.00pt;">For example if you were filling in the 
+ record for Illinois Income State tax, the following states should be listed 
+ in the Reciprocal Agreement Tab: IA, KY, MI, WI</p>
+<p style="margin-left: 36.00pt;">In a reciprocal situation, the authorities 
+ listed on authority A&#39;s reciprocal tab would list authority A on their 
+ reciprocal tab. To continue our example, note that Illinois is listed 
+ on the reciprocal tabs for the following states:</p>
+<p style="margin-left: 36.00pt;">Authority: Reciprocal Tab:</p>
+<p style="margin-left: 36.00pt;">IA  IL</p>
+<p style="margin-left: 36.00pt;">MI  IL, IN, KY, MN, OH, WI</p>
+<p style="margin-left: 36.00pt;">KY  IL, IN, MI, WV, OH, WI</p>
+<p style="margin-left: 36.00pt;">WI  IL, IN, KY, MN, MI</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>Special Cases:</h2>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">States with No 
+ Payroll Tax</p>
+<p>The following states do not impose any payroll tax for residents or 
+ non-residents: AK, FL, NV, NH, SD, TN, TX, WA, WY. However, if an employee 
+ lives in a state where payroll tax is withheld, payroll tax should be 
+ collected to the state of residence. To implement this, the reciprocal 
+ tab of states with no taxes should include every state where your employee 
+ might reside that does collect taxes. This makes sense if you recall that 
+ the point of the reciprocal tab is to redirect withholding to the employee&#39;s 
+ authority of residence. In this way, withholding for work performed in 
+ Texas by residents of other states would be correctly withheld.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p style="text-indent: 30.25pt;">Authority: Reciprocal Tab:</p>
+<p> TX  All States in which your employees that might work 
+ in Texas reside:</p>
+<p style="text-indent: 30.25pt;">(e.g., CO, NM, LA, AR, KS, OK, etc.)</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Arizona</p>
+<p>Residents of CA, DC, IN, OR, and VA are exempt from Arizona state withholding 
+ tax for work done in Arizona as long as the tax is paid to the state of 
+ residence. Although Arizona does not implement reciprocal agreements per 
+ say, it would be set up as follows:</p>
+<p style="text-indent: 30.25pt;">Authority: Reciprocal Tab:</p>
+<p> AZ  CA, DC, IN, OR, VA</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Registry Tab</p>
+<p>This tab is reserved for future use in W2 reporting - paper and electronic. 
+ Since this table is generic it may also be used for other purposes in 
+ the future.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Key: Value: Description:<br/>
+<font style="font-weight: normal;">Reserved for future use.</font></p>
+
+</body></html>

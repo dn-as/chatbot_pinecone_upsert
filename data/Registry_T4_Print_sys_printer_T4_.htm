@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.23.1.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="T4"/>
+<meta name="MS-HKWD" content="sys-printer-T4"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry T4 Print (sys-printer-T4)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="T4,sys-printer-T4,registry,payroll"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry T4 Print (sys-printer-T4)">
+        <span>Registry T4 Print (sys-printer-T4)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry T4 Print (sys-printer-T4)</h1>
+<h2>Purpose:</h2>
+<p>This registry entry specifies any margin adjustments needed for alignment.</p>
+<p class="Body_Text_Indent" style="margin-left: 18.00pt; border-top: 0.50pt solid #000000; 
+	 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+	 border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing 
+ Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="margin-left: 18.00pt; border-top: 0.50pt solid #000000; 
+	 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+	 border-right: 0.50pt solid #000000;"><font style="font-weight: bold; 
+												 font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Important Note: Printer Requirements</h2>
+<p><font style="font-weight: bold;">Unless you are using the new Report 
+ PR Canadian T4 (Standard) report, your T4</font> <font style="font-weight: bold;">printer 
+ must support native PCL printing: host based or driver-based PCL is not 
+ acceptable due to the need</font> <font style="font-weight: bold;">to 
+ print exact output to the T4</font> <font style="font-weight: bold;">forms.</font></p>
+<h2>Additional Registry Entries for T4 Printing</h2>
+<p>In addition to this registry entry, Federal Business Number must be 
+ specified in the CompanyEINFederal registry entry. Required default values 
+ for this report must be made in <a href="Registry_T4_Report_Defaults.htm">Registry 
+ T4 Report Defaults</a> . </p>
+<p>The registry options discussed in <a href="Registry_T4_Print_sys_printer_T4_.htm">Registry 
+ T4 Print (sys-printer-T4)</a> will most likely be required to alignment 
+ this report to print properly. The <a href="Registry_T4_Summary_Print.htm">Registry 
+ T4 Summary Print</a> adjusts the T4 Summary.</p>
+<h5 style="margin-left: 48px;">Company 
+ Record Support</h5>
+<p style="margin-left: 48px;">In SAMPro 
+ Version 9.1.611.054a, the Canadian T4 reports have been revised to use 
+ the Company record / Company Registry tab to specify the Company Name 
+ and Address and other registry settings required for these reports.</p>
+<p style="margin-left: 48px;">Company 
+ Name, Address: These reports will use the Company Name &amp; Company Address 
+ from the Company Record Header info if available.</p>
+<p style="margin-left: 48px;">Company 
+ Registry Tab Fields: Fields not defined in the Company Record header may 
+ be added to the Company record&#39;s Registry Tab.  For example, the 
+ t4sin1 for the Summary report. </p>
+<p style="margin-left: 88px;">First look 
+ for the Company Record&#39;s Registry entry. If not found, <br/>
+Second look for the sys-report-rT4 If the registry is blank or not found,<br/>
+Third look for the company specific companyname registry setting (e.g., 
+ companyname-1) and use that.  <br/>
+If none of the above are available, the string &#39;companyname&#39; will be used 
+ in the report instead of leaving it blank. </p>
+<h2>Important Fields:</h2>
+<p>This registry entry specifies which printer (named in the Contents field) 
+ T4&#39;s are sent to.</p>
+<p><font style="font-weight: bold;">Id:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-printer-T4</font><font style="font-weight: bold; font-style: italic;">-branchid-user</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-printer-T4-</font><font style="font-weight: bold; font-style: italic;">securityid</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-printer-T4</font></p>
+<p style="margin-left: 36.00pt;">If the optional branch and user id&#39;s are 
+ specified in the Id, only T4&#39;s for this branch (and user if specified) 
+ will be sent to the printer. If this entry is specific to a user, the 
+ branch must be specified if a user belongs to a branch. If branches are 
+ not implemented, two dashes (not separated by a space) must precede the 
+ user id.</p>
+<p><font style="font-weight: bold;">Name:</font><br/>
+Briefly describes this entry (e.g., HP 4000 T4 Printer).</p>
+<h3>Adjust the Margins</h3>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">marginx</font> Setting Value: <font style="font-style: italic; 
+	 font-weight: normal;">n.n</font></p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">marginy</font> Setting Value: <font style="font-style: italic; 
+	 font-weight: normal;">n.n</font></p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">marginybottomform</font> Setting Value: 
+ <font style="font-weight: normal;">14.0</font></p>
+<p>These optional formats are used for alignment purposes. Note that <font style="font-style: italic;">#.#</font> is entered in centimeters, 
+ and is used to specify offset from the &quot;home&quot; position (the 
+ upper left-hand corner of the page).</p>
+<p><span style="font-weight: bold;">Example for Report Canadian T4s (Standard)</span></p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Tip:</span> 
+ <span style="mso-spacerun: yes;"> </span>Most printers require negative 
+ margin adjustments for the new Report PR Canadian T4s (Standard).<span style="mso-spacerun: yes;"> </span> We recommend starting 
+ with the following settings and adjust as needed following your alignment 
+ print:</p>
+<p style="margin-left: 48px;"><b style="mso-bidi-font-weight: normal;">Id:</b> 
+ sys-printer-t4<br/>
+<b style="mso-bidi-font-weight: normal;">Setting Key:</b> marginx  <b style="mso-bidi-font-weight: normal;">Setting Value:</b> -0.63<br/>
+<b style="mso-bidi-font-weight: normal;">Setting Key:</b> marginy  <b style="mso-bidi-font-weight: normal;">Setting Value:</b> <span style="mso-spacerun: yes;"> </span>-0.85</p>
+<p style="margin-left: 48px;"><b style="mso-bidi-font-weight: normal;">Reminder:</b> 
+ Negative margin setting values move the report text closer to the upper 
+ left-hand corner.<span style="mso-spacerun: yes;"> </span> Setting 
+ values without the negative sign move the report text to the right (marginx) 
+ and down (marginy).</p>
+<h3>Specify the T4 Printer (not needed for the new Report PR Canadian T4s 
+ (Standard)</h3>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">printer</font> Setting Value: <font style="font-style: italic; 
+	 font-weight: normal;">printername</font></p>
+<p>where <font style="font-style: italic;">printername</font> is the name 
+ of the printer <font style="font-weight: bold; font-style: italic;">exactly</font> 
+ as it is displayed in the printer dialog box that appears when you select 
+ a printer in SAM Pro. Please note that this field is upper/lower case 
+ sensitive. Also, if network pathing is included on the printer name, make 
+ sure that the backslashes are correctly entered.</p>
+<p>: to move things right marginx=##’ or left use: -#.#</p>
+<p style="margin-top: 0; margin-bottom: 0;">: to move things down use ‘;marginy=#.#’ 
+ or up use: -#.# </p>
+<p style="margin-left: 48px;"> </p>
+<p style="text-indent: 30.25pt;"><font style="font-weight: bold; text-decoration: underline; ">Example</font> 
+ <font style="font-weight: bold; text-decoration: underline; ">with Network 
+ Pathing, output moved to the left and down</font><font style="font-weight: bold; 
+														 text-decoration: underline; ">:</font></p>
+<p style="text-indent: 30.25pt;">Setting Key: Printer Setting Value: \\myownserver\Samsung 
+ ML-3050 Series</p>
+<p style="text-indent: 30.25pt;">Setting Key: marginx Setting Value: -0.3</p>
+<p style="text-indent: 30.25pt;">Setting Key: marginy Setting Value: 0.1</p>
+<p style="text-indent: 30.25pt;">Setting Key: marginybottomform Setting 
+ Value: 14.0</p>
+<p style="text-indent: 30.25pt;"><font style="font-weight: bold; text-decoration: underline; ">Example 
+ without Network Pathing</font><font style="font-weight: bold; text-decoration: underline; ">, 
+ output moved to the right and up</font><font style="font-weight: bold; 
+												 text-decoration: underline; ">:</font></p>
+<p style="text-indent: 30.25pt;">Setting Key: Printer Setting Value: Samsung 
+ ML-3050 Series</p>
+<p style="text-indent: 30.25pt;">Setting Key: marginx Setting Value: 0.3</p>
+<p style="text-indent: 30.25pt;">Setting Key: marginy Setting Value: -0.1</p>
+<p style="text-indent: 30.25pt;">Setting Key: marginybottomform Setting 
+ Value: 14.0</p>
+<p>Contact your Data-Basics support representative for further assistance.</p>
+<p> </p>
+
+</body></html>

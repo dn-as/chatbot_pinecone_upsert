@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.3.0_19";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Set Disabled Fields"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="internal"/>
+<meta name="MS-HKWD" content="disabled fields"/>
+<meta name="MS-HKWD" content="support document"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Internal Registry Set Disabled Fields (sys-viewer-afunction)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="disabled buttons,set disabled buttons,button (disable),Set Disabled Fields,registry,internal,disabled fields,support document"/><meta name="brsprev" value="Internal_Registry_Set_Required_Fields.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Internal Registry Set Disabled Fields (sys-viewer-afunction)">
+        <span>Internal Registry Set Disabled Fields (sys-viewer-afunction)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry to Set Disabled Fields / Buttons (sys-viewer-afunction)</h1>
+<p>This registry uses the viewer&#39;s &#39;sys-viewer-&#39; registry entry (e.g. &#39;sys-viewer-vclntste&#39;) 
+ to disable fields on a viewer by viewer basis. Note that disabled fields 
+ appear on the screen but appear as display-only fields. This registry 
+ may also be used to disable a viewer&#39;s buttons on the parent or child 
+ tabs or the sidebar. </p>
+<p>Fields / buttons may also be defined as disabled in New Call via the 
+ sys-start-snwcll registry.</p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard 
+ Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> 
+ for additional Registry Id formats to allow entries for specific Users, 
+ Branches, Security, or User Groups to override the main entry.</p>
+<h3>Multiple Line Entries</h3>
+<p class="Normal_Indent" style="margin-left: 8px;">SAMPro provides multiple 
+ registry line support to the RequiredFieldsParent, RequiredFields<span style="font-style: italic;">child</span>, DisabledFieldsParent, and 
+ DisabledFields<span style="font-style: italic;">child</span> Setting Keys. 
+ This allows users to tag enough as many fields as needed, without encountering 
+ limitations due to long field names and the character limit of the Setting 
+ Value.</p>
+<p style="margin-left: 48px; text-decoration: underline; ">Example: Job</p>
+<p style="margin-left: 48px;">Id: sys-viewer-job</p>
+<p style="margin-left: 48px;">Setting Key: RequiredFieldsParent  Setting 
+ Value: jb.lcl: txathrty.id,rteschdle.id</p>
+<p style="margin-left: 48px;">Setting Key: RequiredFieldsParent  Setting 
+ Value: jb.gl-ar: glaccnt.id</p>
+<p style="margin-left: 48px;">…. And additional lines as needed</p>
+<h2>To indicate disabled fields in the Parent (upper tabs)</h2>
+<p><span style="font-weight: bold;">Setting Key:</span> disabledFieldsParent 
+ <span style="font-weight: bold;">Setting Value:</span> <font style="font-style: italic;">fieldname1, 
+ fieldname2 ….</font></p>
+<p>The contents of the line can be a field name or a series of field names 
+ separated by commas. When you place the mouse pointer over the field, 
+ the database field name will appear in the extreme left at the bottom 
+ of the screen. The internal field name appears just to its right – this 
+ is the name that we need. Do not include the leading group name but intermediate 
+ subgroup names must be included.</p>
+<p style="margin-left: 36.00pt;">Example:</p>
+<p style="margin-left: 36.00pt;">In the following illustration, the mouse 
+ cursor is over the Hourly Burden field.</p>
+<p class="Support" style="margin-left: 36.00pt;"><img src="assets/images/image/registry003.gif" alt="image\registry003.gif" title="image\registry003.gif" width="536" height="478" border="0"/></p>
+<p style="margin-left: 36.00pt;">To disable the Hourly Burden field, the 
+ following registry entry would be created:</p>
+<p style="margin-left: 36.00pt;">sys-viewer-jbcstcde</p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">Setting 
+ Key:</span> disabledFieldsParent <span style="font-weight: bold;">Setting 
+ Value:</span> jbcstcde.hrly-lbr-brdn-rte</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>To indicate disabled fields in a child:</h2>
+<p><span style="font-weight: bold;">Setting Key:</span> disabledFields<font style="font-style: italic;">XXXX  <span style="font-weight: bold; 
+													 font-style: normal;">Setting 
+ Value:</span> fieldname1, fieldname2 ….</font></p>
+<p>where &#39;XXXX&#39; is the form name of the appropriate child pane. Remember 
+ that to identify the form name of a child tab, position the mouse pointer 
+ to the extreme upper left corner of the child window and the form will 
+ appear in the status pane at the bottom of the screen.</p>
+<p>To determine the database field names, position the mouse pointer over 
+ the field. and its will appear in the extreme left: the internal field 
+ name appears just to its right – this is the name that we need. The contents 
+ of the line can be a field name or a series of field names separated by 
+ commas. Do not include the leading group name but intermediate subgroup 
+ names must be included.</p>
+<p>Example:</p>
+<p>In sys-viewer-vwrkordr, deny users the ability to set or clear the quote 
+ flag in the Work Order Other tab:</p>
+<p>Setting Key: disabledFieldschild2 Setting Value: wrkordrothr.qte</p>
+<p>To identify the name of a child, position the mouse pointer to the extreme 
+ upper left corner of the child window and the Form Name will appear in 
+ the Status line – we can see that this is child2:</p>
+<p><img src="assets/images/childtab.jpg" alt="" style="border: none;" width="624" height="431" border="0"/></p>
+<p>To see the name of the field itself, position the mouse pointer over 
+ the field. The database field name will appear in the extreme left: the 
+ internal field name appears just to its right – this is the name that 
+ we need.</p>
+<p class="Support" style="margin-left: 16px;"><img src="assets/images/childfield.jpg" alt="" style="border: none;" width="626" height="434" border="0"/></p>
+<p style="font-weight: bold;">Tip:<br/>
+<span style="font-weight: normal;">If you want to let one person access 
+ denied fields in the above example, you would clone the registry entry 
+ sys-viewer-vwrkordr to sys-viewer-vwrkordr--userid and delete the disabled 
+ fields registry options.</span></p>
+
+
+<p style="margin-left: 48px; text-decoration: underline; ">Example: Disable 
+ Budget Tab fields on PM Workbench</p>
+<p class="MsoNormal" style="margin-left: 48px;">ID: sys-viewer-vjbpm</p>
+<p class="MsoNormal" style="margin-left: 48px;">Setting Key: DisabledFieldschildBudget</p>
+<p class="MsoNormal" style="margin-left: 48px;">Setting Value: jbbdgt.hrs,jbbdgt.qntty,invntryitm.id,jbcstcde.id,jbcstctgry.id,jbbllngitm.id,jbbdgt.unt-cst,jbbdgt.amnt-cst,bllngrtetype.id,jbbdgt.rvne-rte,jbbdgt.amnt-rvne</p>
+<h2>Disabling Buttons</h2>
+<p>The button&#39;s field name must be referenced in the registry - it is displayed 
+ to the right in the status pane when you position the mouse cursor at 
+ the extreme upper left corner of the button. Typically, it will begin 
+ with <span style="font-weight: bold;">push- </span></p>
+<p><img src="assets/images/DisableButtons.jpg" alt="" style="border: none;" width="657" height="395" border="0"/></p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Important:</span><br/>
+When a button is disabled, it will still be displayed normally but clicking 
+ it will not have any effect.</p>
+<p>The following examples may be of use:</p>
+<p class="Normal_Indent" style="margin-left: 48px; font-weight: bold;">Registry 
+ to Disable the &quot;Copy Site Address&quot; button on the Job Viewer 
+ Invoicing Tab</p>
+<p class="Normal_Indent" style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vjb</p>
+<p class="Normal_Indent" style="margin-left: 48px;"><span style="font-weight: bold;">Setting 
+ Key:</span> disabledFieldsParent   <span style="font-weight: bold;">Setting 
+ Value:</span> push-copySiteBillingAddress</p>
+<p class="Normal_Indent" style="margin-left: 48px;"> </p>
+<p class="Normal_Indent" style="margin-left: 48px; font-weight: bold;">Registry 
+ to Disable &quot;Add Taxes&quot; button on AP Journal Viewer  </p>
+<p class="Normal_Indent" style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vapjrnl</p>
+<p class="Normal_Indent" style="margin-left: 48px;"><span style="font-weight: bold;">Setting 
+ Key:</span> disabledFieldsParent   <span style="font-weight: bold;">Setting 
+ Value:</span> push-addTaxAuth</p>
+<p class="Normal_Indent" style="margin-left: 48px;"> </p>
+<p class="Normal_Indent" style="margin-left: 48px; font-weight: bold;">Registry 
+ to Disable the CreateSubPo and TechFinder buttons on the Work Order Technician 
+ Tab</p>
+<p class="Normal_Indent" style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vwrkordr</p>
+<p class="Normal_Indent" style="margin-left: 48px;"><span style="font-weight: bold;">Setting 
+ Key:</span> disabledfieldschild6    <span style="font-weight: bold;">Setting 
+ Value:</span> push-createSubPO,push-startTechFinderForWO</p>
+<p class="Normal_Indent" style="margin-left: 48px;"> </p>
+<p class="Normal_Indent" style="margin-left: 48px; font-weight: bold;">Registry 
+ to Disable the Work Order Viewer&#39;s Sidebar Create PO and Call Script Buttons</p>
+<p class="Normal_Indent" style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vwrkordr</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting 
+ Key</span>: disabledFieldssidebar  <span style="font-weight: bold;">Setting 
+ Value:</span> push-addCallScript,push-createWorkOrderPO</p>
+<p style="margin-left: 48px; font-weight: bold;"> </p>
+<p style="margin-left: 48px; font-weight: bold;">Registry to Disable the 
+ New Site (Flashlight) Button in New Call</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> 
+ sys-start-snwcll</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting 
+ Key:</span> disabledFieldssidebar   <span style="font-weight: bold;">Setting 
+ Value:</span> push-switchToNewClientSite</p>
+<p style="margin-left: 48px;"> </p>
+<p style="margin-left: 48px; font-weight: bold;">Registry 
+ to Disable Edit Daily WO Button on Dispatch Board&#39;s Top Button Bar</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vdsptchbrd</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting 
+ Key:</span> DisabledFieldstopbar  <span style="font-weight: bold;">Setting 
+ Value:</span> push-editDailyWOsTop</p>
+<p style="margin-left: 48px;"> </p>
+<p style="margin-left: 48px; font-weight: bold;">Registry 
+ to Disable the Build Out PM WOs button in Master Contract</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vmstrcntrct</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting 
+ Key:</span>  disabledfieldsparent   <span style="font-weight: bold;">Setting 
+ Value:</span> push-buildOutPMWOs</p>
+<h5>Check Viewer Example:</h5>
+<p>The standard view of the Check viewer was changed to simplify initial 
+ data entry in case 3814, making it desirable to disable all fields in 
+ this viewer via registry so that group ‘All’ users would not accidentally 
+ make changes to this record. To disable all Check fields:</p>
+<p><span style="font-weight: bold;">Id:</span> sys-viewer-vchcklst</p>
+<p><span style="font-weight: bold;">Setting Key:</span> DisabledFieldsParent</p>
+<p><span style="font-weight: bold;">Setting Value:</span> gl-bnk: glaccnt.id,glentty.id,chck.nmbr,chck.amnt,chck.rfrnce-nme,chck.dte-chck,chck.type,chck.dscrptn</p>
+<p><span style="font-weight: bold;">Setting Key:</span> disabledFieldschild</p>
+<p><span style="font-weight: bold;">Setting Value:</span> chcklst.amnt-grss</p>
+<h5>Check Viewer (Employee) Example:</h5>
+<p><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vchcklstpr</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> DisabledFieldsParent</p>
+<p><span style="font-weight: bold;">Setting 
+ Value:</span> gl-bnk: glaccnt.id,glentty.id,chck.nmbr,chck.amnt,chck.rfrnce-nme,chck.dte-chck,chck.type,chck.dscrptn</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> disabledFieldschild</p>
+<p><span style="font-weight: bold;">Setting 
+ Value:</span> chcklst.amnt-grss</p>
+<p> </p>
+
+</body></html>

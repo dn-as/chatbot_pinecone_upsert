@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.2.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="calendar"/>
+<meta name="MS-HKWD" content="DBAnalytics"/>
+<meta name="MS-HKWD" content="GL Reporting Period"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Calendar Date</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="calendar,DBAnalytics,GL Reporting Period"/><meta name="brsnext" value="DB_Analytics_Overview.htm"/><meta name="brsprev" value="Start_GL_History_Summary_Rebuild.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Calendar Date">
+        <span>Calendar Date</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Calendar Date Viewer</h1>
+<h2>Purpose:</h2>
+<p>This table was created for use with DB Analytics (see <a href="DB_Analytics_Overview.htm">DB Analytics Overview</a> ) to simplify KPI definitions and reporting in general. This table is created and updated during data conversion to version 8.0 using the information in your GL Reporting Period records.  After that, it is automatically updated by creating/editing GL Reporting Period records.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Reporting Beginning Period:</font> If a ‘beginning’ period was established for loading data, the Start Date should be set to the beginning of the loading year, not the ‘blank’ date (01011900).</p>
+<h2>Usage:</h2>
+<p><font style="font-weight: bold;">The records in this viewer are managed by the system and should not be added or altered by the user directly.</font> One record is created for each day defined in a GL Reporting Period when the GL Reporting Period is added or saved. The system calculates fields such as the fiscal year, day of the week and day of the month (long and short formats).</p>
+<h2>Related Records/Functions:</h2>
+<p><a href="Start_GL_History_Summary_Rebuild.htm">Start GL History Summary Rebuild</a></p>
+<p><a href="GL_Reporting_Period.htm">GL Reporting Period</a></p>
+<p><a href="KPI_Definition.htm">KPI Definition</a></p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Date Id:<br/></font> The Id for each record corresponds to the day in yyyy-mm-dd format.</p>
+<p><font style="font-weight: bold;">Date:<br/></font>The Date in alphanumeric form.</p>
+<p><font style="font-weight: bold;">Reporting Period Id: Description:<br/></font>These fields default from the GL Reporting Period this day is associated with.</p>
+<p><font style="font-weight: bold;">Calendar Year: Calendar Quarter: Calendar Month: Calendar Week: Calendar Day:<br/>
+Day of Year: Day of Week: Period Title:<br/></font>These fields are calculated by the system based on the Start Date of the GL Reporting Period. The Day of the Week is calculated so that KPI’s that compare the current and previous year take the day of the week into consideration.</p>
+<p><font style="font-weight: bold;">Fiscal Year: Fiscal Period: Report Title:<br/></font> The fields default from the GL Accounting Period associate with this record.</p>
+<p><font style="font-weight: bold;">Day of Year:<br/></font> The day of the Fiscal year (calculated by the system, based on information in the GL Reporting Period).</p>
+<p><font style="font-weight: bold;">Period First Day: Period Last Day:</font><font style="font-weight: bold;"><br/></font>The system uses the GL Reporting Period Start and End dates to determine if this date record should be flagged as a Period First or Last Day.</p>
+<p><font style="font-weight: bold;">Year First Day: Year Last Day:<br/></font>The system used the GL Reporting Period to determine if this date record should be flagged as the fiscal Year First Day or fiscal Year Last Day.</p>
+
+</body></html>

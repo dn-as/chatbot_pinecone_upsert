@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.23.0_20";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="deductions"/>
+<meta name="MS-HKWD" content="miscellaneous deduction check"/>
+<meta name="MS-HKWD" content="payroll miscellaneous deduction check"/>
+<meta name="MS-HKWD" content="sys-report-rprmdchck"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry PR Miscellaneous Deduction Check (sys-report-rprmdchck)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="deductions,miscellaneous deduction check,payroll miscellaneous deduction check,sys-report-rprmdchck"/><meta name="brsnext" value="Report_Stock_Status.htm"/><meta name="brsprev" value="Start_Release_Recurring_AP_Journal.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry PR Miscellaneous Deduction Check (sys-report-rprmdchck)">
+        <span>Registry PR Miscellaneous Deduction Check (sys-report-rprmdchck)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry PR Miscellaneous Deduction Check (sys-report-rprmdchck)</h1>
+<h2>Purpose:</h2>
+<p>The system supports the MICR printing of checks on Troy printers with 
+ security features, MICR ink, and signature printing.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font> <font style="font-weight: bold;">sys-report-rprmdchck</font></p>
+<p style="margin-left: 8px;">MICR check printing handles multiple bank 
+ accounts with</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-report-rprmdchck</font><font style="font-weight: bold; font-style: italic;">-GLACCTID-GLENTTYID</font> 
+ <font style="text-decoration: underline; ">or</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-report-rprmdchck</font><font style="font-weight: bold; font-style: italic;">-GLACCTID</font></p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">Specifying 
+ Bitmaps for Multiple Bank Accounts / Entities:</span>  <br/>
+In Version 9.0 and above, the PRMD Check registry format sys-report-rprmdchck-GLACCOUNTID-GLENTITY 
+ also supports the bitmap option (if enabled). In previous versions, only 
+ the MICR options are supported.</p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard 
+ Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> 
+ for additional Registry Id formats to allow entries for specific Users, 
+ Branches, Security, or User Groups to override the main entry.</p>
+<h3 class="Normal_Indent">Registry To 
+ Specify MICR Font</h3>
+<p>Some recent versions of Troy printer 
+ drivers (and other drivers used to print MICR checks) require that a specific 
+ MICR font is specified in the SAMPro check reports. In previous versions 
+ this required a customization file to specify the font and font size. 
+ In this release, the MICR font may be specified in the registries for 
+ Payroll, Accounts Payable and PR Miscellaneous Deductions checks. The 
+ true type GnuMICR font is currently recommended for most applications. 
+ </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Important:</span> 
+ The MICR font must be installed in Windows on all computers checks will 
+ be run from. </p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Id:</span> 
+ sys-report-rprmdchck </p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting 
+ Key:</span> FontForMICR   <span style="font-weight: bold;">Setting 
+ Value:</span> GnuMICR</p>
+<p style="margin-left: 8px;">The Setting 
+ Value is case sensitive - be sure that matches the filename of the true 
+ type font file. Note that the file extension is NOT included in the Setting 
+ Value. </p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting 
+ Key:</span> PointSizeForMICR   <span style="font-weight: bold;">Setting 
+ Value:</span> 10  (point size for font default is 10)</p>
+<h3>Trigger MICR Printing</h3>
+<p>To trigger MICR printing for the check, use</p>
+<p><font style="font-weight: bold;">Setting Key:</font> UseMICR <font style="font-weight: bold;">Setting 
+ Value:</font> yes</p>
+<p>(Actually any value beginning with ‘y’, ‘Y’, ‘t’, or ‘T’ will do)</p>
+<h3>Print Company Name on MICR Checks</h3>
+<p>To print the company name ‘XYZ Incorporated’ (for example) below the 
+ underline, use</p>
+<p><font style="font-weight: bold;">Setting Key</font><font style="font-weight: bold;">:</font> 
+ CompanyName <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">XYZ Incorporated</font></p>
+<p>If this entry is absent, the standard company name string (specified 
+ in the companyname registry) will be used.</p>
+<p>When a Troy printer containing a signature device is used, you must 
+ configure the printer to map the ‘Times New Roman’ font to the proper 
+ Troy signature font. A Troy printer is not required to test this mod. 
+ However the MICR line and the signature will not properly print otherwise.</p>
+<h3>Print Bank Name/Address on MICR Checks</h3>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+  BankDescription1  <span style="font-weight: bold;">Setting 
+ Value:</span> <span style="font-style: italic;">bank name</span><br/>
+<span style="font-weight: bold;">Setting Key:</span>  BankDescription2 
+  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">bank 
+ address line 1</span><br/>
+<span style="font-weight: bold;">Setting Key:</span>  BankDescription3 
+  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">bank 
+ address line 2<br/>
+</span><span style="font-weight: bold;">Setting Key:</span>  BankDescription4 
+  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">bank 
+ address line 3 or other text</span></p>
+<p style="margin-left: 8px;">If the bank&#39;s name and address is not pre-printed 
+ on your check stock, these registry settings may be used specify the bank&#39;s 
+ name, address, and any other pertinent information on the check.</p>
+<h3>Specify Routing and Account Numbers on MICR Checks</h3>
+<p><span style="font-weight: bold;">Setting Key:</span>  FractionalRoutingArea 
+  <span style="font-weight: bold;">Setting Value:</span> as specified 
+ by your bank</p>
+<p><span style="font-weight: bold;">Setting Key:</span> RoutingNumber  <span style="font-weight: bold;">Setting Value:</span> as specified by your 
+ bank</p>
+<p><span style="font-weight: bold;">Setting Key:</span> AccountNumber   <span style="font-weight: bold;">Setting Value:</span> as specified by your 
+ bank</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Canadian 
+ Installations:</span> Note that if a dash is required in the any of the 
+ above fields (for some Canadian banks), the character D in the Setting 
+ Value will generate a dash when output in the GnuMICR font. </p>
+<h3>Escape String for Troy Printer</h3>
+<p><span style="font-weight: bold;">Setting Key:</span>  SignatureEscapeString 
+  <span style="font-weight: bold;">Setting Value:</span> per printer 
+ documentation</p>
+<p>If using a Troy printer, this registry enables the signature card printing.</p>
+<h3>Double Signature Support for PR Miscellaneous 
+ Deduction Checks</h3>
+<p><span style="font-weight: bold;">A 
+ v.cus supporting a double-line form is also required for this functionality.</span> 
+  To force a double signature line on a Miscellaneous Deduction check 
+ for amounts exceeding $10,000 (for example) use</p>
+<p><span style="font-weight: bold;">Id:</span> 
+ sys-report-rprmdchck</p>
+<p><font style="font-weight: bold;">Setting 
+ Key:</font> DoubleSignatureAmount <font style="font-weight: bold;">Setting 
+ Value:</font> 10000</p>
+<h3>Default GL Bank Account / GL Entity</h3>
+<p><span style="font-weight: bold;">Id:</span> 
+ sys-report-rprmdchck</p>
+<p><font style="font-weight: bold;">Setting 
+ Key:</font> DefaultGLBankAccount <font style="font-weight: bold;">Setting 
+ Value:</font> <font style="font-style: italic;">GLAccountId</font>  <font style="text-decoration: underline; ">or</font><br/>
+ <font style="font-weight: bold;">Setting Key:</font> GLBankAccount <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">GLAccountId</font></p>
+<p><font style="font-weight: bold;">Setting 
+ Key:</font> DefaultGLBankEntity <font style="font-weight: bold;">Setting 
+ Value:</font> <font style="font-style: italic;">GLEntityId</font>  <font style="text-decoration: underline; ">or</font><br/>
+ <font style="font-weight: bold;">Setting Key:</font> GLBankEntity <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">GLEntityId</font></p>
+<p>The GLBankAccount and DefaultGLBankAccount 
+ options provide a means of defaulting the bank account. <font style="font-weight: bold; 
+	 text-decoration: underline; ">Use of GLBankAccount and DefaultGLBankAccount 
+ should be thought of as mutually exclusive even though the Registry viewer 
+ won&#39;t prevent it. Do not use both!</font></p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Intercompany 
+ Note:</span> If the DefaultGLBankAccount option is set, the GL Bank Account 
+ specified in the registry defaults when the user selects the Company (or 
+ it defaults if only one Company is specified in the database). The Account 
+ is cleared if the user selects a different Company for which the registry 
+ is not set.</p>
+<p>The rules for Entity defaulting and 
+ validation are similar to the above description for GL Accounts.</p>
+<h3>Option to Disable the GL Entity Field 
+ (non-Intercompany installations only)</h3>
+<p><span style="font-weight: bold;">Id:</span> 
+ sys-report-rprmdchck</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> disabledFieldsParent    <span style="font-weight: bold;">Setting 
+ Value:</span> <span style="font-style: italic;">glentty.id</span></p>
+<p>This option is designed to prevent 
+ the GL Entity from being inadvertently entered for non-Intercompany SAMPro 
+ installations. It should only be enabled if the GL Entity should NEVER 
+ be entered when printing this type of check.</p>
+<h3>Attach 
+ Auto-saved PR Miscellaneous Deduction checks to the Check record. </h3>
+<p><span style="font-weight: bold;">Id:</span> 
+ sys-report-rprmdchck</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> Autosave  <span style="font-weight: bold;">Setting Value:</span> 
+ true</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> AutosaveBySection  <span style="font-weight: bold;">Setting 
+ Value:</span> true</p>
+<p>The following settings are recommended:</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> autosavedirectory     <span style="font-weight: bold;">Setting 
+ Value:</span> path</p>
+<p>Where path is replaced by full path 
+ to the directory that you want your reports stored in.</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> autosavefilename    <span style="font-weight: bold;">Setting 
+ Value:</span> MiscDeductionCheck~^sectionkeyvalue^</p>
+<p>The above option defines the filename 
+ of the saved check.</p>
+<p> </p>
+<p> </p>
+
+</body></html>

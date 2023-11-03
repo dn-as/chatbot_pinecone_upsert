@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.5.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="spreadsheet"/>
+  <meta name="MS-HKWD" content="csv"/>
+  <meta name="MS-HKWD" content="autosave"/>
+  <meta name="MS-HKWD" content="invoice - autoemail"/>
+  <meta name="MS-HKWD" content="report"/>
+  <meta name="MS-HKWD" content="document"/>
+  <meta name="MS-HKWD" content="text qualifier"/>
+  <meta name="MS-HKWD" content="graphic"/>
+  <meta name="MS-HKWD" content="sys-report-serviceinvoice"/>
+  <meta name="MS-HKWD" content="copy stamp"/>
+  <meta name="MS-HKWD" content="registry"/>
+  <meta name="MS-HKWD" content="jpeg"/>
+  <meta name="MS-HKWD" content="initial values"/>
+  <meta name="MS-HKWD" content="sys-report-rininv"/>
+  <meta name="MS-HKWD" content="pdf"/>
+  <meta name="MS-HKWD" content="jpg"/>
+  <meta name="MS-HKWD" content="autoemail"/>
+  <meta name="MS-HKWD" content="csv file"/>
+  <meta name="MS-HKWD" content="sys-report-functiontid"/>
+  <meta name="MS-HKWD" content="delimiter"/>
+  <meta name="MS-HKWD" content="bitmap"/>
+  <meta name="MS-HKWD" content="email invoice"/>
+  <meta name="MS-HKWD" content="bmp"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry Report Graphics, Autosave, Other Options (sys-report-functionid)</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="default values,sectionbackerbitmap,sectionbackerbitmapadditional,spreadsheet,csv,autosave,invoice - autoemail,report,document,text qualifier,graphic,sys-report-serviceinvoice,copy stamp,registry,jpeg,initial values,sys-report-rininv,pdf,jpg,autoemail,csv file,sys-report-functiontid,delimiter,bitmap,email invoice,bmp"/>
+<meta name="brsnext" value="Registry_Company_Name_Entry.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Report Graphics, Autosave, Other Options (sys-report-functionid)">
+        <span>Registry Report Graphics, Autosave, Other Options (sys-report-functionid)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry Report Graphics, Autosave, Initial Values, Other Options (sys-report-functionid)</h1>
+  <h2>Purpose:</h2>
+  <p>This registry entry is used for the following purposes:</p>
+  <p><span><a href="#Registry_to_Require_Company_Selection_">Require the Company is Selected</a> (for non-posting reports) when printing a report.</span></p>
+  <p>To <a href="#Print_Before_E-mail_is_Allowed_or_Disallow_Email">require that a report with a “Did this Report Print” confirmation is printed before it can be e-mailed</a>.</p>
+  <p>To <a href="Registry_Entry_to_Autosave_Report.htm#Autosave">Autosave</a> a copy of the specified report to disk. This feature is particularly useful for archiving invoices, payroll reports and so on. All features are currently available for user-defined reports and the system Purchase Order. All features except ^sectionkey^ and ^sectiondirectory^ are available for all system reports. A list of <a href="Reports_that_Support_Section_Key_Logic.htm">Reports that Support Section Key Logic</a> may be viewed by following this link.</p>
+  <p><a href="#Password_Protect_Non-Section_Key_Reports_Autosaved_as_PDF_s">Password Protect Non-Section Key Reports Autosaved as PDF&#39;s</a></p>
+  <p><a href="#Set_Document_Record_s_FM__CRM__Sub_or_Tech_Viewable_Fields_When_Report_is_Auto-Attached">Set Document Records FM, CRM, Sub, or Tech Viewable Fields When Report is Auto-Attached</a></p>
+  <p>To <a href="Registry_Entry_to_Autosave_Report.htm#Registry_Entry_for_Report_Emailing">Auto-email supported reports</a> .</p>
+  <p>To specify custom <a href="Registry_Entry_to_Autosave_Report.htm#Report_Graphics_and_Copy_Stamp">Report_Graphics</a>.</p>
+  <p>To specify the positioning of the AP and Payroll check sections on the check form (this option is discussed in the help topic <a href="Registry_Entry_Payroll_Period.htm">Registry Entry for Independent Check Section Positioning</a> .</p>
+  <p>To limit this registry entry to your live database only as described in C<a href="Registry_Entry_to_Autosave_Report.htm#Comparison_Against_Database">omparison_Against_Database</a>.</p>
+  <p>To specify the <a href="Registry_Entry_to_Autosave_Report.htm#Registry_CVS_Delimiter">delimiter and text qualifier</a> characters used when this report is exported to CSV format, and to suppress report headers from the files.</p>
+  <p>Specify a <a href="#Registry_Last_Page_Bitmap">Last Page (Backer) Bitmap</a> for Selected Reports.</p>
+  <p>Registry option to set <a href="#Registry_max_lines_per_page">Maximum Lines per Page</a> by report</p>
+  <p>Print <a href="#registry_report_criteria">report criteria</a> on first or last page.</p>
+  <p><a href="#registry_display_report_as_pdf">Display report as PDF</a> (or disable global setting for a specific report)</p>
+  <p><a href="#Registry_Report_Default_Settings">Specify Initial Default Settings for a Report</a></p>
+  <p><a href="#Text_Box_Width">Text Box Width</a></p>
+  <h2>Related Registry Entries:</h2>
+  <p><span><a href="Report_Performance_Enhancement.htm">Implement Performance Enhancements</a> for all or selected reports.</span></p>
+  <p>See <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Setting_Temp_Directory">Registry Entry Global Settings</a> for details on setting up a temporary local directory to be used it a network drive is not available for file saving.</p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold;">Testing Your Registry Entries</font><br/>
+    <font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries. T</font>
+    <font style="font-weight: bold;">est</font> your registry entries after completing them to verify that they are functioning correctly. <font style="font-weight: bold;">This is particularly important for the Autosave option.</font>
+  </p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><span style="font-weight: bold;">
+      <font color="#FF0000" style="font-style: italic;">Setting</font>
+      <font color="#FF0000" style="font-style: italic;">Value Notes:</font>
+    </span><br/>
+    The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in the documentation. If the documentation specifies a value of true, do NOT enter True or TRUE.<br/>
+    The equal sign = is a reserved character in the Setting Value.  It should <span style="font-weight: bold;">NEVER</span> be used in the Setting Value field unless you are specifically instructed to do so for particular registry setting.<span style="font-weight: bold;"> </span></p>
+  <h2>Important Fields:</h2>
+  <p>
+    <font style="font-weight: bold;">Id:</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">sys-report-</font>
+    <font style="font-weight: bold; 
+															 font-style: italic;">functionid-branchid-userid</font><br/>
+    <font style="font-weight: bold;">sys-report-</font>
+    <font style="font-weight: bold; 
+	 font-style: italic;">functionid- -userid (</font>
+    <font style="font-weight: bold;">specific user that does not belong to a branch)</font><br/>
+    <font style="font-weight: bold;">sys-report-</font>
+    <font style="font-weight: bold; 
+	 font-style: italic;">functionid-branchid</font><br/>
+    <font style="font-weight: bold;">sys-report-</font>
+    <font style="font-weight: bold; 
+	 font-style: italic;">functionid-securityid</font><br/>
+    <font style="font-weight: bold;">sys-report-</font>
+    <font style="font-weight: bold; font-style: italic;">functionid </font>
+  </p>
+  <p>where <font style="font-weight: bold; font-style: italic;">functionid</font> is replaced by the function id that specifies the report (e.g., sys-report-rininv3 for construction invoices or <font style="font-weight: bold;">sys-report-serviceinvoice</font> for Service Compute Invoices). If this entry is specific to a user, the branch must be specified if a user belongs to a branch. If branches are not implemented, two dashes (not separated by a space) must precede the user id.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Service Compute Notes</font><br/>
+    When using this registry option to print invoices by Branch, Service Compute does NOT use the Branch Id on the workorder, it <font style="text-decoration: underline; ">uses the Branch Id of the user running the function</font>. If the Billing Agent field is cleared out, all invoices for all branches will print using the branch/registry option graphic setup for the User Logged in.
+  </p>
+  <h3><a id="Registry_to_Require_Company_Selection_"></a>Registry to Require Company Selection</h3>
+  <p>When intercompany is enabled, the user is only required to select a Company if some sort of posting is generated when the user confirms that the report has printed correctly.  This registry may be enabled to require that the user select a Company when printing a report that does not include a print confirmation. This may be enabled to ensure that the correct bitmap is used on the report or for some other reason.</p>
+  <p style="font-weight: bold;">Registry Id: sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p style="font-weight: bold;">Setting Key: CompanySelectionRequired</p>
+  <p style="font-weight: bold;">Setting Value: true, t, y, yes, or intercompanyonly   (default is not enabled)</p>
+  <p style="font-weight: bold;">By default, this functionality is not enabled. The intercompanyonly key should only apply if intercompany is enabled.</p>
+  <p style="font-weight: bold;">WARNING: This registry should NOT be applied to reports run via the Scheduled Report Manager.</p>
+  <p style="margin-left: 48px; text-decoration: underline; ">Example: Require Company Selection for COP Order Acknowledgement</p>
+  <p style="margin-left: 48px;">Id: sys-report-rordracknwldgmnt</p>
+  <p style="margin-left: 48px;">Setting Key: CompanySelectionRequired  Setting Value: true</p>
+  <p style="margin-left: 48px;"><span>Company/Security specific registries (e.g., sys-report-rordracknwldgmnt-securityid) must also be established to specify appropriate bitmaps.</span><span style="font-weight: bold;"> </span></p>
+  <h3><a name="Print_Before_E-mail_is_Allowed_or_Disallow_Email" id="Print_Before_E-mail_is_Allowed_or_Disallow_Email"></a> Disable the Email Button on the Report Screen Always or Before Printing</h3>
+  <p>These options can be implemented for reports that have a ‘did this report print successfully’ confirmation box, such as the Purchase Order and Service Invoice. Note that  for the Service Invoice, emailing the invoice via the Email button allows it to be sent without being posted!</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> OkToEmail <font style="font-weight: bold;">Setting Value:</font> false (default is true)
+  </p>
+  <p>This setting will permanently disable the SendEmail button; this report cannot be emailed from the report screen&#39;s Email button, including when a report has been saved as a DBR.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> OkToEmailWithoutPrint <font style="font-weight: bold;">Setting Value:</font> false (default is true) 
+  </p>
+  <p>If this option is set to false, the Email button will be disabled (grayed-out) when the report is first displayed. The button will be enabled only when the report has been printed.</p>
+  <p style="margin-left: 48px; text-decoration: underline; ">Example: Service Invoice</p>
+  <p style="margin-left: 48px;">If a Service Invoice is brought up to screen, the user can click the email button and email the invoice without posting it. The following registry will prevent this from happening.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Registry Id:</span> sys-report-serviceinvoice</p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Setting Key:</font> OkToEmailWithoutPrint <font style="font-weight: bold;">Setting Value:</font> false (default is true)
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="text-decoration: underline; ">Example: Purchase Order Control</font>
+  </p>
+  <p style="margin-left: 36.00pt;">If a PO is not linked to a Quote, the Vendor may be changed if items have not been received AND the PO had not been printed. Some users were completing a Purchase Order, emailing it to the Vendor, and then changing the Vendor on it. Implementing the following registry forces the Purchase Order to be printed before it can be e-mailed. Since the Vendor cannot be changed on a Printed Purchase Order, this entry effectively stops the undesirable practice of ‘reusing’ PO&#39;s.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Id:</font> sys-report-rpofrm
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> OkToEmailWithoutPrint <font style="font-weight: bold;">Setting Value:</font> false 
+  </p>
+  <h3><a name="Autosave" id="Autosave"></a>Autosave Options</h3>
+  <p><span style="font-weight: bold;">
+      <font style="font-weight: bold;">R</font>egistry Id:
+    </span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> autosave <span style="font-weight: bold;">Setting Value:</span> true  
+  </p>
+  <p>or</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> autosavewhenprinted <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>This automatic saving of reports is implemented when you specify one of these options. If you specify the autosave option, the report will be saved when it appears on the screen. If you specify the autosavewhenprinted option, the report will be saved when it is sent to the printer; this option is highly recommended for rininv3 and rininv4 and required for report serviceinvoice.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Import Note for Service Compute Invoices:</font><br/>
+    The autosavewhenprinted option <font style="font-weight: bold;">must</font> be specified in the registry entry sys-report-serviceinvoice due to the manner in which is invoked via the start service compute front end.
+  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Note for Progress Invoice / Construction Invoices:</span><br/>
+    S<span>ee the <a href="Registry_Record_Billing_Adjustments.htm">Record Billing Adjustment Registry</a> for an option to prevent the user from setting an invoice to Posted in Record Billed Adjustments. This is HIGHLY RECOMMENDED if your construction invoices are auto-saved, to prevent them from being accidentally posting without a printed invoice. </span></p>
+  
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> autosavefiletype <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">filetype</font>
+  </p>
+  <p>where <font style="font-weight: bold; font-style: italic;">filetype</font> is replaced by the format in which you wish to save the report. If you do not include this entry, DBReport is selected. The following are valid options:</p>
+  <p style="margin-left: 48px;"> Value  Notes</p>
+  <p style="margin-left: 48px;"> PDF  (Adobe Acrobat)</p>
+  <p style="margin-left: 48px;"> DBReport  (Requires Data-Basics report reader to view)</p>
+  <p style="margin-left: 48px;"> Text  (text only, no formatting)</p>
+  <p style="margin-left: 48px;"> HTML  (view with web browser)</p>
+  <p style="margin-left: 48px;"> CSV  (use only for spreadsheet-type reports)</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> autosavedirectory <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">path</font>   <span style="text-decoration: underline; ">OR</span><br/>
+    <font style="font-weight: bold;">Setting Key:</font> autosavedirectory <font style="font-weight: bold;">Setting Value:</font> path<font style="font-style: italic;">\^sectiondirectory^\</font>
+  </p>
+  <p>where <font style="font-style: italic;">path</font> is replaced by full path to the directory that you want your reports stored in. If you are specifying a url share path make sure that the directory below the ones that will be created is shared.</p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Important Note:</font> The ^sectiondirectory^ option is NOT supported by RININV3. The autosave path that you specify an appropriately named subdirectory, such as ConstructionInvoices.
+  </p>
+  <p>The \^sectiondirectory^\ option stores your reports in a subdirectory derived from the sectionkey field (if available) in the report. If this subdirectory does not already exist, it will be created as needed by the system.</p>
+  <h5 style="margin-left: 48px;"><span style="font-weight: bold;">Service Invoice Saved in Monthly Directories</span> </h5>
+  <p style="margin-left: 48px;">The revised Service Invoice reports</p>
+  <p style="margin-left: 48px;">SERVICEINVOICE_v91b054.rpt dated 2021-10-07 and</p>
+  <p style="margin-left: 48px;">SERVICEINVOICE_v90b028.rpt dated 2021-09-23</p>
+  <p style="margin-left: 48px;">Include new section directory functionality so that reports will be stored in monthly subfolders off of the &#39;Invoices&#39; directory.  This change was made to improve performance when a service invoice is saved. Note that the autosavedirectory key must include ^sectiondirectory^ as the last element of the directory path:</p>
+  <p style="margin-left: 128px; text-decoration: underline; ">Example:</p>
+  <p style="margin-left: 128px;">Id: sys-report-serviceinvoice</p>
+  <p style="margin-left: 128px;">Setting Key: autosavedirectory   Setting Value: \\Sampro\docs\^sectiondirectory^</p>
+  <p style="margin-left: 128px;">In the above scenario, a service invoice would be saved in the following location in November, 2021:</p>
+  <p style="margin-left: 128px;">\\Sampro\docs\Invoices\2021-11</p>
+  <p style="margin-left: 88px;">&quot;Invoices&#39; is defined as the sectiondirectory in earlier versions of the Service Invoice report, so these invoices would be stored in the \invoices directory.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Purchase Orders:</span> The Vendor Id is defined as the sectiondirectory of Purchase Order report, all PO’s would be stored by Vendor Id:</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> autosavefilename <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">name</font>,^sectionkeyvalue^,^date^,^time^
+  </p>
+  <p>You may use some or all of the parameters in this option. If more that one is used, parameters should be separated by commas.</p>
+  <p style="margin-left: 36.00pt;">If used, <font style="font-weight: bold; 
+												 font-style: italic;">name</font> should be replaced a short description of the report (e.g., Invoice, PO).</p>
+  <p style="margin-left: 36.00pt;">If used, the system will replace <font style="font-weight: bold;">^sectionkeyvalue^</font> with the corresponding value stored in the report. For example, the invoice report (rininv3) specifies the invoice number as the sectionkeyvalue. If you use this parameter you must also specify the autosavebysection=true option discussed below.</p>
+  <p style="margin-left: 36.00pt;">If used, the <font style="font-weight: bold;">^date^</font> and <font style="font-weight: bold;">^time^</font> parameters will be replaced by the system date and time when the report is run. These parameters effectively prevent the system from overwriting existing copies of the report (the date and time combination will serve to create a unique filename). In some cases this would be useful (e.g., balance sheets). In other cases, keeping only the most recent version of a document might be the best plan (invoices). If only the most recent version of a document is to be retained, the ^date^ and ^time^ parameters should not be used.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> autosavebysection<font style="font-weight: bold;"> Setting Value:</font> true<br/>
+    This option is used to save the report sections as individual files. Typically, this would be used for reports such as purchase orders, Invoices (AIA, service invoices, job invoices, COP Invoices and COP Export Invoices). autosavebysection=true should only be used in conjunction with the ^sectionkeyvalue^ parameter of the autosavefilename option discussed above.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> autosaveoverwrite<font style="font-weight: bold;"> Setting Value:</font> true or false (true is default)<br/>
+    If you specify the <font style="font-weight: bold;">true</font> option, the system will overwrite the most recent copy of a report file. Typically, this is the setting that you would use for invoices. <font style="font-weight: bold;">false</font> prevents a report file from being overwritten - the first copy a file would be retained, not the most recent.
+  </p>
+  <h3><a name="Set_Document_Record_s_FM__CRM__Sub_or_Tech_Viewable_Fields_When_Report_is_Auto-Attached" id="Set_Document_Record_s_FM__CRM__Sub_or_Tech_Viewable_Fields_When_Report_is_Auto-Attached"></a>Set Document Record&#39;s FM, CRM, Sub or Tech Viewable Fields When Report is Auto-Attached</h3>
+  <p><span id="BugEvents2222">The following options enable the ability to set the Document&#39;s &#39;Viewable&#39; flags when a report is auto-attached to an applicable record.</span></p>
+  <p><strong>Note: Documents uploaded through the following will always default to viewable, as they come from a web source.</strong></p>
+  <p><strong><span>R</span></strong><span style="font-weight: bold;">egistry Id:</span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p><span style="font-weight: bold;">Setting Key:</span> <span>ViewableFM  </span><span style="font-weight: bold;">Setting Value:</span> <span>true  (default is false)<br/>
+      This registry controls the Web Viewable FM? flag in the Document viewer that is used to determine if an FMAnywhere (or old CRM/Client Web Interface) Web User will have access to the associated report.</span></p>
+  <p><span style="font-weight: bold;">Setting Key:</span> <span>ViewableCRM   </span><span style="font-weight: bold;">Setting Value:</span> <span>true  (default is false)</span><br/>
+    <span id="BugEvents22112">This registry controls the Web Viewable CRM? flag in the Document viewer that is used to determine if an CRMAnywhere (or old CSR) User will have access to the associated report.</span>
+  </p>
+  <p><span style="font-weight: bold;">Setting Key:</span> <span>ViewableTech    </span><span style="font-weight: bold;">Setting Value:</span> <span>true   (default is false)<br/>
+      T</span><span>his registry controls the Web Viewable Tech? flag in the Document viewer that is used to determine if an TechAnywhere Technician will have access to the associated report.</span></p>
+  <p><span style="font-weight: bold;">Setting Key:</span> <span>ViewableSub    </span><span style="font-weight: bold;">Setting Value:</span> <span> true   (default is false)</span></p>
+  <p><span id="BugEvents22211">T</span><span id="BugEvents221111">his registry controls the Web Viewable Tech? flag in the Document viewer (available in 8.2.545.031) that is used to determine if an TechAnywhere Technician will have access to the associated report.</span></p>
+  <h3><a name="Registry_Entry_for_Report_Emailing" id="Registry_Entry_for_Report_Emailing"></a>Auto Email</h3>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p>
+    <font style="font-weight: bold;"><b>S</b>etting Key:</font> autoemail<font style="font-weight: bold;">  Setting Value:</font> true  
+  </p>
+  <p><b>Setting Key:</b> autoemailwhenprinted   <b>Setting Value:</b> true (required when autosavewhenprinted is enabled)</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> emailbysection <font style="font-weight: bold;"> Setting Value:</font> true
+  </p>
+  <p>These options may be enabled for supported reports that you wish to automatically email by section when they are displayed and/or printed. These reports currently include the service invoice and vendor insurance expiration (rexprdinsrnce) reports, Report Customer Statements (rcuststmnt dated 8/30/2011 or later) and  sys-report-reftchckdtlvndr (for EFT AP Vendors) .</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Important Note:</span> autoemailwhenprinted and autosavewhenprinted<br/>
+    If autosavewhenprinted is enabled for a report, autoemailwhenprinted should also be enabled if you wish the report to be emailed.  </p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Service Invoice:</font> The system uses the Job’s Invoice Email Address. If the email address is filled in AND the following registry entry is set, then the report omits the invoice address, and replaces with the Emailed To: address. However, the autoemailwhenprinted option is responsible for the actual emailing of the report.
+  </p>
+  <p class="Normal_Indent" style="margin-left: 88px;">
+    <font style="font-weight: bold;">Setting Key:</font> autoemail<font style="font-weight: bold;">  Setting Value:</font> true  
+  </p>
+  <p>The <font style="font-weight: bold;">To:</font> email address will be derived from each section depending upon the report.</p>
+  <p>The <font style="font-weight: bold;">From:</font> email address required to send the email is derived from the User’s Contact record. This means that, in order for this functionality to work, <font style="font-weight: bold;">Users running the report MUST have a Contact ID in their User record AND a valid email address in that Contact record.</font> If these requirements are not met, the email will fail.</p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Email Customer Statements:</font> If an e-mail address exists in the Client Collections Email Address field, a copy of their section of the report will be emailed to that address.
+  </p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Document Archiving:</font> When auto-emailing is enabled for Service Invoices, the system no longer attempts to archive the emailed copy in addition to the copy that is being saved / archived as defined in the registry settings for the report.
+  </p>
+  <h5>Do Not Email User Running Report if Section lacks a Recipient Email Address</h5>
+  <p>By default, if the User&#39;s email is completed in the User&#39;s Contact Record AND the appropriate Email To address is blank (for example, the Email Invoice Address (or Billing Address Id) in the Job is blank for service invoices), the invoice is sent to the User&#39;s Email Address in the Contact record. This may be undesirable. The following registry setting applies to auto-emailing in general and may be implemented on a report by report basis to disable the emailing of a report section when the section does NOT have a recipient email address available.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> SkipEmailNoAddress <font style="font-weight: bold;">Setting Value:</font> Y (default is N)
+  </p>
+  <h3><a name="Report_Graphics_and_Copy_Stamp" id="Report_Graphics_and_Copy_Stamp"></a> Report Graphics</h3>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> bitmap <font style="font-weight: bold;">Setting Value:</font> <span style="font-style: italic;">sharepath\bitmap.bmp</span>
+  </p>
+  <p>The ‘bitmap’ entry enables you to specify the name and location of the files used to display your company logo and contact information on invoices, customer statements, and other reports, as well as provide formatting for purchase orders.  A Windows .bmp file is required. The Setting Value is the full path to the bitmap itself, including the filename. A path using a named drive is recommended to prevent problems down the road if a new server is installed.</p>
+  <p style="font-weight: bold;">If you will be emailing your reports as .PDF’s, a .jpg version of the graphics file must also be in place. <span style="font-weight: normal;">The filename must be the same as the .bmp file but the extension must be .jpg. Note that the .bmp file is displayed in the SAMPro report viewer, while the .jpg file is required for the PDF.</span></p>
+  <p style="margin-left: 48px; font-weight: bold;">Example using a Drive Designation (recommended) for Service Invoice</p>
+  <p style="margin-left: 48px; font-weight: normal;">
+    <font><span style="font-weight: normal;">Id: sys-report-serviceinvoice</span></font><br/>
+    Setting Key: bitmap Setting Value: n:\documents\bitmaps\myinvoice.bmp
+  </p>
+  <p style="margin-left: 48px; font-weight: normal;">In this example, the files myinvoice.bmp and myinvoice.jpg would both reside in n:\documents\bitmaps\</p>
+  <p style="margin-left: 48px; font-weight: normal;"><br/>
+    <span style="font-weight: bold;">Override Bitmap Functionality for Service Invoices, Quotes and Construction Invoices (RININV3)</span><br/>
+    Special bitmap &#39;override&#39; functionality is available for the following supported reports.
+  </p>
+  <p style="margin-left: 88px;"><span style="font-weight: bold;">Service Invoice:</span> <a href="Registry_Entry_Report_Service_Invoice.htm#Specify_Bitmap_by_Sites_AccountManager__ServiceManager__Dispatcher_or_Branch">Specify Override Bitmap by the Site&#39;s Account Manager, Service Manager, Dispatcher or Branch</a> for details on implementing this functionality for the Service Invoice. A <a href="Registry_Entry_Report_Service_Invoice.htm#Specify_Bitmap_Override_by_Job_">Bitmap Override by Job</a> is also supported.<br/>
+    <span style="font-weight: bold;">Quote:</span> <a href="Registry_Report_Quote_Form.htm#Specify_Override_Bitmap_by_Sites_AccountManager__ServiceManager__Dispatcher_or_Branch">Specify Override Bitmap by Sites Account Manager, Service Manager, Dispatcher or Branch</a>. The Quote report also supports a <a href="Registry_Report_Quote_Form.htm">Bitmap Override by Job</a>.<br/>
+    <span style="font-weight: bold;">Construction Invoice:</span> <a href="Registry_Entry_for_Construction_Invoices.htm#Specify_Bitmap_Override_by_Job">Specify Bitmap Override by Job</a> for the progress invoice (RINVINV3).
+  </p>
+  <p style="margin-left: 48px; font-weight: bold;">Using Printed Stationary on the DBReport and a Graphic Image in the PDF<br/>
+    <span style="font-weight: normal;">Some users print some or all of their DBR reports to preprinted stationary but want to include an image in the pdf images that they email.  If this case, the .bmp image would simply be a small white square that would not actually print anything when the report was run from SAMPro.</span> <span style="font-weight: normal;">The .jpg file would be of the actual image (usually a logo and address) that would be used when the PDF was generated from SAMPro. Note that the .bmp would be referenced in the registry setting - the software knows to look for the corresponding .jpg file when the report is pdf&#39;d.</span>
+  </p>
+  <p style="margin-left: 48px;"><span>
+      <font style="font-weight: bold;">Important Note on Redisplaying</font>
+      <font style="font-weight: bold;">Saved</font>
+      <font style="font-weight: bold;">Reports:</font><br/>
+      Any time a DBR is saved, it stores the registry values in the DBR file itself. Namely, the bitmap directory. When that DBR file is opened in SAMPro, it will recall the old bitmap directory to go out and find the logo to print to screen. See <a href="Saved_Reports_and_Bitmaps.htm">Saved Reports and Bitmaps</a> for additional steps which may be taken to find the bitmap for display.
+    </span></p>
+  <p class="Support"> </p>
+  
+  
+  
+  
+  
+  
+  
+  <p style="font-weight: bold;">Setting Key: copystampbitmap Setting Value: sharepath\copystamp.bmp</p>
+  <p>The &#39;copystampbitmap&#39; option lets you designate the &#39;copy&#39; graphics that should appear on reports that are being printed for a second time.</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3><a name="Registry_Last_Page_Bitmap" id="Registry_Last_Page_Bitmap"></a>Last Page Bitmaps for Selected Reports</h3>
+  <p>This registry enhancement may be used to print a ‘backer’ type bitmap as the last page of selected reports. Currently this feature is available only on the PO Form, standard Quote Form, the Service Invoice and enhanced AIA-style billing reports.  This functionality can be added to other section-based reports as needed.  A relatively small change is required.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> sectionbackerbitmap <font style="font-weight: bold;">Setting Value:</font> sharepath\<span style="font-style: italic;">backerbitmapname.bmp</span>
+  </p>
+  <p>If you will be emailing the report or saving it as a .pdf, make sure that a .jpg version of the backer bitmap also exists in the same directory.</p>
+  <p style="margin-left: 48px; font-weight: bold;">NOTE: Service Invoice Alternate Functionality<br/>
+    The &#39;sectionbacker&#39; functionality may also be used to &#39;turn off&#39; the standard Invoice graphic when attaching TechAnywhere receipts and other documents to a Service Invoice.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> sys-report-serviceinvoice:</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> sectionbackerbitmap   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">Pathname</span>\whitesquare.bmp</p>
+  <p style="margin-left: 48px;"><span>This registry is recommended to prevent the invoice bitmap from &#39;stepping on&#39; the attached documents. The bitmap may be obtained from support.</span></p>
+  <h3><a name="Text_Box_Width" id="Text_Box_Width"></a> Text Box Width (selected reports)</h3>
+  <p>The TextBoxWidth registry setting allows a user to change the default width for textbox processing in certain reports. This option affects text boxes like work performed on a Service Invoice, Quote Scope Description, RININV3 invoice description, etc. It controls how far to the right the box extends. The left-hand position of the box is controlled by the report itself.</p>
+  
+  
+  
+  
+  
+  <p class="MsoNormal"><span style="font-weight: bold;">Registry Id:</span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p class="MsoNormal"><span style="font-weight: bold;">Setting Key:</span> textboxwidth       <span style="font-weight: bold;">Setting Value:</span> # of columns (usually either 80, 100 or 110)</p>
+  <p class="MsoNormal">This option is supported in the following reports dated 2015-01-27 or later:</p>
+  <p style="margin-left: 48px;">RCO (Report Change Order)</p>
+  <p style="margin-left: 48px;">RININV3 (Report Invoice Template 3 - Progress Billing)</p>
+  <p style="margin-left: 48px;">RQTEFRM (Report Quote Form (Standard)</p>
+  <p style="margin-left: 48px;">SERVICEINVOICE (Report Service Invoice)</p>
+  <p style="margin-left: 48px;">SERVICEWORKSHEET (Report Worksheet for srvce_jbs)</p>
+  <p style="margin-left: 48px;">RSRVCEHSTRYDTL (Report Site Service History)</p>
+  <p style="margin-left: 48px;">DWOSMMRY (Report Work Order Summary)</p>
+  <p style="margin-left: 48px;">RBLLRPT (Report Job Billing Recap)</p>
+  <p style="margin-left: 48px;">woticket-db (Workorder Field Ticket (Standard))</p>
+  <h3>JPG Bitmap Support for PDF Files</h3>
+  <p>SAMPro supports the use of custom .jpg graphics that will be displayed in the .pdf versions of reports, invoices, work orders and other documents generated from SAMPro. The .jpg file should correspond in appearance and name to the bitmap (.bmp) file used to customize the native SAMPro report (DBReport format). Like the bitmap file, the .jpg must reside in the directory specified in the registry entry (sys-report-ReportfFuctionId). Note that the position and size modifiers, and multiple .jpg files are NOT supported in .PDFs: if whitespace is required at the top or left-hand side for the graphic to align correctly, it must be included in the .jpg graphic itself.</p>
+  <p class="Body_Text_2" style="margin-left: 72.00pt;">
+    <font style="text-decoration: underline; ">Example:</font>
+  </p>
+  <p class="Body_Text_2" style="margin-left: 72.00pt;">Suppose your registry entry for the Purchase Order Form (sys-report-rpofrm) includes the following option:</p>
+  <p class="Body_Text_2" style="margin-left: 108.00pt;">Setting Key: bitmap   Setting Value: \\myserver\sampro\graphics\po1.bmp</p>
+  <p style="margin-top: 0.00pt; margin-left: 88px;">In this instance, a jpg file named po1.jpg must reside in \\myserver\sampro\graphics in order for the .pdf version of the custom graphic to be supported.</p>
+  <h3>JPG Format</h3>
+  <p class="Body_Text_2" style="margin-left: 5.75pt;">Since JPG is a compressed format, you may wish to specify an RGB image rather than palletized. The size in inches of the .jpg file must correspond to the desired size in inches as printed in the native Data-Basics report. For each, full page graphics (such as a PO form, or the landscape COP invoice) should be generated to 10.50” in height by 8.00” in width (landscape). A typical graphic to be used as an invoice or statement logo would be generated at 1.50” in height and 4.00-5.00” in width.</p>
+  <p class="Body_Text_2" style="margin-left: 5.75pt;">The dpi resolution of the jpg file typically ranges from 100dpi – 300dpi, depending upon the graphics involved and the requirement of the customer. With the exception of the copystamp element, all jpg’s will be positioned at the upper left-hand corner of the page. If positioning is required, it should be incorporated into the graphic as white space.</p>
+  
+  
+  
+  
+  
+  
+  <h3>JPG Support of Copystamp</h3>
+  <p class="Body_Text_2" style="margin-left: 5.75pt;">Copystamp Bitmap functionality (where available by report and implemented by the appropriate registry setting) is also supported for pdf’s. <font style="text-decoration: underline; ">When the copystampbitmap is used in the pdf file, it will be positioned 2 inches down and to the right regardless of the positioning specified in the registry. <span style="text-decoration: none; "> If the copystamp will be used on a check, additional whitespace on the left and top may be needed to position the COPY graphic in the check rather than the stub portions of the page.</span></font>
+  </p>
+  <h2><a name="Comparison_Against_Database" id="Comparison_Against_Database"></a>Comparison Against Database</h2>
+  <p>These options enable you to prevent copies of your database (which may be running for training or testing purposes) from interfering with “live” operations. You may specify either or both. For example, implementing one or both of them for sys-report-serviceinvoice would help avoid inadvertently overwriting your real invoices while running a copy of your data to train new personnel.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">eng</font> Setting Value: <font style="font-weight: normal;">enginename</font>
+  </p>
+  <p>where <font style="font-style: italic;">enginename</font> is replaced by the engine name that your live data runs under.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="text-decoration: underline; ">and/or</font>
+  </p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">dbn</font> Setting Value: <font style="font-weight: normal;">databasename</font>
+  </p>
+  <p>where <font style="font-style: italic;">databasename</font> is replaced by the name of your live database. Do not include the .db extension in the databasename (mydata rather than mydata.db).</p>
+  <h2><a name="Registry_CVS_Delimiter" id="Registry_CVS_Delimiter"></a>CSV Delimiter, Text Qualifier and Report Header Options</h2>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">These enable you to set the delimiter and text qualifier characters for a specific report. This allows you to override the standard system values as well as those specified in the <a href="Registry_Entry_for_CVS_(Comma_Separated_Value)_Files.htm">sys-csv</a> registry entry for a specific report.</p>
+  <p class="Reference_Line"><span style="font-weight: bold;">Registry Id:</span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> delimiter <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">character</font>
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">where <font style="font-style: italic;">character</font> is replaced by:</p>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">tab</font> (for tab-delimited files)
+  </p>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">comma</font> (the default)
+  </p>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">pipe</font>
+  </p>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">tilde</font>
+  </p>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">any other character (e.g., :)</p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> textqualifier <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">value</font>
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">where <font style="font-style: italic;">value</font> is replaced by:</p>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">doublequote</font> (the default)
+  </p>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">singlequote</font>
+  </p>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">none</font>
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> includeHeading <font style="font-weight: bold;">Setting Value:</font> N
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">By default, reports which output to the spreadsheet format will both include data and header lines. This option enables you to include only the data in your CSV files.</p>
+  <h3><a name="Registry_max_lines_per_page" id="Registry_max_lines_per_page"></a>Registry Option to Set Maximum Lines per Page by Report</h3>
+  <p>Specify the maximum number of lines for a specific report. This entry would commonly be used to shorten a report so that a footer bitmap could be used.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> LinesPerPage <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">x</font>
+  </p>
+  <p>Where x is the maximum number of lines (including header blank lines) per page for this report.</p>
+  <p>The ideal lines per page will vary depending on whether the report is landscape or portrait, the font size specified in the report, and the size of the footer bitmap. You may wish to begin with a setting of 75 lines per page for portrait reports, and 55 for landscape reports, print the report, and then make appropriate adjustments to the lines per page.</p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Escalation Manager Pagination</font><br/>
+    Since reports launched by the escalation manager do not know which printer they will be sent to, the default length was being set to 60 lines per page in some cases – much too short for a portrait report. The scheduled report manager will look at the LinesPerPage option in the sys-report-functionid registry setting when calculating the lines per page. Typically, somewhere between 78 and 80 lines would be appropriate for a portrait report.
+  </p>
+  <h2><a name="registry_report_criteria" id="registry_report_criteria"></a>Print report criteria on first or last page</h2>
+  <p>This enhancement enables the optional printing of your report settings and ranges appear together as a page on the &#39;printed&#39; report. Some reports aren&#39;t eligible for printing the report criteria.  These exceptions tend to be reports that use pre-printed forms and/or have report-printed-ok confirmation prompts.  Examples are Checks, Invoices, PO forms, etc. To activate this option for specific reports:</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p>
+    <font style="font-weight: bold;">SettingKey:</font> PrintReportCriteria 
+  </p>
+  <p>
+    <font style="font-weight: bold;">SettingValue:</font> reportfirstpage Or reportlastpage OR sectionfirstpage OR false (default false)
+  </p>
+  <h3><a name="registry_display_report_as_pdf" id="registry_display_report_as_pdf"></a>Display Report as PDF</h3>
+  <p>When this option is enabled, reports will be previewed as PDF’s instead of in SAM Pro’s Report viewer. This option may be implemented for all reports that do NOT require posting (e.g., invoices, po’s, etc.) by creating the following registry setting:</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-report-<span style="font-style: italic;">functionid</span></p>
+  <p>
+    <font style="font-weight: bold;">SettingKey:</font> PreviewReportsAsPDF <font style="font-weight: bold;">SettingValue:</font> true
+  </p>
+  <p>Note that if the user attempts to preview a report with no contents (e.g, the ranges have been set so that zero pages will be generated), the system will display the message “Report has zero pages to display no PDF File will be created.”</p>
+  <p>Regardless of any new registry settings, SAMPRO rejects PDF previewing for certain reports that require posting code.  Generally, that list includes all reports that have a &#39;Print Ok?&#39; prompt.  This includes printing AP Checks, PR Checks, PO Forms, etc.</p>
+  <h3>Override Global Preview Reports as PDF Option</h3>
+  <p>The setting the sys-ffv-global-settings option PreviewReportsAsPDF to true results in all reports (except posting reports such as service invoice) being displayed as PDF&#39;s when they are run. This release provides the ability to disable this functionality on an individual report basis by implementing the following registry:</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-report-<span style="font-style: italic;">reportfunctionid</span></p>
+  <p><span style="font-weight: bold;">Setting Key:</span> PreviewReportsAsPDF   <span style="font-weight: bold;">Setting Value:</span> false</p>
+  <h3>Use Default Printer (with Preview Reports as PDF)</h3>
+  <p>This registry should only be used with the Display Report as PDF to eliminate the SAMPro printer box. The PDF printer functionality would then be used to print the report.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-report-<span style="font-style: italic;">reportfunctionid</span></p>
+  <p><span style="font-weight: bold;">Setting Key:</span><span> UseDefaultPrinter   </span><span style="font-weight: bold;">Setting Value:</span><span> true</span></p>
+  <h3><a name="Registry_Report_Default_Settings" id="Registry_Report_Default_Settings"></a>Specify Initial Default Report Settings</h3>
+  <p>The software now supports general functionality for registry entries for reports which will allow for the default setting for Settings and Range type fields to be specified.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> InitialValueFor~<font style="font-style: italic;">fieldId</font>
+    <font style="font-style: italic;"> </font>
+    <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">fieldvalue</font>
+  </p>
+  <p>Note that ”fieldId” is displayed on the report range screen when you lay your cursor over it. For boolean fields (check boxes), the field value of true is for checked, and false is for blank.</p>
+  <p style="margin-left: 36.00pt; text-decoration: underline; ">Example: enable the Estimated Sales Tax box on the updated Quote Form report</p>
+  <p style="margin-left: 36.00pt;">Id: sys-report-rqtefrm</p>
+  <p style="margin-left: 36.00pt;">Setting Key: initialValueFor~p_shw_estmtd_tx  Setting Value: true</p>
+  <p style="margin-left: 36.00pt;"><span style="font-weight: bold;">Important: Service Invoice and Service Worksheet Initial Settings</span><br/>
+    Since the Service Worksheet and Service Invoice are run from Starter functions, the initial value settings must be made for the appropriate Starter Registry: see <a href="Registry_Entry_Start_Compute_Service_Worksheets.htm">Start Service Billing Worksheet</a> and <a href="Registry_Entry_Start_Service_Billing_Compute.htm">Start Compute Service Invoice</a> for details.</p>
+  <p style="margin-left: 36.00pt; text-decoration: underline; ">Example: Report Work Order Service History - Initial Value for Required Work Order Age and Max Calls fields</p>
+  <p style="margin-left: 36.00pt;">Id: sys-report-rwrkordrsrvcehstry</p>
+  <p style="margin-left: 36.00pt;">Setting Key: initialValueFor~p_wrkordr_dys   Setting Value: 1000</p>
+  <p style="margin-left: 36.00pt;">Setting Key: initialValueFor~p_mx_clls    Setting Values: 200</p>
+  <h3><a name="Password_Protect_Non-Section_Key_Reports_Autosaved_as_PDF_s" id="Password_Protect_Non-Section_Key_Reports_Autosaved_as_PDF_s"></a>Password Protect Non-Section Key Reports Autosaved as PDF&#39;s</h3>
+  <p>An updated XmlToPdf.jar file (dated 1/16/2014 or later) and the following registry entry(ies) are required to implement this behavior for reports which do NOT contain section logic. These settings can be used to password protect PDF files which are auto-saved.<span style="mso-spacerun: yes;"> </span> Note that the registry must also include the applicable autosave (or autosavewhenprinted), autosavefilename, and autosavedirectory entries.<span style="mso-spacerun: yes;"> </span> In addition, the autosavefiletype option MUST be set to PDF (Setting Key: autosavefiletype<span style="mso-spacerun: yes;"> </span> Setting Value: PDF).</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-report-<span style="font-style: italic;">functionid   </span>(be sure to implement for all Branch and or Security entries)</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> ReportPasswordProtect   <span style="font-weight: bold;">Setting Value:</span> true</p>
+  <p>This option implements password protection for this report.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> ReportUserPassword    <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">password</span></p>
+  <p>This option specifies the password required to open the auto-saved report.  Note that if this password is changed, reports created with earlier password still require the earlier password to open.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> ReportOwnerPassword   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">password</span></p>
+  <p>A default Owner password (for Data-Basics Support only) will be used unless one is set through this registry entry.</p>
+  <h3>Default Collate and Number of Copies Settings by Report</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> Collate<br/>
+    <font style="font-weight: bold;">Setting Value:</font> true/false (true is the default)<br/>
+    <br/>
+    <font style="font-weight: bold;">Setting Key:</font> Copies<br/>
+    <font style="font-weight: bold;">Setting Value:</font> anInteger (1 is the default)
+  </p>
+  <h3>PDF File Names Customization for Reports</h3>
+  <p>This allows users to create a registry that allows them to customize the names of the file produced when generating a service invoice.</p>
+  <p><strong>Id:</strong> sys-report-<em>function id</em></p>
+  <p><strong>Setting Key:</strong> sectionfilename</p>
+  <p><strong>Setting Value:</strong> (see below for token help)</p>
+  <p><strong>Note: Multiple tokens can be strung together by separating characters in between the tokens as space fillers or labels.</strong></p>
+  <p>Example:</p>
+  <p>PO 5678 for Vendor &quot;ACME&quot;</p>
+  <p>^prchseordr.id^-^vndr.id^  will name the document &quot;5678-ACME.pdf&quot;</p>
+  <p><br/>
+    <strong>User Report Example:</strong>
+  </p>
+  <p><strong>Registry: </strong>sys-report-<em>functionid</em></p>
+  <p><strong>Setting Key:</strong> sectionfilename</p>
+  <p><strong>Setting Value:</strong> PO ^prchseordr.id^</p>
+  <p> </p>
+  <p><strong>System Report Example:</strong></p>
+  <p><strong>Registry:</strong> sys-report-<em>functionid</em></p>
+  <p><strong>Setting Key:</strong> sectionfilename</p>
+  <p><strong>Setting Value: </strong>Quote ^f_qte_id^</p>
+  <p> </p>
+  <p><strong>Must have autosave enabled for the report (whether it is autosave or autosave when printed)</strong></p>
+  <p><strong>Must have autosavefilename ^sectionkeyvalue^</strong></p>
+  <p><strong>Should have autosavebysection - true if applicable for the report (invoices, statements, etc)</strong></p>
+  <p>The tokens are formatted differently based on what type of report it is.</p>
+  <p>For <strong>UserReports,</strong> the tokens match the <strong>Report Field Ids</strong>. For <strong>System Reports</strong>, the token should be the<strong> workarea field name without the &quot;a-&quot; group</strong>. This will automatically be pulled from the report definition and should make the tokens slightly easier to write.</p>
+  <p> </p>
+  <p>To make the tokens, first identify what type of report it is. When running the report, it either says &quot;List&quot; then the report name, or &quot;ListUserReport&quot; then the report name. The system reports are the reports that say &quot;List&quot;</p>
+  <p><img src="assets/images/image79.png"/></p>
+  <p>For List reports, go to the bottom line of the viewer and find the name as displayed below.</p>
+  <p><img src="assets/images/image80.png"/></p>
+  <p>For ListUserReport, go to the report, hover over the invoice number field and look for the name on the bottom bar.</p>
+  <p><img src="assets/images/image81.png"/></p>
+  <p> </p>
+
+</body></html>

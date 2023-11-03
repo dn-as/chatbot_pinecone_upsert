@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.2.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="branch"/>
+  <meta name="MS-HKWD" content="new call"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Branch Processing in New Call</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="branch,new call"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Branch Processing in New Call">
+        <span>Branch Processing in New Call</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Branch Processing in New Call</h1>
+  <h3>Branch Processing in New Call</h3>
+  <p>Branch Processing has been revised in New Call so that it now works as follows:</p>
+  <p>1. When a Site is selected, all Branch info (Id, Rn, Name, etc) is set based on the Site&#39;s branch.</p>
+  <p>2. When Equipment is selected, all Branch info is set based on the associated Job&#39;s branch unless any one of the following is true:</p>
+  <p style="text-indent: 30.25pt;">- the Job does not have a Branch specified</p>
+  <p style="text-indent: 30.25pt;">- the registry setting UseSiteBranch=true is set in sys-newcall</p>
+  <p style="text-indent: 30.25pt;">- the registry setting BranchOverrideFrom=clntste is set in sys-ffv-global-settings</p>
+  <p>The Branch assigned to the newly created work order should match what the user sees on the New Call entry form.</p>
+  <p>Note that if BranchOverrideFrom=job is set in sys-ffv-global-settings, the Job’s Branch is always used, and there is no fallback to the Branch in the User’s account.</p>
+  <p>If the above registry overrides are not present, the Branch from the User’s account will default if the Site and Job do not specify a Branch. In this case, the User may change or clear the Branch Id as allowed by his branch filtering/security.</p>
+  <p>If the Technician Id has a default vendor that has a default branch, this will override the Branch Id, regardless of the registry.</p>
+
+</body></html>

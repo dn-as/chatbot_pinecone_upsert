@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.6.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="certification"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Certification Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="certification"/><meta name="brsnext" value="GL_Entity_Group_Viewer.htm"/><meta name="brsprev" value="GL_Entity_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Certification Viewer">
+        <span>Certification Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Certification Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create, maintain and select your list of equipment certification types.</p>
+<h2>Example:</h2>
+<p>Create a record for the ACME A/C 100 certification.</p>
+<h2>Usage:</h2>
+<p>Required for Technician Certifications.<br/>
+Referenced by: Client Site Equipment.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Certification Id:</font> (10 character, only . and - special characters)<br/>
+A unique Id. This field is required.</p>
+<p><font style="font-weight: bold;">Certification Description:</font> (40 character)<br/>
+A brief description of the certification. This field is optional but recommended.</p>
+<p><font style="font-weight: bold;">Obsolete</font><font style="font-weight: bold;">?</font><font style="font-weight: bold;"><br/></font>If this field is checked, the record is considered Obsolete, and it may not be directly specified during data-entry (either by entering the Id or selecting it from a list). Obsoleted records can be edited and the Obsolete option can be un-done when necessary. When you check the Obsolete field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through access to all tables referencing this record: see <a href="References_List.htm">References List</a> for details.</p>
+
+</body></html>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.5.1_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="client site equipment"/>
+  <meta name="MS-HKWD" content="equipment"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Client Site Equipment Viewer</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="client site equipment,equipment"/>
+<meta name="brsnext" value="Client_Site_Equipment_PM_Tab.htm"/><meta name="brsprev" value="Client_Site_Equipment_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Site Equipment Viewer">
+        <span>Client Site Equipment Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Client Site Equipment Viewer</h1>
+  <h2>Purpose:</h2>
+  <p>Contains the detailed record of the equipment at a specific client site.</p>
+  <h2>Example:</h2>
+  <p>Suppose that a client site includes two major pieces of equipment; a boiler and an air conditioner. In this example, two Client Site Equipment records would be created - one for the boiler and one for the air conditioner.</p>
+  <h2>Usage:</h2>
+  <p>A Client Site Equipment record can only be created for a valid Client Site. A Client Site Equipment Record is required in order to set up Client Site Equipment PM records, and to track equipment history.</p>
+  <p>Site Equipment records that are attached to Client Site Template records may only be edited by users with access to Templates via their User Groups.</p>
+  <p>Equipment records associated with Assets may be created to implement rental equipment billing.</p>
+  <h2>Registry:</h2>
+  <p><a href="Registry_Client_Site_Equipment_Viewer.htm">Client Site Equipment Registry</a></p>
+  <p>Registries to <a href="Interest_Registry_Entry_Set_Disabled_Fields.htm">Set Disabled Fields</a> and <a href="Internal_Registry_Set_Required_Fields.htm">Set Required Fields</a>.</p>
+  <h2>Screen Organization:</h2>
+  <p>The tabs in the upper section of this screen organize the primary site equipment information. Click on the following links to see additional information on each tab.</p>
+  <p><a href="#Client_Site_Equipment_Main_Tab">Main Tab</a>  <a href="#Client_Site_Equipment_Service_Tab">Service Tab</a>  <a href="#Client_Site_Equipment_User_Fields_Tab">User Fields Tab</a></p>
+  <p>The tabs on the lower section of this screen display the site equipment &#39;child&#39; tables. Click on the following links to see additional information:</p>
+  <p><a href="Client_Site_Equipment_PM_Tab.htm">PM Schedule Tab</a>  <a href="Client_Site_Equipment_COM__Component__Tab.htm">Components Tab</a>  <a href="Site_Equipment_Certification_Tab.htm">Certifications Tab</a>  <a href="Client_Site_Equipment_Active_Equipment_Tab.htm">Active Equipment Tab</a> <a href="Client_Site_Equipement_Open_WOs_Tab.htm">Open WOs Tab</a>  <a href="Client_Site_Equipment_Other_WOs_Tab.htm">Other WOs Tab</a> <a href="Client_Site_Equipment_MasterSchedule_Tab.htm">MasterSchedule Tab</a> <a href="Client_Site_Equipment_Metric_History_Tab.htm">Metric History Tab</a></p>
+  <p><img alt="" border="0" src="assets/images/SKIN1_PMClone.bmp" style="border: none;"/> Clicking this button enables you to clone the PM Schedule from another Equipment record. When you click this button a list of equipment records who’s PM Schedules are eligible to be copied will appear. By default, equipment will only appear on this list if they contain lines that are not associated with a master contact, regardless of whether or not an a work order is associated with it (a registry setting is available to limit eligible lines to those without work orders).</p>
+  <p>When you select a record from the list and click ‘ok’, its PM Schedule entries will be copied to the current PM Schedule tab. Adjust these lines as needed before saving the record.</p>
+  <h2>Important Fields: Upper Section</h2>
+  <p>This Help Topic lists the standard configuration of all fields that may be included in this record. If you are using a customized system, the fields displayed on your screen may not exactly match the order or status (required, optional, default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Client_Site_Equipment_Main_Tab" id="Client_Site_Equipment_Main_Tab"></a>Main</p>
+  <p>
+    <font style="font-weight: bold;">Equipment Id:</font>(15 character, only . and - special characters)<br/>
+    An Id that clearly identifies this piece of equipment to the technician and client. When you double-click on this Id, the Equipment Master list will appear so that you can select from a list of your standard Ids in order to keep your naming conventions consistent.
+  </p>
+  <p>This field is required, and must be unique for this client site. If you have more than one of the same type of unit at this site, add a numerical designation to distinguish them (XLRU1, XLRU2, etc.).</p>
+  <p>
+    <font style="font-weight: bold;">Equipment Name:</font> (40 character)<br/>
+    This optional field provides a more complete description of the equipment.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Site Id:</font><br/>
+    A valid client site Id. Double-click on this field (or press Alt-F7) to display a list of existing Client Sites to select from. This field is required.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Master Contract Id:</font><br/>
+    This field should be completed if this equipment is associated with a <span style="text-decoration: underline; ">single</span> Master Contract.
+  </p>
+  <p>Equipment records that are flagged as Active and Under Contract – but <font style="text-decoration: underline; ">do not</font> specify a Contract Id qualify for <span style="text-decoration: underline; ">ALL</span> Master Contracts that include the Equipment&#39;s Site record.  A Client Site Equipment record that is flagged as Active and Under Contract that <font style="text-decoration: underline; ">does</font> specify a Contract Id will ONLY be included as part of the specified Master Contract when PM&#39;s are created,</p>
+  <p>This field is intended to be maintained from the contract information from the Master Contract viewer. Direct changes to this field are limited to the following:</p>
+  <p style="margin-left: 36.00pt;">1. Change the Master Contract Id from blank to non-blank.</p>
+  <p style="margin-left: 36.00pt;">2. If the Master Contract Id gets changed from blank to non-blank, force the Under Contract? field to true.</p>
+  <p style="margin-left: 36.00pt;">3. Don&#39;t allow the Under Contract? field to be set to false if the Master Contract Id is completed.</p>
+  <p>
+    <font style="font-weight: bold;">Inventory Item Id:</font><br/>
+    The Inventory Item Id for this piece of equipment. Double-click on this field (or press Alt-F7) to select from a list of inventory items. If this inventory item includes components on its BOM (Bill of Material) tab, corresponding lines will be created in the Equipment record&#39;s COM tab so that warranty information may be specified. This field is optional but highly recommended.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Manufacturer:  Manufacturer Model:</font><br/>
+    These informational fields are recommended but not required. These fields default from the Inventory Item record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Serial Number:</font> (40 character)<br/>
+    The manufacturer&#39;s serial number.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Technician Id:</font><br/>
+    The primary technician for this equipment. This field is used in conjunction with New Call, and with the Master Contract (PM Master Scheduler) to default in the Technician Id on the PM Schedule tab when the Create PM Work Order function is run. If this field is blank, the Technician Id in the Client Site record will be used as the default.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Certification Id:</font><br/>
+    The certification required to work on this equipment. This is used in conjunction with <a href="TechFinder_Viewer.htm">TechFinder</a> to match Technicians and Work Orders.
+  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Note:</span><span> In Version 9.1 and Above, all Certifications for the Work Order&#39;s Site and from the first piece of Equipment&#39;s Certification tab will be listed when TechFinder is launched from the Dispatch Board or the Work Order Tech Tab.</span></p>
+  <p>
+    <font style="font-weight: bold;">Call Script Id:</font><br/>
+    To implement call scripting, enter the appropriate Id or double-click on this field to select from a list of Call Script Id&#39;s. When you select a piece of Equipment in New Call that has a Call Script associated with it, the system will automatically display the Call Script.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Escalation Profile Id:</font><br/>
+    If Escalation Management is implemented on your system and this field is filled in, the scheduled events (alarms and or notifications) will be attached to service work orders for this equipment created in New Call. You may double-click to select from a list of Escalation Profiles, or enter a valid Id. An Escalation Profile for PM&#39;s should be specified in the PM tab or in the <a href="PM_Master_Schedule_Master_Contract_.htm">PM Master Schedule (Master Contract)</a>.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Log Form Id:</font><br/>
+    If system metrics should be recorded for this equipment, enter (or double-click to select from a list) a Log Form Id. The Work Order System tab will be automatically populated from the Log Form record so that the metrics can be recorded by the technician if the Technician’s Web Access is set to ‘None’. Metrics will be downloaded from TechAnywhere if they are present.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Web Security Id:</font><br/>
+    Web Security is used in conjunction with the Client Web Interface to control the Client Site Equipment records that a customer can view. Enter the appropriate Web Security Id if you want the customer (defined in the customer&#39;s Technician record) that is responsible for this equipment to be able create and manage service requests for it in the Client Web Interface.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Service Category Id</font><br/>
+    This field enables you to specify the general service category of a piece of equipment. It is used in conjunction with filtering Work Codes and Equipment in New Call and in the Client Web Interface.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Note:</font> this field is used in New Call to set the corresponding Service Category on the Work Order Main tab. For PM Work Orders, this field is used to set the Work Order Service Category unless it is overridden by the Service Category from the PM Inspection Work Code.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Evaluation Table Id:</font><br/>
+    This field is used by the system to set the default value for Work Orders created in New Call referencing this equipment. It is used in conjunction with the Service Evaluation Wizard, which will be invoked when the work order is completed or invoiced, and the evaluation results will be written to the work order’s Evaluation tab.
+  </p>
+  <p>
+    <font style="font-weight: bold;">PCR Table Id:</font><br/>
+    If a PCR table is referenced, PCR validation is provided in New Call, the Work Order, the Dispatch Board, and the Client Site Equipment PM Schedule tab. <span>If this record was created in SAMPro, this field will default from the corresponding field in the Site record. </span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Service Provider Rates - Rate Schedule Id:</font><br/>
+    This optional field defines which billing rates (to the Sub) should be used if this equipment is serviced by a subcontractor / service provider. It overrides the Service Provider Rate found in the Vendor record.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Important Note on</font>
+    <font style="font-weight: bold;">Service Provider Rates:</font><br/>
+    Select a Rate Schedule specifically designed for Service Providers: only the Other Rate Table Id should be specified: the Material Rate Table and Labor Rate Table fields should be blank.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Asset Id:</font><br/>
+    This display-only field is completed when this Equipment record is associated with an Asset record: the the Installed and Status dates will be set to today, and the Equipment Status will be set to OnSite when this occurs. If the Equipment Id of this record is changed or blanked in the referenced Asset record, this field will retain the Asset Id, but the Status Date will be set to today, the Equipment Status will be set to Returned (for external Assets) or Available (for internal Assets), and the Inactive flag checked.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Installed:</font><br/>
+    The date this equipment was installed at this site. Double-click on this field (or press Alt+F7) to access the Calendar viewer. To enter today&#39;s date, simply press the Spacebar.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Startup:</font><br/>
+    The date this equipment was actually started up. Double-click on this field (or press Alt+F7) to access the Calendar viewer. To enter today&#39;s date, simply press the Spacebar.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Warranty Start</font>
+    <font style="font-weight: bold;">s</font>
+    <font style="font-weight: bold;">: Warranty End</font>
+    <font style="font-weight: bold;">s</font>
+    <font style="font-weight: bold;">:</font><br/>
+    The Starting and Ending dates for the warranty on this piece of equipment, for reporting purposes. The Warranty information for components is included on the Component (COM) tab.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Equipment Size</font><br/>
+    The size (in terms of the unit of measure specified below). This field defaults from the Inventory Item record (if one has been entered).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Equipment Unit of Measure</font><br/>
+    Tons, psi, amps. This field defaults from the Inventory Item record (if one has been entered).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Year of Manufacture</font> (4 numeric)<br/>
+    Enter the year this equipment was manufactured in <font style="font-style: italic;">yyyy</font> format. This field is optional.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Priority</font><br/>
+    For informational purposes only.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Under Contract:</font><br/>
+    If the equipment is under contract, flag this field by double-clicking on it or pressing the Spacebar when the focus is on it. An &#39;x&#39; will appear when the field is flagged.
+  </p>
+  <p>If the Master Contract Id gets changed from blank to non-blank, the Under Contract? Field will be set to true. The system will not allow the Under Contract? field to be set to false when the Master Contract Id is completed.</p>
+  <p style="margin-top: 0; margin-bottom: 0;"> </p>
+  <p style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font style="font-weight: bold;">Note</font>: a registry entry may be implemented to restrict PM Work Order generation to only those records whose Under Contract box is flagged; contact your support rep to do so.
+  </p>
+  
+  
+  <p>
+    <font style="font-weight: bold;">Inactive?</font><br/>
+    If this box is checked, this piece of equipment will be considered Inactive and will not appear on the Active list of equipment or on the New Call screen&#39;s Equipment pane. The Create New PM Schedule from Old and the Generate PM WorkOrders functions will skip equipment that is flagged as Inactive.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Deny TA Access:</font><br/>
+    An RAQ may be implemented to deny TechAnywhere users access to this equipment if the Deny TA Access box is checked.
+  </p>
+  <p><span style="font-weight: bold;">Deny TA Edit</span><br/>
+    This field should be flagged if TechAnywhere Techs should be allowed to see and add changes to this Equipment, but NOT to edit the equipment details. This would typically be used to prevent technicians from filling in important details into the wrong/generic equipment record.</p>
+  <p>
+    <font style="font-weight: bold;">Default:</font><br/>
+    <font style="font-weight: bold;">Job Id: Cost Code: Billing Item:</font><br/>
+    These fields enable you to specify the default job information for Service Work Orders created in New Call. If these fields are not completed, doubling-clicking the Job Id field in New Call will display a list of active Jobs associated with the selected Site <span>unless special processing for certain Utility or Warranty Jobs is in effect.</span> <span>See <a href="Registry_Entry_for_New_Call_Options.htm#Specify_Default_Service_Job_Selection_Filter_Override">Registry to Specify Default Service Job Selection Filter Override</a> for details.</span>
+  </p>
+  
+  <p>
+    <font style="font-weight: bold;">Sub Not-To-Exceed:</font><br/>
+    This field is used in conjunction with the Service Provider applet to limit auto-generated PO&#39;s to this dollar value. It also provides the default NTE Subcontractor value for Work Orders created for this site, which is used in turn to limit the amount of the vendor-subcontractor’s purchase order. This field, if completed, supersedes the corresponding field in the Client Site record. This field appears on the New Call screen.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Client Not-To-Exceed:</font><br/>
+    This informational field represents the Not To Exceed amount (per work order) for this site. This field also appears on the New Call screen. This field, if completed, supersedes the corresponding field in the Client Site record.
+  </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Client_Site_Equipment_Service_Tab" id="Client_Site_Equipment_Service_Tab"></a>Service</p>
+  <p>
+    <font style="font-weight: bold;">Equipment Master Id:</font><br/>
+    If you are creating a new equipment record, selecting the appropriate Equipment Master record will automatically populate the Inventory Item, Manufacturer, Model, Equipment Type, Service Tasks, Service Parts List, Equipment Size and UOM, Escalation Profile, Service Category, and Call Script in the Equipment Record (assuming these fields are populated in the Equipment Master record).
+  </p>
+  <p class="Block_Text">
+    <font style="font-weight: bold;">Equipment Type Id:</font><br/>
+    This field may be used in when generating PM work orders (and their associated purchase orders) for sub-contractor technicians. The system will match this up with the corresponding Equipment Type field in the <a href="PM_Master_Schedule_Master_Contract_.htm#PM_Master_Provider_Rates">PM Master Contract Provider Rates Tab</a> when generating the WO and PO costs/revenues. This enables the appropriate costs and revenues to automatically be generated by equipment type and service provider.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Service Parts Id:</font><br/>
+    This default list of parts will appear on preventative maintenance work orders created from New Call screen. A registry may be enabled in <a href="Registry_Entry_for_New_Call_Options.htm">sys-newcall</a> to also write this parts list to Service work orders generated in New Call.  Note that PM Work Orders generated from the PM tab (with Create PM Work Orders) will use the Service Parts Id (if any) specified on the PM Schedule. Double-click on this field (or press Alt-F7) to select a Service Parts list.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Service Tasks Id:</font><br/>
+    This default list of tasks will appear on preventative maintenance work orders created from New Call screen. A registry may be enabled in <a href="Registry_Entry_for_New_Call_Options.htm">sys-newcall</a> to also write this Service Task list to Service work orders generated in New Call. PM Work Orders generated from the PM tab will use the Service Task (if any) specified on the PM Schedule. A typical Service List might include monitoring the operating temperature, replacing filters, and checking belt tension.
+  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">I</span><span style="font-weight: bold;">mportant Master Contract Note:</span><span> This field is also used to provide a default for PM&#39;s generated from the Master Contract. If the Service Task Id is blank on the Master Contract Schedule tab, the system looks to this field instead. This allows for different Task Lists to be assigned by the Equipment scheduled. If a Service Task List is specified on the Master Contract&#39;s Schedule tab, it will to be used for all Equipment scheduled for from that line.</span></p>
+  <p>
+    <font style="font-weight: bold;">Service Agreement Type Id:</font><br/>
+    Specifies the type of service contract; double-click on this optional field (or press Alt-F7) to select from a list of service contract types.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Equipment Status:</font><br/>
+    The status of this piece of equipment (e.g., replaced, removed, installed). This field is for reporting purposes only and does not effect active filtering of records.
+  </p>
+  <p><span>When Equipment is created via TechAnywhere, the Equipment Status is filled in with &#39;NewFromTA&#39;.</span></p>
+  <p>
+    <font style="font-weight: bold;">Status Date:</font><br/>
+    This optional field may be used to associate a date with the Equipment Status (e.g., the day on which the Equipment was activated). Double-click on this field (or press Alt+F7) to select a date from the Calendar viewer. To enter today&#39;s date, simply press Spacebar. This field is for reporting purposes only and does not effect active filtering of records.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Account Manager Id:</font><br/>
+    This optional field identifies the account manager for this equipment. <font face="Tahoma" style="font-family: Tahoma;">During New Call, the system will default the WO&#39;s Account Manager from this field (if blank, New Call will default the Account Manager from the Site record).</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Dispatcher Id:</font><br/>
+    This optional field identifies the Dispatcher assigned to this equipment. <font face="Tahoma" style="font-family: Tahoma;">During New Call, the system will default the Dispatcher from this field or if blank, from the Site record.</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Sales Rep Id:</font><br/>
+    This optional field identifies the Sales Rep assigned to this equipment. <font face="Tahoma" style="font-family: Tahoma;">During New Call, the system will default the WO&#39;s Sales Rep from this field (if blank, New Call will default the Sales Rep from the Site record).</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Service Manager:</font><br/>
+    <font face="Tahoma" style="font-family: Tahoma;">For New Call, </font>the Client Site Equipment&#39;s Service Manager is included at the highest level of the Service Manager defaulting. The hierarchy is as follows: Client Site Equipment - Client Site - Client - User. The Service Manager selected when the Work Order is added will be written to the new Work Order.
+  </p>
+  <p><span style="font-weight: bold;">Bar Code:</span><br/>
+    This field may be used to specify a unique barcode value for this piece of equipment. It will be used with TechAnywhere for easier lookup of the Equipment record via barcode scanning.</p>
+  <p style="font-weight: bold;">Replacement Equipment Id:   Replacement (Date):<br/>
+    <span style="font-weight: normal;">These display fields will be completed if the currently selected Equipment Id was replaced by the Replacement Equipment Id on the Replacement date listed from TechAnywhere. If the selected Equipment has NOT been tagged as replaced, these fields well be blank.</span>
+  </p>
+  <p>When a TechAnywhere Tech decides to replace equipment (Ex. RTU-1), the following will happen as the Replacement Procedure is implemented during the TechAnywhere Post:</p>
+  <p style="margin-left: 48px;">Rename original Equipment record from RTU-1 to RTU-1-R</p>
+  <p style="margin-left: 48px;">If RTU-1-R already exists (was replaced in the past), use RTU-1-R2, RTU-1-R3 and so on. Note we skipped &#39;R1&#39; as it makes more sense to do so.</p>
+  <p style="margin-left: 48px;">Set the Replacement Equipment Field to link the new RTU-1 equipment to be created soon after.</p>
+  <p style="margin-left: 48px;">Set the Date Replaced with the current date.</p>
+  <p style="margin-left: 48px;">Set the Deny TA Access flag to Yes, so the old equipment is no longer accessible from TechAnywhere.</p>
+  <p style="margin-left: 48px;">The New replacement equipment will be submitted when the technician completes the work order. The new equipment will have the same ID as the original, RTU-1.</p>
+  <p style="margin-left: 48px;"><span>You are now left with 2 equipment records. The new RTU-1, and the old RTU-1-R.</span></p>
+  <p><span style="font-weight: bold;">Created By:</span><br/>
+    If a Equipment record is created in TechAnywhere, the Technician Id is posted to this field. If a new piece of Equipment is created in SAMPro (from New Call, Job Cloning, or by manually adding a new Equipment record), the Created By field will be set to the User&#39;s Id.</p>
+  <p>
+    <font style="font-weight: bold;">Security Id:</font><br/>
+    If multiple location security is implemented on your centralized database system, this informational field displays the Security Id of the local user that created this record. If multiple location security is not implemented on your system, or if this record was created by a global user, this field will be blank.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Location at Site:</font> (80 character x 4)<br/>
+    This optional field describes the equipment location at the site.
+  </p>
+  <p><span style="font-weight: bold;">RefTrack System Id:<br/>
+      RefTrack System Name:<br/>
+      RefTrack System Capacity:</span><br/>
+    This fields are reserved for future use.</p>
+  <p> </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Client_Site_Equipment_User_Fields_Tab" id="Client_Site_Equipment_User_Fields_Tab"></a>User Fields</p>
+  <p>
+    <font style="font-weight: bold;">Client Site Equipment User</font>
+    <font style="font-weight: bold;"> 1-20</font>
+  </p>
+  <p>These optional fields may be used for entering any information your company wishes to retain or use for custom reporting purposes.</p>
+
+</body></html>

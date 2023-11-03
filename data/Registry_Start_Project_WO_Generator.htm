@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.31.0_17";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Start Project WO Generator</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="work order,Project Work Order Generator,bulk WO generator,sys-start-sprjctwrkordrgnrtr"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Start Project WO Generator">
+        <span>Registry Start Project WO Generator</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Start Project WO Generator (sys-start-sprjctwrkordrgnrtr)</h1>
+<h2>Purpose:</h2>
+<p>Control handling of closed Jobs. </p>
+<h2>Related Registries:</h2>
+<p>This function is also sensitive to the required fields registry settings 
+ for <a href="Registry_New_Call_Required_Disable.htm">sys-start-snwcll</a>. 
+ If a field is required in New Call it must be completed or defaulted when 
+ this function is run. If not, an information box describing the issue 
+ will be displayed and the Work Order will not be generated.</p>
+<p><span>This <a href="Registry_Specify_Site_WO_Other_Lines.htm">Registry</a> 
+ may be used</span><span> to specify which lines from the Site WO Other 
+ Tab should be added based is the Work Order&#39;s Service Category.</span></p>
+<h2>Important Fields:</h2>
+<h3>Project WO Generator Registry to Err / Warn on Closed Jobs</h3>
+<p>Start Project Work Order Generator has been refined so that when closed 
+ jobs are pulled into the checklist, the Do button will not be checked. 
+ A new registry (below) will control if you are allowed to change the Do 
+ flag. </p>
+<p>Note: the Job&#39;s Date Closed is compared with the functions Date Must 
+ Complete.  A Job is considered &#39;closed&#39; for this function if it&#39;s 
+ Date Closed precedes the Date Must Complete.</p>
+<p><span style="font-weight: bold;">Registry Id:</span> sys-start-sprjctwrkordrgnrtr 
+ </p>
+<p><span style="font-weight: bold;">Setting Key:</span> ClosedJob      <span style="font-weight: bold;">Setting Value:</span> error  (default 
+ warning) </p>
+<p>In absence of registry or with setting value &quot;warning&quot; allow 
+ user to check Do, and give warning. If registry is set to error, do not 
+ allow user to check Do, and display an error message. </p>
+
+</body></html>

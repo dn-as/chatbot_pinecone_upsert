@@ -1,0 +1,7 @@
+llama-index
+datasets
+pinecone-client
+openai
+transformers
+llama_hub
+"unstructured[pdf]"

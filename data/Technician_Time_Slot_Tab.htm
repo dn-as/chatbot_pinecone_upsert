@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.7.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="time slot"/>
+<meta name="MS-HKWD" content="slot time"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Technician Time Slot Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="time slot,slot time"/><meta name="brsnext" value="COP_Overview_Version_8_2_and_Up.htm"/><meta name="brsprev" value="Technician_Unavailable_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Technician Time Slot Tab">
+        <span>Technician Time Slot Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Technician Time Slot Tab</h1>
+<h2>Purpose:</h2>
+<p>Time slotting allows call center personnel to easily schedule the starting time of new service Work Orders based on the availability of Time Slots for a given day. The Technician Time Slots Tab: specifies which Time Slots/Days are available for each Technician. See <a href="Time_Slot_Viewer.htm">Time Slot Viewer</a> for details.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Time Slot Id:<br/></font> If Time Slotting is implemented on your system, add one line for each to the Time Slots this Tech is normally able to fulfill. Overlapping Time Slots should not be selected.</p>
+<p><font style="font-weight: bold;">Monday – Tuesday – Wednesday – Thursday – Friday – Saturday – Sunday</font></p>
+<p>Check each of the days this Technician will normally be available for work on this Time Slot. For example, if the Technician normally worked Monday – Friday, but Wednesdays were always reserved for special projects, you would check Monday, Tuesday, Thursday and Friday.</p>
+<p><img src="assets/images/image/SKIN1_CloneLines.gif" alt="image\SKIN1_CloneLines.gif" title="image\SKIN1_CloneLines.gif" width="94" height="28" border="0"/></p>
+<p>This button makes the maintenance of the Technician Time Slots child table easier. When you click the button, a selection window will appear, allowing you to select a Technician to clone the Time Slot entries from. These lines will be added to the Time Slots tab of the technician currently being edited.</p>
+
+</body></html>

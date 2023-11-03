@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Registry Printer Margin Override</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("SAM Pro Help\nRegistry Entries\nGeneral Reporting / Printing Registry Entries\nMargin Override  by Printer**support**");
+addAvenueInfo("EMI","inventory_item_availability_tab.htm","registry_aft_candian_pr_direct_deposit.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Registry Printer Margin Override</H1>
+ <P class="support" ><FONT style="font-weight:bold; " >Margin Issue On Specific Printers</FONT></P>
+ <P class="support" >This registry option has been available for some time but was not released by programming for documentation until now.  This registry should only be used if a certain printer consistently ‘chops off’ the left-hand (or top line) of SAM Pro reports and no other remedy is available. Note that this entry must be used with caution as bitmaps associated with the report (e.g., invoices and purphase orders) are NOT repositioned, when may lead to lose of proper alignment; adding whitespace to the graphic may correct this issue. It is up to the support person to ensure that all reports print in a satisfactory manner with this entry in place. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >Id:</FONT></P>
+ <P class="support" ><FONT style="font-weight:bold; " >sys-printer-</FONT><FONT style="font-weight:bold; font-style:italic; " >printername--userid</FONT></P>
+ <P class="support" ><FONT style="font-weight:bold; " >sys-printer-</FONT><FONT style="font-weight:bold; font-style:italic; " >printername-branchid-userid</FONT></P>
+ <P class="support" ><FONT style="font-weight:bold; " >sys-printer-</FONT><FONT style="font-weight:bold; font-style:italic; " >printername-branchid</FONT></P>
+ <P class="support" ><FONT style="font-weight:bold; " >sys-printer-</FONT><FONT style="font-weight:bold; font-style:italic; " >printername-securityid</FONT></P>
+ <P class="support" ><FONT style="font-weight:bold; " >sys-printer-</FONT><FONT style="font-weight:bold; font-style:italic; " >printername</FONT></P>
+ <P class="support" >where printername is the name of the printer exactly as it appears in the Name field of the Windows Printer dialog box. Please note that this field is upper/lower case sensitive. If this entry is specific to a user, the branch must be specified if a user belongs to a branch. If branches are not implemented, two dashes (not separated by a space) must precede the user id.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Setting Key:</FONT> marginoffset   <FONT style="font-weight:bold; " >Setting Value: </FONT>x@y </P>
+ <P class="support" >Where x is the character offset (horizontal) and y is the line offset (vertical) from the upper left-hand corner of the page.</P>
+ <P class="support" >For example, if three characters were consistently chopped off of the left-hand side of reports, the following option would be enabled:</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Key:  marginoffset   Setting Value: 3@0</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

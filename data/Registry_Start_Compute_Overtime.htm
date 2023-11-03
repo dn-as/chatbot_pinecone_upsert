@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.23.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Start Compute Overtime</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="overtime,compute overtime"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Start Compute Overtime">
+        <span>Registry Start Compute Overtime</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Start Compute Overtime</h1>
+<h2>Purpose:</h2>
+<p style="margin-left: 8px;">This registry specifies which overhead Job 
+ / Cost Code / Cost Category get the Overtime Premium charge based on the 
+ Employee&#39;s Branch.  A registry entry must be created for each Branch. 
+ </p>
+<p><span>In Version 9.0 and above, Branches are not required for this function. 
+ However, if Branches are enabled and you wish to specify the Overhead 
+ Job by Branch, the corresponding sys-start-scmpteovrtme-</span><span style="font-style: italic;">branchid</span><span> 
+ registry entries must be generated in order for this function to be run. 
+ The employee&#39;s branch is used to determine which job / costcode / costcategory 
+ gets the OT Premium charge, regardless of which direct jobs were charged 
+ originally. </span> </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">NOTE:</span> 
+ the Earnings ID in the Employee&#39;s Earnings Tab must have appropriate wage 
+ lines flagged as &quot;Add Pay Rate Factor?&quot; in order for this functionality 
+ to work.</p>
+<h2>Additional Registries:</h2>
+<p style="font-weight: bold;"><span style="font-weight: normal;">See <a href="Compute_Overtime_(No_Check_Printing_or_Posting).htm" style="font-weight: normal;">Compute 
+ Overtime - No Checks Printed or Posted</a> for details/additional registries 
+ for computing overtime when checks will not be generated.</span></p>
+<h2>Important Fields:</h2>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Registry 
+ Id:</span>   <span>sys-start-scmpteovrtme</span></p>
+<p style="margin-left: 88px;">sys-start-scmpteovrtme-<span style="font-style: italic;">branchid</span></p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ Method    <span style="font-weight: bold;">Setting Value:</span> 
+ <span style="font-style: italic;">methodname</span>  (haller, MarketEquipment, 
+ Haller2)</p>
+<p style="margin-left: 8px;">This setting key defines the method used to 
+ compute overtime.  If this registry is absent the haller method will 
+ be used. <span>See below for additional settings for <a href="#Compute_Overtime_MarketEquipment_Method">MarketEquipment</a>.</span></p>
+<p style="margin-left: 8px;"><span>See on the link for an option to <a href="#Calculate_Overtime_by_Day_or_Payroll_Period">Calculate OT by 
+ Day or Payroll Period (Haller2)</a>. </span></p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ JobId   <span style="font-weight: bold;">Setting Value:</span> 
+ <span style="font-style: italic;">ValidOHJobId</span></p>
+<p style="margin-left: 8px;"><span style="font-style: italic;">ValidOHJobId</span> 
+ must reference a valid Job with its Overhead flag set to be used when 
+ Overtime entries are generated this function.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ CostCodeId  <span style="font-weight: bold;">Setting Value:</span> 
+  <span style="font-style: italic;">ValidOHCostCodeId</span></p>
+<p style="margin-left: 8px;"><span style="font-style: italic;">ValidOHCostCodeId</span> 
+ must reference the Job Cost Code Id (belonging to the Overhead Job referenced 
+ in the previous entry) to be used when Overtime entries are generated 
+ this function.</p>
+<p style="margin-left: 8px;">S<span style="font-weight: bold;">etting Key:</span> 
+ CostCatId   <span style="font-weight: bold;">Setting Value:</span> 
+  <span style="font-style: italic;">ValidCostCategoryForOHLabor</span></p>
+<p style="margin-left: 8px;"><span style="font-style: italic;">ValidOHCostCodeId</span> 
+ must reference the Labor type Cost Category to be used when Overtime entries 
+ are generated this function. It is recommended that its Job Use be set 
+ to Indirect.  Finally, the GL Expense Account must be completed in 
+ this Cost Category in order for the GL side of the Overtime Adjustments 
+ to work.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ RegPayTypeId  <span style="font-weight: bold;">Setting Value:</span> 
+ <span style="font-style: italic;">ValidPayTypeId</span></p>
+<p style="margin-left: 8px;">Specify the Pay Type Id to be used when creating 
+ the special overtime Labor Journals created for the reclassification from 
+ regular to overtime.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ OTPayTypeId  <span style="font-weight: bold;">Setting Value:</span> 
+ <span style="font-style: italic;">ValidPayTypeId</span></p>
+<p style="margin-left: 8px;">This registry entry defines which Overtime 
+ Pay Type which will be used for the entries generated by this function.</p>
+<h3><a id="Registry_to_Override_RegPayTypeId_and_OTPayTypeId"></a>Registry 
+ to Override RegPayTypeId and OTPayTypeId</h3>
+<p><span style="font-weight: bold;">Registry Id:</span>   sys-start-scmpteovrtme</p>
+<p><span style="font-weight: bold;">Setting Key:</span> UseEmployeePayTypes 
+  <span style="font-weight: bold;">Setting Value:</span> true  (default 
+ false)</p>
+<p><span>With the above registry in place, the Employee Record provides 
+ overrides for the RegPayTypeId and OTPayTypeId settings. The decision 
+ to the Employee&#39;s Direct Pay or Indirect Pay defaults is based on the 
+ Job. If the Job is tagged as Overhead, the Indirect defaults are used. 
+ The Employee Direct Pay default are used if the Job is not Overhead. </span></p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ AccruedPayrollGLAccountId  <span style="font-weight: bold;">Setting 
+ Value:</span> <span style="font-style: italic;">glaccountid</span></p>
+<h3><span style="font-weight: bold;">Registry Entries for Compute Payroll 
+ to Support Compute Overtime</span></h3>
+<p><span style="font-weight: bold;">Id:</span> sys-compute-payroll</p>
+<p><span style="font-weight: bold;">Setting Key:</span>  AllocateOTPremium 
+    <span style="font-weight: bold;">Setting Value:</span> 
+ true  </p>
+<p>This entry is required to enable distribution of the OT Premium to the 
+ various non-overhead jobs when Compute Payroll is run.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> AllocatedOTPremiumDescription 
+  <span style="font-weight: bold;">Setting Value:</span> Allocated 
+ OT Premium</p>
+<p>This registry specifies the description used by the system when the 
+ overhead premium is distributed by Compute Payroll.</p>
+<h3><a id="Compute_Overtime_MarketEquipment_Method"></a>Compute Overtime 
+ (MarketEquipment Method) </h3>
+<p>This 9.0 modification computes Overtime using a Weighted Average of 
+ Regular Pay Rates. AS with other overtime processing, t<span style="mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;">he 
+ basic premise of this enhancement is that hourly time is entered as regular 
+ time, and Compute Overtime is run to generate an Overtime Premium for 
+ &#39;excess&#39; hours over a regular work week BEFORE running Compute Payroll. 
+  The Overtime Premium is assessed to an overhead Job and computed 
+ at the Average hourly paid for each employee for the payroll period.</span></p>
+<p><span style="mso-fareast-font-family: &#39;Times New Roman&#39;; mso-bidi-font-family: Calibri; 
+		 mso-bidi-theme-font: minor-latin;">The Compute Overtime</span> 
+ checklist lists the labor eligible for adjustment for review; checked 
+ lines will be processed and the appropriate Labor Journal will be created 
+ to make Overtime adjustments. These Labor Journal entries remove hours 
+ at Regular time and insert hours at Overtime.</p>
+<p>For those employees with Earnings IDs marked to Job Cost, you will see 
+ the cost incurred by the adjustments on the Overtime Job’s Revenues tab.</p>
+<p style="margin-left: 48px;">Registry To Enable:</p>
+<p style="margin-left: 48px; background-color: #ffffff;"><span style="background: #ffffff;">Id: 
+ sys-start-scmpteovrtme</span></p>
+<p style="margin-left: 48px; background-color: #ffffff;"><span style="background: #ffffff;">Setting 
+ Key: Method  Setting Value: MarketEquipment</span></p>
+<p style="margin-left: 48px; background-color: #ffffff;"><span style="background: #ffffff;">This 
+ registry</span><span style="background: #ffffff; mso-spacerun: yes;"> </span><span style="background: #ffffff;">must also specify the Job Id, Cost Code 
+ Id, Job Cost Category Id, Regular Pay Type and Overtime Pay Type.</span><span style="background: #ffffff; mso-spacerun: yes;"> </span><span style="background: #ffffff;"> </span></p>
+<p style="margin-left: 48px; background-color: #ffffff;"><span style="background: #ffffff;">Additional 
+ Registries Required for this Mod:</span></p>
+<p style="margin-left: 48px;"><span style="background: #ffffff;">Id:</span> 
+ sys-ffv-global-settings</p>
+<p style="margin-left: 48px;"><span style="background: #ffffff;">Setting 
+ Key:</span> LaborRatesAndAccrualMethod  Setting Value: 7687</p>
+<p style="margin-left: 48px;">Id: sys-compute-payroll</p>
+<p style="margin-left: 48px;">Setting Key: DistributeOTPremium  Setting 
+ Value: true</p>
+<p style="margin-left: 48px;">Setting Key: AllocatedOTPremiumDescription 
+ Setting Value: Allocated Overtime Premium</p>
+<p style="margin-left: 48px;">Setting Key: RegularHoursExceeded  Setting 
+ Value: warning</p>
+<p style="margin-left: 48px;">Setting Key: OTHoursExceeded Setting Value: 
+ warning</p>
+<h3><span><a id="Calculate_Overtime_by_Day_or_Payroll_Period"></a> Registry 
+ Option to Calculate Overtime by Day / Payroll Period</span></h3>
+<p><span style="font-weight: bold;">Id:</span>  sys-start-scmpteovrtme</p>
+<p><span style="font-weight: bold;">Setting Key:</span> method   <span style="font-weight: bold;">Setting Value:</span> Haller2</p>
+<p>When the method is set to Haller2, the software will first compute by 
+ hours in day (&gt;8 is ot), then by days in the pay period (&gt;40 is 
+ OT).  Whichever gives the employee a better deal is used.  If 
+ there is a &#39;tie&#39; the daily OT is used. The following registry is also 
+ required when method=Haller2.  </p>
+<p><span style="font-weight: bold;">Setting Key:</span> ServiceEmployeeUserField 
+    <span style="font-weight: bold;">Setting Value: </span>emplye_usr6</p>
+<p>Only Service Employees are eligible for Compute OT. When setting 
+ the flag on the employee, set this value to N if you want to Compute OT 
+ using ONLY the &quot;By Pay Period&quot; method.  Set this value 
+ to Y if you want to Compute OT using the &quot;By Day&quot; or &quot;By 
+ Pay Period&quot; methods (which ever is best).     </p>
+<p><span style="font-weight: bold;">Setting Key:</span> IncludeHolidayHours 
+   <span style="font-weight: bold;">Setting Value:</span> Y (default 
+ is N)</p>
+<p><span style="font-weight: bold;">Setting Key:</span> IncludeSickHours 
+   <span style="font-weight: bold;">Setting Value:</span> Y (default 
+ is N)</p>
+<p><span style="font-weight: bold;">Setting Key:</span> IncludeVacationHours 
+   <span style="font-weight: bold;">Setting Value:</span> Y (default 
+ is N)</p>
+<p style="font-weight: bold;">Additional Settings Required:</p>
+<p>S<span style="font-weight: bold;">etting Key:</span> CostCatId   <span style="font-weight: bold;">Setting Value:</span>  <span style="font-style: italic;">ValidCostCategoryForOHLabor</span></p>
+<p><span style="font-style: italic;">ValidOHCostCodeId</span> must reference 
+ the Labor type Cost Category to be used when Overtime entries are generated 
+ this function. It is recommended that its Job Use be set to Indirect. 
+  Finally, the GL Expense Account must be completed in this Cost Category 
+ in order for the GL side of the Overtime Adjustments to work.</p>
+<p><span style="font-weight: bold;">Setting Key: </span>RegPayTypeId<span style="font-weight: bold;">  Setting Value: </span><span style="font-style: italic;">ValidPayTypeId</span></p>
+<p>Specify the Pay Type Id to be used when creating the special overtime 
+ Labor Journals created for the reclassification from regular to overtime.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> OTPayTypeId  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">ValidPayTypeId</span></p>
+<p>This registry entry defines which Overtime Pay Type which will be used 
+ for the entries generated by this function.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> AccruedPayrollGLAccountId 
+  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">glaccountid</span></p>
+<p style="font-weight: bold;">Branch Registry to Calculate Overtime by 
+ Day / Payroll Period</p>
+<p>If Branch processing is desired, the Overhead Job information may be 
+ specified for each Branch as follows. </p>
+<p><span style="font-weight: bold;">Id:</span>  sys-start-scmpteovrtme-<span style="font-style: italic;">branchid</span></p>
+<p>A registry setting must be made for each applicable Branch. </p>
+<p><span style="font-weight: bold;">Setting Key:</span> JobId   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">ValidOHJobId</span></p>
+<p><span style="font-style: italic;">ValidOHJobId</span> must reference 
+ a valid Job with its Overhead flag set to be used when Overtime entries 
+ are generated for Jobs in this Branch.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> CostCodeId  <span style="font-weight: bold;">Setting Value:</span>  <span style="font-style: italic;">ValidOHCostCodeId</span></p>
+<p><span style="font-style: italic;">ValidOHCostCodeId</span> must reference 
+ the Job Cost Code Id (belonging to the Overhead Job referenced in the 
+ previous entry) to be used when Overtime entries are generated this function.</p>
+<p>Note that if the Job Cost Code Id is the same for all overhead jobs, 
+ it may be specified in the base sys-start-scmpteovrtme.</p>
+<p style="font-weight: bold;">Existing Compute Payroll Registry Entries 
+ Required to Support Compute Overtime</p>
+<p><span style="font-weight: bold;">Id:</span> sys-compute-payroll</p>
+<p><span style="font-weight: bold;">Setting Key:</span>  AllocateOTPremium 
+    <span style="font-weight: bold;">Setting Value:</span> 
+ true  </p>
+<p>This entry is required to enable distribution of the OT Premium to the 
+ various non-overhead jobs when Compute Payroll is run.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> AllocatedOTPremiumDescription 
+  <span style="font-weight: bold;">Setting Value:</span> Allocated 
+ OT Premium</p>
+<p><span>This registry specifies the description used by the system when 
+ the overhead premium is distributed by Compute Payroll.</span></p>
+
+</body></html>

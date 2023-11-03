@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.31.0_18";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Universal Work Order"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="Tayor"/>
+<meta name="MS-HKWD" content="UWO Taylor Universal Work Order"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Start Taylor Universal Work Order Generation</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Universal Work Order,registry,Tayor,UWO Taylor Universal Work Order"/><meta name="brsnext" value="Taylor_Universal_Work_Order_Setup.htm"/><meta name="brsprev" value="Taylor_Universal_Work_Order_Checklist.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Start Taylor Universal Work Order Generation">
+        <span>Registry Start Taylor Universal Work Order Generation</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Start Taylor Universal Work Order Generation</h1>
+<h2>Purpose:</h2>
+<p class="No_Spacing" style="margin-left: 5.75pt;">Provide required values 
+ for Taylor Universal Registry Entries. This registry is also required 
+ to display the UWO Tab on the Work Order record. </p>
+<h2>Related Topics:</h2>
+<p>In addition to this registry, certain database fields must be set up 
+ correctly for this functionality. See <a href="Taylor_Universal_Work_Order_Setup.htm">Taylor 
+ Universal Work Order Setup</a> for details.</p>
+<p>See <a href="Start_Taylor_Universal_Work_Order_Generation.htm">Start 
+ Taylor Universal Work Order Generation</a> for information on running 
+ the generate function itself.</p>
+<p>See <a href="Taylor_Universal_Work_Order_Checklist.htm">Taylor Universal 
+ Work Order Checklist</a> for a handy checklist for users to consult when 
+ running this function.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Registry Id:</font> sys-Taylor-UWO</p>
+<p class="Support"> </p>
+
+
+<h3>Enable UWO Functionality </h3>
+<p><span style="font-weight: bold;">Setting Key:</span> Enabled    <span style="font-weight: bold;">Setting Value:</span> Yes</p>
+<h3>Taylor Distributor and Branch</h3>
+<p><font style="font-weight: bold;">Setting Key</font>: DistributorNo <font style="font-weight: bold;">Setting Value:</font> <span style="font-style: italic;">Value 
+ supplied to distributor by Taylor</span></p>
+<p><font style="font-weight: bold;">Setting Key:</font> DistributorBranch 
+ <font style="font-weight: bold;">Setting Value:</font> <span style="font-style: italic;">Value 
+ supplied to distributor by Taylor</span></p>
+<p class="Support"> </p>
+<h3>Minimum Line Count:</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> MinimumLineCount 
+ <font style="font-weight: bold;">Setting Value:</font> <span style="font-style: italic;">NumberOfLines</span></p>
+<p>Controls the minimum number of lines to include on the Work Order List 
+ screen. This defaults to 50 if this registry is omitted.</p>
+<h3>UWO Default File Path/Filename</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> UWOFilePath <font style="font-weight: bold;">Setting Value:</font> <span style="font-style: italic;">default 
+ file path for the generated UWO file</span></p>
+<p>(e.g., N:\sampro\export\UWO.txt)</p>
+<h3>Specify Vendor Id for Taylor</h3>
+<p>As part of the UWO, Taylor&#39;s part number for a part must be reported. 
+ Previously, this could only be obtained from the Inventory Item Vendor 
+ table using the Inventory Item&#39;s default Vendor. This release provides 
+ a registry option to identify the Sampro Vendor Id for Taylor, so that 
+ this does not have to be set as the Default Vendor for each Taylor part.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> VendorIdForTaylor 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">taylorvendorid</font></p>
+<p>The Setting Value should specify the actual Vendor Id for Taylor in 
+ your system.</p>
+<h3>Cross Reference File Path</h3>
+<p><span style="font-weight: bold;">Setting Key:</span> CSVCrossReferenceFilePath 
+  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">full 
+ path to directory</span></p>
+<p>The folder identified by the CSVCrossReferenceFilePath points to a folder 
+ that should contain several files which together amount to a set of validation 
+ rules. These files are supplied by Taylor Corporate and are subject to 
+ change. These files should be uploaded frequently. </p>
+
+</body></html>

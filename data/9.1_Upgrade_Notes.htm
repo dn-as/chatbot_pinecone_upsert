@@ -1,0 +1,1526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>9.1 Upgrade Notes</title>
+<link rel="StyleSheet" href="sampro.css" type="text/css" />
+<link rel="StyleSheet" href="sampro.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Support/Advanced Topics\nSupport /Upgrade Notes\n__ 9.1 Upgrade Notes");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sampro.htm", "", "&gt;", "Home", "Contents.htm");
+document.write("<a href=\"9.1_Upgrade_Notes.htm\">Support/Advanced Topics<\/a> &gt; <a href=\"9.1_Upgrade_Notes.htm\">Support /Upgrade Notes<\/a> &gt; __ 9.1 Upgrade Notes<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('sampro.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<h1>Upgrade Notes for 9.1.611.057</h1>
+<h3>Important Changes in 9.1.611.057</h3>
+<p>A revised v.cus file is required in order to see the new <font style="font-weight: bold;">Vendors with Net-Zero Balances: Print Checks box <span style="font-weight: normal;">in the</span></font> AP Manual Check (Single Write Check) report range. <span style="font-weight: bold;"></span><b style="mso-bidi-font-weight: normal; font-weight: normal;"><span style="font-weight: normal;">Standard customizations are included with this image. Custom v.cus files may be obtained from Data-Basics Support</span><span style="font-weight: normal;">.</span></b></p>
+<h3>Important Changes in 9.1.611.055a</h3>
+<p>We turned off the Lock Recovery popup window by default in this version due to issues in the field. If you have any users that would like to see the expanded lock information you can turn it back on globally or by user (in the user registry tab)</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> sys-ffv-global-settings</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> LockRecoveryDialogEnabled &#160;&#160;<span style="font-weight: bold;">Setting Value:</span> true &#160;&#160;(default false)</p>
+<h3>Important Changes in 9.1.611.054e+</h3>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Revised Report Customer Statements:</span> This revised report includes additional options and filters. See Customer Note 6.2.2c for detail and important notes on running this as a scheduled report.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Open Edge:</span> OpenEdge is sun-setting their x-web portal and requiring integrations to host their own portal proxy. The x-web interface will continue to used by default, but See Customer Note <span style="mso-fareast-font-family: 'Times New Roman';">6.1.3 information on setting a portal via DBXchange.</span> <span style="font-weight: bold; mso-fareast-font-family: 'Times New Roman';"></span></p>
+<p style="margin-left: 8px; mso-fareast-font-family: 'Times New Roman';"><span style="font-weight: bold;">Avalara Users:</span> Don't forget to check <a href="#Avalara_Web_Services_User_Updates">Required Files for Alalara Users</a> when updating to this version.</p>
+<p style="margin-left: 8px; mso-fareast-font-family: 'Times New Roman';"><span style="font-weight: bold;">Canadian Payroll AFT:</span> As of version 9.1.611.053, the registry id format sys-aftpr, not sys-aft must be used due to changes in how the registry is read. &#160;For example:</p>
+<p style="mso-fareast-font-family: 'Times New Roman'; margin-left: 48px;">Correct: <font style="font-weight: bold;">sys-aftpr-</font><font style="font-style: italic;">glbankaccountid-glentity</font><br />
+Incorrect: <font style="font-weight: bold;">sys-aft-</font><font style="font-style: italic;">glbankaccountid-glentity</font></p>
+<h3>Payroll Analytics</h3>
+<p><span style="mso-fareast-font-family: 'Times New Roman';">DBAnalytics Version 1.3.001.013</span> <span style="text-indent: -.25in; mso-list: l1 level1 lfo1; mso-background-themecolor: background1; font-size: 10.0pt; mso-fareast-font-family: 'Times New Roman';"><font size="2" style="font-size:10pt;">a</font></span><span style="text-indent: -.25in; mso-list: l1 level1 lfo1; mso-background-themecolor: background1; font-size: 10.0pt; mso-fareast-font-family: 'Times New Roman';"><font size="2" style="font-size:10pt;">dded a KPI filter for Executive Payroll (FilterExecutivePayroll = true) to apply to filter out these values from tables. This filter must be added to KPI's in order to be used.</font></span></p>
+<h3>Work Order Analytics - Changes in Version 9.1.611.052 and Above</h3>
+<p>The Work Order Escalation Statuses of Travel, Onsite and On Break have been added to support additional granularity in Scheduled Events and reporting. &#160;These statuses were previously grouped together as Active. When a Work Order is escalated in this release, the Work Order Escalation Status will be set to Travel, Onsite or On Break (as applicable) if previously it would have been set to Active. &#160;This will impact existing range Work Order Escalation filter and subfilter settings in DBAnalytics. &#160;These filters should be reset manually when upgrading to SAMPro 9.1.611.052+ to ensure that your Work Orders are accurately displayed in DBAnalytics. Users may have to type the new escalation statuses into the filter field in lieu of selecting them from the look up, since they won’t be available to choose if not yet present in the data.</p>
+<h5>Setting the Escalation Status Filter In DBAnalytics</h5>
+<p style="margin-left: 8px;">Setting In 9.1.611.051 And Earlier: &#160;Active</p>
+<p style="margin-left: 8px;">Setting In 9.1.611.052 and Later: Active,Onsite,Travel,On Break</p>
+<p>Note that an ‘Active’ Escalation Status is included in list of statuses so that Work Orders that have not been escalated with SAMPro 9.1.611.052 running will be displayed. &#160;Work Orders with an ‘Active’ Escalation Status will eventually wash thru your system as they are escalated in the new build.</p>
+<p><img src="EscalationFilter.png" alt="" style="border: none;" border="0" /></p>
+<p>For example, the WO Performance Advanced Analytic may be used to show all workorders that are in progress, along with the unbilled costs they’ve accumulated.&#160;&#160;You show and filter the escalation status instead of the technician status to see the current “overall status” of the workorder, and only one line per workorder.&#160;&#160;This way the total at the bottom on the unbilled costs column isn’t multiplied times the number of technician dispatch lines.&#160;&#160;Currently, your escalation status filter would include all open statuses including “Active.”&#160;&#160;Upon receiving this update, all workorders that escalate to Travel, Onsite, or OnBreak would drop off the report unless you add these new escalation statuses to your filter.&#160;&#160;This would be the case on any and all analytics you are currently using that are filtered by Escalation Status.</p>
+<h5>Taking Advantage of the New Escalation Statuses in DBAnalytics</h5>
+<p>The new Escalation statuses of Onsite, Travel and On Break allow you to set your filters to see only work orders with an Escalation Status of Travel (for example) or Onsite instead of all Active work orders as in previous releases. To do so, simply set the Escalation Status to Travel or Onsite as desired.</p>
+<h5>Escalation Statuses in SAMPro Escalation Profiles</h5>
+<p>The Statuses of Travel, Onsite and On Break have been added the Status list. &#160;These statuses were previously grouped together as Active. Existing Escalation Profiles referencing the Active status will continue to be supported (for example, if the Work Order Escalation Status goes to Onsite, Escalation Profiles specifying the ‘Active’ status will still fire). New or existing profiles may specify Onsite, Travel, On Break or Active as statuses.</p>
+<p><img src="EscalationProfile.png" alt="" style="border: none;" width="783" height="339" border="0" /></p>
+<p>This enhancement allows users to apply a greater degree of granularity to upcoming scheduled events without loss of support for the ‘active’ status used in Scheduled Events. &#160;&#160;</p>
+<h3>XmlToPdf.jar Files (no default file; must rename): &#160;</h3>
+<h5><span style="font-weight: bold;">Java 8-11:</span> TLS 1.2 and Uses Javamail 1.6.2</h5>
+<p>The newest XmlToPdf[2021-05-21 Java8-11].jar file corrects an issue in Outlook 2016. The "Collections Email Address" was having the "Collections Email Subject" concatenated when emailing an invoice from the Client Collections screen. This file must be renamed as XmlToPdf.jar in order for it to be used. It also supports Monthly Folders, a Registry to Retain Sent Files and it updates Javamail to 1.6.2. Java 7 is not supported.</p>
+<p style="margin-left: 48px;">This is the preferred version as some email servers already require TLS 1.2. <span style="font-weight: bold;">Make sure your email server currently supports TLS 1.2 before installing.</span></p>
+<h5>Java 8-11: TLS 1.0</h5>
+<p style="margin-left: 8px;">The XmlToPdf[2019-01-16] Java8-11].jar file supports Java 8-11, Monthly Folders and a Registry to Retain Sent Files. It does not support Java 7. Note that many services plan on shutting down TLS 1.0 and 1.1 in the near future; in this case the file from 2019-04-05 should be used. &#160;</p>
+<h5><span style="font-weight: bold;">Java 7:</span></h5>
+<p style="margin-left: 8px;">Installations with some Java 7 users should rename the XmlToPdf[2017-12-27].jar to XmlToPdf.jar in order for it to be used. This file supports the revised W-2 reporting format and corrects a file 'cannot find this file' error&#160;with UseOutlook enabled.</p>
+<h3><span lang="EN" xml:lang="EN" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: EN;">R</span>equired Files in Version 9.1</h3>
+<p><span style="font-weight: bold;">If Avalara Web Services is not running, simply install ALL files and folders included in the zipped file with the released image.</span> The files VDEVW.exe.manifest, VDEVW.exe, v.exe.manifest, SAMProNETFramework.dll, NewtonsoftJson.dll and the Data-Basics.Avalara.Net.manifest (in the Data-Basics.Avalara.Net folder) must all work with the executable or nothing will run. <span style="font-weight: bold;">For version 9.1.611.052d, and for versions 9.1611.053f and above these files (except v.exe.manifest) must have a DATE MODIFIED of 10/13/2020.</span></p>
+<h3><a name="Avalara_Web_Services_User_Updates" id="Avalara_Web_Services_User_Updates"></a> Required Files: Special Processes for Avalara Web Services User Updates</h3>
+<p>If the Avalara Web Services are running, the following files will be open: SAMProNETFramework.dll and NewtonsoftJson.dll. &#160;This means you will not be able to simply unzip the file with the image and drop them all in.</p>
+<p>If the installed files SAMProNETFramework.dll and NewtonsoftJson.dll have a <span style="font-weight: bold;">DATE MODIFIED of 10/13/2020 you do not need to update them when installing 9.1.611.053f and above.</span></p>
+<p><span style="font-weight: bold;">I</span>f the installed files SAMProNETFramework.dll and NewtonsoftJson.dll do NOT have a date <span style="font-weight: bold;">DATE MODIFIED of 10/13/2020 the update must be done where users and services are logged off so that the .dll files are not open. &#160;Remember, the</span> VDEVW.exe.manifest, VDEVW.exe, v.exe.manifest, SAMProNETFramework.dll, NewtonsoftJson.dll and the Data-Basics.Avalara.Net.manifest (in the Data-Basics.Avalara.Net folder) must all work with the executable (v.exe) that you are installing or nothing will run.</p>
+<h3 style="font-style: normal;"><i style="font-style: normal;">Job Scheduler</i></h3>
+<p>Access to this module is now controlled via the vrgstry.cus file. If your firm is running this module your support representative must provide you with an upgraded file.</p>
+<h3 style="font-style: normal;"><i style="font-style: normal;">Web Services and Server Requirements for DBAnalytics IIS</i></h3>
+<p>SAMPro 9.1 brings new features and a shift in development towards .NET web-based additions and alternatives to the back office modules of the SAMPro Enterprise Software. To support the new features, SAMPro Version 9.1 mandates a new set of minimum software and hardware requirements to host the new .NET software components.<span style="mso-spacerun: yes;">&#160;</span>&#160;To take advantage of these features, IIS for Windows will need to be installed. Internet <span lang="EN" xml:lang="EN" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: EN;">Information Services (IIS) for Windows® Server is a flexible, secure and manageable Web Server.</span> <span lang="EN" xml:lang="EN" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: EN; font-weight: bold;">Please contact Support for the Version 9.1 Release Notice which details the minimum and recommended configurations.</span> <span lang="EN" xml:lang="EN" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: EN;">&#160;</span></p>
+<h3><span lang="EN" xml:lang="EN" style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; mso-ansi-language: EN;">L</span>icensing: Validation Tightened</h3>
+<p>This release closes a loophole which allowed more Full User and TechAnywhere (Technician) records to be created than allowed by license. See Customer Note 1.11 for details.</p>
+<h3>Payroll - Important Enhancements</h3>
+<p><span style="font-weight: bold;">Medicare Additional Tax:</span> This release provides a registry to refine the calculations used to handle pre-tax deductions (section 125, 401k, etc) for high-wage earners. If this registry is to be enabled anytime AFTER the first payroll of the year has been calculated, it will be necessary to update PR history first with the help of your support representative. &#160;See Customer Note 12.19 for setup and details.</p>
+<p><span style="font-weight: bold;">W-2/W-3:</span> The Report PR W-2s (Standard) and Report PR W-3s (Standard) do NOT require a printer that supports native PCL printing with a PCL 5 /5c printer driver. See Customer Note 12.2.15 for details.</p>
+<h3>Upgrading from 9.0.572.032 or Earlier - MS SQL Server Conversion: Cluster Index</h3>
+<p>When MS SQL Server databases are upgraded to this version, the main primary key index will be changed from a nonclustered to a clustered index to enhanced database performance.</p>
+<h3>Anywhere Suite Notes for 9.1.611.057</h3>
+<table class="AlternateBlueWithHeader" style="left: 0px; top: 1672px; height: 519px;" cellspacing="0px" width="694">
+<col width="114" />
+<col width="185" />
+<col width="324" />
+<tr class="t1st">
+<td>
+<p style="font-weight: bold; color: #ffffff; margin-right: 0px;">Module</p>
+</td>
+<td>
+<p style="font-weight: bold; color: #ffffff;">Compatible Version(s)</p>
+</td>
+<td>
+<p style="font-weight: bold; color: #ffffff;">Notes</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">CRMAnywhere</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px; mso-fareast-font-family: 'Times New Roman';">&#160;v1.1.4.1 (required)</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">UI changes for the Opportunity Viewer; see Anywhere Suite notes.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">DBSellPoint</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">DBSellpoint 1.0.002.019</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">Supports SAMPro 9.1.611.052+.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="reference-line" style="margin-left: 0px; font-weight: bold;">DBXChange</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">4.066.107</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">Additional support for the OpenEdge and XOi features.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">DBAnalytics</span></p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;"><span style="mso-fareast-font-family: 'Times New Roman';">IIS: 1.3.003.001 (required)</span><br />
+<span style="text-decoration: underline;"><u>OR</u></span><br />
+JAVA DBAnalytics: V1.1.005</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">See Anywhere Suite Updates.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">Web Dispatch Board/New Call</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px; mso-fareast-font-family: 'Times New Roman';">&#160;v 1.1.14.1</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">See Anywhere Suite Updates.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">Job Scheduler</p>
+</td>
+<td>
+<p class="reference-line">V<span style="mso-fareast-font-family: 'Times New Roman';">1.0.1.2</span><br />
+Requires IIS DBAnalytics</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">Supports WO Escalation Statuses of onsite, travel and on break.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">Inventory - General PO</p>
+</td>
+<td>
+<p class="reference-line" style="mso-fareast-font-family: 'Times New Roman';">v1.0.10</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">Supports SAMPro 9.1.611.057; see Anywhere Suite notes for enhancements.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">SAMProWeb</p>
+</td>
+<td>
+<p class="reference-line">V1.01.0</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">SAMProWeb is currently used for generating Reports (at this point, only the Change Order Request analytic).</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">Sub PO</p>
+</td>
+<td>
+<p class="reference-line">V1.0.10</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">Supports SAMPro 9.1.611.057.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">FMAnywhere</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">IIS FMAnywhere (included with IIS DBAnalytics)<br />
+&#160;&#160;&#160;&#160;<span style="text-decoration: underline;"><u>OR</u></span><br />
+JAVA FMAnywhere V1.1.005</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">Allows web user to Accept/Decline Quote Scopes in FMAnywhere.</p>
+<p class="reference-line" style="margin-left: 0px;">Java Version is still supported.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">TechAnywhere</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px; mso-fareast-font-family: 'Times New Roman';"><span style="font-size: 11.0pt; font-family: Calibri, sans-serif; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: Calibri; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="3" style="font-size:11pt;">4.4.066.029 ( recommended)</font></span></p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px; mso-fareast-font-family: Arial; color: windowtext;">See Anywhere Suite Updates.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">DBFleet</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">Newest release on web</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px; mso-fareast-font-family: Arial; color: windowtext;">See Anywhere Suite Updates for many enhancements.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">TimeAnywhere</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">V2.0.001.020</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px; mso-fareast-font-family: Arial; color: windowtext;">See Anywhere Suite Updates.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">SubAnywhere</p>
+</td>
+<td>
+<p class="reference-line"><span style="mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">SA</span> v2.3d</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px; font-size: 10.0pt;">Supports SAMPro 9.1.611.057; <span style="mso-fareast-font-family: 'Times New Roman';">Improved performance of all transactions to the database.</span></p>
+</td>
+</tr>
+<tr class="t2Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">Client Web (old)</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">Part of &#160;SAMPro</p>
+</td>
+<td>
+<p class="reference-line">Supported in this version.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">CSR (old)</p>
+</td>
+<td>
+<p class="reference-line" style="margin-left: 0px;">Part of SAMPro</p>
+</td>
+<td>
+<p class="reference-line">Not supported in 9.1.</p>
+</td>
+</tr>
+</table>
+<h5><i style="font-style: normal;">O</i>pen SAMPro Attachments in Windows Picture Viewer:</h5>
+<p>In some cases a registry entry may be required; see <a href="Internal_Registry_Entry_Application_Association_Override.htm">sys-openapp-commands</a>.</p>
+<h5>User Group Access to New Functions:</h5>
+<p>After the upgrade, update the appropriate User Group and Functions records to provide user access to newly added Viewers and Starters. &#160;Be sure to also <span style="font-weight: bold;">Update the WorkFlow Folders</span> with the new functions (or import revised ones from Data-Basics). Also see the 9.0 Upgrade Notes if you are upgrading from 8.2 or earlier. New 9.1 functions include the following:</p>
+<table class="AlternateBlueWithHeader" style="left: 0px; top: 385px; height: 150px;" cellspacing="0px" width="610">
+<col style="width: 49.786%;" />
+<col style="width: 50.214%;" />
+<tr class="t1st" style="height: 0px;">
+<td style="vertical-align: Top;">
+<p style="font-weight: bold;">New Viewers</p>
+</td>
+<td style="vertical-align: Top;">
+<p style="font-weight: bold;">New Starters</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p>View Prevailing Wage Schedule</p>
+</td>
+<td style="vertical-align: Top;">
+<p>&#160;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p>View Job Billing Item Change Request</p>
+</td>
+<td style="vertical-align: Top;">
+<p>Start GMP Revenue Adjustments</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p>View Standard Schedule of Values<br />
+View WBS<br />
+View WBS Contingency</p>
+</td>
+<td style="vertical-align: Top;">
+<p>Start Recompute T&amp;M Revenue Values</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p>View Supervisor</p>
+</td>
+<td style="vertical-align: Top;">
+<p>Start Compute GMP Special Revenue</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p>View Checks (Employee)<br />
+View Checks (Vendor)</p>
+<p>These new viewers allows View Checks (which shows both) to be disabled if needed.</p>
+</td>
+<td style="vertical-align: Top;">
+<p style="font-weight: normal;">Start Move Generic Documents<br />
+(Moves generic text files generated by a text printer out of main SAMPro directory.)</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p>View Milestone Group</p>
+</td>
+<td style="vertical-align: Top;">
+<p>Start Project Work Order Generator</p>
+</td>
+</tr>
+</table>
+<h3><a name="Registry_Entries_Recommended_as_Standard_by_Support:" id="Registry_Entries_Recommended_as_Standard_by_Support:"></a> Registry Entries Recommended by Support:</h3>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<table class="AlternateBlueWithHeader" style="left: 0px; top: 2901px; height: 3896px;" cellspacing="0px" width="691">
+<col style="width: 20%;" />
+<col style="width: 31.444%;" />
+<col style="width: 33.992%;" />
+<tr class="t1st">
+<td style="vertical-align: Top;">
+<p><font style="font-weight: bold;">Registry Id</font></p>
+</td>
+<td style="vertical-align: Top;">
+<p style="margin-right: 6px;"><font style="font-weight: bold;">Option</font></p>
+</td>
+<td style="vertical-align: Top;">
+<p><font style="font-weight: bold;">Case # / Notes</font></p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="font-weight: bold;">sys-viewer-vjb</p>
+<p class="reference-line" style="font-weight: bold;">Job</p>
+<p class="reference-line" style="font-weight: bold;">IMPORTANT!</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Key:</span> JustSetAddressFromClient &#160;</p>
+<p class="reference-line" style="margin-left: 0px; margin-right: 3px;"><span style="font-weight: bold;">Setting Value:</span> true &#160;&#160;&#160;&#160;(default false)</p>
+<p class="reference-line" style="margin-left: 0px; margin-right: 3px;">&#160;</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">Job's Copy From Client button now sets the Sales Tax Group, Service Zone and Branch from the Zipcode table (if enabled) for the Client's Zipcode. &#160;Registry changes behavior so that only Client Address fields are set when clicked.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">Id: sys-payment-processor</p>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">Open Edge Payment Processing Users</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Key:</span> SpecVersion<br />
+<span style="font-weight: bold;">Setting Value:</span> XWeb3.5</p>
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Key:</span> SpecVersionAliasPayment &#160;<br />
+<span style="font-weight: bold;">Setting Value:</span> XWebSecure3.5</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">The SpecVersion and SpecVersionAliasPayment registry options must be set as shown for Open Edge to work properly&gt;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="font-weight: bold;">sys-zipcode-lookup</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">If the following is set:<br />
+<span style="font-weight: bold;">Setting Key:</span> default &#160;<span style="font-weight: bold;">Setting Value:</span> true</p>
+<p class="reference-line">We strongly recommend disabling the Vendor defaulting with the following entries:</p>
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> vvndr &#160;&#160;<span style="font-weight: bold;">Setting Value:</span> false</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">This registry prevents Sales Tax Groups and Branches designed for use with Job from defaulting into new Vendor records.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">sys-viewer-vpyrllprd</p>
+<p class="reference-line">Payroll Period</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key:RequiredFieldsParent &#160;&#160;</p>
+<p class="reference-line">Setting Value: pyrllprd.accre</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Registry to Require the Payroll Period Accrue-To-GL Box to be Set</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">sys-printer-dialog-rcopinvce</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">For Portrait COP Invoices Only</p>
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> orientation<br />
+<span style="font-weight: bold;">Setting Value:</span> 1</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">Case 6855 caused the Portrait option to be ignored in sys-printer-rcopinvce.&#160;Add this registry to correct.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;">sys-start-swrkordrdlyedt</span></p>
+<p class="reference-line">WorkOrder Daily Edit</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> MaxWorkOrderCount &#160;&#160;&#160;<br />
+<span style="font-weight: bold;">Setting Value:</span> 500</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Limits number of Work Orders to be processed at one time to avoid running wide open.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">sys-report-serviceinvoice</p>
+<p style="margin-left: 0px;">Service Invoice</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;"><b>Setting Key:</b> <span style="font-weight: normal;">autoemailwhenprinted</span>&#160;&#160;&#160;<br />
+<b>Setting Value:</b> <span style="font-weight: normal;">true</span></p>
+<p class="reference-line" style="margin-left: 0px;"><b><span style="font-weight: normal;">S</span><span style="font-weight: bold;">etting Key:</span></b> EmailMessageId<br />
+<b>Setting Value:</b> <span style="font-style: italic;"><i>commonphraseid</i></span></p>
+<p class="reference-line" style="margin-left: 0px;"><b><span style="font-weight: normal;">S</span><span style="font-weight: bold;">etting Key:</span></b> <span style="font-weight: bold;">&#160;</span><span>ShowBillAddressAndEmailAddress</span><span style="font-weight: bold;">&#160;&#160;<br />
+<b>Setting Value:</b> true</span></p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">autoemailwhenprinted enables the actual e-mailing. &#160;</p>
+<p class="reference-line" style="margin-left: 0px;">EmailMessageId specifies the common phrase to insert in the email the invoice is attached to.</p>
+<p class="reference-line" style="margin-left: 0px;"><span>ShowBillAddressAndEmailAddress prints the email address below the street address of emailed invoices.</span></p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">sys-report-rexprdinsrnce</p>
+<p style="margin-left: 0px;">Vendor Expiration</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;"><b>Setting Key:</b> <span style="font-weight: normal;">autoemailwhenprinted</span>&#160;&#160;&#160;<br />
+<b>Setting Value:</b> <span style="font-weight: normal;">true</span></span></p>
+<p style="font-weight: bold; margin-left: 8px; margin-right: -9px;"><b><span style="font-weight: bold;">Disable:</span> <span style="font-weight: normal;">Setting Key:</span></b> <span style="font-weight: normal;">autoemail</span>&#160;&#160;</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">If autosavewhenprinted is enabled, add the autoemailwhenprinted line and disable the autoemail or two copies of the report will be sent</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">sys-report-rcuststmnt</p>
+<p style="margin-left: 0px;">Customer Statement</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;"><b>Setting Key:</b></span> autoemailwhenprinted<span style="font-weight: bold;">&#160;&#160;&#160;<br />
+<b>Setting Value:</b></span> true</p>
+<p class="reference-line"><b><span style="font-weight: bold;">Disable</span> <span style="font-weight: normal;">&#160;Setting Key:</span></b> <span style="font-weight: normal;">autoemail</span>&#160;&#160;</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">If autosavewhenprinted is enabled, add the autoemailwhenprinted line and disable the autoemail or two copies of the report will be sent</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p style="margin-left: 0px; font-weight: bold;">sys-alert-tabmismatchhistory</p>
+</td>
+<td style="vertical-align: Top;">
+<p style="margin-right: -9px;"><font style="font-weight: bold;">Setting Key:</font> errorlog</p>
+<p style="margin-right: -9px;"><font style="font-weight: bold;">Setting Key:</font> messagebox</p>
+</td>
+<td style="vertical-align: Top;">
+<p>Required to record tab mismatch errors to the error log.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td rowspan="11" style="vertical-align: Top;">
+<p style="margin-left: 0px;"><font style="font-weight: bold;">sys-ffv-global-settings</font></p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">sys-ffv-global-settings</p>
+<p style="margin-top: 0; margin-bottom: 0;">(continued)</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">sys-ffv-global-settings</p>
+<p style="margin-top: 0; margin-bottom: 0;">(continued)</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p style="margin-top: 0; margin-bottom: 0;">sys-ffv-global-settings</p>
+<p style="margin-top: 0; margin-bottom: 0;">(continued)</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key:<br />
+SetTaxTypeManagementFees &#160;&#160;</p>
+<p>Setting Value: true &#160;&#160;</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Sets Revenue Adjustment's Tax Type for Management Fees in Quote and WO based on the Cost Category / Sales Tax Group.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> NotifyPendingChanges &#160;&#160;&#160;</p>
+<p class="reference-line"><span style="font-weight: bold;">Setting Value:</span> none</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">If record locks associated with the &#160;Pending Changes code are encountered use the setting value of &#160;none to turn this functionality off. &#160;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><font style="font-weight: bold;">Setting Key:</font><br />
+DisableCostCodeHourlyBurdenRate</p>
+<p class="reference-line"><font style="font-weight: bold;">Setting Value:</font> true</p>
+<p class="reference-line">Prevents entry into of the Job Cost Code's<br />
+Hourly Burden Rate field.</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">Recommend for almost every SAMPro installation.&#160;The Job Cost Code Hourly Burden was implemented for use with Shop Order Job Costing, If you put something in that field, you might not like it's impact on JCH.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key: maxColumnCountToCompress</p>
+<p class="reference-line">Setting Value: 120000</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Need for viewers to display correctly.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key: maxRowCountToCompress</p>
+<p class="reference-line">Setting Value: 20000</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Need for viewers to display correctly.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key: SamproTempDirectory</p>
+<p class="reference-line">Setting Value: C:\sampro\temp</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">1929 / Document Archiving</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px; font-weight: normal;">To allow Construction Invoicing (RINVINV3/4) to bill WO fixed fee costs without marking WO ready-to-invoice this registry should be disabled or absent.</p>
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> DisableCase1991<br />
+<span style="font-weight: bold;">Setting Value:</span> true<br />
+<span style="font-weight: bold;">Disabled:</span> Checked</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">If this entry is NOT checked as Disabled, WO’s using non-Service Compute jobs must be marked Ready To Invoice for unbilled costs to appear in Record Billing Adjustments.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">DefaultGLAccountId=<font style="font-style: italic;">GL Account Id</font></p>
+<p class="reference-line">Specifies a valid account created for this<br />
+purpose (e.g., a 9999 type account).</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">Writing to GLH when GL Account is not specified uses this entry (posting a construction invoice with Retainage $$$ but NO Retainage GL Account.)</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><font style="font-weight: bold;">Setting Key:</font> EscalationManager<br />
+<font style="font-weight: bold;">Setting Value:</font> always</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Update WO Escalation Status in absence of Escalation Profile</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key:<br />
+<span style="font-weight: normal;">DisableMCFutureInspectionsTable</span><br />
+Setting Value: true</p>
+<p style="margin-right: -9px;">Implement if DBAnalytics for Master<br />
+Contract Inspections are NOT used.</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Disables the Master Contract future inspections table for performance enhancement. Implement if DBAnalytics or other reports that depend on the table are NOT used.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Key:</span> CreateMasterSiteEquipmentPMTable &#160;&#160;</p>
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Value:</span> true</p>
+<p class="reference-line" style="margin-left: 0px;">Use if DBAnalytics for Master Contract<br />
+Future Inspections ARE used.</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;">Important:</span> if this registry entry is enabled, the registry entry above (DisableMCFutureInspectionsTable) must be absent or disabled. &#160;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><font style="font-weight: bold;">sys-newcall</font></p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">Setting Key: DisableClientCreditLimit</p>
+<p class="reference-line" style="margin-left: 0px;">Setting Value: true</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">Disables this functionality: If AR Balance exceeds the Client’s Credit Limit (+if it is set to zero), WO goes on credit hold.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">sys-report-RAIA</p>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">sys-report-RAIA-R</p>
+</td>
+<td style="vertical-align: Top;">
+<p style="margin-right: -9px;">See Help for options for Architect, Owner, etc.</p>
+</td>
+<td style="vertical-align: Top;">
+<p style="margin-left: 0px;">Required for AIA with or without Retainage.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;"><font style="font-weight: bold;">sys-start-sarchvercrdchngelg</font></p>
+<p class="reference-line" style="margin-left: 0px;">Start Archive Record Change Log</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">This function works in 9.1 - it did not work in 9.0.</p>
+<p class="reference-line">Setting Key: DaysToSave</p>
+<p class="reference-line">Setting Value: 30</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Requires a new scheduled event (process) to trigger function "sarchvercrdchngelg"</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td rowspan="2" style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;"><font style="font-weight: bold;">sys-start-sprgercrdchngelg</font></p>
+<p class="reference-line" style="margin-left: 0px;">(Purge Record Change Log)</p>
+<p class="reference-line">Not Recommended!</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key: MaximumRecordsToDelete</p>
+<p class="reference-line">Setting Value: 1</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">886 / Decrease to retain history.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key: DaysToSave</p>
+<p class="reference-line">Setting Value: 9999</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">886 / Increase to retain history.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td rowspan="2" style="vertical-align: Top;">
+<p class="reference-line"><font style="font-weight: bold;">sys-start-ssrvcebllngwrksht</font></p>
+<p class="reference-line">(Start Service Billing Worksheet)</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key: srvcewrksht_orderby<br />
+Setting Value: wrkordr.wrkordr_id,jb.jb_id</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Orders the service billing worksheet by work order id.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">Setting Key:<br />
+AllowWorksheetBeforeInvoiceReady</p>
+<p class="reference-line" style="margin-left: 0px;">Setting Value: true (default false)</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">Allows the Billing Worksheet to be run for work order(s) not yet flagged as invoice ready.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td rowspan="3" style="vertical-align: Top;">
+<p class="reference-line"><font style="font-weight: bold;">sys-viewer-vaccntngprd</font></p>
+<p class="reference-line">(Accounting Period)</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key: OtherToGL<br />
+Setting Value: true or false</p>
+<p class="reference-line" style="margin-left: 0px;">Set to true if WO Other To GL should be checked on all/most periods; false if it should never be checked.&#160;</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">The optional interface of WO Other to GL is controlled by a check box in the Accounting Period record. This registry to help manage this field.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key: UnvoucheredAP &#160;<br />
+Setting Value: false</p>
+<p class="reference-line">Setting Key: disabledFieldsParent<br />
+Setting Value: &#160;accntngprd.enble-unvchrd-ap</p>
+<p class="reference-line" style="font-weight: bold;">Use if Unvouchered AP is NOT used<br />
+(most installations).</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">The Unvouchered AP option has to be set as applicable for each installation to avoid a big mess if the accounting period is incorrectly configured.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key: UnvoucheredAP &#160;<br />
+Setting Value: true</p>
+<p class="reference-line"><span style="font-weight: bold;">Use if Unvouchered AP IS used.</span></p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">The Unvouchered AP option has to be set as applicable for each installation to avoid a big mess if the period is incorrectly configured.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td rowspan="3" style="vertical-align: Top;">
+<p class="reference-line"><font style="font-weight: bold;">sys-viewer-vapjrnl</font></p>
+<p class="reference-line">(AP Journal)</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Key:</span> AttachCostsToARInvoiceForWO</p>
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Value:</span> always</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">See Help for sys-viewer-vapjrnl – PWP vendors is a consideration.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Key:</span> PreventMultipleInvoiceNumberUse</p>
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Value:</span> true</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">This option prevents the same Vendor Invoice from being vouchered multiple times.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><span><font style="font-weight: bold;">Setting Key:</font></span> CreditPOsMustBeReceived</p>
+<p class="reference-line">Setting Value: true</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">Prevents unreceived credit PO lines from being vouchered to prevent hanging, unbilled costs.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td rowspan="3" style="vertical-align: Top;">
+<p class="reference-line"><font style="font-weight: bold;">sys-viewer-vemplye</font></p>
+<p>(Employee Viewer)</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Key:</span> disabledFieldsParent</p>
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Value:</span> emplye.annl-stndrd-hrs</p>
+<p class="reference-line" style="margin-left: 0px;">If standard hours will never be defined by employee, disable this field to prevent users from entering random values.</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">The Standard Hours field is used in payroll calculations for salaried workers. When set to zero, system uses the StandardAnnualHours option in sys-ffv-global-settings, or 2080 (if no global registry).</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Key:</span> disabledFieldschildPTO</p>
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Value:</span> emplyepto.prcnt</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">If vacation accruals with a 'percent of wages' option is not implemented (<font style="font-weight: bold;">most US</font> <font style="font-weight: bold;">firms</font>), disable the Prcnt: field on the PTO tab to avoid inadvertent data-entry.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> disabledFieldschild<br />
+<span style="font-weight: bold;">Setting Value:</span> ernngs.pytype: pytype.id</p>
+<p class="reference-line">Disable the Earning's tab's Pay Type field if special overtime processing is NOT used.</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">The Earnings tab's Pay Type fields should only be completed to enable an alternative way of determining overtime or double-time pay (e.g, if &#160;overtime isn't at a 1.5 multiplier.) Disable this field if it is not needed.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td rowspan="8" style="vertical-align: Top;">
+<p class="reference-line">sys-viewer-vwrkordr</p>
+<p class="reference-line">Work Order Viewer</p>
+<p>&#160;</p>
+<p class="reference-line">Last Option also impacts the Quote Master Wizard post to the Work Order</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key: INVExpenseFromCostCategory</p>
+<p class="reference-line">Setting Value: true</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">** required if using Job EOM<br />
+* Default Changed - add GL Expense Acct# to Material Cost Categories</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> AllowEditOfPOGENDescriptions &#160;&#160;</p>
+<p class="reference-line"><span style="font-weight: bold;">Setting Value:</span> false &#160;(Default is true)</p>
+</td>
+<td style="vertical-align: Top;">
+<p style="margin-top: 0; margin-bottom: 0; margin-left: 0px;">Prevents editing WO Other Lines are imported from POs. Recommended if Create EOM Unvouchered AP GL Entries is run.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><font style="font-weight: bold;">Disable</font> this option if present:</p>
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> DeleteJCH<br />
+<span style="font-weight: bold;">Setting Value:</span> warning</p>
+</td>
+<td style="vertical-align: Top;">
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> CreatePOforSub</p>
+<p class="reference-line"><span style="font-weight: bold;">Setting Value:</span> prompt</p>
+</td>
+<td style="vertical-align: Top;">
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><b style="mso-bidi-font-weight: normal;">Setting Key:</b> FFQtyBillZero &#160;</p>
+<p class="reference-line"><span style="font-weight: bold;">Setting Value:</span> true</p>
+<p class="reference-line"><span style="font-weight: bold;">Set in the WO's Registry!</span></p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">Sets Qty Bill to zero on Fixed Fee lines not flagged as Extra when Approval Wizard posts to the WO so they don't appear on detailed invoices.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> ShowUnreleasedPOs &#160;&#160;</p>
+<p class="reference-line"><span style="font-weight: bold;">Setting Value:</span> true &#160;(default is false)</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">Since Unreleased PO's do NOT post to IM History, details will NOT be shown, but a single line with basic PO information will appear. &#160;</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line"><font style="font-weight: bold;">Setting Key:</font> ClearJobId&#160;<br />
+<font style="font-weight: bold;">Setting Value:</font> true</p>
+<p class="reference-line">Blanks the Job Id when Service Billing<br />
+Compute is launched from the WO.</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">If more than one job is referenced in the WO, and the user forgets to clear the Job Id field after clicking Print Invoice, only the invoice for the header job is generated.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key: ProduceQuoteRecapReport &#160;&#160;<br />
+Setting Value: true</p>
+<p class="reference-line">Enable if Quoting is used.</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">Causes the Quote Approval wizard to auto-launch a report that with instructions for the Tech and a recap of Charges and PO's.</p>
+</td>
+</tr>
+<tr class="t1Row" style="height: 40px;">
+<td style="vertical-align: Top;">
+<p class="reference-line"><font style="font-weight: bold;">sys-document-archive</font></p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line"><font style="font-weight: bold;">Setting Key:</font> UseSubdirectories <font style="font-weight: bold;"><br />
+Setting Value:</font> true</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Archive documents into the appropriate YYYY-MM subfolder</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">sys-techanywhere</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line"><font style="font-weight: bold;">Setting Key:</font> DisregardOldStatus</p>
+<p class="reference-line"><font style="font-weight: bold;">Setting Value:</font> true (default is false)</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Reduces the occurrence of the Status Change Error Alerts.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">sys-viewer-vvndr</p>
+<p class="reference-line" style="margin-left: 0px;">Vendor Viewer</p>
+<p class="reference-line" style="margin-left: 0px;">use if AP AFT/EFT is NOT implements</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Key:</span> disabledFieldsParent &#160;</p>
+<p class="reference-line" style="font-weight: bold; margin-left: 0px;">Setting Value:<br />
+<span style="font-weight: normal;">&#160;vndr.eft-bnk-id-frmttd,vndr.eft-accnt-nmbr</span></p>
+<p class="reference-line" style="margin-left: 0px;">If AP EFT/AFT is NOT implemented, prevents users from inadvertently triggering the EFT functionality!</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;"><font><span style="font-weight: normal;">The EFT Bank Id and EFT Account Number fields on the Defaults tab support Electronic/Automated Funds Transfer.</span></font> If the AP EFT functionality is NOT implemented, we suggest disabling these fields.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">sys-viewer-vprchseordrlst</p>
+<p class="reference-line" style="margin-left: 0px;">Purchase Order Registry for TechAnywhere</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> EditTechAnywherePOs</p>
+<p class="reference-line"><span style="font-weight: bold;">Setting Value:</span> warning OR error</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">The TechAnywhere Post sets the Job Quantity Ordered / Received to zero so that the parts do not import to the WO (double up) because TechAnywhere post these to the WO when complete. Changing a TechAnywhere PO may have adverse effects by negating this special post.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line" style="margin-left: 0px;">sys-start-smtrlrqstnng</p>
+<p class="reference-line">Start Material Requisitioning</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Setting Key: InitialValueFor~dte-as-of &#160;&#160;&#160;<br />
+Setting Value: ^today^</p>
+<p class="reference-line">Setting Key: InitialValueFor~dte-schdld-end &#160;&#160;&#160;<br />
+Setting Value: ^today^</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Limit processing to only WO's with the Technician tab Date Scheduled within the date range specified. Registry provides initial values.</p>
+</td>
+</tr>
+<tr class="t2Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">sys-email</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> DefaultEmailSender &#160;</p>
+<p class="reference-line"><span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;"><i>validemailaddress</i></span></p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">If a 'From' email address cannot be determined from the User's Contact ( reports) or the Notification Category (Scheduled Events), this email address will be used instead.</p>
+</td>
+</tr>
+<tr class="t1Row">
+<td style="vertical-align: Top;">
+<p class="reference-line">sys-viewer-vqte</p>
+<p class="reference-line">sys-viewer-vqtemngr</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line"><span style="font-weight: bold;">Setting Key:</span> ExportToPMWorkOrder</p>
+<p class="reference-line"><span style="font-weight: bold;">Setting Value:</span> &#160;ERROR</p>
+</td>
+<td style="vertical-align: Top;">
+<p class="reference-line">Allowing Quotes to be billed on PM Work Orders is a bad idea for any number of reasons.</p>
+</td>
+</tr>
+</table>
+<h2>Recent Critical Report Updates</h2>
+<p>It is advisable to install all new and updated reports from the .rar files for that version. <span style="font-weight: bold; font-style: italic;"><i>The</i></span> <font style="font-weight: bold; font-style: italic;">following table only lists reports updated during the last year. <span style="font-weight: normal;">Additional reports may need to be installed if your reports have not been updated recently.</span></font></p>
+<p>&#160;</p>
+<table class="AlternateBlueWithHeader" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; margin-right: 109px; left: 0px; top: 7319px;" cellspacing="0px" width="678">
+<col style="width: 29.109%;" />
+<col style="width: 17.731%;" />
+<col style="width: 53.16%;" />
+<tr class="t1st" style="vertical-align: top; height: 64px;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Report Name / Id</font></p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Report Date for Version/Build</font></p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="margin-right: 14px;"><font style="font-weight: bold;">Notes</font></p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 55px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Report Unvouchered AP (RUNVCHRDAP.rpt)</p>
+<p>Report Unvouchered AP by PO (APT) (RUNVCHRDAP2-APT.rpt)</p>
+<p>Report Unvouchered AP by PO (RUNVCHRDAP2.rpt)</p>
+<p>Report Unvouchered AP Summary (RUNVCHRDAP3</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">&#160;2021-04-28</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Revised to evaluate security based on the Purchase Order header instead of IMH. This will prevent InterCompany PO's showing as unvouchered on these reports.</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top; height: 55px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Report State Unemployment Electronic File</p>
+<p class="reference-line" style="font-weight: normal;">(RSTTEUEv82b01.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2021-04-08</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Updated report supports Colorado's revised quarter format. &#160;See Customer Note 12.2.26 for details.</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 55px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Report Service Recommendations</p>
+<p class="reference-line" style="font-weight: normal;">(RSRVCERCMMDTN.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2021-04-08</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">The revised report prints the entire contents of the Weblog's Work Requested &#160;instead of truncating it.</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top; height: 55px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Customer Statements 3 (RCUSTSTMNT3.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2021-03-24</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">This new report is based on the existing Customer Statement report but includes the customer's PO number (based on WO, &#160;Job or Client Order) on the detail lines.</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 85px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Revised Report WIP Summary2(% Completion Method) (DWIPSUM2.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2020-11-30</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Corrects an issue where the report did not always match when running with and without the Billing Item Detail box checked. Note that a discrepancy may still be observed if the option to skip unapproved change orders is selected since Bill Items with NO Contract value no longer qualify.&#160;&#160;</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top; height: 48px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Report Change Order Request</p>
+<p class="reference-line">(RCHNGEORDRRQST.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2021-03-12</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Supports several bitmap overrides based on fields in the Job or Site. See Customer Note 8.12.3 for details.</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 45px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report Quote Recap (Standard) (RQTERCP.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2021-02-22</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Revised report supports Quotes with a total cost amount exceeding one million dollars.</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top; height: 64px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report PR Certified Payroll PDF (RPRCRPRPDF.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2021-02-08</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">This report allows the user to automatically complete the WH-347 fillable form from the Department of Labor for weekly payroll. See Customer Note 12.2.23 for details.</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 70px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report PR Certified Payroll -WHD (RPRCRPR-WHD.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2021-03-31</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Revised report corrects an issue where standard and OT hours were only displayed for the last employee listed. It also corrects an SQL error if the employee's record did not reference an Earnings Group. &#160;</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top; height: 64px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report AR Cash Receipts Journal Receipt (RARRCPTSTCKT.rpt)&#160;&#160;</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2021-04-19</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Revised report adds support for credit memos (including for credit cards), further refinement for when Receipt date precedes Invoice date and supports multiple applications to the same invoice on same day</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 329px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report PR Deductions Summary (RPRDEDS.rpt)</p>
+<p class="reference-line">Report PR EEOC Summary (RPREEOC.rpt)</p>
+<p class="reference-line">Report PR Employee Data (RPREMPD.rpt)</p>
+<p class="reference-line">Report Federal Tax Report (RPRTAXF.rpt)</p>
+<p class="reference-line">Report PR Other Tax (RPRTAXO.rpt)</p>
+<p class="reference-line">Report State Tax Report (RPRTAXS.rpt)</p>
+<p class="reference-line">Report Local Tax Report (RPRTAXL.rpt)</p>
+<p class="reference-line">Report PR Union by Employee &#160;(RPRUNNE.rpt)</p>
+<p class="reference-line">Report PR Union by Employee 2 (RPRUNNE2/rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">2021-02-08</p>
+<p class="reference-line">Version &#160;7.0 and above</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: bold;">New Option: Show SSN?</p>
+<p class="reference-line" style="font-weight: bold;"><span style="font-weight: normal;">When this box is blank, the report will hide all but the last 4 digits of the employee's Social Security Number from displaying on the report (XXXX-XX-1234). If the box is checked, the employee's full Social Security Number will be displayed. These reports support US employees.</span></p>
+<p class="reference-line" style="font-weight: bold;"><span style="font-weight: normal;">The following registry option may be used for each of these reports to initialize the Show SSN box to checked:</span></p>
+<p><span style="font-weight: bold;">Setting Key:</span> InitialValueFor~p_shw_SSN &#160;</p>
+<p><span style="font-weight: bold;">Setting Value:</span> true</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top; height: 73px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report PR W-2 Box 14 Covid Addendum</p>
+<p class="reference-line">RPRCOVID.rpt</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">&#160;2021-01-26</p>
+<p class="reference-line">8.2 and up</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="margin-right: 14px;">The IRS notes additional reporting requirements for the W-2. This report satisfies the requirement that employers provide a statement with the W-2 specifying COVID related wages for 2020.</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 72px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report PR 941S Quarterly Summary</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">2020-07-28</p>
+<p class="reference-line">7.3 and up</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="margin-right: 14px;">This report assists the user in completing the Employer’s Quarterly Federal Tax Return which includes Covid related information (if applicable). A registry entry and updates to Pay Type records are required.</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top; height: 85px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report State Unemployment Electronic File</p>
+<p class="reference-line">(RSTTEUEv82b01.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">2020-01-17</p>
+<p class="reference-line">8.2 and up</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="margin-right: 14px;">Revised to use the Company record / Company Registry tab to specify the Federal EIN, Company Name and Address and other registry settings. <span style="font-weight: bold;">T</span>he new Company Record overload logic supercedes Registry values when/if present.</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 85px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report W2 Electronic File</p>
+<p class="reference-line">(RW2EFv82b01.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">2020-01-17</p>
+<p class="reference-line">8.2 and up</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="margin-right: 14px;">Revised to use the Company record / Company Registry tab to specify the Federal EIN, Company Name and Address and other registry settings. <span style="font-weight: bold;">T</span>he new Company Record overload logic supercedes Registry values when/if present.</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top; height: 100px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report AP 1099's</p>
+<p class="reference-line">(RAP1099.rpt) <span style="font-weight: bold;">&#160;</span></p>
+<p class="support">&#160;</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2021-01-18</p>
+<p class="reference-line" style="font-weight: normal;">8.2 and up</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="margin-right: 14px;">For Tax Year 2020, the 1099 MISC will no longer be used to report information in Box 7 for Non Employee Compensation; it will continue to be used for reporting other information (along with other changes to the boxes listed on this form).&#160;See Customer Note 3.2.9b for important information.</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 49px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Report AP 1099 Electronic File</p>
+<p class="reference-line" style="font-weight: normal;">(RAP1099EF.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">2021-01-29</p>
+<p class="reference-line">8.2 and up</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="margin-right: 14px;">This report supports the 2020 changes for the 1099 MISC - NEC forms.</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top; height: 101px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">Report Avalara Invoice Status (RAVALARAINVSTTS.rpt)</p>
+<p class="reference-line" style="font-weight: normal;">For Avalara Web Only</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2019-11-16</p>
+<p class="reference-line" style="font-weight: normal;">9.1.611.051</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>This report analyzes a set of SAMPro A/R Invoices and shows the current status of the corresponding documents at Avalara by comparing the SAMPro Invoice Master records with Avalara Transaction DocCodes.</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 85px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">GL Account History by Job Component Report (CGLHSTRYJB)</p>
+<p>&#160;</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2019-01-19</p>
+<p class="reference-line" style="font-weight: normal;">8.0 and up</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report GL Account History by Job (DGLHSTRYJB.rpt) is a drilldown report with an option to include accounts with no activity. The revised component report displays the account header information when drilling down to an accounts with no activity.</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top; height: 48px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Consolidated Invoice Report</p>
+<p class="reference-line">(RCNSLDTDINVCE.rpt)&#160;</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line" style="font-weight: normal;">2018-04-06</p>
+<p class="reference-line" style="font-weight: normal;">9.0 and up</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Supports Consolidated Invoices which combine multiple AR invoices.</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 58px;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Service Invoice</p>
+<p class="reference-line">SERVICEINVOICEv91b054.rpt</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">2021-04-06</p>
+<p class="reference-line">9.1.611.054</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Corrects "Unable to insert into Temp Table #woequipment" SQL error for work orders with lengthy WO Equipment Work Performed or Requested fields.</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top; height: 57px;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Service Billing Worksheet</p>
+<p class="reference-line">SERVICEWORKSHEET.rpt</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">2021-04-06</p>
+<p class="reference-line">9.1.611.054</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Corrects "Unable to insert into Temp Table #woequipment" SQL error for work orders with lengthy WO Equipment Work Performed or Requested fields.</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 71px;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Service Invoice Post</p>
+<p class="reference-line">SERVICEINVOICEPOSTv91b054.rpt</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">2020-07-10</p>
+<p class="reference-line">9.1.611.054</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">This report is required if SERVICEINVOICEv91b054.rpt is installed. Reporting of *skipped* invoices has been added to the Service Invoice Post report that is optionally executed at the conclusion of invoice process. <span style="font-weight: bold;"></span></p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top; height: 64px;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report Refrigerant Usage</p>
+<p class="reference-line">RRFRGRNTUSGE.rpt</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">2020-12-14</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>The revised report has been revamped to properly process multiple Refrigerant Tracking History events on a single Work Order.</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top; height: 59px;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">Report Quote Form (Standard)</p>
+<p class="reference-line">RQTEFRMv91b048.rpt</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">2020-04-12</p>
+<p class="reference-line">9.1.611.048</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="reference-line">&#160;Corrects an unable to insert into table error.</p>
+</td>
+</tr>
+</table>
+<h2>Record Notes</h2>
+<table class="AlternateBlueWithHeader" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;" cellspacing="0px" width="658">
+<col style="width: 23.366%;" />
+<col style="width: 76.634%;" />
+<tr class="t1st" style="vertical-align: top;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Screens Impacted</font></p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Notes</font></p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-weight: bold;">GL Reporting Period</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Define GL Reporting Periods for at least the next full year. If a ‘beginning’ period was used to load data, set the Start Date to the beginning of the loading year (not 01-01-1900) before upgrading.</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-weight: bold;">GL Account Type</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>The GL Account Type's Category field is used by DBAnalytics. Review all &#160;GL Account Types and set the Category field appropriately if needed.</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-weight: bold;">Work Order</p>
+<p style="font-weight: bold;">Dispatch Board</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>The system allows multiple lines on the Work Order Technician tab with the same Tech Id and Date but a different Time Scheduled (TechAnywhere 3.0.048.006+).</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-weight: bold;">AP Journal</p>
+<p>&#160;</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Main Tab - GL Entity:</span> Sets the GL Entity for manual checks, EFT and CC/DR Card transactions when posting to a Bank Account. &#160;Previously it only assigned an Entity to the AP Control Account and Discounts Earned. Because of this change:</p>
+<p style="margin-left: 8px;">If InterCompany IS enabled, specify Corporate GL Entity for the company.</p>
+<p style="margin-left: 8px;">If InterCompany is NOT enabled, BLANK this field for manual checks, EFT and CC transactions to avoid Bank Reconciliation issues. &#160;</p>
+</td>
+</tr>
+<tr class="t2Row" style="vertical-align: top;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-weight: bold;">Location Record</p>
+<p>&#160;</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>The system uses the GL Entity from the WO-INV line's Location record. Setting the GL Entity in the Location record ensures that the Credit GL Entity defaults when items are entered on the WO Inventory tab. This field is required if Intercompany Processing is enabled.</p>
+</td>
+</tr>
+<tr class="t1Row" style="vertical-align: top;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-weight: bold;">Pay Type</p>
+<p style="font-weight: bold;">PTO Accrual Exclusion</p>
+<p>(primarily for Province of Alberta, CA)</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Fields are only applicable if Pay Type=PTO and PTO Accrual Method = Percent. Previously, only vacation wages were excluded from the vacation accrual wage base.&#160;The PTO Accrual Exclusions fields were added so the types of wages to exclude could be selected.</p>
+<p><font style="font-weight: bold;">Important Upgrade Note:</font> you must flag the applicable boxes in PTO records for these wages to be excluded from the accrual wage base. After upgrading to version 9.1 from 7.3 or before, carefully review your Pay Type records to see if any changes should be made.</p>
+</td>
+</tr>
+</table>
+<p class="Support_Heading_1">&#160;</p>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

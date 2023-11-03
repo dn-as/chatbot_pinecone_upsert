@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.3.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="line"/>
+<meta name="MS-HKWD" content="delete line"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Deny Deletion of Lines</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="line,delete line,registry"/><meta name="brsnext" value="Unanswered_Service_Evaluation_Wizard.htm"/><meta name="brsprev" value="Client_Site_Equipment_Other_WOs_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Deny Deletion of Lines">
+        <span>Registry Deny Deletion of Lines</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Deny Deletion of Lines (sys-viewer-afunction)</h1>
+<h2>Purpose:</h2>
+<p>This registry entry provides a generalized mechanism for denying line deletes in SAMPRO viewers with named child tabs.</p>
+<h2>Usage:</h2>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline;">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font> sys-viewer-afunction</p>
+<p><font style="font-weight: bold;">Setting Key:</font> DenyLineDelete <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">list of tabs</font></p>
+<p>List of tabs should be replaced by a comma-delimited list of the tab titles of tabs for which the delete line function should be denied.</p>
+<p>A sample registry entry is shown below.</p>
+<p><font style="font-weight: bold;">Id:</font> sys-viewer-vwrkordr<br/>
+<font style="font-weight: bold;">Setting Key:</font> DenyLineDelete <font style="font-weight: bold;">Setting Value:</font> Technicians,Equipment</p>
+<p>The Setting Value string is a comma-delimited list of child tabs for which the line delete action should be denied.  A shorthand entry for denying all lines deletes in a viewer can be made by setting the value string to &#39;All&#39;.</p>
+<p>NOTE: this option does not override any hard-coded rules already implemented in SAMPro.</p>
+
+</body></html>

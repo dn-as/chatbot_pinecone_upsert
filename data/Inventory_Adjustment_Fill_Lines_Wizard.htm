@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.3.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="inventory adjustment wizard"/>
+<meta name="MS-HKWD" content="return to stock"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="wizard - inventory adjustment"/>
+<meta name="MS-HKWD" content="adjustments"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Inventory Adjustment Fill Lines Wizard</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="inventory adjustment wizard,return to stock,inventory,wizard - inventory adjustment,adjustments"/><meta name="brsnext" value="Registry_AFT_Candian_PR_Direct_Deposit.htm"/><meta name="brsprev" value="Inventory_Item_Availability_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Inventory Adjustment Fill Lines Wizard">
+        <span>Inventory Adjustment Fill Lines Wizard</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Inventory Adjustment Fill Lines Wizard - Job to Location</h1>
+<h2>Purpose:</h2>
+<p><img src="assets/images/image/Fill_Lines_Wizard.gif" alt="image\Fill_Lines_Wizard.gif" title="image\Fill_Lines_Wizard.gif" width="80" height="28" border="0"/></p>
+<p>This Wizard is launched via the Fill Lines Wizard button in the Inventory Adjustments Journal when the Transaction Type is set to Job-to-Loc. It is designed to expedite the process of making entries return inventory from Work Orders or Jobs to the Location you select.</p>
+<p style="margin-left: 8px;">The Wizard uses the Equipment originally charged (from Job History)  whenever possible. The global registry option (Setting Key: DefaultEquipmentFromWorkOrder  Setting Value: false) is ignored by the wizard.</p>
+<h2>Registry:</h2>
+<p>See <a href="Registry_Entry_Inventory_Adjustments_Journal.htm">Registry Inventory Adjustments Journal (sys-viewer-vinvntryadjstmnt)</a> for a registry entry to set the Quantity Billed from the To Return quantity.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold; text-decoration: underline;">Fill Lines Wizard: Options Screen</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Work Order Id:<br/>
+Job Id:<br/></font>Complete the Work Order Id if the item was initially added to a Work Order, or a Job Id (if the Work Order was not specified).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Location Id:<br/></font>This required field defines the Location to which the Inventory should be returned. It defaults from the Work Order (if one was selected) but may be changed by the user if needed.</p>
+<p style="margin-left: 36.00pt;">Click the Next button at the bottom of the screen to continue.</p>
+<p><font style="font-weight: bold; text-decoration: underline;">Fill Lines Wizard – Items Screen</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Inventory Item Id: WO Id: Job Id: Cost Code: Bill Item: Cost Cat: Equipment Id:<br/></font>These display-only fields default from Job History for Inventory Items already associated with the selected Job / Work Order.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">To Return:<br/></font> Enter the quantity of the selected Inventory Item to return to the Location. If this item should NOT be returned to the Location, leave it set to zero.</p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">To Keep:</span><br/>
+<font style="font-weight: bold;">This field initially indicates the quantity associated with the Job / Work Order. It is automatically</font> decreased by the amount the user enters in the To Return field.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Serial/Lot Id:<br/></font>Carefully enter the Serial or Lot number of the item being returned, or double-click to select from a list. The system will validate that the item is not already on-hand at a location, but cannot currently validate that this exact item is associated with the Job / Work Order.</p>
+<p style="margin-left: 36.00pt;">Click the Finish button when you have updated any lines requiring adjustment.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">IMPORTANT:</font> After completing the Wizard, you must SAVE the journal entry.</p>
+
+</body></html>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>DBSellpoint Overview</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="DBSellpoint,POS,Point of Sale"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="DBSellpoint Overview">
+        <span>DBSellpoint Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>DBSellpoint Overview</h1>
+<h3><span style="unicode-bidi: embed; mso-line-break-override: none; word-break: normal; 
+			 punctuation-wrap: hanging;">Purpose:</span></h3>
+<p><span style="unicode-bidi: embed; mso-line-break-override: none; word-break: normal; 
+		 punctuation-wrap: hanging;">DBSellPoint is a point of sales app 
+ developed to handle over the counter and retail sales transactions for 
+ SAMPro. Payments can be made with cash or credit card, or on account for 
+ existing customers. The app is designed to be run on an A</span>ndroid 
+ tablet with a credit card scanner, barcode scanner, and a cash drawer,</p>
+<p>Returns of DBSellPoint sales are also supported in the app. A Powerpoint 
+ presentation focusing using the app itself is available.</p>
+<h2>Setting Up SAMPro for DBSellpoint</h2>
+<h3><span style="font-weight: bold;">GL Entities: Company and Client Site 
+ Records</span></h3>
+<p style="font-weight: bold;">GL Entities are derived as follows:</p>
+<p style="margin-left: 48px;">ENTB = Balance Sheet Entity (from Company)</p>
+<p style="margin-left: 48px;">ENTI = Income Statement Entity (from Site 
+ COP tab)</p>
+<p style="margin-left: 8px; font-weight: bold;">Posting of POS sales should 
+ use the Entity defined above as follows in posting:</p>
+<p style="margin-left: 48px;">1) Cash Receipts Records</p>
+<p style="margin-left: 88px;">a. GL Entity – use Company ENTB – arrcpts.glentty.rn</p>
+<p style="margin-left: 48px;">2)  AR Sales Records</p>
+<p style="margin-left: 88px;">a.AR Control Entity – use Company ENTB – 
+ arsls.glentty.rn</p>
+<p style="margin-left: 88px;">b. Entities for GL Posting</p>
+<p style="margin-left: 128px;">i.All Sales Lines, Entity = Site COP ENTI<br/>
+ii.All Expense (cost) Lines, Entity = Site COP ENTI<br/>
+iii.Accounts Receivable, Entity = Company ENTB<br/>
+iv.All Sales Tax Lines, Entity = Company ENTB<br/>
+v.All Inventory, Entity = Company ENTB</p>
+<p style="margin-left: 48px;">3) AR Terms</p>
+<p style="margin-left: 128px;">When Invoices are posted from DBSellpoint, 
+ the Invoice&#39;s Due Date, Discount Date, Discount Available are now set 
+ based on its AR Terms.</p>
+<h3>RAQ: Default Cash / Client Site: Walk Up Customer</h3>
+<p>A default customer (Client Site) must be set up for walk up cash/credit 
+ customers where the sale will not be for  &#39;on account&#39; or cash sales 
+ to an existing customer. The RAQ configDefaultCustomer (site RN)  defines 
+ the default customer (site) that comes up on POS initial screen. This 
+ record will be configured by support when your system is set up.</p>
+<h3><span style="font-weight: bold;">Payment Type: GL Bank Account for 
+ Cash Receipts Entry</span></h3>
+<p>When an AR Cash Receipts entry is posted from DBSellpoint, the GL Bank 
+ Account will default from the Payment Type selected on the POS screen.</p>
+<h3>Returns Processing</h3>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">NOTE:</span> 
+ If a dollar limit for cash reimbursements is exceeded, a return will require 
+ submitting paperwork to accounting and a check gets cut to the customer 
+ at some future date.  In that scenario, SAMPro provides no automated 
+ help in managing the debt or producing the payment.  Accounting must 
+ create a Vendor record and the appropriate AP Journal entry so the customer 
+ eventually gets paid/reimbursed as a &#39;vendor&#39;.</p>
+<p style="margin-left: 8px;">Returns are defined by messages including 
+ the key &#39;Return=true&#39;?  If the customer is reimbursed (cash, credit 
+ card credit, etc), the DBSellpoint app will also provide that information 
+ so the appropriate negative Cash Receipt can be generated.</p>
+<p style="margin-left: 8px;">The posting depends on whether or not the 
+ customer was reimbursed at the POS counter.</p>
+<p style="margin-left: 48px;">If the customer is reimbursed:</p>
+<p style="margin-left: 88px;">The return is treated as a Credit Memo and 
+ posts the appropriate Sales and Cash Receipts transactions.</p>
+<p style="margin-left: 88px;">In the Sales Journal, the Invoice Id will 
+ be generated by appending the letters CM will to the original POS Invoice 
+ Id (e.g.,143234CM). The Transaction Description will be set to &#39;POS Return 
+ Entry&#39;.</p>
+<p style="margin-left: 88px;">The Cash Receipts entry will be made with 
+ negative receipts and a Transaction Description will be set to &#39;POS Return 
+ Entry&#39;.</p>
+<p style="margin-left: 48px;">If not reimbursed:</p>
+<p style="margin-left: 48px;">Only a Sales Journal entry will be made using 
+ the Costs tab of the Sales Journal to effectively put the Return &#39;On Account&#39; 
+ for the customer.  The Client specified in the Sales Journal will 
+ be derived from the Client listed on the Site&#39;s COP tab.</p>
+<p style="margin-left: 8px;">A Restocking Fee may be assessed in the DBSellpoint 
+ return which will reduce the amount of the return. The RestockGLAccount 
+ registry detailed in <a href="Registry_DBSellPoint_(sys-point).htm">DBSellPoint 
+ Registry (Configuration and Defaults)</a> may be used to specify the GL 
+ Account restocking fees will post to. If this <span style="text-indent: -.25in; 
+													 mso-list: l0 level1 lfo1;">registry 
+ is absent the Sales GL Account will be used.</span></p>
+<p style="margin-left: 8px;">If the registry is not set, the return amount 
+ for each line will be the original sales less the restocking fee.  If 
+ the registry is enabled then the difference on each line between the original 
+ sales and return amount will be posted to the Restock Account.</p>
+<h3>Registries:</h3>
+<p><a href="User_Registry_DBSellPoint.htm">DBSellPoint User Registry</a></p>
+<p><a href="Registry_DBSellPoint_(sys-point).htm">DBSellPoint Registry 
+ (Configuration and Defaults)</a></p>
+<p><a href="Registry_Start_Point_of_Sale_Event_Manager.htm">Start Point 
+ of Sale Event Manager Registry</a></p>
+<p> </p>
+
+</body></html>

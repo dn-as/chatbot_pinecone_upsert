@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.5.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="C of A"/>
+<meta name="MS-HKWD" content="Certificate of Analysis"/>
+<meta name="MS-HKWD" content="client"/>
+<meta name="MS-HKWD" content="customer"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Client Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="C of A,Certificate of Analysis,client,customer"/><meta name="brsnext" value="Client_Collections_Screen.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Viewer">
+        <span>Client Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Client Viewer</h1>
+<h3>Purpose:</h3>
+<p>Create/maintain the master record for a client; including the correspondence 
+ address, and AR information. The primary function of the client record 
+ is to provide an element for which A/R will be aged. A client may be an 
+ individual, a multi-store franchise, a general contractor, or some other 
+ business or institution for which your firm does work. A client record 
+ should be created at the level that A/R is monitored (regardless of where 
+ the invoice itself is sent).</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Clients 
+ and Sites Linked by Jobs<br/>
+</font>Since a Site is not permanently tied to one specific Client, jobs 
+ for a specific site may be billed to a variety of clients. The Site and 
+ the Client are independently specified in the Job record. Consider a construction 
+ job for a school. In this situation, jobs at this site might be pointed 
+ at client records for: the school district, the contractor of record, 
+ and the manufacturer of the equipment being installed.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Clients 
+ and Sites for COP (Client Order Processing)</span><br/>
+Client Orders are not Job-based. In this case, the Client specified on 
+ the Site&#39;s COP tab will be associated with the AR for that Site. <br/>
+</p>
+<h2>Usage:</h2>
+<p><img src="assets/images/SKIN1_Collection.bmp" alt="" style="border: none;" align="left" border="0"/> When you click the Collection button on the Client 
+ viewer&#39;s top button bar, the screen will toggle to display a collections 
+ processing view for this client. This view lets you drill down to invoice 
+ detail, receivables, and collections notes for this customer. Click <a href="Client_Collections_Screen.htm">Client Collections Screen</a> 
+ for details.</p>
+<h3>Registries:</h3>
+<p><a href="Registry_Client_Viewer_sys_viewer_vclnt_.htm">Client Registry</a> 
+ - Client Collections and Client options. </p>
+<p>By default, data entry in the State / Province address field is limited 
+ to the official abbreviations of the US States and Canadian Provinces. 
+ See the <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Global_Settings_State_Id">State 
+ / Province Field Validation Registry</a> if you need to add to or change 
+ the list of valid State / Province codes. </p>
+<p>Registries to <a href="Interest_Registry_Entry_Set_Disabled_Fields.htm">Set 
+ Disabled Fields</a> and <a href="Internal_Registry_Set_Required_Fields.htm">Set 
+ Required Fields</a>. </p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields that may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the order or status (required, optional, 
+ default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">Client Id:</font> (15 character, only 
+ . and - special characters)<br/>
+A unique Id for this client. This required field may include letters, numbers, 
+ and the special characters period <font style="font-weight: bold;">.</font> 
+ and hyphen <font style="font-weight: bold;">-</font>.</p>
+<p><font style="font-weight: bold;">Client Name:</font> (40 character)<br/>
+The name of the business.</p>
+<p><font style="font-weight: bold;">Client Alpha Id:</font> (40 character)<br/>
+This field defaults from the Client Name. It may be used to enter an alternative 
+ look-up key.</p>
+<p><font style="font-weight: bold;">Voice Phone:</font>  <font style="font-weight: bold;">Fax 
+ Phone:</font><br/>
+Enter the main corporate numbers.</p>
+<p><font style="font-weight: bold;">Date Opened:</font>  <font style="font-weight: bold;">Date 
+ Closed:</font><br/>
+The opening and closing date for this Client&#39;s account. When you create 
+ a new Client record, the Date Opened will default to today&#39;s date. You 
+ may access the Calendar Viewer to enter or change a date by double-clicking 
+ (or by pressing Alt-F7) on either of these fields. To enter today&#39;s date, 
+ simply press Spacebar.</p>
+<p>If you flag a record as Inactive, if the Date Closed (Inactive) field 
+ is blank it will automatically be set to today&#39;s date. If you change a 
+ record to <font style="font-style: italic;">anything other than</font> 
+ the Inactive status, the Date Closed field will automatically be cleared.</p>
+<p><font style="font-weight: bold;">Template<br/>
+</font>This field may not be checked or cleared in the Client viewer; if 
+ checked, it indicates that it is a template record that was created for 
+ job cloning purposes or for use with COD jobs where the Client will never 
+ be assessed any AR. The Client Templates viewer must be used to edit Client 
+ Template records.</p>
+<p><font style="font-weight: bold;">Account Manager Id:</font><br/>
+This optional field identifies the manager in charge of this client account. 
+ If your company uses this field, double-click on it (or press Alt+F7) 
+ to select from a list of account managers.</p>
+<p><font style="font-weight: bold;">Sales Rep Id:<br/>
+</font>The primary Sales Rep for this Client. Optional.</p>
+<p><font style="font-weight: bold;">Mailing Address:</font><br/>
+Enter the correspondence address for this client. Note that if there is 
+ a <a href="Client_Site_Billing_Address.htm">Billing Address Id</a> in 
+ the Job record (and your invoicing format supports this feature), the 
+ information in the Billing Address record will override both the Client 
+ Site Invoice Address and the Client information.</p>
+<p><font style="font-weight: bold;">Credit Limit:</font> (8 numeric)<br/>
+The credit limit for this account in dollars. This field is checked when 
+ a Client Order is created or when a New Call is entered. When entering 
+ a Client Order and it exceeds the Limit, a user with Credit Manager Authorization 
+ must approve it. When entering a New Call and the client has exceeded 
+ their credit limit the new work order will be placed on HOLD and must 
+ be approved/released by a Credit Manager (unless this behavior is disabled 
+ via registry for New Call). An amount of Zero represents NO CREDIT where 
+ and amount of 99,999,999 would represent Unlimited Credit. The default 
+ on this field is zero.</p>
+<p><font style="font-weight: bold;">Tax Exemption Id:</font> (20 character)<br/>
+If this client has tax exempt status, enter their Tax Exemption Certification 
+  ID number.</p>
+<p><span style="font-weight: bold;">Tax Exempt Expiration:</span><br/>
+The date the Client&#39;s Tax Exempt Certification expires.  This field 
+ is currently for informational purposes only.</p>
+<p><font style="font-weight: bold;">Credit Card #:</font>(30 character) <font style="font-weight: bold;">Credit Card Expiration Date:</font> (mmddyyyy 
+ format)<br/>
+These fields are deprecated.  We recommended using <a href="Registry_Electronic_Payment_Credit_Card_Processing.htm">EPI 
+ Electronic Payment</a> or <a href="APT_Payment_Processing_Overview.htm">Open 
+ Edge</a> to securely store an alias in the Client Site record.  </p>
+<p><font style="font-weight: bold;">Charge Interest:</font><br/>
+Reserved for future use. </p>
+<p><font style="font-weight: bold;">Market Source Id:</font><br/>
+This optional field identifies how this customer was generated (referral, 
+ brochure, etc.). By tracking the market source, you can evaluate which 
+ of your advertising efforts are most effective. </p>
+<p><font style="font-weight: bold;">Client Contact:</font>  <font style="font-weight: bold;">Accounts Payable:</font><br/>
+The First Name, Last Name, Salutation, Title, Phone ,Cell Phone and Fax 
+ numbers, and Email Address of your primary and AP contacts for this client. 
+ These fields are optional but recommended; the email address will appear 
+ on the cc: list for work orders related to this client.</p>
+<p><font style="font-weight: bold;">C of A Requirement:</font> <font style="font-weight: bold;">None 
+ W/Shpmnt W/Shpmnt + Fax<br/>
+</font>This field pertains to the Certificate of Analysis documents produced 
+ when a Client Order Pick Ticket is recorded in Client Order Processing.</p>
+<p style="margin-left: 36.00pt;">If <span style="font-weight: bold;">None</span> 
+ is selected (by double-clicking on the radio button adjacent to this option), 
+ this document need not be produced.</p>
+<p style="margin-left: 36.00pt;">If <span style="font-weight: bold;">W/Shpmnt</span> 
+ is selected, the message &#39;Client Requires a C of A&#39; will appear when recording 
+ the pick ticket; the user can then print the C of A from the Record Pick 
+ Ticket screen.</p>
+<p style="margin-left: 36.00pt;">If <span style="font-weight: bold;">W/Shpmnt 
+ + Fax</span> is selected, the message &#39;Client Requires a C of A&#39; will 
+ appear when recording the pick ticket; two copies of the C of A (one designated 
+ as a FAX) will be printed by clicking the CofA button.</p>
+<p><font style="font-weight: bold;">Status:</font><br/>
+Select a status for this client by double-clicking on the circular radio 
+ button next to the desired status (keyboard users should Tab to the desired 
+ button and then press the Spacebar to select it):<br/>
+ <font color="#0000FF">Active</font> if this is a current client<br/>
+ <font color="#0000FF">Inactive</font> if the account is closed<br/>
+ <font color="#0000FF">Mail List</font> if this is a sales prospect<br/>
+ If <font color="#0000FF">Credit Hold</font> is selected, the system 
+ will alert you if a Client Order/Work Order is entered for this customer</p>
+<p>By default, the Client list is automatically filtered so that it opens 
+ displaying only Active records. This feature applies to both Simplified 
+ Take-Back viewers (left double-click) and Standard (right-click) viewers.</p>
+<p>If you flag a record as Inactive, if the Date Closed (Inactive) field 
+ is blank it will automatically be set to today&#39;s date. If you change a 
+ record to Active status, the Date Closed field will automatically be cleared.</p>
+<p><img src="assets/images/SKIN1_FilterClear.bmp" alt="" style="border: none;" border="0"/> 
+ To see all Client Records, go to the List view and then click the All 
+ records button. All records (regardless of their status) will be displayed 
+ within your security parameters. Clicking this button also blanks all 
+ Filter range entries entered manually (or by the system for operating 
+ company/branch security).</p>
+<p><img src="assets/images/image/SKIN1_FilterInactive.gif" alt="" style="border: none;" border="0"/> To show Inactive Records Only (those with a status 
+ of Inactive and a Closed Date) by clicking the Closed filter button.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Email Addresses:<br/>
+Email Address:   Fax Email:   Email Address 2: 
+ <font style="font-weight: normal;">(formerly Email Pager)</font></p>
+<p>The default email addresses for this customer.  If you wish to 
+ specify more than one address, you may specify an <a href="Email_Group.htm">Email 
+ Group</a> or include multiple email addresses (comma or semi-colon delimited) 
+ in the email address field. </p>
+<p><font style="font-weight: bold;">Collections Email: Collections 
+ Subject:<br/>
+</font>The default email address and subject line for collections processing 
+ (from the Collections button). If you decide to e-mail your customer a 
+ copy of an invoice from the Collections screen, these fields will provide 
+ the default address and subject line. If you wish to specify more 
+ than one address, you may specify an <a href="Email_Group.htm">Email Group</a> 
+ or include multiple email addresses (comma or semi-colon delimited) in 
+ the email address field. </p>
+<p><font style="font-weight: bold;">Service Manager:<br/>
+</font>Enter a valid Service Manager Id or double-click to select from 
+ a list. For PM Work Orders, the Service Account Manager defaults from 
+ <font style="font-family: Tahoma;" face="Tahoma">the Site Equipment record 
+ or, if blank, from the Site record, or if blank, from the Job&#39;s Client 
+ record.</font></p>
+<p><span><font style="font-family: Tahoma;" face="Tahoma">For New Call, 
+ </font>the Client is included the  Service Manager defaulting. The 
+ hierarchy is as follows: Client Site Equipment - Client Site - Client 
+ - User. The Service Manager selected when the Work Order is added will 
+ be written to the new Work Order. </span></p>
+<p><font style="font-weight: bold;">Client User 1:  Client User 2:</font>(30 
+ character)<br/>
+These optional fields may be used for entering any information your company 
+ wishes to retain (e.g., additional account numbers).</p>
+<p><font style="font-weight: bold;">New Call AR Warning Days<br/>
+<span style="font-weight: normal;">If this</span></font> field is set to 
+ greater then zero, it is used in conjunction with New Call to check receivables 
+ status by comparing it against the actual age of the Client&#39;s receivables. 
+ If the age of the receivables exceeds the value of the New Call AR Warning 
+ Days field, New Call automatically displays the aging summary for this 
+ Client. Setting this field to 0 effectively removes this functionality. 
+ <font style="font-weight: bold;">Note that this warning is only displayed 
+ once per Client each time you start up New Call</font>.</p>
+<p><font style="font-weight: bold;">Days Credit Hold:<br/>
+</font>The purpose of this field is to aid in auto-setting both Client 
+ Orders and Work Orders to a status of Credit Hold when the client has 
+ outstanding receivables older than the value entered in this field. </p>
+<p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;"><font style="font-weight: bold;">Work Orders:<br/>
+</font>When Work Orders are created (in New Call or by Create PM Workorders), 
+ the Client referenced in the Job record will be checked for overdue receivables. 
+ The status of the work order will be set to Credit Hold if any receivables 
+ exceed the number of Credit Hold Days for the Client referenced in the 
+ Job record. <span style="font-weight: bold;">However, if the Client&#39;s 
+ Days Credit Hold = 0, this piece of the credit checking is ignored.</span> 
+ If a work order is placed on credit hold, it will not be visible on the 
+ dispatch board, and cannot be changed except by credit managers.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Client 
+ Orders:<br/>
+</font>When Client Orders are created, the Client referenced on the Client 
+ Site COP tab will be checked for overdue receivables. If the client has 
+ outstanding receivables older than the value entered in this field, the 
+ order must be created with the Order Type of ‘Hold’ or ‘Quote’. It may 
+ be released by a Credit Manager to enable processing as an Order.</p>
+<p><font style="font-weight: bold;">Currency Id:<br/>
+</font>If you will be billing your foreign clients in their currency, and 
+ receiving their payments in their currency, this field must be completed. 
+ If you are updating an existing Client record, this field must only be 
+ changed if there is no current activity on the account (e.g, unpaid bills). 
+ In this way, new invoices will be sent and received in the Client’s currency. 
+ If you cannot clear an account, you may need to create a new client and 
+ job records so that all new revenues will be in the correct (foreign) 
+ denomination.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Sales 
+ Lead Time:</font><font style="font-weight: bold;"><br/>
+</font>This display-only field is used in conjunction with Corporate Metrics.</p>
+<p><font style="font-weight: bold;">Charge Repack?</font><br/>
+This field is used in Client Order Processing to determine the repack charges 
+ (if any) to be assessed. Repack charges will default on Client Orders 
+ for Sites that reference this Client (on the Site COP tab) if the following 
+ are all true:</p>
+<p style="margin-left: 36.00pt;">- this field is flagged.</p>
+<p style="margin-left: 36.00pt;">- the Inventory Item being order specifies 
+ a Repack Table.</p>
+<p style="margin-left: 36.00pt;">- the quantity ordered falls below the 
+ Standard Container quantity in the inventory item record and the Order 
+ is not a Sample Order.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field displays the Security Id of the local 
+ user that created this record. If multiple location security is not implemented 
+ on your system, or if a global user created this record, this field will 
+ be blank.</p>
+
+</body></html>

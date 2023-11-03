@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.5.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="pm invoice"/>
+<meta name="MS-HKWD" content="pm"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Client Site PM Billing Tips</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="pm invoice,pm"/><meta name="brsnext" value="Registry_Entry_Start_Renew_Service_Contract.htm"/><meta name="brsprev" value="Registry_Inventory_Restock.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Site PM Billing Tips">
+        <span>Client Site PM Billing Tips</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Client Site PM Billing Tips</h1>
+<h3>Job Date Closed and Site Status</h3>
+<p>Create PM Billings is now sensitive to the status of the Site as well as to the Job Date Closed in order to exclude undesirable PM Billings from creation. The following validations now apply:</p>
+<p>1. If the Site is not Active, do not create a PM Billing entry for it (this also excludes Credit Hold Sites).<br/>
+2. If the Job in the Client Site PM Billing schedule has a Job Date Closed that precedes the Billing Date, do not create a Billing Entry for it.</p>
+<h3>Clients that are no longer PM Customers</h3>
+<p>If one of your clients no longer wishes to be a PM customer, you will want to prevent their site(s) from being included when your billing schedules are cloned for the following year as well as deal with any PM Billings / Amortizations that were made in error. Your procedure for handling future PM’s will be determined by what function you use to ‘clone’ PM billings and work orders:</p>
+<p>If you are using <font style="font-weight: bold;">Start Renew Service Contract</font> to clone PM Billing and PM WO Schedules, verify that the Ok to Renew flags are cleared for the PM tabs of the Site and Equipment records. This ensures that this function will ignore these Sites and Equipment.</p>
+<p>It is <font style="text-decoration: underline;">not</font> recommended that you use <font style="font-weight: bold;">Start Create New PM Billing from Old</font>. If you do so, always enter a Y in the Ok to Renew range, and follow the procedures described above.</p>
+<p>If you are using <font style="font-weight: bold;">Master Contracts</font>, clear the Renewable? field so that this Contract is no longer eligible for renewal via the Start Renew Master Contracts function.</p>
+<h2>Reports:</h2>
+<p>See <a href="Report_PM_Billing_List.htm">Report PM Billing List</a> for details on running this useful ‘predictor’ report.</p>
+<h3>Dealing with Lines Already Generated to the Client Site PM Billing Tab</h3>
+<p>You can delete off the lines that you haven’t invoiced/amortized that you don&#39;t want to bill anymore or add a blank date &amp; clear the OK to Renew flag.<font style="font-family: &#39;Courier New&#39;; font-size: 10pt;" face="Courier New" size="2" color="#000000"> </font></p>
+<p>The PM Billing Schedule should now be used as the one-and-only source for PM Billing adjustments.  Other Master Contract entries continue to generated to this tab, contract changes, credit memos, revised billing, etc are now all manageable from this tab. The following enhancements provide the user with means to do so.</p>
+<p><font style="font-weight: bold;">Generating Adjusting Entries / CM’s with the</font> <font style="font-weight: bold;">Amt to Bill:</font> <font style="font-weight: bold;">and</font> <font style="font-weight: bold;">Amt to Earn:</font> <font style="font-weight: bold;">Fields</font></p>
+<p>These fields (previously Bill Amount and Amount Earn) now allow entry of negative values. This allows users to effectively reverse errors in billing and amortization by adding a new line (with the appropriate negative values). After running Compute PM billing, the user should then print the negative dollar invoice (it will use the Client Site PM Billing line as the ‘source journal’). Note that validation prevents the entry of both positive and negative contract amounts on the same line. The entry of negative amounts is denied on lines flagged as &#39;renewable&#39;.</p>
+<p>When the Start PM Billing function is run, negative Amt to Earn (amortization) lines will result in a GL Journal entry with a negative debit to the accrued expenses account (the GL Debit account) and a negative credit to the sales accrued (the GL Credit account).</p>
+
+</body></html>

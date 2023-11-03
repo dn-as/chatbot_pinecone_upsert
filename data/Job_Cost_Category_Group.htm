@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.2.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Job Cost Category Group</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="cost category,job cost category"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Cost Category Group">
+        <span>Job Cost Category Group</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Cost Category Group Viewer</h1>
+  <h2>Purpose:</h2>
+  <p>This record is referenced in the <a href="Job_Cost_Category_Viewer.htm">Job Cost Category</a>. It is currently used in conjunction with the Avalara Web Tax service.</p>
+  <h2>Important Fields:</h2>
+  <p><span style="font-weight: bold;">Cost Category Group Id:</span><br/>
+    This required field uniquely identifies this record.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Note: Avalara Web Users</span><br/>
+    A Job Cost Category Group should be created with the Id of Avalara.   This record should be reference by Service Invoice Job Cost Categories. </p>
+  <p style="margin-left: 48px;">For COP, the Inventory Groups must include a Job Cost Category with an Avalara code of NT if items in the group are to be non-taxed.  By default, if no Job Cost Category exists in the Inventory Group, all items will be taxed.</p>
+  <p><span style="font-weight: bold;">Cost Category Group Name:</span><br/>
+    Briefly describes this record.</p>
+  <p><span style="font-weight: bold;">Cost Category Group User1: Cost Category Group User2:</span><br/>
+    These optional fields may be used to record additional information.</p>
+
+</body></html>

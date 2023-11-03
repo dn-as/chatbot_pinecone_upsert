@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.2.0_18";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="archive"/>
+<meta name="MS-HKWD" content="document"/>
+<meta name="MS-HKWD" content="starter"/>
+<meta name="MS-HKWD" content="start"/>
+<meta name="MS-HKWD" content="archiving"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Document Archive Maintenance (Automated)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="archive,document,starter,start,archiving"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Document Archive Maintenance (Automated)">
+        <span>Start Document Archive Maintenance (Automated)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Document Archive Maintenance (Automated)</h1>
+<h2>Purpose:</h2>
+<p>This function is typically used to automatically generate a subfolder structure for your archived documents, resulting in a more manageable number of files in each folder. Documents will be processed beginning with the most recently saved documents which have not yet been moved to a Subfolder. It can also be used to convert the DBReport files on your system to PDF’s.</p>
+<p>This function was designed to be run from the Scheduled Event Manager. Documents will be processed beginning with the most recently saved. Contact your support representative for assistance in setting this up.</p>
+<p>See <a href="Document_Archive_Maintenance.htm">Document Archive Maintenance</a> for details on running the manual version of this function.</p>
+<h2>Registry Entries:</h2>
+<p>This function runs ‘headless’ (without an initial range screen) using the defaults provided in the required sys-start-sdcmntarchvemntnnce registry (see <a href="Registry_Start_Document_Archive_Maintenance.htm">Registry Start Document Archive Maintenance</a>).</p>
+<p>See <a href="Registry_Entry_Document_Attachment_Archiving.htm">Registry Document Archive (sys-document-archive)</a> for details on enabling the Subfolders Option for Document Archiving so that documents will be initially archived to sub-folders. Implementing this option results in the archived document being put into the appropriate YYYY-MM subfolder.</p>
+<h2>Usage:</h2>
+<p>It may take some time for this function to process a large numbers of documents; scheduling it to run at night or during off hours is strongly recommended.  </p>
+<p>Before running this function, check the available disk space of the drive on which you are archiving. This is especially important if you will be converting DBReport files to PDFs. When this option is enabled, a copy of the converted DBR files will be placed in the auto-created ConvertedDBRs folder (within the main archive folder). <font style="font-weight: bold;">These files should be backed up/deleted on a regular basis.</font></p>
+
+</body></html>

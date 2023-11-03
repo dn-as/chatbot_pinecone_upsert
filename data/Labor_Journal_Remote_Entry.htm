@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.4.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="journal"/>
+<meta name="MS-HKWD" content="labor"/>
+<meta name="MS-HKWD" content="remote entry"/>
+<meta name="MS-HKWD" content="time card"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Labor Journal Remote Entry</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="journal,labor,remote entry,time card"/><meta name="brsprev" value="Payroll_Adjustment_Journal_Deductions_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Labor Journal Remote Entry">
+        <span>Labor Journal Remote Entry</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Labor Journal Remote Entry</h1>
+<h2>Purpose:</h2>
+<p>This function is designed to allow employees to enter their time and reimbursable expenses into the system with a minimum of time, effort and training. (Tip: verify that the Labor Rate Id, Pay Rate Id, Pay Type Id and Overhead Pay Type Id are completed in the Employee record since this function depends on these default values.) Transactions entered in this function will also appear in the regular Labor Journal viewer.</p>
+<h2>Usage:</h2>
+<p>Remote Entry functions as a simplified version of the Labor Journal, and imposes some restrictions on the user:</p>
+<p>The User may only enter time for him or herself (note that the Employee Id must be entered in the User Account record).</p>
+<p>Since the Default Payroll period is used for all new entries, new transactions can only be created for the Payroll Period flagged as the Default period.</p>
+<p>When this viewer is first accessed, it automatically view displays the user&#39;s most recent (highest numbered) transaction that was entered under the (current) default Payroll Period. Therefore, if the screen is blank, the user can easily see that no transactions have been entered for the default Payroll Period.</p>
+<p>To adjust a previous entry, click the List view button (to display a list of entries to the current pay period) double-click on the entry and adjust it. If the entry was made to a previous (but still active) Payroll Period, click the Filter button at the top of the screen, delete the Payroll Period from the Range, and click the Filter button once more: all your entries will appear. Note: you cannot adjust a Labor Journal Remote entry if the Payroll Period that it was made to has since been marked as Inactive.</p>
+<p class="Body_Text">This viewer is divided into two sections. The upper portion displays the header information for the transaction. The lower section toggles between the default screen (used to enter labor hours), and the Other screen, which enables the user to enter miscellaneous expenses. The OTH tab on the top button bar toggles the lower section between its Labor and Other views.</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Employee Id: Employee Name: Transaction Id:<br/>
+Total Hours Entered: Pay Period Id: Period Start Date: Period End Date:</font><br/>
+These display-only fields are filled in by the system. The Employee information is referenced in the User record. For new entries, the default Pay Period will be used.</p>
+<p><font style="font-weight: bold;">Total Hours:</font><br/>
+Enter the Total Hours being recorded. Note that this figure must match the detail that you enter in the middle section of the screen (automatically totaled by the system as Total Hours Entered) or you will be unable to save the transaction.</p>
+<p><font style="font-weight: bold;">Effective Date:</font><br/>
+Enter this date in <font style="font-style: italic;">mmddyyyy</font> format or double-click on this field to access the calendar. Alternately, you may press the Spacebar to enter today&#39;s date and then use the - or + keys to switch to the next/previous day. This field serves as a default for the detail lines of labor and other expenses.</p>
+<h2>Important Fields: Lower Section - Labor Item Detail</h2>
+<p><font style="font-weight: bold;">Hours:</font> (numeric format 000.00)<br/>
+The hours worked.</p>
+<p><font style="font-weight: bold;">Effective Date:</font><br/>
+This field defaults from the Effective Date in the upper section. You may change the date by entering it in mmddyyyy format or double-click on this field to access the calendar. This Date must fall within the Start and End Date range of the Pay Period.</p>
+<p><font style="font-weight: bold;">Job Id:</font><br/>
+The Id of Job these hours are being entered against. This field is required.</p>
+<p><font style="font-weight: bold;">Cost Category:</font><br/>
+This Cost Category should use the Cost Type of Labor. This field is required.</p>
+<p><font style="font-weight: bold;">Job Cost Code Id:</font><br/>
+Enter the appropriate Id&#39;s for this Job or double-click to select from a list. This field is required.</p>
+<p><font style="font-weight: bold;">Pay Type Id:</font><br/>
+These fields default from the Employee record but may be changed by the user. For example, if the default Pay Type is &quot;regular&quot;, you might need to change it to &quot;overtime&quot; if overtime hours are being recorded. You may double-click to select from a list of Id&#39;s.</p>
+<p><font style="font-weight: bold;">Note on Overhead Jobs:</font> The system initially automatically defaults the regular Pay Type Id in the Employee record. However, when you enter the Job Id, the system will check to see if this Job is flagged as Overhead. If it is an Overhead job, the system will look to the Overhead Pay Type Id in the Employee Record and use this for the Labor Journal Entry. If the Overhead Pay Type field is blank in the Employee record, the regular Pay Type will be retained.</p>
+<p><font style="font-weight: bold;">Note: Prevailing Wages Jobs</font><br/>
+If you are entering time for a Prevailing Wages Job, the values found in the Prevailing Wages tab of the Job record will override the default employee Labor Rate, Pay Type Earnings Group and Deduction Group. Prevailing wage overrides will only be implemented when the cost code type is set to field.</p>
+<h2>Important Fields: Lower Section - Other Item Detail</h2>
+<p><font style="font-weight: bold;">Quantity:</font><br/>
+The quantity of this item: e.g., number of miles, etc.</p>
+<p><font style="font-weight: bold;">Other Rate Id:</font><br/>
+Enter a valid Other Rate Id or double-click on this field to select from a list.</p>
+<p><font style="font-weight: bold;">Effective Date:</font><br/>
+This field defaults from the Effective Date in the upper section. You may change the date by entering it in mmddyyyy format or double-click on this field to access the calendar. This Date must fall within the Start and End Date range of the Pay Period.</p>
+<p><font style="font-weight: bold;">Amnt Cost:</font><br/>
+Enter the total (extended) cost; the system will calculate the unit cost for you.</p>
+<p><font style="font-weight: bold;">Job Id:</font><br/>
+The Id of Job this line is being entered against. This field is required.</p>
+<p><font style="font-weight: bold;">Cost Category:</font><br/>
+This Cost Category should be filled in according to the type of entry being made; it will default if it is specified in the Other Rate record. Typically, most firms would create at least one Cost Category for reimbursable materials (with a Cost Type of Materials in the Cost Category record). Cost Categories created with a Cost Type of Other would also be acceptable in this field, although labor type entries would not. This field is required.</p>
+<p><font style="font-weight: bold;">Job Cost Code Id:</font><br/>
+Enter the appropriate Id&#39;s for this Job or double-click to select from a list. This field is required.</p>
+<p><font style="font-weight: bold;">Description:</font><br/>
+A brief description of this detail line; this field is optional.</p>
+
+</body></html>

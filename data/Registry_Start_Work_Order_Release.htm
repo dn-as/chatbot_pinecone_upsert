@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.27.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="release"/>
+<meta name="MS-HKWD" content="requisitioning"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="sys-start-srlsewrkordrs"/>
+<meta name="MS-HKWD" content="start"/>
+<meta name="MS-HKWD" content="required resource"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Start Work Order Release</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="release,requisitioning,registry,sys-start-srlsewrkordrs,start,required resource"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Start Work Order Release">
+        <span>Registry Start Work Order Release</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Start Work Order Release (sys-start-srlsewrkordrs)</h1>
+<h2>Related Registry:</h2>
+<p><a href="Registry_Entry_Shop_Order_Mode.htm">Registry Shop Order</a> 
+ (required)</p>
+<h2>Important Fields</h2>
+<p>This registry setting allows specification of the Work Order Log Type 
+ for WO-Tech lines that get released as a part of the Material Requisitioning 
+ process. The new setting, when present, overrides the default functionality 
+ (the Log Status on the Tech tab line is set to the default value for that 
+ kind of tech or via registry (sys-web-access)).</p>
+<p><font style="font-weight: bold;">Id:</font> sys-start-srlsewrkordrs</p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard 
+ Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> 
+ for additional Registry Id formats to allow entries for specific Users, 
+ Branches, Security, or User Groups to override the main entry.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> ReleasedStatus  <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">work 
+ order log type id</font></p>
+<p>Typical setting would be ...</p>
+<p> Setting Key: ReleasedStatus Setting Value: Parts Received</p>
+
+</body></html>

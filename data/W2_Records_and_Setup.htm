@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.7.0_13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>W2 Records and Setup</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="W2,Payroll W-2,Report PR W-2 (Standard),Payroll W-3,Report PR W-3,W3"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="W2 Records and Setup">
+        <span>W2 Records and Setup</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>W2 Records and Setup</h1>
+<p><span style="font-weight: bold;">Company Record: </span>In Version 9.1.611.045 
+ and Above, if Intercompany processing is enabled then the following 
+ the Employer Info will now come from the appropriate Company records, 
+ NOT the registries: Company Name, Company Address and Company Federal 
+ EIN.</p>
+<p><font style="font-weight: bold;">Tax Tables</font><br/>
+The following Id formats for your FICA Social Security and Medicare records 
+ must be followed or boxes 4 and 6 will not print on the W2&#39;s:</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"> FICA SS 
+ (note the blank space separating FICA and SS)<br/>
+ FICA MC (note the blank space separating FICA and MC)<br/>
+FICA MCAD (additional tax for high-wage earners)</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">Information on 
+ completing each year&#39;s Federal Tax Tables with be provided by Data-Basics 
+ when this information is officially release by the IRS.  It is the 
+ user&#39;s responsibility to update the applicable state local tax tables 
+ when needed and to correctly maintain the federal tables.</p>
+<p><font style="font-weight: bold;">Employee Record</font><br/>
+W2 fields must be completed as needed.</p>
+<p>W2&#39;s should be run after processing payroll is complete: all payrolls 
+ are entered, checks/direct deposit advice printed, payroll posted, and 
+ year-end adjustments made. Next, run the appropriate payroll reports to 
+ verify that the wage and tax amounts are correct.</p>
+<p><font style="font-weight: bold;">Box 14</font><br/>
+To implement SDI (Box 14 on form W-2), the W-2 Category Employee field 
+ in the applicable <font style="font-weight: bold;">Tax Authority</font> 
+ <font style="font-weight: bold;">or Tax Table</font> must be set to SDI. 
+ The Tax Authority must also be set up as type Other.</p>
+<p><font style="font-weight: bold;">Box 10<br/>
+<span style="font-weight: normal;">To support</span></font> Dependent Care 
+ Benefits (Box 10), the W-2 Category field in the appropriate <font style="font-weight: bold;">Deduction</font> 
+ record must be set to DC.</p>
+<p><font style="font-weight: bold;">Box 12 code C<br/>
+</font>This will be completed from Employee fringes.</p>
+<p><font style="font-weight: bold;">Box 12 Code DD Support for Employer 
+ Sponsored Health Coverage</font></p>
+<p>This reporting requirement was introduced by the 2010 Affordable Care 
+ Act. The idea is that reporting the cost of healthcare will enable employees 
+ to be better informed about their healthcare costs and the choices available 
+ to them. <font style="font-weight: bold;">For 2014 the reporting is required 
+ for employers filing more than 250 W-2s.</font> The 250 limit may be reduced 
+ in the future but for the moment small employers are not required to report 
+ the cost of healthcare coverage.</p>
+<p>SAMPro handles this by treating the Employer Sponsored Health Coverage 
+ as a non-taxable fringe and using the PR Adjustments Journal to record 
+ the dollar amounts for each employee.</p>
+<p style="margin-left: 36.00pt;">1. If necessary, create the appropriate 
+ Earnings record for this fringe, and enter 12:DD into the W-2 Category 
+ field.</p>
+<p style="margin-left: 36.00pt;">2. Create a PR Adjustment entry for each 
+ employee; enter the appropriate Fringe amount on the Earnings tab.  The 
+ GL transactions would already have been made; the PR Adjustment entry 
+ gets it on the W-2.  </p>
+<p style="font-weight: bold; margin-left: 8px;"><span style="font-weight: bold;">Alternate Box 12 Code DD (HSA Employer 
+ Costs) Processing<br/>
+</span><span style="font-weight: normal;">Some 
+ users wish to set up an Earnings Id to process W2 12:DD (HSA 
+ Employer Costs) and include this Earnings Id in regular PR processing. 
+ This procedure populated both prhstryernngs_amnt_ernngs &amp; prhstryernngs_amnt_fringe 
+ fields. The W2 report sums (prhstryernngs_amnt_ernngs + prhstryernngs_amnt_fringe) 
+ which is cause the amount in box 12:DD to be overstated.  NOTE: 
+ This processing does not follow the instructions in the Data-Basics EOY 
+ document.</span><span style="font-weight: bold;"> </span></p>
+<p style="margin-left: 8px;">In this release, 
+ setting the Earning record&#39;s User2 field to a value of FringeOnlyW2 changes 
+ the default behavior to only include prhstryernngs_amnt_frnge in the calculation 
+ for specific earnings on W2&#39;s which corrects the overstatement. </p>
+<p style="font-weight: bold;">Box 12 Code P</p>
+<p style="font-weight: bold;"><span style="font-weight: normal;">SAMPro 
+ supports the use of the W-2 Box 12 code P for Excludable moving expense 
+ reimbursements paid directly to the employee via the W-2 Category field 
+ (or the User 2 field in older versions) in the Other Rate record.</span></p>
+<p style="margin-left: 36.00pt; font-weight: bold;"><span><span style="font-weight: bold;"><font style="font-weight: bold;">C</font>reate an Other Rate Id for REIMB 
+ MOVE:</span></span></p>
+<p style="margin-left: 88px;">Set the description to Moving Expense Reimbursement.<br/>
+Set the W-2 Category to <span style="font-weight: bold;">12:P</span><br/>
+Set the GL Debit to the GL Account you want to charge.<br/>
+The GL Credit should be set to the Accrued PR account.<br/>
+Do not set any dollar amounts in the Rate or Cost fields.<br/>
+Set the billing rate type as N/A.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Record 
+ the Moving Expense:</font></p>
+<p style="margin-left: 88px;"><font style="text-decoration: underline; ">If 
+ the employee has not yet been reimbursed for the moving expenses</font>, 
+ enter the expense on the Labor Journal Other tab, using the REIMB MOVE 
+ Other Rate. When the check is cut, the reimbursement will be recorded 
+ in PR History and will appear on the employee’s W-2 based on the 12:P 
+ code.</p>
+<p style="margin-left: 88px;"><font style="text-decoration: underline; ">If 
+ the employee has already been reimbursed for these expenses</font>, you 
+ will need to create a PR Adjustment Journal entry to enter this information 
+ into PR History. Create a PR Journal entry referencing the Other Rate 
+ Id on the PR Journal’s Other Tab for the Amount reimbursed. You will also 
+ have to specify the Total Other in the PR Journal header. When the PR 
+ Journal is saved, the reimbursement will be recorded in PR History and 
+ will appear on the employee’s W2 based on the 12:P code.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">NOTE:</span> 
+ Previously it was necessary to enter 12:P in the Other Rate User 2 field 
+ to support Excludable moving expense reimbursements. This functionality 
+ is still supported so that it is not necessary to change your current 
+ setup if it was implemented last year.</p>
+<p><font style="font-weight: bold;">Boxes 07, 08, 09,11,12,14<br/>
+</font>The W-2 Category field in the Deduction and the Earnings viewers 
+ enables the user to write to various W2 boxes by entering a 2-character 
+ box number (in the case of box 12, followed by a code) in the appropriate 
+ W2 -Category box. Note that only those boxes that can be controlled by 
+ an Earnings or Deduction entry to PR History (via normal processing Compute 
+ or PR Adjustment entries) are supported.</p>
+<p><font style="text-decoration: underline; ">Note: please consult the 
+ IRS website / your firm’s CPA before proceeding.</font> The system does 
+ NOT validate that a particular earning or deduction is configured correctly 
+ for particular box/code as far is IRS rules are concerned. The W2 functionality 
+ is implemented by querying PR History for entries when the Earning or 
+ Deduction record’s W-2 Category is completed, and then summing the entries 
+ for each particular category. The user MUST ensure and test that the W-2 
+ Category field is configured in such a way as to give the desired result.</p>
+<p> <font style="font-weight: bold;">Earnings Viewer - W-2 Category:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Value Use</font></p>
+<p style="margin-left: 48px;"> 07 Social Security Tip</p>
+<p style="margin-left: 48px;"> 08 Allocated Tips</p>
+<p style="margin-left: 48px;"> 09 Advance EIC payment</p>
+<p style="margin-left: 48px;"> 11 Non Qualified Plans</p>
+<p style="margin-left: 48px;"> 12:<font style="font-style: italic;">code</font> 
+  Assorted Wages and Fringes. The software supports box 12 entries 
+ for certain wages and<br/>
+  fringes that are recorded to PR history.</p>
+<p> <font style="font-weight: bold;">Deductions Viewer - W-2 Category:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Value Use</font></p>
+<p style="margin-left: 48px;"> 10 Dependent Care benefits</p>
+<p style="margin-left: 136px;">Previously, this functionality was only 
+ supported by entering DC in the User 1 field. The old functionality is 
+ still supported in his image, but will be overridden by the use of the 
+ new W-2 Category field.</p>
+<p style="margin-left: 48px;"> 12<font style="font-style: italic;">:code</font> 
+  Non-taxable elective salary deferrals to various retirement plans.</p>
+<p style="margin-left: 48px;">  For the 2009 taxes, these would 
+ be codes E-I, S, and Y (taxable???).</p>
+<p style="margin-left: 136px;">401(k) Note: it is not necessary to specify 
+ your 401(k) deduction in this manner as it is handled as a special deduction 
+ type.</p>
+<p style="margin-left: 48px;"> 12:<font style="font-style: italic;">code</font> After 
+ tax contributions to Roth retirement plans</p>
+<p style="margin-left: 48px;">  For the 2009 taxes, these would 
+ be codes AA and BB.</p>
+<p style="background-color: #fbfbfb; margin-left: 88px;">12:J  Third-party 
+ sick pay</p>
+<p style="background-color: #fbfbfb; margin-left: 136px;">Anytime an amount 
+ is found for Box 12 Code J, the system will mark the Box 13 check box 
+ labeled Third-party Sick Pay.</p>
+<p> <font style="font-weight: bold;">Earnings or Deductions Viewer 
+ – W-2 Category</font></p>
+<p> 14:label </p>
+<p style="margin-left: 36.00pt;">The existing functionality for Box 14 
+ (if implemented by entering SDI in the Tax Authority or Tax Table User 
+ 1 field) overrides its implementation in an Earnings or Deduction record.</p>
+
+</body></html>

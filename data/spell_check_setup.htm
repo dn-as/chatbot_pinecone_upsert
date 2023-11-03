@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Spell Check Setup</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nSupport Functions\nSpell Check Setup / Registry");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_2" >Spell Check Setup and Registry Entries</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Purpose</FONT><BR>This enhancement provides Spell Checking for the contents of selected fields. Spell checking is implemented when the user exits the field. </P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Components</FONT><BR>Spell Checking requires the following components:</P>
+ <P class="Support" >1. The SpellCheckFolder.zip file (included with the master images) must be unzipped so that the SpellCheck folder and its contents are added to the Sampro folder (the folder containing the V.EXE file). This folder contains:</P>
+ <P class="Support" style="margin-left:36.00pt;">The Sentry Spell Check engine (ssce5532.dll)</P>
+ <P class="Support" style="margin-left:36.00pt;">The Spell Check configuration file (ssce.ini)</P>
+ <P class="Support" style="margin-left:36.00pt;">The Spell Check help file</P>
+ <P class="Support" style="margin-left:36.00pt;">The Spell Check lexicons (dictionaries) (*.tlx, *.clx)</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >SAM Pro</FONT><FONT style="font-weight:bold; " > Registry</FONT><FONT style="font-weight:bold; " > Settings</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Id: sys-spellcheck</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">Spell Checking is not enabled unless a ‘sys-spellcheck’ entry appears in the Registry.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Contents:</FONT><FONT style="font-weight:bold; " >   </FONT><FONT style="font-weight:bold; " >enabled=</FONT><FONT style="font-weight:bold; font-style:italic; " >value</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Version 7.2+: Setting Key: enabled&nbsp;Setting Value: </FONT><FONT style="font-weight:bold; font-style:italic; " >value</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">An optional ‘enabled’ key can be used to disable Spell Checking. If the ‘enabled’ entry value begins with ‘Y’, ‘y’, ‘T’, or  ‘t’, Spell Checking is enabled. Any other value disables Spell Checking. In the absence of the ‘enabled’ entry, Spell Checking is enabled.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Additional Contents:</FONT> <FONT style="font-weight:bold; " >checkField=</FONT><FONT style="font-weight:bold; font-style:italic; " >fieldname1,fieldname2, …</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Version 7.2+: Setting Key: checkField&nbsp;&nbsp;Setting Value: </FONT><FONT style="font-weight:bold; " >=</FONT><FONT style="font-weight:bold; font-style:italic; " >fieldname1,fieldname2, …</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">Registry entries with the key ‘checkField’ are used to indicate the names of fields to check. Multiple field names separated by commas may appear in entry’s value. Multiple ‘checkField’ entries are allowed. </P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >Example:</FONT><FONT style="text-decoration:underline;" > Work Order</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">Check the WO Work Requested and Performed, and WO Equipment Work Performed fields.</P>
+ <P class="Support" style="margin-left:36.00pt;">Additional Contents: checkField = wrkordr.wrk-rqstd, wrkordreqpmnt.wrk-prfrmd, wrkordr.wrk-prfrm</P>
+ <P class="Support" style="margin-left:36.00pt;">Version 7.2+</P>
+ <P class="Support" style="margin-left:36.00pt;">Setting Key: checkField &nbsp;</P>
+ <P class="Support" style="margin-left:36.00pt;">Setting Value: wrkordr.wrk-rqstd, wrkordreqpmnt.wrk-prfrmd, wrkordr.wrk-prfrm</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >Example: New Call</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">Check New Call’s Work Requested field</P>
+ <P class="Support" style="margin-left:36.00pt;">Additional Contents: checkField=wrkordreqpmnt.wrk-rqstd-nwcll-6x40</P>
+ <P class="Support" style="margin-left:36.00pt;">Version 7.2+</P>
+ <P class="Support" style="margin-left:36.00pt;">Setting Key: checkfield&nbsp;Setting Value: wrkordreqpmnt.wrk-rqstd-nwcll-6x40<BR></P>
+ <P class="Support" ><FONT style="font-weight:bold; " >How It Works<BR></FONT>The Spell Checking logic is invoked by a Viewer each time a field is exited. This is the same time that other field validations are performed.</P>
+ <P class="Support" >The Spell Checker takes no action if Spell Checking is not enabled by the appropriate Sampro Registry entries or if correct spelling is not required for the field.</P>
+ <P class="Support" >If Spell Checking is enabled for the field, the Spell Check configuration file (ssce.ini) is examined for options. These options identify the Lexicons (Dictionaries) which are to be consulted as well as enabling or disabling a number of spelling rules (for example, identifying whether words containing a mixture of letters and digits be spell checked). A section below describes some of these settings.</P>
+ <P class="Support" >The spell checker then checks the spelling of the field contents. No visible action is taken of the field passes this test.</P>
+ <P class="Support" >If the field fails the preliminary spelling check, a Spell Check Dialog Box is displayed. This box allows the user to accept or correct the spelling or to add words to one of the Lexicons. Note that at this time, there is one global Lexicon for the entire installation.</P>
+ <P class="Support" >When the Spell Check Dialog Box is exited, the field contents are set to the corrected value. If the user Cancels the Spell Check Dialog Box, the field contents is left unchanged.</P>
+ <P class="Support" >Detail help for all spell checking option may be obtained by clicking the Help button on the Spell Check dialog box. </P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Setting Spell Check Options<BR></FONT>A number of the spell check options which appear in the ssce.ini file are editable via an Options Dialog. Use of this dialog relieves an administrator of the need to edit the ssce.ini file directly.Some of the options that can be set in this file are:</P>
+ <P class="Support" style="margin-left:36.00pt;">Ignore words containing all capital letters</P>
+ <P class="Support" style="margin-left:36.00pt;">Ignore words beginning with a capital letter</P>
+ <P class="Support" style="margin-left:36.00pt;">Ignore words containing any mixture of upper and lower case letters</P>
+ <P class="Support" style="margin-left:36.00pt;">Ignore words containing a mixture of letters and digits</P>
+ <P class="Support" style="margin-left:36.00pt;">Ignore words containing no letters.</P>
+ <P class="Support" style="margin-left:36.00pt;">Ignore case</P>
+ <P class="Support" style="margin-left:36.00pt;">There are many other options which may be set. </P>
+ <P class="Support" >The function Start Spell Check Option Maintenance can be run to access this dialog box from SAM Pro; you may have run the Update Function List to see this function. Help for this function is available from the dialog box. </P>
+ <P class="Support" style="margin-top:0;margin-bottom:0"> It is strongly suggested that you only allow access to this function to the system administrator at each installation. &nbsp;</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Maintaining Dictionaries<BR></FONT>There are cases when System Administrators may want to modify the contents of a dictionary. This might be done to remove improperly added words or to add a list of words used within the installation. The function Start Spell Check Dictionary Maintenance can be run to access this dialog box from SAM Pro; you may have run the Update Function List to see this function. Help for this function is available from the dialog box. </P>
+ <P class="Support" >It is strongly suggested that you only allow access to this function to the system administrator at each installation. </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

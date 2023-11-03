@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.2.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="discipline"/>
+<meta name="MS-HKWD" content="job"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Discipline Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="discipline,job"/><meta name="brsnext" value="Estimator_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Discipline Viewer">
+        <span>Discipline Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Discipline Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain the Discipline records for job cost reporting purposes.</p>
+<h2>Usage:</h2>
+<p>Discipline records are not job-specific, but may be referenced in the Job Cost Code record for reporting purposes.</p>
+
+<p>The Discipline record is also referenced in the Standard Schedule of Values for use with the WBS Budget Import functionality in the Job record. When used in this fashion, the Discipline may be further defined by the Skill. For example, if a Discipline was Pipe Fitting Field Install, the Skill would indicate the material of the pipe (e.g., Carbon Steel, Copper, etc.).</p>
+
+<p>The WBS Import sets the Cost Category Usage Filter from the Discipline User2 field when creating new Cost Codes.</p>
+
+<h2>Example:</h2>
+<p>Structural, mechanical, pipe fitting installation, sheet metal fabrication, etc.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of fields. If you are using a customized system, the fields displayed on your screen may not exactly match the order or status of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">Discipline Id:</font><br/>
+Uniquely identifies this Discipline record.</p>
+<p><font style="font-weight: bold;">Discipline Name:</font><br/>
+Briefly describes this record. Recommended but not required.</p>
+<p><font style="font-weight: bold;">GL Entity Id:<br/></font>Reserved for future use.</p>
+
+<p style="font-weight: bold;">Work Type: n/a - Office - Field<br/>
+<span style="font-weight: normal;">This field supports the WBS Budget Import&#39;s creation of new Job Cost Codes using the Standard Schedule of Values.  When the Import creates a new Cost Code, the defaulting of its Work Type is as follows: Set the Cost Code&#39;s Work Type to Field only if both the Skill and Discipline (in the Schedule of Values) both have Work Types of Field. Otherwise, the Cost Codes has its Work Type set to Office.</span> <span style="font-weight: normal;">The n/a option may be used as a placeholder during data conversion.</span></p>
+
+<p><font style="font-weight: bold;">Discipline User1: Discipline User2:</font><br/>
+These optional fields may be used to record additional information required by your company.</p>
+<p>The WBS Import sets the Cost Category Usage Filter from the Discipline User2 field when creating new Cost Codes.</p>
+<p><font style="font-weight: bold;">Obsolete?<br/></font>If this field is checked, the record is considered Obsolete, and it may not be directly specified during data-entry (either by entering the Id or selecting it from a list). Obsoleted records can be edited and the Obsolete option can be un-done when necessary. When you check the Obsolete field, the following message box will be displayed: “You have elected to obsolete this record. Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through access to all tables referencing this record: see <a href="References_List.htm">References List</a> for details.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database system, this informational field typically displays the Security Id of the local user that created this record unless it is included in the exceptions table to always be global. If multiple location security is not implemented on your system, or if this record was created by a global user, this field will be blank.</p>
+
+</body></html>

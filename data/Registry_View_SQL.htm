@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.3.0_23";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry View SQL</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="SQL,view sql,SQL (View SQL button)"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry View SQL">
+        <span>Registry View SQL</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry View SQL</h1>
+<h2>Purpose:</h2>
+<p><img src="assets/images/SKIN1_ViewSQL.bmp" alt="" style="border: none;" border="0"/> 
+ The ViewSQL button is generally available in SAMPro Record viewers. This 
+ button adds the ability to have custom add-in Special Query Results List 
+ Panes defined and called via stored procedures maintained in a user’s 
+ database. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Note:</span> 
+ Utilizing this feature will generally be a decision made in coordination 
+ with Data-Basics representative to provide a rapid deployment solution 
+ alternative to a standard SAMPro programming modification request.</p>
+<p style="margin-left: 8px;">When enabled via registry in conjunction with 
+ a corresponding stored procedure added to the database, results list panes 
+ can be launched to present additional information about the selected record 
+ as per the definition of the stored procedure.</p>
+<p style="margin-left: 8px;">The following registry is presented as an 
+ of the example the settings needed to enable this. In this simple example, 
+ the View SQL button would ALL fields from a the work order header (select 
+ * from wrkordr). This example is presented for learning purposes. </p>
+<h3><b>Sample Registry to Enable View SQL button </b></h3>
+<p style="margin-left: 8px;"><b>Registry I</b><span style="font-weight: bold;">d:</span> 
+  sys-sql-vwrkordr:WO List</p>
+<p style="margin-left: 8px;">The Id must reference the record the ViewSQL 
+ button is to be enabled. In the above example, this will be for the work 
+ order viewer. The text following the colon defines this specific entry 
+ (more than one View SQL entries may be defined for a viewer). </p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Registry 
+ Name:</span> View SQL - Work Order</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ MenuTitle   <span style="font-weight: bold;">Setting Value:</span> 
+ WO List</p>
+<p style="margin-left: 8px;">This Setting defines the Menu Title that appears 
+ when the user clicks the button if more than one SQL function has been 
+ specified for this record. </p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ ListTitle  <span style="font-weight: bold;">Setting Value:</span> 
+ WO List For: ^wo_id^</p>
+<p style="margin-left: 8px;">This setting provides title used in the report 
+ itself. Tokens appropriate to the stored procedure and record must be 
+ used. For the ListTitle registry the token set in the Setting Value field <u style="box-sizing: border-box;">must be lowercase</u>.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ Token~wo_id  <span style="font-weight: bold;">Setting Value:</span> 
+ wrkordr.id</p>
+<p style="margin-left: 8px;">This setting defines the token passed to the 
+ stored procedure from the record. Lowercase values for tokens and field 
+ names should be used.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ SQL  Setting Value: sp_WO_List ^wo_id^</p>
+<p style="margin-left: 8px;">The Setting Key specifies the procedure object 
+ (typically SQL).  The Setting Value specifies the stored procedure 
+ object name followed by the appropriated token to be passed to it.  Lowercase 
+ values for tokens should be used.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ Error~wo_id  <span style="font-weight: bold;">Setting Value:</span> 
+ Work Order ID must be specified</p>
+<p style="margin-left: 8px;">The setting defines the error processing message 
+ the user does not (in this case) specify a Work Order Id. </p>
+<p style="margin-left: 8px;">The following is the stored procedure for 
+ that example:</p>
+<p style="margin-left: 48px;">CREATE PROCEDURE dbo.sp_WO_List</p>
+<p style="margin-left: 48px;">@wrkordr_id NVARCHAR(10)</p>
+<p style="margin-left: 48px;">AS</p>
+<p style="margin-left: 48px;">SELECT *</p>
+<p style="margin-left: 48px;">FROM wrkordr</p>
+<p style="margin-left: 48px;">WHERE wrkordr_id = @wrkordr_id</p>
+
+</body></html>

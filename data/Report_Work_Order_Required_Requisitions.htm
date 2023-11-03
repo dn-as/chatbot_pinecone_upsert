@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.16.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="requisitioning"/>
+<meta name="MS-HKWD" content="materials requisitioning"/>
+<meta name="MS-HKWD" content="required resource"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report Work Order Required Requisitions</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="requisitioning,materials requisitioning,required resource"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report Work Order Required Requisitions">
+        <span>Report Work Order Required Requisitions</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report Work Order Required Requisitions</h1>
+<p>This report lists items included on the required resource tab of work orders that are not on hold and have not been requisitioned (e.g., have either a shop order id or a po id on the line).</p>
+<h2>Report Range Screen</h2>
+<p>The input screen allows the user to order the report by either Work Order Id or Job Id, and to choose whether to include Inventory Items, Other Items, or Both on the report. The user will enter an End Date for the report, which is compared against the Required By field on the Work Order Required Resource tab.</p>
+<p>Report Ranges enable the user to filter by Work Order Id, Job Id, and Work Order Type (note that Preventive Maintenance Work Orders are initially excluded by default).</p>
+<h2>Report Contents:</h2>
+<p>The report itself lists the following fields:</p>
+<p style="margin-left: 36.00pt;">Job Id - Job Name</p>
+<p style="margin-left: 36.00pt;">Work Order Id – Type</p>
+<p style="margin-left: 36.00pt;">Required Resource Id – Description – Quantity - Date Required</p>
+
+</body></html>

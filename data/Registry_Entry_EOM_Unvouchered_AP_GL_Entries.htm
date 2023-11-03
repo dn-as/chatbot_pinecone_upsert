@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.8.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="unvouchered payables"/>
+<meta name="MS-HKWD" content="end of month"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="sys-start-seomunvchrdap"/>
+<meta name="MS-HKWD" content="EOM"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry EOM Unvouchered AP GL Entries (sys-start-seomunvchrdap)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="unvouchered payables,end of month,registry,sys-start-seomunvchrdap,EOM"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry EOM Unvouchered AP GL Entries (sys-start-seomunvchrdap)">
+        <span>Registry EOM Unvouchered AP GL Entries (sys-start-seomunvchrdap)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry EOM Unvouchered AP GL Entries (sys-start-seomunvchrdap)</h1>
+<h2>Purpose:</h2>
+<p>Configure Start Create EOM Unvouchered AP GL entries.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline;">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Related Registries:</h2>
+
+<p>Enabling this registry to <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#Prevent_User_from_Editing_WO_Other_from_PO">Prevent User from Editing WO Other Tab Lines Imported from a PO</a> will prevent PO Gen lines from be missed from inclusion in the post to GL.</p>
+
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font> <font style="font-weight: bold;">sys-start-seomunvchrdap</font></p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> for additional Registry Id formats to allow entries for specific Users, Branches, Security, or User Groups to override the main entry.</p>
+<h3>Skip Report Attachment</h3>
+<p>Based on results obtained from performance monitoring on this function, generating the Summary and Detail reports and attaching them to the GL Journal Entry may result in performance issues.  The following registry allows the generation / attachment of one or both of these reports to be skipped when the function is run. These registries may be implemented if needed to improve this function&#39;s performance.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> AttachSummaryDocument   <span style="font-weight: bold;">Setting Value:</span> false  (default is true)</p>
+<p><span style="font-weight: bold;">Setting Key:</span> AttachDetailDocument   <span style="font-weight: bold;">Setting Value:</span>  false   (default is true)</p>
+
+<h3>Include Only Open POs</h3>
+
+<p>A new registry setting is available for defaulting the Date Closed range field to the appropriate &#39;sql=&#39; string so that only open PO&#39;s will be considered.</p>
+
+<p><span style="font-weight: bold;">Id:</span> sys-start-seomunvchrdap</p>
+
+<p><span style="font-weight: bold;">Setting Key:</span> OpenPOsOnly   <span style="font-weight: bold;">Setting Value:</span> true</p>
+
+<p>For example, if this registry is enabled, the following sql statement will generated in the Closed range when the User selects the October 31, 2016 accounting period:</p>
+
+<p>sql=(prchseordr_dte_clsd = &#39;1900-01-01&#39; or prchseordr_dte_clsd &gt; &#39;2016-10-31&#39;)</p>
+
+<h3>Drop Ship Orders</h3>
+<p>The purpose of this registry option is to preserve the original behavior of the EOM Unvouchered AP GL starter function, which included drop ship purchase orders. The default behavior of this function was altered in version 6.2 so that unvouchered payables from drop ship PO’s are no longer included in the calculation.</p>
+<p style="text-indent: 30.25pt;"><font style="font-weight: bold;">Setting Key:</font> IncludeDropShipCOP <font style="font-weight: bold;">Setting Value:</font> true</p>
+<h3>Controlling Posting Detail</h3>
+<p>Prior to this release, the EOM-UVP function posted all debits and credits at the PO line item detail level.  This wasn&#39;t really necessary for the Credits and caused the resulting GL Journal entries to have nearly doubled the number of lines necessary to accurately reflect UVP dollars. The previous behavior with the credits also posted using GL Entities which isn&#39;t normal for Balance Sheet accounts. By default, credits will now be summarized and will not be posting using entities.</p>
+<p>You may control level of detail being posted as well as the handling of entities via the following registry options.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Setting Key:</font> SummarizeCredits <font style="font-weight: bold;">Setting Value:</font> true or false (the default is now true)</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Setting Key:</font> SummarizeDebits <font style="font-weight: bold;">Setting Value:</font> true or false (the default is now false)</p>
+<p>We strongly suggested discussing these options with your support representative before implementation.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Setting Key:</font> CreditsByEntity <font style="font-weight: bold;">Setting Value:</font> true or false (the default is false)</p>
+<p>CreditsByEntity must be set to true if Intercompany is enabled.</p>
+
+<p>In Version 9.0 and above, Credit Side Entities will be specified if EITHER of the following registries is enabled:</p>
+
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> sys-start-seomunvchrdap</p>
+
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> CreditsByEntity  <span style="font-weight: bold;">Setting Value:</span> true</p>
+
+<p style="margin-left: 48px;">-or-</p>
+
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> sys-ffv-global-settings  </p>
+
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> IntercompanyEnabled  <span style="font-weight: bold;">Setting Value:</span> true<br/></p>
+
+<h3>EOM UVP for Sybase 7 and SQL 2000</h3>
+<p>The SQL that makes the UVP function run was changed in the spring of 2007 to fix an obscure bug encountered by a customer.  The corrected SQL fixed their problem but is running into what appears to be a bug in SQL 2000 and apparently in Sybase 7.  For users that can&#39;t upgrade their database, this case should remove last year&#39;s fix for the obscure bug. Revised SQL for Sybase 7 and SQL 2000 is activated by making this registry entry:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting Key:</font> UseCase2263SQL <font style="font-weight: bold;">Setting Value:</font> true</p>
+
+</body></html>

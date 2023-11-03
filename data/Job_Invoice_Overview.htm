@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.4.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="billing"/>
+<meta name="MS-HKWD" content="contract invoice"/>
+<meta name="MS-HKWD" content="invoice"/>
+<meta name="MS-HKWD" content="job invoice"/>
+<meta name="MS-HKWD" content="overview"/>
+<meta name="MS-HKWD" content="pm invoice"/>
+<meta name="MS-HKWD" content="service invoice"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job Invoice Overview</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="billing,contract invoice,invoice,job invoice,overview,pm invoice,service invoice"/><meta name="brsnext" value="Clone_Job_Wizard.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Invoice Overview">
+        <span>Job Invoice Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Job Invoice Overview</h1>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">The following list briefly describes the billing process: checking basic records for the first billing cycle, entering Invoice Detail, Computing Invoices, printing Billing Worksheets, adjusting Invoices, and posting Invoices to AR. Notice that links to additional information are included in many steps.</p>
+<h2>I. Checking Basic Records</h2>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">Since the system uses the information in the Job, Job Cost Code, Job Billing, and Cost Category records for billing computations, these records must be set up correctly for invoicing to run correctly. Before you run invoicing for the first time, we suggest that you use the following check-list to ensure that your records are set up properly.</p>
+<p><font style="font-size: 10pt; font-weight: bold;" color="#000080" size="2">Job Setup Checklist</font> <font style="font-size: 10pt;" color="#000080" size="2"><br/></font>If this is the first time you are running invoicing, look in the <a href="Job_Viewer.htm">Job Record</a> to make sure that these items are included:</p>
+<p>__ GL AR Account<br/>
+__ AR Terms<br/>
+__ Rate Schedule<br/>
+__ Tax Group (to compute sales tax, if applicable)and Tax Status<br/>
+__ Bill Cycle: a letter or number that denotes the billing cycle for this Job (e.g., m=monthly, b=bi-weekly, q=quarterly, etc.) or to specify that invoices for this job should be reviewed by a particular individual or department (j=Jean&#39;s Invoices, s=Service Invoices, etc.). This field is referenced during the compute and post functions to enable you to select which invoices to compute or post.<br/>
+__ Invoice Report Id and Report Query Id<br/>
+__ Billing Worksheet and Report Id and Report Query Id<br/>
+__ Service Compute: this box should be checked it the Service Compute will be used. The feature is work order driven, and is ideal for firms that wish to bill jobs one work order at a time.<br/>
+__ <a href="Gross_Margin_Table.htm">Gross Margin</a> (if gross margin analysis will be used).<br/>
+__ Job Billing address (if applicable).</p>
+<p><font style="font-size: 10pt; font-weight: bold;" color="#000080" size="2">Verify Job Billing Item Setup</font> <font style="font-size: 10pt;" color="#000080" size="2"><br/></font>If this is the first time you are running invoicing, look in the <a href="Job_Billing_Item_Viewer.htm">Job Billing Item Record</a> to make sure that these items are included:</p>
+<p>__ Billing rules (Fixed Fee, Allow Extras, Fee Taxable) are checked if needed<br/>
+__ OK to Bill box is checked<br/>
+__ Invoice and Billing Worksheet Report and Report Query Id&#39;s entered<br/>
+__ Fixed Fee Jobs: Original Contract and Contract Changes<br/>
+__ Invoice Description (optional)</p>
+<p>__ Billing Worksheet and Report Id and Report Query Id</p>
+<p><font style="font-size: 10pt; font-weight: bold;" color="#000080" size="2">Verify Job Cost Code Setup</font> <font style="font-size: 10pt;" color="#000080" size="2"><br/></font>If this is the first time you are running invoicing, look in the <a href="Job_Cost_Code_Viewer.htm">Job Cost Code Record</a> to make sure that these items are included:</p>
+<p>__ GL Entity (if applicable)<br/>
+__ Billing Item to be defaulted when this Cost Code is selected<br/>
+__ Material Price Level<br/>
+__ Costing rules (Default (Sales Tax) for AR Post, Change Order, Allow Labor Charges, Allow Other Charges, Certified PR Report) are checked if needed<br/>
+__ Default GL Income and WIP (optional) Accounts</p>
+<p><font style="font-size: 10pt; font-weight: bold;" color="#000080" size="2">Verify Job Cost Category Setup</font> <font style="font-size: 10pt;" color="#000080" size="2"><br/></font>At least 3 Cost Categories must be defined: one each for Labor, Material and Other charges. If you use subcontracting, you would also create a Cost Category for subcontracting charges. You can make cost categories as detailed as you want for job costing or as simple as one for each type of expense. Remember that Cost Categories are <font style="font-weight: bold;">not</font> Job-specific. If this is the first time you are running invoicing, look in your <a href="Job_Cost_Category_Viewer.htm">Job Cost Category Records</a> to make sure that these items are included:</p>
+<p>__ Cost Type<br/>
+__ Use in Journal Rules: AP, PR, IM (for a future release)</p>
+<p>In addition, if you will be billing for PM Work Orders as the work is done, you will also need to create a cost category (e.g., PM Work) with the &quot;Other&quot; cost type selected.</p>
+<p><font style="font-size: 10pt; font-weight: bold;" color="#000080" size="2">Verify Accounting Period Setup</font> <font style="font-size: 10pt;" color="#000080" size="2"><br/></font>The <a href="Accounting_Period_Viewer.htm">Accounting Period(s)</a> that you will use for invoicing must have the History boxes correctly set and must be flagged as Active. Note that if the AR and Job Cost History boxes are not checked, posting information will not be retained, and the second time that you run invoicing your charges from the previous invoices will be added to the current batch.</p>
+<p><font style="font-size: 10pt; font-weight: bold;" color="#000080" size="2">Verify Payroll Period Setup</font><br/>
+Check that the <a href="Payroll_Period_Viewer.htm">Payroll Period(s)</a> that you will use for entering labor on Work Orders or in the Labor journal has been created and is flagged as Active.</p>
+<h2>II. Entering the Invoicing Detail</h2>
+<p>The system provides several methods of entering invoicing details depending upon whether the job is pm contract, time and materials, and so on. The following sections describe how invoice detail is entered in a variety of situations where the cost and/or revenue information is tied to work orders. <font style="font-weight: bold;">Please turn to section VIII: Contract Billings for how to handle fixed fee and other types of billings where costs and revenues are tied directly to jobs.</font></p>
+<p><font style="font-size: 10pt; font-weight: bold;" color="#000080" size="2">Entering Invoicing Detail on Work Orders</font> <font style="font-size: 10pt;" color="#000080" size="2"><br/></font><font style="font-weight: bold;">1.</font> If you intend to bill for work orders, complete the <a href="Work_Order_Viewer.htm">Work Order Invoice</a> information for all jobs that you intend to invoice. Be sure to include the following charges as needed on each work order:</p>
+<p><font style="text-decoration: underline;" color="#008000">Labor</font>Work_Order_Invoice_Labor<br/>
+<font style="text-decoration: underline;" color="#008000">Other Charges + Non-Inventory Materials</font>Work_Order_Invoice_Other<br/>
+<font style="text-decoration: underline;" color="#008000">Inventory Materials</font>Work_Order_Invoice_Inventory_Tab charges</p>
+<p>Note that the job costing information should default from the work order header job fields to the LAB, OTH and INV tabs.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Construction Billing on Work Orders:</font> Version 7.0 includes an enhancement the changes the default behavior for anyone entering labor or materials to a WORKORDER that was associated to a non-service compute job (RININV3 or RINVIN4).  Users will no longer have to mark workorders &#39;Ready to Invoice&#39; using Thumbs-up for the unbilled costs to appear in Record Billing Adjustments providing the Job&#39;s billing item is FIXED FEE &amp; RININV3 or RININV4. Note that NO changes were made to the way non-fixed fee Jobs work... users must continue to mark these &#39;ready to invoice&#39; for them to appear in Record Billing Adjustment (e.g., Time&amp;Material Change Orders).   </p>
+<p style="margin-left: 36.00pt;">A registry entry is available to return the system to its previous behavior: <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Non-Service_Compute_Invoices">Registry Entry Global Settings: Non-Service Compute Invoices</a>.</p>
+<p><font style="font-weight: bold;">2.</font> If you are using the Service Compute function, all costs (and associated revenues) must be brought into the applicable work order.<br/>
+<img src="assets/images/SKIN1_ImportCosts.bmp" alt="" style="border: none;" border="0"/> Clicking the Get Costs button in the Work Order imports detailed costs that have not as yet been entered directly to the work order (these costs may come from the Job Journal, Labor Journal, and from Purchase Orders).</p>
+<p><font style="font-weight: bold;">4.</font> After importing or manually entering all detail on the work order, the Gross Margin tab may be used to adjust the invoice revenues to correspond to the desired Gross Margin or Invoice Total. This tab may also be used to adjust an invoice if it is greater than the Client Not-To-Exceed value. The Distribute GM button should be used to adjust the work order detail revenues. A workspace viewer will display the results of the distribution. This report may be printed for reference if needed.</p>
+<p><font style="font-weight: bold;">5.</font> When your invoice detail is entered correctly, click the &quot;Thumbs Up&quot; button on the side button bar to mark the work order Invoice Record.</p>
+<p><font style="font-weight: bold;">6.</font> If this is not a Service Compute Work Order, you can elect to compute the invoice for this job or not. If you elect not to, you may do so later by running the batch Compute Job Invoice Function.</p>
+<p>For <font style="font-weight: bold;">Service Compute Work Orders:</font> When you are ready to bill your Service Compute work orders (typically at the end of the day), run the <a href="Start_Computer_Service_Invoice.htm">Start Compute Service Invoice</a> function. This function will automatically run the Print Invoice and Post Invoice functions for the work orders that you select.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h1>Preventive Maintenance Billing for PM Contracts<br/>
+How you set up your billing depends on when your revenue is earned:</h1>
+<p><font style="font-size: 11pt; font-weight: bold;" size="2">Revenue is Earned when PM Work is Done</font><br/>
+<font style="font-weight: bold;">1.</font> If you earn the revenue when you do the actual PM Work, you will enter the billing amount in each line in the <a href="Client_Site_Equipment_PM_Tab.htm">Client Site Equipment PM Tab</a>.</p>
+<p>__ Specify the Inspection Date, Service Parts and Tasks (as needed), Estimated Hours<br/>
+__ Enter the dollar amount to bill in the Cn Value field.<br/>
+__ The Cost Category that you select on this tab must have cost type of &quot;Other&quot; selected.</p>
+<p><font style="font-weight: bold;">2.</font> When you run the Create PM Work Order function, the system will generate a revenue entry to the Other tab equal to the contract value that you entered in the Client Site Equipment PM tab. The Job information defaults from the PM Job, Job Cost Code, and Job Billing Item specified in the Client Site record.</p>
+<p><font style="font-weight: bold;">3.</font> At this point, you can add the actual costs (labor, etc.) associated with this work order, and then mark it Invoice Ready by clicking the &quot;Thumbs Up&quot; button on the side button bar.</p>
+<p><font style="font-weight: bold;">4.</font> When you save the Work Order, you can elect to compute the invoice for this job or not. If you elect not to, you may do so later by running the batch Compute Job Invoice Function.</p>
+<p><font style="font-size: 11pt; font-weight: bold;" size="2">PM Revenue is Billed on a Schedule</font><br/>
+<font style="font-weight: bold;">1.</font> If you prepare regular (e.g., quarterly or monthly) billings for your PM work regardless of when it is performed, you will set up that schedule in the BILL tab of the Client Site record. Check the Client Site main screen and BILL tab to verify that the following information is entered correctly:</p>
+<p><font style="font-weight: bold;">Main Screen</font><br/>
+__ PM Job, Job Cost Code, Job Billing Item entered correctly<br/>
+<font style="font-weight: bold;">BILL tab</font><br/>
+__ Bill Date contains the date to generate the billing<br/>
+__ Bill Amount contains the amount to be billed<br/>
+__ Amount Earned contains the total amount (if you are not amortizing) or the amount that is Earned on this date if you are amortizing.<br/>
+__ GL Accounts: The first GL account will be credited with the Bill Amount; this field is required. The second GL account should only be filled in if you are amortizing this billing.<br/>
+__ Invoice Description (to be printed on the invoice).</p>
+<p><font style="font-weight: bold;">2.</font> Scheduled PM Billings are generated by first going to the Folders viewer Accounting Topic, Invoice Tab.</p>
+<p><font style="font-weight: bold;">3.</font> Click the Generate PM Invoice button and enter the following:</p>
+<p>__ Accounting Period to which these invoices will be charged<br/>
+__ Bill Date to appear on the invoices in yyyy-mm-dd format</p>
+<p>Click the Go button to generate the invoices. When this function has run, an Invoice number will appear on the Client Site BILL tab for this entry.</p>
+<h2>III. Service Compute Processing</h2>
+<p>The Service Compute feature is work order driven, and is ideal for firms that wish to bill jobs one work order at a time. As with other types of billing, all information will be ultimately be stored in Job History. However, the work order itself (rather then Record Billing Adjustments) will be used to make adjustments to revenues billed.</p>
+<p>Create a new Job. The Service Compute box on the Invoice tab must be checked.</p>
+<p>If you wish to use the Gross Margin functionality, create the appropriate Gross Margin tables. The Gross Margin must be referenced in the Client Site record’s Service tab.</p>
+<p>For Service Compute to operate correctly, all costs (and associated revenues) must be brought into the applicable work order.<br/>
+<img src="assets/images/SKIN1_ImportCosts.bmp" alt="" style="border: none;" border="0"/> Clicking the Import Costs button in the Work Order imports detailed costs that have not as yet been entered directly to the work order (these costs may come from the Job Journal, Labor Journal, and from Purchase Orders).</p>
+<p>After importing or manually entering all detail on the work order, the Gross Margin tab may be used to adjust the invoice revenues to correspond to the desired Gross Margin or Invoice Total. This tab may also be used to adjust an invoice if it is greater than the Client Not-To-Exceed value.</p>
+<p>The Distribute GM button should be used to adjust the work order detail revenues. A workspace viewer will display the results of the distribution. This report may be printed for reference if needed.</p>
+<p>When you are ready to bill your Service Compute work orders (typically at the end of the day), run the Start Compute Service Invoice function (discussed in detail in section 4.6). This function will automatically run the Print Invoice and Post Invoice functions for the work orders that you select.</p>
+<p>Service Compute generated invoices support Job Invoice Reverse functionality.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>IV. Computing Service Work Orders, COD Jobs and PM&#39;s Not Billed on a Schedule</h2>
+<p>The Compute Job Invoice function offers another method of computing Job Invoices for service work orders and PM work orders that are not billed from the Client Site Billing schedule.</p>
+<p><font style="font-weight: bold;">COD Functionality:</font><br/>
+This feature is designed for our Service users with residential customers. Typically, payment is calculated with preprinted forms and collected from certain residential clients by the technician when the work is done. The status of COD Invoices can be set directly to Ok to Post, and the Cash Receipt automatically recorded. Note that Labor, Material, and Other charges must have been recorded on the Work Order.</p>
+<p><font style="font-weight: bold;">1.</font> Go to the Invoicing tab of the Folders viewer (Accounting Topic) and click the Compute Job Invoice function.</p>
+<p><font style="font-weight: bold;">2.</font> When the Batch Invoices screen appears, fill in the following:</p>
+<p>__ Invoice Date: the date that you wish to appear on the Invoice<br/>
+__ End Date (charges with effective dates after the End Date will not be included on the Invoice)<br/>
+__ Invoice Status for COD Jobs: Ok to Print Ok to Post<br/>
+By default, OK to Print is selected. This option should be selected if you want to produce hard copy invoices for your COD Jobs. Select OK to Post if you do not want to print your COD invoices. In this case, the status of COD Invoices will be set directly to Ok to Post; they will be included with your non-COD Invoices when you run the post.</p>
+<p>__ GL Bank Account Id: the GL Bank Account Id that specifies where the COD funds were deposited.<br/>
+__ Job Id (leave blank to compute for all jobs)<br/>
+__ Billing Cycle (note that leaving this field blank computes invoices only for jobs whose Billing Cycle field is blank)</p>
+<p><font style="font-weight: bold;">3.</font> Click the Go button.</p>
+<p><font style="font-weight: bold;">4.</font> A checklist of jobs will appear: you may select which are to be computed and then click the Go button on this screen. At this point, you will also enter the check number (or the word Cash) for those COD invoices for which you have already received payment.</p>
+<p>__ Invoice Id: if this field is blank, it will automatically be assigned the next number by the system. If you are using preprinted forms to invoice your COD customers, you may enter the appropriate reference number.</p>
+<p>__ Check Number: this field must be completed for COD processing. If the customer paid by check, enter the check number. If the customer paid by cash, enter the word cash.</p>
+<p>When you click the Go button, the status of your COD Invoices will be set to OK to Print or OK to Post, depending upon which option you selected in the previous screen. The system will make a cash receipt entry to the specified GL Bank Account Id for all selected COD invoices when they are posted.</p>
+<h2>V. Printing the Billing Worksheet</h2>
+<p>The Billing Worksheet enables management to review invoice charges before printing the invoice itself. Any changes to the invoice may then be made in the Record Billing Adjustments journal.</p>
+<p><font style="font-weight: bold;">1.</font> Go to the Folders viewer, select the Accounting Topic and then select the Invoicing tab.</p>
+<p><font style="font-weight: bold;">2.</font> Click on the Print Invoice Report label.</p>
+<p><font style="font-weight: bold;">3.</font> When the List User Report box appears, double-click on the Report Id field and select Billing Worksheet.</p>
+<p><font style="font-weight: bold;">4.</font> Click the Go button, and then enter the Job Id(s) and Billing Cycle when prompted to do so.</p>
+<p><font style="font-weight: bold;">5.</font> Click the print button on the side of this viewer to print the Worksheet.</p>
+<p><font style="font-weight: bold;">6.</font> Review the Worksheet, and make any changes needed on the Record Billing Adjustments screen, being sure to click the Invoice Ready button. Doing so will recompute the invoice for you when you exit the screen.</p>
+<h2>VI. Printing the Invoices</h2>
+<p>Both PM and Service Invoices will be printed by this function.</p>
+<p><font style="font-weight: bold;">1.</font> Go to the Folders viewer, select the Accounting Topic and then select the Invoicing tab.</p>
+<p><font style="font-weight: bold;">2.</font> Click on the Print Invoice Report label.</p>
+<p><font style="font-weight: bold;">3.</font> When the List User Report box appears, double-click on the Report Id field and select Invoicing.</p>
+<p><font style="font-weight: bold;">4.</font> Click the Go button, and then enter the Job Id(s) and Billing Cycle when prompted to do so.</p>
+<p><font style="font-weight: bold;">5.</font> Click the print button on the side of this viewer to print the Invoices.</p>
+<p><font style="font-weight: bold;">6.</font> The system will ask you to confirm that the invoices have printed correctly: if you click yes, the job invoice status will be set to Printed. If you click no (for example, the paper jammed), you must reprint the invoices.</p>
+<h2>VII. Posting the Invoices</h2>
+<p>This function applies to all invoices except Service Compute. It is recommended that you post after running each type of invoice.</p>
+<p><font style="font-weight: bold;">1.</font> After you have successfully printed your invoices, go to Folders viewer, Accounting topic, and Invoicing tab.</p>
+<p><font style="font-weight: bold;">2.</font> Run the Post Job Invoices function to change the status of your invoices from Printed to Invoiced. This step is needed to &quot;clear out&quot; the charges already invoiced for your jobs. You will need to enter the following information to run this function:</p>
+<p>__ Accounting Period<br/>
+__ Effective Date (that it is posted to the GL)<br/>
+__ Invoice Date (if you only wish to post invoices with a certain date or date range)<br/>
+__ Job Id (if you only wish to post for certain jobs)</p>
+<p><font style="font-weight: bold;">3.</font> Click the Go button. A report detailing the posting information will be generated.</p>
+<h2>VIII. Contract Billings</h2>
+<p>Centralized billing also enables you to create invoices for special contracts (e.g., construction billing, major installations, retrofits, etc.) that do not fall into the PM or Service categories described above.</p>
+<p><font style="font-weight: bold;">1.</font> Create the appropriate Job, Job Cost Code, and Job Billing Item for this contract. The Billing Item should be flagged as Fixed Fee (also check Fee Taxable if appropriate). Be sure to enter the Original Contract amount and Retainage (if applicable).</p>
+<p><font style="font-weight: bold;">2.</font> Labor costs for this Job can be entered from the Labor Journal, TimeAnywhere, TechAnywhere or from Work Orders.</p>
+<p><font style="font-weight: bold;">3.</font> When you are ready to bill for a portion of this contract, click the Record Billing Adjustments function in the Accounting topic&#39;s Invoicing tab.</p>
+<p><font style="font-weight: bold;">4.</font> When the Record Billing Adjustments screen appears, enter the Id of the Job that you wish to bill for (or double-click on the Job Id field to select from a list)and then press the Enter key. If the Job that you selected has been billed previously, the End Date, Computed Thru, Next Invoice Id, and Invoiced Thru fields will be filled in. The End Date functions as a cut-off (bill thru) date for T&amp;M charges; charges with effective dates after the End Date will not be included on this invoice! For example, if today&#39;s date was February 10, 1999 but you only wanted to bill thru January 31, 1999 you would enter 01311999 as the End Date. Normally, you would enter a new end date when generating a new invoice. If this is a new job, simply enter the end date.</p>
+<p><font style="font-weight: bold;">5.</font> When the Job Id and End Date are set correctly click the Go button. The system will compute the outstanding charges for this Job, and then display the Job Invoice viewer.</p>
+<p><font style="font-weight: bold;">6.</font> On the header screen, adjust the Invoice Date and Payment Due Date if needed. Verify that the GL A/R account field is completed. If this job is taxable, click the Compute Taxes button.</p>
+<p><font style="font-weight: bold;">7.</font> On the BILL (Billing Item) tab, locate the Contract billing item for this job, and enter the Contract Next Invoice amount that you wish to bill for.</p>
+<p><font style="font-weight: bold;">8.</font> Check the LAB tab to verify that the labor hours on this invoice are recorded correctly, or make any adjustments required. Be sure that the sales tax type is set correctly. Items flagged as Hold will not be included on the invoice.</p>
+<p><font style="font-weight: bold;">9.</font> Check the OTH tab to verify that other charges, miscellaneous and inventory materials are correctly noted, or make any adjustments required. Be sure that the sales tax type is set correctly for all items. Items flagged as Hold will not be included on the invoice.</p>
+<p><font style="font-weight: bold;">10.</font> Go to the TAX tab. For each Tax Authority, enter the Tax Base and press Enter. The system will automatically compute the tax due this authority.</p>
+<p><font style="font-weight: bold;">11.</font> On the GL tab, distribute the Contract Entered amount.</p>
+<p><font style="font-weight: bold;">12.</font> Return to the Header screen by clicking the Parent button, and then double-click on the Invoice Ready? box to check it. At this point, the system checks for any discrepancies in amounts, and alerts you if there is a problem.</p>
+<p><font style="font-weight: bold;">13.</font> When all is in balance, click the Change Record Button and close the screen.</p>
+<p><font style="font-weight: bold;">14.</font> Repeat this process for all special contract jobs that you wish to invoice at this time.</p>
+<p><font style="font-weight: bold;">15.</font> Run the Billing Worksheet and Invoice for this Job, and to Post it to AR.</p>
+
+</body></html>

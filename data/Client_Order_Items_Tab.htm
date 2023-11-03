@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.11.1.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="items"/>
+<meta name="MS-HKWD" content="client order"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Client Order Items Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="inventory,items,client order"/><meta name="brsnext" value="Client_Order_Deposit.htm"/><meta name="brsprev" value="Client_Order_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Order Items Tab">
+        <span>Client Order Items Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Client Order Items Tab</h1>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">Items that have 
+ been picked / invoiced cannot be deleted from this tab. In addition, the 
+ quantity cannot be reduced below what has already been picked. The price 
+ of invoiced items cannot be changed.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><span id="BugEvents33">The 
+ user can delete a line referencing a cancelled line from a Purchase Order 
+ or Change Order PO.</span></p>
+<h2>Important Fields</h2>
+<p><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/> 
+ Click the Magnify button to display all fields for the selected line.</p>
+<p><img src="assets/images/image/LinesView.gif" alt="" style="border: none;" border="0"/> 
+ Click the Lines View button to display the multiple line view.</p>
+<p><font style="font-weight: bold;">Cost: Revenue: GM$: GM%:</font> <font style="font-weight: bold;">Markup%<br/>
+</font>A Cost, Revenue, Gross Margin $, Gross Margin % and Markup% summary 
+ for the order is displayed at the top of this tab. This information is 
+ dynamically updated as the order is being entered.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> 
+ Client Orders created prior to 8.2.529.011 will display a Unit Cost of 
+ 0.00. Orders created from this version forward will display the cost that 
+ was defaulted when the line was entered.</p>
+<p><font style="font-weight: bold;">Drop Ship?<br/>
+</font>Flag this field if this item should be drop-shipped from your vendor 
+ directly to the client’s site.</p>
+<p>The Dropship can be set after entering the Inventory Id:</p>
+<p style="margin-left: 36.00pt;">- If No PO has been generated for the 
+ line - Allow Drop Ship Checkbox to be checked or unchecked after the Item 
+ Id has been entered.<br/>
+<br/>
+- If a PO has already been generated for the line - DO not allow the checkbox 
+ to be cleared unless the PO has been cancelled.</p>
+<p style="margin-left: 36.00pt;">- Validation prevents the setting of the 
+ Drop Ship flag if the line is on a pick ticket or has been invoiced.</p>
+<p>When you click the Add or Save button, and the Order Type is set to 
+ Order, the Drop Ship Wizard launches so that a PO can automatically be 
+ generated to a Vendor. Click <a href="Client_Order_Drop_Ship_Wizard.htm">Client 
+ Order Drop Ship Wizard</a> for details on using the wizard.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Tip</font>: 
+ You can save an order with drop shipments as a ‘quote’ without invoking 
+ the wizard. When the quote becomes an order, the operator will change 
+ the order type from ‘quote’ to ‘order’. The Drop Ship Wizard will then 
+ be invoked when the order is saved.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Tip</font><font style="font-weight: bold;">: Customer</font> <font style="font-weight: bold;">Changes 
+ Order</font><br/>
+Assume that your customer calls up and wants some material. You create 
+ a new Client Order, add 20 items, all of which are to be drop shipped. 
+ You create the PO through the wizard. ½ Hour later customer calls up and 
+ says that they won’t need 5 of those items.</p>
+<p style="margin-left: 36.00pt;">To correct this, you can&#39;t delete the 
+ line off the Client Order until you delete it off the PO (which it does 
+ allow). Then the line(s) will delete.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Invoicing 
+ Drop Shipped Items:<br/>
+</font>Drop-shipped items will not appear on the COP Invoice until the 
+ PO has been vouchered in the AP Journal or the items have been received 
+ in the Inventory Receipts Journal (a registry entry is required: <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_receive_dropship_IRJ">Global 
+ Settings: Receipt Dropship in IRJ</a> ) .</p>
+<p><font style="font-weight: bold;">Inventory Item Id:</font><br/>
+Your company&#39;s Inventory Item Id (double-click to select from a list of 
+ items). If the customer has ordered this item previously, you may instead 
+ enter the Customer Part # and press Enter to pop up your Inventory Item 
+ number. This Inventory Item will actually be relieved from stock when 
+ the order is completed. Only active items may be purchased.</p>
+<p>If this is a transfer order, then the client’s description will be set 
+ to the inventory item name.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"><font style="font-weight: normal;">If 
+ the user clears the Inventory Item Id, the other fields on the line (like 
+ quantity allocated) are also cleared.</font></p>
+<p>The system also checks to see if a part has been superceded (the Superceded 
+ By field on the Inventory Other Tab is filled in). When a superseded part 
+ number is entered into this field, the system will alert the user that</p>
+<p style="margin-left: 36.00pt;">Item A has been superceded by Item B. 
+ Use New Item?</p>
+<p>It the user clicks Yes, the new part (B) will be returned to the field. 
+ If the user clicks No, part A (which has been superceded) will remain 
+ in the field.</p>
+<p><font style="font-weight: bold;">Order Quantity:</font><br/>
+The quantity being ordered or quoted.</p>
+<p><font style="font-weight: bold;">Unit Cost:<br/>
+</font>The Unit Cost field defaults from the Inventory Item record when 
+ a new line is entered. If the Item&#39;s Cost is specified as Average, the 
+ Unit Cost is set based on the Inventory Location (if available) specified 
+ on the Order first, then the overall cost if the cost by Location is not 
+ available.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> 
+ Client Orders created prior to 8.2.529.011 display a Unit Cost of 0.00. 
+ Orders created from this version forward display the cost that defaulted 
+ when the line was entered.</p>
+<p><font style="font-weight: bold;">Unit Price:</font><br/>
+The price charged per unit, exclusive of discounts. If this item is flagged 
+ for unit pricing, this field defaults from the Inventory Item record based 
+ on the Pricing Level specified in this customer&#39;s record. If you leave 
+ this field blank, it will be calculated by the system when you enter the 
+ extended price.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Price 
+ Code Handling:<br/>
+</font>The Inventory Item allows for 10 levels of Material Pricing, but 
+ Price Codes only allow for 5. If price codes are in effect, and the default 
+ price level from the Client Site is greater than 5, the system now defaults 
+ price level 1 from the Price Code. A registry entry <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#globel_settings_price_code">Price 
+ Code Handling (sys-ffv-global-settings)</a> is available to always default 
+ the value from the Price Code level 1, regardless of the Material Price 
+ Level in the Client Site.</p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">Prices Codes Using Margins:</span><br/>
+If there is a match with the Site&#39;s and Inventory Item&#39;s Price Code, the 
+ system inserts the appropriate Margin based on the Site&#39;s Price Level 
+ when the Inventory Item is selected. When the user enters and tabs out 
+ of the Quantity field, the margin will be converted to the appropriate 
+ Unit Price based on the cost.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Foreign 
+ Currency Processing -</font> <font style="font-weight: bold;">Unit Price: 
+ Extended Price:<br/>
+</font>If foreign currency processing is implemented on your system (and 
+ this Client Order is for a foreign customer), these fields should be entered 
+ in terms of the customer’s foreign currency, as it should appear on the 
+ invoice.</p>
+<p><font style="font-weight: bold;">Alloc Qty:<br/>
+</font>This field defaults from the Quantity Ordered, but may be adjusted 
+ downward by the user in order to force a backorder of the item. Note that 
+ the Quantity Allocated cannot exceed the Quantity Ordered - Quantity Shipped.</p>
+<p><font style="font-weight: bold;">Ext&#39;d Price</font><br/>
+This is calculated by the system based on the Order Quantity, Unit Price, 
+ and Discount fields.</p>
+<p><font style="font-weight: bold;">Disc:</font><br/>
+The discount (if any) for this item as a percentage (e.g., 5% would be 
+ entered as 5.0).</p>
+<p>This field defaults from the Client Site COP tab’s Discount field if 
+ Special Pricing is NOT in effect. If Special Pricing is NOT in effect, 
+ the Price itself will be set from the Site’s Last Time Bought (if applicable), 
+ or the item’s regular Unit Price. If &#39;Special Pricing&#39; is in effect, the 
+ Discount Percent field will default to zero.</p>
+<p>Special Pricing is in effect if and only if both the following are true:</p>
+<p style="margin-left: 36.00pt;">The Client Site’s Price Code Id (on the 
+ Client Site&#39;s Contacts tab) is completed.</p>
+<p style="margin-left: 36.00pt;">A Pricing Exception for that Price Code 
+ exists on the Inventory Item&#39;s Pricing tab.</p>
+<p><font style="font-weight: bold;">Allow Partial Ship?</font><br/>
+Flag this field if a partial shipment of this item is allowed. Double-click 
+ on this field (or press the Spacebar) to flag/clear it.</p>
+<p><font style="font-weight: bold;">Substitute Item:</font><font style="font-weight: bold;"><br/>
+</font>The LastTimeSold tab of the Client Site viewer shows a list of inventory 
+ items sold to the site along with information about the last sale. This 
+ information is based on the substitute rather than on the actual inventory 
+ item. NOTE: unless specifically entered differently on the Client Order, 
+ the actual and substitute items are identical.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Enhanced</font> 
+ <font style="font-weight: bold;">Substitute Item Number Functionality:<br/>
+1.</font> When entering an order line, enter the item number the customer 
+ thinks he is getting in the Inventory Item Id field – not the Substitute 
+ Item Field. This will properly load up the item description and the cost 
+ for the last time the customer ordered that item (see the Client Site 
+ Sales tab). It will also set the Substitute item number to the item number 
+ entered.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">2.</font> 
+ Then, change the item number in the Inventory Item Id field to the item 
+ number actually to be shipped.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">3.</font> 
+ The system will ask if you want to copy this to the substitute item number 
+ field. Answer ‘No’.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">4.</font> 
+ Proceed as usual. At this point, the first field on the child tab is the 
+ &#39;actual&#39; item number. That is, this is the item that is withdrawn from 
+ inventory. The &#39;substitute&#39; part number only appears on paperwork. The 
+ customer thinks that they are getting the &#39;substitute&#39; item but they are 
+ really getting the &#39;actual&#39; item.</p>
+<p style="margin-left: 36.00pt;">The ‘substitute’ item will appear on the 
+ COP Invoice and Order Acknowledgement that is sent to the customer.</p>
+<p style="margin-left: 36.00pt;">On the Pick Ticket, the first page lists 
+ the Substitute Item so that this page may be sent to the customer as a 
+ packing slip. The second page of the Pick Ticket is flagged as “INTERNAL 
+ COMMENTS – DO NOT SHIP THIS PAGE TO CLIENT”, and shows the part substitution 
+ as follows:</p>
+<p style="margin-left: 66.25pt;">***** PART NUMBER SUBSTITUTION *****</p>
+<p style="margin-left: 66.25pt;">For this Part Number Substitute this 
+ Part</p>
+<p style="margin-left: 66.25pt;">123100*   123105</p>
+<p><font style="font-weight: bold;">PO Id:<br/>
+</font>If completed, this display-only field lists the PO generated by 
+ the Drop Ship Wizard.</p>
+<p><img src="assets/images/image/magnifybutton.gif" alt="image\magnifybutton.gif" title="image\magnifybutton.gif" width="16" height="16" border="0"/> Click the Magnify button 
+ to view the following fields!</p>
+<p><font style="font-weight: bold;">Backordered: Available:<br/>
+U of Measure Needed: To Pick:</font><br/>
+These display-only fields are maintained by the system as follows:<br/>
+ Available=OnHand-Allocated<br/>
+ Backordered=Needed-Available</p>
+<p><font style="font-weight: bold;">Repacking Charge:</font><br/>
+If a Repack Table is specified in the Inventory Item record, the repack 
+ charge per unit will default based on the quantity ordered and standard 
+ container size.</p>
+<p><font style="font-weight: bold;">Customer Part #:</font><br/>
+The Customer&#39;s part number for this item. If the customer has previously 
+ ordered this item, the system will automatically fill in the Customer 
+ Part Number for you.</p>
+<p><font style="font-weight: bold;">Date Requested:</font><br/>
+Defaults from the Date Ordered field. This may adjusted by the user as 
+ needed.</p>
+<p><font style="font-weight: bold;">Date Promised:</font><br/>
+Defaults from the QTE tab in the inventory record if this item was added 
+ automatically when the PO and Client Site Id&#39;s were specified.</p>
+<p><font style="font-weight: bold;">Date To Ship:</font><br/>
+The target shipping date for this item - it defaults from the Ship Date 
+ on the Main tab. May adjusted by the user as needed. It controls which 
+ items are eligible to appear on the COP Pick List report, Only items with 
+ today&#39;s date or earlier are eligible for inclusion on this report.</p>
+<p><font style="font-weight: bold;">Price Level:</font><br/>
+The price level: this field defaults from the corresponding Price Level 
+ field in the header (upper) portion of this viewer. If the price level 
+ is changed for this particular item, the system will automatically update 
+ the Unit Price if this inventory item is flagged as using unit pricing.</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font><br/>
+Defaults from the Location record (first), Client Site record (second) 
+ or Inventory Group (third). The GL entity in the Location will override 
+ the GL entity specified on the Client Site and Inventory Item Group. If 
+ you want the Client Site to supply the entity do not enter one in the 
+ Location. To default the GL Entity from the Inventory Item Group, the 
+ GL Entity field should be blank in both the Location and the Client Site 
+ records.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">InterCompany 
+ Note:</span> If Intercompany is enabled in your database, use the Client 
+ Order&#39;s <a href="Registry_Entry_Client_Order_Viewer.htm#Setting_the_GL_Entity">GL 
+ Entity Registry</a> entry to determine where the GL Entity should default 
+ from: </p>
+<p><font style="font-weight: bold;">Pkg Qty</font><br/>
+This field defaults from the quantity ordered.</p>
+<p><font style="font-weight: bold;">Customer&#39;s Description</font><br/>
+Briefly describes this item.</p>
+<p><font style="font-weight: bold;">Serial Number:<br/>
+</font>The Serial Number field appears on the single view pane for the 
+ line.</p>
+<p>If a serial number is entered at order entry time, it should appear 
+ on all resulting inventory history records.</p>
+<p>If a serial number is entered at order entry time, instructions will 
+ appear on the pick ticket to pick the indicated serial number.</p>
+<p><font style="font-weight: bold;">Additional Unit Cost:<br/>
+</font>This field appears on the single view pane for the line.</p>
+<p>The additional unit cost should propagate to the imhstry and clntordrtoshp 
+ tables.</p>
+<p>The additional unit cost should be included when extending the item 
+ cost and should be reflected in the Sales Journal entries generated when 
+ the invoice is posted.</p>
+
+</body></html>

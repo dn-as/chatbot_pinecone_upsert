@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.4.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="job"/>
+<meta name="MS-HKWD" content="journal"/>
+<meta name="MS-HKWD" content="labor"/>
+<meta name="MS-HKWD" content="other"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job Journal Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="job,journal,labor,other"/><meta name="brsnext" value="Job_Journal_Viewer_Labor_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Journal Viewer">
+        <span>Job Journal Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Job Journal Viewer</h1>
+<p class="Style3">Purpose:</p>
+<p>Create Actual, Budget, and Budget Change transactions.</p>
+<h2>Usage:</h2>
+<p>This journal may also be used to make adjustments to job history as Actual transactions. Note that Labor entered as Actual transaction will only be used to adjust Job History, not to record hours worked so that the employee will be paid; the Labor Journal, Remote Time Entry or the Work Order Labor Tab should be used for these purposes. Payroll Adjustments should be made to the Payroll Adjustment Journal.</p>
+<p class="Block_Text" style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;">Jobs and Budgets</font><br/>
+If you enter Budgets with your Jobs, the Job Progress viewer will allow you to directly adjust the Percent or Cost to Complete as the Job progresses. Click on <a href="Update_Job_Progress.htm">Update Job Progress</a> to learn more about this feature.<br/>
+<br/>
+<font style="font-weight: bold;">Job Cost Allocation<br/></font>The <a href="Start_Job_Cost_Allocation.htm">Start Job Cost Allocation</a> function streamlines the process of creating job journal entries to allocate material, labor or subcontractor costs among jobs.</p>
+<p><font style="font-weight: bold;">Validations</font> <font style="font-weight: bold;">for posting the Job Journal to GLH:</font></p>
+<p style="margin-top: 0.00pt;">1. Transaction Type must be Actual.<br/>
+2. Accounting Period must have posting to GLH enabled.</p>
+<p style="margin-top: 0.00pt;"> </p>
+
+<p style="margin-top: 0.00pt; margin-left: 48px;">Note: Validation ensures that the posting to GLH for each referenced Accounting Period is in balance. If the user attempts to force different accounting periods (with GL enabled) on the Labor or Expenses tab, the message &quot;WARNING: this transaction is out-of-balance and must be corrected before it can be posted&quot; will be displayed. When the user has acknowledged the message, a workspace will be displayed to show the user what is wrong so that the entry can be saved.</p>
+
+<p style="margin-top: 0.00pt; margin-left: 48px;"> </p>
+<p style="margin-top: 0.00pt; margin-left: 8px;">3. The NetZero registry options in ensure zero-dollar net cost transactions. This behavior can be disabled by making the applicable registry entry discussed in the Registry section below.</p>
+<p style="margin-top: 0.00pt;"> </p>
+<p style="margin-top: 0.00pt;"><font style="font-weight: bold;">Job Budget Tab:</font> Simple Job Budgets may also be entered on the Job viewer’s Budget tab. See <a href="Job_Budget_Tab.htm">Job Budget Entry Tab</a> for details.</p>
+<h2>Registry:</h2>
+<p><a href="Registry_Entry_Job_Journal.htm">Registry Entry Job Journal</a></p>
+<p>If the user enters a Work Order Id on any of the detail tabs, the system will default in the first piece of equipment on the Work Order’s Equipment tab UNLESS this behavior is disabled via registry (see <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_journal_equipment_id">Registry Option Global Settings - Do Not Default Equipment Id</a>).</p>
+<h2>Screen Organization:</h2>
+<p>The Main tab (discussed below) provides the Job Journal header information. The GLH tab lists the postings to GL History if any were made for this transaction. Documentation for each of the child tabs may be accessed by clicking one of the following buttons:</p>
+<p><a href="Job_Journal_Viewer_Labor_Tab.htm"><img src="assets/images/image/btn_Labor.gif" alt="image\btn_Labor.gif" title="image\btn_Labor.gif" width="47" height="24" border="0"/></a> <a href="Job_Journal_Viewer_Other_Tab.htm"><img src="assets/images/image/btn_Expenses.gif" alt="image\btn_Expenses.gif" title="image\btn_Expenses.gif" width="76" height="24" border="0"/></a> <a href="Job_Journal_Co_Equipment_Tab.htm"><img src="assets/images/image/btn_Co_Equip46.gif" alt="image\btn_Co_Equip46.gif" title="image\btn_Co_Equip46.gif" width="70" height="24" border="0"/></a></p>
+<h2>Important Fields:</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Main Tab</p>
+<p><font style="font-weight: bold;">Transaction Type</font><br/>
+By default, the Transaction Type of new entries will be set to Unknown. Select the type of transaction this is by clicking its radio button: Actual, Budget, or Budget Change. Note that Revenue fields will not be validated for Budget/Budget Change entries.</p>
+<p>The Transaction Type CANNOT be changed once data has been entered on any of the child lines. Custom Field functionality may be used to set the default to Actual if desired.</p>
+<p><font style="font-weight: bold;">Effective Date:<br/></font>The Effective Date must be valid for the specified Accounting Period in Actual entries. This field will supply the default for the Effective Date in the Labor and Expense tab. Budget and Budget Change do not require Accounting Period / Date validation.</p>
+<p><font style="font-weight: bold;">Period Id:<br/></font>The Accounting Period flagged as &quot;default&quot; will default to this field. This field will supply the default Period Id for the Labor and Expense tabs.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Tip for Budget and Budget Change Entries:</font></p>
+<p style="margin-left: 36.00pt;">Although this field is required for saving the entry, an accounting period is NOT required for the detail Labor and Expenses lines for Budget and Budget change entries. This would enable a user to enter a 12 month budget into the future without regard for eligible accounting periods.</p>
+<p style="margin-left: 36.00pt;">1. Start the entry and select budget (or budget change).</p>
+<p style="margin-left: 36.00pt;">2. Clear the Period Id from the Accounting Period Header field.</p>
+<p style="margin-left: 36.00pt;">3. Set the Effective Date in the header field to the date you want for your budget entries.</p>
+<p style="margin-left: 36.00pt;">4. Enter your budget details as desired - note that you won&#39;t have to enter an accounting period in the Labor or Expenses line because it is a budget entry.</p>
+<p style="margin-left: 36.00pt;">5. When you have entered all of the budget detail, enter a active accounting period in the header Period Id field - the header Effective date must fall within this period.</p>
+<p style="margin-left: 36.00pt;">6. Save the Entry.</p>
+<p><font style="font-weight: bold;">Entered By: Date Entered: Time Entered:</font><br/>
+These display-only fields are maintained by the system based on your user Id and the system date and time.</p>
+<p><font style="font-weight: bold;">Transaction Description:</font><br/>
+This optional field may be used to briefly describe this transaction.</p>
+<p><font style="font-weight: bold;">Transaction Id:</font><br/>
+If you are creating a new transaction, this Id will be generated for you where you save the record. If you wish to correct or reverse an entry, enter its Id. For additional information, click on one of the following topics:</p>
+<p> <a href="Correcting_Journal_Entries.htm">Correcting Journal Entries</a>  <a href="Reversing_Journal_Entries.htm">Reversing Journal Entries</a><br/>
+ <br/>
+<font style="font-weight: bold;">Previous Id:</font><br/>
+The Transaction Id of the previous journal entry that generated the current entry as a correcting or reversing transaction. This display-only field is maintained by the system.</p>
+<p><font style="font-weight: bold;">Next Id:</font><br/>
+If this transaction was used to generate a correcting or reversing entry, the Id of the next (correcting or reversing) entry will be displayed. If this display-only field is filled in, the current transaction cannot be corrected or reversed.</p>
+<p><font style="font-weight: bold;">Total Labor Cost Total Other Cost</font><br/>
+These display-only fields summaries the Total Labor and Total Other costs entered on the child tabs.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">GLH Tab</p>
+<p>This tab displays the GL History postings associated with the selected transaction. The following columns appear on this tab:</p>
+<p style="margin-left: 36.00pt;">Account - Account Name - Entity<br/>
+Period – Company - Security<br/>
+I/C (Yes if this post was generated by Intercompany Processing, No if not)<br/>
+Journal - Trx Id – Date - Trx Count</p>
+
+</body></html>

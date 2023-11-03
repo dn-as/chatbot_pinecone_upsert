@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.16.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="requisitioning"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="material requisitioning"/>
+<meta name="MS-HKWD" content="required resource"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Tech Material Pickup</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="requisitioning,inventory,material requisitioning,required resource"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Tech Material Pickup">
+        <span>Start Tech Material Pickup</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Tech Material Pickup</h1>
+<h2>Purpose:</h2>
+<p>This starter function is a part of Work Order Material Requisitioning. It enables the transfer of inventory from a STAGING Location to a TRUCK Location (if the Work Order Type is NOT set to Requisition).</p>
+<p>If the Work Order Type is set to Requisition, running this function transfers the inventory directly to the Work Order/Job.  The Work Order Type &quot;Requisition&quot; should be used only for the purpose of requisitioning materials for installation / construction jobs and should NOT be used for service or PM WO&#39;s.</p>
+<h2>Usage:</h2>
+<p>Typically, this function would be run after the Start Release Work Order function sets the Work Order Escalation Status from Waiting Parts to Waiting Service (or Unacknowledged). An Inventory Adjustment Journal entry will be generated when this function is run.</p>
+<h2>Registry:</h2>
+<p>The system will pull the default Transfer From (staging) location from the MaterialRequisitionToLocation=<font style="font-style: italic;">staginglocationid</font> option of the <a href="Registry_Entry_Shop_Order_Mode.htm">Shop Order Registry entry</a>. If Branch processing is enabled, it defaults from the MaterialRequisitionToLocation=staginglocation option of the  sys-viewer-vshpordr-BranchId registry entry.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Work Order Id:<br/></font>Enter the Id of the Work Order whose materials should be transferred from the staging area to the Technician’s truck (or double-click to select from a list of Work Orders).</p>
+<p><font><font><span style="font-weight: bold;">W</span></font></font><span style="font-weight: bold;">ork Order Type</span><br/>
+This display-only field shows the Work Order Type of the selected Work Order.</p>
+<p style="margin-left: 48px;">If the Work Order Type NOT set to Requisition, running this function will transfer the inventory to the selected Transfer To location (typically, the Technician&#39;s truck).</p>
+<p style="font-weight: bold; margin-left: 48px;"><span style="font-weight: normal;">If the Work Order Type is set to Requisition, running this function transfers the inventory directly to the  Work Order/Job.  The Work Order Type &quot;Requisition&quot; should be used only for the purpose of requisitioning materials for installation/construction jobs and should NOT be used for service or PM WO&#39;s.</span></p>
+<p><font style="font-weight: bold;">Work Order Name: Site Id: Site Name: Location Id:<br/></font>These display-only fields default from the Work Order record you have selected.</p>
+<p><span style="font-weight: bold;">Transfer From:</span><br/>
+This display-only field specifies the Staging Location inventory is being pulled from. It defaults from the MaterialRequisitionToLocation=staginglocation option of the sys-viewer-vshpordr (or sys-viewer-vshpordr-BranchId if branches are enabled) registry entry.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Technician Id</span><br/>
+This field provides a way of specifying the &#39;To&#39; Location for non-Requisition type work orders; when the Technician is selected, the Transfer To: location is set to the Tech&#39;s truck location.</p>
+<p style="font-weight: bold;">Location Id:<br/>
+<span style="font-weight: normal;">When the Work Order is first entered, this display-only field defaults from the Work Order header. If the Technician Id is changed, it displays the Tech&#39;s truck location.</span></p>
+<p><font style="font-weight: bold;">Transfer To:<br/>
+<span style="font-weight: normal;">If the Work Order Type is NOT set to Requisition, this</span></font> field should specify the Location Id assigned to the Technician’s Truck. Typically, this would be the same Location Id that was displayed when you selected the Work Order.</p>
+<p>If the Work Order Type is set to Requisition, it will NOT be used since the transfer will be made directly to the Work Order / Job.</p>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> When all fields are entered correctly, click the Go button to generate the inventory adjustment transfer.</p>
+
+</body></html>

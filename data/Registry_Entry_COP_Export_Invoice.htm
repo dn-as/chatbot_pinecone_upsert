@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.12.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sys-report-rcopexprtinvce"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="COP Export Invoice"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry COP Export / Commercial Invoice (sys-report-rcopexprtinvce)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="sys-report-rcopexprtinvce,registry,COP Export Invoice"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry COP Export / Commercial Invoice (sys-report-rcopexprtinvce)">
+        <span>Registry COP Export / Commercial Invoice (sys-report-rcopexprtinvce)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry COP Export / Commercial Invoice (sys-report-rcopexprtinvce)</h1>
+<h2>Purpose:</h2>
+<p>Controls formatting, graphics and archiving on this pro-forma or export invoice.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline;">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Important Fields:</h2>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Registry Id:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-report-rcopexprtinvce</font></p>
+<h3>Adjust the Number of Lines Per Page</h3>
+<p>This registry option enables you to adjust the number of lines per page on the body of the Client Order Invoice. It would be implemented if this report runs a little long (or a little short) on your printer.</p>
+<p>The footer information on the COP invoice is <font style="text-decoration: underline;">not</font> controlled by this entry.</p>
+<p>The Setting Key/Setting Value of the Registry Entry must conform to <font style="text-decoration: underline;">one</font> of the following formats:</p>
+<p>This option conform to <font style="text-decoration: underline;">one</font> of the following formats:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting Key:</font> linesperpageadjustment <font style="font-weight: bold;">Setting Value:</font> +<font style="font-style: italic;">n</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting Key:</font> linesperpageadjustment <font style="font-weight: bold;">Setting Value:</font> -<font style="font-style: italic;">n</font></p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">where n is replaced by the number of lines you wish to shorten (for example, -1) or lengthen the page (+2).</p>
+<h3>Extra Lines Option</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> ExtraLinesForView~orderitem <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">n</font></p>
+<p>This new functionality was implemented to correct a COP Export Invoice problem that occurred when 7 detail lines were printed and then the total lines were not hitting within the bitmap total box. The number of lines to correct this problem with typically range from 1 to 3, and will force the 7<font style="vertical-align: super;">th</font> line to the next page, resulting in the totals being positioned correctly.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline;">Example:</font></p>
+<p style="margin-left: 36.00pt;">Setting Key: linesperpageadjustment Setting Value: +3  (existing option for this report)</p>
+<p style="margin-left: 36.00pt;">Setting Key: ExtraLinesForview~orderitem Setting Value: 2  (new option)</p>
+<h3>Graphics</h3>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">To include your logo on the report, see <a href="Registry_Entry_to_Autosave_Report.htm#Report_Graphics_and_Copy_Stamp">Report Graphics</a>.</p>
+<h3>Include Message of the Day</h3>
+<p style="text-indent: 30.25pt;"><font style="font-weight: bold;">Setting Key:</font> motd<font style="font-style: italic;">#</font> <font style="font-weight: bold; font-style: italic;">Setting Value:</font> <font style="font-style: italic;">Message to Appear on Invoice</font></p>
+<p style="margin-left: 36.00pt;">Where # is replaced by the line number of the message. Lines are to be printed in ascending order of their keys. Up to 6 lines (of 60 characters or less) may be printed.</p>
+<p style="margin-left: 36.00pt;">The print area is shared with the rarely used proforma advice lines on the lower left-hand section of the page. MOTD lines will only by printed if there are no proforma advice lines to be printed.</p>
+<p style="margin-left: 36.00pt;"><font style="font-family: Tahoma;" face="Tahoma" color="#000000">Note than when doing an invoice reprint, the current MOTD, not the original MOTD will be printed.</font></p>
+<h3>Autosaving COP Export Invoices</h3>
+<p>This enhancement adds the auto-saving functionality to COP Export Invoices.  The following registry entries are required to implement this functionality.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting Key:</font> autosavefilename <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">name</font><font style="font-style: italic;">,^sectionkeyvalue^,^date^,^time^</font><font style="font-weight: bold;"><br/></font>You may use some or all of the parameters in this option. If more that one is used, parameters should be separated by commas.</p>
+<p style="margin-left: 72.00pt;">If used, <font style="font-weight: bold; font-style: italic;">name</font> should be replaced a short description of the report (ExportInvoice).</p>
+<p style="margin-left: 72.00pt;">If used, the system will replace <font style="font-weight: bold;">^sectionkeyvalue^</font> with the corresponding invoice number stored in the report. Note that if you use this parameter you must also specify the autosavebysection option is set to true discussed below.</p>
+<p style="margin-left: 72.00pt;">If used, the <font style="font-weight: bold;">^date^</font> and <font style="font-weight: bold;">^time^</font> parameters will be replaced by the system date and time when the report is run. These parameters effectively prevent the system from overwriting existing copies of the report. (as the date and time combination will serve to create a unique filename). If only the most recent version of a document is to be retained, the ^date^ and ^time^ parameters should not be used.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting Key:</font> autosavebysection <font style="font-weight: bold;">Setting Value:</font> true<font style="font-weight: bold;"><br/></font>This option is used to save COP Invoices as individual files. autosavebysection=true should only be used in conjunction with the ^sectionkeyvalue^ parameter of the autosavefilename option discussed above.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting Key:</font> autosave <font style="font-weight: bold;">Setting Value:</font> true</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline;">or</font> <font style="font-weight: bold;">Setting Key:</font> autosavewhenprinted <font style="font-weight: bold;">Setting:</font> true<font style="font-weight: bold;"><br/></font>Autosave is implemented when you specify one of these options. If you specify the autosave=true option, the report will be saved when it appears on the screen. If you specify the autosavewhenprint=true option, the report will be saved when it is sent to the printer; this option is highly recommended.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting Key:</font> autosavefiletype <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">filetype</font></p>
+<p style="margin-left: 36.00pt;">where <font style="font-weight: bold; font-style: italic;">filetype</font> is replaced by the format in which you wish to save the report. If you do not include this entry, DBReport is selected. The following are recommended options:</p>
+<p style="margin-left: 36.00pt;"> Value  Notes</p>
+<p style="margin-left: 36.00pt;"> PDF  (Adobe Acrobat)</p>
+<p style="margin-left: 36.00pt;"> DBReport (Requires Data-Basics report reader to view)</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting Key</font>: autosaveoverwrite <font style="font-weight: bold;">Setting Value:</font> true or false<font style="font-weight: bold;"><br/></font>If you specify the <font style="font-weight: bold;">t</font><font style="font-weight: bold;">rue</font> option, the system will overwrite the most recent copy of a report file. Typically, this is the setting that you would use for invoices.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting Value:</font> autosavedirectory <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">path</font></p>
+<p style="margin-left: 36.00pt;">where <font style="font-style: italic;">path</font> is replaced by full path to the directory that you want your reports stored in. If you are specifying a url share path make sure that the directory below the ones that will be created is shared.</p>
+
+</body></html>

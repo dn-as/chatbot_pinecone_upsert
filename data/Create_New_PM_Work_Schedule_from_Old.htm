@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.8.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="client site equipment"/>
+<meta name="MS-HKWD" content="create"/>
+<meta name="MS-HKWD" content="new"/>
+<meta name="MS-HKWD" content="pm"/>
+<meta name="MS-HKWD" content="schedule"/>
+<meta name="MS-HKWD" content="workorder"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Create New PM Work Schedule from Old</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="client site equipment,create,new,pm,schedule,workorder"/><meta name="brsnext" value="Start_Uncompute_Invoices.htm"/><meta name="brsprev" value="Create_PM_Invoice.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Create New PM Work Schedule from Old">
+        <span>Create New PM Work Schedule from Old</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Create New PM Work Schedule from Old</h1>
+<h2>Purpose:</h2>
+<p>Use the existing information in a Client Site Equipment PM Schedule 
+ to add new entries to the schedule for the following year or years. This 
+ function only clones the PM Schedule on the Client Site Equipment record. 
+ To actually create the work orders, you must run the Start Create PM WorkOrder 
+ function.</p>
+<h2>Usage:</h2>
+<p>This function should <span style="font-weight: bold;">NOT</span> be 
+ used in conjunction with Master Contract; the <a href="PM_Master_Schedule_Master_Contract_.htm">Master 
+ Contract</a> viewer and / or <a href="Start_Renew_Master_Contract.htm">Renew 
+ Master Contract</a> should be used instead. </p>
+<p style="margin-left: 48px;"><u style="text-decoration: none; "><span style="font-weight: bold;">Master Contract Equipment Table Note:</span> 
+ W</u>ith the UseMasterContractEquipmentTable global registry set to true, 
+ lines from the <i>Old</i> schedule are ignored when they have references 
+ to Master Contracts. Also note that lines will NOT be copied if the Client 
+ Site Equipment <span style="text-decoration: underline; ">parent</span> 
+ record references a Master Contract even if the lines in the old schedule 
+ do not.</p>
+<p>Optional for updating PM schedules. New schedules will only be generated 
+ for <font style="font-weight: bold;">active</font> equipment (e.g., Equipment 
+ whose Inactive field is not checked). In addition, only equipment belonging 
+ to <font style="font-size: 9pt; font-weight: bold; font-style: italic;" size="2">Client Sites with a status of Active will be affected 
+ by this function.  <span style="font-style: normal; font-weight: normal;">Alternately, 
+ <a href="Renew_Service_Contract.htm">Start Renew Service Contract</a> 
+ may be used to update both Client Site Equipment PM Inspections and Client 
+ Site PM Billings.</span> </font></p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Years to Add</font><br/>
+The number of years (1-9) to add to each existing PM to create the new 
+ scheduled entries. For example, if you added one year to work orders scheduled 
+ in 2007 the new schedule would be for 2008.</p>
+<p><font style="font-weight: bold;">Client Id:</font><br/>
+To schedule PM&#39;s for a specific Client, enter the appropriate Client Id. 
+ To enter a range of Clients, enter the first and last Id&#39;s of the range 
+ separated by an underscore (ACME_ZENITH). Several Id&#39;s can be specified 
+ by separating their Id&#39;s with a comma (ACME,MESA,ZENITH).</p>
+<p><font style="font-weight: bold;">Client Site Id:</font><br/>
+To schedule PM&#39;s for a specific site, enter the appropriate Client Site 
+ Id. To enter a range of Client Sites, enter the first and last Id&#39;s of 
+ the range separated by an underscore (ACME_ZENITH). Several Id&#39;s can be 
+ specified by separating their Id&#39;s with a comma (ACME,MESA,ZENITH).</p>
+<p><font style="font-weight: bold;">Equipment Id:</font><br/>
+To schedule PM&#39;s for all sites having a piece of equipment with a specific 
+ Id, enter the appropriate Equipment Id. To specify only this Equipment 
+ Id at a particular Site, enter the Client Site Id in the above range, 
+ and the Equipment Id using the following format: <font style="font-style: italic;">&amp;,equipid</font> 
+ where <font style="font-style: italic;">equipid</font> is the Equipment 
+ Id.</p>
+<p><font style="font-weight: bold;">Scheduled Inspection Date:</font><br/>
+This field is required: you cannot run this function wide open. This range 
+ controls which pm schedules will be copied by selecting a date range. 
+ To copy only PM&#39;s for a specific inspection date, enter the date in <font style="font-style: italic;">yyyy-mm-dd</font> format. To copy inspection 
+ dates for a range of dates, enter the first and last dates of the range 
+ separated by an underscore (2007-01-01_2007-12-31). Several inspection 
+ dates can be posted by separating them with a comma (2007-01-01,2007-01-03).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Examples:</font><br/>
+Suppose that you had scheduled weekly inspections in 2007 for all active 
+ equipment at Client Site Id: 1044. To create new PM&#39;s for the first quarter 
+ of 2008 for this site, you would enter a <font style="font-weight: bold;">1</font> 
+ in the Years to Add field, <font style="font-weight: bold;">1044</font> 
+ in the Client Site Id field, and <font style="font-weight: bold;">2007</font><font style="font-weight: bold;">-01-01_</font><font style="font-weight: bold;">2007</font><font style="font-weight: bold;">-03-31</font> in the Scheduled Inspection 
+ Date field.</p>
+<p style="margin-left: 36.00pt;">Assume that Client Site 1099 has three 
+ pieces of equipment, one of which (Equipment Id 1099A) is under a 2 year 
+ monthly inspection schedule for 1997 and 1998. At the end of 1998, the 
+ customer renews the contract. To create the new pm schedule from the old 
+ one, you would enter a <font style="font-weight: bold;">2</font> in the 
+ Years to Add field, <font style="font-weight: bold;">1099</font> in the 
+ Client Site Id field, <font style="font-weight: bold;">&amp;,1099A</font> 
+ in the Client Site Equipment field and <font style="font-weight: bold;">&amp;,1997-01-01_1998-12-31</font> 
+ in the Scheduled Inspection Date field. When you clicked the Go button, 
+ the system will display a checklist showing 12 inspections for 1999 and 
+ 12 for 2000.</p>
+<p><font style="font-weight: bold;">Ok to Renew?<br/>
+</font>To limit the PM’s created to those with the Ok to Renew? flag set 
+ in the PM Schedule, enter a <font style="font-weight: bold;">Y</font> 
+ in this range.</p>
+<h2>Important Buttons:</h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" align="left" border="0"/> Click to add the selected 
+ PM&#39;s to the schedule. When you do so, the system will display a list of 
+ proposed PM&#39;s, based on the parameters that you entered. At this point, 
+ you can select the ones that you wish to add to the schedule. See <a href="Create_New_PM_WorkOrder_Checklist.htm">Create 
+ New PM Schedule from Old Checklist</a> for details.</p>
+
+</body></html>

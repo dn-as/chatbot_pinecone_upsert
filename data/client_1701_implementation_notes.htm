@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Client 1701 Implementation Notes</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nCustom Client Implementations\nClient 1701 Implementation Notes");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Client 1701 Implementation Notes</P>
+ <P class="support" >This customer also uses the start/end times on the work order and labor journal labor lines. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >2672</FONT>&nbsp;Check viewer – custom for Day&amp;Nite</P>
+ <P class="support" >The DayNite custom view opens up access to the fields necessary to manually record checks. This is only in the Day Nite customization. This functionality also depends on a registry entry to automatically assign a record Id value.</P>
+ <P class="support" >Id: sys-viewer-vchcklst<BR>Contents: IdFromRn=true</P>
+ <P class="support" >To avoid confusion during the manual entry process also implementi the following registry option</P>
+ <P class="support" >Additional Contents: NewRecordAfterAdd=true</P>
+ <P class="support" >Without this setting the only way the user can initiate a new check record is to hit the New Record button.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

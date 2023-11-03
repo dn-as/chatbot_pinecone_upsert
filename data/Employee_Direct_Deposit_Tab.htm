@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.2.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="direct deposit"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Employee Direct Deposit Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="direct deposit,payroll,employee"/><meta name="brsnext" value="Employee_Paid_Time_Off_Tab.htm"/><meta name="brsprev" value="Employee_Earnings_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Employee Direct Deposit Tab">
+        <span>Employee Direct Deposit Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Employee Viewer Direct Deposit Tab</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain an employee&#39;s direct deposit information.</p>
+<h2>Example:</h2>
+<p>Specify the percentage (or dollar amount) of the employee&#39;s pay that should be deposited in checking and savings accounts, child support, etc.</p>
+<h2>Usage:</h2>
+<p>This tab must be completed in order to implement Direct Deposit/ACH in the system. Note that you must also complete a Registry Entry (as discussed below) for this implementation.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Bank Id:</font> (9 numeric)<br/>
+This routing number identifies the employee&#39;s bank that funds are being transferred to. This required field must identify the Receiving Bank Number and Check Digit.</p>
+<p><font style="font-weight: bold;">Account Number:</font> (17 numeric)<br/>
+This account number must uniquely identify the employee to his or her bank. This is the account the funds will be deposited into.</p>
+<p><font style="font-weight: bold;">Checking Saving</font><br/>
+Select either Checking or Saving depending upon the account type.</p>
+<p><font style="font-weight: bold;">Amount:</font><br/>
+Enter the amount to be deposited in this account either as a percent or as a fixed dollar amount (as defined in the Amount Type field).</p>
+<p><font style="font-weight: bold;">Amount Type:</font><br/>
+Enter either fixed or percent depending upon how the Amount field was filled in.</p>
+<p><font style="font-weight: bold;">Tip: Multiple Direct Deposit Accounts</font><br/>
+Multiple direct deposit accounts may be specified. If all amounts are specified as a percent, they should total 100. If some accounts are specified as fixed and others as a percent, the system will use the following rules to allocate the deposit:</p>
+<p class="Body_Text_Indent"><font style="font-weight: bold;">Deposits of a fixed Amount Type will be allocated first.</font> If sufficient funds are not available for all accounts, the smallest amount will be allocated first, the next largest second, and so on. The last account to be allocated will receive whatever is left. For example, suppose that three lines are set up as follows:</p>
+<p style="margin-left: 36.00pt;">Account Amount  Amount Type<br/>
+1   25   fixed<br/>
+2   50  fixed<br/>
+3   100   fixed</p>
+<p style="margin-left: 36.00pt;">If net pay was $200, account 1 would be allocated $25, account 2 would be allocated $50, and account 3 would receive $125 (the remainder).</p>
+<p style="margin-left: 36.00pt;">If net pay was only $70, however, account 1 would be allocated $25, account 2 would be allocated $45, while zero funds would be deposited into account 3.</p>
+<p class="Body_Text_Indent" style="margin-left: 48.25pt;"><font style="font-weight: bold;">Deposits of a percent Amount Type will be allocated second.</font> If both fixed and percent amount types are specified, the fixed amounts will be allocated first, and the remainder (if any) will be allocated by percentage. For example, suppose that three lines are set up as follows:</p>
+<p style="margin-left: 36.00pt;">Account Amount  Amount Type<br/>
+1   20   fixed<br/>
+2   10   percent<br/>
+3   90   percent</p>
+<p style="margin-left: 36.00pt;">In this case, if net pay was $121.30, account 1 would be allocated $20, account 2 would be allocated $10.13, and account 3 would be allocated $91.17. Notice that the amounts defined as percentages are calculated after the net pay has been reduced by the fixed amounts.</p>
+<p><font style="font-weight: bold;">Start Date: End Date:</font><br/>
+These two fields determine when direct deposit will be in effect for this employee and account combinations. These fields define the range of dates for which a direct deposit made when paychecks are printed. <font style="font-weight: bold;">Note that the direct deposit will only take place if the Start and End dates of the Check Date in the Payroll Period intersect with the Start and End Dates of the Direct Deposit tab of the Employee record.</font> In this case, a void check stub listing the Direct Deposit Advice will be printed instead of a &quot;live&quot; paycheck.</p>
+<p>It is recommended that if an employee terminates direct deposit, the End Date should be changed so that it precedes the starting date of the Payroll Period of the first live check. Similarly, if an employee changes direct deposit accounts, the End Date of the lines for the old accounts should be changed appropriately, and new lines should be added to define the current information. In this way, historical information is preserved in the Employee record.</p>
+<p><font style="font-weight: bold;">Pre-Note?:</font><br/>
+If this field is checked (by double-clicking on it or pressing the Spacebar when the focus is on it), pre-notes will be included in the EFT file if the check date precedes the Start Date. Sending at least one cycle of prenotes is recommended to ensure that the FFT file format is correct; consult with your bank on the amount of time to allow for setting up a new employee for entries in the ACH system (typically, 7-10 business days).</p>
+
+</body></html>

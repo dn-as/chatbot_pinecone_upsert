@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.12.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="msdspdfpath"/>
+<meta name="MS-HKWD" content="msds"/>
+<meta name="MS-HKWD" content="print"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="manufacturers safety data sheet"/>
+<meta name="MS-HKWD" content="cop"/>
+<meta name="MS-HKWD" content="client order"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry MSDS Printing (msdspdfpath)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="msdspdfpath,msds,print,registry,manufacturers safety data sheet,cop,client order"/><meta name="brsnext" value="Registry_Entry_Adobe_Reader.htm"/><meta name="brsprev" value="Registry_Entry_Shop_Order_Mode.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry MSDS Printing (msdspdfpath)">
+        <span>Registry MSDS Printing (msdspdfpath)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry MSDS Printing (msdspdfpath)</h1>
+<h2>Purpose:</h2>
+<p>The system allows the MSDS sheet to be a pre-generated PDF file. The system will print the PDF form of the MSDS if it exists and the SAMPRO text MSDS (entered in on the MSDS tab of the Inventory Item viewer) if not.</p>
+<h2>Usage:</h2>
+<p>The name of the MSDS PDF file for a given inventory item is of the form <font style="font-weight: bold;">invntr</font><font style="font-weight: bold;">yitm_id.PDF</font>.</p>
+<p>If the location of the PDF reader of the PDF file cannot be located, operation will continue as before.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline;">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Related Registry Entry</h2>
+<p><a href="Registry_Entry_Adobe_Reader.htm">Registry Entry Adobe Reader</a></p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id: </font><font style="font-weight: bold;">M</font><font style="font-weight: bold;">sdspdfpath</font></p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> for additional Registry Id formats to allow entries for specific Users, Branches, Security, or User Groups to override the main entry.</p>
+<h3>Specify Path to PDFs</h3>
+<p class="Reference_Line"><font style="font-weight: bold;">Setting Key:</font> path <font style="font-weight: bold;">Setting Value:</font> pathtopdfs</p>
+<p>where <font style="font-style: italic;">pathtopdfs</font> is replaced by full path name of the folder holding the MSDS Pdf’s.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Examples:</font></p>
+<p style="margin-left: 36.00pt;">Setting Key: path Setting Value: c:\databasics\msdspdfs</p>
+<p style="margin-left: 36.00pt;">Setting Key: path Setting Value: \\myserver\sampro\msdspdfs</p>
+
+</body></html>

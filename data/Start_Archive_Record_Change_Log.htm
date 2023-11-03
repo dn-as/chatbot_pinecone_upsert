@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.2.0_28";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="record"/>
+<meta name="MS-HKWD" content="archive"/>
+<meta name="MS-HKWD" content="starter"/>
+<meta name="MS-HKWD" content="start"/>
+<meta name="MS-HKWD" content="change log"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Archive Record Change Log</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="record,archive,starter,start,change log"/><meta name="brsnext" value="Registry_Archive_Change_Log.htm"/><meta name="brsprev" value="Reports_that_Support_Section_Key_Logic.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Archive Record Change Log">
+        <span>Start Archive Record Change Log</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Archive Record Change Log</h1>
+<h2>Start Archive Record Change Log</h2>
+<h2>Purpose:</h2>
+<p>Performance when opening viewers can be negatively impacted by the number 
+ of records in the record change log table. This table is automatically 
+ maintained by the system and lists the record that was changed, the user 
+ that changed it, and the date and time of the change. This new function&#39;s 
+ purpose is to provide a means of managing the table’s size without losing 
+ any data as this function moves the selected rows from the record change 
+ log table to the record charge log archive table. The advantage of this 
+ function is that the system does not have to access or write to the archive 
+ tab each time a record is accessed or saved.</p>
+<h3>Version 9.1 Updates</h3>
+<p>Internal changes in Version 9.1.611.056 
+ support the synchronization of the Record Change Log and Archive tables 
+ to allow this function to run proberly. The user will be ask to confirm 
+ the table changes if this function is run manually. Errors will be reported 
+ if manual intervention is needed to support archiving; contact your Support 
+ Rep if this occurs. This fix is only supported for MS SQL databases. </p>
+<h2>Usage:</h2>
+<p>This function executes without screen input so that it can be scheduled 
+ to run after hours using the Scheduled Event Manager. By default, the 
+ most recent 10 days of change log data will be retained in the change 
+ log table, while change log data older than 10 days will be moved to the 
+ change log archive. The number of days of data to retain can be controlled 
+ by the following registry entry.</p>
+<h2>Registry:</h2>
+<p>See <a href="Registry_Archive_Change_Log.htm">Registry Archive Change 
+ Log</a> to specify the number of days’ change log data that is retailed 
+ in the Change Log table.</p>
+
+</body></html>

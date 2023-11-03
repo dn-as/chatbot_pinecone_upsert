@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.3.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="deductions"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Deductions Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="deductions,employee,payroll"/><meta name="brsnext" value="Deductions_Group_Viewer.htm"/><meta name="brsprev" value="Payroll_Tax_Table_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Deductions Viewer">
+        <span>Deductions Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Deductions Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain the Deductions records for Miscellaneous, 401(k) 
+ Section 125 and Pre-Tax payroll deductions.</p>
+<h2>Example:</h2>
+<p>Vacation, 401(k), Section 125, etc.</p>
+<h2>Registry:</h2>
+<p><span><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Use_Control_Records_GL_Entities_for_PR">Use 
+ Control Records&#39; GL Entities for PR Deductions, Earnings, Taxes, etc,.Instead 
+ of Employees&#39;</a>.</span></p>
+<h2>Usage:</h2>
+<p>Deductions records are required for Deduction Group records, and are 
+ referenced on the DED tab of the Payroll Adjustment Journal, and the Employee 
+ Record Deduction tab.</p>
+<p><font style="font-weight: bold; text-decoration: underline; ">Can</font><font style="font-weight: bold; text-decoration: underline; ">a</font><font style="font-weight: bold; text-decoration: underline; ">dian Users</font></p>
+<p>In order for Union Dues and Charitable Deductions to correctly print 
+ on the T4, the user must populate the field ‘Deduction User 1’ with Dues 
+ or Charitable, respectively, and ensure that the Deduction Type is Other 
+ Pre-Tax.</p>
+<p>Canadian T4&#39;s now also use the W2 Category fields in the Deductions 
+ &amp; Earnings records to populate the Other Information boxes on the 
+ T4. The W2 category must be filled in as OI:(Code # for T4). The Employee 
+ User 7 field is used to print the registration number in box 50 on the 
+ T4.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields that may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the order or status (required, optional, 
+ default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">Deduction Id:</font> (15 character, 
+ only . and - special characters)<br/>
+A unique Id for this payroll deduction. This field is required.</p>
+<p><font style="font-weight: bold;">Description:</font> (40 character)<br/>
+A brief description. This field is optional but recommended.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field displays the Security Id of the local 
+ user that created this record. If multiple location security is not implemented 
+ on your system, or if this record was created by a global user, this field 
+ will be blank.</p>
+<p><font style="font-weight: bold;">Check Label:</font> (10 character)<br/>
+The label you wish to appear on payroll checks for deductions of this type.</p>
+<p><font style="font-weight: bold;">Type:</font><br/>
+Select Miscellaneous (by double-clicking on its radio button) if this record 
+ pertains to taxable deductions such as union dues (US installations). 
+ Select 401(k) only if this is a 401(k) deduction, or Section 125 if this 
+ is a Section 125 deduction. If you select Other Pre-Tax, this deduction 
+ will be taken before tax is computed. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Canadian 
+ Installations:</span> In order for Union Dues and Charitable Deductions 
+ to correctly print on the T4, the user must populate the field ‘Deduction 
+ User 1’ with Dues or Charitable, respectively, and ensure that the Deduction 
+ Type is Other Pre-Tax.</p>
+<p style="margin-left: 48px;"><font color="#000000">RRSP (Registered Retirement 
+ Savings Plan) is for Canadian firms only.</font></p>
+<p><font style="font-weight: bold;">Amount:</font><br/>
+Specifies the default amount of the deduction as a fixed dollar amount, 
+ dollar amount per hour, or percentage. Unless this amount is exactly the 
+ same for all employees entitled to this deduction, this field should remain 
+ blank. Instead, the Amount field in the Deduction tab of the Employee 
+ record (for non-union deductions) or the Deductions Group record would 
+ be used to default the deduction amount.</p>
+<p><font style="font-weight: bold;">Amount Type:</font><br/>
+If the Amount to be deducted is a flat amount regardless of pay rate or 
+ salary, select Fixed by double-clicking on its radio button. If the Amount 
+ to be deducted is a dollar amount to be assessed each hour the employee 
+ works, select Hourly. If this deduction is calculated as a percent of 
+ wages, select Percent.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important 
+ Note:</font> the Deduction Amount Type of ‘Standard’ is reserved for future 
+ use, and should NOT be selected.</p>
+<p><font style="font-weight: bold;">Limit:</font> (numeric format 000000.00)<br/>
+The dollar limit (if any) for deductions of this type.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">IMPORTANT 
+ NOTE:</font> If the Employee&#39;s Deduction limit is 0, compute payroll uses 
+ the Deduction Limit and Deduction Limit Type from the BASE Deduction record. 
+  This being the case, then when setting the Deduction Limit Types 
+ (n/a, annual, pay period, etc) in the BASE Deduction, the BASE Deduction 
+ should contain the UNIVERSAL RULE that apply to ALL employees,  if 
+ the deduction limit type varies by employee, then set the Deduction Limit 
+ Type to &quot;N/A&quot; in the BASE Deduction.</p>
+<p><font style="font-weight: bold;">Limit Type:</font><br/>
+If deductions of this type have no dollar limit, select N/A by double-clicking 
+ on its radio button. If deductions are capped by law or company policy, 
+ select the appropriate time period for the Limit (Pay Period, Monthly, 
+ Annual, or Quarterly).</p>
+<p><font style="font-weight: bold;">GL Account Id:</font><br/>
+Enter the account to be credited with this deduction.</p>
+<p><font style="font-weight: bold;">GL Entity Id</font><br/>
+Optional. The Entity (department or profit center) assigned to this Deduction. 
+ However, if a GL Entity Id has been entered in the Employee record, the 
+ debit will be applied to the GL Entity in the Employee record. If the 
+ GL Entity Id field is blank in the Employee record, the system will credit 
+ the GL Entity in the Deduction. If the GL Entity is blank in both the 
+ Employee and Deduction records, a GL Entity will not be credited during 
+ Compute Payroll.</p>
+<p><span style="font-weight: bold;">This behavior may be overridden via</span><span> 
+ <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Use_Control_Records_GL_Entities_for_PR">Use 
+ Control Records&#39; GL Entities for PR Deductions, Earnings, Taxes, etc,.Instead 
+ of Employees&#39;</a></span><span>.</span></p>
+<p><font style="font-weight: bold;">W-2 Category:</font><br/>
+The purpose of this field is to enable the user to write to various W2 
+ boxes by entering a 2-character box number (in the case of box 12, followed 
+ by a code) in the appropriate W-Category box. Note that only those boxes 
+ that can be controlled by an Earnings or Deduction entry to PR History 
+ (via normal processing Compute or PR Adjustment entries) are supported.</p>
+<p><font style="text-decoration: underline; ">Note: please consult the 
+ IRS website / your firm’s CPA before proceeding.</font> The system does 
+ NOT validate that a particular earning or deduction is configured correctly 
+ for particular box/code as far is IRS rules are concerned. The W2 functionality 
+ is implemented by querying PR History for entries when the Earning or 
+ Deduction record’s W-2 Category is completed, and then summing the entries 
+ for each particular category. The user MUST ensure and test that the W-2 
+ Category field is configured in such a way as to give the desired result.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Value Use</font></p>
+<p> 10 Dependent Care benefits</p>
+<p style="margin-left: 72.00pt;">Previously, this functionality was only 
+ supported by entering DC in the User 1 field. The old functionality is 
+ still supported in his image, but will be overridden by the use of the 
+ new W-2 Category field.</p>
+<p> 12<font style="font-style: italic;">:code</font>  Non-taxable 
+ elective salary deferrals to various retirement plans.</p>
+<p>  For the 2009 taxes, these would be codes E-J, S, and Y (taxable???).</p>
+<p style="margin-left: 72.00pt;">401(k) Note: it is not necessary to specify 
+ your 401(k) deduction in this manner as it is handled as a special deduction 
+ type.</p>
+<p> 12:<font style="font-style: italic;">code</font> After tax 
+ contributions to Roth retirement plans</p>
+<p>  For the 2009 taxes, these would be codes AA and BB.</p>
+<p> 14:<font style="font-style: italic;">label</font> The preferred 
+ functionality for Box 14 is implemented by entering SDI in the</p>
+<p style="margin-left: 72.00pt;">Tax Table User 1 field or the Tax Authority 
+ 1 field). This overrides its implementation in an Earnings or Deduction 
+ record.</p>
+<p><font style="font-weight: bold;">Deductions  <span>User1-5:</span></font><br/>
+These optional fields may be used for information your company wishes to 
+ retain and for payroll setup.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Canadian 
+ Installations:</span>  In order for Union Dues and Charitable Deductions 
+ to correctly print on the T4, the user must populate the field ‘Deduction 
+ User 1’ with Dues or Charitable, respectively, and ensure that the Deduction 
+ Type is Other Pre-Tax.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Tip: 
+ Dependent Care Benefits - US:<br/>
+</font>Dependent Care Benefits (Box 10) has been implemented for W-2 reporting. 
+ You must set User 1 field in the appropriate Deduction Record to 
+ DC.</p>
+<p style="font-weight: bold;">Disposable Income:</p>
+<p>These fields allow you to refine<span style="font-weight: bold;"> </span>disposable 
+ pay garnishment calculations for US and Canadian Payroll users where the 
+ garnishment is a percentage of disposable pay. These are now based on 
+ the settings of the new Disposable Income fields in the Deductions record. 
+  Note that the Disposable Limit must be set on the <a href="../../../../../Employee_Deductions_Tab.htm#Disposable_Limit:">Employee 
+ Deductions tab</a>: if this field is blank for a garnishment deduction, 
+ payroll taxes will NOT be deducted before the garnishment is assessed.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Statutory? 
+ (set only for mandatory non-garnishments)</span><br/>
+This field would only be checked if this non-garnishment deduction is a 
+ mandatory (not voluntary) deduction. For example, Health Insurance or 
+ involuntary retirement or pension contributions would be Statutory in 
+ the US. In Canada, Canadian Pension Plan and Union Dues would be considered 
+ Statutory. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Non-Statutory? 
+ (set only for voluntary non-garnishments)</span><br/>
+ All voluntary, non-garnishment deductions. For example most 401K contributions 
+ (US), loan repayments, and uniform type deductions.  </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Allow Statutory? 
+ (set only for garnishments based on current regulations)</span><br/>
+ This field would be checked if this is a garnishment type deduction (e.g., 
+ child support) AND that Statutory Deduction should be applied to the disposable 
+ pay for this garnishment. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Allow Non-Statutory? 
+ (set only for garnishments based on current regulations)</span><br/>
+This field would be checked if this is a garnishment type deduction (e.g., 
+ child support) AND that Non Statutory Deductions should be applied to 
+ the disposable pay for this garnishment. </p>
+<p style="margin-left: 88px; text-decoration: underline; ">Validation:</p>
+<p style="margin-left: 88px;">Deductions CAN be marked as either Statutory 
+ or Non-Statutory (but not both) <br/>
+Deductions CAN be marked as Allow Statutory, Allow Non-Statutory or both 
+ <br/>
+Deductions can NOT be marked as both (Statutory or Non-Statutory) &amp; 
+ (Allow Statutory or Allow Non-Statutory). In other words, if you mark 
+ one of the top two you are not allowed to mark one or both of the bottom 
+ two, or vice versa. </p>
+<p><font style="font-weight: bold;">Obsolete</font><font style="font-weight: bold;">?</font><font style="font-weight: bold;"><br/>
+</font>If this field is checked, the record is considered Obsolete, and 
+ it may not be directly specified during data-entry (either by entering 
+ the Id or selecting it from a list). Obsoleted records can be edited and 
+ the Obsolete option can be un-done when necessary. When you check the 
+ Obsolete field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. 
+ Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through 
+ access to all tables referencing this record: see <a href="References_List.htm">References 
+ List</a> for details.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">Also 
+ See...</font> <font color="#FF0000"><br/>
+</font>  <a href="Deductions_Group_Viewer.htm">Deductions Group</a></p>
+
+</body></html>

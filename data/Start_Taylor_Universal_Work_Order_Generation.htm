@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.16.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Universal Work Order"/>
+<meta name="MS-HKWD" content="work order"/>
+<meta name="MS-HKWD" content="Tayor"/>
+<meta name="MS-HKWD" content="UWO Taylor Universal Work Order"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Taylor Universal Work Order Generation</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Universal Work Order,work order,Tayor,UWO Taylor Universal Work Order"/><meta name="brsnext" value="Taylor_Universal_Work_Order_Checklist.htm"/><meta name="brsprev" value="Time_Slot_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Taylor Universal Work Order Generation">
+        <span>Start Taylor Universal Work Order Generation</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Taylor Universal Work Order Generation</h1>
+<h2>Purpose:</h2>
+<p>This function is used to generate Taylor Universal Work Orders that may then be uploaded to Taylor.</p>
+<h2>Related Topics:</h2>
+<p>See <a href="Taylor_Universal_Work_Order_Checklist.htm">Taylor Universal Work Order Checklist</a> for a handy checklist for users to consult when running this function.</p>
+<p>See <a href="Registry_Start_Taylor_Universal_Work_Order_Generation.htm">Registry Start Taylor Universal Work Order Generation</a> for the registry options required for this functionality.</p>
+<p>In addition to the registry, certain database fields must be set up correctly to properly implement this functionality. See <a href="Taylor_Universal_Work_Order_Setup.htm">Taylor Universal Work Order Setup</a> for details.</p>
+<h2>Usage:</h2>
+<p>Taylor Distributors must transmit a complex file to Taylor Corporate for each invoiced Work Order that they wish to report. This is known as the “Universal Work Order” or “UWO” field. In addition to the generation of this “UWO” file, Sampro keeps track of the work orders already processed in a “Transmissions” database table.</p>
+<h2>Important Fields: Range Screen</h2>
+<p><font style="font-weight: bold;">Start Date: Cutoff Date:</font></p>
+<p>Both of these fields default to today. The Work Order’s Date Closed must fall between the Start Date and the Cutoff Date (inclusive).</p>
+<h2>Important Buttons: Range Screen</h2>
+<p><font style="font-weight: bold;">Select Individual WOs: (Enter Work Order List)</font></p>
+<p>When you click this button, the list of applicable work orders will appear based on the Start and Cutoff Date and the following rules:</p>
+<p style="margin-left: 36.00pt;">The Work Order must not be flagged as ‘Private’: if the WO Priority is set to 7, the Work Order is considered private.</p>
+<p style="margin-left: 36.00pt;">The Work Order must have been already invoiced.</p>
+<p style="margin-left: 36.00pt;">The Work Order must not appear in the Transmissions table.</p>
+<p style="margin-left: 36.00pt;"> </p>
+<h2>Important Fields: WO List Screen</h2>
+<p>The user may add or remove Work Orders from the list. To remove a Work Order, simply clear the WO Id that you wish to remove. A Work Order may be added by entering its Id or double-clicking to select from a list.</p>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> <img src="assets/images/image/SKIN1_Go.gif" alt="image\SKIN1_Go.gif" title="image\SKIN1_Go.gif" width="94" height="28" border="0"/></p>
+<p>When the user presses the “Go” button on the Work Order List screen, a File Dialog will appear to allow the user to select the file in which to place the UWO file. After the user selects a file, the UWO file will be generated and the Transmissions Table will be updated accordingly.</p>
+
+</body></html>

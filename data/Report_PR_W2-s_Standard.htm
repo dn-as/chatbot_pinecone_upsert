@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.23.0_27";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report PR W2-s Standard</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report PR W2-s Standard">
+        <span>Report PR W2-s Standard</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Report PR W2-s Standard (sys-report-rw2std)</h1>
+<h2>Purpose:</h2>
+<p>Copy A of SAM Pro supports the printing of a W3 report as a part of 
+ the Copy A functionality. This registry entry is required to print the 
+ W3 fields</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Related Registry Entries:</h2>
+<p>See <a href="Registry_W2_Entry.htm">Registry W2 Entry</a> for details 
+ on setting the printer formatting and other required entries for W2 and 
+ W3 printing.</p>
+<p>In addition to the registry entries described in <a href="Registry_Entry_Federal_EIN.htm">Registry 
+ Entry Federal and State EIN</a> for the W2 report itself, and for Federal 
+ and State EIN information, you must also create <a href="Registry_Company_Name_Entry.htm">Registry 
+ Companyname</a> and <a href="Registry_Company_Address_Entry.htm">Registry 
+ Companyaddress</a> entries to ensure that the information in W2 box c 
+ prints correctly.</p>
+<p><span>In </span><span style="font-weight: bold;">Version 9.1.611.043 
+ and Above</span><span>, if Intercompany processing is enabled then the 
+ following the Employer Info will now come from the appropriate Company 
+ records, NOT the registries: Company Name, Company Address and Company 
+ Federal EIN. The options listed in this registry must be maintained in 
+ the registry viewer; entries made in the Company Registry tab are not 
+ supported for the printed W2 / W3 reports. </span></p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:  sys-report-rw2std</font></p>
+<h3>Options to Set W3 Contact Information</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> W3ContactPerson 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">Firstname 
+ Lastname</font></p>
+<p>This option defines the name to be printed in the W3 Contact Person 
+ box (e.g., W3ContactPerson=Joan Doe).</p>
+<p><font style="font-weight: bold;">Setting Key:</font> W3EmailAddress 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">emailaddress</font></p>
+<p>This option defines the email address of the contact person; it will 
+ be printed in the W3 Email Address box.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> W3Telephone <font style="font-weight: bold;">Setting Value:</font> ### ###-####</p>
+<p><font style="font-weight: bold;">Setting Key:</font> W3Fax <font style="font-weight: bold;">Setting 
+ Value:</font> ### ###-####</p>
+<p>These numbers will be printed in the W3 Telephone Number and Fax boxes. 
+ <font style="text-decoration: underline; ">Note that 2 spaces are required 
+ between area code and phone number, and that parentheses are not included 
+ in the registry option</font><font style="text-decoration: underline; ">!</font></p>
+<p> Right: 216 663-5600</p>
+<p> Wrong: (216) 663-5600</p>
+<h3>Do Not Print Employer Address</h3>
+<p><font style="font-weight: bold;">S</font><font style="font-weight: bold;">etting 
+ Key:</font> W3PrintEmployerAddress <font style="font-weight: bold;">Setting 
+ Value:</font> No</p>
+<p>If present, this option turns off printing boxes e,f,g on the W3 that 
+ list the Employer’s EIN, Name and Address. This registry option should 
+ be set if a preprinted label will be used on the W3.</p>
+<h3>W-2 Support for Insurance Fringe Reporting.</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> ExcessInsurance 
+ <font style="font-weight: bold;">Setting Value:</font> EmployeeFringePaid</p>
+<p>When this entry is set, treat the Employee&#39;s W2 Fringes Paid field as 
+ the value for the Excess Insurance. This change is supported by the W2 
+ Magnetic Media reporting also.</p>
+<h3>Copy 2 Residual Tax</h3>
+<p style="margin-left: 8px;">If Residual Tax Withholding is used, Local 
+ tax may be overstated on Line 2 of the W2&#39;s. The following registry 
+ entry will omit the print of Local Line 2 on the W2&#39;s.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Id:</span> 
+ sys-report-rw2</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ OmitLocalLine2  <span style="font-weight: bold;">Setting Value:</span> 
+ true (default is false)</p>
+<p>To omit Local tax only on Copy 2, the following registry may be used 
+ instead. </p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ OmitCopy2LocalLine <span style="font-weight: bold;">Setting Value:</span> 
+ true   (default is false)</p>
+<h2>Option for Partial Year Reporting</h2>
+<p>This registry option enables partial year reporting. This would be desirable 
+ if, for example, your company’s EIN changed mid-year. </p>
+<p><font style="font-weight: bold;">Setting Key:</font> PartialYearReporting 
+ <font style="font-weight: bold;"> Setting Value:</font> true</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> 
+ The system sets the Start Date (01/01) and the End Date(12/31) whenever 
+ the Year field gets changed. The system will reject attempts to edit the 
+ Start Date and the End Date unless this registry entry is set.</p>
+<h3><span>Registry to Process &#39;Other&#39; Tax Tables as &#39;Local&#39;</span></h3>
+<p style="margin-left: 8px;">Some customers are configured to use Local 
+ Tax Authorities for Counties and Other Tax Authorities for Cities.  This 
+ registry should be enabled to include Cities (flagged as Other) in the 
+ W2 Copy 1 &amp; Copy 2 for localities. </p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Id:</span> 
+ sys-report-rw2</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span><span> 
+ ProcessOtherAsLocal  </span><span style="font-weight: bold;">Setting 
+ Value:</span><span> true   (default is false)</span></p>
+<h3>Additional Functionality</h3>
+<p>To implemented Dependent Care Benefits (Box 10), the User 1 field in 
+ applicable Deduction Records must be set to DC.</p>
+<p>In previous releases, users could implement SDI (Box 14 on form W-2) 
+ by setting the User 1 field in the applicable Tax <font style="text-decoration: underline; ">Authority</font> 
+ to SDI.</p>
+<p>Now, the system now uses the Tax <font style="text-decoration: underline; ">Table</font> 
+ to handle unemployment insurance, disability, etc. more generically. The 
+ Tax Table User1 fields now may be used to specify the titles for unemployment, 
+ insurance, disability, etc. Only the Box 14 description should be entered, 
+ i.e FLI,TDI or SUI in the User1 field. Note that the previous Tax Authority 
+ functionality is still supported.</p>
+
+</body></html>

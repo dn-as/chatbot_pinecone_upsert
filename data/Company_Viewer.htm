@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.4.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Intercompany Processing"/>
+<meta name="MS-HKWD" content="company record"/>
+<meta name="MS-HKWD" content="Due To Due From"/>
+<meta name="MS-HKWD" content="companyaddress-branchid-userid"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Company Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Intercompany Processing,company record,Due To Due From,companyaddress-branchid-userid"/><meta name="brsnext" value="PCR_Overview_Problem_Cause_Remedy.htm"/><meta name="brsprev" value="Intercompany_Processing_Overview.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Company Viewer">
+        <span>Company Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Company Viewer</h1>
+<h2>Purpose:</h2>
+<p>This record is required for Intercompany Processing. The Company record 
+ defines the Security Id, GL Entity (for balance sheet transactions), and 
+ ‘Due To’ and ‘Due’ From GL Accounts.</p>
+<p>See <a href="Intercompany_Processing_Overview.htm">Intercompany Processing 
+ Overview</a> for additional implementation details.</p>
+<h2>Registry Entries:</h2>
+<p>See <a href="Registry_Intercompany_Processing.htm">Registry Intercompany 
+ Processing</a> for the global registry option required to implement Intercompany 
+ Processing.</p>
+<p>Registries for certain US Government reports may be entered on the Company&#39;s 
+ Registry tab. See the <a href="#Registry_Tab">Registry Tab</a> for details. 
+ </p>
+<h2>Related 
+ Registry:</h2>
+<p style="margin-left: 8px;">See <a href="Registry_Security_Overrides.htm">Block 
+ Users from Seeing Records with Specific Security</a> for a registry to 
+ limit users&#39; access to specific companies.</p>
+<h2>Important Fields: Upper Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Main Tab</p>
+<p><font style="font-weight: bold;">Company Id:<br/>
+</font>Uniquely identifies this company. It is recommended that the Company 
+ Id and Security Id match.</p>
+<p><font style="font-weight: bold;">Company Name:<br/>
+</font> The Name of the Company. If a report is run for a selected company, 
+ the company name on the report will default from this field. If a report 
+ is run for all companies, the company name on the report will default 
+ from the companyname registry entry.</p>
+<p><font style="font-weight: bold;">Security Id:<br/>
+</font>This required field specifies the Security applied to transactions 
+ for this company.</p>
+<p><font style="font-weight: bold;">Federal EIN:<br/>
+</font>The Federal EIN for this Company. </p>
+<p><span>The Federal EIN and Company Name are fields are used by the following 
+ reports to set the Company EIN and Company Name, superceding the company-specific 
+ registry settings:</span></p>
+<p style="margin-left: 48px;">Report AP 1099&#39;s (RAP1099v82b01 dated 2020-01-17 
+ or later) </p>
+<p style="margin-left: 48px;">Report AP 1099 Electronic File (RAP1099EFv82b01.rpt 
+ dated 2020-01-17 or later)</p>
+<p style="margin-left: 48px;"><span>Report W2 Electronic File (RW2EFv82b01.rpt 
+ dated 2020-01-17 or later)</span></p>
+<p style="margin-left: 48px;">Report W2 
+ / W3 (Standard and old)</p>
+<p style="margin-left: 48px;"><span>Report StateUnemployment Electronic 
+ File (RSTTEUEv82b01.rpt dated 2020-01-17 or later)</span></p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">GL Tab</p>
+<p><font style="font-weight: bold;">Balance Sheet Default: GL Entity Id:<br/>
+</font>The GL Entity to be applied only to Intercompany transactions. This 
+ GL Entity should NOT represent a profit center.</p>
+<p><font style="font-weight: bold;">Intercompany DUE FROM this Company: 
+ GL Account Id:<br/>
+</font>The Asset account to be debited in Intercompany transactions.</p>
+<p><font style="font-weight: bold;">Intercompany DUE TO this Company: GL 
+ Account Id:<br/>
+</font>The Liability account to be credited in Intercompany transactions.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Address Tab</p>
+<p><font style="font-weight: bold;">Mailing Address:<br/>
+Street Address:<br/>
+City: State: Zip:</font></p>
+<p>The address of this Company. <span>These fields are used by the following 
+ reports to set the Company Address fields, superceding the company-specific 
+ registry settings:</span></p>
+<p style="margin-left: 48px;">Report AP 1099&#39;s (RAP1099v82b01 dated 2020-01-17 
+ or later) </p>
+<p style="margin-left: 48px;">Report AP 1099 Electronic File (RAP1099EF 
+ dated 2020-01-17 or later)</p>
+<p style="margin-left: 48px;"><span>Report W2 Electronic File (RW2EFv72b105 
+ dated 2020-01-17 or later)</span></p>
+<p style="margin-left: 48px;">Report W2 
+ / W3 (Standard and old)</p>
+<p style="margin-left: 48px;">Report StateUnemployment Electronic File 
+ (RSTTEUE dated 2020-01-17 or later)</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">User Fields Tab</p>
+<p><font style="font-weight: bold;">Company User 1-5:<br/>
+</font>These optional fields enable you to retain additional information 
+ about this Company.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>Important Fields: Lower Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"> <a id="Registry_Tab"></a>Registry 
+ Tab</p>
+<p><font style="font-weight: bold;">Key:</font> <font style="font-weight: bold;">Value:</font> 
+ <font style="font-weight: bold;">Description</font>:</p>
+<p>The Key and Value fields may be used to set the Setting Key and Setting 
+ Value registry options for certain government report as listed below  We 
+ strongly recommend specifying the report the registry option supports 
+ in the Description field. </p>
+<p>This tab may be used to specify the registry options used by the following 
+ reports, superceding the Company-specific registry settings:</p>
+<p style="margin-left: 48px;">Report AP 1099&#39;s (RAP1099v82b01 dated 2020-01-17 
+ or later) </p>
+<p style="margin-left: 88px;">See <a href="Registry_Entry_Vendor_1099_Report.htm">Registry 
+ Report AP 1099</a></p>
+<p style="margin-left: 48px;">Report AP 1099 Electronic File (RAP1099EFv82b01.rpt 
+ dated 2020-01-17 or later)</p>
+<p style="margin-left: 88px;">See <a href="Registry_AP_1099_Electronic_Files.htm">Registry 
+ AP 1099 Electronic File</a></p>
+<p style="margin-left: 48px;">Report W2 Electronic File (RW2EFv82b01.rpt 
+ dated 2020-01-17 or later)</p>
+<p style="margin-left: 88px;">See <a href="Registry_Entry_W2_Electronic_Filing_Report.htm">Registry 
+ Report W2 Electronic File</a> and <a href="Registry_Entry_W_2_Electronic_Files_Magnetic_Media.htm">W2 
+ Electronic Files</a></p>
+<p style="margin-left: 48px;">Report State Unemployment Electronic File 
+ (RSTTEUEv82b01.rpt dated 2020-01-17 or later)</p>
+<p style="margin-left: 88px;"><span>See <a href="Registry_Entry_State_Unemployment_Electronic_Report.htm">Registry 
+ State Unemployment Electronic File</a></span></p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">States Tab</p>
+<p><font style="font-weight: bold;">ST:</font></p>
+<p>This tab should be used to define the State/States associated with this 
+ Company.</p>
+<p><font style="font-weight: bold;">State EIN:</font></p>
+<p>This field is reserved for future use with reporting.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Entities Tab:</p>
+<p>This tab displays the Balance Sheet and Profit Center Entities that 
+ point at (belong to) this Company record.</p>
+
+</body></html>

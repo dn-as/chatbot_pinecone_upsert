@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Cloning Records</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="clone record,clone employee,copy record,record cloning,employee cloning"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Cloning Records">
+        <span>Cloning Records</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Cloning Records</h1>
+<h2>Cloning a Record by Changing Its Id</h2>
+<p>Many records may be copied (cloned) by accessing the record you wish to clone from, entering a new Id for it, and tabbing out of the Id field. If the Id you entered does not yet exist, the record&#39;s Add button will be enabled.  At this point, the user should make any needed edits to the record, and then Add it.</p>
+<h2>Cloning Auto-Sequenced Records</h2>
+<p>When the auto-sequencing of Id&#39;s is in effect for a record, it is impossible to &#39;clone&#39; a record by changing its Id and then tabbing out of the field since entering a non-existent Id is prohibited. This prevented users from &#39;cloning&#39; an Employee record when auto-sequencing is turned on by changing the Id (in the above method).</p>
+<p>The Clone option has been added to the Record menu of most records in SAMPro. When the Clone option is selected for an eligible record, its Id will be cleared, and the Add button enabled.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Employee Record:</span>  In the case of the Employee record, all fields on the Main, Direct Deposit and Events tabs will also be cleared. When the user has finished editing the record, it can be Added as usual.</p>
+<p>Cloning validation requires that the record being cloned does not have any unsaved changes. The Record &gt; Cloning functionality is specifically denied for the following records:</p>
+<p style="margin-left: 48px;">Journals<br/>
+Check<br/>
+Client Order - Client Order Pick List - Client Order to Ship<br/>
+Invoice Master<br/>
+Project Manager Workbench<br/>
+Job Progress<br/>
+Physical Count<br/>
+Purchase Order<br/>
+Quote - Quote Manager - Quote Scope<br/>
+Shop Order - Shop Order Pick List<br/>
+Vendor Invoice<br/>
+Web Log</p>
+<h2>Special Cloning Functionality</h2>
+<p>The Clone Job button in the Job viewer allows the user to use an existing Job as a model to create a new Job, Site (optional), Client (optional), Billing Item(s), and Cost Code(s), and to edit the new records. For details on using this feature, click on <a href="Clone_Job_Wizard.htm">Using the Clone Job Wizard</a>.</p>
+
+</body></html>

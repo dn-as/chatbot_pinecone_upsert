@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.13.5.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Purchasing EDI</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="electronic Purchase Order,EDI,Purchasing EDI,Custom EDI"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Purchasing EDI">
+        <span>Purchasing EDI</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Purchasing EDI Overview</h1>
+<p>Certain Vendors support an EDI (Electronic Data Interface) which allows for the electronic submission of the PO from SAMPro to that Vendor. This expedites shipping and reduces errors on purchases from these Vendor and automatically generates an inventory receipt entry in the SAMPro. In addition to Data-Basics, it is necessary to partner with 2 other software vendors to make this work:</p>
+<p style="margin-left: 48px;">o RKL eSolutions which provides an interface between Data-Basics and HighJump software via Inbound and Outbound folders as defined in the SAMPro registry. (registry example below)</p>
+<p style="margin-left: 48px;">o HighJump Software which provides an interface between RKL and the EDI network. Data-Basics does not directly interface with HighJump.</p>
+<p style="margin-left: 8px;">Arrangements with these companies must be completed in order to use the EDI.</p>
+<h3>Setup</h3>
+<h5 style="margin-left: 48px;">Registry</h5>
+<p style="margin-left: 48px;">A SAMPro registry entry must be set up (see <a href="Registry_Custom_EDI_Purchasing.htm">sys-edi-haller</a> registry):</p>
+<p style="margin-left: 88px;">The email addresses are used to send emails whenever errors are encountered when processing Inbound folder messages (as described below).</p>
+<p style="margin-left: 88px;">The folders in the registry entry provide the  Inbound and Outbound interfaces with RKL. They must be informed of the locations of these folders.</p>
+<h5 style="margin-left: 48px;">Vendor Record</h5>
+<p style="margin-left: 48px;">Participating Vendors must be flagged on their User Fields tab as follows:</p>
+<p style="margin-left: 88px;">o Set the EDI Vendor? field (vndr_usr2) to Y (single letter, uppercase)</p>
+<p style="margin-left: 88px;">o Set their EDI Vendor Id (vndr_usr3) as appropriate.</p>
+<p style="margin-left: 88px;"><span style="font-weight: bold;">Tip:</span><br/>
+Relabel the Vendor usr2 and usr3 fields as appropriate using Custom Fields.</p>
+<h5 style="margin-left: 48px;">Purchase Orders</h5>
+<p style="margin-left: 48px;">Participating POs must have the EDI PO? Box on their EDI tab checked. They must also reference vendors flagged as EDI Vendors.</p>
+<h5 style="margin-left: 48px;">Scheduled Event</h5>
+<p style="margin-left: 48px;">A scheduled event must be configured to trigger SAMPro to scan the Inbound folder and take appropriate actions to the XML files it finds there.</p>
+<p style="margin-left: 48px;">The scheduled event must trigger the method ‘HallerEDIHelper&gt;&gt;scanInboundFolder’. The processing of Inbound folder files will create an entry in the log file defined in the SamPro registry.</p>
+<p style="margin-left: 48px;">In case of error, an email will also be sent to the recipient identified in the SAMPro registry.</p>
+<p style="margin-left: 8px;">An example follows:</p>
+<p style="margin-left: 8px;"><img src="assets/images/edischeduledevent.png" alt="" width="854" height="796" border="0"/></p>
+<h3>Submitting a PO to EDI</h3>
+<p>To submit a PO to EDI, click on the EDI Submit button of the PO’s EDI tab. This will drop XML for the PO into the Outbound folder where it will be picked up by RKL’s software for transmittal to the Vendor.</p>
+<p><img src="assets/images/EDItab.png" alt="" style="border: none;" border="0"/></p>
+<p>Eventually, the Vendor will respond to the PO with various XML files which will be dropped by RKL into the Inbound folder.</p>
+<p>Two kinds of XML files may appear in the Inbound folder</p>
+<p style="margin-left: 48px;">A Purchase Order. This is used to update the original SAMPro PO with a potential modifications.</p>
+<p style="margin-left: 48px;">A Ship Notice. This will automatically create a corresponding Inventory Receipt Journal entry.</p>
+
+</body></html>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.2.0_29";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="archive"/>
+<meta name="MS-HKWD" content="purge"/>
+<meta name="MS-HKWD" content="TechAnywhere"/>
+<meta name="MS-HKWD" content="FMMS"/>
+<meta name="MS-HKWD" content="SageQuest"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Message Table Purge</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="archive,purge,TechAnywhere,FMMS,SageQuest"/><meta name="brsnext" value="Registry_Start_Message_Table_Purge.htm"/><meta name="brsprev" value="Registry_Archive_Change_Log.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Message Table Purge">
+        <span>Start Message Table Purge</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Message Table Purge/Archive</h1>
+<h2>Purpose:</h2>
+<p>This function is designed to clean up the Message table (used by TechAnywhere, SaqeQuest, FMMS, etc.) and improve the performance of the Work Order TechAnywhere tab. By default, this function will purge / archive all Posted messages that are 60+ days old. Unless disabled via registry, these messages will be archived to the new mssgearcve table.</p>
+<p>When this function is selected, it runs without further user input. The intention is that this purge/archive can be run unattended (like the other purge/archive functions) as a Scheduled Event.</p>
+<h3>Registry:</h3>
+<p>See <a href="Registry_Start_Message_Table_Purge.htm">Registry Start Message Table Purge/Archive</a> for details on configuring this function.</p>
+
+</body></html>

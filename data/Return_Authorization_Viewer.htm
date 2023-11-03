@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.2.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="return authorization"/>
+<meta name="MS-HKWD" content="cop"/>
+<meta name="MS-HKWD" content="client order"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Return Authorization Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="return authorization,cop,client order"/><meta name="brsprev" value="Drum_Label_Warning_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Return Authorization Viewer">
+        <span>Return Authorization Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Return Authorization Viewer</h1>
+<h2>Purpose:</h2>
+<p>This function is used to generate the paperwork that you require your customers to use when returning items purchased in Client Order Processing.</p>
+<h2>Usage:</h2>
+<p>When your client returns the RA paperwork and the item(s), mark items as received in this viewer.</p>
+<p>Next, issue a credit memo in the Sales Journal with the RA Id entered on the Other tab. When you do so, the items on the RA will be returned to inventory.</p>
+<h2>Registry Entries</h2>
+<p><a href="Registry_Entry_Return_Authorization_.htm">Registry Entry Return Authorization</a></p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">RA Id:<br/></font>This field will be completed by the system when you save the record.</p>
+<p><font style="font-weight: bold;">Client Id:<br/></font>The client requesting the return. Enter the Client&#39;s Id or double-click to select from a list.</p>
+<p><font style="font-weight: bold;">Date Issued:<br/></font>The official issuance date for this RA. Enter the date in mmddyyyy format or press Spacebar to enter today&#39;s date.</p>
+<p><font style="font-weight: bold;">Location Id:<br/></font>The Location the items will be returned to.</p>
+<p><font style="font-weight: bold;">Comments:</font><br/>
+Use this field to enter an explanation of the return, or enter any other comments.</p>
+<p><font style="font-weight: bold;">Date Received:<br/></font>Complete this field when the item on this RA have actually been received.</p>
+<h2>Important Fields: Lower Section</h2>
+<p><font style="font-weight: bold;">Inventory Item Id: Serial/Id Id:<br/></font>Enter the Inventory Id and (and the serial or lot number, if applicable) of the item being returned.</p>
+<p><font style="font-weight: bold;">Order Id:<br/></font>Enter the Client Order Id the items were purchased on. The system will alert you if the Inventory Item was not on this order. The Qty Ordered, Unit Cost, Unit Price and Repacking Charge information from this order will be displayed.</p>
+<p><font style="font-weight: bold;">Quantity:<br/></font>The quantity of this item being returned.</p>
+<p>If a Client Order is referenced in a Return, the system now validates that the current Return Quantity does not exceed the original Quantity Sold less any previous Returns for the same order.</p>
+<p><font style="font-weight: bold;">U Cost:<br/></font>The cost of the item.</p>
+<p><font style="font-weight: bold;">U-P Credit:<br/></font>The Unit Price you will credit the customer for.</p>
+<p><font style="font-weight: bold;">Extended Cost: Credit Amount:<br/></font>The system will calculate these fields based on the Quantity, U Cost, and U-P Credit you entered.</p>
+<p><font style="font-weight: bold;">Received?<br/></font> Check this box (by double-clicking on it or pressing the spacebar) if this item has physically been returned. The system will default in the Qty Rec&#39;d when you do so.</p>
+<p><font style="font-weight: bold;">Qty Rec&#39;d</font><br/>
+The quantity of the item that has been physically returned.</p>
+<p><font style="font-weight: bold;">Date Rec&#39;d:<br/></font>The date the item was physically returned.</p>
+<p><font style="font-weight: bold;">Description:<br/></font>Briefly describes this line. Optional.</p>
+<p><font style="font-weight: bold;">Substitute Item:<br/></font>This field defaults from the Client Order.</p>
+<h2>Important Buttons:</h2>
+<p><img src="assets/images/image/PRINTER.gif" alt="image\PRINTER.gif" title="image\PRINTER.gif" width="48" height="28" border="0"/> After saving this record, click the Print button to print the RA Report.</p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">See Also</font><br/>
+<a href="Client_Order_Viewer.htm">Client Order Viewer</a>  <a href="AR_Sales_Journal_Viewer.htm">AR Sales Journal Viewer</a></p>
+
+</body></html>

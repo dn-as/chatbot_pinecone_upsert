@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.5.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="client site"/>
+  <meta name="MS-HKWD" content="site"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Client Site Viewer</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="OpenEdge,worksite,jobsite,client site,site"/>
+<meta name="brsnext" value="Client_Site_Bill_Tab.htm"/><meta name="brsprev" value="Client_Collections_Notes_Screen.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Site Viewer">
+        <span>Client Site Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Client Site Viewer</h1>
+  <h2>Purpose:</h2>
+  <p>Create/maintain the client site record. Client Sites are locations where work is performed for a client (client-specific job sites).</p>
+  <h2>Usage:</h2>
+  <p>Referenced by: Client Site Equipment, Work Orders, Client Orders, Job, Quotemaster.</p>
+  <p>
+    <font style="font-weight: bold;">Clients and Sites Linked by Jobs</font><br/>
+    Since a Site is not permanently tied to one specific Client, jobs for a specific site may be billed to a variety of clients. The Site and the Client are independently specified in the Job record. Consider a construction job for a school. In this situation, jobs at this site might be pointed at client records for: the school district, the contractor of record, and the manufacturer of the equipment being installed.
+  </p>
+  <h2>Registry Entries:</h2>
+  <p><a href="Registry_Entry_Client_Site_Viewer.htm">Registry Entry Client Site Viewer</a></p>
+  <p>By default, data entry in the State / Province address field is limited to the official abbreviations of the US States and Canadian Provinces. See the <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Global_Settings_State_Id">State / Province Field Validation Registry</a> if you need to add to or change the list of valid State / Province codes.</p>
+  <p>Registries to <a href="Interest_Registry_Entry_Set_Disabled_Fields.htm">Set Disabled Fields</a> and <a href="Internal_Registry_Set_Required_Fields.htm">Set Required Fields</a>.</p>
+  <h2>Screen Organization:</h2>
+  <p>The tabs in the upper section of this screen organize the primary client site information. Click on a link below for details on a particular tab.</p>
+  <p><a href="#CS_Main_Tab">Main Tab</a>  <a href="#CS_Contacts_Tab">Contacts Tab</a>  <a href="#CS_Service_Tab">Service Tab</a>  <a href="#Client_Site_COP_Tab">COP Tab</a>  <a href="#Client_Site_Quote_Defautls_Tab">Quote Defaults Tab</a>  <a href="#Client_Site_Web_Profile_Tab">Web Profile Tab</a>  <a href="#Client_Site_User_Fields_Tab">User Fields Tab</a></p>
+  <p>The tabs on the lower section of this screen display the client site &#39;child&#39; tabs. Click on the following links to see additional information:</p>
+  <p><a href="Client_Site_Bill_Tab.htm">PM Billing Tab</a>  <a href="Client_Site_Contacts_Tab.htm">Contacts Tab</a>  <a href="Client_Site_Last_Time_Bought_Tab.htm">Last Time Sold Tab</a>   <a href="Client_Site_Sales_Tab.htm">Sales Tab</a>  <a href="Client_Site_WO_Other_Tab.htm">WO Other Tab</a>  <a href="Site_Certifications_Tab.htm">Certifications Tab</a>  </p>
+  <p><a href="Client_Site_Quote_Tab.htm">Quotes Tab</a> <a href="Client_Site_Open_WO_Tab.htm">Open WOs Tab</a>  <a href="Client_Site_Other_WO_Tab.htm">Other WOs Tab</a>  <a href="Client_Site_Equipment_Tab.htm">SiteEquipment Tab</a>  Master Contracts Tab   <a href="Client_Site_Jobs_Tab.htm">Jobs Tab</a></p>
+  <h2>Important Fields (Upper Section):</h2>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="CS_Main_Tab" id="CS_Main_Tab"></a>Main Tab</p>
+  <p>
+    <font style="font-weight: bold;">Client Site Id:</font> (15 character, only . and - special characters)<br/>
+    A unique Id for this Client Site. This required field may include letters, numbers, and the special characters period <font style="font-weight: bold;">.</font> and hyphen <font style="font-weight: bold;">-</font>.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Client Site Name:</font>(40 character)<br/>
+    This optional field may be used to briefly list the name of the client site, such as a branch designation.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Date Opened:</font>  <font style="font-weight: bold;">Date Closed:</font><br/>
+    The opening and closing dates for this Site. You may access the Calendar to enter these dates by double-clicking (or by pressing Alt+F7) on either of these fields. To enter today&#39;s date, simply press the Spacebar.
+  </p>
+  <p>If you flag a record as Inactive, if the Date Closed (Inactive) field is blank it will automatically be set to today&#39;s date. If you change a record to <font style="font-style: italic;">anything other than</font> the Inactive status, the Date Closed field will automatically be cleared.</p>
+  <p>
+    <font style="font-weight: bold;">Template</font><br/>
+    This field may not be set or cleared in the Client Site viewer; if checked, it indicates that it is a template record that was created for cloning purposes only. The <a href="Client_Site_Template.htm">Client Site Template</a> viewer must be used to edit the Template field.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Site Voice Phone:</font>  <font style="font-weight: bold;">Site Fax Phone:</font><br/>
+    The main voice and fax number at this site.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Account Manager Id:</font><br/>
+    This optional field identifies the manager in charge of this Client Site account, and defaults from the Client record. To enter or change this field, double-click on it (or press Alt-F7) to select from a list of account managers.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Sales Rep Id:</font><br/>
+    The primary Sales Rep for this Site. Optional.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Service Manager:</font><br/>
+    Enter a valid Service Manager Id or double-click to select from a list. This field is available for reporting purposes.
+  </p>
+  <p><span>
+      <font face="Tahoma" style="font-family: Tahoma;">In New Call, </font>the Client Site is included the Service Manager defaulting. The hierarchy is as follows: Client Site Equipment - Client Site - Client - User. The Service Manager selected when the Work Order is added will be written to the new Work Order.
+    </span></p>
+  <p>
+    <font style="font-weight: bold;">Branch Id:</font><br/>
+    If your firm has more than one branch, enter the Branch Id to which this firm is assigned. This field is required if centralized dispatching is implemented on your system. Double-click on this field or press Alt+F7 to select from a list of branches.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Service Zone Id:</font><br/>
+    The Service Zone this site belongs to. This field is recommended for dispatching as it appears on the dispatch board. To enter or change this field, double-click on it (or press Alt-F7) to select it from a list.
+  </p>
+  <p>
+    <font style="font-weight: bold;">AR Terms:</font><br/>
+    This optional field is used for Client Order Processing to provide the default AR Terms Id for COP Invoices. It is not used in conjunction with Job or Service Invoicing; the AR Term in these cases defaults from the Job record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Store #:</font><br/>
+    Optional. The Store number uniquely associated with this site. FMAnywhere uses the Store# to filter work orders for certain Web Users.
+  </p>
+  <p>
+    <font style="font-weight: bold;">WO Closing Call Script:</font><br/>
+    This field is used to set the default value of the Closing Call Script field in Work Orders created in New Call. It should specify the Call Script that should be invoked when a Dispatcher completes a Work Order in the Work Order viewer or from the Dispatch board.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Longitude and Latitude:</font><br/>
+    These fields were previously display-only. They have been exposed to enable the user to manually enter appropriate values.
+  </p>
+  <p><span><img alt="" border="0" src="assets/images/MapIt.bmp" style="border: none;"/>  If the Latitude and Longitude fields are completed, clicking this button launches GoogleMaps with the coordinates completed.</span></p>
+  <p><span><img alt="" border="0" src="assets/images/ValidateAddress.bmp" style="border: none;"/> If the Avalara Web Integration is enabled, clicking this button will make a call to Avalara to validate that Work Site Address is correctly configured so that the correct Sales Tax Authority Group can be determined when invoicing.</span></p>
+  <p><img alt="" border="0" src="assets/images/PaymentAlias.bmp" style="border: none;"/></p>
+  <p>This button establishes a Payment Alias with OpenEdge/Global Payments  <span>or Electronic Payments </span>if this functionality is implemented in your system.   This Alias will be used when PM Invoices are generated to automatically bill the customer&#39;s credit card <span>unless disabled via registry</span>. The system will post successfully paid billings to the Sales Journal as paid and generate the appropriate AR Cash Receipts Journal Entry. The Alias may be set in the Client Site record or the Master Contract Site List tab.</p>
+  <h5>OpenEdge / Global Payments</h5>
+  <p style="margin-left: 48px;">1.Verify that the customer has their credit card ready, and then click this button to enter the customer&#39;s credit card information.</p>
+  <p style="margin-left: 48px;">2. SAM Pro will display a message reminding you that you will only have 60 seconds to enter the information.  When you are sure the information is available, click Yes to continue. When the X-Web or <span>SAMPro&#39;s Credit Card Information for Tokenization portal</span> opens, enter the customer&#39;s credit card number (without spaces or dashes) and expiration date and click Submit. <span>If the Credit Card Information for Tokenization portal is being used, be sure that the Country field is completed before clicking Submit. </span></p>
+  <p style="margin-left: 48px;">3. If the card is approved, the web portal will display &quot;Alias Success: Created&quot; in red. If it is not approved, check the number and expiration date and try submitting it again.</p>
+  <p style="margin-left: 88px;">In Open Edge / Global Payments, you can process a card (payment or alias) and get an Approval + an error attached. In previous releases, SAMPro treated this scenario as a failed transaction, but in reality the transaction had been approved and showed on the OpenEdge Merchant site <span style="font-weight: bold; font-style: italic;">if</span> the Open Edge account was set up to approve transactions with these issues. SAMPro now treats the following as Approved:</p>
+  <p style="margin-left: 128px;">Approved - AVS &amp; CSC Mismatch<br/>
+    Approved - AVS Mismatch<br/>
+    Approved - CSC Mismatch</p>
+  <p style="margin-left: 88px;"><span>Note that an AVS Mismatch occurs if the billing address does not match the address on file with the card-issuing bank or credit card company.  A CSC Mismatch occurs if the Card Security Code does not match.  </span></p>
+  <p style="margin-left: 48px;">4. When the card is approved, the system will write the Alias back to the Payment Alias field, and complete the CC Masked Account and Expiration Date fields for future reference. A secure note detailing the transaction will be attached to the Master Contract record.</p>
+  <p style="margin-left: 88px;">Timing Out: If the Alias is not generated within 60 seconds, it will not be written back to SAMPro, even if a success is noted in the web portal.  If this occurs, repeat the Alias process.</p>
+  <p style="margin-left: 48px;">5. Save the Client Site.</p>
+  <h5>Electronic Payments</h5>
+  <p style="margin-left: 48px;">1.Verify that the customer has their credit card ready, and then click this button to enter the customer&#39;s credit card information.</p>
+  <p style="margin-left: 48px;">2. SAMPro will open a &#39;Please Enter Credit Card Information&#39; prompter box.  Enter the customer&#39;s credit card number (without spaces or dashes), expiration date and CVC security code. The Pre Auth Amount field will be set to $1.00 to ensure that the credit card is valid. Click OK to continue.</p>
+  <p style="margin-left: 48px;">3. A progress bar will appear as the pre-authorization is processed. If the card is not approved,an error with the reason will be displayed (e.g, &quot;Credit Card has expired). Check the number and expiration date and try submitting it again.</p>
+  <p style="margin-left: 48px;">4. When the card is approved, the system will write the Alias back to the Payment Alias field, and complete the CC Masked Account and Expiration Date fields for future reference. A secure note detailing the transaction will be attached to the Master Contract record.</p>
+  <p style="margin-left: 48px;"><span>5. Save the Client Site.</span></p>
+  <p style="font-weight: bold;">Payment Alias:<br/>
+    <span id="BugEvents1131" style="font-weight: normal;">This field is completed by the system when a Payment Alias is successfully generated by OpenEdge or Electronic Payments via the Payment Alias button. The Payment Alias may be cleared manually by blanking the field. This would be done if the client changed their mind and did not wish to have their recurring PM&#39;s paid via credit card. Validation also prevents the user from manually changing this field to a non-blank value; this field may only be set via the Payment Alias button.</span>
+  </p>
+  <p style="font-weight: bold;"><span id="BugEvents1131" style="font-weight: normal;"><img alt="" border="0" src="assets/images/CopyAlias.bmp" style="border: none;"/></span><span>  </span><span style="font-weight: normal;">Clicking this button launches the <a href="Start_Alias_Update.htm">Start Alias Update</a> function. This function is used to copy the Alias and Credit Cart information from the selected Site to </span><span style="font-weight: normal;">other Sites sharing the same COP tab Client Id.  The user is warned if the launching Site does not have the COP Client completed.</span><span> </span></p>
+  <p><span style="font-weight: bold;">CC Masked Account:<br/>
+      CC Expiration Date  CC Trx Id:</span><br/>
+    These display fields are completed when an Alias is successfully generated by the credit card processor. <span>If Electronic Payments credit card processing is being used, the first and last four digits of the credit card will be displayed.</span> If OpenEdge credit card processing is being used, only the last four digits will appear.  </p>
+  <p style="margin-left: 8px;">In addition to the above information, the following fields will be included in the OpenEdge spreadsheet when PM&#39;s are processed:</p>
+  <p style="margin-left: 48px;">SAMPro user ID to column &quot;User ID&quot; of export<br/>
+    User Def 1 = Client ID<br/>
+    User Def 2 = WO ID<br/>
+    User Def 3 = Site ID</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Report Credit Card Expiration</span><br/>
+    This <a href="Report_Credit_Card_Expiration.htm">Report</a> may be run to alert users to upcoming Credit Card expiration dates in the Client Site for payment processing.</p>
+  <p>
+    <font style="font-weight: bold;">Status:</font><br/>
+    Select a status for this site by double-clicking on the circular radio button next to the desired status (keyboard users should Tab to the desired button and then press the Spacebar to select it):<br/>
+     <font style="font-weight: bold;">Active</font> if this is a current client<br/>
+     <font style="font-weight: bold;">Inactive</font> if the account is closed<br/>
+     <font style="font-weight: bold;">Mailing List</font> if this is a sales prospect<br/>
+     <font style="font-weight: bold;">Credit Hold</font> : 
+  </p>
+  <p style="margin-left: 72.00pt;">
+    <font style="font-weight: bold;">New Call:</font> If a Site is flagged as Credit Hold, a warning will be displayed if it is selected in New Call, and the work order will be placed on Credit Hold.
+  </p>
+  <p style="margin-left: 72.00pt;">
+    <font style="font-weight: bold;">PM Work Orders &amp; Invoices for ‘Credit Hold’ Sites:</font> PM WOs for credit hold sites are placed on Credit Hold and require a Credit Manager to release them. PM Work Order Invoices generated for Credit Hold sites are not placed on Credit Hold and may be billed.
+  </p>
+  <p>By default, the Site list is automatically filtered so that it opens displaying only records that are not Inactive. If you flag a record as Inactive, if the Date Closed (Inactive) field is blank it will automatically be set to today&#39;s date. If you change a record to Active status, the Date Closed field will automatically be cleared.</p>
+  <p>To see all Site records, go to the List view and then click the All Filter button. All records (regardless of their status) will be displayed within your security parameters. Clicking this button also blanks all Filter range entries entered manually (or by the system for operating company/branch security). Click the Closed Filter button to show inactive records only (those with a status of Inactive and a Closed Date).</p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Work/Ship Address:</p>
+  <p>
+    <font style="font-weight: bold;">Street Address:<br/>
+      City:  State:  Zip:</font><br/>
+    The actual (street) address of this Client Site. This address will appear on the Work Order Dispatch ticket, and will also be used for the default shipping address for Client Orders generated for this site.
+  </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="CS_Contacts_Tab" id="CS_Contacts_Tab"></a>Contacts Tab</p>
+  <p style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font style="font-weight: bold;">Note:</font> additional contacts for this site may be added to the Contacts tab in the lower portion of the Client Site record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Email Address: Email Fax:</font>
+    <font style="font-weight: bold;">Email Address 2:</font><br/>
+    Enter the e-mail addresses for this Site. This information is used by the Escalation Manager (depending on if the Notification Category Method is set to Email, Fax or Pager for a Client Site Source).
+  </p>
+  <p>These fields are also available in the Dispatch Board’s Email functionality (if Use Outlook is not specified in <a href="Registry_Entry_System_Email.htm">Registry System Email (sys-email)</a> ). See <a href="Dispatch_Board_Overview.htm#Dispatch_Board_Email_Button">Dispatch Board Email Button</a> for details.</p>
+  <p>If you wish to specify more than one address, you may specify an <a href="Email_Group.htm">Email Group</a> or include multiple email addresses (comma or semi-colon delimited) in the email address field.</p>
+  <p>
+    <font style="font-weight: bold;">Email Invoice:</font><br/>
+    This field is used in conjunction with the Service Invoice functionality to create an &#39;Invoice Package&#39; so that TechAnywhere receipts and other documents are include with emailed invoices. To do so, the Email Invoice field must contain a list of the Document Categories which should be included in the Invoice Package. The included documents must be attached to the Work Order being invoiced prior to the generation of the invoice. Any documents attached to the Work Order after an invoice is generated will not be included in this package.  For example, to include TechAnywhere Receipts in the Invoice Package for a particular Site, you would enter <span style="font-weight: bold;">Receipt</span> in its Email Invoices field.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Directions to Site:</font><br/>
+    Briefly describes how to get to this site. This field appears on the Work Order and New Call.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Market Srce Id:</font><br/>
+    This optional field identifies how this account was generated (referral, internet, etc.), and defaults from the Market Source in the Client record. This field will provide the default value for Work Orders created in New Call for this site.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Time Zone Id:</font><br/>
+    Optional; enter the appropriate Time Zone (or double-click on this field to select from a list).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Technician Id:</font><br/>
+    The default technician for this site for Service and PM Work Orders if not overridden by the Technician in the Client Site Equipment record. To enter or change this field, double-click on it (or press Alt-F7) to select from a list of Technician Id&#39;s.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Price Code Id:</font><br/>
+    If entered, this field overrides/customizes the pricing levels defined by the Material Price Level field. It is applicable to pricing inventory for Job Invoicing (for Inventory Items marked as Use Unit Pricing) and Client Order Processing. Price codes are also referenced in the Inventory Item PRC tab. For COP orders, and for Work Order Inventory items, the system will read the Client Site Record for a Price Code first. The system then looks in the Inventory Item to see if there is an identical Price Code in the Inventory Item PRC tab. If there is a code, the COP module will insert the pricing level from this code, based on the Price Level (1, 2, 3, 4 or 5) defaulted in the Client Site and use this for pricing on the invoice. For COP Invoices, it will also use the Item Description in the PRC tab, and use that on the COP Invoice, rather than the inventory name from the Inventory Record. If there is no Price code in either record, it will use the Price Levels in the Inventory Item ID instead, if there are fields to be used for pricing.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Foreign Currency: Material Price Level and Price Code</font><br/>
+    If Unit Prices are implemented in Inventory, and your firm has implemented foreign currency processing, these fields must reference the appropriate Price Level / Price Code for this currency/customer.
+  </p>
+  <p>
+    <font style="font-weight: bold;">PO Required:</font><br/>
+    Flag this field by double-clicking (or pressing Spacebar when the focus is on it) if a purchase order is required for this site. An &#39;x&#39; appears in the field when it is flagged.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Material Price Level</font><br/>
+    The default Material Price Level for inventory flagged as &quot;Use Unit Pricing&quot; on Work Order Invoices and Client Orders. You may enter a value from 1 to 9. However, price codes only have 5 levels - so if you will be using those you would only want to use 1-5.
+  </p>
+  <p>Note that this field may be overridden by the Material Price Level in the Site record in the following cases:</p>
+  <p style="margin-left: 36.00pt;">1. When a Work Order is created in New Call or via Create PM Work Orders, the Price level defaults from the Job (if set); if not, it will default from the Client Site record. Note that the Price Code, if present, always comes from the Site.</p>
+  <p style="margin-left: 36.00pt;">2. If you specify a Job on a PO, the field Material Price level in the Job record overrides the material price level in the Site record when revenue is calculated. Note that you must click the Magnify button to view Revenue</p>
+  <p>
+    <font style="font-weight: bold;">Contact 1:</font>  <font style="font-weight: bold;">Contact 2:</font><br/>
+    The First Name, Last Name, Salutation, Title, Phone, Cell Phone, Email and Fax numbers of your primary and secondary contacts at this Client Site. These fields are optional but recommended. These fields are also available from the Dispatch Board’s Email functionality (if Use Outlook is not specified in <a href="Registry_Entry_System_Email.htm">Registry System Email (sys-email)</a> ). See <a href="Dispatch_Board_Overview.htm#Dispatch_Board_Email_Button">Dispatch Board Email Button</a> for details.
+  </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="CS_Service_Tab" id="CS_Service_Tab"></a>Service</p>
+  <p>
+    <font style="font-weight: bold;">Dispatch Note</font><br/>
+    This optional 40-character field appears on the New Call screen when this Site is selected to provide useful information (e.g., Guard Dog, Call Owner, etc.) to the Dispatcher/Technician. It is also printed on the Work Order.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Agreement Number</font> (15 character)<br/>
+    The number on the agreement itself. Alphanumeric designations are allowed.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Agreement PO#</font> (20 character)<br/>
+    The customer’s PO number for this agreement. Alphanumeric designations are allowed. If PM Invoice Work Orders are implemented on your system, this field will provide the default value for the customer’s PO if the <a href="Registry_Create_PM_Billing_Work_Order_Invoice.htm">Registry Create PM Billing Work Order Invoice</a> is set to pull the PO from the Client Site rather than the Job record.
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">NOTE: The Service Hours and Days will be displayed on the dispatch board.</p>
+  <p>
+    <font style="font-weight: bold;">Service Hours</font> (10 character)<br/>
+    The hours covered in the agreement (9-5, 24, etc.).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Service Days</font> (20 character)<br/>
+    The days covered in the agreement (M-F, Mon-Sat, 7, etc.).
+  </p>
+  <p><span style="font-weight: bold;">PCR Table Id:</span><br/>
+    This field is used by TechAnywhere to indicate that Equipment linked to this Site requires a PCR Table. If it is completed, TechAnywhere will force technicians to pick a PCR table ID whenever adding new equipment for a Site with this field completed.</p>
+  <p><span>This field also provides the new default value for new Equipment created for this Site in SAMPro.</span></p>
+  <p>
+    <font style="font-weight: bold;">Required Response Hours</font> (numeric format 00)<br/>
+    The response hours required by the agreement.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Sub Not-To-Exceed:</font><br/>
+    This field is used in conjunction with the Service Provider applet to limit auto-generated PO&#39;s to this dollar value. This field provides the default NTE Subcontractor value for Work Orders created for this site (this field is used in turn to limit the amount of the vendor-subcontractor’s purchase order). This field will be overridden by the corresponding field in the Client Site Equipment record (if it has been completed).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Client Not-To-Exceed:</font><br/>
+    This informational field represents the Not To Exceed amount (per work order) for this site. This field appears on the New Call screen. This field will be overridden by the corresponding field in the Client Site Equipment record (if it has been completed).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Gross Margin Id:</font><br/>
+    A valid Gross Margin Id should be entered in this field if work order invoices for this Site will be adjusted to a target gross margin. This field is used in conjunction with the Service Compute box in the Job viewer to implement this functionality on the work order.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Work Order Comments:</font><br/>
+    Optional. Comments to be included on work orders for this site.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">TechAnywhere Users:</font> This field may be updated from TechAnywhere.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Billing Comments:</font><br/>
+    These comments are displayed on the Invoicing Tab of the Work Order so that special billing notes can be viewed by the billing people.
+  </p>
+  <p><span style="font-weight: bold;">IVR Instructions:</span><br/>
+    This field is designed for the purpose of IVR instructions for the technician. This field is available for use in escalation emails (using the token ^clntste_ivr^). It is also designed for future use in TechAnywhere.</p>
+  <p> </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Client_Site_COP_Tab" id="Client_Site_COP_Tab"></a>COP</p>
+  <p>
+    <font style="font-weight: bold;">Shipping Instructions:</font><br/>
+    The text that should appear on COP Quotes, COP Order Acknowledgements, and COP Pick Tickets. This field is used to default in the Shipping Order Instructions in the Client Order.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Bill of Lading Instructions:</font><br/>
+    The text that should appear on Bills of Lading documents for this site.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Location Id</font><br/>
+    The default location to ship from for Client Orders. To enter or change this field, double-click on it (or press Alt-F7) to select from a list of locations.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Note for 6.2 and Above:</font> In very early releases, the Location and GL Entity fields in the Client Site COP tab were over ridden when a Technician was entered on the Contacts tab. This could cause problems for a company running COP because it would mean that a service-related field (technician) would impact COP related fields (Location and GL Entity on the COP tab). The default behavior has been changed so that entering or changing the Technician does not effect the Location and GL Entity fields unless the following registry is implemented: <a href="Registry_Entry_Client_Site_Viewer.htm">Registry Entry Client Site Viewer</a> .
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Entity Id:</font><br/>
+    The GL Entity (your firm&#39;s department or profit center) that this site is generally associated with. This field provides the default value for Inventory Items entered on a COP Order for this Site. However, the GL entity in the Location will override the GL entity specified on the client site for COP items. If you want the client site to supply the entity do not enter one in the Location.
+  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Intercompany Processing:<br/>
+      C</span>lient Orders &amp; COP Invoices now posts with the proper Security and Company Security information. This ensures that the COP Orders carry the correct security / company information when the COP Invoices are posted to the AR Sales Journal and carried over into the various history tables (arhstry, glhstry, txhstry, imhstry, invcemstr, etc). </p>
+  <p style="margin-left: 48px;"><span>If the COP module is set up to default the information from the Client Site’s COP tab instead of the Location (where sys-viewer-vclntordr GLEntityScheme=clntste registry option exists), the system will now use the Client Site’s COP tab&#39;s GL Entity for posting the invoices Freight, Dropship Freight and make sure that the COGS posting for dropships uses the same GL Entity for both the debit &amp; credit side of the AR Sales GL journal entry.</span></p>
+  <p>
+    <font style="font-weight: bold;">Tax Group Id:</font><br/>
+    If this Site is subject to Sales or Use tax, enter the Tax Group Id (or double-click to select from a list). It provides the default value for Client Orders and for Quotes if a Job is not specified. This is also used for true residential COD invoicing where the same residential &quot;job&quot; is used for customers.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Tax Exempt:</font><br/>
+    In Version 8.0 and above, a Site flagged is always TAX EXEMPT for COP processing regardless of whether the item is marked as Taxable or Non-taxable if this field is check.  Sites not marked as Tax Exempt will adhere to rules of the item marked TAXABLE or NONTAXABLE, <font style="text-decoration: underline; ">unless there is a default cost category associated to the Inventory Group</font>.  Tax rules will follow the cost category rules for the tax authority (Tax Material, Tax Other, No Tax Sub, No Tax Labor).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Min Ship Value:</font><br/>
+    For Client Order Processing, the minimum value to ship to this Site.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Ship Via Id</font><br/>
+    The preferred method of shipment to this site. This field provides the default value for Client Orders. To enter or change this field, double-click on it (or press Alt-F7) to select from a list.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Pro Forma Id:</font><br/>
+    Required to create a Pro Forma invoice in the Client&#39;s currency for international shipping of COP orders. This field will default to the Client Orders created for this Site. The Pro Forma Advice lines will also print as Comments on the COP Invoice itself, and may be used as additional text on regular invoices.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Freight: Prepaid Collect Prepay and Add</font><br/>
+    Controls the default handling of freight charges for COP orders.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Client Id:</font><br/>
+    This field is required for Client Order Processing, and should be populated with the current owner of the site for AR purposes. For Job Invoicing, the Client (for AR purposes) should be referenced in the Job record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Discount Percent</font><br/>
+    This field expedites the automatic filling of the Percent Discount amount on Client Orders. It is used to set the Discount Percent on a Client Order line when the Inventory Item Id is entered if Special Pricing is NOT in effect. If Special Pricing is NOT in effect, the Price itself will continue to be set from the Site’s Last Time Bought (if applicable), or the item’s regular Unit Price.
+  </p>
+  <p>If &#39;Special Pricing&#39; is in effect, the Discount Percent field is set to zero. Special Pricing is in effect if and only if both the following are true:</p>
+  <p style="margin-left: 36.00pt;">The Client Site’s Price Code Id (on the Client Site&#39;s Contacts tab) is completed.</p>
+  <p style="margin-left: 36.00pt;">The line&#39;s Inventory Item has a Pricing Exception for that Price Code (on the Inventory Item&#39;s Pricing tab).</p>
+  <p>
+    <font style="font-weight: bold;">Security Id:</font><br/>
+    If multiple location security is implemented on your centralized database system, this informational field displays the Security Id of the local user that created this record. If multiple location security is not implemented on your system, or if this record was created by a global user, this field will be blank.
+  </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Client_Site_Quote_Defautls_Tab" id="Client_Site_Quote_Defautls_Tab"></a>Quote Defaults</p>
+  <p>This tab provides default values for Quotes created for this site using CSRAnywhere or Quotemaster.</p>
+  <p>
+    <font style="font-weight: bold;">Quote Report Id:</font><br/>
+    The default Quotation report that will be sent to the customer.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Quote Notes: Quote Small Print:</font><br/>
+    Default text for the Notes and Small Print tabs on the Quotation viewer. Typically, these field would be used for boilerplate text that should be included in all quotes for this Site. Note that once this text has been inserted into a Quotation, it may be changed or appended to by a Quotemaster or CSRAnywhere user.
+  </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Client_Site_Web_Profile_Tab" id="Client_Site_Web_Profile_Tab"></a>Web Profile Tab</p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">The fields on this tab should be completed if FMAnywhere (or the older Client Web Interface)  is implemented on your system, and this site belongs to a customer with Web User privileges.</p>
+  <p>
+    <font style="font-weight: bold;">Web Profile Id:</font><br/>
+    The Web Profile Id created for the customer that owns this site. If multiple <a href="Web_Profile_Viewer.htm">Web Profiles</a> were created for this customer (e.g., by division), be sure to select the right one.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Custom Fields 1-5:</font><br/>
+    If you selected a Web Profile Id, these fields will be labeled as specified in the Profile.
+  </p>
+  <p class="Body_Text_3" style="margin-left: 5.75pt;">
+    <font style="font-weight: normal;">For each labeled field, double-click to select from a list of valid values for this field.</font>
+  </p>
+  <p class="Body_Text_3" style="margin-left: 36.00pt;">Example:</p>
+  <p class="Body_Text_3" style="margin-left: 36.00pt;">
+    <font style="font-weight: normal;">If the first three fields were labeled Region, Area and Type, you would enter an appropriate value in each of these fields:</font>
+  </p>
+  <p class="Body_Text_3" style="margin-left: 36.00pt;">Region  Area Type</p>
+  <p class="Body_Text_3" style="margin-left: 36.00pt;">1-Midwest 3 Mall</p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Client_Site_User_Fields_Tab" id="Client_Site_User_Fields_Tab"></a>User Fields</p>
+  <p class="Body_Text_3" style="margin-left: 36.00pt;">Client Site User  <span>1-10:</span><br/>
+    <font style="font-weight: normal;">These optional fields enable you to retain additional information about this</font>
+    <font style="font-weight: normal;">Site.</font>
+  </p>
+
+</body></html>

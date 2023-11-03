@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Registry Update WO Escalation Status</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("SAM Pro Help\nRegistry Entries\nGeneral System / Security Registry Entries\n__ Update WO Escalation Status if no Profiles");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Registry Update WO Escalation Status</H1>
+ <P class="support" ><FONT style="font-weight:bold; " >Update Work Order Escalation Status in absence of Escalation Profile</FONT><FONT style="font-weight:bold; " > – need data to test</FONT></P>
+ <P class="support" >In the past, the decision was made that the system would only update the WO Escalation status if an Escalation Profile existed in the system (regardless of whether or not escalation manager was being used) for performance reasons. For a variety of reasons (including invoicing and credit hold processing), the WO Escalation status/Status Category should be updated for all users. The following registry option results in the work order escalation status always being updated, regardless of whether or not an Escalation Profile exists. </P>
+ <P class="support" >Id: sys-ffv-global-settings<BR>Setting Key: EscalationManager  Setting Value: always</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

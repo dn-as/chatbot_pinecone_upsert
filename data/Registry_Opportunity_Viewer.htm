@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.15.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Opportunity Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="CRMAnywhere,opportunity,sys-viewer-vopprtnty"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Opportunity Viewer">
+        <span>Registry Opportunity Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Opportunity (sys-viewer-vopprtnty)</h1>
+<h2><span style="direction: ltr; unicode-bidi: embed; mso-line-break-override: none; 
+			 word-break: normal; punctuation-wrap: hanging;">Purpose:</span></h2>
+<p style="language: en-US; direction: ltr; unicode-bidi: embed;"><span style="mso-line-break-override: none; word-break: normal; punctuation-wrap: hanging;">The 
+ following registry setting is required to allow you to create Client Sites 
+ from the CRMAnywhere Dashboard or the SAMPro Opportunity viewer.</span></p>
+<h2><span style="word-break: normal; punctuation-wrap: hanging;">Related 
+ Registries:</span></h2>
+<p style="language: en-US; direction: ltr; unicode-bidi: embed; mso-line-break-override: none; 
+	 word-break: normal;"><span style="punctuation-wrap: hanging;">See 
+ <a href="Registry_CRM_Opportunity_Templates.htm">Registry CRM Opportunity 
+ Templates</a> for defining Opportunity records to use as Templates in 
+ CRMAnywhere.</span></p>
+<h2><span style="unicode-bidi: embed; mso-line-break-override: none; word-break: normal; 
+			 punctuation-wrap: hanging;">Important Fields:</span></h2>
+<p style="language: en-US; direction: ltr;"><span style="unicode-bidi: embed; 
+													 mso-line-break-override: none; 
+													 word-break: normal; 
+													 punctuation-wrap: hanging; 
+													 font-weight: bold;">Id:</span> 
+ <span style="unicode-bidi: embed; mso-line-break-override: none; word-break: normal; 
+		 punctuation-wrap: hanging;">sys-viewer-vopprtnty</span></p>
+<p style="language: en-US; direction: ltr; unicode-bidi: embed; mso-line-break-override: none;"><span style="word-break: normal; punctuation-wrap: hanging; font-weight: bold;">Setting:</span> 
+ <span style="word-break: normal; punctuation-wrap: hanging;">NewSiteTemplateId    </span><span style="word-break: normal; punctuation-wrap: hanging; font-weight: bold;">Setting 
+ Key:</span> <span style="word-break: normal; punctuation-wrap: hanging; 
+					 font-style: italic;">Site Template Id</span></p>
+<p style="language: en-US; direction: ltr; unicode-bidi: embed;">The template 
+ site should be very basic since it must function for all Sites generated 
+ from Opportunities in SAMPro or CRMAnywhere. The Client Site Template 
+ should have its Quote Defaults tab completed.  It must also have 
+ a Site Equipment record associated with it.</p>
+
+</body></html>

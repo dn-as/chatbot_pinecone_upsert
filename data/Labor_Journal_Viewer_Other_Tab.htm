@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.4.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="journal"/>
+<meta name="MS-HKWD" content="labor"/>
+<meta name="MS-HKWD" content="time card"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Labor Journal Viewer Other Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="journal,labor,time card"/><meta name="brsnext" value="Payroll_Adjustment_Journal_Viewer.htm"/><meta name="brsprev" value="Labor_Journal_Labor_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Labor Journal Viewer Other Tab">
+        <span>Labor Journal Viewer Other Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Labor Journal Viewer Other Tab</h1>
+<h2>Purpose:</h2>
+<p>Enter expenses that will be billed to a job or work order and reimbursed 
+ to the employee on his or her payroll check.</p>
+<h2>Usage:</h2>
+<p>Enter mileage expense, etc.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Qty Used: Qty Billed:<br/>
+</font>The Actual (Used) and Billable Quantities. The Quantity Used will 
+ be used for costing and reimbursing the employee, and the Quantity Billed 
+ will be used to compute revenue for billing purposes. Note that the Quantity 
+ Billed field defaults when you enter the Quantity Used, but may be adjusted 
+ by the user if needed.</p>
+<p><font style="font-weight: bold;">Effective Date:</font><br/>
+Enter this date in <font style="font-style: italic;">mmddyyyy</font> format 
+ or double-click on this field to access the calendar. This Date must fall 
+ within the Start and End Date range of the Pay Period.</p>
+<p><font style="font-weight: bold;">Unit Cost: Amnt Cost:</font><br/>
+Enter the costing information into one of these fields. The system will 
+ calculate the other.</p>
+<p><font style="font-weight: bold;">WO Id:</font><br/>
+If this line is to be applied to a specific Work Order, enter its Id (or 
+ double-click to select from a list). If the WO field is completed, the 
+ Job, Job Cost, and Billing Item categories will default.</p>
+<p><font style="font-weight: bold;">Equipment Id:<br/>
+</font>If the user enters a Work Order Id, the system will default in the 
+ first piece of equipment on the Work Order’s Equipment tab UNLESS this 
+ behavior is disabled via registry (see <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_journal_equipment_id">Registry 
+ Option - Do Not Default Equipment Id</a>). If the user double clicks on 
+ this field, the system will display a list of all equipment associated 
+ with the Client Site referenced in the Work Order.</p>
+<p>If the sys-ffv-global setting &#39;DefaultEquipmentFromWorkorder&#39; is set 
+ to false, the user is allowed to set the Equipment Id back to blank. If 
+ this registry option is not present or set to true, the Equipment Id must 
+ be completed if a Work Order Id is referenced.</p>
+<p><font style="font-weight: bold;">Job Id:</font><br/>
+The Id of the Job this line is being entered against. This field is required 
+ if the WO field is blank.</p>
+<p><font style="font-weight: bold;">Cost Category:</font><br/>
+This Cost Category should be filled in according to the type of entry being 
+ made: for example, miscellaneous materials would be assigned a Cost Category 
+ with a Cost Type of Materials. When you select from a list of Job Cost 
+ Category Id&#39;s only those with a Cost Type of Material, Other or Subcontractor 
+ will appear.</p>
+<p>This field also supports enhanced filtering 
+ provided by the Cost Code&#39;s Job Cost Category Usage Filter. Cost Categories 
+ are validated (relative to Cost Codes) during data entry upon leaving 
+ the Cost Category Id field.  The full relationship is validated again 
+ when leaving a child line or saving a record.</p>
+<p><font style="font-weight: bold;">Job Cost Code Id: Job Billing Item 
+ Id:</font><br/>
+If the Work Order Id is not filled in, enter the appropriate Id&#39;s for this 
+ Job or double-click to select from a list.</p>
+<p><font style="font-weight: bold;">Other Rate Id:</font><br/>
+Enter a valid Other Rate Id or double-click on this field to select from 
+ a list if applicable to this entry.</p>
+<p style="font-weight: bold;"><span style="font-weight: normal;">If the 
+ W-2 Category field is completed in the Other Rate record, This entry will 
+ also be used to write to W-2 boxes (e.g, for Excludable moving expense 
+ reimbursements paid directly to the employee).</span></p>
+<p><font style="font-weight: bold;">Bill Type Id:  Revenue Rate:</font><br/>
+These fields default from the Other Rate Table specified in the Rate Schedule 
+ for this Job, but may be changed if needed. These fields jointly determine 
+ how the Unit Price of <font style="font-weight: bold;">items flagged as 
+ Extras</font> will be calculated:</p>
+<p style="margin-left: 36.00pt;">If <font style="font-weight: bold;">Markup</font> 
+ is selected, the Revenue Rate will default from the Markup table (specified 
+ in the Rate Schedule for this Job). For example, a 120% markup applied 
+ to an item costing $100 would generate a unit price of $220. A 30% markup 
+ applied to an item costing $100 would generate a unit price of $130.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Margin</font> 
+ enables the user to set the desired profit margin ((Unit Price - Unit 
+ Cost)/Unit Price)for this item in the Revenue Rate field. When a Margin 
+ is entered, the system will calculate the price based on the above formula 
+ and the Unit Cost.</p>
+<p style="margin-left: 36.00pt;">If you select <font style="font-weight: bold;">Multiplier</font>, 
+ the system will multiply the figure in Revenue Rate X Unit Cost to obtain 
+ the Unit Price. For example, a multiplier of 1.2 applied to an item costing 
+ $100 would yield a unit price of $120.</p>
+<p style="margin-left: 36.00pt;">If the Bill Type Id is set to <font style="font-weight: bold;">Unit 
+ Price</font>, the Revenue Rate will equal the Unit Price.</p>
+<p style="margin-left: 36.00pt;">Select the Billing Type of <font style="font-weight: bold;">n/a</font> 
+ if a special price has been agreed on for this customer. In this case, 
+ you will leave the Revenue Rate field blank, and enter the Amnt Revenue 
+ fields directly.</p>
+<p><font style="font-weight: bold;">Extra?</font><br/>
+If this entry is for an &quot;extra&quot; (not explicitly included in a 
+ contract), check this box (by double-clicking or pressing the Spacebar). 
+ Doing so flags this item as eligible for invoicing as a contract extra.</p>
+<p><font style="font-weight: bold;">Description:</font><br/>
+This optional field may be used to briefly describe this entry.</p>
+<p><font style="font-weight: bold;">Entity</font><br/>
+This field defaults from the Job record but may be changed by the user. 
+ When Intercompany is enabled and a detail 
+ line contains a Job Id, any changes to the line&#39;s GL Entity are validated 
+ to ensure that the new GL Entity belongs to the same company as the Job. 
+  It identifies the profit center or department to 
+ be charged with this entry. You may double-click to select from a list 
+ of Id&#39;s.</p>
+<p><font style="font-weight: bold;">Unit Price:  Amount Revenue:</font><br/>
+The Unit Price is based on the Unit Cost, Bill Type Id and Revenue Rate. 
+ The system calculates the Amount Revenue as the Unit Price X Hours. Either 
+ of these fields may be changed by the user; the system will recalculate 
+ the other.</p>
+<p><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/> 
+ Click the Magnify Button to see the following fields. </p>
+<p><span style="font-weight: bold;">TechAnywhere Source Rn: Technician Id</span><br/>
+If these fields are completed, this record/line was created/revised from 
+ TechAnywhere.</p>
+
+</body></html>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.27.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Start Material Requisitioning</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="sys-start-smtrlrqstnng,registry,materials requisitioning,requisitioning"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Start Material Requisitioning">
+        <span>Registry Start Material Requisitioning</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Start Material Requisitioning</h1>
+<h2>Related Registry:</h2>
+<p><a href="Registry_Entry_Shop_Order_Mode.htm">Registry Shop Order</a> 
+ (required)</p>
+<h3>Registry to Set Initial Values of As Of and End Date Scheduled</h3>
+<p style="margin-left: 8px;">An enhancement allows the user to will limit 
+ the processing to only work order with a WO Technician tab Date Scheduled 
+ within the date range specified.  It is STRONGLY suggested what 
+ the following registry entry is enabled to provide reasonable initial 
+ values for this function:</p>
+<p style="margin-left: 48px;">Note: if both the Start Date Scheduled and 
+ End Date Scheduled are set to the blank date (1900-01-01), ONLY those 
+ Work Orders with an Tech Line for the blank date will be selected.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Registry 
+ Id:</span> sys-start-smtrlrqstnng</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ InitialValueFor~dte-as-of    Setting Value: ^today^</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ InitialValueFor~dte-schdld-end    Setting Value: ^today^</p>
+
+</body></html>

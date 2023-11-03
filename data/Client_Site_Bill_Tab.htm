@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.5.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="bill button"/>
+<meta name="MS-HKWD" content="billing schedule"/>
+<meta name="MS-HKWD" content="client site"/>
+<meta name="MS-HKWD" content="pm invoice"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Client Site Bill Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="bill button,billing schedule,client site,pm invoice"/><meta name="brsnext" value="Client_Site_Last_Time_Bought_Tab.htm"/><meta name="brsprev" value="Client_Site_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Site Bill Tab">
+        <span>Client Site Bill Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Client Site PM Billings Tab</h1>
+<p class="Body_Text">This tab enables you to create/maintain a billing 
+ schedule; PM invoices for this Client Site will be based on this schedule. 
+ The billing schedule may be entered manually or generated from Master 
+ Contract.</p>
+<p>This tab also support the Rental Billing of Assets.</p>
+<p class="Body_Text">Most users employ the &#39;PM Invoice&#39; work order functionality 
+ for purpose of billing PM’s in advance thru the Service Invoice module. 
+ This enables &quot;service&quot; jobs to be used on the Client Site Billing 
+ Schedule.  When Create PM Billings is run for Jobs that are 
+ flagged as Service Compute, and the <a href="Registry_Create_PM_Billing_Work_Order_Invoice.htm">Registry 
+ Create PM Billing Work Order Invoice</a> entry has been made, the system 
+ will generate a PM Invoice Work Order. This Work Order will be set to 
+ Invoice Ready, with an invoice amount on the Other tab corresponding to 
+ the Bill Amount on this line. Once this Work Order has been generated, 
+ it will be billed and posted via the Start Compute Service Invoice function.</p>
+<h2>Usage:</h2>
+<p>The PM Billing Schedule should now be used as the one-and-only source 
+ for PM Billing information.  Although Master Contract entries 
+ continue to generated to this tab, contract changes, credit memos, revised 
+ billing, etc should be managed from this tab. The ability to enter both 
+ positive and negative contract amounts provides the user with means to 
+ do so.</p>
+<h3>Common Lines Invoice (taxable and non-taxable components)</h3>
+<p>This enhancement allows &#39;common&#39; lines to be included on a single PM 
+ Invoice so that taxable and non-taxable components can be handled appropriately. 
+ Lines are considered &#39;common&#39; when <span id="BugEvents281">they have the 
+ same values for these fields:</span></p>
+<p style="margin-left: 48px;"><span>Client Site Id, Billing Schedule Date, 
+ Job Id, Cost Code, Billing Item, Payment Alias</span></p>
+<p style="margin-left: 8px;">This allows common PM Billing lines with different 
+ Job Cost Categories to appear on the same PM Work Order Invoice with both 
+ taxable and non-taxable components. The Job Cost Category is accessed 
+ via the Magnify button.</p>
+<h3>Site and Job Validations:</h3>
+<p>If the Site is not Active, a PM Billing entry will not be created. In 
+ addition, if the Job’s (in the PM Billing schedule) has a Job Date Closed 
+ that precedes the Billing Date, a PM Invoice will not be created.</p>
+<h3>Validation Rules for Line Changes</h3>
+<p>The system looks at whether a line has been invoiced or had PM Earnings 
+ posted when determining what changes the user is allowed to make to the 
+ line:</p>
+<p style="margin-left: 36.00pt;">a. If the line has been invoiced or have 
+ earnings posted, the Bill Date may NOT be changed. The OK to Renew field 
+ may be changed by the user regardless of the status of either of these 
+ fields.</p>
+<p style="margin-left: 36.00pt;">b. If the line has been invoiced but not 
+ had earnings posted, changes are only allowed to the Amount Earned, GL 
+ Debit account, and OK to Renew fields.</p>
+<p style="margin-left: 36.00pt;">c. If the line has had earnings posted 
+ but has not been invoiced, changes are only allowed to the Amount Billed, 
+ GL Credit account, and the OK to Renew fields.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important: 
+ If the</font> <font style="font-weight: bold;">Client is No Longer a PM 
+ Customer</font><font style="font-weight: bold;"><br/>
+</font>Click <a href="Client_Site_PM_Billing_Tips.htm">Client Site PM Billing 
+ Tips</a> for details on how to handle existing billings and prevent future 
+ ones.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Renewable Billings: Renewable Earnings:<br/>
+</font>These display-only field show the running total of the Amount to 
+ Invoice and Amount Earned of all lines marked as &#39;Ok to Renew&#39;.</p>
+<p><font style="font-weight: bold;">Date:</font> <br/>
+Enter the billing date for this item directly or double-click on this field 
+ (or press Alt-F7) to access the Calendar viewer to do so. To enter today&#39;s 
+ date, simply press Spacebar.</p>
+<p><font style="font-weight: bold;">Amt to Bill: Amt to Earn:<br/>
+</font>The Amount to Bill field indicates the billing amount for this time 
+ period. The Amount to Earn would be completed if you are amortizing the 
+ Amount to Bill on this (or a previous) line.</p>
+<p>These fields both allow entry of negative values to allow the effective 
+ reverse of errors/changes in billing and amortization by adding a new 
+ line (with the appropriate negative values). After running Compute PM 
+ billing, the user should then print the negative dollar invoice (it will 
+ use the Client Site PM Billing line as the ‘source journal’). Note that 
+ validation prevents the entry of both positive and negative contract amounts 
+ on the same line. The entry of negative amounts is denied on lines flagged 
+ as &#39;renewable&#39;.</p>
+<p>When the Start PM Billing function is run, negative Amt to Earn (amortization) 
+ lines will result in a GL Journal entry with a negative debit to the accrued 
+ expenses account (the GL Debit account) and a negative credit to the sales 
+ accrued (the GL Credit account).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Foreign 
+ Currency Processing</font><font style="font-weight: bold;">:<br/>
+</font>If this is a foreign customer, these fields must be entered in terms 
+ of the foreign revenue the customer will be billed in.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">GL Acnt:  GL 
+ Acnt:</p>
+<p><font style="text-decoration: underline; ">If Amortizing the Amount 
+ Earned on a Billing Schedule.</font></p>
+<p style="margin-left: 36.00pt;">The first GL Account is the Income (sales 
+ or revenue) account where the Amount Earned will post. This Account will 
+ be credited with the Amount Earned when the Start Create PM Invoice function 
+ is run.</p>
+<p style="margin-left: 36.00pt;">The second GL Account is the Liability 
+ (unearned income) account where the Amount Billed will post. This Account 
+ will be credited with the Amount Billed when PM invoices are generated, 
+ printed, and posted.</p>
+<p style="margin-left: 36.00pt;">Note, both accounts are required on each 
+ line (unless the applicable registry entries have been made in sys-ffv-global-setting 
+ to provide the defaults). Amortized amounts will post with the ending 
+ date of the corresponding accounting period.</p>
+<p style="margin-left: 36.00pt;">The GL Journal entries generated by this 
+ function will have a header Transaction Description of &quot;pm accrual 
+ entries&quot;. The detail transaction description will be of the form 
+ &quot;client site id:&quot; followed by the actual client site id.</p>
+<p><font style="text-decoration: underline; ">If Not Amortizing the Amount 
+ Earned on a billing schedule.</font></p>
+<p style="margin-left: 36.00pt;">The first GL Account is the Income (sales 
+ or revenue) account where the Amount Billed will post. This Account will 
+ be credited with the Amount Billed when PM invoices are generated, printed, 
+ and posted. The second GL Account field should not be completed.</p>
+<p><font style="font-weight: bold;">Job Id: Cost Code: Billing Item:</font><br/>
+These fields are required for PM Billing and for Amortization entries.</p>
+<p><font style="font-weight: bold;">Ok to Renew:</font><br/>
+Any line(s) flagged as OK to Renew will be copied when the Renew Service 
+ Contracts function is run. During the Renew Service Contract processing, 
+ the new line will then be flagged as Ok to Renew; the older line that 
+ was used as a template will have the Ok to Renew field blanked.</p>
+<p><font style="font-weight: bold;">Invoice Description:</font> (40 character)<br/>
+This optional field enables you to enter a brief description of this billing 
+ to appear on the invoice; it will be written to the Revenue Adjustment 
+ tab of PM Invoice type work order. The extended Invoice Description (accessed 
+ by clicking the Magnify button) allows for a more detailed description.</p>
+<p><font style="font-weight: bold;">PM Inv No:</font><br/>
+This display-only field will be filled in by the system when a line has 
+ been Invoiced by running the <a href="Create_PM_Invoice.htm">Generate 
+ PM Invoice</a> function on the Folders Invoicing tab (When this function 
+ is run, the Computed Thru date in the PM Job record specified in the Client 
+ Site will also be set to the Bill Date specified to ensure that future 
+ billings for this Job are computed correctly.). Lines that have been invoiced 
+ cannot be deleted.</p>
+<p><font style="font-weight: bold;">Invoice Status<br/>
+</font>This field comes from the Invoice Master record (if available):</p>
+<p style="margin-left: 36.00pt;">When the PM Invoice No. field is blank, 
+ the Invoice Status is blank.<br/>
+When a valid PM Invoice Id is shown, the Invoice Status comes from the 
+ associated Invoice Master record.<br/>
+If the PM Invoice Id cannot be found in the Invoice Master table, the Invoice 
+ Status displays &#39;unknown&#39;.</p>
+<p><font style="font-weight: bold;">GLJ Trx Id:</font> <font style="font-weight: bold;"><br/>
+</font>This display-only field lists the GL Transaction Id of amortized 
+ lines that have been posted to GL.</p>
+<p style="margin-left: 36.00pt;">If the line&#39;s amortization amount (Amt 
+ to Earn) is zero, the GLJ Trx Id displays &#39;n/a&#39;.</p>
+<p style="margin-left: 36.00pt;">When the line has an Earn amount but the 
+ posted-to-gl flag is false, the Trx Id display is blank.</p>
+<p style="margin-left: 36.00pt;">If the system fails to find a qualifying 
+ transaction, the Trx Id display reads &#39;unknown&#39;.</p>
+<p style="margin-left: 36.00pt;">If multiple amortizations for the same 
+ accounting period have been made for the same job, only the most recent 
+ GLJ Transaction will be listed. If this is the case, the GLJ Transaction 
+ will be followed by an asterisk, indicated that multiple transactions 
+ exist.</p>
+<p><font style="font-weight: bold;">Posted to GL?<br/>
+</font>This display-only field will be filled in by the system when a PM 
+ Accrual entry has been made. Posted lines may not be deleted.</p>
+<p><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/> 
+ Click the Magnify Button to Access the following fields.</p>
+<p><font style="font-weight: bold;">Invoice Description Extended<br/>
+</font>This field allows for a more detailed Invoice Description.  If 
+ completed, this field is written to the Invoice Description of Work Performed 
+ during the creation of PM Invoice-type work orders. Note that the older 
+ Invoice Description on the PM line is still written to the Revenue Adjustment 
+ line as in previous releases.</p>
+<p>This field was expanded from 400 to 3000 characters in Version 8.1 to 
+ match the WO&#39;s Work Performed field.  When creating new Billing 
+ Schedule lines from Master Contracts, the system now sets the line&#39;s Extended 
+ Description to the associated Billing Item&#39;s Invoice Description.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><font style="font-weight: bold;">Work Order Id:<br/>
+</font>If a PM Invoice Work Order was generated to bill this line, its 
+ Id will be displayed in this field.</p>
+<p><font style="font-weight: bold;">GL Income:<br/>
+GL Accrual:</font></p>
+<p>These fields correspond to the first and second GL Accounts discussed 
+ above.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">PM Master Contract</font><br/>
+The <a href="PM_Master_Schedule_Master_Contract_.htm">PM Master Schedule 
+ (Master Contract)</a> function may be used to maintain both Billing and 
+ Scheduling records for your service agreements.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Things 
+ to Check if a PM Accrual Did Not Post</font></p>
+<p style="margin-left: 36.00pt;">- The Client Site is not Active; accruals 
+ will not be posted for Credit Hold Sites.</p>
+<p style="margin-left: 36.00pt;">- The Job Date closed is less than the 
+ Effective Date on the accrual line.</p>
+<p style="margin-left: 36.00pt;">- Both GL Accounts are completed. If you 
+ are using Master Contracts, the GL Accounts for revenues and accruals 
+ must be filled in on the detail view, on the Adv Bill tab in Master 
+ Contract for each of the lines created.   Or the registry 
+ entry must be in place to default in the accounts on the line from sys-viewer-vmstrcntrct.</p>
+<p style="margin-left: 36.00pt;">- The Closing Date of the Accounting Period 
+ of the Accrual must be between the Begin and End date of the Job.</p>
+<p style="margin-left: 36.00pt;">- The invoice that was billed out and 
+ is being accrued may not have been posted.</p>
+<p style="margin-left: 8px; font-weight: bold;">Job Cost Category Id:<br/>
+<span style="font-weight: normal;">In some States certain Preventive Maintenances 
+ are taxable while others are not taxable. If completed, this field 
+ overrides the default Cost Category derived from the  sys-start-scrtepmbllng 
+ registry&#39;s Cost Category option can be overridden with the value on the 
+ Site Billing Schedule line.   This will allow the user 
+ full control to make the Billing taxable or non-taxable as needed.</span></p>
+<p style="margin-left: 8px;"><span id="BugEvents29">This field also enables 
+ a single PM Invoice to be generated with taxable and non-taxable components. 
+ To do so, create 2 lines with the following fields entered identically, 
+ but with</span> <span style="font-weight: bold;">different</span> <span>Job 
+ Cost Categories to define the taxable and non-taxable elements:</span> 
+ <span id="BugEvents2811">Billing Schedule Date, Job Id, Cost Code, Billing 
+ Item</span></p>
+<p style="margin-left: 48px;">Tip: Invoice Description</p>
+<p style="margin-left: 48px;">You may wish to edit the Invoice Description 
+ to better indicate the taxable/non-taxable (material/labor) components 
+ of the invoice).</p>
+<p style="margin-left: 8px;"><span>This field supports enhanced filtering 
+ provided by the Cost Code&#39;s Job Cost Category Usage Filter. Cost Categories 
+ are validated (relative to Cost Codes) during data entry upon leaving 
+ the Cost Category Id field.  The full relationship is validated again 
+ when leaving a child line or saving a record.</span></p>
+<p><font style="font-weight: bold;">Asset Id:<br/>
+</font>Completing this field indicates that this is a Rental Billing for 
+ the specified Asset. If this field is completed:</p>
+<p style="margin-left: 36.00pt;">This line will be eligible for Start Create 
+ Rental Billing</p>
+<p style="margin-left: 36.00pt;">This line will be ignored by Start Create 
+ PM Billing</p>
+
+</body></html>

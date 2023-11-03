@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.30.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="Data Bridge"/>
+  <meta name="MS-HKWD" content="Service Channel"/>
+  <meta name="MS-HKWD" content="registry"/>
+  <meta name="MS-HKWD" content="sys-FMMS"/>
+  <meta name="MS-HKWD" content="FMMS"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry_Service_Channel_sys_FMMS_</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="Data Bridge,Service Channel,registry,sys-FMMS,FMMS"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry_Service_Channel_sys_FMMS_">
+        <span>Registry_Service_Channel_sys_FMMS_</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry Service Channel (sys-fmms)</h1>
+  <p>The Sampro Registry entry ‘sys-FMMS’ must be present in order to enable the FMMS system. It can be temporarily disabled by adding a Setting Key: Enabled Setting Value: No line. Changing the Value to Yes will re-enable the FMMS system.</p>
+  <h2>Related Registry Options:</h2>
+  <p>See <a href="Registry_Service_Channel_PIN.htm">Registry Service Channel PIN</a> for details on setting the registry entries needed to support multi-company certificates for uploaded invoices.</p>
+  <h2>Options for Service Channel</h2>
+  <p>
+    <font style="font-weight: bold;">Id: <span style="font-weight: normal;">sys-fmms-vendor-ServiceChannel</span></font>
+  </p>
+  <p>Configuration settings for the ServiceChannel FMMS system are stored in the ‘sys-FMMS-vendor-ServiceChannel’ entry of the SAMPro Registry.</p>
+  <h3>FMMS Document Maintenance - Start FMMS Prune Folders</h3>
+  <p>The FMMS process can leave a lot of files in the following folders: InboundDocumentArchiveFolder, InboundDocumentRejectFolder and InboundMessageDumpFolder.</p>
+  <p>.The Start FMMS Prune Folders function may be set for run as a scheduled event. The following options control and enable this function.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> PruneArchiveRetentionDays  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">numberofdays</span></p>
+  <p>Only files older that this number of days are candidates for removal. No files will be removed if this entry is absent.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> PruneArchiveMaxCount   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">numberoffiles</span></p>
+  <p>No more than this number of files will be removed each time the ‘Prune Folders’ function (as described below) is invoked. No such limit will be imposed if this entry is absent.</p>
+  <p style="margin-left: 48px; text-decoration: underline; ">Example: if PruneArchiveRetentionDays = 90 and PruneArchiveMaxCount = 100,</p>
+  <p style="margin-left: 48px;">• Only files older than 90 days old will be removed.</p>
+  <p style="margin-left: 48px;">• No more than the 100 oldest files will be removed at a time.</p>
+  <p style="margin-left: 48px; text-decoration: underline; ">Example: if PruneArchiveRetentionDays = 90 and PruneArchiveMaxCount is absent from the Registry,</p>
+  <p style="margin-left: 48px;">• All files older than 90 days old will be removed.</p>
+  <h3>Registry to Support Canadian Sales Tax Invoicing</h3>
+  <p style="margin-left: 8px;">This release supports a registry to enable enhanced processing to support sales tax for Canadian Service Channel invoicing. The GST will be reported in the &#39;invoiceTax&#39; column while other taxes are to be reported in the &#39;tax2&#39; and &#39;tax2Name&#39; columns. The Sales Tax Authority&#39;s &#39;Tax Code From State&#39; field is used to identify the appropriate tax category to be reported for an invoiced tax amount. This should contain one of the following values: &#39;GST&#39;, &#39;PST&#39;, &#39;HST&#39;, or &#39;QST&#39;.</p>
+  <p style="margin-left: 8px;">The following Service Channel Registry entry is required to turn on Canadian Tax reporting</p>
+  <p style="font-weight: bold; margin-left: 8px;">Id: sys-fmms-vendor-ServiceChannel</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span>  InvoiceIsCanadian  <span style="font-weight: bold;">Setting Value:</span> yes (or begins with  &#39;y&#39;, &#39;Y&#39;, &#39;t&#39;, &#39;or T&#39;)</p>
+  <p style="margin-left: 8px;">Note that the Tax Authority Tax Code From State field has been relaxed to allow values that are longer than 2 characters.</p>
+  <h3>Support I.14 Service Channel Invoice</h3>
+  <p><span style="font-weight: bold;">Setting Key</span>: InvoiceTemplate   <span style="font-weight: bold;">Setting Value:</span> I.14</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> InvoiceIsDetailed  <span style="font-weight: bold;">Setting Value:</span> Y (or y, T or t)</p>
+  <p><span style="font-weight: bold;">Note:</span><br/>
+    The Service Channel i.14 invoice template requires that materials are used to complete the job; ServiceChannel will reject the invoice if it doesn&#39;t contain material information. Since all jobs do not require materials, this release will add a dummy $0 material line to get around this requirement. The Material Description of &#39;No Material Required&#39; will be used on the $0 line to conform to ServiceChannel requirements.</p>
+  <p>Version 9.1 expands the support of optional detail lines on Service Channel Invoice I.14 to Other Labor lines.  </p>
+  <h3> Check-In and Check-Out Messages to ServiceChannel with Check Element</h3>
+  <p>When SAMPro detects certain Status changes to a Work Order, it sends ServiceChannel a CALL XML message that includes TR_NUM and the new ServiceChannel STATUS code. When entering certain Status values, ServiceChannel would like us to include a CHECK element within the CALL XML. The CHECK element  includes a TYPE code which corresponds to the new Status Code.</p>
+  <h5>Identify ‘CHECK TYPE’ Values Corresponding to ServiceChannel Work Order Status Codes.</h5>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-FMMS-Vendor-ServiceChannel</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> CheckTypeForServiceChannelStatus</p>
+  <p><span style="font-weight: bold;">Setting Value:</span> ServiceChannelStatusCode:CorrespondingCHECKTypeCode</p>
+  <p style="margin-left: 48px;">1. There may be multiple Registry lines with the ‘CheckTypeForServiceChannelStatus’ key.</p>
+  <p style="margin-left: 48px;">2. Each line may consist of multiple mappings with individual mappings separated by a ‘,’ character.</p>
+  <p style="margin-left: 48px;">3. The Valid CHECK Type Codes are: IN, OUT, DISP, and CLOSE</p>
+  <p style="margin-left: 88px; text-decoration: underline; ">Example:</p>
+  <p style="margin-left: 88px;">Setting Key: CheckTypeForServiceChannelStatus<br/>
+    Setting Value: ON_SITE:IN, COMPLETED:OUT</p>
+  <p style="margin-left: 48px;">4. If a mapping is not found (or evaluates to ‘N/A’), no CHECK element will be included in the CALL XML.</p>
+  <p style="margin-left: 48px;">5. There being several ServiceChannel Status Codes beginning with ‘COMPLETED’ , a special ‘short cut’ is available for those Status Codes: If no mapping is found (or if an ‘N/A’ mapping is found)  for a Status Code and the Status Code begins with ‘COMPLETED’, Sampro will try to identify and use a mapping for the ‘COMPLETED’ status code.</p>
+  <h5>Modification –Check In and Check Out Sequencing via the CHECK element’s ID property.</h5>
+  <p>Check elements include an ‘ID’ attribute that ServiceChannel uses to internally sequence Check Ins and Check Outs. The restrictions are:</p>
+  <p>1. Each Check In process should be identified by an ID attribute value greater in value than that used in any prior Check In processes.</p>
+  <p>2. Each Check Out process should be identified by an ID attribute that matches that used in the corresponding Check In process.</p>
+  <p>In order to implement this sequencing, Sampro must somewhere retain the appropriate Check Sequencing information. This has been implemented as follows:</p>
+  <p>1. Sequencing information will be retained on one of the Work Order’s User Fields.</p>
+  <p>2. The User Field to be used will be identified in the following registry entry by the line having the key ‘. The value of this key should be a number between 1 and 5 inclusive.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Registry Id:</span> sys-FMMS-Vendor-ServiceChannel</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> WOUserFieldNumberForCheckInCheckOut</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">a number between 1 and 5 inclusive.</span></p>
+  <p>3. The chosen User Field in the Work Order should be customized to ‘SC In/Out Count:’.</p>
+  <p>4. If no ‘WOUserFieldNumberForCheckInCheckOut’ key is found, the value of the next rn will be used for the ID attribute. This will not result in proper sequencing.</p>
+  <p>5. The format of the In/Out Count field will be of the form ‘inCount/OutCount’.</p>
+  <p>Example: ‘2/1’ meaning there have been 2 CHECK INs but only 1 CHECK Out.</p>
+  <p>6. A blank value of the in/Out Count Field will be treated as ’0/0’ so there is no need to initialize this field.</p>
+  <p>7. Whenever SAMPro sends a CHECK IN, it will increment the Work Order’s inCount; whenever Sampro sends a CHECK OUT, it will increment the Work Order’s outCount.</p>
+  <p>8. Whenever SAMPro sends either a CHECK IN or a CHECK OUT, it will use the value of the Work Order’s inCount for the ID value, ignoring the outCount. Thus a CHECK IN can have multiple CHECK OUTs. Note that because of this, the outCount is actually irrelevant in this processing and is maintained only for informational purposes.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Caution:</span><br/>
+    Note that this feature should only be used for customers not using ServiceChannel’s IVR check-in/check-out system. It is not clear at this time what will happen if, for example, a Check-Out is sent to ServiceChannel as a response to SAMPro processing a Check-Out message sent by ServiceChannel itself.</p>
+  <h3>Derive Scheduled Date / Time of Accepted Request Message from Original ServiceChannel Request</h3>
+  <p>When New Call creates a new Workorder based on a  Service Request from ServiceChannel (via the Weblog), it must send ServiceChannel a message that the Service Request has been accepted. This message includes a Scheduled Date and a Scheduled Time.</p>
+  <p>Normally the Scheduled Date and Scheduled Time are derived from the Workorder being created. The following registry may be implemented to derive the Scheduled Date and Scheduled Time are from data in the original Service Request that was sent by ServiceChannel. </p>
+  <p><span style="font-weight: bold;">Id:</span> sys-fmms-vendor-servicechannel</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> SchedDateTimeSourceWhenAcceptingWO</p>
+  <p><span style="font-weight: bold;">Setting Value:</span> ServiceRequest or WorkOrder (default)</p>
+  <p>If the key is missing or the value is other than &#39;ServiceRequest&#39; (case insensitive), a value of &#39;WorkOrder&#39; will be assumed.</p>
+  <p>If the Setting Value is &#39;ServiceRequest&#39;, then the Scheduled Date and Scheduled Time will be taken from the original Service Request issued by ServiceChannel. If the value is &#39;WorkOrder&#39;, the Scheduled Date and Scheduled Time will be taken from the Workorder being created.</p>
+  <h3>Enabled Flag</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> Enabled  <font style="font-weight: bold;">Setting Value:</font> Yes
+  </p>
+  <p>This acts like the ‘sys-FMMS’ enabled flag but is used specifically for the ServiceChannel Data Bridge (as opposed to all FMMS activity).</p>
+  <h3>Document Folders</h3>
+  <p>
+    <font style="text-decoration: underline; ">InboundDocumentSourceFolder</font> which identifies the folder in which the web server (described below) drops new Service Requests.
+  </p>
+  <p>
+    <font style="text-decoration: underline; ">InboundDocumentArchiveFolder</font> and <font style="text-decoration: underline; ">InboundDocumentRejectFolder</font> which identify the folders in which new Service Requests are moved after being processed.
+  </p>
+  <h3>Webserver Port</h3>
+  <p>
+    <font style="text-decoration: underline; ">WebserverPort</font> identifies the port on which the Sampro HTTPServer (described below) listens for new Service Requests. This defaults to 9999 if not specified.
+  </p>
+  <h3>Service Channel Web Addresses</h3>
+  <p>
+    <font style="text-decoration: underline; ">ServiceChannelUrl</font> which identifies the URL to which messages to ServiceChannel are to be sent.
+  </p>
+  <p>
+    <font style="text-decoration: underline; ">ServiceChannelUri</font> which identifies the uri of the Web Service at ServiceChannel
+  </p>
+  <h3>Service Provider (User) Data</h3>
+  <p>
+    <font style="text-decoration: underline; ">CustomerId</font>, <font style="text-decoration: underline; ">StoreId</font>, and <font style="text-decoration: underline; ">Pin</font> which identify the service provider to Service Channel
+  </p>
+  <h3>Logging</h3>
+  <p>
+    <font style="text-decoration: underline; ">LogMode</font>. When set to ‘on’ instructs the FMMS system write events to the file identified by the LogPath
+  </p>
+  <p>
+    <font style="text-decoration: underline; ">LogPath</font> identifies the full path name of the file to be used for the FMMS log.
+  </p>
+  <h3>E-mail</h3>
+  <p>Email entries are used when Sampro emails invoice spreadsheets (as attachments) to ServiceChannel. These entries include:</p>
+  <p>
+    <font style="text-decoration: underline; ">emailSavePath</font> identifies a folder into which invoice spread sheets will be saved.
+  </p>
+  <p>
+    <font style="text-decoration: underline; ">emailFrom</font> identifies the ’From’ line to be used in the emails.
+  </p>
+  <p>
+    <font style="text-decoration: underline; ">emailTo</font> identifies the ‘To’ line to be used in the emails.
+  </p>
+  <p>
+    <font style="text-decoration: underline; ">emailSubject</font> identifies the ‘Subject’ line to be used in the emails.
+  </p>
+  <p>
+    <font style="text-decoration: underline; ">emailMessage</font> identifies the contents of the message to be used in the emails.
+  </p>
+  <p>
+    <font style="text-decoration: underline; ">emailRetainDays</font> identifies the number of days an invoice spread sheet will be retained in the emailSavePath folder before being automatically removed. This defaults to 7 if not specified.
+  </p>
+  <h3>Status Mapping</h3>
+  <p>
+    <font style="text-decoration: underline; ">statusMappings</font> settings are used to map SAMPro Escalation Status values to ServiceChannel status values. A typical entry would be of the form
+  </p>
+  <p><span style="font-weight: bold;">Setting Key:</span> statusMappings  <span style="font-weight: bold;">Setting Value:</span> Acknowledged:DISPATCH CONFIRMED</p>
+  <p>A comma-delimited list of multiple mappings may be contained on one line as per:</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> statusMappings  <span style="font-weight: bold;">Setting Value:</span> a:AAA, b:BBB</p>
+  <h3>Map SAMPro Log Status to ServiceChannel by Client Id</h3>
+  <p>This release adds the flexibility to map SAMPro log status’ to Service Channel log status’ based on registry set values keyed by Client Id (derived from the Job in the WO header).</p>
+  <p>Normally, SAMPro Workorder status codes are mapped to ServiceChannel status codes via the ‘StatusMappings’ lines found in the SAMPro ServiceChannel Registry entry; they will be used for all Service Channel Clients. However, various ServiceChannel clients may have differing status code mappings. This release extends the SAMPro Registry to allow multiple status mapping sets based on the Workorder&#39;s Client Id (derived from the Job in the WO header).</p>
+  <p>To create a set of Status Mappings in the SAMPro sys-fmms-vendor-ServiceChannel Registry for a specific Client, append a &#39;-&#39; and the Client Id to the &#39;StatusMappings&#39; key.</p>
+  <p style="text-decoration: underline; ">Example:</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-fmms-vendor-ServiceChannel</p>
+  <p><span style="font-weight: bold;">Setting Key:</span>  StatusMappings-Wendys   </p>
+  <p><span style="font-weight: bold;">Setting Value:</span> Acknowledged:DISPATCH CONFIRMED</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Tip:</span><br/>
+    Make sure that a StatusMappings option without the Client Id appended is retained for general use.</p>
+  <h3>QuoteMaster Cost Categories</h3>
+  <p>Sampro QuoteMaster Cost Category settings. These identify which QuoteMaster Other tab Cost Categories will be converted to Tax and Freight values in an uploaded ServiceChannel Proposal.</p>
+  <p>ProposalOtherCostCategoryForTax</p>
+  <p>ProposalOtherCostCategoryForFreight</p>
+  <h3>Specify Invoice UserId and Password</h3>
+  <p>Invoices are uploaded to ServiceChannel by sending them an email with an attached spreadsheet. For each work order, the spreadsheet includes a userId and a password. The userId and password are derived from the Sampro Registry sys-fmms-vendor-servicechannel.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key</font>: InvoiceUID  Setting Value: <font style="font-style: italic;">User Id provided by Service Channel</font>
+  </p>
+  
+  <p><span id="BugEvents161" style="font-weight: bold;">Setting Key:</span> <span>InvoicePIN  Setting Value:</span> <span style="font-style: italic;">IVRPINNumber</span></p>
+  <p><span>The value of this setting should the IVR PIN Number used by your company.</span></p>
+  <h3>Copy ServiceChannel SCHED_DATETIME to WO&#39;s Date and Time Must Complete</h3>
+  <p style="font-weight: bold;">Id: sys-fmms-vendor-ServiceChannel</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> <span style="font-size: 14px;">IncludeMustCompleteDateInNewWorkOrder  </span><span style="font-weight: bold;">Setting Value:</span> Y</p>
+  <p>When this registry is enabled, when a Work Order is generated from Service Channel, the ServiceChannel SCHED_DATETIME will be copied to the Work Orders&#39; Date and Time Must Complete fields. </p>
+  <h3>Registry to Adjust Statuses Exempt from Inbound IVR Status Change Message</h3>
+  <p>ServiceChannel provides an IVR facility that allows techs to phone into them with a change to a Workorder&#39;s status. This change is then forwarded to SAMPro for posting to the SAMPro Workorder. Sometimes it becomes necessary (for ServiceChannel internal reasons) for a tech to make such a IVR entry for a Workorder that has a &#39;finished&#39; status (e.g. &#39;billed&#39;) within SAMPro. In this release, we prohibit SAMPro from updating a Workorder&#39;s status in response to such an inbound IVR status change message for ‘Cancelled’ and ‘Billed’ Work Orders. Note that the Work Order’s current status is derived from the wrkordrlgtype_id on the first line of the Workorder’s Technicians tab.  </p>
+  <p>This functionality may adjusted via registry.</p>
+  <p style="font-weight: bold;">Id: sys-fmms-vendor-ServiceChannel</p>
+  <p>
+    <font><span style="font-weight: bold;">Setting Key:</span></font> StatusUpdateIsProhibitedForStatusCodes  <span style="font-weight: bold;">Setting Value:</span> listofstatuscodes
+  </p>
+  <p>The Setting Value is a list of status codes separated commas. The codes ‘Cancelled’ and ‘Billed’ are always automatically added to the list. If no entry is found, the list will consist solely of these two entries.</p>
+  <h3>Upload Equipment Work Performed Notes on Status Change</h3>
+  <p style="margin-left: 8px;">
+    <font style="font-weight: bold;">Id: <span style="font-weight: normal;">sys-fmms-vendor-ServiceChannel</span></font>
+  </p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> UploadEquipmentWorkPerformedNotes</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Value:</span> Y</p>
+  <p style="margin-left: 8px;">Note that values of Y, y, T, or t enable this mod; the default is that this mod is not enabled. When this option is enabled, Work Order&#39;s Work Performed is now sent as Notes to ServiceChannel whenever a Status update is sent.</p>
+  <p style="margin-left: 48px;">A Work Order Note is sent to ServiceChannel for each Equipment line in the Work Order.</p>
+  <p style="margin-left: 48px;">The Note includes the contents of the Work Order Equipment Work Performed field.</p>
+  <p style="margin-left: 48px;">Each note is prefixed with the Equipment Id, Manufacturer, Model, and Serial Number.</p>
+  <p style="margin-left: 8px;">If this option is not enabled, the Work Performed will be included in a &lt;RESOL&gt; sub-element of the &lt;CALL&gt; element when a status change is sent.</p>
+  <p style="margin-left: 8px;">Note: see the following registry to refine the upload setting.</p>
+  <h3>Disable Uploading Equipment Work Performed by Equipment Id</h3>
+  <p>The previous registry enables a feature that sends a Work Order Note to ServiceChannel for each equipment line on a work order. This registry allows the upload feature to be disabled for specified Equipment Ids. This new registry option may be used to refine which Equipment Id&#39;s have their Work Performed uploaded to ServiceChannel.  The value of this key is a comma separated list of Equipment Ids to be excluded from the Note sending operation.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-fmms-vendor-ServiceChannel</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> UploadEquipmentWorkPerformedNotesExceptEquipment<br/>
+    <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">Id1,Id2,..</span>.
+  </p>
+  <p><span style="font-weight: bold;">Setting Key:</span> UploadEquipmentWorkPerformedNotes  <br/>
+    <span style="font-weight: bold;">Setting Value:</span> Y   (note that this setting is also required)
+  </p>
+  <p>The following example would prevent the sending of Work Order Notes for Client Site Equipment Id &#39;RTU2&#39;, but allow that for all other Equipment Id&#39;s to be sent.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> UploadEquipmentWorkPerformedNotesExceptEquipment  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Value:</span> RTU2</p>
+  <h3>Registry to Delay ServiceChannel Upload of Work Performed</h3>
+  <p>This registry provides a Registry-specified delay between the posting of the Status change and the sending of the Equipment Work Performed notes. The assumption is that by providing a sufficient delay, TechAnywhere will have uploaded the required Equipment information before the delay expires.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-fmms-vendor-ServiceChannel</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> EquipmentWorkPerformedDelaySeconds  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">delay in seconds</span></p>
+  <p style="margin-left: 48px;"><span style="text-decoration: underline; ">Example:</span> The following will delay the sending of the Equipment Work Performed message for 30 minutes following the status change. The default delay is zero seconds.</p>
+  <p style="margin-left: 48px;">Setting Key: EquipmentWorkPerformedDelaySeconds  Setting Value: 1800</p>
+  <p class="Support" style="text-decoration: underline; ">T</p>
+  
+  
+  
+  
+  <h2>Additional Breakout of Charges for Service Channel</h2>
+  <p>SAMPro supports the following charges to be broken out on the ServiceChannel Invoice Spreadsheet: Trip Charge, Material Total, Freight Charge, Markup. Previously, the Trip Charge and the Freight Charge were included in the Material Total. In addition, a separate Markup charge was not reported on the Invoice.</p>
+  <p>There are separate columns on the spreadsheet for Trip Charge, Material Total, and Freight Charge. The Markup amount is to be reported in the Other Charges columns.</p>
+  <p>Charges from the Work Order’s Other tab that are not identified as a Freight Charge or a Trip Charge will be included in the ‘Other Charges’ column.</p>
+  <p style="margin-left: 36.00pt;">If there is exactly one ‘Other Charge’, the Other Rate’s Description will appear in the ‘Other Charges Description’ column.</p>
+  <p style="margin-left: 36.00pt;">If there is more than one ‘Other Charge’, the word ‘Various’ will appear in the ‘Other Charges Description’ column.</p>
+  <p>The following registry entries are required to implement these enhancements:</p>
+  <h3>Other Rate Id’s that Identify Freight Charges</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> OtherCodesFreight
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Value:</font> A comma separated list of Other Rate Ids identifying Freight Charges.
+  </p>
+  <h3>Other Rate Id’s that Identify Trip Charges</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> OtherCodesTravel
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Value:</font> A comma separated list of Other Rate Ids identifying trip charges.
+  </p>
+  <h3>Other Charge Description Sent to ServiceChannel</h3>
+  <p>In SAM Pro invoices, the description of the ‘other’ charges comes from the Other Rate Description. However, ServiceChannel now only allows the following valid Other Charge Descriptions:</p>
+  <p style="margin-left: 36.00pt;">Discount<br/>
+    Management Fee<br/>
+    Markup<br/>
+    Overhead &amp; Profit<br/>
+    Rental Fee<br/>
+    Shipping &amp; Handling<br/>
+    Subcontractor Cost<br/>
+    <br/>
+    To ensure that the ServiceChannel invoice conforms to this standard, the following registry should be implemented to statically set the description:
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> OtherChargesDescription <font style="font-weight: bold;">Setting Value:</font> valid description<br/>
+    <br/>
+    If this entry is not found the description &#39;Not Found In Sampro Registry&#39; will be used. Anytime a ServiceChannel invoice is generated and contains a dollar amount in the Other Charges Total section, it will need to use what is specified in the registry.
+  </p>
+  <h3>Registry Entries to Define Labor and Tax Subcontracting Charges</h3>
+  <p>This enhancement to Service Channel integration allows users to break out their Labor (Other Rate) subcontracting charges into the &#39;Labor Total&#39; section of the ServiceChannel invoice format as well as for the tax that they pass on to the customer as an Other Rate to display in the &#39;Invoice Tax&#39; section of the Service Channel invoice format.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> OtherCodesLabor <font style="font-weight: bold;">Setting Value:</font> list of other rates for labor
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> OtherCodesTax <font style="font-weight: bold;">Setting Value:</font> list of other rates for tax
+  </p>
+  <p>This release supports multiple lines for the same group of Other Codes (e.g. OtherCodesLabor). This is in case there are too many codes (e.g. OtherCodesLabor codes) to fit on a single line in the registry entry.</p>
+  <h3>Use ServiceChannel IVR Service for Work Orders Originating in SAMPro</h3>
+  <p>This enhancement extends SAMPro’s ServiceChannel Data Bridge to provide for the use of the ServiceChannel IVR service for Work Orders not originating as  ServiceChannel New Service Requests.  A registry (see below) is required to enable this functionality.</p>
+  <p>When a Work Order is created in SAM Pro via New Call, Create PM Work Order, Create PM Billing, or Create Rental Billing, a <span style="text-indent: -.25in; 
+															 mso-list: l0 level1 lfo1;">New Work Order XML message (as per ServiceChannel specs) for transmission to ServiceChannel. In the New Call case, however, this process will be omitted if the Work Order was created as the result of the pulling of a ServiceChannel New Service Request from SAMPro’s weblog.</span></p>
+  <p><span style="text-indent: -.25in; mso-list: l0 level1 lfo1;">The queueing of the New Work Order XML will take place regardless of whether the Client is or is not a “Mutual” Authority/ServiceChannel client. The contents of the New Work Order XML message will be derived from the contents of the SAMPro Work Order and the appropriate entries in the following Registry.</span></p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-FMMS-Vendor-ServiceChannel</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> NewWOToServiceChannelEnabled  <span style="font-weight: bold;">Setting Value:</span> True</p>
+  <p><span style="text-indent: -.25in; mso-list: l1 level1 lfo2;">This registry option is required to enable this feature. Set its value to ‘Yes’ or ‘True’ to turn this feature on. Actually, any value beginning with ‘Y’, ‘y’, ‘T’, or ‘t’ will enable this feature.</span></p>
+  <p><span style="font-weight: bold;">Setting Key:</span> NewWOToServiceChannelDefaults</p>
+  <p><span style="font-weight: bold;">Setting Value:</span> LOC:multi, SUB:#fromSC, PRIORITY:NORMAL, PRICE:0.00, NTE:0.00, STATUS:OPEN, CURRENCY:USD, TRADE:HVAC, OPERATOR:namefromSC, CATEGORY:Repair</p>
+  <p><span style="text-indent: -.25in; mso-list: l1 level1 lfo2;">This registry sets the default values of certain attributes for the generated New Work Order. Note that these all appear on one registry line. The format of the line is a collection of comma separated key/Value pairs with the keys separated from the values by a colon.</span></p>
+  <p style="text-indent: -.25in; margin-left: 48px;"><u>Check with ServiceChannel</u> for the correct values for the <b style="mso-bidi-font-weight: normal;">LOC</b>, <b style="mso-bidi-font-weight: normal;">SUB</b>, <b style="mso-bidi-font-weight: normal;">TRADE</b>, <b style="mso-bidi-font-weight: normal;">OPERATOR</b>, and <b style="mso-bidi-font-weight: normal;">CATEGORY</b> keys as these may vary from installation to installation.</p>
+  <h5>PM Work Order Handling if NewWOToServiceChannelEnabled is Set to True</h5>
+  <p style="margin-left: 40px;">A conflict exists with PM Work Order if the above registry option is enabled. This is because ServiceChannel creates their own PM Work Orders sends them to SAMPro as New Dispatches. If the SAMPro &#39;Start Create PM WorkOrders&#39; is also used to create PM Work Orders, this results in duplicated PM Work Orders and much confusion takes place. Contact Support for a registry entry and procedures to resolve this condition.</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h2>Specialized CVS Formatting</h2>
+  <p>
+    <font style="font-weight: bold;">Identifying CVS Clients</font>
+  </p>
+  <p>A Sampro user could potentially have ServiceChannel arrangements for a mixture of CVS and Generic clients. It is assumed that such a user would also produce a uniquely formatted paper invoice format for CVS. Within Sampro, the appropriate invoice format is identified by the Report Query Id found in the appropriate Job Billing Item record.</p>
+  <h3>Registry to Identify Clients Requiring Special CVS Spreadsheets</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ReportQueriesForMarkupMode
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Value:</font> A comma separated list of Report Query Ids
+  </p>
+  <p>These Report Query Ids will identify clients (via their Billing Items) requiring special CVS formatted ServiceChannel invoice spreadsheet lines.</p>
+  <p>
+    <font style="font-weight: bold;">For CVS type clients</font>
+  </p>
+  <p>Charges will appear in the ‘Freight Charges’ and ‘Trip Charge’ columns as determined by the same mechanism used by the ‘Generic’ type clients.</p>
+  <p>Charges that would (for ‘Generic type Clients) be included in the ‘Other Charges’ column will now appear in the ‘Material Total’ column. This will free up the ‘Other Charges’ column to be used for Markup.</p>
+  <p>Charges appearing in the ‘Material Total’ column will have to be classified as either being ‘Marked Up’ or as ‘Flat Rate’. This will be done by examining the charge’s ‘Billing Rate Type’. Charges from the Work Other’s ‘Other’ Tab will be considered as ‘Marked Up’ if and only if the Billing Rate Type is set to one of the ‘markup’ types of markup, margin or multiplier. Charges from the Work Order’s ‘Inventory’ Tab will always be considered as ‘Marked Up’.</p>
+  <p>If a charge is considered as ‘Marked Up’, the ‘Markup Amount’ will be included in the ‘Other Charges’ column but not in the ‘Material Total’ column.</p>
+  <p>If it is determined that the ‘Other Charges’ column will be non-zero, the ‘Other Charges Description’ column will be set to ‘Markup’. Otherwise it will be left blank.</p>
+  <h3>Do Not Send Public Notes to ServiceChannel</h3>
+  <p>The following registry may be used to disable sending public notes to ServiceChannel; it would typically be enabled to prevent TechAnywhere created notes from being sent. Since there is not a way to determine if the note came from TechAnywhere or not, the only suitable solution is to create a registry setting that will disable this FMMS functionality.</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id:</font> sys-fmms-vendor-servicechannel
+  </p>
+  <p style="margin-left: 36.00pt;">(Or sys-fmms-vendorservicechannel--agenttech which will disable this function only for the techanywhere event manager)</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> UploadNotes  <font style="font-weight: bold;">Setting Value:</font> N
+  </p>
+  <h3>Registry to Exclude Scheduled Date and Time</h3>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-FMMS-Vendor-ServiceChannel</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> IncludeScheduledDateInNewWorkOrder   <span style="font-weight: bold;">Setting Value:</span> No  (default Yes)</p>
+  <p>When New Call accepts a new Service Request via the weblog, the scheduled and time will be omitted if this option is set to &#39;No&#39;.</p>
+  <p>Note: This registry will take priority over the other registries to default in date and time.</p>
+  <h3>Map Service Channel Priority Codes to SAMPro Work Codes</h3>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-FMMS-Vendor-ServiceChannel</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> PriorityToWorkCodeMappings   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">PriorityCode:WorkCodeId</span></p>
+  <p>When enabled, this registry automatically sets the Work Code Id to a value derived from the Service Request&#39;s PRIORITY attribute.</p>
+  <p>This option specifies how the Service Channel Priority Codes map to the SAMPro Work Code Id&#39;s when a Work Order is created from a Service Channel . It supports multiple lines so that all ServiceChannel Priority Codes may be properly mapped.</p>
+  <p style="margin-left: 48px;"><span style="text-decoration: underline; ">Example:</span> The following option maps the ServiceChannel &#39;Emergency&#39; Priority Code to the SAMPro Work Code Id &#39;Safety&#39;.  </p>
+  <p style="margin-left: 48px;">Setting Key: PriorityToWorkCodeMappings: Setting Value: Emergency:Safety</p>
+  <h3>Map Service Channel Trade Codes to SAMPro Equipment Id&#39;s</h3>
+  <p style="margin-left: 8px;">When enabled, this registry will automatically select the Client Site Equipment based on the contents of the Service Request&#39;s TRADE attribute. It supports multiple lines so that all ServiceChannel Trades may be properly mapped.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-FMMS-Vendor-ServiceChannel</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> TradeToEquipmentMappings  <span style="font-weight: bold;">Setting Value:</span> TradeCode:EquipmentId</p>
+  <h3>Registry to Disable Sending ETA Updates to ServiceChannel / FacilitySource / Corrigo</h3>
+  <p>This registry disables sending ETA changes to ServiceChannel when a Sampro Work Order&#39;s ETA changes.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-fmms-vendor-ServiceChannel  / sys-fmms-vendor-FacilitySource / sys-fmms-vendor-Corrigo</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> UploadWorkorderETAChanges  <span style="font-weight: bold;">Setting Value:</span> No   (default is Yes)</p>
+  <p>Note this setting is applicable to all FMMS Subsystems (e.g. Corrigo, FacilitySource). Any value beginning with &#39;Y&#39;, &#39;y&#39;, &#39;T&#39;, or &#39;t&#39; is equivalent to &#39;Yes&#39; and any other value is equivalent to &#39;No&#39;. The absence of the Registry entry is equivalent to a &#39;Yes&#39; value. So there will be no change in functionality if the Registry entry is not found.</p>
+  <h3>Disable Updating SAMPro Work Order Status from Service Channel IVR Messages</h3>
+  <p>This registry may be used to disable the updating a Sampro Work Order&#39;s status based on IVR Check-In and Check-Out messages received from ServiceChannel.</p>
+  <p><span style="font-weight: bold;">Id:</span>  sys-fmms-vendor-ServiceChannel</p>
+  <p><span style="font-weight: bold;">Setting Key:</span>  PostIncomingStatusUpdates   <span style="font-weight: bold;">Setting Value:</span>  No  (default is Yes)</p>
+  <p>Any value beginning with &#39;Y&#39;, &#39;y&#39;, &#39;T&#39;, or &#39;t&#39; is equivalent to &#39;Yes&#39; and any other value is equivalent to &#39;No&#39;. The absence of the Registry entry is equivalent to a &#39;Yes&#39; value. So there will be no change in functionality if the Registry entry is not found.</p>
+  
+  
+  
+  <p>
+     </p>
+
+</body></html>

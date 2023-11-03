@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.31.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="work order invoice"/>
+  <meta name="MS-HKWD" content="work order"/>
+  <meta name="MS-HKWD" content="sys-viewer-vwrkordr"/>
+  <meta name="MS-HKWD" content="import"/>
+  <meta name="MS-HKWD" content="workorder"/>
+  <meta name="MS-HKWD" content="service recommendations"/>
+  <meta name="MS-HKWD" content="recommendations"/>
+  <meta name="MS-HKWD" content="registry"/>
+  <meta name="MS-HKWD" content="certified payroll"/>
+  <meta name="MS-HKWD" content="log"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry Work Order Options (sys-viewer-vwrkordr)</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="work order invoice,work order,sys-viewer-vwrkordr,import,workorder,service recommendations,recommendations,registry,certified payroll,log"/>
+<meta name="brsnext" value="Registry_Entry_Print_Workorder_Worksheet.htm"/><meta name="brsprev" value="Registry_Create_PM_Billing_Work_Order_Invoice.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Work Order Options (sys-viewer-vwrkordr)">
+        <span>Registry Work Order Options (sys-viewer-vwrkordr)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry Work Order Options (sys-viewer-vwrkordr)</h1>
+  <h2>Purpose:</h2>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">The options in this registry entry can be implemented to configure a variety work order related functionality.</p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold;">Testing Your Registry Entries</font><br/>
+    <font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.
+  </p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Setting</font>
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Values are Uppercase-Lowercase Sensitive:</font><br/>
+    The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.
+  </p>
+  <h2>Related Registry Entries:</h2>
+  <p><span>In SAMPro 9.1.611.058 and above, when the user adds a new Tech line, the New Call (<a href="Registry_Entry_for_New_Call_Options.htm">sys-newcall</a>) registry Keys DefaultStartDate and DefaultStartTime will be used to provide a default date and time scheduled. </span></p>
+  <p>For Quote users: <a href="Registry_Entry_Quotemaster.htm#Quote_Launch_Report_Quote_Recap_WO_After_Approval_Wizard">Launch Report Quote Recap WO after the Approval Wizard Runs</a>.</p>
+  <p>Allow the Service Billing Worksheet to be run before the WO is set to Invoice Ready: <a href="Registry_Entry_Start_Compute_Service_Worksheets.htm">Registry Start Compute Service Worksheets (sys-start-ssrvcebllngwrksht)</a> .</p>
+  <p>Turn off service recommendations when completing a WO and set PO not equal to WO number: <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Service_Recommendations">Global Settings: Service_Recommendations</a></p>
+  <p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Global_Settings_Update_WO_Escalation_Status">Update WO Escalation Status when Escalation Profiles are not used</a></p>
+  <p><a href="Registry_Entry_Labor_Journal_Certified_PR_Warning.htm">Registry Entry Labor Journal Certified PR Warning</a></p>
+  <p>See <a href="Registry_Entry_Inventory_Adjustments_Journal.htm">Registry Inventory Adjustments Journal (sys-viewer-vinvntryadjstmnt)</a> for a registry to set the Quantity Billable from the To Return field in the Return to Inventory Wizard.</p>
+  <p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_rev_adj_management_fee_tax_type">Set Tax Type on Revenue Adjustment Management Fee</a> is a recommend global setting that impacts the Quote and Work Order.</p>
+  <p style="margin-left: 8px;"><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Warn_or_Error_if_WO_Date_Scheduled_Set_to_Past_Date">Warn or Error if Date Scheduled Set to Past Date</a> (WO, New Call, Dispatch, TechFinder)</p>
+  <p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Default_to_Non-Aggregate_Material_Markup">Registry to Enable Old Markup Methodology</a></p>
+  <p><span>This <a href="Registry_Specify_Site_WO_Other_Lines.htm">Registry</a> may be used to specify which lines from the Site WO Other Tab should be added based is the Work Order&#39;s Service Category.</span></p>
+  
+  <h2>Important Fields</h2>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">Id:</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">sys-viewer-vwrkordr</font>
+    <font style="font-weight: bold; font-style: italic;">-branchid-userid</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">sys-viewer-</font>
+    <font style="font-weight: bold;">vwrkordr</font>
+    <font style="font-weight: bold; 
+													 font-style: italic;">--userid</font> (if Branches are not implemented on your system)
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">sys-viewer-</font>
+    <font style="font-weight: bold;">vwrkordr</font>
+    <font style="font-weight: bold; 
+													 font-style: italic;">-branchid</font> (for all Branch users, unless overridden by first format)
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">sys-viewer-</font>
+    <font style="font-weight: bold;">vwrkordr</font>
+    <font style="font-weight: bold; 
+													 font-style: italic;">-securityid</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">sys</font>
+    <font style="font-weight: bold;">-viewer-</font>
+    <font style="font-weight: bold;">vwrkordr</font>
+    <font style="font-weight: bold;">-</font>
+    <font style="font-weight: bold; 
+												 font-style: italic;">usergroupid</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">sys-viewer-</font>
+    <font style="font-weight: bold;">vwrkordr</font>
+  </p>
+  <p style="margin-left: 36.00pt;">The first format enables you to specify defaults by a branch user; the branch must be specified if a user belongs to a branch.</p>
+  <p style="margin-left: 36.00pt;">If branches are not implemented, two dashes (not separated by a space) must precede the user id (as shown in the second option).</p>
+  <p style="margin-left: 36.00pt;">The third format enables you to specify defaults by branch id.</p>
+  <p style="margin-left: 36.00pt;">The fourth format enables you to specify defaults by security id.</p>
+  <p style="margin-left: 36.00pt;">The fifth format pertains to the User Group Id in the User’s parent record (in the upper portion of the User record). You might want to implement this functionality to restrict the access of certain user groups to specific fields the work order, or to not display specific viewer tabs.</p>
+  <p style="margin-left: 36.00pt;">The last format would apply to all users <font style="font-style: italic;">unless</font> another registry entry was created for their security or branch/user id.</p>
+  <h3>Registry to Include Equipment Information When Build Description Button is Clicked</h3>
+  <p><span style="font-weight: bold;">Id:</span> sys-viewer-vwrkordr</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> InvoiceDetails     <span style="font-weight: bold;">Setting Value:</span> equipment OR components (default is absence of registry)</p>
+  <p>If this registry is not set (and the user is not using a v.cus file to implement the special functionality) the Build Invoice Description button will populate the Invoice Description of Work Performed field with the Work Performed text from all lines on the Equipment tab.</p>
+  <p>If the Setting Value is set to <span style="font-weight: bold;">equipment</span>, the Work Performed for each line will be preceded by the Equipment Name, Manufacturer, Model and Serial Number.</p>
+  <p><span>If the Setting Value is set to </span><span style="font-weight: bold;">components</span><span>, the Invoice Description of Work Performed field will be populated as follows from each Equipment line: the Equipment Id, the list of the Equipment&#39;s Components, the Equipment Name, the Manufacturer, Model and Serial Number, and finally the Work Performed.</span></p>
+  <h3>Registry to Require Date Work Completed</h3>
+  <p>A registry entry is available to require that the Work Order Date Work Completed is completed when the WO is marked Invoice Ready. See <a href="Quoted_and_Rev_Adjustment_Line_Dates.htm">Quoted and Revenue Adjustment Line Dates</a> for additional information.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-viewer-vwrkordr</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> RequireDateCompletedToInvoiceQuotes  <span style="font-weight: bold;">Setting Value:</span> true (default false)</p>
+  <p><span style="font-weight: bold;">NOTE:</span> This registry should be added if the company has chosen the option 2 method of handling T&amp;M work in the Job EOM registry:</p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Id:</font> sys-job-eom
+  </p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Setting Key:</font> T&amp;M <font style="font-weight: bold;">Setting Value:</font> Revenue
+  </p>
+  <p style="margin-left: 48px;">Time &amp; Material Alternatives:</p>
+  <p style="margin-left: 48px;">Option 2. Increase Period Revenue (T&amp;M=Revenue)</p>
+  <p style="margin-left: 48px;">Income for ‘unbilled’ T&amp;M activity is ‘recognized’</p>
+  <p style="margin-left: 48px;"> DR=WIP  CR=INCOME</p>
+  <h3><a id="Consolidate_Imported_Job_History_Records"></a> Consolidate Imported Job History Records When Get Costs is Clicked in WO</h3>
+  <p>With the following registry in place, costs previously imported from JCH into the Work Order Viewer are evaluated and “refreshed” or consolidated to decrease the amount of negative/reversing lines on the WO child tabs.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-viewer-vwrkordr</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> ImportCostsRefreshAll    <span style="font-weight: bold;">Setting Value:</span> always or prompt or no   (default no)</p>
+  <p>The default setting is &#39;no&#39;.  This preserves the existing behavior.</p>
+  <p>The preferred setting is &#39;Always&#39;.  With this option in place, each time Get Costs is hit all WO lines previously imported from Job Cost History are removed from the viewer and evaluated along with any new costs coming in. Any old, and new lines that net to zero are eliminated. Old and new lines that are eligible for collapsing will be brought in as one newly revised WO line.</p>
+  <p>The &#39;Prompt&#39; option gives the user the option of whether to consolidate with the following question:    </p>
+  <p style="margin-left: 48px;">“Do you want to consolidate imported cost records?<br/>
+    Yes to consolidate. No to import without consolidating.”</p>
+  <p>*Note – separate transactions may not always consolidate depending on differences in data entry between the two transactions.</p>
+  <p style="margin-left: 48px;"><span style="text-decoration: underline; ">Example:</span></p>
+  <p style="margin-left: 48px;">A Labor journal entry is imported into a work order, and saved after import. The same labor journal is then decreased by two hours, and Get Costs is hit on the work order.</p>
+  <p style="margin-left: 88px;">With registry set to <span style="font-weight: bold;">always</span>, the original import is deleted from the work order and one line will be brought in with reduced amount.</p>
+  <p style="margin-left: 88px;">With registry set to <span style="font-weight: bold;">prompt,</span> answer Yes for same result above, answer No and three lines are brought in - the original, the reversal and the new.</p>
+  <p style="margin-left: 48px;">The example above is always eligible for collapse because it is from the same transaction. Separate transactions may not always qualify for collapse if for example, a description, date, cost category, etc. is different between the two. Keep this in mind when using this registry.</p>
+  <h5><a id="Prompt_for_Importing_Revenue_Adjustments"></a> Prompt for Importing Revenue Adjustments when if the Work Order has NOT been Quoted</h5>
+  <p>The Work Order&#39;s Get Costs function works differently depending on whether or not it has been quoted. The decision as to whether or not a WO has been quoted looks for Quote Scope records with a status of Accepted or Approved.  It also restricts the list to only those Scopes that are for the WO currently in the viewer.  The user will not be asked about importing Revenue Adjustments to avoid changing any special adjustments from the Quote.</p>
+  <p>The following registry may be implemented to prompt the user if they wish to import revenue adjustments when importing costs to a Work Order that is <span style="font-weight: bold;">not</span> associated with a Quote. If the user clicks Yes (to import revenue adjustments), it will have the same result as clicking the Adjust Revenue button on the Gross Margin tab.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-viewer-vwrkordr</p>
+  <p><span style="font-weight: bold;">Setting Key:</span><span> PromptForRevenueAdjustmentsWhenImportingCosts  </span><span style="font-weight: bold;">Setting Value:</span><span> true (default false)</span></p>
+  <h3><a name="Registry_WO_GM_Tab_From_Job_History_Projections" id="Registry_WO_GM_Tab_From_Job_History_Projections"></a>Turn On Gross Margin Tab based on Job History / Projections</h3>
+  <p>By default, the Work Order&#39;s Gross Margin tab is based on information loaded into the Work Order record itself. When the following registry is enabled, a different Gross Margin tab will appear. This version of the Gross Margin tab is especially useful if Revenue Adjustments are entered to ensure that the Work Order NTE is not exceeded.</p>
+  <p>This tab displays information based on Job History; Revenue Adjustment projections will be also be displayed if actual values are not found in Job History. ONLY values for the Job referenced on the Work Order&#39;s Main tab will appear. See <a href="Work_Order_GM_Tab_JCH_Projections.htm">Gross Margin From Job History / Projections</a> for details on the display.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vwrkordr</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> GrossMarginFromJobHistory   <span style="font-weight: bold;">Setting Value:</span> true   (default false)</p>
+  <p>The following existing registry option <span style="font-weight: bold;">must</span> also be implemented to ensure that management fee lines are correctly written to Job History.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-ffv-global-settings</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> SetTaxTypeManagementFees    <span style="font-weight: bold;">Setting Value:</span> true</p>
+  <h3><a name="Do_Not_Update_NTE_Amounts_when_Quote_Approval_Wizard_Runs" id="Do_Not_Update_NTE_Amounts_when_Quote_Approval_Wizard_Runs"></a>Do Not Update Work Order NTE Amounts when Quote Approval Wizard Runs</h3>
+  <p>In version 9.0.572.037, the Quote Manager&#39;s and Quote Master&#39;s Approval Wizards were revised to set the Work Order&#39;s Sub NTE set from the sum of the Extended Costs on the approved Sub Scope lines, and the Work Order&#39;s Client NTE from the sum of the Prices and Revenue Adjustment  on the approved Scope lines (Revenue Adjustments not included). This was done to support SubAnywhere.</p>
+  <p>Since this functionality was not in alignment with the business practices of certain customers, a registry is available to override the default behavior.  When the following registry is set to false and the approval wizard is run, the Client and Sub NTE of new work orders will be 0, and the Client and Sub NTE&#39;s existing work orders will not be changed. For Both Quote Master and Quote Manager:</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-viewer-vwrkordr</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> UpdateNTEAmounts  <span style="font-weight: bold;">Setting Value:</span> false (default is true)</p>
+  <p>Note that this registry is set the Work Order registry!  </p>
+  <h3>Deny Manual Entry of Negative Inventory Lines</h3>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vwrkordr</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> AllowNegativeInventoryQuantity</p>
+  <p><span style="font-weight: bold;">Setting Values:</span> false  (default is true)</p>
+  <p>Implementing this registry setting prevents the user from manually entering negative Inventory lines on the Work Order Inventory tab.  Typically, this would be enabled to require IM ADJUSTMENT transactions to be made to &quot;return&quot; items to a stocking location.  Ideally, the Return Wizard process to would be used to do so. This type of transaction influences the Average Cost Calculation whereas direct WO Inventory activity does not.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">WARNING:</span> As of this release, this new option is applied to both the Actual and the Billable quantities.  With the new option enabled one cannot give a billing credit (negative Billable Qty) to adjust and/or correct an invoice.</p>
+  <h3><a name="Prevent_User_from_Editing_WO_Other_from_PO" id="Prevent_User_from_Editing_WO_Other_from_PO"></a>Prevent User from Editing WO Other Tab Lines Imported from a PO</h3>
+  <p>If the user changes the description of a Gen Item after it is imported into the WO from a source PO a disconnect is created when running Create EOM Unvouchered AP GL Entries. Those changed lines will not be included in the GL Journal written by the function.</p>
+  <p>A registry has been added to prevent these lines from being changed on the Work Order&#39;s Other tab. If the following registry is implemented, the system will display an error message if the user attempts to change the description on an Other tab line associated with a PO and imported from JCH. Note that the Setting Value is false to implement this behavior.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vwrkordr</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> AllowEditOfPOGENDescriptions   </p>
+  <p><span style="font-weight: bold;">Setting Value:</span><span> false  (Default is true to preserve current behavior)</span></p>
+  <h3>Display Unreleased PO&#39;s On the Work Order Purchase Tab</h3>
+  <p>By default, Unreleased PO&#39;s do not appear on the Work Order&#39;s Purchases tab. The following registry entry allows the Unreleased POs to be included.  Since Unreleased PO&#39;s do NOT post to IM History, Unreleased PO line details will NOT be shown.  The user will see a single line identifying basic PO information, with &#39; Purchases Not Itemized - in the Description. The Status column will indicate that the Purchase Order is Unreleased.</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font><span style="font-weight: normal;">vwrkordr</span></font>
+  </p>
+  <p><span style="font-weight: bold;">Setting Key:</span> ShowUnreleasedPOs   <span style="font-weight: bold;">Setting Value:</span> true  (default is false)</p>
+  <h3>Do Not Allow Billing with Open PO’s</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> OkToBillWithOpenPOs <font style="font-weight: bold;">Setting Value:</font> false
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;"><span style="font-weight: bold;">Setting Key:</span> OkToBillWithOpenCreditPOs <span style="font-weight: bold;">Setting Value:</span> false</p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">Since some customers wish to bill even if a PO is open, the default behavior of the system is to allow the Work Order to be set to Invoice Ready with open POs.  The user will get a warning stating that open POs do exist for the WO.  This default behavior can be overridden by these registry options which prevents the user from invoicing the work order if open (not fully received) PO&#39;s are found. <span style="font-weight: bold;">NOTE: both of these options must be set to prevent invoicing.</span></p>
+  <h3 class="Reference_Line">Set Qty Billed to Zero for Zero Dollar Fixed Fee Lines from Quotemaster</h3>
+  <p class="MsoNormal" style="margin-left: 0px;">When creating fixed fee quotes, the WO detail generated from the Quote&#39;s Approval Wizard will have a Qty Bill on all of the lines. Lines with a Qty Bill will appear on the invoice even though they are not marked as extra.  The following registry may be enabled to set the Qty Bill to zero on Fixed Fee lines that are not flagged as when the Quote Master Wizard posts to the Work Order. <span style="font-weight: bold;">Note that this registry is enabled in the Work Order’s Registry, not the Quote’s.</span></p>
+  <p class="MsoNormal" style="margin-left: 16px;"><b style="mso-bidi-font-weight: normal;">Registry Id:</b> sys-viewer-vwrkordr<span style="mso-spacerun: yes;"> </span></p>
+  <p class="MsoNormal" style="margin-left: 16px;"><b style="mso-bidi-font-weight: normal;">Setting Key:</b> FFQtyBillZero  Setting Value: true (default false, preserve current behavior)</p>
+  <h3><a name="registry_workorder_credit_po" id="registry_workorder_credit_po"></a><span>Credit PO Handling</span></h3>
+  <p>One of the major differences between regular and credit POs is the posting of the Quantity Ordered and Quantity Received values.  On a credit PO, the Quantity Received is ignored and the Quantity Ordered is used in its place.  For example, on a regular PO the Quantity Received is posted to IMH as Quantity On-hand and to JCH as Actual Quantity.  For credit POs, the on-hand and actual quantities are derived from the Quantity Ordered.</p>
+  <p>Some customers may wish to use Quantity Received as an indicator that the vendor has actually credited them for the returned items rather than whether the Credit PO is vouchered.  By their definition, an open credit PO is one where the Quantity Received is less than the Quantity Ordered on one or more lines.  Due to the posting rules noted above, this distinction can only be made by evaluating the lines of the PO ... IMH and JCH can&#39;t be used.</p>
+  <p>The following registry entry changes the definition for open Credit PO’s to be those where the Quantity Received is less then Quantity Ordered:</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: sys-viewer-</font>vwrkordr
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> CreditPOsMustBeReceived  <font style="font-weight: bold;">Setting Value:</font> false
+  </p>
+  <p>The default value is true so as to preserve existing behavior.</p>
+  
+  <h3>Specify Snapshot Report</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> snapshotreport <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">functionid</font>
+  </p>
+  <p>Where <font style="font-style: italic;">functionid</font> is replaced by the report you wish to appear when the Camera (Snapshot) button is clicked.</p>
+  <h3>Certified Payroll Warning</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> CertifiedPRWarning <font style="font-weight: bold;"> Setting Value:</font> true
+  </p>
+  <p>If this option is implemented, the system will display a warning when the user selects a Cost Code that requires Certified PR reporting.</p>
+  <h3>Pull Inventory GL Expense Account from Cost Category</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> INVExpenseFromCostCategory <font style="font-weight: bold;">Setting Value:</font> true or false (default)
+  </p>
+  <p>This registry option enables you to override the default behavior that GL Expense Account assignment is derived from Inventory Group Expense account and instead enable Expense account posting to come from the Cost Category selected on the WO Inventory line (if present).</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Important Note – Job EOM:</font> In conjunction with this registry entry, a change has been made to the default behavior of the Job EOM function. By default, the GL Expense account will now be set from the Inventory Group record. This registry entry enables you to derive the GL Expense Account assignment from the Cost Category for both Job EOM and the WO Inventory tab.
+  </p>
+  <h3>Allow Service Compute Sales Tax Edits</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ServiceComputeSaleTaxEdits <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>This option enables users to compute and edit an invoice&#39;s sales tax computations (on the Work Order Sales Tax tab) prior to producing the invoice. This functionality is restricted to ‘Service Compute’ work order invoices.  This functionality should only be implemented if certain special sales tax considerations must be supported. Please consult your support representative before implementing this option.</p>
+  <h3>Control Subcontractor PO Generation</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> CreatePOForSub <font style="font-weight: bold;">Setting Value:</font> Manual or Prompt or Automatic
+  </p>
+  <p>This registry option can be used to expedite the creation of PO’s for your subcontractor technicians. It controls the degree to which the new Sub POs are automatically generated from within the WO viewer.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Manual</font> requires that the user push the WO Tech tab button in order to create a new PO; this is the default behavior of the system.<br/>
+    <font style="font-weight: bold;">Prompt</font> causes a prompt to appear whenever a sub-type Tech Id is entered on a line that doesn&#39;t already have an associated PO. Answering YES causes a new PO to be created and associated to the WO Tech line.<br/>
+    <font style="font-weight: bold;">Automatic</font> doesn&#39;t bother with a prompt. A new PO is created automatically and associated to the WO Tech line.
+  </p>
+  <h3>Allow Invoicing with Open Required Resource Lines</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> InvoiceReadyWithOpenRequiredResources <font style="font-weight: bold;">Setting Value:</font> warning or error
+  </p>
+  <p>This option is only applicable if Required Resource processing is used on your system. It effects how the system responds when the Work Order’s Invoice Ready button is clicked, and to the validation of the Work Order Log Type Id field on the WO&#39;s Tech tab.</p>
+  <p>If this option is set to &#39;warning&#39;, the system will display a confirmation box saying &#39;WARNING: One or more required resources has yet to be requisitioned. Change WO status to Invoice ready?&#39;.  The system will continue or abort subject to the user&#39;s response. If the user continues, the status will be changed.</p>
+  <p>If this option is set to &#39;error&#39;, the system will display a MessageBox message saying &#39;One or more required resources has yet to be requisitioned.\\WO status cannot be changed to Invoice Ready.&#39;. In this case, the status will not be changed.</p>
+  <h3>Prevent Inactive Technician from being Added to Work Order</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> AllowInactiveTech <font style="font-weight: bold;">Setting Value:</font> false
+  </p>
+  <p>This option enables you to prevent inactive technicians from being added to the Work Order Technicians tab by typing in their Id. If the user enters the Id of an inactive tech, the message ‘Inactive Tech Not Allowed’ will be displayed when the user attempts to tab out of the field or save the work order.</p>
+  
+  
+  
+  
+  
+  
+  <h3>Option to Import Employer PR Tax Costs Into Work Order</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ImportPRCheckFromJCH <font style="font-weight: bold;">Setting Value:</font> true<br/>
+    If this option is implemented, the Employer portion of PR Taxes (FUTA, FICA, etc) will be imported to the WorkOrder (as part of the Import Costs functionality) from the Payroll Check Journal. This enables all costs to be viewable on the Gross Margin tab of the workorder.  Note that these costs will be imported without any revenue. 
+  </p>
+  <h3>Prevent Use of Completed Job Cost Code or Billing Items</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> CostCodeDateCompletedValidation <font style="font-weight: bold;">Setting Value:</font> error
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> BillingItemDateCompletedValidation <font style="font-weight: bold;">Setting Value:</font> error
+  </p>
+  <p>Currently, the system warns you if you enter a billing item or job cost code whose Date Completed exceeds the effective transaction date. These options change the current warning to an error.</p>
+  <p>It&#39;s also important to note that the validation logic implemented by this registry entry only applies when either a Cost Code Id or a Billing Item Id field&#39;s value is explicitly changed by the data entry user; the system will not check cost code or billing items that default from the WO header.  The Cost Code and Billing Item registry entries are independent from one another.  Note that these options may be specified in <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm">Registry Entry Global Settings</a> registry entry for a more far-reaching implementation.</p>
+  <h3>Load WO Inventory GL Entity</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ResetINVEntities <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>It the GL Entity Id is a required field for WO-INV lines, the validation is inadvertently triggered during the record load.  This means that every WO already entered without the appropriate GL Entities displays the required fields error message. Adding the registry setting noted above will cause the blank entities to get reset with the entity from the cost code. The user will be warned to save the work order to retain the updated gl entities.</p>
+  <h3>Deny WO Other Costs</h3>
+  <p>In Version 7.2 and below, a WO Other post to GL was not supported.  However, for users attempting to match GL to JC, costs entered automatically cause a discrepancy. To prevent costs from being entered directly on the WO other tab, the following option may be implemented:</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> RestrictWOOtherCost <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>The use of Unit Cost and Extended Cost is restricted to Quote lines when this registry option is turned on.  These fields were already restricted for PO and JCH imports.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Important Note:</font><br/>
+    The Work Order Other tab writes to GL if the Work Order Other to GL field is flagged in the Accounting Period Viewer. This feature may also be used in conjunction with the expensing of <a href="Asset_Viewer.htm">chargeble company Assets.</a> . If you wish to write to GL from the Work Order Other Tab, DO NOT set the RestrictWOOtherCost to true. If this option was previously set, it should be disabled by checking the Disabled box.
+  </p>
+  <h3><a name="registry_workorder_rev_warning" id="registry_workorder_rev_warning"></a>Revenue Adjustment Warning</h3>
+  <p>If this registry entry is in place, the system will warn you (when you Save the Work Order) if the Revenue Adjustment Id is completed, but there are no revenue adjustment lines on the Work Order.</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> RevAdjustWarning <font style="font-weight: bold;">Setting Value:</font> true  (default is false)
+  </p>
+  <h3><a name="Registry_WO_Import_Costs_Wizard" id="Registry_WO_Import_Costs_Wizard"></a>Import Costs Wizard</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ImportCostsWizard  Setting Value: true or false – default is false
+  </p>
+  <p>The Import Costs part of the invoicing process has been enhanced to enable you to select the requisitioned items that should be included on the work order, as well as to import costs entered on PO’s, Labor Journal and Job Journal entries. When the Import Costs button is clicked (or the work order is set to Invoice Ready and saved), a Wizard is invoked to enable the user to elect which costs to accept, enter inventory serial numbers, and so on.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Important Note:</font><br/>
+    If this option is implemented, the sys-viewer-vshpordr registry options MaterialRequisitionToLocation and MaterialRequisitionFromLocation must also be set, regardless of whether or not you are using Material Requisitioning. See <a href="Registry_Entry_Shop_Order_Mode.htm">Registry Shop Order (sys-viewer-vshpordr)</a> for details.
+  </p>
+  <h3><a name="Registry_Workorder_Import_RR_File_Path" id="Registry_Workorder_Import_RR_File_Path"></a>Import Required Resources File Location</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ImportRequiredResourcesDirectory <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">path</font>
+  </p>
+  <p>Where <font style="font-style: italic;">path</font> is a valid directory accessible by your SAM Pro users.</p>
+  <p>This option allows the user to set the default directory for the required resources import files.</p>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <p class="Support" style="margin-top: 0; margin-bottom: 0;"> </p>
+  <h3><a name="registry_workorder_start_end" id="registry_workorder_start_end"></a>Labor Tab - Start / End Times Option to Reset the End Time if the Hours are Adjusted</h3>
+  <p>This option only applies if Start and End times are implemented in your customization file. By default, if the user adjusts the Actual Hours, the system will NOT adjust the End Time so that the Start Time, End Time and Actual Hours fields are always in synch with one another. To have the system automatically reset the End Time, the following registry option must be implemented:</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> RecomputeEndTime <font style="font-weight: bold;">Setting Value:</font> true    (false is the default)
+  </p>
+  <h3><a name="registry_workorder_qm_lines" id="registry_workorder_qm_lines"></a>Deny changes to lines imported from Quote Master</h3>
+  <p>New ‘Imported from Quote’ fields have been added to the Labor, Inventory and Other lines. These fields will be checked if the line was imported from QuoteMaster.</p>
+  <p>The following registry entry may be implemented to disallow all changes to lines imported from QuoteMaster:</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> DenyChangesToQuoteMasterLines <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>When this setting is True, changes to QM-type lines are not allowed.</p>
+  <h3><a name="Registry_WO_Equipment_Job" id="Registry_WO_Equipment_Job"></a>Use Default Service Job in the Equipment record for all but PM WO’s</h3>
+  <p>By default, the system uses the Job in the Work Order header as the default job for entering labor, inventory and other lines. Depending upon how your firm’s data is structured, however, it may be more appropriate to default in the Default Service Job from the Equipment record.</p>
+  <p>If this registry entry is enabled (and this is NOT a preventative maintenance work order), when a user enters an equipment id on the Labor, Inventory, or Other tabs, the system now checks to see if there is a default service job in the equipment header and if so, defaults the Job, Cost Code and Billing item to the row. If the job info is blank in the equipment record, the system uses the job info in the work order header (like it does now).</p>
+  <p>When the DefaultJobByEquipmentId registry is enabled, Labor, Material and Other lines imported from Job History via Import Costs will retain their Job info instead having it reset to the Equipment default.</p>
+  <p>For Preventive Maintenance Work Orders, Job information defaults from the WO header, regardless of whether or not this registry entry is enabled.</p>
+  <p>To enable this feature (in the Work Order viewer, Start Work Order Entry and in the TechAnywhere Post) add the following registry entry:</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> DefaultJobByEquipmentId <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>Note: in the Work Order Viewer, the Equipment Id has been repositioned to facilitate its selection.</p>
+  <h3><a name="registry_workorder_set_effective_date" id="registry_workorder_set_effective_date"></a>Set Effective Date from Date Work Completed</h3>
+  <p>When the user &#39;starts&#39; a new line on the Work Order Labor, Inventory or Other, this registry option will default the line&#39;s date from the parent Date Work Completed.  The following registry setting is needed to implement this feature:</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> DefaultLineDateFromDateWorkCompleted  <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>Notes on Usage:</p>
+  <p>If you are just entering lines directly, if you set the Date Completed and then tab out of the field, the system will use the Date Work Competed as the Effective date defaults. Any validation problems on effective date / payroll period / accounting period are caught on SAVING the work order.</p>
+  <p>When importing costs, the Date Worked Completed must be entered AFTER the cost import and before entering your lines directly. If the date is set before, then the user must save the work order before importing costs.</p>
+  <h3><a name="Registry_Workorder_Launch_Service_Billing" id="Registry_Workorder_Launch_Service_Billing"></a>Launch Start Service Billing Compute (Print Invoice button) with Job Id Blank</h3>
+  <p>If more than one job is referenced on a work order, and the user forgets to clear the Job Id field in the range after clicking Print Invoice, the system will only generate the invoice for the header job. The following registry option may be implemented so that the system will not set the Job Id when Service Billing Compute is launched from the Work Order.</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ClearJobId <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>The default is to complete the Job Id range from the Work Order header when Service Billing Compute is launched from the Work Order.</p>
+  <h3 id="h"><a name="Registry_Workorder_remote_tech_warning" id="Registry_Workorder_remote_tech_warning"></a>Disable Remote Tech Warning</h3>
+  <p>By default, the software displays a warning message if the work order has at least one open assignment to a Remote Tech.  The following registry setting disables the warning.</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> DisableRemoteTechWarning <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p style="margin-top: 0; margin-bottom: 0;"> </p>
+  <h3><a name="registry_workorder_inventory_id_first" id="registry_workorder_inventory_id_first"></a>Default Quantity and Date if Inventory Item Id Entered first</h3>
+  <p>When this option is implemented, and a new WO-INV line is started and the Inventory Item Id is entered before the Date and Quantity fields, default the Actual Quantity to 1; default the Bill Quantity to 1; and default the Date to the current system date.</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> EnableCase3571  <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>This option should NOT be used with the DefaultLineDateFromDateWorkCompleted=true option. If both options are set, the WO Date Work Completed is set, when you enter the Inventory Id first, the Effective Date is set to the Date Work Completed, but the quantity is not defaulted to 1.</p>
+  <h3><a name="registry_workorder_disable_budget_posting" id="registry_workorder_disable_budget_posting"></a>Disable Posting of Budget Cost and Revenue of PM Work Orders</h3>
+  <p>This registry option, when implemented, will disable the posting of job history of budget cost and budget revenue for Preventive Maintenance work orders where the work order lines are marked QU and the work order is set to Ready to Invoice. This option would be enabled if a customer wishes to enter manual budgets for PM work. Note that this option only impacts the processing of Work Order Type PreventiveMaint</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> PostQuotesToJCHBudgets <font style="font-weight: bold;">Setting Value:</font> false
+  </p>
+  <h3><a name="Registry_Workorder_Override_Client_Terms" id="Registry_Workorder_Override_Client_Terms"></a>Allow User to Set Override Client / Override Terms (for COD Processing)</h3>
+  <p>The following registry entries are required to enable use of the Work Order’s Override fields, WO Terms Id and WO Client Id:</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> AllowClientOverride  <font style="font-weight: bold;">Setting Value:</font> true (default is false)
+  </p>
+  <p>This registry option is required to enable use of the Work Order’s Override Client field. If your firm normally uses a generic COD Client for COD work orders, set this value to true to enable the user to select / create on the fly an actual Client record to apply the overage / receivables to.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> AllowTermsOverride  <font style="font-weight: bold;">Setting Value:</font> true (default is false)
+  </p>
+  <p>This option must be set to true to allow the Override Terms Id in the Work Order to be set by the user.</p>
+  <p>If the technician calculates sales tax for COD work in the field, then also set:</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ServiceComputeSaleTaxEdits <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>Other Registry Entries needed for COD Processing:</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Id: sys-sales-journal</font>
+  </p>
+  <p style="margin-left: 72.00pt;">
+    <font style="font-weight: bold;">Settting Key: clientjobmismatch  Setting Value: warning</font>
+  </p>
+  <p style="margin-left: 72.00pt;">This entry overrides the default error checking in the Sales Journal (which currently prevents you from mismatching the Job and the Client on a single entry.) <font size="2" style="font-size: 8pt;">This registry setting NOT required if AllowClientOverride=false</font> AND your firm <font size="2" style="font-size: 8pt;">uses a separate JOB for each COD (it doesn’t use template COD jobs).</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Id: sys-start-ssrvcebllngcmpte</font>
+  </p>
+  <p style="margin-left: 72.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> UseSJForCOD  <font style="font-weight: bold;">Setting Value:</font> false     (or registry option absent)
+  </p>
+  <p style="margin-left: 72.00pt;">The system must auto create the cash receipt – this option CANNOT be set to true.</p>
+  <h3><a name="Registry_Workorder_Service_Evaluations" id="Registry_Workorder_Service_Evaluations"></a>Service Evaluation General Questions</h3>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> GeneralEvaluationLogTypes  <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">list of</font>
+    <font style="font-style: italic;">work order escalation statuses</font>
+  </p>
+  <p>This option is used in conjunction with service evaluations. When the Workorder is escalated to one of the registry statuses listed, all unanswered questions are displayed in a Wizard and must be answered. If this registry option is not implemented, the Wizard will only be launched when the Work Order is completed or invoiced.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Note: Escalation Status and Log Type</font><br/>
+    The Service Evaluation wizard launches when the work order goes to the Work Order Escalation Status defined in this registry. See <a href="Escalation_Status.htm">Escalation Status</a> for details the relation between the Log Type Status and Escalation Status.
+  </p>
+  <h3>Other Rate Filtering</h3>
+  <p>Implementing this registry option filters the Other Rates displayed on the list view to those referenced in the Job’s Rate Schedule when the user double-clicks the Other Rate Id on the Work Order’s Other tab.</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> FilterOtherRatesByJobRateSchedule <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <h3>Allow Changes to Revenue Adjustments on PreventiveMaint Work Orders</h3>
+  <p>Additional data entry controls have been implemented in the Work Order viewer.  Access to the Revenue Adjustments tab is now denied on PreventiveMaint-type work orders.  This includes line inserts and line deletes. The following registry entry is available to override this, but is not recommended:</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font><br/>
+    <font style="font-weight: bold;">Setting Key:</font> PreventRevenueAdjustmentAccessOnPMWorkOrders   <font style="font-weight: bold;">Setting Value:</font> false
+  </p>
+  <h3>Allow Changes to Revenue Adjustments on PM Invoice Work Orders</h3>
+  <p>When the work order&#39;s Work Type is &#39;PM Invoice&#39;, changes are no longer allowed by default on the Revenue Adjustments tab.  This includes line inserts and deletes.</p>
+  <p>The previous behavior (to allow changes) can be restored with the following registry setting:</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> PreventRevenueAdjustmentAccessOnPMInvoices <font style="font-weight: bold;">Setting Value:</font> false (default true)
+  </p>
+  <h3>WO Inventory / IM History Alert:</h3>
+  <p>This entry validates that the total cost and quantity entered directly on the tab matches the total cost and quantity what have already been or will be posted to Inventory history when the Work Order is saved. If a discrepancy is found, a TabHistoryMismatch alert box will appear, and the work order will not be saved. The tab mismatch information is written to the error log. This alert should only appear if erroneous reversal history was previously written to Inventory History – a sporadic issue in previous images. It is only recommended for users who are concerned with tightening up inventory, and are willing to have support correct issues before work orders can be edited/invoiced. To implement this option:</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> TabMismatchINV-IMH <font style="font-weight: bold;">Setting Value:</font> enabled
+  </p>
+  <p>If this option is not implemented this alert will not be raised.</p>
+  <h3>Restore ‘Compute the Invoice’ option for Construction Type Jobs on Work Orders</h3>
+  <p>Some clients use work orders for certain portions of construction-type jobs to manage their technicians; typically, these work orders are not billable. In previous releases, the act of &#39;finishing&#39; these work orders by setting them to Invoice Ready presented the user with an option to &#39;Compute the Invoice?&#39; when the work order was saved.  This is legacy code predating service compute-type jobs and billing. If the user answered Yes to the question, the system prepared the work order/job for billing by:</p>
+  <p>1. Creating a new Invoice Master record.<br/>
+    2. Preparing all relevant JCH records for billing.<br/>
+    3. Updating Billing Items.<br/>
+    4. Setting Job&#39;s Invoice Status to &#39;Ready to Print&#39;.</p>
+  <p>None of the above is necessary for most systems, and results in an orphaned Invoice Master record. In this release, the default behavior now eliminates the &#39;Compute the Invoice? question, since the billing for these construction jobs will be done from Record Billing Adjustments.</p>
+  <p>The following registry setting is available to restore the old behavior; this is not recommended unless the user is still using the old-style service invoicing and actually needs to be able to compute the invoice from the work order. </p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ComputeInvoiceForConstructionJobs  <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <h3>Limit Statuses Entered on Technician and Log Tabs</h3>
+  <p>The following registry options permit the log type statuses entered on the work order to be limited to those specified, or to exclude those specified.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Tip:</font> in most cases, this functionality would be implemented by user or user group (sys-viewer-vwrkordr<font style="font-style: italic;">-branchid-userid,</font> sys-viewer- vwrkordr<font style="font-style: italic;">--userid</font> (if Branches are not implemented) or sys-viewer- vwrkordr-<font style="font-style: italic;">usergroupid)</font> so that the restrictions are only implemented as appropriate.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-</span></font>
+    <font style="font-weight: normal;">vwrkordr</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> LogStatusesRemoved<br/>
+    <font style="font-weight: bold;">Setting Value:</font> Comma delimited list of statuses the user may <font style="text-decoration: underline; ">not</font> enter on the Tech or Log Tab<br/>
+     
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> LogStatusesAllowed<br/>
+    <font style="font-weight: bold;">Setting Value:</font> Comma delimited list of statues the user may enter on the Tech Tab / Log Tab
+  </p>
+  <p>Only one registry should be used for each registry entry.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Example:</font>
+  </p>
+  <p style="margin-left: 36.00pt;">This example would be implemented to prevent users in the dispatcher group from directly entering the statuses of billed, archived or no bill on the Technician or Log tabs. Note that if the work order is billed via service invoice, this registry does not prevent the system from changing the status from completed to billed.</p>
+  <p style="margin-left: 36.00pt;">Registry Id: sys-viewer-vwrkordr-dispatcher</p>
+  <p style="margin-left: 36.00pt;">Setting Key: LogStatusesRemoved</p>
+  <p style="margin-left: 36.00pt;">Setting Values: billed,archived,no bill</p>
+  <h3>Time Review – Allow Approval from Revenues Tab</h3>
+  <p>This functionality enables users to review time entered in TechAnywhere, indicating that this time does not need additional review prior to billing. A custom PR Time Entry report is used to indicate which time has/has not been reviewed. Note that un-reviewed time may be billed for and/or paid to the technician.</p>
+  <p>To approve time, a user may access the Labor Journal, and save the entry. Time may also be approved from the Word Order Revenue tab by right-clicking on a line. No special user attribute is required: all that is needed is for someone other than the tech to ‘touch’ the entry.</p>
+  <p>The three registry entries listed below are required for this functionality: one to split TechAnywhere time into separate labor journals by work order, and another two to allow approval in the Work Order and Labor Journals.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> AllowLaborJournalApproval <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Also Required - Time Review Work Order</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Id:</font> sys-techanywhere
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> PostLaborByWorkorder <font style="font-weight: bold;">Setting Value:</font> true<br/>
+    <br/>
+    With this registry setting in place, individual labor journals will be created to break out a journal per work order if multiple work orders are contained in a labor message payload.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Also required -</font>
+    <font style="font-weight: bold;">Time Review – Labor Journal</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Id:</font> sys-viewer-vlbrjrnl
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> ApproveWhenEdited <font style="font-weight: bold;">Setting Value:</font> true (default false)
+  </p>
+  <h3>Option to Display the GLH Tab on the Work Order</h3>
+  <p>The GLH tab is not shown on the Work Order by default since it contains potentially sensitive pay information. The following registry may be used to enable the GLH tab on the Work Order viewer for a user that should have access to this feature:</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id:</font> sys-viewer-vwrkordr-<font style="font-style: italic;">branchid-userid</font> or sys-viewer-vwrkordr--<font style="font-style: italic;">userid</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ShowGLH <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <h3>Allow Changes to Log Tab (Deprecated)</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key</font>
+    <font style="font-weight: bold;">:</font> LogAddAllowed <font style="font-weight: bold;">Setting Value:</font> true<br/>
+    <font style="font-weight: bold;">Setting Key</font>
+    <font style="font-weight: bold;">:</font> LogEditAllowed <font style="font-weight: bold;">Setting Value:</font> true<br/>
+    <font style="font-weight: bold;">Setting Key</font>
+    <font style="font-weight: bold;">:</font> LogDeleteAllowed <font style="font-weight: bold;">Setting Value:</font> true<br/>
+    The default behavior for the Log tab is to deny all changes.  These options may be implemented to allow some or all changes to the Work Order Log tab. Entering all three options will enable your users to add, change and delete. It is not necessary to completely restore the original behavior. 
+  </p>
+  <p class="Block_Text" style="margin-left: 72.00pt;">
+    <font style="font-weight: bold; 
+															 text-decoration: underline; ">Example:</font>
+  </p>
+  <p class="Block_Text" style="margin-left: 72.00pt;">One might choose to allow adds but not edits or deletes:</p>
+  <p>  Setting Key: LogAddAllowed Setting Value: true</p>
+  <h3>Display Employee Name on Work Order Revenue Tab</h3>
+  <p>The Employee Name no longer appears on the Work Order Revenue Tab to prevent sensitive pay information from being displayed. The following registry entries may be enabled so that the user or users eligible to see this information may have access to it.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vwrkordr-<font style="font-style: italic;">branchid-userid</font> or  sys-viewer-vwrkordr--<font style="font-style: italic;">useri</font>
+  </p>
+  <p><span style="font-weight: bold;">Setting Key:</span> ShowEmployeeNames  <span style="font-weight: bold;">Setting Value:</span> true</p>
+  <p> </p>
+  <h3><a name="registry_workorder_Show_RININV4_Invoices" id="registry_workorder_Show_RININV4_Invoices"></a>Show RININV4 Invoices on WO Invoices Tab</h3>
+  <p>In Version 8.0.510.023 and up, the Invoice Description, Balance and Last Payment Date were added to the Work Order Invoices tab. Unfortunately, this resulted in RININV4 type invoices not displaying on the tab. In this release, the Invoices tab will now first tries to show SERVICEINVOICE type invoices WITH the new columns.  If there are there are NO SERVICEINVOICE type invoices found and the following new registry setting is in effect, the system will then show RININV4 type invoices WITHOUT the new columns.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vwrkordr</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> ShowRININV4Invoices   <span style="font-weight: bold;">Setting Value:</span> true</p>
+  <h3>Enable Signature Tab</h3>
+  <p>This obsolete tab has been removed from the Work Order default view. The following registry may be enabled to display it (at the right of the Work Order viewer) if needed.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span>  sys-viewer-vwrkordr</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> ShowSignatures   <span style="font-weight: bold;">Setting Value:</span> true</p>
+  <h3>Set WO Inventory Date for &#39;Picked&#39; Required Resource Items</h3>
+  <p>Data from the Required Resource tab is posted to the Inventory Tab when the Picked flag is set.  However, a problem occurs if the Date Required is not within the default Accounting Period range. A registry entry is available to adjust either the date or accounting period to keep them in sync.  When the defaulted Date and Accounting Period are NOT out-of-sync, NO adjustments are made to the defaulted values.  The rules noted below are used only when an adjustment is necessary.</p>
+  <p><span style="font-weight: bold;">
+      <font style="font-weight: bold;">R</font>egistry Id:
+    </span>      sys-viewer-vwrkordr</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> AdjustDefaultDateOrPeriod <font style="font-weight: bold;">Setting Value:</font> <span style="font-style: italic;">period or date</span>
+  </p>
+  <p>If period is selected, the Accounting Period table is queried for eligible Accounting Periods.  To qualify, the period must be Active and its date range must include the defaulted Effective Date.  When multiple periods are eligible, the one with the smallest Period Id is chosen to become the new Accounting Period for the current transaction.  If no eligible period is found, nothing is changed.</p>
+  <p>If date is selected, the Effective Date is adjusted to be either the Start Date or the End Date of the defaulted Accounting Period.  The Start Date is chosen when the current date is less than the Start Date.  The End Date is chosen when the current date is greater than the End Date.</p>
+  <h3>Sort Logs on Work Orders by Oldest to Newest</h3>
+  <p>This registry gives users the option of having the sort logs on work orders by most recent or by oldest to newest. </p>
+  <p><span style="font-weight:bold">
+      <font style="font-weight:bold">R</font>egistry Id:
+    </span>      sys-viewer-vwrkordr</p>
+  <p><strong>Setting Key: </strong>     LogLineOrder   <strong> Setting Value:</strong> OldestFirst</p>
+  <h3>Registry to Warn if Adding an Inventory Part Will Cause Item to Go Negative On Hand </h3>
+  <p>This registry adds a feature that alerts users when an inventory part is entered on WO and the amount entered causes that part to go into a negative on-hand count. Now when this happens, there’s a Warning displayed if the following registry is enabled: </p>
+  <p><strong>Id:</strong> sys-viewer-vwrkordr</p>
+  <p><strong>Setting Key:</strong> WarnIfInventoryWillGoNegative  <strong>Setting Value: </strong>true   (default is false)</p>
+  
+  <p></p>
+
+</body></html>

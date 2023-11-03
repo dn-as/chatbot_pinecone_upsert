@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.5.1_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Equipment Master Viewer"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Equipment Master Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Equipment Master Viewer"/><meta name="brsnext" value="Equipment_Type_Viewer.htm"/><meta name="brsprev" value="GL_Reporting_Period.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Equipment Master Viewer">
+        <span>Equipment Master Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Equipment Master Viewer</h1>
+<h2>Purpose:</h2>
+<p>Defines standard Id&#39;s for the equipment that your company installs and services.</p>
+<h2>Example:</h2>
+<p>You could create Equipment Master records for general or specific types of equipment. For very specific types of equipment, a specific Inventory Item Id may be associated with each Master Equipment record.</p>
+<h2>Usage:</h2>
+<p>Optional for use in the New Call Create Client/Site/Equipment function, as when creating a new equipment record directly in the Client Site Equipment viewer. By double-clicking on the Equipment Id, the user displays the Equipment Master record list to select an Id from. The Master Equipment record provides the default values that the system uses when creating the new Site Equipment record.</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Equipment Master Id:<br/></font> A unique Id for this Equipment Master record. This field is required.</p>
+<p><font style="font-weight: bold;">Equipment Master Name:<br/></font> A brief description; this field is optional.</p>
+<p><font style="font-weight: bold;">Inventory Item Id:<br/></font> Optional. If this Equipment Master record pertains to a specific Inventory Item record, enter its Id or double-click on this field to select from a list. The Manufacturer, Model, and Equipment Type fields default from the Inventory Item record.</p>
+<p><font style="font-weight: bold;">Description:  Manufacturer</font>: <font style="font-weight: bold;">Model:<br/>
+Equipment Size: Equipment UOM:<br/></font>These fields default from the Inventory Item record, but may be revised by the user if needed.</p>
+<p class="Block_Text"><font style="font-weight: bold;">Equipment Type</font><br/>
+This field also defaults from the Inventory Item record. When defaulted into the Site Equipment record, this field may be used in when generating PM work orders (and their associated purchase orders) for sub-contractor technicians. The system will match this up with the corresponding Equipment Type field in the <a href="PM_Master_Schedule_Master_Contract_.htm#PM_Master_Provider_Rates">PM Master Contract Provider Rates Tab</a> when generating the WO and PO. This enables the appropriate costs and revenues to automatically be generated by equipment type and service provider.</p>
+<p><font style="font-weight: bold;">Service Parts List:<br/></font>The default list of parts will appear on preventative maintenance and installation work orders created from New Call screen.</p>
+<p><font style="font-weight: bold;">Service Tasks Id:</font><br/>
+This default list of tasks will appear on preventative maintenance and installation work orders created from New Call screen.</p>
+<p><font style="font-weight: bold;">Certification Id:</font><br/>
+The certification required to work on this equipment created from this master record. This is used in conjunction with <a href="TechFinder_Viewer.htm">TechFinder</a> to match Technicians and Work Orders.</p>
+<p><font style="font-weight: bold;">Call Script Id:</font><br/>
+To implement call scripting for Site Equipment created from this master record, enter the appropriate Id or double-click on this field to select from a list of Call Script Id&#39;s. When you select a piece of Equipment in New Call that has a Call Script associated with it, the system will automatically display the Call Script.</p>
+<p><font style="font-weight: bold;">Call Escalation Id:</font><br/>
+If Escalation Management is implemented on your system, you may complete this field to provide a default Escalation Profile for service work orders for this equipment.</p>
+<p><font style="font-weight: bold;">Log Form Id:</font><br/>
+If system metrics will be recorded for this equipment created from this Master record, enter (or double-click to select from a list) a Log Form Id. The Work Order System tab will be automatically populated from the Log Form record so that the metrics can be recorded by the technician.</p>
+<p><font style="font-weight: bold;">Equipment Master User 1: Equipment Master User 2:<br/></font>These optional fields may be used for entering any information your company wishes to retain.</p>
+<h2>Important Fields: Lower Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Components Tab</p>
+<p>Reserved for future use.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Installations Tab</p>
+<p><font style="font-weight: bold;">Site Id:</font> <font style="font-weight: bold;">Equip Id: Description: Serial No: Contract? Installed:<br/>
+WarrantryStart: WarrantyEnd: Active?<br/></font>This Query-View tab displays all the Equipment that is associated with this Equipment Master record. You may double-click on an Equipment line to view the Site Equipment record associated with that line.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Work History Tab</p>
+<p class="Body_Text_2"><font style="font-weight: bold;">WO Id: Site Name: Tech Id: Status: Work Code: Equip Id:<br/>
+Scheduled: Closed: Resolution: Work Requested:</font></p>
+<p class="Body_Text_2">This Query View tab lists all work orders created for this Equipment associated with this Equipment Master record. Double-click on a line to view the Work Order itself.</p>
+
+</body></html>

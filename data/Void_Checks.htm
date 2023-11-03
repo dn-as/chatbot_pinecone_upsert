@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.6.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="ap"/>
+<meta name="MS-HKWD" content="check"/>
+<meta name="MS-HKWD" content="payables"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="MS-HKWD" content="vendor"/>
+<meta name="MS-HKWD" content="void"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Void Checks</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="ap,check,payables,payroll,vendor,void"/><meta name="brsnext" value="Correcting_Journal_Entries.htm"/><meta name="brsprev" value="Clear_Check.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Void Checks">
+        <span>Void Checks</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Void Checks</h1>
+<h2>Purpose:</h2>
+<p>This function voids an AP or Payroll Check and produces the reversing 
+ entries for the check.</p>
+<p><font style="font-weight: bold;" color="#FF0000">Note:</font> <font style="font-weight: bold;">Date to Pay<br/>
+</font>For AP Invoices, the Date to Pay will be set to blank; you will 
+ need to rerun the Date to Pay function in order to reissue the check.</p>
+<p><font style="font-weight: bold;" color="#FF0000">Note:</font> <font style="font-weight: bold;">Original Transactions<br/>
+</font>This function does nothing to the original transactions that the 
+ check applied to. If you wish to change the original AP or Payroll information, 
+ return to the original AP or Payroll transaction and correct or reverse 
+ as appropriate. See <a href="Correcting_Journal_Entries.htm">Correcting 
+ Journal Entries</a> or <a href="Reversing_Journal_Entries.htm">Reversing 
+ Journal Entries</a> for details.</p>
+<p><font style="font-weight: bold;" color="#FF0000">Note:</font> <font style="font-weight: bold;">Manual AP Checks<br/>
+</font>This function now prevents you from voiding Manual Checks, and displays 
+ a message to address Manual Check Voids in the source AP Journal Transaction 
+ (by deleting the transaction).</p>
+<p style="margin-left: 66.25pt;"><font style="font-weight: bold;">Voiding 
+ Manual Checks<br/>
+</font>DO NOT use the Void AP Check function to void a manual check.  Changes 
+ to AP Transactions for manual checks should be accomplished by first deleting 
+ the transaction (to remove the entire invoice/check#) and then re-entering 
+ it. The way that you would delete a manual AP Check or Credit 
+ Card entry is as follows:</p>
+<p style="margin-left: 66.25pt;">1. Load the APJ entry into the viewer.  You 
+ should get a warning about the closed Period.<br/>
+2. Change the Accounting Period to one that is Active.<br/>
+3. Change the Effective Date to one that satisfies the selected Accounting 
+ Period.<br/>
+4. Push the Delete Record button and answer Yes to the &#39;Delete all children&#39; 
+ prompt.<br/>
+5. Answer No to the &#39;re-use check&#39; question.</p>
+<p style="margin-left: 66.25pt;"><font style="font-weight: bold;">Note 
+ on Audit Trails:</font> the original and reversing AP Journal 
+ trx are maintained but you will need to filter to ALL to see them.</p>
+<p style="margin-left: 66.25pt;"><font style="font-weight: bold;">Note 
+ on Bank Reconciliation:</font> AP Check and Credit Card transactions deleted 
+ in this manner do NOT appear on the Bank Reconciliation when the Auto 
+ Fill Trans button is clicked.</p>
+<h2>Usage:</h2>
+<p>Required to void a vendor check or payroll check. GL and AP history 
+ will be undone for AP check; GL and Payroll history will be undone for 
+ Payroll checks.</p>
+<p>When voiding PR checks, this function 
+ checks to see if associated PRMD check(s) exist. The PRMD check number 
+ validation now includes checking both the GL Account and Entity to prevent 
+ false positive warnings. </p>
+<p style="text-indent: 30.25pt;">Select Start Void AP Checks for Vendor 
+ Checks</p>
+<p style="text-indent: 30.25pt;">Select Start Void PR Checks for Employee 
+ and Payroll Miscellaneous Deduction (garnishment) Checks</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Voiding 
+ PR Miscellaneous Deductions Checks<br/>
+</font>If an Employee Check associated with one or more Payroll Miscellaneous 
+ Deduction Checks (PRMD), the system will issue a warning to the user and 
+ let them decide whether or not to continue. In this case, voiding the 
+ 2nd set of garnishment checks (that might be produced after the employee’s 
+ check is rerun) should be part of the user’s process. As long as the garnishments 
+ are the same, a second set of garnishment checks wouldn&#39;t be required.  Therefore, 
+ in that case, the user wouldn&#39;t have a second set of garnishment checks 
+ to void. A potential problem occurs if the garnishment checks can&#39;t be 
+ voided but the amounts have changed due to the voided and recomputed payroll.  In 
+ that case, the user will be required to submit the net difference on a 
+ manual check or ask for a refund in the event of an overpayment.</p>
+<p>In version 7.3 and up, validation is in place to prevent the user from 
+ voiding reconciled AP/PR checks. In previous releases, the user was warned 
+ that a check was reconciled, but could in fact complete the void process.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">GL Bank Account:</font><br/>
+The GL Bank Account the check was originally drawn on.</p>
+<p><font style="font-weight: bold;">GL Entity:</font><br/>
+The GL department or profit center of the original check.</p>
+<p><font style="font-weight: bold;">Check Number:</font><br/>
+The number of the check to be voided. The display-only Check Date, Check 
+ Amount, Payee Name and Check Type (payroll or vendor) will be filled in 
+ when the valid number of a system check is entered.</p>
+<p><font style="font-weight: bold;">Accounting Period Id:</font><br/>
+Enter the Id of an active accounting period or double-click on this field 
+ to selected from a list. This feature is important as you may not want 
+ to void a check to a prior period. This field is required.</p>
+<p><font style="font-weight: bold;">Check Reverse Date:</font><br/>
+The effective date of the reversal.</p>
+<p><font style="font-weight: bold;">Period Start Date Period End Date:</font><br/>
+These display-only fields default from the Accounting Period record. The 
+ Check Reversal Date must fall within this range.</p>
+<p><span style="font-weight: bold;">Check 
+ Description:</span> <br/>
+This field defaults from the Check record. It may be edited by the user 
+ to note the reason for the void. If the Check Description field was blank 
+ when the Check is voided, the system will continue to default in the Description 
+ using the following format: Voided 07/09/2018 01:36:39 PM UserId.</p>
+<h2>Important Buttons</h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Go (start the void and reversal).<br/>
+</p>
+
+</body></html>

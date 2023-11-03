@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.23.0_38";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sys-remotetime"/>
+<meta name="MS-HKWD" content="remote time sheet"/>
+<meta name="MS-HKWD" content="remote entry"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="time entry"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Remote Time Sheet Applet (sys-remotetime)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="sys-remotetime,remote time sheet,remote entry,registry,time entry"/><meta name="brsnext" value="Registry_Entry_for_Remote_Time_Special_Data.htm"/><meta name="brsprev" value="Registry_Positive_Pay_Entry.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Remote Time Sheet Applet (sys-remotetime)">
+        <span>Registry Remote Time Sheet Applet (sys-remotetime)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Remote Time Sheet Applet (sys-remotetime)</h1>
+<h2>Purpose:</h2>
+<p>The Remote Time Sheet Applet has been obsoleted by <a href="TimeAnywhere_Labor_Viewer.htm">TimeAnywhere</a>.</p>
+<p>This registry entry is required for the Remote Timesheet applet. It controls the format of the time and expense display sections of the remote time screen, the number of previous and future periods that may be accessed, the first day (and number of days) of the period, retry and timeout constants, etc. Note that the data entry fields in the top portion of the Time &amp; Expense Screen are managed by the screens.txt file. Contact Data-Basics support for details.</p>
+<h2>Usage:</h2>
+<p>Consult the Remote Time Sheet Setup for additional information on setting up the Remote Time and Expense software.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline;">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Related Registries:</h2>
+<p><a href="Registry_Entry_for_Remote_Time_Special_Data.htm">Remote Time Special Data</a></p>
+<h2>Important Fields:</h2>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Id</p>
+<p>The Id of the Registry Entry must conform to one of the following format:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-remotetime</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-remotetime-</font><font style="font-weight: bold; font-style: italic;">securityid</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-remotetime-</font><font style="font-weight: bold; font-style: italic;">employeetype</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-remotetime-</font><font style="font-weight: bold; font-style: italic;">style</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-remotetime-</font><font style="font-weight: bold; font-style: italic;">userid</font></p>
+<p style="margin-left: 36.00pt;">sys-remotetime registry entries are continuously cumulative and allow overrides to be set. When specifying an addition or override, you need only set the options that you wish to add or change. This makes it easier to implement different time entry setups can be specified for different employees by Security Id, Employee Type, style or even User Id.</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Example:<br/></font>Suppose that you want most of your employees to be limited to entering time to this week, last week, and next week. However, you want your project managers to be able to enter time for the last 6 weeks through the following two weeks. In this situation, you would set up a base level sys-remotetime entry with the periodspast and periodsfuture options set to allow time entry to last week, this week and next week. In addition, you would also create a sys-remotetime-style entry (say, sys-remotetime-pm) for project managers. In sys-remotetime-pm, you would only specify the overrides to periodspast and periodsfuture options (to allow project manages to enter their time to a broader time range). When Project Managers entered their time, the Remote TIme Entry screen would be identical to the other employees except for the allowable periods in the past and future. Note that in this case, the Remote Time Sheet Style field in the Employee record would have to be set to pm for all project managers.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Description:  <font style="font-weight: normal;">This field is optional</font> <font style="font-weight: normal;">but recommended for clarity (Remote Timesheet Configuration)</font><font style="font-weight: normal;">.</font></p>
+<h3>Specify Reports Accessible to Remote Time Users</h3>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">reports</font> Setting Value: <font style="font-weight: normal;">UDReportId1,UDReportId2,...</font></p>
+<p>where <font style="font-style: italic;">UDReportId1</font> is replaced by the Id of the user-defined report (or reports) that Remote Time users should have access to. Note that these reports must exist in your database.</p>
+<h3>Specify Time / Increments</h3>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">hours</font> Setting Value: <font style="font-style: italic; font-weight: normal;">BegValue _EndValue@increment,Value1,Value2...</font></p>
+<p>controls the time increments that appear in the drop-down hours box. <font style="font-weight: bold; font-style: italic;">BegValue</font> should be replaced by the first value to be selected from the list; it must be followed by an underscore. <font style="font-weight: bold; font-style: italic;">EndValue</font> should be replaced by the last value, and <font style="font-weight: bold; font-style: italic;">@increment</font> by the incremental value. The <font style="font-weight: bold; font-style: italic;">Value1, Value2...</font> option may be used to specify additional selections, such as 40 or 80 hours.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Example:<br/></font>The following entry would result in values of .25, .50, .75 through 8.0 (in quarter hour increments) and the values of 40 and 80 appearing on the drop-down list:</p>
+<p style="margin-top: 0.00pt;">Setting Key: hours Setting Value: <font color="#0000FF">.25_8@.25,40,80</font></p>
+<h3>Specify Past / Previous Periods Available for Time Entry</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> periodspast <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">number</font></p>
+<p style="margin-left: 36.00pt;">this entry defines the number of previous periods that a user is allowed to enter time to. A period is defined by the days option (defined below) and is typically one week.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Example:<br/></font>periodspast=2 (or Setting Key: periodspast Setting Value: 2) would mean that a user could time for the two previous weeks as well as the current period. If this option is not specified, time cannot be entered remotely to previous periods.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> periodsfuture <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">number</font></p>
+<p>this entry defines the number of periods in the future that a user is allowed to enter time to. A period is defined by the days option (defined below) and is typically one week.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Example:<br/></font>periodsfuture=1 (or Setting Key: periodsfuture Setting Value: 1) would mean that a user could enter time for the current period and the next period. Typically, periodsfuture would be set to enable an employee to enter vacation time ahead of time.</p>
+<h3>Specify Days Used in Grid</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> firstday <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">day</font></p>
+<p>where day is replaced by the day of the week that begins the period. Valid entries are <font style="font-weight: bold;">Fri</font>, <font style="font-weight: bold;">Sat</font>, <font style="font-weight: bold;">Sun</font>, <font style="font-weight: bold;">Mon</font>, <font style="font-weight: bold;">Tue</font>, <font style="font-weight: bold;">Wed</font>, <font style="font-weight: bold;">Thu</font>.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> days <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">numberofdays</font></p>
+<p>where <font style="font-style: italic;">numberofdays</font> is replaced by length of the period, typically 7. This entry sets the number of days in the time entry grid at the top of Remote Time screen.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> <font style="font-weight: bold;">8 Day Period<br/></font>Under certain highly specific circumstances, the period may be set to eight days. For example, suppose that certain employees work uneven work weeks (one Monday-Thursday four-day week of 36 hours followed by a five day week of 44 hours). However, for management and tax reporting, each week may not exceed 40 hours. In this case, an 8 day period could be specified in conjunction with the AM/PM option (discussed below), and the starting day set to Friday. On every other week (where an employee worked on Friday), the AM hours would be allocated to the previous period, and the PM hours would be allocated to the current period.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">AMPM</font> Setting Value: <font style="font-weight: normal;">true</font></p>
+<p>this option should only be entered if the first day if AM hours on the first day of the period should be set to one period, and PM hours to the next (as discussed in the example above.</p>
+<h3>Labor Grid Configuration</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> LaborGridColumns <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">field1,field2,..</font>..</p>
+<p>where <font style="font-style: italic;">field1,field2,</font><font style="font-style: italic;">...</font> are replaced by the fields that you wish to appear on the labor entry grid, in the order that you wish them to appear. Note that commas are used to separate the field names. Valid values for the fields include the following:</p>
+<p style="margin-left: 36.00pt;">date  hours  job  costcategory </p>
+<p style="margin-left: 36.00pt;">paytype  description status  posted </p>
+<p style="margin-left: 36.00pt;">costcode trxdate  index  workorder</p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">LaborGridLabels</font> Setting Value: <font style="font-style: italic; font-weight: normal;">field1label,field2label,....</font></p>
+<p>where <font style="font-style: italic;">field1label,field2label,</font><font style="font-style: italic;">...</font> are replaced by the labels that you wish to appear on the labor entry grid, in the order that you wish them to appear. Note that commas are used to separate the field labels.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">LaborGridWidth</font> Setting Value: <font style="font-style: italic; font-weight: normal;">width1,width2,....</font></p>
+<p>where <font style="font-style: italic;">width1,width2,</font>... are replaced by the width of the columns (defined in the LaborGridColumns) in pixels. Note that commas are used to separate the column widths.</p>
+<h3>Expense Grid Configuration</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> ExpenseGridColumns <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">field1,field2,..</font>..</p>
+<p>where <font style="font-weight: bold; font-style: italic;">field1,field2,</font>... are replaced by the fields that you wish to appear on the expense entry grid, in the order that you wish them to appear. Note that commas are used to separate the field names. Valid values for the fields include the following:</p>
+<p style="margin-left: 36.00pt;">date  job  costcategory otherrate units </p>
+<p style="margin-left: 36.00pt;">unitcost  amount  description status  posted </p>
+<p style="margin-left: 36.00pt;">costcode trxdate  index  workorder</p>
+<p> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">ExpenseGridLabels=field1label,field2label,....</font></p>
+<p>where <font style="font-style: italic;">field1label,field2label,</font>... are replaced by the labels that you wish to appear on the expense entry grid, in the order that you wish them to appear. Note that commas are used to separate the field labels.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">ExpenseGridWidth</font> Setting Value: <font style="font-style: italic; font-weight: normal;">width1,width2,....</font></p>
+<p>where <font style="font-style: italic;">width1,width2,</font>... are replaced by the width of the columns (defined in the ExpenseGridColumns) in pixels. Note that commas are used to separate the column widths.</p>
+<h3>Screen Configuration</h3>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting Key:</font> TimeSumStartPercent  <font style="font-weight: bold;">Setting Value:</font><font style="font-style: italic;">percent1<br/></font><font style="font-weight: bold;">Setting Key:</font> TimeSumEndPercent  <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">percent2<br/></font><font style="font-weight: bold;">Setting Key:</font> TimeSheetStartPercent  <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">percent3<br/></font><font style="font-weight: bold;">Setting Key:</font> TimeSheetEndPercent  <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">percent4</font></p>
+<p>These fields are used to control the position and amount of screen space allocated for the various sections of the Remote Time Entry screen (when it is maximized).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Example:<br/></font>Suppose you enter these fields as follows:</p>
+<p style="margin-left: 36.00pt;">Setting Key: TimeSumStartPercent Setting Value: 35</p>
+<p style="margin-left: 36.00pt;">Setting Key: TimeSumEndPercent Setting Value: 64</p>
+<p style="margin-left: 36.00pt;">Setting Key: TimeSheetStartPercent Setting Value: 65</p>
+<p style="margin-left: 36.00pt;">Setting Key: TimeSheetEndPercent Setting Value: 98</p>
+<p style="margin-left: 36.00pt;">In this case, the actual time entry grid will appear on the top 34% of the screen. The Time or Expense summary will appear in the next section (from 35-64%), and the timesheet entries will comprise the bottom third of the screen (from 65% to 98%).</p>
+<h3>Timeout Settings</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> StandardTrys <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">number<br/></font><font style="font-weight: bold;">Setting Key:</font> StandardDelays <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">time</font></p>
+<p>These optional fields are used to adjust the timeout settings for this applet. Contact Data-Basics support for details.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> InactivityTimeout <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">timems</font></p>
+<p>This optional field is used to specify how long the Remote Timesheet applet will remain open if it is not being used (entered in milleseconds). Setting this field to InactivityTimeOut-36000, for example, would enable the applet to remain open for six hours. Typically, this option is entered to enable users to conveniently enter their hours throughout the day.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">WOStatusList</font> Setting Value: <font style="font-weight: normal;">status1,status2,....</font></p>
+<p>This option is only applicable it you are using Remote Entry in a non-standard mode, and applying time to Work Orders instead of jobs. This mode also enables the user to reset the appropriate Technician line of the Work Order by selecting from a dropdown list of statuses. This registry option would be implemented to limit the statuses that appear in the drop down list.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Example:</font><br/>
+WOStatusList=Cancelled,Completed,Invoice Ready,OnSite,Waiting Service</p>
+<h3>Log File</h3>
+<p class="Normal_Indent" style="margin-left: 5.75pt;"><font style="font-weight: bold;">Setting Key:</font> userlog <font style="font-weight: bold;">Setting Value:</font> false or true</p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">This entry tells the applet whether or not to create a log file for each user in the root directory. The true setting is used by support for troubleshooting. If this entry is not included, an error message will display with the user starts the applet.</p>
+
+</body></html>

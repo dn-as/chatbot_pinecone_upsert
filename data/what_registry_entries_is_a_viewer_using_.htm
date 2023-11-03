@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>What Registry Entries is a Viewer Using?</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("SAM Pro Help\nRegistry Entries\n__ What Registry Options is a Viewer Using? **Support**");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >What Registry Options is a Viewer/Function Using?</P>
+ <P class="Support" >If you are running in development mode in the more recent versions, you can easily tell which registry entries a viewer or function is responding to. To do so:</P>
+ <P class="Support" >1. Run in Development Mode</P>
+ <P class="Support" >2. Be in the record or function of interest – preferably logged on as specific user (remember that registry entries can be by user).</P>
+ <P class="Support" >3. From the menu bar at the top of the window, select:</P>
+ <P class="Support" >Help &gt;&gt; DataValues</P>
+ <P class="Support" >4. An Inspecting: Dictionary will appear. Double-click on myRegistry. </P>
+ <P class="Support" >5. Another Inspecting: Dictionary will appear: the registry options will appear on the left. If you select one, it’s value will appear on the right.</P>
+ <P class="Support" >6. If you need to figure out the registry id the option belongs to, use the Search functionality of your Support Help to find the registry option text string. </P>
+ <P class="Support" >&nbsp;<FONT style="text-decoration:underline;" >Example:</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">In New Call, one of the registry option you might encounter is ‘defaultstartdate’.  To reverse-lookup the registry Id, go to Help and click the Search tab. When it gets through compiling its search database (if this is the first time you have done it), enter the string defaultstartdate in the search field.  Help will display the reference to Registry Entries for New Call in the lower left-hand pane. </P>
+ <P class="Support" ><FONT style="font-weight:bold; " >sys-ffv-global-settings </FONT><FONT style="font-weight:bold; " >entries are NOT</FONT><FONT style="font-weight:bold; " > included in these inspection viewers.</FONT>  To viewer a users global settings and other ffv items, log on in development mode, and select Help &gt;&gt; Inspect FFV Settings.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.24.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Start Generate Purchase Orders</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="po,purchase order,generate purchase order,start generate purchase order"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Start Generate Purchase Orders">
+        <span>Registry Start Generate Purchase Orders</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Start Generate Purchase Orders</h1>
+<h2>Important Fields:</h2>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Registry Id:</span> sys-start-sgnrteprchseordrs</p>
+<h3>Start Generate PO Shipping Address</h3>
+<p style="margin-left: 8px;">This option allows the user to fine-tune the ship-to address on purchase order created via the <a href="Generate_Purchase_Order.htm">Start Generate Purchase Order</a> function.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> sqlshipToStockLocation   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">SQL Select List</span></p>
+<p style="margin-left: 8px;">The SQL Select List defines which fields from the Location will be inserted into the corresponding fields in the Purchase Order Ship To address. The select list MUST include all seven columns necessary to construct the ship-to address as follows:</p>
+<p style="margin-left: 48px;">    1. street address line 1<br/>
+    2. street address line 2<br/>
+    3. street address line 3<br/>
+    4. street address line 4<br/>
+    5. city<br/>
+    6. state<br/>
+    7. zip code</p>
+<p style="margin-left: 8px;">If you will not be using all of the address lines, you may include a blank ‘ ‘ in the select list. Token replacement for ^companyname^ is also supported.  ^companyname^ will be replaced by the contents of the companyname registry when the shipping address is defaulted.</p>
+<p style="margin-left: 48px; font-weight: bold; text-decoration: underline;">Example:</p>
+<p style="margin-left: 48px;">This example uses the ^companyname^ token replacement to set the first line of the address, and skips the fourth line of the street address by specifying a blank ‘ ‘.</p>
+<p style="margin-left: 48px;"><span>sqlShipToStockLocation=&#39;^companyname^&#39;, lctn_addrss_shp_addrss_strt, lctn_addrss_shp_addrss_strt_2, &#39; &#39;, lctn_addrss_shp_addrss_cty, lctn_addrss_shp_addrss_stte, lctn_addrss_shp_addrss_zp</span></p>
+
+</body></html>

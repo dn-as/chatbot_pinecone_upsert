@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.8.1.0_13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="general ledger report"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="MS-HKWD" content="gl report"/>
+<meta name="MS-HKWD" content="import"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start GL Report Import</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="general ledger report,report,gl report,import"/><meta name="brsprev" value="Start_GL_Report_Export.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start GL Report Import">
+        <span>Start GL Report Import</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<p>Start GL Report Import</p>
+<h2>Purpose:</h2>
+<p>GL reports are stored in your database, not the application image (v.exe). This function makes it easy to import one or many gl reports into your database. Your support representative will inform you when you should import new reports (typically, when adding a newly customized report to your database, or updating the existing GL reports to correspond to a new release).</p>
+<h2>Usage:</h2>
+<p>To import GL reports, complete the following steps.</p>
+<p><font style="font-weight: bold;">1.</font> To import your GL reports, copy them to a location from which you can access them when you are running the Data-Basics software. For example, if you are running the software from c:, you might want to copy the report files c:\glreports\import. If this directory contains earlier copies of reports, we suggest that you move these files to a backup location. If your reports were delivered in a zip file format, remember to unzip them! GL reports are distinguished by the file extension .GRPT.</p>
+<p><font style="font-weight: bold;">2.</font> Next, back up your database and export your existing reports.</p>
+<p><font style="font-weight: bold;">3.</font> Access the Start GL Report Import function. Complete the Important Fields as discussed below.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Reports Directory:</font><br/>
+Enter the path to the directory containing the reports (for example, c:\glreports\import).</p>
+<p><font style="font-weight: bold;">4.</font> When you click the Go button, the system will display a checklist containing all of the reports that it locates in the directory you specified. By default, all GL reports found in this directory will be selected.</p>
+<p><font style="font-weight: bold;">5.</font> When you click the Go button on the checklist, the system will begin the import.</p>
+<p><font style="font-weight: bold;">6.</font> Any reports filed in by IMPORT GL REPORTS that did not previously exist require a corresponding User Defined function in order to be executed or assigned to user groups.</p>
+<p><font style="font-weight: bold;">a.</font> Go to the view menu and select VIEW USER-DEFINED FUNCTIONS.</p>
+<p><font style="font-weight: bold;">b.</font> Add a new function for each new gl report imported.</p>
+
+</body></html>

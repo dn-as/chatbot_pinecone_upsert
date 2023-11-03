@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.3.0_13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="work order"/>
+<meta name="MS-HKWD" content="system metrics"/>
+<meta name="MS-HKWD" content="workorder"/>
+<meta name="MS-HKWD" content="metrics"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Work Order Metrics Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="work order,system metrics,workorder,metrics"/><meta name="brsnext" value="Work_Order_Revenue_Adjustment_Tab.htm"/><meta name="brsprev" value="Work_Order_Call_Script_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Work Order Metrics Tab">
+        <span>Work Order Metrics Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Work Order Metrics Tab</h1>
+<h2>Purpose:</h2>
+<p>This tab displays the system metrics recorded by the technician when working on a specific piece of equipment.</p>
+<p>When a PM Work Order is created, the Log Form referenced in the Site Equipment record will be written to the WO&#39;s Equipment tab; and will be used to default the Work Order Metrics tab.</p>
+<p>When a Work Order is created in New Call, the used may override the Log Form Id from the Equipment record. The Log Form Id selected in New Call will be written to the new WO&#39;s Equipment tab, and will control the WO&#39;s metrics.</p>
+<h2>Usage:</h2>
+<p>The Log Form Id is referenced in the Client Site Equipment record. If a Work Order is created for equipment that has its Log Form Id field completed, the Log Form detail will automatically be imported to the Metrics tab of the Work Order if the Technician’s Web Access is set to ‘None’. These metrics lines may then be completed manually by the dispatcher or service coordinator.</p>
+<p>If you create a Work Order for a Tech with the Web Access set to ‘Technician’, the Metrics tab will be empty when the Work Order is first created since this information will be completed via TechAnywhere. TechAnywhere retrieves the Metrics (Log Form), from the Work Order Equipment tab. The Metrics readings would then be completed by the Technician using the TechAnywhere device. TechAnywhere Post, the Work Order’s Metrics tab will be updated with the information that the Technician entered.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> If an Equipment Id associated with Metrics is deleted, only those lines on the Metrics tab that have been recorded (a date and/or value has been entered) will be retained. If the same Equipment Id is re-entered, the system does not restore blank Metrics lines that were not recorded. To restore these lines, click the Sync Metrics button.</p>
+<h3>Cycle Code Filtering</h3>
+<p>The Log Form specified on the Client Site Equipment record may include lines/metrics that should be recorded at every service or maintenance call, as well as some that need only be recorded on (for example) system startup or installation. Both Sam Pro and TechAnywhere filter (via the specified &quot;Cycle Code Filter&quot; associated with PM schedules and service Work Codes) the lines written to the Work Order Metrics tab.</p>
+<p style="margin-left: 36.00pt;">When a Service Work Order is created in SAM Pro’s New Call, the system will check the Cycle Code Filter in the Work Code; if this field is completed, only those log form line metrics whose CC: field corresponds to the filter or is blank will be written to the Work Order (for Techs without remote access) or uploaded to the Technician’s device.</p>
+<p style="margin-left: 36.00pt;">When a PM Work Order is created, the system will check the Cycle Code Filter in the Client Site Equipment PM Schedule (or the Master Contract Schedule). If the Cycle Code Filter in the schedule is blank, the system will use the Cycle Code Filter in the Work Code instead. Only those metrics whose CC: field corresponds to the filter or is blank will be written to the Work Order (for Techs without remote access) or uploaded to the Technician’s device.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Equipment Id: Equipment Name:<br/></font>These display-only fields are maintained by the system, and specify the piece of equipment for which the reading should be/was taken.</p>
+<p><font style="font-weight: bold;">Metrics Date:<br/></font>The date that the reading was taken.</p>
+<p><font style="font-weight: bold;">Value:<br/></font>The value of the reading itself.</p>
+<p><font style="font-weight: bold;">UM:<br/></font>The unit of measure this reading should be taken in (psi, volts, etc.).</p>
+<p><font style="font-weight: bold;">Log Form Header: Log Form Line:<br/></font>These fields default from the Log Form Record and define the reading that should be entered in the Value field.</p>
+
+<p><span style="font-weight: bold;">Source Rn: Tech Id:</span><br/>
+If these fields are completed, this record/line was created/revised from TechAnywhere.</p>
+
+<h2>Important Buttons:</h2>
+<p><font style="font-weight: bold;">Sync Metrics<br/></font>This new button will import missing metrics (e.g, if work order was assigned to a remote tech, then reassigned to a tech with web-access = none) and tidy-up orphaned lines (if going from a non-remote tech to a remote tech). Cycle Code filtering is based on the Work Code on the Equipment tab (if present) or the Work Code in the Work Order header if the Equipment tab’s Work Code is not completed.</p>
+<p style="margin-left: 36.00pt;">Note that if you add a piece of Equipment, it&#39;s log form defaults from the Equipment record, not the override the user may have selected for this Work Order in New Call.</p>
+
+</body></html>

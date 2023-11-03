@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.3.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Work Order GM Tab JCH Projections</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="revenue adjustment,gross margin,NTE,Not To Exceed,client NTE"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Work Order GM Tab JCH Projections">
+        <span>Work Order GM Tab JCH Projections</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Work Order Gross Margin Tab Job History/Projections</h1>
+<h2>Purpose:</h2>
+<p style="margin-left: 8px;">This tab will appear if it is enabled via 
+ <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#Registry_WO_GM_Tab_From_Job_History_Projections">Registry</a>. 
+ It displays information from in Job History as well as projections based 
+ on the selected Revenue Adjustment table. This information will help the 
+ user determine if any adjustments should be made to the Work Order to 
+ prevent its total invoiced amounts from exceeding the Client NTE. ONLY 
+ values for the Job referenced on the Work Order&#39;s Main tab will appear.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Note:</span> 
+ Click <a href="Work_Order_Viewer.htm#Work_Order_Gross_Margin_Tab">Standard 
+ Gross Margin Tab</a> to see information on the standard tab.</p>
+<p style="margin-left: 8px; font-weight: bold;">Important Fields / Buttons:</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Gross Margin 
+ Id:<br/>
+Analyze Labor:  Analyze Materials: Analyze Other: Analyze 
+ Subcontract:<br/>
+</span>These display-only fields default from the Gross Margin table for 
+ this Work Order. If an Analyze box is checked, that category of costs/revenues 
+ will be included in the Gross Margin Analysis.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Revenue Adjustment 
+ Id:<br/>
+</span>This specifies the<span style="font-weight: bold;"> </span>Revenue 
+ Adjustment record used by the system when the Adjust Revenue button is 
+ clicked. <span style="font-weight: bold;">This Revenue Adjustment record 
+ is also used for projected values if actual Job History values do not 
+ yet exist.</span> The Rates, GL Accounts and Invoice Description from 
+ the header of this table are displayed below the UNBILLED and TOTAL sections 
+ of this screen. For example, if the Revenue Adjustment specifies a Management 
+ Fee with a Fee Type of Flat Rate, it will appear in on the Gross Margin 
+ Tab even if no other costs are associated with the Work Order. </p>
+<p style="margin-left: 8px;"><img src="assets/images/image/SKIN1_RefreshGM.gif" alt="image\SKIN1_RefreshGM.gif" title="image\SKIN1_RefreshGM.gif" width="88" height="28" border="0"/> 
+ Clicking this button refreshes the tab with current entries in Job History 
+ and any applicable projections from the Revenue Adjustment table.  </p>
+<p> <img src="assets/images/image/SKIN1_ComputeRevAdjust.gif" alt="image\SKIN1_ComputeRevAdjust.gif" title="image\SKIN1_ComputeRevAdjust.gif" width="88" height="28" border="0"/>  Entries on the RevAdjust tab are automatically 
+ created by clicking his button if a Revenue Adjustment table is specified 
+ on this Work Order. <span style="font-style: italic; font-weight: bold;">Only 
+ Revenue Adjustments pertaining to the Job on the Work Order&#39;s Main Tab 
+ will be generated.</span> These entries will also be written to Job History 
+ so they will be displayed this tab. Clicking this button also imports 
+ all applicable costs into the Work Order so that any manual adjustments 
+ can be made easily.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Warning:</span> 
+ Clicking this button will delete unbilled manual Revenue Adjustments on 
+ this Work Order. Special PM Invoicing *Accrual* lines and billed lines 
+ will not be deleted.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Client NTE:</span><br/>
+The user will be warned if the Projected Invoice Total exceeds this value. 
+ The field may be used to adjust the default Client Not to Exceed value 
+ if the customer has approved a greater value for this Work Order.</p>
+<p style="margin-left: 8px; font-weight: bold;">UNBILLED:</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">T</span>his 
+ section is a matrix that enables you to review Revenues and Revenue Adjustments 
+ before billing the Work Order. <span style="font-style: italic; font-weight: bold;">Detail 
+ lines with an Effective Date in the future will NOT be included in the 
+ matrix.</span></p>
+<p style="margin-left: 8px; font-weight: bold;">Labor: Material: Other: 
+ Subcontract: Subtotal:</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Billable 
+ Cost:   Revenue:  <br/>
+<span style="font-weight: normal;">These</span></font> display-only fields 
+ are calculated by the system based on the unbilled Costs/Revenue in Job 
+ History for each category.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">RevAdjust:<br/>
+</span>If any Unbilled Revenue Adjustments (not netting to zero) for any 
+ cost type are found in Job History they will be used to generate these 
+ fields. Otherwise, the system will project the Revenue Adjustment values 
+ based on Unbilled Revenues and the Revenue Adjustment Id in the Work Order. 
+  The projected value will also be used if Unbilled Revenue Adjustments 
+ netting to zero across all values are found in Job History.</p>
+<p style="margin-left: 88px;"><span style="font-weight: bold;">NOTE:</span> 
+ There cannot be a mixture of actual and projected Revenue Adjustments 
+ displayed on the screen. For example, if an unbilled Revenue Adjustment 
+ for labor exists in Job History, that will be displayed on the Gross Margin 
+ tab: any projected values for material, other or subcontract costs will 
+ not appear.  </p>
+<p style="margin-left: 88px;">Clicking the Adjust Revenue button allows 
+ you to import costs and make the actual Revenue Adjustment entries in 
+ the Work Order and to Job History. When you save the Work Order and refresh 
+ the Gross Margin screen, the actual unbilled Revenue Adjustments will 
+ appear on the Gross Margin tab.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Net Revenue:<br/>
+</span>The net of the Revenue and Rev Adjust columns. </p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">GM%    <br/>
+<span style="font-weight: normal;">The Gross Margin % for this line</span> 
+ (</font>Net Revenue - Billable Cost) / Net Revenue * 100). Note that if 
+ no Billable Costs exist for this line, this column will be blank.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Target%: 
+  <br/>
+<span style="font-weight: normal;">Displayed from the</span></font> Gross 
+ Margin table.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Subtotal:</span><br/>
+Before Sales Tax.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Sales Tax:</span><br/>
+The projected Sales Tax for the Next Invoice.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Next Invoice 
+ Total:</span><br/>
+The projected value of the next invoice, including Sales Tab.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">TOTALS:<br/>
+</span>These fields are computed by the system based on the values from 
+ the UNBILLED matrix PLUS any invoiced lines for Job on the Work Order&#39;s 
+ Main tab.</p>
+<p style="margin-left: 8px; font-weight: bold;">Labor: Material: Other: 
+ Subcontract: Subtotal:  </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Total Cost: 
+ Total Revenue:<br/>
+</span> Displays the Total Cost and Total (net) Revenue from UNBILLED matrix 
+ PLUS any invoiced lines for Job on the Work Order&#39;s Main tab.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Total %</font> 
+ <font style="font-weight: bold;">GM$:<br/>
+</font>The Total% column displays the projected Gross Margin Percent for 
+ this Work Order as a whole. The Gross Margin Dollars (GM$) column is calculated 
+ by subtracting the Billable Cost from the Revenue.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Subtotal:</span><br/>
+Before Sales Tax.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Sales Tax:</span><br/>
+The projected Sales Tax total for all billed and projected invoices.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Projected 
+ Invoice Total:</span><br/>
+The projected total (including Sales Tax) for all billed and projected 
+ invoices for this Work Order. This field is compared to the Client NTE 
+ specified on this tab.  The user will be warned if this field exceeds 
+ the Client NTE when the Work Order is saved.</p>
+
+</body></html>

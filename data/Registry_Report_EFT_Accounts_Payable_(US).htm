@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.8.0_18";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry Report EFT Accounts Payable (US)</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="direct deposit,EFT - US AP Direct Deposit,Electronic Funds Transfer"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Report EFT Accounts Payable (US)">
+        <span>Registry Report EFT Accounts Payable (US)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry Report EFT Accounts Payable (US)</h1>
+  <h3>Purpose:</h3>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">An EFT registry entry must be created for each GL Account and GL Entity combination for which you will be generating direct deposit AP checks. Your Vendors/Vendor’s banks will provide details on the necessary Vendor account and Bank EFT (routing) numbers. The NACHAAP format will be used in the generated file.  Click on <a href="AP_EFT___AFT_Direct_Deposit_Overview_(US_and_Canada).htm">Overview</a> to see a summary of the procedures needed to implement this functionality.</p>
+  <h2>Usage:</h2>
+  <p>This entry is designed for use with AP processing in the United States.</p>
+  <h2>Important Fields:</h2>
+  <p>
+    <font style="font-weight: bold;">Registry Id:</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">sys-eftap-</font>
+    <font style="font-weight: bold; font-style: italic;">glbankaccountid-glentity-branchid-userid</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">sys-eftap-</font>
+    <font style="font-weight: bold; font-style: italic;">glbankaccountid-glentity-securityid</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">sys-eftap-</font>
+    <font style="font-weight: bold; font-style: italic;">glbankaccountid-glentity</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">sys-eftap</font>
+    <font style="font-weight: bold; font-style: italic;">-glbankaccountid</font>-
+  </p>
+  <p style="margin-left: 36.00pt;">where <font style="font-style: italic;">glbankaccountid</font> is replaced by the GL Account Id of the bank account your firm uses for payables. <span style="font-weight: bold;">The GL Entity MUST be specified if you run payables by GL Account and Entity. If you generate checks for multiple GL Accounts/GL Entities, a registry entry MUST be created for each.</span></p>
+  <p style="margin-left: 36.00pt;">The first format enables you to specify parameters by branch id and (optionally) user. If this entry is specific to a user, the branch must be specified if a user belongs to a branch. If branches are not implemented, two dashes (not separated by a space) must precede the user id.</p>
+  <p style="margin-left: 36.00pt;">The second format enables you to specify parameters by security id.</p>
+  <p style="margin-left: 36.00pt;">The third format would apply to all users unless another registry entry was created for their security or branch/user id.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold; font-style: italic;">Note that in the fourth format (for all users NOT using Entities) the trailing hyphen must be retained.</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Name:</font> A descriptive name for this entry.
+  </p>
+  <p> </p>
+  <p style="font-weight: bold;">Required Entries</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> fhDestId <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">nnnnnnnnn</font><br/>
+    where <font style="font-style: italic;">nnnnnnnnnn</font> is replaced by the nine character immediate destination number provided by your bank.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> fhOrigId <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">nnnnnnnnn</font><br/>
+    where <font style="font-style: italic;">nnnnnnnnn</font> is replaced your by the nine character origination number (your bank&#39;s 8 digit routing number plus a check digit) specified by your bank.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> fhDestName <font style="font-weight: bold;">Setting Value</font>: <font style="font-style: italic;">nnnnnnnnnnnnnnnnnnnnnnn</font><br/>
+    where <font style="font-style: italic;">nnnnnnnnnnnnnnnnnnnnnnn</font> is replaced by the (up to 23 character) destination name provided by your bank or other originator. It specifies the name of your bank or financial institution.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> fhOrigName <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">nnnnnnnnnnnnnnnnnnnnnnn</font><br/>
+    where <font style="font-style: italic;">nnnnnnnnnnnnnnnnnnnnnnn</font> is replaced by your firm&#39;s (up to 23 character) name as provided by your bank or other originator.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> bhDFIOrigId <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">nnnnnnnn</font><br/>
+    where <font style="font-style: italic;">nnnnnnnn</font> is replaced by the eight digit originating bank id as specified by your bank.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> bhCompName <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">nnnnnnnnnnnnnnnn</font><br/>
+    where <font style="font-style: italic;">nnnnnnnnnnnnnnnn</font> is replaced by the (up to 16 character) sending company&#39;s (your firm&#39;s) name.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> bcCompId <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">nnnnnnnnnn</font><br/>
+    where <font style="font-style: italic;">nnnnnnnnnn</font> is replaced by the ten character sending company Id number provided by your bank.
+  </p>
+  <h3>Specify Account Type and Number (may be required by Bank)</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> balAcctType <font style="font-weight: bold;">Setting Value:</font> savings or checking<br/>
+    defines the account type (e.g., checking or saving) for the balancing entries.
+  </p>
+  <p style="margin-left: 72.00pt;">
+    <font style="font-weight: bold;">Note:</font>
+    <font style="font-weight: bold;">Unbalanced Entry Option</font><br/>
+    The option<br/>
+    <font style="font-weight: bold;">Setting Key:</font> balAcctType <font style="font-weight: bold;">Setting Value:</font> omit<br/>
+    would be included (instead of balAcctType=checking or savings) if your bank/financial institution explicitly instructs you that a balancing entry is <font style="text-decoration: underline; ">not</font> to be included in the EFT file.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> balAcctNo <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">nnnnnnnnnnnnnnnnnn</font><br/>
+    where <font style="font-style: italic;">nnnnnnnnnnnnnnnnn</font> is your company&#39;s (up to 17 character) account number provided by your bank or financial institution for balancing entries. <font style="font-weight: bold;">This option is required if balAcctType is set to savings or checking.</font>
+  </p>
+  <h3>Option to specify location of EFT file</h3>
+  <p>
+    <font style="font-weight: bold;">Setting</font>
+    <font style="font-weight: bold;">Key:</font> PathName <font style="font-weight: bold;">Setting</font>
+    <font style="font-weight: bold;">Value:</font>
+    <font style="font-style: italic;">sharepath/eftdirectory</font>
+  </p>
+  <p>By default, the electronic file generated by Report EFT AP is automatically written to the directory containing the SAMPro executable.  This registry option enables the user to specify a directory path to override the default:</p>
+  <p>Note that <font style="font-style: italic;">sharepath/eftdirectory</font> must be replaced by a valid directory name.</p>
+  <h3>End of Line Option</h3>
+  <p>
+    <font style="font-weight: bold;">Setting</font>
+    <font style="font-weight: bold;">Key:</font> eol <font style="font-weight: bold;">Setting Value:</font> crlf<br/>
+    this option should be only included if your bank/financial institution requires that a carriage return/line feed code is included at the end of each line.
+  </p>
+  <h3>Filename Option</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> filename <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">nnnnnnnn</font><br/>
+    this optional field specifies the name of the electronic file that will be created when the Generate EFT Register function is run. If this parameter is not included, the system will create a file with the filename transmitdate-transmittime.eft.
+  </p>
+  <h3><a id="Special_Settings_for_PaymodeX"></a>Special Settings for PaymodeX</h3>
+  <p>A registry setting plus special use of the Vendor User fields is required to implement this functionality.</p>
+  <p><span style="font-weight: bold;">Id: </span>sys-eftap-<font style="font-style: italic;">glbankaccountid-glentity</font>
+  </p>
+  <p style="font-weight: bold;">Required Registry Settings</p>
+  <p><span style="font-weight: bold;">Setting Key: </span>paymodexidentifier<span style="font-weight: bold;">  Setting Value: </span><span style="font-style: italic;">account number from PaymodeX</span></p>
+  <p>This specifies that PaymodeX will be used for AP EFT files. This functionality depends on the following Vendor User Fields instead of the usual Vendor Bank Routing/AccountNo values:</p>
+  <p style="font-weight: bold;">Using Custom Fields, designate Vendor User Field 4 as “Collecting Paymode-X Account ID”</p>
+  <p>User Field 4 is the Paymode-X account number for the vendor; having this filled in means that it will be picked up by the Paymode-X processing otherwise it will not be.<span style="font-weight: bold;"> </span></p>
+  <p style="font-weight: bold;">Using Custom Fields, designate Vendor User field 5 as “Paymode-X - Method”.</p>
+  <p>This field can be set to be ACH, Card, Check, n/a or blank (if blank or n/a is treated as Check).<span style="font-weight: bold;"> </span></p>
+  <p>The AP Check report is sensitive to the above for determining print MICR-Check versus Electronic Payment:</p>
+  <p style="margin-left: 48px;">o Paymode-X: Checks and MICR-Checks utilize existing check # assignment range</p>
+  <p style="margin-left: 48px;">o Paymode-X: ACH and Card remittances utilize the EFT # assignment range</p>
+  <p style="margin-left: 48px;">o Skip Print for Paymode-X Vendor checks if Vendor User 4 field is completed.</p>
+  <h3>NACHA’s Service Class Codes</h3>
+  <p>To ensure SAMPro users are current with NACHA’s Service Class Codes guideline, this registry implements an enhanced distinction for Service Class Codes. </p>
+  <p><strong>Id:</strong> sys-eftap-glbankaccountid-      or    sys-eftap-glbankaccountid-glentity<br/>
+    <strong>For Payroll:</strong><br/>
+    <strong>Id: </strong>sys-eft-glbankaccountid-          or      sys-eft-glbankaccountid-glentity
+  </p>
+  <p><strong>Setting Key:</strong> EnhacedServiceClassCodes      <strong>Setting Value:</strong> true</p>
+
+</body></html>

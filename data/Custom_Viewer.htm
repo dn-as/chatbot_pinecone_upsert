@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.2.0_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Custom Index"/>
+<meta name="MS-HKWD" content="database index"/>
+<meta name="MS-HKWD" content="Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Custom Index Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Custom Index,database index,Index"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Custom Index Viewer">
+        <span>Custom Index Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Custom Index Viewer</h1>
+<h2>Purpose:</h2>
+<p>Based on their analysis, database administrators may identify and implement custom indexes (in addition to those maintained by SAM Pro) which enhance a particular system’s performance. Until this release, these custom indexes had to be re-implemented after each database conversion. This enhancement enables the DBAs or system administrators to store custom indexes within their data. The next time the database conversion is triggered (when updating to a new version), the SAM Pro software will automatically install all active Custom Indexes (not flagged as Obsolete).</p>
+<h2>Usage:</h2>
+<p>It is the responsibility of the user to configure the SQL correctly for their particular database. It is recommended that this viewer only be available to DBA/System level personnel.</p>
+<h2>Important Buttons:</h2>
+<p><img src="assets/images/image/createindex.gif" alt="image\createindex.gif" title="image\createindex.gif" width="61" height="15" border="0"/> Click this button to create this Custom Index within your database. Note that this record must be saved first.</p>
+<p><img src="assets/images/image/dropindex.gif" alt="image\dropindex.gif" title="image\dropindex.gif" width="61" height="15" border="0"/> Click this button to drop this Custom Index.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Custom Index Id:<br/></font>This field must uniquely identify this record.</p>
+<p><font style="font-weight: bold;">Index Name:<br/></font>This field should have some relationship to its function. <font style="font-weight: bold;">It SHOULD NOT include blanks</font> as it will be referenced in the SQL Create String field. If its function is not obvious, consider using the Notes or Attachment features to add additional documentation.</p>
+<p><font style="font-weight: bold;">Table Name:<br/></font>Double-click on this field to select the table the index should be applied to.</p>
+<p><font style="font-weight: bold;">SQL Create String:</font><font style="font-weight: bold;"><br/></font>This field must reference the exact Index Name noted in this record. The table referenced in the Create String must reference the internal database name, NOT the one selected in the Table Name field.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline;">Sybase Example:</font></p>
+<p style="margin-left: 36.00pt;">Custom Index Id: GLH01</p>
+<p style="margin-left: 36.00pt;">Index Name: GLHistoryByDateEffective</p>
+<p style="margin-left: 36.00pt;">Table Name: GLHistory</p>
+<p style="margin-left: 36.00pt;">SQL Create String: Create Index GLHistoryByDateEffective on glhstry (glhstry_dte_effctve)</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline;">SQL</font> <font style="font-weight: bold; text-decoration: underline;">Server</font> <font style="font-weight: bold; text-decoration: underline;">Example:</font></p>
+<p style="margin-left: 36.00pt;">Custom Index Id: GLH01</p>
+<p style="margin-left: 36.00pt;">Index Name: GLHistoryByGLAccountRn</p>
+<p style="margin-left: 36.00pt;">Table Name: GLHistory</p>
+<p style="margin-left: 36.00pt;">SQL Create String: CREATE NONCLUSTERED INDEX GLHistoryByGLAccountRn</p>
+<p style="margin-left: 36.00pt;">on glhstry (glaccnt_rn)</p>
+<p style="margin-left: 36.00pt;">INCLUDE (glentty_rn, glhstry_amnt_dbt, glhstry_amnt_crdt)</p>
+<p><font style="font-weight: bold;">Reference:</font></p>
+<p>This field may be used to cross-reference the index to a specific D-B WO# or Case#.</p>
+<p><font style="font-weight: bold;">Description:</font></p>
+<p>This 400 character field should be used to document the need for / purpose of this index.</p>
+
+</body></html>

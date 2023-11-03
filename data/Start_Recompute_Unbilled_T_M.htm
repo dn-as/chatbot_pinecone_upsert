@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Start Recompute T&amp;M Revenue</title>
+<link rel="StyleSheet" href="sampro.css" type="text/css" />
+<link rel="StyleSheet" href="sampro.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("SAMPro Help\nAccounting/Back Office\nInvoicing\nGMP\nStart Recompute T&M Revenue");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sampro.htm", "", "&gt;", "Home", "Contents.htm");
+document.write("<a href=\"Logging_On.htm\">SAMPro Help<\/a> &gt; <a href=\"Accounting_Period_Viewer.htm\">Accounting/Back Office<\/a> &gt; <a href=\"Payment_Type_Viewer.htm#bc-1\">Invoicing<\/a> &gt; <a href=\"Start_Compute_GMP_Special_Revenue.htm\">GMP<\/a> &gt; Start Recompute T&amp;M Revenue<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('sampro.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<h1>Start Recompute T&amp;M Revenue</h1>
+<h2>Purpose:</h2>
+<p>It is not always possible to finalize the job setup for its construction jobs prior to real costs posting to JCH. &#160;This includes the list of Cost Codes, the Schedule of Values (Billing Items), the Default Billing Items for Cost Codes, the Rate Schedule info, etc.</p>
+<p>This function's purpose is to retroactively apply Rate Schedule rates to already-posted JCH data for a user-specified Job. If enabled via registry, the Job Billing Item in Job History will be forced to match the Job Cost Code's Job Billing Item; this is not recommended for non-USE installations.</p>
+<p>The function presents a list of qualifying job history entries for this Job. &#160;For each selected JCH entry, it 're-thinks' billing information and updates the JCH record when changes are required.</p>
+<p>This function also evaluates and makes adjusting Job Journal entries for billed JCH data. For any JCH entries that qualify for re computation, a Job Journal entry is generated to capture the difference in revenue amounts after the function is run. The Job Journal entries are then eligible for billing and could result in an additional invoice or a credit memo.</p>
+<h2>Registry:</h2>
+<p><a href="Registry_Start_Recompute_TM_Revenue.htm">Registry</a> to be enabled if the Job Billing Item in Job History <span style="font-weight: bold;">should</span> be forced to match the Job Cost Code's Job Billing Item when this function is run (USE only).</p>
+<h2>Usage:</h2>
+<p>This process cannot be performed on a job that has an Invoice Status of either 'Ready' or 'Printed'. &#160;If the specified job has an Invoice Status of either 'Ready' or 'Printed', the user is given the opportunity (via form prompter) to reset the status to Hold. &#160;The user can either abort the recompute or elect to have the status reset to 'Hold'.</p>
+<p>Entries Which Are Skipped:</p>
+<p style="margin-left: 48px;">1. GMP Special Revenue-type rows will be processed ONLY for the purpose of resetting their Billing Item Rns when necessary. &#160;Their revenue values will NOT be recomputed.</p>
+<p style="margin-left: 48px;">2. Entries from the following source journals are skipped:</p>
+<p style="margin-left: 88px;">AR Cash Receipts - AR Sales - GL Journal<br />
+Job Budget - Job Cost EOM<br />
+Bill Adjustment - IM Journal -<br />
+Quote Budget - Projected Cost - PR Check<br />
+Shop Ticket - Shop Order Jrnl</p>
+<p style="margin-left: 48px;">3. Reversing and reversed entries are skipped.</p>
+<p>Entries Which Make the Selection List:</p>
+<p style="margin-left: 48px;">1. Entries that satisfy one or more of the following revenue-based criteria:</p>
+<p style="margin-left: 88px;">(a) new Revenue Rate, (b) new Billing Rate Type Id, (c) new Extended Revenue.</p>
+<p style="margin-left: 48px;">2. Entries also make the selection list when the JCH Billing Item no longer matches the Default Billing Item from the JCH Cost Code record.</p>
+<p style="margin-left: 48px;">3. Both billed and unbilled JCH data (supporting the above criteria) will be considered. .</p>
+<p>Record Change Log entries are created for each changed JCH record and changed Source Journal Record.</p>
+<p>An attempt is made to find and update the corresponding original source journal child lines to keep them consistent with the revised JCH. &#160;Values updated are the Revenue Rate, Unit Price, Extended Price, Billing Rate Type Id and Billing Item.</p>
+<h2>Important Fields: Range Screen</h2>
+<p><span style="font-weight: bold;">Job Id:</span><br />
+Enter the Job Id of the Job to be processed. This field is required.</p>
+<p style="font-weight: bold;">Cost Code:<br />
+<span style="font-weight: normal;">This range may be used to limit this function to the Job Cost Code(s) specified in this filter.</span></p>
+<p><span style="font-weight: bold;">Billing Item:</span><br />
+This range may be used to limit this function to the Job Cost Code(s) specified in this filter.</p>
+<p>Click the Go button to continue.</p>
+<h2>Important Fields: Checklist Screen</h2>
+<p><font style="font-weight: bold;">Do</font><br />
+This field enables you to select which lines should be recomputed. Double-click on the Do field to select or deselect an item (or press the Spacebar when the caret appears on this field). The following fields are displayed for informational purposes:</p>
+<p><span style="font-weight: bold;">Type:- &#160;Date: - Quantity/HourSource Journal - Unit Cost - GMP Special Revenue?</span><br />
+<span style="font-weight: bold;">Old Bill Item - Old Bill Type - Old Rvne Rate - Old Unit Price - Old Total Revenue</span><br />
+The current Job History detail up for recomputation.</p>
+<p><span style="font-weight: bold;">Bill Item - Bill Type Id - Revenue Rate - Unit Price - Total Revenue</span><br />
+The new job history detail which will be generated when this line is recomputed.</p>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

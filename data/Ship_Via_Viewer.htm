@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.2.0_13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="ship via"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Ship Via Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="ship via"/><meta name="brsprev" value="FOB_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Ship Via Viewer">
+        <span>Ship Via Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Ship Via Viewer</h1>
+<h2>Purpose:</h2>
+<p>Add and maintain the records that specify shipping options for shipment from vendors to you and from you to your customers.</p>
+<h2>Usage:</h2>
+<p>This field is referenced in the Vendor, PO, Client Site and Client Order records.</p>
+<h2>Example:</h2>
+<p>For example, &quot;ur&quot; for UPS Regular, &quot;u2&quot; for UPS Second Day, etc.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of all fields that may be included in this record. If you are using a customized system, the fields displayed on your screen may not exactly match the order or status (required, optional, default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">Ship Via Id:</font> (2 character, only . and - special characters)<br/>
+This field is required to uniquely identify each Ship Via record.</p>
+<p><font style="font-weight: bold;">Description:</font> (20 character)<br/>
+Briefly describes the Ship Via record for internal purposes; optional but recommended.</p>
+<p><font style="font-weight: bold;">Warning Type: None DOT IATA</font><br/>
+This field is used in conjunction with drum label printing for hazardous materials. Double-click on the radio button to select a warning type for this Ship Via record.</p>
+<p><font style="font-weight: bold;">Freight GL Expense Account Id:</font><br/>
+Provides the default GL Account information for journal entries: double-click to select from a list. This field is required.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database system, this informational field displays the Security Id of the local user that created this record. If multiple location security is not implemented on your system, or if a global user created this record, this field will be blank.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><font style="font-weight: bold; font-style: italic;" color="#008000">Also See...</font> <font color="#008000"><br/></font> <a href="Vendor_Viewer.htm">Vendors</a>  <a href="Purchase_Order_Viewer.htm">Purchase Order</a>   <a href="Client_Order_Viewer.htm">Client Order</a></p>
+
+</body></html>

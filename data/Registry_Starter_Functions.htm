@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.6.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="starter"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="initial values"/>
+<meta name="MS-HKWD" content="start"/>
+<meta name="MS-HKWD" content="sys-start-sfunctionid"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Starter Functions</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="default values,starter,registry,initial values,start,sys-start-sfunctionid"/><meta name="brsnext" value="Registry_Tab_Mismatch_Alert.htm"/><meta name="brsprev" value="Registry_Recurring_AP_Journal.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Starter Functions">
+        <span>Registry Starter Functions</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Starter Functions (sys-start-sfunctionid)</h1>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Specify Initial Starter Function Settings</h2>
+<p>The software supports general functionality to allow the user to specify 
+ the initial value for Start function input fields and ranges.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> InitialValueFor~<font style="font-style: italic;">fieldId</font><font style="font-style: italic;"> </font><font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">fieldvalue</font></p>
+<p>Note that ”fieldId” is displayed on the start input screen when you 
+ lay your cursor over it. <span style="font-weight: bold;">It is the SAMPro 
+ field name, not the database name.</span> For boolean fields (check boxes), 
+ the field value of true is for checked, and false is for blank. Note that 
+ ^today^ is supported as a token initial value.</p>
+<p>If the initial value of a <span style="font-weight: bold;">range field</span> 
+ is being set, the <span style="font-style: italic;">fieldvalue</span> 
+ may be set to a comma-delimited list of values (see the Start Work Order 
+ Daily Edit example below).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Example: 
+ Start Material Requisitioning</font><font style="font-weight: bold;"><br/>
+</font>Set the Date as Of field to today, and the Work Order Type field 
+ to exclude Preventive Maintenance work orders.</p>
+<p style="margin-left: 36.00pt;">Id: sys-start-smtrlrqstnng</p>
+<p style="margin-left: 36.00pt;">Setting Key: initialValueFor~dte-as-of 
+   Setting Value: ^today^</p>
+<p style="margin-left: 36.00pt;">Setting Key: initialValueFor~wrkordr.type Setting 
+ Value: !PreventiveMaint</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Example: 
+ Start Work Order Daily Edit</font> <font style="font-weight: bold;"><br/>
+</font>This entry sets the parameters used when this function is run standalone 
+ (launched from the Starter menu or Workflow Folders. It will also control 
+ most initial settings when it is launched from the Dispatch Board (see 
+ the Important Note below for an exception).</p>
+<p style="margin-left: 36.00pt;">Id: sys-start-swrkordrdlyedt</p>
+<p style="margin-left: 36.00pt;">Setting Key: initialValueFor~wrkordr.type 
+ Setting Value: !PM Invoice (excludes PM Invoices)</p>
+<p style="margin-left: 36.00pt;">Setting Key: initialValueFor~wrkordrlgtype.id</p>
+<p style="margin-left: 36.00pt;">Setting Value: Pending,Waiting Service,Unacknowledged</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Important 
+ Note:</font> If this function is launched from the Dispatch Board’s Edit 
+ Daily WO button, the Log Type Id range will always be set from the Dispatch 
+ Board Filter Calls tab instead of the : initialValueFor~wrkordrlgtype.id 
+ registry option. Other options set by this registry will be used regardless 
+ of how this function is launched.</p>
+
+</body></html>

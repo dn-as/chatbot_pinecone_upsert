@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.24.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="sys-report-rpofrm"/>
+  <meta name="MS-HKWD" content="print"/>
+  <meta name="MS-HKWD" content="registry"/>
+  <meta name="MS-HKWD" content="purchase order"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry Report Purchase Order (sys-report-rpofrm)</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="sys-report-rpofrm,print,registry,purchase order"/>
+<meta name="brsnext" value="Registry_Entry_Purchase_Order.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Report Purchase Order (sys-report-rpofrm)">
+        <span>Registry Report Purchase Order (sys-report-rpofrm)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry Report Purchase Order (sys-report-rpofrm)</h1>
+  <h2>Purpose:</h2>
+  <p>This registry entry enables you to define the text that is printed next to the total amount.</p>
+  <h2>Related Registry Entries:</h2>
+  <p>Click <a href="Registry_Entry_to_Autosave_Report.htm#Report_Graphics_and_Copy_Stamp">Report_Graphics</a> for detailed instructions on specifying location of the custom bitmap/jpg files used to generate your purchase order’s background.</p>
+  <p>See <a href="Registry_PO_Form_Portrait_Format.htm">Registry PO Form Portrait Format</a> for a registry to print PO&#39;s in portrait rather than the default landscape format. Note that graphics changes will be needed if your company will be switching formats.  </p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold;">Testing Your Registry Entries</font><br/>
+    <font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.
+  </p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Setting</font>
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Values are Uppercase-Lowercase Sensitive:</font><br/>
+    The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.
+  </p>
+  <h2>Important Fields:</h2>
+  <p>
+    <font style="font-weight: bold;">Id:</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">sys-report-rpofrm-</font>
+    <font style="font-weight: bold; 
+	 font-style: italic;">branchid-userid</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">sys-report-rpofrm-</font>
+    <font style="font-weight: bold; 
+	 font-style: italic;">-userid</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">sys-report-rpofrm-</font>
+    <font style="font-weight: bold; 
+	 font-style: italic;">branchid</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">sys-report-rpofrm-</font>
+    <font style="font-weight: bold; 
+	 font-style: italic;">securityid</font>
+  </p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">sys-report-rpofrm</p>
+  <p>The first three formats enable you to specify the description by branch id and (optionally) user. If this entry is specific to a user, the branch must be specified if a user belongs to a branch. If branches are not implemented, two dashes (not separated by a space) must precede the user id.</p>
+  <p>The fourth format enables you to specify by security id.</p>
+  <p>The last format would apply to all users unless another registry entry was created for their security or branch/user id.</p>
+  <h3>Specify Total Description</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> TotalDescription <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">description</font>
+  </p>
+  <p>where <font style="font-style: italic;">description</font> is replaced by the word/phase that will be printed next to the total amount on your Purchase Orders (e.g., Estimated Total:).</p>
+  <h3>Last Page Bitmaps</h3>
+  <p>This registry enhancement may be used to print a ‘backer’ type bitmap as the last page of the Purchase Order. Currently this feature is available only on the PO Form, standard Quote Form, and enhanced AIA-style billing reports. </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> sectionbackerbitmap <font style="font-weight: bold;">Setting Value:</font> sharepath\backerbitmapname.bmp
+  </p>
+  <p>If you will be emailing the report or saving it as a .pdf, make sure that a .jpg version of the backer bitmap also exists in the same directory.</p>
+  <h3>Validate that Purchase Order is Printed before E-mail is Allowed</h3>
+  <p>This registry option may be implemented to ensure the PO is printed before it is allowed to be emailed. This registry is recommended to prevent users from emailing a purchase order to a vendor and then changing the details or vendor.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> IsOkToEmailWithoutPrint <font style="font-weight: bold;">Setting</font>
+    <font style="font-weight: bold;">Value</font>
+    <font style="font-weight: bold;">:</font> false
+  </p>
+  <p>This registry option must be set to false to disable the ability to email without first printing and confirming the print.</p>
+  <h3>Default PO Sales Tax Group from Job  </h3>
+  <p>By default, the PO Tax Group defaults from the Vendor record if the Vendor record has a Tax Group. Since this does not produce the desired result in all cases, this release implements a new setting that sets the PO parent Tax Group based on the Job&#39;s Tax Group.  The job can be entered directly in the PO parent or it can be determined from the WO entered directly in the PO.</p>
+  <p>This setting causes the PO parent Sales Tax Group to be set from the Job record.  This can be either the Job entered directly in the PO parent record or it can be the Job from Work Order entered directly in the PO parent record.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> DefaultPOTaxGroupFromJob  <font style="font-weight: bold;">Setting Value:</font> true (default is false)
+  </p>
+  <h3>Provide Image/Logo in Emails</h3>
+  <p>This registry allows users to add company headers and footers to auto-generated emails. This makes auto-generated emails look professional and provides assurance for the receiver that they do come from the company.</p>
+  <p><strong>Id:</strong> sys-report-rpofrm</p>
+  <p><strong>Setting Key: </strong>EmailHeaderImage       <strong> Setting Value:</strong> <em>(insert the path to the image)</em><br/>
+    <strong>Setting Key:</strong> EmailFooterImage      <strong>   Setting Value:</strong><em> (insert the path to the image)</em>
+  </p>
+  <p><strong>Note: the path to the image must be accessible via the web, otherwise, the image will not appear in the email for the recipient.</strong></p>
+  <h3>Prevent PO Print Confirmation</h3>
+  <p>Answering ‘yes’ to the PO Print confirmation results in the system setting the status of the PO to Printed. This prevents the cancellation of any PO line unless the PO status is first set to Pending Cancel and printed again. This entry prevents the confirmation prompt from appearing.  In other words, and treats the print as though the user answered NO without actually prompting for their response.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> PrintConfirmationDisabled <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Important Archiving Note:</font><br/>
+    If the above registry option is enabled, the autosavewhenprinted registry option will NOT work because the user never confirms the print. The autosave option should be used instead if the archiving of this report is desired.
+  </p>
+  <p style="margin-left: 36.00pt;"> </p>
+
+</body></html>

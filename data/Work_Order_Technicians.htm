@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.3.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="dispatch"/>
+  <meta name="MS-HKWD" content="technicians"/>
+  <meta name="MS-HKWD" content="work order"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Work Order Technicians Tab</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="dispatch,technicians,work order"/>
+<meta name="brsnext" value="Work_Order_Log_Tab.htm"/><meta name="brsprev" value="Work_Order_Invoice_Other.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Work Order Technicians Tab">
+        <span>Work Order Technicians Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Work Order Technicians Tab</h1>
+  <h2>Purpose:</h2>
+  <p>Controls the dispatch board display for this Work Order. May be used to assign technicians to a Work Order and schedule Work Orders for more than a single day. The system allows multiple lines on the Work Order Technician tab with the same Tech Id and Date but a different Time Scheduled.   </p>
+  <p>Multiple-day-time Work Orders will appear on the Dispatch Board as one line per Work Order per day per time for each technician. Changes to the Work Order implemented from the Dispatch Board will appear on this tab.</p>
+  <h2>Examples:</h2>
+  <p>Schedule a long installation for Monday, Tuesday and Wednesday for three technicians.</p>
+  <h2>Usage:</h2>
+  <p>Required for dispatching.</p>
+  <h2>Important Fields:</h2>
+  <p>
+    <font style="font-weight: bold;">Technician Id:</font><br/>
+    The tech(s) assigned to this Work Order. Enter the Id or double-click (or press Alt+F7) to select from a list of Technicians. The system will warn you if you add an inactive technician. You will not be allowed to select a subcontractor technician whose required insurance is out of date and Block Payments or Block Purchases is flagged in their Vendor record.
+  </p>
+  <p>If a Subcontractor PO is referenced on the Tech line, the PO will be updated if a different Subcontractor is selected. The AP Term in the PO is forced to match the terms from the Vendor record, even if blank (unless overridden by customization). The PO&#39;s Sales Tax Group is updated from either the Vendor (by default) or Job record (if the DefaultPOTaxGroupFromJob is set to true in sys-viewer-vprchseordrlst registry).</p>
+  <p>
+    <font style="font-weight: bold;">Technician Name:<br/>
+      Technician Phone: Pager: Cellular:</font><br/>
+    The Tech’s name, phone, pager, and cellular phone numbers will be displayed (if available) when Technician’s record is selected.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Tech Status:</font><br/>
+    The status (waiting parts, waiting service, etc.) as it should appear on the dispatch board. Double-click on this list or press Alt+F7 to select from a list. See <a href="Escalation_Status.htm">Escalation Status</a> for a discussion of technician and escalation statuses.
+  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Cancelled Status:</span> Note that setting the Tech Status to Cancelled will also set the Tech&#39;s Scheduled Events to Cancelled if they have not yet been executed. If the Work Order Escalation status is also set to Cancelled unexecuted Scheduled Events that are not tech-based will also be set to Cancelled.</p>
+  <p>
+    <font style="font-weight: bold;">PO #</font><br/>
+    This display-only field supports the recording and tracking of PO numbers by sub by WO where multiple subcontractor technicians are listed on the same work order. A Purchase Order may be automatically generated for a subcontractor by New Call, Create PM Work Orders, or by the Create PO for Sub button discussed below.
+  </p>
+  <p>The system will attempt to auto-populate the new column during data conversion.  This is driven by the database revision level, not the SAMPRO version number.  Any conversion where the &#39;old&#39; revision level is 396 or less will have this process executed automatically. </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Important Note on Registry Entries:</font><br/>
+    If your firm will be using this feature, a registry option should be implemented that allows the user to &#39;undo&#39; the current requirement that the WO Id and PO Ids match. This registry is discussed in <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm">Registry Entry Global Settings</a>. Another registry option automates the process of creating a PO for a subcontractor.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Estimated Hours</font><br/>
+    The estimated hours to appear on the dispatch board for this Date/Technician.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Date Schd:</font><br/>
+    Double-click to access the calendar to set the date. To enter today&#39;s date press the Spacebar. In SAMPro 9.1.611.058 and above, when the user adds a new Tech line, the New Call (<a href="Registry_Entry_for_New_Call_Options.htm">sys-newcall</a>) registry DefaultStartDate will be used to provide a default date scheduled.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Tech Unavailability:</font> if this feature is enabled the user will be warned if the Technician is Unavailable when the Tech Id or Date Scheduled is added or changed.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Time</font><br/>
+    Enter the scheduled time in 24-hour (military) format or double-click (or press Alt+F7) on this field to access the Clock.  In SAMPro 9.1.611.058 and above, when the user adds a new Tech line, the New Call (<a href="Registry_Entry_for_New_Call_Options.htm">sys-newcall</a>) registry DefaultStartTime will be used to provide a default time scheduled.
+  </p>
+  <p>The new WO Tech Index (optional in V8.2, mandatory in V9.0 and up) allows multiple lines with the same date but not the same time per technician on the work order.</p>
+  <p>
+    <font style="font-weight: bold;">Seq:</font><br/>
+    The sequence of this call for this technician on this day on the Classic Board. This field is also set when drag and drop is used on the upper section of the Classic board to re-sequence work orders.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Time Slot Id:</font><br/>
+    This display-only field is completed by the Time Slot Wizard (which may be run from New Call, the Dispatch Board, of this line). If it is completed, the Date and Time fields cannot be changed on this line. If a Technician line with a Time Slot is Canceled, it will not be ‘counted’ as being assigned, and that Time Slot will be included in the available Time Slot inventory.
+  </p>
+  <p style="margin-top: 0; margin-bottom: 0;"> </p>
+  <p>
+    <font style="font-weight: bold;">Status Date: Status Time:</font><br/>
+    These display-only fields are maintained by the system. When a WO is saved with a WO Tech status change, the history transaction date and time are written to the Status Date and Status Time fields of the WO Tech line.
+  </p>
+  <h2>Important Buttons:</h2>
+  <p><img alt="" border="0" src="assets/images/image/Magnify.gif" style="border: none;"/> Double-click the Magnify button to display all fields for this line.</p>
+  <p><img align="left" alt="image\releaseline.gif" border="0" height="16" src="assets/images/image/releaseline.gif" title="image\releaseline.gif" width="72"/> When clicked, the line&#39;s status will be changed from Pending (or other statuses defined via registry) to the Default Status for the technician (this my also be defined via Registry). This functionality is designed for use with TechAnywhere and Subanywhere. A work order can be created as pending, but will not be sent to the technician’s device until is released by the dispatcher. When this functionality is desired, all new wo&#39;s for technicians with remote access should be created with a status of Pending (or as specified via registry). </p>
+  <p><img alt="image\createpoforsub.gif" border="0" height="15" src="assets/images/image/createpoforsub.gif" title="image\createpoforsub.gif" width="80"/> Clicking this button will create a new PO for the sub specified in this line.   Pushing the button does NOT open a PO viewer. Instead it causes a new PO to be created similar to those created from the New Call function. The system will warn you if you click the button for a Technician that is not a subcontractor, or if a PO has already been recorded for this line.</p>
+  <p>If a PO for a SubAnywhere subcontractor is generated, the PO will be set to Unreleased to conform to SubAnywhere requirements. To be considered a SubAnywhere tech, the Technician record must: reference a Vendor record; have the Web Access field set to Subcontractor, and have the Remote Device Type set to the new option of SubAnywhere.</p>
+  <p><img alt="image\WOTechFinder.gif" border="0" height="18" src="assets/images/image/WOTechFinder.gif" title="image\WOTechFinder.gif" width="65"/>  When clicked, the TechFinder opens, with the work order&#39;s Client Site Zone and the Certification for the first piece of equipment on the Equipment tab passed to the TechFinder filters (note that the Equipment record MUST specify a Certification). When the user completes the TechFinder processing, the system returns the selected Technician Id, Date and Time to the appropriate Technician line.</p>
+  <p><img alt="" border="0" src="assets/images/TimeSlotWiz.gif" style="border: none;"/> Click the Select Time Slot Button to launch a Wizard to select or change the Time Slot on this line.</p>
+  <p>TechFinder  functionality supports the sys-viewer-vwrkordr registry&#39;s CreatePOForSub option: if it is set to Automatic, a PO will automatically be generated when a Subcontractor is assigned.  If the option is set to Prompt, the user will be prompted to confirm that a PO should be created  If the option is set to Manual (or the registry is absent) a Subcontractor PO will not be generated.</p>
+  <p><img alt="" border="0" height="25" src="assets/images/image/LinesView.gif" style="border: none;" width="71"/>  Click the Lines View button to display the multiple line view again.</p>
+  <p><img height="23" src="assets/images/image65.png" width="70"/>  Click Add Line to add an additional Tech line. Click the arrows to move between Tech lines.</p>
+  <p><img alt="" border="0" src="assets/images/image/SKIN1_InsertLine.gif" style="border: none;"/> The insert/copy functionality blanks the Time Scheduled on the new Line. The message &quot;WARNING: the Time Scheduled cannot be copied&quot; will be displayed. A Tech may be scheduled for multiple times on the same day, but the times must be unique.</p>
+  <p><img height="27" src="assets/images/image66.png" width="74"/> Focus a line to be deleted then click Delete Line.</p>
+  <p><strong><img height="27" src="assets/images/image67.png" width="73"/></strong> When the <a id="UpdateTechStatus"></a>Update Tech Status button is selected, a modal window will display with two input fields: “From” and “To.” <br/>
+    If all tech lines on a work order have the same status, the &quot;From&quot; field will be pre-populated with the status. Otherwise, a drop-down list appears to let the user select a &quot;From:&quot; status. For the To: field, a drop-down list appears to let users select a &quot;To:&quot; status and only a single status may be selected.</p>
+  <p><strong>Field: </strong>&quot;wrkordrlgtype-id-from&quot;<br/>
+    <strong>Field: </strong>&quot;wrkordrlgtype-id-to&quot;<br/>
+    <strong>Field: </strong>&quot;push-updateTechStatuses&quot;
+  </p>
+
+</body></html>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.3.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Physical Count Viewer"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Physical Count Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Physical Count Viewer"/><meta name="brsprev" value="Inventory_Restock_Pick_List_Entry.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Physical Count Viewer">
+        <span>Physical Count Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Inventory Physical Count Viewer</h1>
+<h2>Purpose:</h2>
+<p>This function enables the user to enter physical count information by location. This topic describes the standard features for this function.</p>
+<h2>Usage:</h2>
+<p>The user has the option of working from a printed report and manually entering the count (Option A) or using an Export/Import Mechanism Via Spreadsheets (Option B).</p>
+<h2>Option A: Manual Entry of Values</h2>
+<h3>Step 1: Initial Generation of the Physical Count Batch</h3>
+<p>Beginning with a blank record, enter the Location Id and Count Date (which serves as the effective date of the transaction, and defaults to today’s date) .</p>
+<p>If the Cycle Count field is completed, the Load OnHand and Built Export Files functions will be filtered to only include Inventory with the corresponding Count Cycle on the Inventory Location Tab (note the Magnify button must be clicked to access this field).</p>
+<p><img src="assets/images/image/SKIN1_AddRecord.gif" alt="" style="border: none;" border="0"/></p>
+<p>When you click the Add record button, the System generates a Physical Count Batch based on the data entered by the user. A Batch Id is automatically assigned to the new batch.</p>
+<h3>Step 2: Load On Hand</h3>
+<p><img src="image/Load_OnHand.gif" alt="" style="border: none;" border="0"/></p>
+<p>Click the 1a. Load OnHand button to display the Enter Options form.  </p>
+<p style="font-weight: bold; margin-left: 48px;">Sort by Inventory Group?<br/>
+<span style="font-weight: normal;">If this box is checked, the on-hand items will be sorted by Inventory Group, then Pick Sequence, then Inventory Item Id.  If this box is not checked, the on-hand items will be sorted by Pick Sequence, then Inventory Item Id.</span></p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">First Included Item Id:   Last Included Item Id:</span><br/>
+These fields allow the user to restrict the function to a range of items. The files are pre-filled so that all items (within the Count Cycle, if applicable) will be included.</p>
+<p>Click the Save record button; the system will list the selected items for this location in the lower portion of the screen.</p>
+<h3>Step 3: Print Report</h3>
+<p><img src="image/Print_Report.gif" alt="" style="border: none;" border="0"/></p>
+<p>Click the 2a. Print Report button. The List Physical Count report range viewer will appear.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Sort by Inventory Group?</span><br/>
+The system will initially set this field based on how it was set in step 1a so that the report and the input screen will match. To sort the report by Inventory Item Id within each Inventory Group, check the Sort by Inventory Group box. If this box is not checked, the items will be sorted by Pick Sequence, then Inventory Item Id. <span style="font-weight: bold;"></span></p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Include Missing Item?</span><br/>
+We recommending checking this box so that inventory items that have not been entered on the physical count but for which there is a non-zero quantity on hand will be included in the report.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">First Included Item Id:   Last Included Item Id:</span><br/>
+Enter the First and Last Uncounted Item Id’s to limit the report to the items within this range. If you leave these fields blank, all uncounted items (as of the Count Date) will be included.</p>
+<p>Click the OK button to continue.</p>
+<p>A report listing all items the system thinks are at this location will appear; click the Print button to output it to a printer, or the E-mail button to sent the report electronically. See <a href="Registry_Entry_System_Email.htm">Registry Entry System Email</a> for information on e-mail configuration.</p>
+<h3>Step 4: Entering the Count Information</h3>
+<p>Using the Physical Count Printout you generated in the previous step, enter the physical count from the shelf for all items included on the report. Inventory Items may also be added to the report.</p>
+<p>Back in the Physical Count viewer, change the Quantity on the screen based on the amounts noted on report.</p>
+<p>Add any lines needed for Inventory Items that are on the shelf but not on the report.</p>
+<p>Click the Save record button to save the updated batch.</p>
+<h3>Step 5: Computing Adjustments</h3>
+<p><img src="assets/images/image/computeadjustments.gif" alt="" style="border: none;" border="0"/></p>
+<p>Click the 3. Compute Adjustments Button</p>
+<p>The system compares the entered counts to the on-hand quantities computed from the Inventory History file. The batch’s Count Date (which must be filled in) is used as the cutoff for the Effective Date field in the Inventory History file. This results in the on-hand quantities being computed as of the specific date.</p>
+<p>The appropriate adjusting quantities are computed and added to the batch lines.</p>
+<p>Click the Save record button to save the updated batch.</p>
+<h3>Step 6: Reviewing The Results</h3>
+<p><img src="image/Print_Report.gif" alt="" style="border: none;" border="0"/></p>
+<p>Click the 2a. Print Report Button and print the Physical Count Report again – the adjustments will be included on the report.</p>
+<p>Make any changes needed on the Physical Count viewer, and then click the Save record button.</p>
+<h3>Step 7: Posting The Adjustments</h3>
+<p><img src="assets/images/image/PostAdjustments_new.gif" alt="" style="border: none;" border="0"/></p>
+<p>Click the 4. Post Adjustments Button. Click Yes to confirm that you wish to proceed with this function.</p>
+<p>Adjusting entries are made into the Inventory History file, which make the on-hand quantities match the counted quantities.</p>
+<p>NOTE: No adjusting GL entries are made.</p>
+<p>Warning: Prior to posting, Recompute Adjustments should be run if any historical information may have been changed.</p>
+<h3>Option B: Implement Export/Import Mechanism Via Spreadsheets</h3>
+<p>This enhancement has been made to facilitate the ease of data collection for physical inventory counts by exporting a spreadsheet file with the suggested list of parts to count for the batch’s Location. This spreadsheet may then be updated using a spreadsheet program, and then imported into the Physical Count Viewer so that the adjustments may be computed.</p>
+<h3>Step 1: Initial Generation of the Physical Count Batch</h3>
+<p>Beginning with a blank record, enter the Location Id and Count Date (which serves as the effective date of the transaction, and defaults to today’s date) .</p>
+<p><img src="assets/images/image/SKIN1_AddRecord.gif" alt="" style="border: none;" border="0"/></p>
+<p>When you click the Add record button, the System generates a Physical Count Batch based on the data entered by the user. A Batch Id is automatically assigned to the new batch.</p>
+<h3>Step 2: Build Spreadsheet Export File</h3>
+<p><img src="image/Build_Export_Files.gif" alt="" style="border: none;" border="0"/></p>
+<p>Click the 1b.Build Export Files Button. When this button is clicked, the system opens a window requesting the Activity Window in Days to ensure that inactive, old stock that is not currently on hand at the location will be excluded from this process. Depending upon your firm’s needs and business cycle, an appropriate number of days could range from 3 months (90 days) to a couple of years (730 days).</p>
+<p>Once the user has entered the desired number of days and clicked the OK button, the system will generate a comma separated ASCII file that can be opened in Excel. A browser window will be opened to allow the user to select the name and save location of this file. The file will contain all inventory items that are currently on hand in a user specified location (truck) along with any inventory items that have an on hand quantity less than or equal to 0 that have any on hand activity (+/-) within the Activity Window in Days.<br/>
+The ASCII file will contain header information, a blank line, and then the following data lines:</p>
+<p style="margin-left: 48px;">Inventory Item Id<br/>
+Inventory Item Name<br/>
+Count (this will be blank for all parts listed and will need to be filled out by the user):<br/>
+                note that any count left blank will be treated as zero when the file is imported<br/>
+Comment 1<br/>
+Comment 2<br/>
+Pick Sequence (this field will be ignored on import)<br/>
+Unit of Measure (this field will be ignored on import)<br/>
+Serial #  (note: one line will be included for each serialized item; only quantities of 1 or 0 are allowed on the import of serialized items.</p>
+<h3>Step 3: Import Spreadsheet Entries</h3>
+<p><img src="assets/images/image/importentries.gif" alt="" style="border: none;" border="0"/></p>
+<p>Click the 2b. Import Entries button to import the ASCII file (once it’s filled out) so that the system can calculate the adjustments necessary. When you do so, a browser window will appear so that you can point to the applicable file.  The data (including the count and comments) you entered in the spreadsheet will be imported. Validation requires that only quantities of 1 or 0 are allowed for Serialized items.  The import function copies the Serial # to the lines on the viewer.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Note:</span> the format of the exported spreadsheet has been changed as of Version 8.2, the program will still accept spreadsheets predating the Serialized functionality.</p>
+<h3>Step 4: Compute Adjustments</h3>
+<p><img src="assets/images/image/computeadjustments.gif" alt="" style="border: none;" border="0"/></p>
+<p>Next, click the Compute Adjustment button and then Save the batch. At this point, you may make any further adjustments needed.</p>
+<h3>Step 5: Posting Adjustments</h3>
+<p><img src="assets/images/image/PostAdjustments_new.gif" alt="" style="border: none;" border="0"/></p>
+<p>Click the Post Adjustments button to update the physical inventory for this location. Click Yes to confirm that you wish to proceed with this function.</p>
+<p>Adjusting entries are made into the Inventory History file, which make the on-hand quantities match the counted quantities.</p>
+<p><font style="font-weight: bold;">NOTE:</font> No adjusting GL entries are made.</p>
+<p><font style="font-weight: bold;">Warning:</font> Prior to posting, Compute Adjustments should be run if any historical information may have been changed.</p>
+
+</body></html>

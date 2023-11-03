@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.1.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="ar"/>
+<meta name="MS-HKWD" content="receivables"/>
+<meta name="MS-HKWD" content="deposit"/>
+<meta name="MS-HKWD" content="accounts receivable"/>
+<meta name="MS-HKWD" content="retainers"/>
+<meta name="MS-HKWD" content="ar journal"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>AR Deposits, Prepays, Retainers</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="ar,receivables,deposit,accounts receivable,retainers,ar journal"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AR Deposits, Prepays, Retainers">
+        <span>AR Deposits, Prepays, Retainers</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>AR Deposits, Prepays, Retainers</h1>
+<h2>Purpose:</h2>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">This topic discusses the details of how to handle deposits, prepays and retainers on your invoices.</p>
+<h2>Steps:</h2>
+<p>1. Create / Edit the contra-asset or liability account that will receive the CR for amount of the deposit, prepayment, or retainer.</p>
+<p>This account must be given the G/L Account Attribute of “AR Control”</p>
+<p>2. Manually create a Sales Journal Transaction with the following attributes.</p>
+<p>Entry Type  = “Credit Memo”</p>
+<p>A/R Control  = “Contra-Asset/Liability” account from previous step.</p>
+<p>Detail G/L Account = “Sweep / Undeposited Account”</p>
+<p>Detail Revenue Type = “n/a” <font color="#FF0000">**very important</font></p>
+<p style="margin-left: 48px;">G/L Impact (example)</p>
+<p style="margin-left: 48px;">DR: Sweep/Undeposited   1000</p>
+<p style="margin-left: 48px;">CR: DEP/PP/RETAINER    1000</p>
+<p>3. Create &amp; Post Invoice according to normal billing procedures.</p>
+<p>Note: Deposit / Prepayment / Retainer will not appear within the context of the job’s invoice details, but will show as a credit in the “A/R Summary” section on the invoice, if that option was selected at the invoice print options screen.</p>
+<p style="margin-left: 48px;">G/L Impact (example)</p>
+<p style="margin-left: 48px;">DR: A/R   1000</p>
+<p style="margin-left: 48px;">CR: INCOME   1000</p>
+<p>4. Create an AR Cash Receipt transaction.</p>
+<p>Select the outstanding credit memo along with the invoice/s that apply.</p>
+<p>If necessary, adjust the detail amounts of either the credit memo or invoice/s such that the application results in a net-zero transaction.</p>
+<p>In cases where there is an unapplied balance for the credit memo, the balance will remain available for future similar applications. If the credit memo does not fully satisfy the invoice/s, then additional separate A/R Cash Receipt transactions can be recorded as payments are received.</p>
+<p style="margin-left: 48px;">G/L Impact (Example)</p>
+<p style="margin-left: 48px;">DR: DEP/PP/RETAINER  1000</p>
+<p style="margin-left: 48px;">CR:  A/R       1000</p>
+
+</body></html>

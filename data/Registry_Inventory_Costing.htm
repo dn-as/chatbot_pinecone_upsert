@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.21.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sys-inventory-costing"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="COP transfer costing"/>
+<meta name="MS-HKWD" content="inventory costing"/>
+<meta name="MS-HKWD" content="transfer"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Inventory Costing</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="sys-inventory-costing,inventory,COP transfer costing,inventory costing,transfer"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Inventory Costing">
+        <span>Registry Inventory Costing</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Inventory Costing (sys-inventory-costing)</h1>
+<h2>Purpose:</h2>
+<p>Allows COP Transfers to be included in Last Cost calculations.</p>
+<h2>Related Registry Entries:</h2>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#globel_settings_price_code">Price Code Handling (in sys-ffv-global-settings)</a></p>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#registry_global_setting_inventory_average">Control Inventory Average Cost Calculation</a></p>
+<p><a href="Registry_Inventory_Item_sys_viewer_vinvntryitm_.htm">Registry Inventory Item (sys-viewer-vinvntryitm)</a></p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Registry Id:</font> sys-inventory-costing</p>
+<h3>Include COP Transfers in Last Cost Calculations</h3>
+<p>If this feature is enabled, inventory history entries with a source journal of &#39;Order Transfer&#39; will be included in the queries determining last cost. A registry entry is required to enable this feature.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> IncludeCOPTransfersInLastCost&#39;</p>
+<p><font style="font-weight: bold;">Setting Value:</font> Y or T</p>
+<p>This feature defaults to disabled; COP Transfers will be used in inventory cost calculations, but not to set the last cost.</p>
+
+</body></html>

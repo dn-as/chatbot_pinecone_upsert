@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="location"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Inventory Item Locations Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="location,inventory"/><meta name="brsnext" value="Inventory_Items_Vendor_Paid_History__VHP_Tab_.htm"/><meta name="brsprev" value="Inventory_Item_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Inventory Item Locations Tab">
+        <span>Inventory Item Locations Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Inventory Item Locations Tab</h1>
+<h2>Purpose:</h2>
+<p>Lists the location(s) and quantities of this item. Note that Shop Orders 
+ are considered a location.</p>
+<h2>Example:</h2>
+<p>At the Cleveland location, 5 items on hand and 3 items on order.</p>
+<h2>Usage:</h2>
+<p>Used to track inventory location, quantity and order status. The Reorder 
+ Level and Cycle fields are maintained from this tab.</p>
+<h3>Use with Inventory Restock</h3>
+<p>The &quot;trigger&quot; mechanism is that when &quot;on hand&quot; quantity 
+ is less than the &quot;reorder level&quot;, an item will qualify for replenishment, 
+ and the Quantity to PICK will be however many are required to bring the 
+ &quot;on hand&quot; quantity up to the &quot;Order Up To Level.</p>
+<p style="margin-left: 36.00pt;">for instance...if 2 are on hand<br/>
+                  3 
+ is the reorder level<br/>
+                10 
+ is the order up to<br/>
+<br/>
+then an item would qualify for 8 to be picked.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields that may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">Location Id</font><br/>
+The location of this item on hand (e.g., cleve) or part of a shop order 
+ (order Id); press Alt+F7 or double-click on this field to select from 
+ a list of locations. New location lines will be created as needed by the 
+ system when purchasing or receiving an item.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Note:</span> 
+ Obsolete Locations are displayed at the bottom of this tab. The Obsolete 
+ flag appears as a column on the far right of the tab.</p>
+<p><font style="font-weight: bold;">Pick Seq:</font><br/>
+The shelf/bin position for items on hand at this location.</p>
+<p><font style="font-weight: bold;">Reorder Level</font><br/>
+The Level to which this item should be Reordered. This field is used for 
+ the Reorder Advice Report.</p>
+<p><font style="font-weight: bold;">Order Up To<br/>
+</font>This field is used to determine the quantity needed by the new Start 
+ Generate Purchase Order function. If this field is not completed, the 
+ Reorder Level will be used to calculate the Quantity Needed instead.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note: 
+ Setting the Reorder Level and Order Up to Fields Automatically</font></p>
+<p style="margin-left: 36.00pt;">Start Compute Corporate Metrics may be 
+ used to automatically set these fields based on historical usage and user-specified 
+ values. See <a href="Computing_Corporate_Metrics.htm">Computing Corporate 
+ Metrics</a> for details.</p>
+<p><font style="font-weight: bold;">On Hand: In Test: Rejected: Pick: Shop 
+ BckO: Cust BckO: On Order: <br/>
+</font> These informational fields are maintained by the system as PO&#39;s 
+ are released or changed, items entered in the Inventory Receipts Journal, 
+ Shop Orders generated, etc. The In Test and Rejected columns pertain only 
+ to lot-controlled items.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note 
+ for COP/Shop Order</font> <font style="font-weight: bold;">Users:</font><br/>
+The quantity available at a location = On Hand – Pick. Note that Pick / 
+ On Hand fields are recomputed when a Client Order is invoiced, not when 
+ the pick ticket is recorded. &#39;On Hand&#39; and &#39;Pick&#39; are also updated when 
+ recording Shop Order Transfer Tickets.</p>
+<p style="font-weight: bold;">Average Cost - Last Cost:<br/>
+<span style="font-weight: normal;">By default  the Average and Last 
+ Cost calculation is no longer applied when loading the viewer. To improve 
+ performance, the Average and Last Cost will only be calculated on each 
+ line when clicking &quot;Show Computation&quot; on the detail view.  The 
+ Average and Last Cost columns will display as &quot;Needs Compute&quot; 
+ until they are individually computed.</span> </p>
+<p>Note that the overall costing information for the Inventory Item is 
+ displayed on the Pricing/Costing tab as usual.</p>
+<p><span>See <a href="Registry_Inventory_Item_sys_viewer_vinvntryitm_.htm#Location_Tab_Average_and_Last_Cost_Calculation">Registry 
+ for Location Tab Average and Last Cost Calculation</a> to restore the 
+ previous behavior and show the Average and Last Costs.  </span></p>
+<p>See <a href="Inventory_Item_Unit_Cost_Calculation.htm"><font style="font-weight: bold;">Inventory 
+ Item Unit Cost Calculation</font></a> for a more detailed description 
+ of how unit costs are determined.</p>
+<p><font style="font-weight: bold;">Turns:<br/>
+</font>This statistic will be displayed by location if your firm has implemented 
+ the computation of corporate metrics. See <a href="Computing_Corporate_Metrics.htm">Computing 
+ Corporate Metrics</a> for details.</p>
+<p style="font-weight: bold;">Obsolete:<br/>
+<span style="font-weight: normal;">This field will be flagged if the Location 
+ referenced on this line is Obsolete; Obsolete Locations will appear at 
+ the bottom of the tab.</span></p>
+<p><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/> 
+   Click the Magnify button to see the following:</p>
+<p><img src="assets/images/image/ShowComputation.gif" alt="image\ShowComputation.gif" title="image\ShowComputation.gif" width="100" height="28" border="0"/></p>
+<p>Click this button to display the calculations used to derive the Average 
+ Cost at this location for this item.</p>
+<h2>Custom Systems Only:</h2>
+<p><font style="font-weight: bold;">Purchase Manager:</font><br/>
+Identifies the purchasing manager for this location. Enter a valid Id or 
+ double-click to select from a list.</p>
+<p><font style="font-weight: bold;">Date Last Counted:</font><br/>
+The date of the most recent physical inventory in <font style="font-style: italic;">mmddyyyy</font> 
+ format.</p>
+<p><font style="font-weight: bold;">Cy</font><br/>
+Cycle. An optional, two-character field describing the inventory cycle 
+ (mo, 30, yr ) for this item. This field is used in the Inventory Count 
+ report.</p>
+<p><font style="font-weight: bold;">Ratio  Stock UM: PrchseUM:</font> 
+ <font style="font-weight: bold;">Qty/Yr:</font><br/>
+These memo fields will appear if your organization maintains different 
+ Stocking and Purchase quantity (e.g., purchase by the box and stock by 
+ the item); they are for reporting purposes only. The Ratio defines the 
+ mathematical relationship between these two fields. For example, if the 
+ Stock Unit of Measure is &quot;each&quot; and the Purchase Unit of Measure 
+ is &quot;box-12&quot;, the Ratio should be entered as 12.</p>
+<p><font style="font-weight: bold;">LSN Sent:</font><br/>
+If this custom field appears on your screen, it should be completed by 
+ the user went the Low Stock Notice is first sent.</p>
+
+</body></html>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.8.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="checklist"/>
+<meta name="MS-HKWD" content="create pm workorder"/>
+<meta name="MS-HKWD" content="pm work order"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Create PM Work Order Checklist</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="checklist,create pm workorder,pm work order"/><meta name="brsnext" value="Record_Billing_Adjustments_Bill_Tab.htm"/><meta name="brsprev" value="Record_Billing_Adjustments_GL_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Create PM Work Order Checklist">
+        <span>Create PM Work Order Checklist</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Create PM Work Order Checklist</h1>
+<h2>Purpose:</h2>
+<p>This checklist appears immediately after the Create PM Work Order starter 
+ function has been run so that you can verify which PM Work Orders will 
+ be generated to the Dispatch Board.</p>
+<h2>Usage:</h2>
+<p>Required to complete the generation of PM Work Orders.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Do</font><br/>
+This field enables you to select which scheduled Work Orders should be 
+ generated. A check appears in the Do field if an item is selected; by 
+ default, all PM Work Orders are selected. Double-click on the Do field 
+ to select or deselect an item (or press the Spacebar when the caret appears 
+ on this field). </p>
+<p><span>By default, the &#39;Do&#39; box may NOT be cleared for Master Contract 
+ lines to assure that associated costs and revenues are in sync with Master 
+ Contract values. It may still be cleared for non Master Contract lines. 
+ The Clear All button only clears non-Master Contract lines. The Check 
+ All button checks all lines. This change is true whether or not the UseMasterContractEquipmentTable 
+ global registry is set to true. See </span><b><span style="font-weight: normal;"><a href="Registry_Entry_Create_PM_WO.htm#Allow_De-Selection_of_Master_Contract_PM_Work_Order_Lines">Allow 
+ De-Selection of Master Contract PM Work Order Lines</a></span></b><span><b> 
+ </b>for a registry to allow lines associated with a Master Contract to 
+ be deselected.</span><span style="font-weight: bold;"> </span></p>
+<p><font style="font-weight: bold;">Client Site Id: Client Site Name: Equipment 
+ Id: Inspect Date:<br/>
+Service Agreement#:</font> <font style="font-weight: bold;">Estimated Hours:<br/>
+</font>The above fields are displayed for informational purposes so that 
+ you can verify which PM&#39;s should be generated.</p>
+<p><font style="font-weight: bold;">PM Invoice:<br/>
+</font>The last invoice number for the PM job will be displayed here. The 
+ purpose is to make any cost charged to this PM work order get posted as 
+ billed therefore removing them from the unbilled cost report.</p>
+<p style="font-weight: normal;">PM&#39;s associated with Master Contracts pull 
+ in the most recent Invoice # for that Master Contract on the Site PM Billing 
+ tab.  If a PM is NOT associated with a Master Contract, it pulls 
+ in the most recent Invoice # NOT associated a Master Contact on the Site 
+ Billing schedule.</p>
+<p><font style="font-weight: bold;">Already Done:<br/>
+</font>Checking this field allows the user to identify maintenance that 
+ has already been completed and therefore does not need a new maintenance 
+ work order.  When this option is checked for a given line that is 
+ also checked as ‘Do’, a Work Order will not be generated. The Client Site 
+ Equipment PM Schedule will display the message ‘NO WO’ in the PM Workorder 
+ Id field.  </p>
+<p>The following warning will be displayed if the user checks the &#39;Already 
+ Done&#39; box:</p>
+<p>Warning: Any Deferred Revenue that should be attached<br/>
+        to a work order will NOT 
+ be generated if the<br/>
+        &#39;Already Done&#39; box is checked.</p>
+<p><span style="font-weight: normal;">This warning is designed to alert 
+ users to issues that would occur if they are writing deferred Earnings 
+ to Revenue using the PM Inspection line&#39;s Accrued box and Contract Value 
+ fields.  Using these fields attaches a Revenue Adjustment to the 
+ PM Inspection Work Order.  When Work Order is invoiced/posted, 
+ the revenue is moved from Deferred Revenue to Revenue. If you use the 
+ Already Done checkbox in because you’ve already created a manual work 
+ order in New Call, this transfer of revenue never happens.</span></p>
+<p><font style="font-weight: bold;">Tech Id:<br/>
+</font> This field specifies which Technician (if any) will be assigned 
+ to the PM. This field defaults from the previous Range screen (if the 
+ Tech id on the PM Work Order would have been blank. Otherwise, it will 
+ default from Equipment record’s PM Schedule tab, the Equipment record’s 
+ Main tab, or the Client Site. It may be adjusted by the user if needed.</p>
+<p><font style="font-weight: bold;">Work Requested:<br/>
+</font>This field defaulted from the previous Range screen, but may be 
+ adjusted by the user if needed. It will be used to set the Work Requested 
+ header field and the Work Order Equipment&#39;s Work Requested (followed by 
+ Service Tasks / Parts text if applicable).</p>
+<p><font style="font-weight: bold;">WO PO#:<br/>
+</font>This field usually defaults from the Job and/or Client Site based 
+ on the WorkOrderPO option in the sys-start-scrtepmwo registry. It may 
+ be adjusted by the user if needed.</p>
+<h3>Important Buttons:</h3>
+<p><img src="assets/images/image/SKIN1_Check.gif" alt="" style="border: none;" border="0"/> 
+ Click the Check button to check (select) every item on the list.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> 
+ If the RequirePO option is set to true in the sys-start-scrtepmwo registry, 
+ the system only checks lines where the PO is completed.</p>
+<p><img src="assets/images/image/SKIN1_CheckOff.gif" alt="" style="border: none;" border="0"/> 
+  Click to de-select every eligible item on the list. Unless enabled 
+ via registry, the &#39;Do&#39; box will NOT be cleared for Master Contract lines 
+ to assure that associated costs and revenues are in sync with Master Contract 
+ values. See <b><span style="font-weight: normal;"><a href="Registry_Entry_Create_PM_WO.htm#Allow_De-Selection_of_Master_Contract_PM_Work_Order_Lines">Allow 
+ De-Selection of Master Contract PM Work Order Lines</a></span></b><b> 
+ </b>for a registry to allow lines associated with a Master Contract to 
+ be deselected.<span style="font-weight: bold;"> </span><br/>
+<br/>
+<img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> 
+ Click to generate the selected PM Work Orders.</p>
+
+</body></html>

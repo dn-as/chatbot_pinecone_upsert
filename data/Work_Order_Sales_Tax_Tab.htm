@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.3.0_16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="work order"/>
+<meta name="MS-HKWD" content="sales tax"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Work Order Sales Tax Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="work order,sales tax"/><meta name="brsnext" value="Work_Order_Estimate_Tab.htm"/><meta name="brsprev" value="Work_Order_Evaluation_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Work Order Sales Tax Tab">
+        <span>Work Order Sales Tax Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Work Order Sales Tax Tab</h1>
+<h3>Purpose:</h3>
+<p>This enhancement provides a means for users to compute and edit a Service Compute work order&#39;s sales tax computations prior to producing the invoice. Although the typical SAMPRO user will not require this tab, it may be employed to support certain special sales tax considerations.</p>
+<h3>Usage:</h3>
+<p>If any lines are completed on this tab, its contents will be used to generate the tax for this invoice.</p>
+<p>Clicking the Sales Tab button should always be the final step before invoicing. After you have imported lines and generated adjustments (if needed), case the work order and then click the Compute Tax button (on the Invoicing tab) to default in the Sales Tax Authority lines. These lines may then be adjusted as needed.</p>
+<p>In addition to taxable lines, ‘no tax’ entries are also written to this tab. Although no tax was being reported, these entries are needed in order to write to the Tax History table correct for Tax Exempt reporting. See <a href="Sales_Tax_Summary_by_Tax_Group_Report_.htm">Sales Tax Summary by Tax Group Report</a> for details.</p>
+<p>The Compute Taxes button and Start Service Compute take into account the Tax Type Id of the work order line.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h3>Registry Entry:</h3>
+<p>Refer to the ServiceComputeSaleTaxEdits=true option in the <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm">Registry Entry for Work Order Options</a> Help topic.</p>
+<h3>Important Fields:</h3>
+<p><font style="font-weight: bold;">Tax Authority Id:</font><br/>
+The Tax Authority Id field(s) default (when you click the Compute Tax button) from the Sales Tax Group field in the Job record.</p>
+<p><font style="font-weight: bold;">Tax Base:</font><br/>
+The amount to be taxed on this work order invoice.</p>
+<p><font style="font-weight: bold;">Rate:</font><br/>
+The tax rate for this authority.</p>
+<p><font style="font-weight: bold;">Tax Amount:</font><br/>
+By default, the system calculates this field as Tax Base X Rate. During manual entry/changes, automated tax amount calculations are performed whenever the user changes either the Tax Authority Id or the Tax Base.  However, no auto-calc happens when the Tax Amount is changed.  This gives the user a means of entering the exact dollar values they desire without SAMPRO overriding them.</p>
+<p><font style="font-weight: bold;">Job Id: Cost Code Id:</font>  <font style="font-weight: bold;">Billing Item Id:</font><br/>
+The Job, Cost Code and Billing Items to which the sales tax is assigned. The system defaults these fields from the default work order job, but they may be changed.</p>
+
+</body></html>

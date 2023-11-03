@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.21.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="lot master"/>
+<meta name="MS-HKWD" content="sys-viewer-vinvntryrcpts"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="lot controlled"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Inventory Receipts Journal (sys-viewer-vinvntryrcpt)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="vendor,purchase order,lot master,sys-viewer-vinvntryrcpts,registry,inventory,lot controlled"/><meta name="brsnext" value="Registry_Entry_GL_Journal.htm"/><meta name="brsprev" value="Report_PR_Certified_Payroll.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Inventory Receipts Journal (sys-viewer-vinvntryrcpt)">
+        <span>Registry Inventory Receipts Journal (sys-viewer-vinvntryrcpt)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Inventory Receipts Journal (sys-viewer-vinvntryrcpt)</h1>
+<h2>Purpose:</h2>
+<p>This registry entry may be used to set configuration values for the 
+ Inventory Receipts Journal.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Related 
+ Registries:</h2>
+<p style="margin-left: 8px;"><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Disable_Warning_Journal_Entry_Has_Been_Replaced">Disable 
+ Warning when Journal Entry has been Replaced</a></p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:  sys-viewer-vinvntryrcpt</font></p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard 
+ Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> 
+ for additional Registry Id formats to allow entries for specific Users, 
+ Branches, Security, or User Groups to override the main entry.</p>
+
+
+
+
+
+<h3>Deny Over Receiving of Stock Items</h3>
+<p>The over-receiving &#39;feature&#39; for items 
+ purchased to Stock was added expressly to eliminate the requirement that 
+ the PO line had to be changed to match the over-receipt before the IRJ 
+ could be recorded. The IRJ posting was made smart enough to make the Qty 
+ On Order equal zero in this circumstance.  Thus, the user had 
+ no reason to go back and sync the PO Qty Ordered with the IRJ Qty Received. 
+ Note that over-receiving it NOT allowed on items purchased to jobs.</p>
+<p>However, some users may prefer to not 
+ allow the over-receipt of stock items. The following registry may be implemented 
+ to allow the current warning on the over-receipt to be changed to an error.</p>
+<p><span style="font-weight: bold;">Registry 
+ Id:</span> sys-viewer-vinvntryrcpt</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> AllowOverReceiving   <span style="font-weight: bold;">Setting 
+ Value:</span>  false  (true is default)</p>
+<h3>Load Entries by Purchase Order List</h3>
+<p>By default, the Inventory Receipts Journal loads the child lines by 
+ Inventory Id for Inventory lines and by Description for General purchases.  If 
+ a single PO contains both Inventory and General lines, the IRJ lines will 
+ start with the Inventory lines ordered by Id, followed by the General 
+ lines ordered by Description.  The following registry settings 
+ change the Inventory Receipts Journal list to match the order in which 
+ the Inventory (INV) and General (GEN) lines appear on the Purchase Order 
+ Viewer lines.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> LineOrderINV <font style="font-weight: bold;">Setting Value:</font> POLineOrder</p>
+<p><font style="font-weight: bold;">Setting Key:</font> LineOrderGEN <font style="font-weight: bold;">Setting Value:</font> POLineOrder</p>
+<p>Notice that both of the above options must be entered to control the 
+ Inventory and General lines.</p>
+<h3>Lot Controlled Items</h3>
+<p>During inventory receiving processing, the received lot number is compared 
+ to other lot numbers received for the same inventory item from the same 
+ vendor. If a match is found, the internal lot number is automatically 
+ set to that used for the previously received vendor lot. It now appears 
+ that some vendors are re-using their lot numbers after a period of time. 
+ This can lead to the assignment if incorrect internal lot numbers to newly 
+ received lots.</p>
+<p>To resolve this problem, this registry entry specifies the number of 
+ aging days. If the code finds a previously received lot but that lot was 
+ received more than the indicated days ago, do not assign the corresponding 
+ internal lot number.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> AgingDays <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">numberofdays</font></p>
+<p>Where number of days is replaced by the desired number of aging days 
+ (e.g, AgingDays=730 for a two-year lot number aging cycle).</p>
+<h3><a name="TechAnywhere_PO_Receipt_Post_Date_Period_Adjustment" id="TechAnywhere_PO_Receipt_Post_Date_Period_Adjustment"></a>Registry 
+ to Specify Date/Period Adjustment on TechAnywhere PO Receipt Post</h3>
+<p>By default, the PO Receipt Post adjusts 
+ the Accounting Period match the Effective Date if possible when an Inventory 
+ Receipt entry is generated.  The following registry entry may be 
+ used to override the default behavior and instead set the effective date 
+ to fall within the Default Accounting Period to the default Effective 
+ Date. In most cases, the default functionality (period) is preferred. 
+ <span style="font-weight: bold;">This entry (and the new default behavior) 
+ only impacts the TechAnywhere Receipt Post, not manual entries.</span></p>
+<p><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vinvntryrcpt</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> AdjustDefaultDateOrPeriod  <span style="font-weight: bold;">Setting 
+ Value:</span> period or date  (default is period)</p>
+<p><span style="text-decoration: underline; ">When 
+ period is specified:</span><br/>
+ The Accounting Period table is queried for eligible Accounting Periods.  To 
+ qualify, the period must be Active and its date range must include the 
+ defaulted Effective Date.  When multiple periods are eligible, 
+ the one with the smallest Period Id is chosen to become the new Accounting 
+ Period for the current transaction.  If no eligible period is 
+ found, nothing is changed.</p>
+<p><span style="text-decoration: underline; ">When 
+ date specified:</span><br/>
+ The Effective Date is adjusted to be either the Start Date or the End 
+ Date of the defaulted Accounting Period.  The Start Date is 
+ chosen when the current date is less than the Start Date.  The 
+ End Date is chosen when the current date is greater than the End Date.</p>
+<p>In the absence of this setting, it 
+ uses the &#39;adjust period&#39; behavior described above as default.</p>
+<h3>Registry to Disable Summary Tab</h3>
+<p>This tab may be disabled via the following 
+ registry if the cost summary should not be displayed for security reasons. 
+ When this registry is in place, the Main tab will be displayed, but the 
+ Summary tab will not.</p>
+<p><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vinvntryrcpt</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> ParentTabs <span style="font-weight: bold;"> Setting 
+ Value:</span> Main</p>
+
+</body></html>

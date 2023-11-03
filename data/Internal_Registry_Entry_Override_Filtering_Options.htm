@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Internal Registry Override Filtering Options (sys-viewer-afunction)</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("SAM Pro Help\nRegistry Entries\nGeneral Viewer Settings Registry Entries\nFiltering Options Override **Support**");
+addAvenueInfo("Display Options and Customizations Registry Ent","registry_entry_to_set_title_font.htm","viewer_ratios_and_tabs.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Internal Registry Override Filtering Options (sys-viewer-afunction)</P>
+ <P class="Support_Heading_2" >All, Active (Open) and Closed Records </P>
+ <P class="Support_Heading_2" >Purpose:</P>
+ <P class="Support" ><IMG src="images/allfilter.gif" border=0 height=28 width=48 alt="images\allfilter.gif"> <IMG src="images/activefilter.gif" border=0 height=28 width=48 alt="images\activefilter.gif"> <IMG src="images/closed.gif" border=0 height=28 width=48 alt="images\closed.gif"> This registry option may be used to override one of the default settings for the Open, Closed and All filter options on a viewer-by-viewer basis.  </P>
+ <P class="Support" >If you specify the registry Id to the user level (sys-viewer-afunction-branchid-userid or sys-viewer-afunction--userid) you can accommodate the requirements of individuals in your system.  For instance, an ‘active’ work order would be very different for a dispatcher or a billing clerk or a parts manager.  </P>
+ <P class="Support_Heading_2" >Usage:</P>
+ <P class="Support" >Registry overrides impact filters are used for viewers opened from folders, menus, and right-clicks, and the PICK-LIST’s that are displayed from &quot;double left-clicks&quot;.  Since these registry entries will interact with pre-filtering done by the system for ‘take-backs’, care must be taken to test the results and ensure that unintended consequences are not obtained. </P>
+ <P class="Support" >Dates may be specified (e.g., ‘1900-01-01’).</P>
+ <P class="Support" >The token replacement of ^today^ is also supported. </P>
+ <P class="Support" >In version 6.2, the user may set filter ranges that will be saved by the system.  However, this registry entry will still be supported, and may be desirable in specific implementations. </P>
+ <P class="Support_Heading_2" >Important Fields:</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Id:</FONT></P>
+ <P class="Support" >&nbsp;<FONT style="font-weight:bold; " >sys-viewer-afunction-securityid</FONT></P>
+ <P class="Support" >&nbsp;<FONT style="font-weight:bold; " >sys-viewer</FONT><FONT style="font-weight:bold; font-style:italic; " >-afunction-branchid-userid</FONT></P>
+ <P class="Support" >&nbsp;<FONT style="font-weight:bold; " >sys-viewer-</FONT><FONT style="font-weight:bold; font-style:italic; " >afunction-</FONT><FONT style="font-weight:bold; font-style:italic; " > </FONT><FONT style="font-weight:bold; font-style:italic; " >-userid</FONT>  (if branches are not implemented)</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >&nbsp;sys-viewer</FONT><FONT style="font-weight:bold; font-style:italic; " >-afunction</FONT></P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Additional Contents:</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Filter{type}:{display field name}={filter string value}</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">{type} must be 'All', 'Open' or 'Closed'.</P>
+ <P class="Support" style="margin-left:36.00pt;">{display field name} must match the name of the range display exactly.</P>
+ <P class="Support" style="margin-left:36.00pt;">{filter string value} can be anything supported during manual entry of filter values. </P>
+ <P class="Support" style="margin-left:36.00pt;text-indent:30.25pt;">Dates may be specified (e.g., ‘1900-01-01’).</P>
+ <P class="Support" style="margin-left:36.00pt;text-indent:30.25pt;">The token replacement of ^today^ is also supported. </P>
+ <P class="Support" style="margin-left:36.00pt;text-indent:30.25pt;"><FONT style="font-weight:bold; text-decoration:underline;" >Example:</FONT></P>
+ <P class="Support" style="margin-left:66.25pt;">In the Work Order Viewer, the system compares two fields, Date Closed and Date Work Completed with the current system date, to determine if the work order is active (open) or closed.  </P>
+ <P class="Support" style="margin-left:66.25pt;">The following values (entered in sys-viewer-vwrkordr--billingagent) override the system values for the Date Closed and Completed settings, and base the filter parameters solely on the escalation status of the work order. Since this entry is designed for a billing agent user (with user id=billingagent), the escalation statuses are set in a corresponding fashion. </P>
+ <P class="Support" style="margin-left:66.25pt;">FilterOpen:wrkordr.escltn-stts=Invoice Ready, Invoice Review,Wait Paperwork</P>
+ <P class="Support" style="margin-left:66.25pt;">FilterAll:wrkordr.escltn-stts= Invoice Ready, Invoice Review,Wait Paperwork,Billed</P>
+ <P class="Support" style="margin-left:66.25pt;">FilterClosed:wrkordr.escltn-stts=Billed</P>
+ <P class="Support" style="margin-left:66.25pt;">FilterAll:wrkordr.dte-clsd=            !! The following lines override the system values</P>
+ <P class="Support" style="margin-left:66.25pt;">FilterOpen:wrkordr.dte-clsd=</P>
+ <P class="Support" style="margin-left:66.25pt;">FilterClosed:wrkordr.dte-clsd=</P>
+ <P class="Support" style="margin-left:66.25pt;">FilterAll:wrkordr.dte-wrk-cmpltd=</P>
+ <P class="Support" style="margin-left:66.25pt;">FilterOpen:wrkordr.dte-wrk-cmpltd=</P>
+ <P class="Support" style="margin-left:66.25pt;">FilterClosed:wrkordr.dte-wrk-cmpltd=</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

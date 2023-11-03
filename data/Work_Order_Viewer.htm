@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="work order"/>
+  <meta name="MS-HKWD" content="dispatch"/>
+  <meta name="MS-HKWD" content="invoice"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Work_Order_Viewer</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="work order,dispatch,invoice"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Work_Order_Viewer">
+        <span>Work_Order_Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Work Order Viewer     </h1>
+  <h2>Purpose:  </h2>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">View, modify and bill Work Orders.</p>
+  <h2>Usage:</h2>
+  <p>The <a href="New_Call_Viewer.htm">New Call</a> viewer is typically used to create new service dispatches; they may also be generated from TechAnywhere. Refer to the <a href="Client_Site_Equipment_PM_Tab.htm">Client Site Equipment PM Schedule</a> or <a href="PM_Master_Schedule_Master_Contract_.htm">Master Contract</a> for details on generating Preventive Maintenance Work Orders. Work Orders may also be created from <a href="Quotemaster_Viewer.htm">Quotemaster</a>.</p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Credit Hold</font>
+    <font style="font-weight: bold;">Work</font>
+    <font style="font-weight: bold;">Orders</font><br/>
+    Users are not allowed to directly add labor, inventory or other items to Credit Hold work orders. A credit manager must first clear the Credit Hold box and save the work order.
+  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Closing Call Script / Additional Service Recommendations Wizard</span><br/>
+    When the Escalation Status is set to Completed, a wizard is invoked if the Closing Call Script is completed. The wizard also lets you add Service Recommendations (unless prevented by registry) that are saved as Site notes. See <a href="Service_Recommendations.htm">Service Recommendations</a>.</p>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">Service Evaluation Wizard</font><br/>
+    The Service Evaluation Wizard will be launched when a work order that references a Service Evaluation table is completed or invoiced. Your responses will be written to the Evaluation tab.
+  </p>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">PM Work Orders</font><br/>
+    If the Invoice Id on an imported line matches the PM Invoice Id on the WO,  it can be marked as extra and billed.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Work Order Detail Lines</font><br/>
+    Edits made to detail lines AFTER a change has been made to the Posting Type of the Cost Category update job history using the <font style="text-decoration: underline; ">original Cost Type.</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Foreign Currency Processing</font><br/>
+    If foreign currency processing is implemented on your system (and this WO is for a foreign customer), all Revenue amounts must be entered in terms of your customer’s currency.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Lines Imported from Quotemaster</font><br/>
+    The ‘Imported from Quote’ fields on detail lines is checked if the line was imported. A registry entry (see link to Work Order Options) denies changes to imported lines.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Warn user if WO is assigned to a TechAnywhere Tech</font><br/>
+    Unless disabled by <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#h">Disable Remote Tech Warning</a>, the message “WARNING: this work order has open assignments to remote technicians”  appears if any uncompleted tech lines are assigned to a remote tech.
+  </p>
+  <h2>Registry Entries:</h2>
+  <p>The View Reports button on the sidebar of the Work Order allow users to select from a list of appropriate reports when enabled via <a href="Registry_Work_Order_View_Report_Button.htm">registry</a>.</p>
+  <p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_Statuses_Impacted_by_WO_Invoice_Processing">Control Statuses Impacted by Work Order Invoice Processing</a>.</p>
+  <p>Allow Service Billing Worksheet to be run before the WO is Invoice Ready: <a href="Registry_Entry_Start_Compute_Service_Worksheets.htm">Registry Start Compute Service Worksheets (sys-start-ssrvcebllngwrksht)</a></p>
+  <p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_date_work_completed">Set Date Work Completed to Today when WO is Completed</a> .</p>
+  <p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Field_Office_Hours">Registry_Entry_Global_Settings_Field_Office_Hours</a></p>
+  <p><a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm">Registry Work Order Options</a></p>
+  <p><a href="Registry_Entry_Workorder_Entry_Defaults.htm">Registry Workorder Entry Defaults</a></p>
+  <p>See <a href="Registry_Entry_Inventory_Adjustments_Journal.htm">Registry Inventory Adjustments Journal (sys-viewer-vinvntryadjstmnt)</a> for a registry entry to set the Quantity Billed from the To Return quantity in the Return to Inventory Wizard.</p>
+  <p>This <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#registry_workorder_disable_budget_posting">registry option</a> will disable the posting of job history of budget cost and budget revenue for Preventive Maintenance work orders where the work order lines are marked QU.</p>
+  <p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_rev_adj_management_fee_tax_type">Set Tax Type on Revenue Adjustment Management Fee</a> is a global setting that impacts the Quote and Work Order.</p>
+  <p style="margin-left: 8px;"><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Warn_or_Error_if_WO_Date_Scheduled_Set_to_Past_Date">Warn or Error if Date Scheduled Set to Past Date</a></p>
+  <p style="margin-left: 8px;"> </p>
+  
+  <h2>Screen Organization:</h2>
+  <p>This Topic lists the standard configuration of fields. If you are using a customized system, the fields displayed on your screen may not exactly match the order, label or status described in this Topic.</p>
+  <h3>Upper Section Tabs</h3>
+  <p>
+    <font style="font-weight: bold;">T</font>hese tabs organize the primary work order information. These fields are listed below under their respective tabs. <font style="font-weight: bold;">Click on one of the following links to jump to the description.</font>
+  </p>
+  <p><a href="#Work_Order_Main_Tab">Main Tab</a>  <a href="#Work_Order_Invoicing_Tab">Invoicing Tab</a>  <a href="#Work_Order_Other_Info_Tab">Other Info Tab</a>  <a href="#Work_Order_COD_Tab">COD Tab</a>  <a href="#Work_Order_Gross_Margin_Tab">Gross Margin Tab</a>  <a href="#Work_Order_Revenues_Tab">Revenues Tab</a> <a href="#Work_Order_Invoices_Tab">Invoices Tab</a>  <a href="#Work_Order_Purchases_Tab">Purchases Tab</a>  <a href="#Work_Order_Ref_Track">Ref Track Tab</a>  <a href="#Work_Order_Equipment_History_Tab">Equipment History Tab</a>  <a href="#Work_Order_Quotes_Tab">Quotes Tab</a>  <a href="#WO_Escalation_Tab">Escalation Tab</a>  <a href="Work_Order_Tech_Status_Tab.htm">Tech Status Tab</a>  <a href="#Work_Order_TechAnywhere_Tab">TechAnywhere Tab</a>  <a href="#Work_Order_GLH_Tab">GLH Tab</a>  <a href="#UWO_Tab">UWO Tab</a></p>
+  <h3>Lower Section Tabs</h3>
+  <p>These tabs display the work order &#39;child&#39; tables. <font style="font-weight: bold;">Click on a link to see details for that tab:</font>
+  </p>
+  <p><a href="Work_Order_Equipment.htm">Equipment Tab</a>   <a href="Work_Order_Invoice_Labor.htm">Labor Tab</a>  <a href="Work_Order_Invoice_Inventory_Tab.htm">Inventory Tab</a>  <a href="Work_Order_Invoice_Other.htm">Other Tab</a>  <a href="Work_Order_Technicians.htm">Technicians Tab</a>  <a href="Work_Order_Call_Script_Tab.htm">Call Script Tab</a>  <a href="Work_Order_Log_Tab.htm">Log Tab</a> <a href="Work_Order_Metrics_Tab.htm">Metrics Tab</a>  <a href="Work_Order_Revenue_Adjustment_Tab.htm">RevAdjust Tab</a>  <a href="Work_Order_Evaluation_Tab.htm">Evaluation Tab</a>  <a href="Work_Order_Sales_Tax_Tab.htm">Sales Tax Tab</a>  <a href="Work_Order_Estimate_Tab.htm">Estimate Tab</a>   <a href="Work_Order_SubQuote_Tab.htm">SubQuote Tab</a>  <a href="Work_Order_Required_Resource_Tab.htm">ReqResource Tab</a>  <a href="Work_Order_COD_Child_Tab.htm">COD Tab</a>  <a href="Work_Order_Milestones_Tab.htm">Milestones Tab</a>  </p>
+  <h2>Important Buttons:</h2>
+  <p><span><img alt="" border="0" src="assets/images/SKIN1_ViewReports.bmp" style="border: none;"/> The View Reports button on the sidebar of the Work Order allow users to select from a list of appropriate reports when enabled via <a href="Registry_Work_Order_View_Report_Button.htm">registry</a>.</span></p>
+  <p><img align="left" alt="" border="0" src="assets/images/SKIN1_ImportCosts.bmp" style="border: none;"/>Clicking the Get Costs button imports PO, Job Journal, Labor Journal and Requisitioned costs/items to this work order so that they can be billed with the service invoice functionality. <span>See <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#Consolidate_Imported_Job_History_Records">Consolidate Imported Lines</a> for a registry to consolidate imported lines if possible.</span></p>
+  <p><span>Get Costs works differently depending on whether or not the Work Order has been quoted. The decision as to whether or not a WO has been quoted looks for Quote Scope records with a status of Accepted or Approved.  It also restricts the list to only those Scopes that are for the WO currently in the viewer.  </span></p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">I</span><span style="font-weight: bold;">mporting Costs if the Work Order has been Quoted</span><br/>
+    Costs will be imported at $0 Revenue to avoid double-billing.<br/>
+    The user will not be asked about importing Revenue Adjustments to avoid changing any special adjustments from the Quote.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Importing Costs if the Work Order has NOT been Quoted</span><br/>
+    A <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#Prompt_for_Importing_Revenue_Adjustments">Registry</a> may be implemented to prompt the user if they wish to import revenue adjustments when importing costs to a Work Order that is <span style="font-weight: bold;">not</span> associated with a Quote. If the user clicks Yes (to import revenue adjustments), it will have the same result as clicking the Adjust Revenue button on the Gross Margin tab.</p>
+  <p>If this job is not marked ‘Service Compute’ users may adjust these imported lines. However, this job must be recomputed (in Record Billing Adjustments) before it can be invoiced. This functionality includes labor lines that have hours but zero cost and zero revenue.</p>
+  <p><span>Lines imported from Job History will always retain their Job information even when the DefaultJobByEquipmentId registry is enabled.</span></p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Import Costs Wizard</font><br/>
+    An Import Costs wizard will appear when Get Costs is clicked if it has been implemented via registry: see <a href="Import_Cost_Wizard.htm">Import Cost Wizard</a> for details. This functionality is required if you are using Material Requisitioning.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Setting the Equipment Id on Imported Lines:</font><br/>
+    When a PO is created for a Work Order, an Equipment Id might not be specified on it. When the PO is imported the system sets the Equipment Id as follows:
+  </p>
+  <p style="margin-left: 72.00pt;">- If a work order has only one piece of equipment, it will default when a PO is imported.  <br/>
+    - If a work order has more than one piece of equipment, the equipment id is NOT set on the import, but you may edit the detail line and select the equipment; it will be recorded in JC history and appear on the Revenues tab when the WO is saved.</p>
+  
+  <p><img alt="image\SKIN1_Import_Flat_Rate.gif" border="0" height="35" src="assets/images/image/SKIN1_Import_Flat_Rate.gif" title="image\SKIN1_Import_Flat_Rate.gif" width="63"/> Use to import a Flat Rate Category. Click <a href="Import_Flat_Rate_into_Work_Order.htm">Importing a Flat Rate</a>. for details. If a Flat Rate is imported with Required Resource/Material Requisitioning processing enabled, the Date on the Flat Import window will set the Date Required on the Required Resource tab. If an inventory item is on the flat rate, the Description is set from the Inventory Item Name. </p>
+  <p><img alt="image\SKIN1_CreatePO.gif" border="0" height="28" src="assets/images/image/SKIN1_CreatePO.gif" title="image\SKIN1_CreatePO.gif" width="94"/>  The Create PO button launches the Purchase Order viewer with this WO&#39;s Id filled in. The user is prevented from creating a PO with this button if the header Job is closed unless this is a PM Work Order (Type = PreventiveMaint): the user is then warned that the job was closed as of a certain date, but is allowed to continue and create the Purchase Order.</p>
+  <p><img alt="" border="0" src="assets/images/image/SKIN1_CreateQuote.gif" style="border: none;"/>  Click this button to launch the Quote <span>Manager</span> viewer. The Work Order Id and all other corresponding defaults will be filled in.</p>
+  <p><img alt="image\SKIN1_MaterialReq.gif" border="0" height="28" src="assets/images/image/SKIN1_MaterialReq.gif" title="image\SKIN1_MaterialReq.gif" width="94"/>  If Material Requisitioning is enabled, clicking this button launches the Required Resource Wizard to create PO’s for non-inventory items on the Required Resource tab; Inventory items will also be included if a Vendor Id is specified.  Complete both the Vendor and Location fields in the Wizard viewer so the PO will be correctly configured. The Start Material Requisitioning function must be used to generate Stock Transfer Orders for Inventory Lines that do not specify a Vendor.</p>
+  <p><img alt="image\SKIN1_AddCallScript.gif" border="0" height="28" src="assets/images/image/SKIN1_AddCallScript.gif" title="image\SKIN1_AddCallScript.gif" width="94"/>  When you click the Add Call Script button, the system will prompt you to enter a Call Script Id and Equipment Id. When you do so, and click OK, the system will insert the questions from the selected Call Script to the Call Script Tab. Enter the answers to this Call Script on the Call Script tab.</p>
+  <p><img alt="image\SKIN1_ServiceRecs.gif" border="0" height="28" src="assets/images/image/SKIN1_ServiceRecs.gif" title="image\SKIN1_ServiceRecs.gif" width="94"/>  The Service Recommendation button enables you to view / enter Service Recommendation Notes for the Client Site associated with this Work Order. See <a href="Service_Recommendations.htm">Service Recommendations</a> for details.</p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;"><img alt="image\SKIN1_Printer.gif" border="0" height="28" src="assets/images/image/SKIN1_Printer.gif" title="image\SKIN1_Printer.gif" width="94"/> Click this button to print the selected  work order. By default, the Report Work Order list viewer will be launched with the Print WO Notes box checked. A different report may be specified via the <a href="Registry_Entry_for_Report_and_Function_Substitution.htm">Registry Report and Function Substitution (sys-function-substitutions)</a>  setting.</p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;"><img alt="image\SKIN1_SE.gif" border="0" height="28" src="assets/images/image/SKIN1_SE.gif" title="image\SKIN1_SE.gif" width="94"/> Click this button to view or maintain the scheduled events for this Work Order. If you then click New, a new event form (with the Source Type, Rn, Id and Description defaulted in) will be displayed, allowing for easy &quot;one off&quot; creation of a scheduled event for this Work Order.</p>
+  <h2>Important Fields:</h2>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_Main_Tab" id="Work_Order_Main_Tab"></a>Main Tab</p>
+  <h5>Column 1</h5>
+  <p>
+    <font style="font-weight: bold;">Workorder Id:</font><br/>
+    This field is generated by the system when a work order is created.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Priority:</font><br/>
+    The priority for this service or PM call (0 is highest priority).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Work Order Name:</font><br/>
+    This optional field may be used to briefly describe the work, or display other pertinent information. This field  is displayed on the Dispatch Board as the Work Description.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Site Id:</font><br/>
+    A valid Client Site Id is required.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Site Name:   Site Fax Phone:  Site Shipping Address:  <span>Store #   Email:</span></font><br/>
+    These informational fields are filled in from the Client Site Record. <span>The Email address from the Site&#39;s upper Contacts tab.</span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Original Caller:</font><br/>
+    The name of the person who first called for service (optional). This field defaults from the Contact 1 information for a Work Order created in New Call.
+  </p>
+  <p>
+    <font style="font-weight: bold;">PO#:  </font><br/>
+    Enter the Client&#39;s purchase order number if a PO is required.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Dispatch Note:</font><br/>
+    This display-only field defaults from the Site record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Work Requested:</font><br/>
+    If this Work Order was created from New Call, this field will be populated by the Work Requested field in New Call along with the Work Requested field on the Equipment tab.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Work Order User 1-5</font><br/>
+    These optional fields may be used for any additional information your firm wishes to retain.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Service Category:</font><br/>
+    This field is set when the work order is created New Call or as a PM Work Order (from the PM Inspection Work Code first and the Equipment record second). It is used by the Client Web Interface in conjunction with the Web User&#39;s Service Category filtering to Equipment and WO lists – only WO with blank service categories or those that match the Web User’s will appear in the Equipment and WO lists.
+  </p>
+  <h2>Column 2</h2>
+  <p>
+    <font style="font-weight: bold;">Work Code</font>
+    <font style="font-weight: bold;">Id:</font><br/>
+    This field controls which Work Code appears on the Dispatch Board. It is originally set by the system when the Work Order is created in New Call or generated as a PM Work Order.
+  </p>
+  <p>The Equipment tab lists which Work Code is associated with each piece of Equipment; the Work Code on the Equipment Tab on the Work Order list in New Call. Changing the Work Code in the Work Order headers does not change the Work Code(s) on the Equipment Tab.</p>
+  <p>
+    <font style="font-weight: bold;">Job Id: Job Billing Item Id: Job Cost Code Id:</font><br/>
+    These fields should default from the Client Site Equipment Record&#39;s Service Job (for service work orders) or the Job specified on the Client Site Equipment PM schedule (for Preventive Maintenance work orders). These fields provide the default values for the Labor, Other and Inventory tabs unless overridden by the following registry entry: <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#Registry_WO_Equipment_Job">Set Job from Client Site Equipment Record</a> for non-Preventive Maintenance Jobs.
+  </p>
+  <p><span style="font-weight: bold;">Master Contract Id:</span> <span style="font-style: italic;">(requires a special v.cus file to display this field)</span><br/>
+    This field will be completed for Work Orders associated with Master Contracts when Create PM Work Order and Create PM Billing is run. It will also be set from New Call if the selected Equipment is associated with a Master Contract that is currently open or will be open in the future. This field supports custom reporting/analysis of full service contracts.</p>
+  <p>
+    <font style="font-weight: bold;">Branch Id:</font><br/>
+    The Branch this work order is assigned to. This field is required if centralized dispatching is implemented on your system. Double-click on this field or press Alt+F7 to select from a list of branches.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Market Source:</font><br/>
+    This field enables the tracking of marketing campaigns. When a work order is created in New Call, the Market Source defaults from the Client Site but may be changed by the user.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Location:</font><br/>
+    This field represents the default location that parts are to be transferred and costed from for this job. It defaults from the primary work order Technician record (if completed).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Zone Id:</font><br/>
+    This display-only field defaults from the Client Site record. It appears on the Dispatch Board, and is used in conjunction with TechFinder.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Service Manager:</font><br/>
+    This optional field identifies the Service Manager. For Work Orders created in New Call, the Service Account Manager selected in New Call will default (<span>based on the Client Site Equipment - Client Site - Client - User. The Service Manager selected when the Work Order is added will be written to the new Work Order.) </span>. For PM Work Orders, the Service Account Manager defaults from <font face="Tahoma" style="font-family: Tahoma;">the Site Equipment record or, if blank, from the Site record, or if blank, from the Job&#39;s Client record.</font>
+  </p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">
+    <font face="Tahoma" style="font-family: Tahoma;">W</font>ork Order Type:
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Service:</font> By default, Work Orders created in New Call are set to Service.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">PreventiveMaint:</font> Work Orders generated by Create PM WorkOrders are assigned this Type.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">CSR:</font> Previously used for ‘lead’ work orders that will be accessed from CSRAnywhere (obsolete in v9.0 and above). 
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Installation, Estimate, Other, Call Back:</font> one of these Types may be selected for informational purposes to better identify the work order. The original work order should be specified for Call Backs.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">PM Invoice:</font> Work Orders generated by Create PM Billing that are designed for PM Billing only are assigned this Type; see <a href="Create_PM_Invoice.htm">Create PM Invoice</a> for details.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Material Direct:</font> Select to record the ‘sale’ of a purchased item to a client where the invoice comes directly from the Vendor - not SAMPro. In this case, the WO Status Category will be set to ‘Archived’ instead of ‘Completed’ when the Escalation Status is set to ‘Completed’.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Quote:</font> no longer has any special meaning, and is used for informational purposes only. Click <a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP548941468" href="#"><span data-open-text="true" data-skip-index="true">Quote Processing</span><span data-close-text="true">Quote Processing</span></a> for additional information.  
+  </p>
+  <div data-targetname="POPUP548941468">
+    <p style="margin-left: 66.25pt;">
+      <font style="font-weight: bold;">Quote
+        Processing:</font><br/>
+      This feature is implemented in conjunction with the Quote / Quote Manger
+      and the Quote boxes on the Inventory, Labor and Other lines. If a
+      <font style="font-weight: bold; font-style: italic;">line</font> is
+      flagged as a Quote and the Invoice Ready box is blank, no job history
+      will be written for this line (however, this information will be available
+      for reporting purposes). When the Quote is approved, you would complete
+      the work, and then add lines for the cost of the actual work completed
+      that are not checked as quotes (the billable quantity should be zero).
+      When the work order is saved as invoice ready, the following entries
+      will be made:
+    </p>
+    <p style="margin-left: 128px;">Costs for lines flagged as Quotes will
+      be written to Job History as budgeted costs.<br/>
+      Revenue for lines flagged as Quotes will be written to Job History
+      as billable revenue.<br/>
+      Costs for lines that are not flagged as quotes will be written to Job
+      History</p>
+  </div>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Requisition:</span> Use ONLY to requisition materials for installation / construction jobs. Do NOT  use for Service or PM Work Orders. When the Work Order is specified as Requisition, running Start Tech (Work Order) Material Pickup creates a Loc-to-Job transfer instead of transferring the materials to a location (typically, the Tech&#39;s truck).</p>
+  <p style="margin-left: 48px;">Q/A: Quality Assurance Work Orders created by <a href="Create_Quality_Assurance_Work_Order.htm">Start Create Quality Assurance Work Orders</a>.</p>
+  <p><span style="font-weight: bold;">Dispatcher Comments:</span><br/>
+    This 3000 character text box may be used to record conversation/activity notes about the Work Order.</p>
+  <p>
+    <font style="font-weight: bold;">Purchase Order Id:</font><br/>
+    If this Work Order was created with a subcontractor technician, this field lists the Purchase Order that was automatically issued to the subcontractor when this Work Order was generated.
+  </p>
+  <h3>Column 3</h3>
+  <p>
+    <font style="font-weight: bold;">NTE Client: NTE Sub/PO:</font><br/>
+    These fields default from the Client Site record but may be changed by the user if necessary. When creating a PO for this Work Order, a warning will be displayed if actual and committed costs associated with PO&#39;s (of any kind) exceed the NTE Sub/PO.
+  </p>
+  <p><span>When a Work Order is created or updated from Quote Manager the Work Order&#39;s Sub/PO NTE will be set from the sum of the Extended Costs on the approved Sub Scope lines. The Work Order&#39;s Client NTE will be set from the sum of the Prices and Revenue Adjustments on the approved Scope lines. Registry to <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#Do_Not_Update_NTE_Amounts_when_Quote_Approval_Wizard_Runs">Prevent Work Order NTE fields from being updated by Approval Wizard</a> may be enabled if this behavior is not desired and SubAnywhere is not in use.</span></p>
+  <p>
+    <font style="font-weight: bold;">Date Earliest Start:</font><br/>
+    The earliest date that work can be started; double-click on this field to enter the date from the Calendar viewer. To enter today&#39;s date, simply press the Spacebar. If this is a PM Work Order, the system will automatically set this field from the Inspection Date during PM work order generation.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Date Must Complete:</font><br/>
+    The date on which work must be completed; double-click on this field to enter the date from the Calendar viewer. This field is optional, but will appear on the dispatch board as the &quot;End Date&quot;. For PM&#39;s, this field is set to the last day of the month the inspection is scheduled for during PM Work Order generation.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Time Earliest Start:</font><br/>
+    Enter the earliest time (using 24 hour or military format) that work can be started. For example, if your technicians must wait until 9:30am to start, you would type in 0930. A starting time of 1:00pm would be entered as 1300. This field is optional.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Time Must Complete:</font><br/>
+    The time (in military or 24-hour format) by which the work must be completed. For example, if your technicians must finish by 5:00pm, you would type in 1700. This field is optional.
+  </p>
+  <p><span style="font-weight: bold;">Quoted?</span><br/>
+    If this display field is checked, this Work Order is reference on a Quote Scope.</p>
+  <p>
+    <font style="font-weight: bold;">Date Opened: Time Opened: Entered By:</font><br/>
+    These fields are set by the system when this Work Order is first created.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Original WO:</font><br/>
+    If this Work Order was created for a Call Back, this field will display the Id of the Work Order created for the original problem (if it was specified in New Call).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Account Manager:</font><br/>
+    This optional field identifies the account manager is work order is assigned to. T<font face="Tahoma" style="font-family: Tahoma;">he system will default this field from the Site Equipment record or, if blank, from the Site record, when a work order is created in New Call or via the Create PM Work Order function.</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Dispatcher Id:</font><br/>
+    This optional field identifies the Dispatcher assigned to this work order. T<font face="Tahoma" style="font-family: Tahoma;">he system will default this field from the Client Site Equipment record or, if blank, from the Site record, when a work order is created in New Call or via the Create PM Work Order function.</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Sales Rep Id:</font><br/>
+    This optional field identifies the Sales Rep assigned to this work order. T<font face="Tahoma" style="font-family: Tahoma;">he system will default this field from the Client Site Equipment record or, if blank, from the Site record, when a work order is created in New Call or via the Create PM Work Order function.</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Revenue Adjustment Id:<br/>
+      <span style="font-weight: normal;">For Service Work Orders, t</span>
+    </font>his field defaults from the Job. It is used to enable discounts and add-ons to be applied to invoices by category (for labor, material, sub and other items on the RevAdjust tab) or for the invoice as a whole. <span style="font-weight: bold;">The Adjust Revenue Button on the Gross Margin Tab must be clicked to generate Revenue Adjustment Tab lines for Service Work Orders based on this Revenue Adjustment Id.</span>
+  </p>
+  <p>See the <a href="Work_Order_Revenue_Adjustment_Tab.htm">Revenue Adjustment Tab</a> for additional details; Revenue Adjustment entries may be automatically created when a Work Order is created from the Quote Approval Wizard, Create PM Work Orders, and Create PM Invoices.</p>
+  <p>
+    <font style="font-weight: bold;">Evaluation Table Id:</font><br/>
+    This field defaults from the Equipment record when the WO is created. If the Evaluation Id and the Technician Id fields (see below) are both completed, the Service Evaluation Wizard will be invoked when the work order is completed or invoiced, and the evaluation results will be written to the Evaluation tab.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Technician Id:</font><br/>
+    This field identifies the primary work order technician (the first technician on the Tech tab. The field is set from the first line of the tech tab. If you want to change it, change the first tech on the tab.
+  </p>
+  <h3>Column 4</h3>
+  <p><img alt="image\Return_To_Inventory.gif" border="0" height="28" src="assets/images/image/Return_To_Inventory.gif" title="image\Return_To_Inventory.gif" width="80"/></p>
+  <p>This button enables the return of unused inventory items entered on this Work Order to the location of your choice. If this Work Order has inventory that can be returned, clicking the button will launch a wizard to step you through the process. See <a href="Work_Order_Return_to_Inventory_Wizard.htm">Work Order Return to Inventory Wizard</a> for details.</p>
+  <p><span><img alt="" border="1" src="assets/images/XOilink.png" style="border-left-style: Solid; 
+				 border-top-style: Solid; border-right-style: Solid; border-bottom-style: Solid; 
+				 border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; 
+				 border-bottom-width: 1px; background-color: #808080;"/> When clicked, this button will launch a link/URL to XOi&#39;s page, to display XOi &quot;Jobs&quot; linked to the selected Work Order (these are not SAMPro Jobs). The user may choose to view Public (customer facing) or Full (contractor facing) data from this link. The user will be alerted if XOi is implemented but XOi &quot;Jobs&quot; are not associated with this Work Order. If XOi is not implemented, nothing will happen when the button is clicked. This functionality is supported in MS SQL installations. See <a href="Registry_Entry_Start_DBXChange_Copy_Document.htm">DBXChange XOi Link</a> for details.</span></p>
+  <p>
+    <font style="font-weight: bold;">Escalation Profile:</font><br/>
+    If the Work Order was created in New Call, this field defaulted from the Client Site Equipment record (but could have been changed by the user taking the new call). It this is a PM Work Order, the Escalation Profile defaults from the Equipment PM Schedule or Master Contract record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Gross Margin Id:</font><br/>
+    This display-only field defaults from the Gross Margin table associated with the work order’s Client Site.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Rate Schedule Id</font>:<br/>
+    The Rate Schedule used for billing this work order. This field defaults from the Job referenced on the Work Order Main tab.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Original Date Scheduled: Original Time Scheduled:</font><br/>
+    This display-only field is set by the system based on the first Date and Time Scheduled settings in the Technician Tab when the Work Order is first generated. This is true of Work Orders created in New Call, as well as those generated by the system in Create PM Work Orders.
+  </p>
+  <p><span style="font-weight: bold;">Email Address:</span><br/>
+    When a Site is selected in New Call, the Client Site&#39;s Email is defaulted into this field; the user may manually update it if desired before adding the Work Order. Scheduled Events Escalations for the Notification Source &#39;Work Order&#39; will be sent to this address. The Email address for the Scheduled Events is set when the WO is generated. Changing it in the Work Order after creation will not propagate the change to the Events themselves.</p>
+  <p> </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_Invoicing_Tab" id="Work_Order_Invoicing_Tab"></a>Invoicing Tab</p>
+  <p><img alt="image\InvoiceReady.gif" border="0" height="28" src="assets/images/image/InvoiceReady.gif" title="image\InvoiceReady.gif" width="94"/></p>
+  <p>Click this button when all charges have been added and this work order is ready to invoice. Doing so checks the Ready to Invoice box that controls whether the Work Order can be billed. When you compute an invoice from the Work Order, the system will check Job History to prevent the bill-thru date from preceding the Job&#39;s previous bill-thru date. The Billing Agent Id will be set to the User’s Id.</p>
+  <p>If Required Resources are listed on this Work Order you will be warned if there are any lines haven&#39;t yet been requisitioned. This behavior may be altered via registry entry to display an error message and prevent the status change.</p>
+  <p>On the Technician tab, the status of all lines currently set to Completed, Invoice Review, or Invoice Approved will be changed to Invoice Ready. By default, the user will also be warned if some technician lines are not set to &#39;&#39;Completed&#39;&#39;, &#39;&#39;Invoice Review&#39;&#39;, or  &#39;&#39;InvoiceApproved&quot; when a work order is flagged as invoice ready. If you get this warning, the Technician and the Work Order status will NOT be set to Invoice Ready.  The following registry may be used to <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_Statuses_Impacted_by_WO_Invoice_Processing">Control Statuses Impacted by Work Order Invoice Processing</a>.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">IMPORTANT: Invoice Ready -&gt; Billed Status</span><br/>
+    Although a Work Order can be invoiced without the Status being first set to Invoice Ready, the Work Order Status will not then be set to Billed. The Work Order ONLY be set to Billed after it has been invoiced and posted if it was Invoice Ready before it was processed.</p>
+  <p>The system will ask you if you want to mark the Work Order closed. If you click &#39;Yes&#39;, today&#39;s date will be entered in the Date Closed field. If you click &#39;No&#39;, the Date Closed field will remain blank. This date works in conjunction with active filtering in the Work Order. If the Date Closed field is blank, a Work Order is considered Active. If the Date Closed field is completed, the Work Order is considered closed, and will be displayed when you click the Closed filter button.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Lines from Quote Master:</span><span> When the Work Order is set to Invoice Ready and saved, the Effective Date of Quoted lines and Revenue Adjustments from Quote Manager will be updated to the Work Order Date Work Completed (if set). In previous releases, the Effective Date of these lines was set to the origination date of the Quote. Since this date could be months in the past, revenue was recognized way too early through the Job EOM function. See <a href="Quoted_and_Rev_Adjustment_Line_Dates.htm">Quote and Rev Adjust Lines</a> for details.</span></p>
+  <p>
+    <font style="font-weight: bold;">Ready to Invoice</font><br/>
+    This box can be flagged by double-clicking it or by clicking the OK to Invoice button. When you do so, the system will ask you if you want to mark the Work Order closed. If you click &#39;Yes&#39;, today&#39;s date will be entered in the Date Closed field. If you click &#39;No&#39;, the Date Closed field will remain blank. This date works in conjunction with active filtering in the Work Order. If the Date Closed field is blank, a Work Order is considered Active. If the Date Closed field is completed, the Work Order is considered closed, and will be displayed when you click the Closed filter button.
+  </p>
+  <p>When a Ready to Invoice Work Order is saved, Quoted lines will be used to write Job History Budgeted Revenue and Cost entries.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">PM Work Orders – JCH Budgets:</font> This <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#registry_workorder_disable_budget_posting">registry option</a> will disable the posting of job history of budget cost and budget revenue for Preventive Maintenance work orders where the work order lines are marked QU.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Non-Service Compute Jobs:</font> When you click the Save Record button for a Work Order marked Invoice Ready, the system will ask if you wish to compute the Invoice. You may change the Invoice Date when the system asks if you wish to compute the invoice. If you have completed adding labor, materials, and other charges, click &quot;Yes&quot; to compute just this invoice. Click &quot;No&quot; if you will use the Compute Job batch function instead.
+  </p>
+  <p style="margin-left: 36.00pt; font-weight: bold;">Template Client Validation: <span style="font-weight: normal;">template-type clients for COD work may only be billed when the net invoice amount is exactly ZERO DOLLARS. A warning displays for each invoice that would result in the client being billed for any other amount; a printable list is displayed. Work Orders that make this list CANNOT be included in the invoicing run. The list is saved as a text file in the directory specified in the dbreportfiles registry.</span></p>
+  <p><img alt="image\BuildDescription.gif" border="0" height="28" src="assets/images/image/BuildDescription.gif" title="image\BuildDescription.gif" width="94"/>  If you click this button, the system will populate the Invoice Description of Work Performed field with the Work Performed text from all lines on the Equipment tab. This field is included on many invoice formats.</p>
+  <p><span>If implemented via registry or customization, information from the Equipment record will also be included. See <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm">Work Order Registry</a> for details. </span></p>
+  <p><span>If the system detects that the resultant string will exceed 3000 characters the user will be alerted and offering the choice to “paste anyway?”.  Yes will move the text (truncation will result as always has). Selecting No will cancel the operation. When No is selected the user may populate the Invoice Description of Work Performed with some standard language such as “Details by Equipment to follow…” and check the Equipment Work Performed Addendum - Show on Invoice? box.</span></p>
+  <p><img alt="image\WOPrintWorksheetOK.gif" border="0" height="28" src="assets/images/image/WOPrintWorksheetOK.gif" title="image\WOPrintWorksheetOK.gif" width="94"/>  Click this button to print a billing worksheet for Service Compute jobs. A registry option may be enabled to allow the Service Billing Worksheet to be run before the WO is set to Invoice Ready: <a href="Registry_Entry_Start_Compute_Service_Worksheets.htm">Registry Start Compute Service Worksheets (sys-start-ssrvcebllngwrksht)</a> .   <span>Also, see <a href="Registry_Entry_Start_Compute_Service_Worksheets.htm#Registry_to_Skip_Checklist_when_Running_Service_Billing_Worksheet_">Registry to Skip Printer Prompt and Checklist</a> to streamline this function. </span></p>
+  <p><img alt="image\WOPrintInvoiceOK.gif" border="0" height="28" src="assets/images/image/WOPrintInvoiceOK.gif" title="image\WOPrintInvoiceOK.gif" width="94"/>  This button allows you to print and post the Job Invoice specified in this work order; it is enabled or disabled according to the status of the job.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">‘Unknown’ Tax Status</font><br/>
+    When a work order is set to Invoice Ready, the system warns the user if the job&#39;s tax status is unknown and denies the ability to print the invoice. The Service Worksheet displays an Unknown tax message if tax status is set to Unknown.
+  </p>
+  <p>If you mark this work order Invoice Ready, and then Save and Compute it, the Print Invoice button will be enabled, allowing you to print the job invoice. A warning will be displayed if you attempt to print an invoice that includes charges other than those listed on this work order.</p>
+  <p><img alt="image\computetaxes.gif" border="0" height="28" src="assets/images/image/computetaxes.gif" title="image\computetaxes.gif" width="94"/> This button enables users to compute and manually edit sales tax computations prior to producing the invoice. It is designed to support certain special sales tax considerations. It applies only to work orders whose default Job is flagged as Service Compute. In addition, a registry entry enabling its use must be implemented. If both of these requirements are met, clicking this button (after saving any changes to this work order) does the following:</p>
+  <p style="margin-left: 36.00pt;">1.  Deletes all existing WO Sales Tax lines that haven&#39;t been invoiced yet.<br/>
+    2.  Computes and auto-generates new lines on the Sales Tax tab.</p>
+  <p style="margin-left: 36.00pt;">WO Sales Tax Lines that not yet been invoiced may be adjusted by the user as needed.</p>
+  <p><img alt="image\resetTaxStatusJCH.gif" border="0" height="28" src="assets/images/image/resetTaxStatusJCH.gif" title="image\resetTaxStatusJCH.gif" width="94"/> Pressing this button reviews Job History lines and set all lines for this work order that do NOT have an AR Invoice ID or are of Tax Type Use to &#39; n/a&#39; (space n/a) so that they will be successfully re-evaluated at invoice time if the Job’s Tax Status or Tax Group has been changed. This button also changes all applicable lines within the Work Order viewer itself to a tax type of &#39; n/a&#39;.</p>
+  <p>
+    <font style="font-weight: bold;">Date Work Completed:</font><br/>
+    This field will be automatically set by the system when the work order is completed. A Work Order is considered ‘completed’ if the WO Escalation Status is set to Completed or Invoice Ready.
+  </p>
+  <p>By default, the date will correspond to the most recent date on the Technician tab. This may be overridden via the sys-ffv-global-settings registry (see <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_date_work_completed">Set Date Work Completed to Today</a> ). This date will also be included on the service invoice.</p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">Date Closed:</font><br/>
+    The Date Closed field will be set to today’s date if
+  </p>
+  <p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">
+    <font face="Symbol" style="font-family: Symbol;">-</font> The Date Closed Field is not already set
+  </p>
+  <p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">
+    <font face="Symbol" style="font-family: Symbol;">-</font> All Technician Lines are set to Cancelled
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt; text-indent: 18.00pt;">
+    <font face="Symbol" style="font-family: Symbol;">-</font> You marked the Work Order Ready to Invoice and said Yes to set the Date Closed.
+  </p>
+  <p>Only open work orders will appear on the active Work Order list. Click <a href="Active_Inactive_Record_Criteria.htm">Active/Inactive Record Criteria</a> for details on active record filtering.</p>
+  <p style="margin-left: 40px;"><span style="font-weight: bold;">Lines from Quote Master:</span><span> When the Work Order is set to Invoice Ready and saved, the Effective Date of Quoted lines and Revenue Adjustments from Quote Manager will be updated to the Work Order Date Work Completed (if set). In previous releases, the Effective Date of these lines was set to the origination date of the Quote. Since this date could be months in the past, revenue was recognized way too early through the Job EOM function. See <a href="Quoted_and_Rev_Adjustment_Line_Dates.htm">Quote and Rev Adjust Lines</a> for details.</span></p>
+  <p>
+    <font style="font-weight: bold;">Date Invoiced:</font><br/>
+    This field is set by the system when the work order is invoiced.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Invoice Number:</font><br/>
+    The most recent invoice number used to bill for this Work Order will appear in this field when the invoice is posted to AR.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Payment Type:</font><br/>
+    This field is typically used to define how the client says they will pay (e.g., Cash, Check, Account, Credit Card, etc.).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Job Terms Id:</font>
+    <font style="font-weight: bold;">COD:</font><br/>
+    These display-only fields default from the WO header Job’s AR Terms Code.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Override</font>
+    <font style="font-weight: bold;">Terms Id:</font>
+    <font style="font-weight: bold;">COD:</font><br/>
+    If enabled by registry, this field may be used to override the AR Terms Code in the WO header Job.(displayed as Job Terms Id). Typically, this field would be set to if an underpayment was received on a COD work order. It may also be necessary to override a generic COD Client; see Override Client Id below.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Price Code</font><br/>
+    If this display-only field defaults from the Client Site record, standard unit pricing for inventory items will be overridden by the Price Code referenced in the client site. This is applicable for Inventory Items marked as Use Unit Pricing. Price codes are referenced in the Inventory Item Pricing tab and in the Client Site record.
+  </p>
+  <p><span style="font-weight: bold;">
+      <font style="font-weight: bold;">S</font>ite Price Level
+    </span><span><br/>
+      This field comes from the Client Site record and provides the default value for the Inventory tab for items marked as Use Unit Pricing unless overridden by the Job&#39;s Price Level. If neither the Site not the Job have the Price Level set, it will be defaulted to &#39;1&#39; when these Inventory Items are entered on the Inventory tab. </span></p>
+  <p>
+    <font style="font-weight: bold;">PM Invoice Number:</font><br/>
+    If the work order is an auto-generated PM work order then the last invoice number for the same PM job will be displayed here. The purpose is to make any cost charged to the PM work order get posted as billed therefore removing them from the unbilled cost report.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Service Compute Invoicing of Extras on PM WO’s:</font> The system allows lines flagged as Extras that are manually entered, as well as imported from PO’s to be billed on PM WO’s even if the Work Order’s PM Invoice Id is set. If the invoice id on the imported line matches the PM Invoice Id on the Work Order, these lines can be marked as extra and billed.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Next Invoice Id:</font><br/>
+    If you mark a work order as Invoice Ready and say OK to the compute, this will display the invoice number that will be used if you printed the invoice right now.
+  </p>
+  <p>
+    <font style="font-weight: bold;">WO Next Invoice Total:</font><br/>
+    If you mark a work order as Invoice Ready and say OK to the compute, this will display the computed total for the Job specified in the Work Order. It is used as a check to be sure the compute didn&#39;t find unbilled costs from a different work order charged to the same job.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Invoice Status:</font><br/>
+    Shows the current invoice status of the Job referenced in this Work Order.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Job Client Id:</font><br/>
+    This display-only field defaults from the WO header Job.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Override</font>
+    <font style="font-weight: bold;">Client Id:</font><br/>
+    If enabled by registry, this field may be used to override the Client in the WO header Job.(displayed as Job Client Id). Typically, this would be used if a Work Order for a COD Job (referencing a generic COD client) has receivables or overages, and must therefore be linked to an actual Client record for tracking AR. When the Work Order is invoiced, the AR Sales and Cash Receipts (if applicable) entries generated will reference the Override Client.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Examples:</font>
+  </p>
+  <p style="margin-left: 36.00pt;">The Override Client Id field would be set:</p>
+  <p style="margin-left: 36.00pt;">a) to take a COD Work Order and create/specify a BILLABLE client for when a COD payment was not received due to homeowner not home or tech lost the check.</p>
+  <p style="margin-left: 36.00pt;">b) if an over/under payment is received so that the balance due is put is assigned to actual client.</p>
+  <p style="margin-left: 36.00pt;">Important Note: no JOB is created - so that next time service work done for COD client, COD payment is still expected. If you have to turn a COD client into a &#39;real&#39; billable account then you MUST set-up a Service Job and change the site&#39;s default equip from defaulting to the COD job template to your new billable service job.</p>
+  <p style="margin-left: 36.00pt;">The Override Terms field would be set:</p>
+  <p style="margin-left: 36.00pt;">In case of issue a (above), change the terms from cod to DUE.</p>
+  <p style="margin-left: 36.00pt;"><span style="font-weight: bold;">Warranty / Utility Work:</span> If selecting an Override Client for Warranty Work, specifying a Billing Address Id for specifying the override client will ensure the invoice is addressed / emailed to the party that will be paying the bill.</p>
+  <p>
+    <font style="font-weight: bold;">Billing Address Id:</font><br/>
+    During Service Invoice printing, if this field is completed, the system will use the address in this record instead of the Job Record’s Billing Address Id (if completed) or the Job Invoice Address and Email fields. Also note that e-mail address in the Billing Address record will be used for the auto-emailing of invoices (if enabled).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Billing Agent Id:<br/>
+      <span style="font-weight: normal;">If this field is blank, it is</span>
+    </font> automatically populated with the current user id when the OK to Invoice button is pressed and the work order is saved. This field is used in conjunction with the Service Invoice; it enables users to filter on ‘their’ invoices during billing.
+  </p>
+  <p><span style="font-weight: bold;">Equipment Work Performed Addendum - Show on Invoice?</span><br/>
+    When this box is checked, the Service Invoice will continue to print the  Invoice Description of Work Performed. In addition, a page break AFTER the Invoice Total/AR Summary will occur and additional (addendum) page(s) will print as necessary to present the COMPLETE – Work Performed text associated to EACH WO Equipment record on the work order.</p>
+  <p style="margin-left: 8px;"><span>Note that if the Show Equipment Detail box is flagged when printing the invoice, the Equipment Work Performed will be listed in the body of the WO as well. Typically, this option would NOT be used in conjunction with the new  &quot;Equipment Work Performed Addendum - Show on Invoice&quot; functionality.</span></p>
+  <p>
+    <font style="font-weight: bold;">Billing Comments:</font><br/>
+    These comments default from the Client Site record so that any special billing notes can be viewed by the billing people.
+  </p>
+  <p>
+    <font style="font-weight: bold;">First Date Worked: Last Date Worked:</font><br/>
+    These display-only fields are extracted from Job History based on the earliest and latest non-zero labor entries associated with this Work Order. Only actual labor hours are included: “quoted” labor is not included in the calculation.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Web Log</font>
+    <font style="font-weight: bold;">:</font><br/>
+    The display-only Web Log field is populated if this Work Order was created from a Web Log; the Web Log details will also be displayed. Any function capable of creating a new work order (New Call for example) from an existing Web Log entry will set this field.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Conversion Notes:</font><br/>
+    This field is not retroactively loaded during database conversion from pre-8.0 due to concerns about performance. However, a script may be used to update the field from existing data: contact your support representative for details.
+  </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_Other_Info_Tab" id="Work_Order_Other_Info_Tab"></a>Other Info Tab</p>
+  <p>
+    <font style="font-weight: bold;">Escalation Status:</font><br/>
+    Display only. The Escalation Status of a work order as a whole is set based on the individual technician statuses (on the Technician tab) as well as the type of Work Order it is. The one exception to this is the case of Credit Hold work orders, which overrides the normal Escalation Status processing. The Escalation Status is used by the Scheduled Event Manager when determining if Scheduled Events (Alarms and Notifications) should be executed or canceled. This field may also be used for reporting purposes. Click <a href="Escalation_Status.htm">Escalation Status</a> for a detailed description of how this field is set.
+  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Cancelled Status:</span> Note that setting the Tech Status to Cancelled will also set the Tech&#39;s Scheduled Events to Cancelled if they have not yet been executed. If the Work Order Escalation status is also set to Cancelled unexecuted Scheduled Events that are not tech-based will also be set to Cancelled.</p>
+  <p style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font style="font-weight: bold;">Important Note:</font> The Escalation Status will only be set if at least one Escalation Profile exists (even if it is not used) or a registry entry is set.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Work Order Status Category:</font><br/>
+    This display only field is set by the system. It is used in conjunction with the SAM Pro.net components to determine if a work order should be displayed on a SAMPro.net component (e.g., CRMAnywhere, TechAnywhere, etc.).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Work Order Comments:</font><br/>
+    This display-only field lists the comments specified in Site record.
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">Credit Hold</font><br/>
+    This field is set (during New Call or when the Create PM Workorder function is run) if any receivables exceed the number of Credit Hold Days for the Client referenced in the Job record. If a work order is placed on credit hold, it will not be visible on the dispatch board, and cannot be changed except by credit managers.
+  </p>
+  <p>To release the work order from Credit Hold, the credit manager should clear the Credit Hold box by double-clicking on it, and then click the Save button. When he or she has done so, the manager’s user Id will be displayed. Once the work order has been released, it will be visible on the dispatch board, and can be updated and assigned according to your firm’s usual procedures.</p>
+  <p>
+    <font style="font-weight: bold;">Closing Call Script:</font><br/>
+    This field specifies the Call Script that should be invoked when a Dispatcher closes a Work Order. This field defaults from the Client Site record for Work Orders that were created in New Call.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Call Script Loaded?</font><br/>
+    This box is automatically checked by the system when the closing call script is run so that it will not be run a second time if the work order goes though changes resulting in it being completed a second time. It may be cleared by the user if for some reason it should be rerun.
+  </p>
+  <p><span style="font-weight: bold;">TechAnywhere Source Rn: Technician Id:</span><br/>
+    If these fields are completed, this record/line was created/revised from TechAnywhere.</p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_COD_Tab" id="Work_Order_COD_Tab"></a>COD Tab</p>
+  <p>Entries on this tab should ONLY be made for COD work orders, NEVER for billable work orders. The system will warn the user when any field is changed on the COD parent tab and the Work Order&#39;s terms are not COD.</p>
+  <p>When a COD Work Order is processed from SAM Pro, you must print and post the invoice to have the appropriate journal entries generated (Cash Receipts and Sales Journal, or just Sales Journal if enabled by registry). If only the AR Sales Journal is written, it will automatically be written by the system crediting the applicable sales account and debiting the GL Account specified on this tab for the payment received.</p>
+  <p>The following should be set up correctly in order for entries on this tab to be processed correctly:</p>
+  <p style="margin-left: 36.00pt;">- The Work Order’s Job should reference an AR Terms record that is correctly configured for COD’s.</p>
+  <p style="margin-left: 36.00pt;">- The COD box in this AR Terms record must be checked (note that this field is displayed below).</p>
+  <p style="margin-left: 36.00pt;">- The AR Terms Id defaults from the Job <font style="font-style: italic;">when the Work Order is</font>
+    <font style="font-style: italic;">loaded</font>, so the Job’s AR Terms record must be set correctly from the beginning.
+  </p>
+  <p style="margin-left: 72.00pt;">
+    <font style="font-weight: bold;">TechAnywhere</font>
+    <font style="font-weight: bold;">COD’s:</font><br/>
+    For COD Invoices generated from TechAnywhere, the appropriate AR Sales AND Cash Receipts entries can be generated when the TechAnywhere Post is run. In addition, a copy of the Invoice the Tech printed for the customer will be downloaded from TechAnywhere and attached to the Work Order (but not the Client).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Amount:</font><br/>
+    Reserved for future use.
+  </p>
+  <p class="Body_Text_2" style="margin-left: 5.75pt;">
+    <font style="font-weight: bold;">Reference No.:</font><br/>
+    Typically, the check number or credit approval number.
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Account Id:</font><br/>
+    Enter the GL Account that is to be debited for the COD payment received. <font style="font-weight: bold;">Note that field should NEVER be completed for a billable work order because doing so triggers the COD processing.</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Sweep Accounts:</font> The Bank Deposits Journal reads cash receipts that are generated from the COD tab within the Work Order.  If your firm uses Bank Reconciliation processing, the GL Account referenced on the COD tab should be the sweep account. If your firm maintains different sweep accounts for different credit cards, be sure to select the correct one.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">TIP:</font> If this account was entered incorrectly on the work order, it may be corrected in the AR Sales Journal entry that it generated (on the GL tab’s AR Cash Receipts Account number) provided that it has not been recorded in the Bank Deposit Journal: the user should manually verify that nothing has been deposited before making any changes
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Entity Id:</font><br/>
+    Enter the GL Entity that should be debited for the payment received.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Payment Type Id:</font><br/>
+    Enables the user to record the exact type of COD payment (e.g.,, cash, check, credit card, etc.). A payment type of “none” is useful for estimates and no charges.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Note:</font> The system will default the COD GL Account Id from the Payment Type record when the Payment Id is changed or entered. When the selected Payment Type record includes a default GL Account, do not permit changes to the COD GL Account Id.
+  </p>
+  <p>
+    <font style="font-weight: bold;">AR Terms Id: COD?</font><br/>
+    The display-only AR Terms Id defaults from the Work Order’s Job record, and should be set to an appropriated record for COD jobs (with the COD? box (from the AR Terms record) checked.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Tip: Fixing a COD Work Order with a Bad P</font>
+    <font style="font-weight: bold;">ayment</font>
+  </p>
+  <p style="margin-left: 36.00pt;">By default a COD posts a &quot;Cash Receipt&quot; as well as an AR Sales Entry. To be able to use &quot;Reverse Invoice&quot; for invoices handled in this manner, the &#39;COD&#39; Cash Receipt posting must first be reversed as follows:</p>
+  <p style="margin-left: 36.00pt;">To find Cash Receipt for COD invoice...</p>
+  <p style="margin-left: 66.25pt;">Go to VIEW INVOICE MASTER - click on Child Tab: &#39;Trx History&#39; &amp; note the TRXid # for the source &#39;AR Receipt&#39; (fyi-COD parent tab will show the payment info).</p>
+  <p style="margin-left: 36.00pt;">To remove the Cash Receipt, go to Cash Receipts...</p>
+  <p style="margin-left: 66.25pt;">1) Filter on TRXid # from step above</p>
+  <p style="margin-left: 66.25pt;">2) Change the Received Amount to 0</p>
+  <p style="margin-left: 66.25pt;">3) Delete off the lines</p>
+  <p style="margin-left: 66.25pt;">4) Save the entry</p>
+  <p style="margin-left: 36.00pt;">You should now be able to reverse the invoice (providing it had not been &#39;deposited&#39;.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Process if the registry is enabled to suppress the Cash Receipt</font>
+  </p>
+  <p style="margin-left: 36.00pt;">When a COD Work Order is saved, a Sales Journal will automatically be written by the system, crediting the applicable sales account and debiting the GL Account specified on this tab for the payment received. If it turns out this was a bad payment (e.g, NSF check), you may use the following procedure to account for this situation.</p>
+  <p style="margin-left: 36.00pt;">1) If the check was deposited, you may or may not want to remove it from the deposit journal. If you do, the check will become available for deposit forever into the future.</p>
+  <p style="margin-left: 36.00pt;">2) You will need to manually create a <font style="text-decoration: underline; ">new</font> AR Sales Journal entry to ‘reverse’ the effect of the cash receipts portion of the entry generated by the system.</p>
+  <p style="margin-left: 36.00pt; text-indent: 30.25pt;">In the AR Sales Journal Header:</p>
+  <p style="margin-left: 102.25pt;">- Enter the Client Id of the customer who made the bad payment</p>
+  <p style="margin-left: 102.25pt;">- Reference the original Invoice Id, but add NSF (or other initials) to the original Id to notify that this was from non-sufficient funds.</p>
+  <p style="margin-left: 102.25pt;">- Specify a current accounting period and if possible match the invoice date from the original invoice for aging.</p>
+  <p style="margin-left: 66.25pt;">On the AR Sales Prices Tab</p>
+  <p style="margin-left: 102.25pt;">- On the Prices tab, enter the amount of the invoice and the GL account used for the bank checking account (if you did not reverse the deposit journal) or use the Sweep account (if you did reverse the deposit.)</p>
+  <p style="margin-left: 36.00pt;">3) Save your AR Sales Journal Entry.</p>
+  <p style="margin-left: 36.00pt;"> </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_Gross_Margin_Tab" id="Work_Order_Gross_Margin_Tab"></a>Gross Margin Tab</p>
+  <p class="Block_Text">This tab enables the user to easily adjust the charges on this work order to a targeted gross margin. Only charges on the work order itself are considered.</p>
+  <p class="Block_Text" style="margin-left: 48px; font-weight: bold;">Alternate Tab Display</p>
+  <p class="Block_Text" style="margin-left: 48px;">An alternate tab showing values from Job History / Revenue Adjustments projections  will be displayed it is enabled via registry.</p>
+  <p class="Block_Text" style="margin-left: 48px;"><span>If only the <img alt="image\SKIN1_RefreshGM.gif" border="0" height="28" src="assets/images/image/SKIN1_RefreshGM.gif" title="image\SKIN1_RefreshGM.gif" width="88"/>  <img alt="image\SKIN1_ComputeRevAdjust.gif" border="0" height="28" src="assets/images/image/SKIN1_ComputeRevAdjust.gif" title="image\SKIN1_ComputeRevAdjust.gif" width="88"/>  buttons appear, click <a href="Work_Order_GM_Tab_JCH_Projections.htm">Gross Margin Tab (From Job History / Projections)</a> </span><span>for details on this alternate display.</span></p>
+  <p class="Block_Text">After importing or manually entering all detail on the work order, the Gross Margin tab may be used to adjust the invoice revenues to correspond to the desired Gross Margin or Invoice Total.</p>
+  <p class="Block_Text">Note that Revenue Adjustment &#39;Prepaid&#39; lines (typically from PM Accruals) are ignored when making the Gross Revenue calculations.</p>
+  <p class="Body_Text_2" style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; 
+	 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+	 border-right: 0.50pt solid #000000;">
+    <font style="font-weight: bold;">Import Costs to Work Order</font><br/>
+    <img alt="" border="0" src="assets/images/SKIN1_ImportCosts.bmp" style="border: none;"/> For the Gross Margin calculation to operate properly, all costs must be brought into the work order itself. Clicking the Get Costs button imports detailed costs that have not as yet been entered directly (these costs may come from the Job Journal, Labor Journal, and from Purchase Orders).<br/>
+    <br/>
+    A registry option (see <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm">Registry Entry Work Order Options</a> ) enables the Employer portion of PR Taxes (FUTA, FICA, etc) to be imported to the WorkOrder (as part of the Import Costs functionality) from the Payroll Check Journal. This enables all costs to be viewable on the Gross Margin tab of the work order.  Note that these costs will be imported without any revenue. 
+  </p>
+  <p>
+    <font style="font-weight: bold;">Refresh GM</font><br/>
+    <img alt="image\SKIN1_RefreshGM.gif" border="0" height="28" src="assets/images/image/SKIN1_RefreshGM.gif" title="image\SKIN1_RefreshGM.gif" width="88"/> Clicking this button will return you to the original configuration of this screen (before making manual adjustments).
+  </p>
+  <p class="Body_Text_3">Adjust to Client NTE<br/>
+    <img alt="image\SKIN1_AdjustToClientNTE.gif" border="0" height="28" src="assets/images/image/SKIN1_AdjustToClientNTE.gif" title="image\SKIN1_AdjustToClientNTE.gif" width="88"/>
+  </p>
+  <p class="Body_Text_3">
+    <font style="font-weight: normal;">Click this button to automatically adjust the revenue amount listed below to sum to the Client NTE value. Only revenue categories flagged as Recompute will be included in the recalculation. Typically, this would be done if the invoice total exceeded the Client Not to Exceed figure by a small amount, and it was not possible or worth it to have the Client increase the Not to Exceed figure. Note that the revenue amounts will not be distributed to the detail (billing) lines on the Labor, Material, Other and Sub Tabs until the Distribute GM button is clicked.</font>
+  </p>
+  <p class="Body_Text_3">Adjust to Target GM<br/>
+    <img alt="image\SKIN1_AdjustToTarget.gif" border="0" height="28" src="assets/images/image/SKIN1_AdjustToTarget.gif" title="image\SKIN1_AdjustToTarget.gif" width="88"/>
+  </p>
+  <p class="Body_Text_3">
+    <font style="font-weight: normal;">Click this button to automatically adjust the revenue amounts listed below to correspond to the target GM defined in the GM table. Only revenue categories flagged as Recompute will be included in the recalculation. Typically, this would be done if the existing gross margin was lower than the target. Note that the revenue amounts will not be distributed to the detail (billing) lines on the Labor, Material, Other and Sub Tabs until the Distribute GM button is clicked.</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Distribute GM</font>
+  </p>
+  <p><img alt="image\SKIN1_DistributeGM.gif" border="0" height="28" src="assets/images/image/SKIN1_DistributeGM.gif" title="image\SKIN1_DistributeGM.gif" width="88"/></p>
+  <p>This button should be clicked when all revenues and gross margins appear as desired. Clicking this button will automatically adjust billing detail lines (Labor, Inventory, Other) on this work order as needed.</p>
+  <p>
+    <font style="font-weight: bold;">Adjust Revenues</font><br/>
+    <img alt="image\SKIN1_ComputeRevAdjust.gif" border="0" height="28" src="assets/images/image/SKIN1_ComputeRevAdjust.gif" title="image\SKIN1_ComputeRevAdjust.gif" width="88"/>
+  </p>
+  <p>Entries on the RevAdjust tab are automatically created by clicking his button if a Revenue Adjustment table is specified on this Work Order; existing unbilled lines and special PM *Accrual* lines will not be deleted.</p>
+  <p>The Adjust Revenue button should be clicked <font style="font-weight: bold;">after</font> the Ok To Invoice button (on the invoicing tab) has been clicked, and all costs have been imported to the work order (so that revenues can be adjusted correctly). Revenue adjustments enable you to discount labor, material and other charges on work order invoices (for service compute jobs), and to add management fees to the total. See <a href="Revenue_Adjustment_Viewer.htm">Revenue Adjustment Viewer</a> for details.</p>
+  <p class="Body_Text_2">
+    <font style="font-weight: bold;">Gross Margin Id:<br/>
+      Analyze Labor:  Recompute Labor:<br/>
+      Analyze Materials: Recompute Materials:<br/>
+      Analyze Other:  Recompute Other:<br/>
+      Analyze Subcontract: Recompute Subcontract:</font><br/>
+    These display-only fields default from the Gross Margin table associated with the work order’s Client Site.
+  </p>
+  <p class="Body_Text_2" style="margin-left: 18.00pt;">If an Analyze box is checked, that category of costs/revenues will be included in the Gross Margin Analysis. If the corresponding Recompute box is also checked, revenues for this category will be readjusted when the Target GM or Client NTE buttons are pushed.</p>
+  <p style="margin-left: 18.00pt;">If an Analyze box is checked, but the corresponding Recompute box is not checked, revenues for this category are included in the GM Analysis but are <font style="text-decoration: underline; ">not</font> readjusted when the Target GM or Client NTE buttons are pushed (this is frequently the case with Labor).</p>
+  <p class="Body_Text_3">Client NTE:<br/>
+    <font style="font-weight: normal;">The field may be used to adjust the default Client Not to Exceed value if the customer has approved a greater value for this work order.</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Projected Invoice $:</font><br/>
+    To adjust the detailed revenues to a specific invoice amount, enter that amount and tab out of the field.
+  </p>
+  <p class="Body_Text_3">UNBILLED:<br/>
+    Labor: Material: Other: Subcontract:</p>
+  <p class="Body_Text_2" style="margin-left: 36.00pt;">This section is a matrix that enables you to review and make final adjustments to Revenues before clicking the Distribute GM button.</p>
+  <p>
+    <font style="font-weight: bold;">Billable Cost:</font><br/>
+    This display-only field is calculated by the system based on the total detail costs for this category.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Revenue:</font><br/>
+    This field is calculated by the system when you click the Client NTE or Target GM button (or enter an Invoice Amount); it may be adjusted by the user if needed. When you tab out of the field, the system will adjust the corresponding GM% field.
+  </p>
+  <p>
+    <font style="font-weight: bold;">GM%:</font><br/>
+    This field is calculated by the system when you click the Client NTE or Target GM button (or enter an Invoice Amount); it may be adjusted by the user if needed. When you tab out of the field, the system will adjust the corresponding Revenue field.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Target%:</font><br/>
+    This display-only field defaults from the Gross Margin table based on the type of cost (labor, material, etc.) and the applicable cost level for this work order.
+  </p>
+  <p class="Body_Text_3">TOTALS:<br/>
+    Labor: Material: Other: Subcontract: Total:</p>
+  <p>
+    <font style="font-weight: bold;">Total Cost: Total Revenue: Total %</font>
+    <font style="font-weight: bold;">GM$</font>
+    <font style="font-weight: bold;">:</font><br/>
+    These display-only fields are computed by the system based on the values entered/displayed in the UNBILLED matrix. The Total% displays the projected GM for this work order so that it can be compared with the Target GM.
+  </p>
+  <p>The Gross Margin Dollars (GM$) column is calculated by subtracting the Billable Cost from the Revenue.</p>
+  <p>
+    <font style="font-weight: bold;">Remember to Distribute the Gross Margin!</font><br/>
+    Once the Gross Margin tab has been adjusted to your satisfaction, remember to click the Distribute GM button to actually update the detailed revenues as needed. The work order can then be flagged as Ready to invoice and Saved.
+  </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_Revenues_Tab" id="Work_Order_Revenues_Tab"></a>Revenues Tab</p>
+  <p>This Query-View tab displays the revenues associated with this work order.</p>
+  <p>Note that Quoted lines will only appear on this tab when the Work Order&#39;s Invoice Ready flag is set. Quoted lines always post Cost as JCH Budgeted Cost and Revenue as Budgeted Revenue.  Quoted lines ONLY post as Actual JCH Revenue when the work order goes to Invoice Ready.</p>
+  <p>Double-clicking on a line will open the applicable Labor Journal, AP Journal, Job Journal, Purchase Order, Inventory Receipts Journal, or Inventory Adjustments Journal entry if access to the viewer is enabled for the user.</p>
+  <p>If Time Review is enabled, time recorded in TechAnywhere may be approved by right-clicking on a line. No special user attribute is required: all that is needed is for someone other than the tech to ‘touch’ the entry. See <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm">Registry Work Order Options (sys-viewer-vwrkordr)</a> for details.</p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_Invoices_Tab" id="Work_Order_Invoices_Tab"></a>Invoices Tab</p>
+  <p style="font-weight: bold;"><span>Invoice Id - Date - Amount Billed - Amount Paid - Discount Taken - Balance -  Last Payment Date</span></p>
+  <p>This tab displays the invoices generated from this work order, including zero-dollar invoices. By default, only Service Compute type invoices are shown.  See <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#registry_workorder_Show_RININV4_Invoices">Registry to Display RININV4 Invoices</a> if Service Compute invoices are NOT used on your system and you would like to display RININV4 invoices on this tab.</p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_Purchases_Tab" id="Work_Order_Purchases_Tab"></a>Purchases Tab</p>
+  <p>This tab displays purchase orders associated with this work order. Double-click on a line to access the Purchase Order.</p>
+  <p>PO Id - Description - Qty Ordered - U-M - Unit Cost - Amount - Qty Received - Qty Vouchered - Vendor - Type - Promised - Confirming - PO Status</p>
+  <p>The Inventory Item Id is included in the Description field (ItemId~Description) to avoid confusion if a General and Inventory Item have the same Description.</p>
+  <p>Released, &#39;shell&#39; PO&#39;s (with no detail lines) are displayed on the Purchases tab with the Description set to &#39; Purchases Not Itemized&#39;.  </p>
+  <p>By default, Unreleased PO&#39;s do not appear on this tab unless enabled via registry; see <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm">Registry Work Order</a>. Since Unreleased PO&#39;s do NOT post to IM History, Unreleased PO line details will NOT be shown.  The user will see a single line identifying basic PO information, with &#39; Purchases Not Itemized - in the Description. The Status column will indicate that the Purchase Order is Unreleased.</p>
+  <p>For Credit PO&#39;s, the Purchase tab shows zero received if the item has not been received, or the applicable negative number if it has been received.</p>
+  <p>The Confirming column is set to Yes if the PO’s Confirming? box is checked, or No if it is clear. This column allows for easy communication between the parts manager and the service department. If a PO is flagged as Confirming, it indicates that the parts manager has already delivered the PO to the vendor. If it is not flagged as Confirming, this operation needs to be completed.</p>
+  <p style="margin-top: 0; margin-bottom: 0;"> </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_Equipment_History_Tab" id="Work_Order_Equipment_History_Tab"></a>Equipment History Tab</p>
+  <p>This Query-View tab displays the service history (i.e., service and pm work orders) of the equipment listed on the Equipment tab of this work order. A registry option (see <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm">Registry Entry Work Order Options</a> ) enables the display of all Site Equipment history from this tab.</p>
+  <p>If you double-click a line on this tab the Report Work Order list viewer will be launched by default for the selected Work Order, with the Print WO Notes box checked. A different report may be specified via registry setting.</p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_Ref_Track" id="Work_Order_Ref_Track"></a>Ref Track Tab</p>
+  <p>This tab lists all Refrigerant Tracking History postings entered for the selected work order. The following fields are displayed:</p>
+  <p>EquipId – RefrigType – Added – Recovered – Repaired – Leak Location – Fault Code – Action Code – Make – Model – Serial Number</p>
+  <p>Double-clicking on a line will display selected Refrigerant Tracking History record if additional detail is required.</p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_Quotes_Tab" id="Work_Order_Quotes_Tab"></a>Quotes</p>
+  <p>The display tab lists all Quotes associated with this Work Order. The Scope of Work, Equipment and Price, and Status are displayed for each option on the Quote.</p>
+  <p><span style="font-weight: bold;">Scope WO:</span><br/>
+    The Scope WO column displays the Work Order Id from the specified Quote Scope option. This column will only be completed when the approval wizard has been successfully run for that option. If the selected Work Order was only used as the source Work Order in the Quote, a different Scope WO (generated by the Approval Wizard) may be referenced in this column.</p>
+  <p>Double-clicking on a line will display selected Quote <span>Manager</span> record.  </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="WO_Escalation_Tab" id="WO_Escalation_Tab"></a>Escalation Tab</p>
+  <p>The Escalation Tab provides a synopsis of the Scheduled Events associate with this Work Order. You may click on a column heading to sort the information by this column in ascending order. Clicking on the column again will sort in descending order.</p>
+  <p>
+    <font style="font-weight: bold;">Scheduled:</font><br/>
+    This column lists the scheduled date and time of the event determined by the escalation manager.
+  </p>
+  <p>If the Status field is set to Executed and Scheduled Column is set to 1900-01-01 00:00:00, the event was executed immediately (such as when the system plays ‘catch up’ when a new tech is added to the work order, and escalations that had been sent to the first tech are repeated to the new tech). The new Created column lists the date and time the event was created and executed.</p>
+  <p>
+    <font style="font-weight: bold;">Created:</font><br/>
+    This column lists date and time the scheduled event was created. It also provides the execution date for events that were executed immediately upon creation.
+  </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_TechAnywhere_Tab" id="Work_Order_TechAnywhere_Tab"></a>TechAnywhere</p>
+  <p>This tab will only appear when RemoteTech is enabled in the vrgstry file. This tab displays a synopsis of messages posted to this work order from TechAnywhere.</p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Work_Order_GLH_Tab" id="Work_Order_GLH_Tab"></a>GLH Tab</p>
+  <p>If enabled via registry, this tab displays the GL History postings associated with the selected Work Order. The following columns appear on this tab:</p>
+  <p style="margin-left: 36.00pt;">Account - Account Name - Entity<br/>
+    Period – Company - Security<br/>
+    I/C (Yes if this post was generated by Intercompany Processing, No if not)<br/>
+    Journal - Trx Id – Date - Trx Count</p>
+  <p class="Tab"><a id="UWO_Tab"></a>UWO Tab</p>
+  <p>This tab must be enabled via <a href="Registry_Start_Taylor_Universal_Work_Order_Generation.htm">Registry</a> and is used for the Taylor Universal Work Order functionality. See <a href="Taylor_Universal_Work_Order_Setup.htm">Taylor Universal Work Order Setup</a> for additional details.</p>
+  <p>The following validations will only be performed if the Work Order is flagged as a UWO Work Order by setting the WO Type field on the UWO tab. Note also that, consistent with other UWO validations, these validations are performed only when the Save Record is attempted.</p>
+  <p style="margin-left: 48px;">The system does not allow a Work Order to be saved if the “Recall Due To” field on the UWO tab is other than “N/A”  but the “Work Order Type” field on the Main tab is other than “Call Back” (i.e. the Work Order is not a Recall).</p>
+  <p style="margin-left: 48px;">The system does not allow a Work Order to be saved if the &quot;Rewrite Parts Received&quot; field on the UOW tab is other than &quot;N/A&quot; but the &quot;Original WO&quot; field on the Main tab is blank (i.e. the Work Order is not a Rewrite).</p>
+  <p style="margin-left: 48px;">The system does not allow a Work Order to be flagged as both a Rewrite and a Recall.</p>
+  <p></p>
+  
+  
+  <script type="text/javascript" language="JavaScript1.2">
+    //<![CDATA[
+    if (typeof(TextPopupInit) != 'function') TextPopupInit = new Function();
+    TextPopupInit('a1', 'POPUP548941468');
+    //]]>
+  </script>
+
+</body></html>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.9.3.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="unvouchered payables"/>
+<meta name="MS-HKWD" content="end of month"/>
+<meta name="MS-HKWD" content="starter"/>
+<meta name="MS-HKWD" content="start"/>
+<meta name="MS-HKWD" content="create"/>
+<meta name="MS-HKWD" content="ap"/>
+<meta name="MS-HKWD" content="EOM"/>
+<meta name="MS-HKWD" content="accounts payable"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Create EOM Unvouchered AP GL Entries</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="unvouchered payables,end of month,starter,start,create,ap,EOM,accounts payable"/><meta name="brsprev" value="AP_Payment_Approval.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Create EOM Unvouchered AP GL Entries">
+        <span>Create EOM Unvouchered AP GL Entries</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Create EOM Unvouchered AP GL Entries</h1>
+<h2>Purpose:</h2>
+<p style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Important Warning:</font> This function would be used ONLY when Unvouchered Payables is <font style="font-weight: bold;">not</font> being implemented in your Accounting Periods!</p>
+<p>This function analyzes inventory history to identify items received but not yet vouchered. When that is the case, it is sometimes desirable to <font style="font-style: italic;">account</font> for items &quot;received&quot;, that the client has NOT received a vendor’s invoice for. This would be an end-of-month entry to DR Expenses and CR an Unvouchered Payables Liability Account. This function is required if your company is using Purchase Orders and will be performing the Start Job EOM function.</p>
+
+<p>JCH Cost analysis is only &#39;necessary&#39; for lines where PO Qty Ordered &lt;&gt; PO Job Quantity Ordered. As of Version 9.0, this function has been enhanced to not care about JCH except when necessary.  This should eliminate the PO-GEN line issue caused by editing WO-Other Descriptions because a PO-GEN line&#39;s quantity is either all or nothing to a job.</p>
+
+<p>Purchase Credit-type entries (Credit PO&#39;s) are also evaluated by this function, and will generate a negative debit to the Inventory Asset account <span style="font-style: italic; font-weight: bold;">regardless of whether or not they are received</span>. Applicable Inventory and General lines on Credit PO’s will be processed. GEN lines from Credit POs are completely ignored unless the line&#39;s Receipted-to-JCH flag is true.</p>
+<p>When this function is run, the user provides a posting period and a reversing period. The last day of the &quot;posting&quot; period is used to create a DR to appropriate Inventory and/or Expense accounts &amp; CR to UVP.  The first day of the &quot;reversing&quot; period is used to make the net-opposite transaction, so that the Expense and Liability are only recognized on the &quot;last&quot; day {month end} financials.  At all other points in time it would be expected that the UVP liability has NO balance.</p>
+<p>The last day of the posting Period you select defines the cutoff date (in Inventory History) for items that have been received but not vouchered. The system looks at Inventory History to determine the unvouchered (QtyReceived - QtyVouchered) status for each PO line as of the cutoff date.  When the unvouchered quantity is greater than zero, an accrual entry is made. Note that the Accounting Period in the PO is <font style="text-decoration: underline;">not</font> part of the decision-making process. </p>
+<p>To create these entries, this function uses the P.O. costing to determine the expense that is expected when the invoices are ultimately received for the items as follows:</p>
+<p><font style="font-weight: bold;">Inventory items purchased to Jobs:</font></p>
+<p style="text-indent: 30.25pt;">Debit the GL Expense Account from the <a href="Job_Cost_Category_Viewer.htm">Job Cost Category</a></p>
+<p style="text-indent: 30.25pt;">Credit the GL Unvouchered AP Account in the <a href="Inventory_Group_Viewer.htm">Inventory Item Group</a></p>
+<p><font style="font-weight: bold;">General items purchased to Jobs:</font></p>
+<p style="text-indent: 30.25pt;">Debit the GL Expense Account from the Job Cost Category</p>
+<p style="text-indent: 30.25pt;">Credit the GL Unvouchered AP Account in the Inventory Group with the Id <font style="font-weight: bold;">misc</font></p>
+<p><font style="font-weight: bold;">Inventory Items not purchased to Jobs:</font></p>
+<p style="text-indent: 30.25pt;">Debit the GL Asset Account from the Inventory Group Record</p>
+<p style="text-indent: 30.25pt;">Credit the GL Unvouchered AP Account in the Inventory Group Record</p>
+<p><font style="font-weight: bold;">General Items not purchased to Jobs:</font></p>
+<p style="text-indent: 30.25pt;">Debit the GL Asset Account specified in the Purchase Order</p>
+<p style="text-indent: 30.25pt;">Credit the GL Unvouchered AP Account in the Inventory Group with the Id <font style="font-weight: bold;">misc</font></p>
+<p><font style="font-weight: bold;">Use Tax Entries:</font> If your firm is assessed with Use Tax (typically for materials)<font style="font-weight: bold;">,</font> this function will also generate Use Tax entries the applicable Use Tax entries and reversals.</p>
+<p style="margin-left: 36.00pt;">Debit the same GL Account as the unvouchered Inventory or General item (see above)</p>
+<p style="margin-left: 36.00pt;">Credit will be made to the GL Account in the applicable Sales Tax Authority record</p>
+<p>Note that UVP accounts must be specified in all applicable Inventory Item Groups and and Expense Accounts in all applicable Job Cost Category records.</p>
+<p>When this function is run, the system will now will attach the sidebar View Summary and Detail text files to the GL Journal transaction as document attachments.</p>
+<p>By default, credits are summarized and will not be posting using entities. You may control level of detail being posted as well as the handling of entities via <a href="Registry_Entry_EOM_Unvouchered_AP_GL_Entries.htm">Registry Entry EOM Unvouchered AP GL Entries</a>.</p>
+<p class="Reference_Line" style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>Usage:</h2>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;" color="#FF0000">WARNING:</font> <font style="font-weight: bold;">Running Unvouchered Payables</font> <font style="font-weight: bold;">Function Multiple Times Per</font> <font style="font-weight: bold;">Accounting</font> <font style="font-weight: bold;">Period<br/></font>This function was designed to be run once per accounting period. If your firm wishes to run it more frequently to obtain ‘real-time’ financial data, you <font style="font-family: Tahoma; font-weight: bold;" face="Tahoma">must delete</font> <font style="font-family: Tahoma;" face="Tahoma">any previous UVP transactions already posted in the same period.</font> <font style="font-family: Tahoma;" face="Tahoma">Specifically,</font> you <font style="font-weight: bold;">must delete</font> any previous UVP transactions (In G/L Journal Entry Viewer) already posted in the same period and <font style="font-weight: bold;">delete</font> any previous UVP transactions in the reversing period as well.</p>
+<h2>Registry Entries:</h2>
+<p> <a href="Registry_Entry_EOM_Unvouchered_AP_GL_Entries.htm">Registry Entry EOM Unvouchered AP GL Entries</a>:  This registry allows you to control the amount of posting detail, skip the report attachment, and include drop ship PO&#39;s in the calculation, and other options.</p>
+
+<p>Enabling this registry to <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#Prevent_User_from_Editing_WO_Other_from_PO">Prevent User from Editing WO Other Tab Lines Imported from a PO</a> will prevent PO Gen lines from be missed from inclusion in the post to GL.</p>
+
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Post Unvouchered AP:</font><br/>
+The last day of the posting Period you select defines the cutoff date (in Inventory History) for items that have been received but not vouchered. The system looks at Inventory History to determine the unvouchered (QtyReceived - QtyVouchered) status for each PO line as of the cutoff date.  When the unvouchered quantity is greater than zero, an accrual entry is made. Note that the Accounting Period in the PO is <font style="text-decoration: underline;">not</font> part of the decision-making process. </p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Period Id:<br/></font> Enter the accounting period that you want to post to. The last day of the &quot;posting&quot; period is used to create a DR to appropriate Inventory and/or Expense accounts &amp; CR to UVP.  If you enter an inactive accounting period, the system will warn you that it is inactive, but not prevent you from posting to it. This eliminates the need to temporarily re-activate a period. It also eliminates the possibility of a data entry person posting to the period while it is temporarily active.</p>
+<p style="margin-left: 36.00pt;"><font style="font-style: italic;">Note that you will be warned if a UVP entry has already been made to this period.</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Period Start: Period End: Period Active<br/></font>These informational fields will be displayed when the Period Id is selected.</p>
+<p><font style="font-weight: bold;">Reverse Unvouchered AP:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Period Id:<br/></font> Enter the accounting period that you want to post the reversals to. The first day of the &quot;reversing&quot; period is used to make the net-opposite transaction, so that the Expense and Liability are only recognized on the &quot;last&quot; day {month end} financials.  At all other points in time, it would be expected that the UVP liability has NO balance.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Period Start: Period End: Period Active<br/></font>These informational fields will be displayed when the Period Id is selected.</p>
+<p><font style="font-weight: bold;">Closed<br/></font>By default, this field is set to 1900-01-01 so that only those POs with a blank Date Closed field will be included. This field should be cleared if all unvouchered POs should be included, regardless of whether or not the Date Closed has been set.</p>
+<p>To include only those unvouchered PO’s whose Date Closed is blank, or falls on or before a date, enter a range in this field.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline;">Example</font></p>
+<p style="margin-left: 36.00pt;">To include unvouchered PO’s whose Date Closed is blank (1900-01-01) or falls on or before August 30, 2008 you would complete this range as follows:</p>
+<p style="margin-left: 36.00pt;">1900-01-01_2008-08-30</p>
+<h3>Important Fields: Checklist Screen</h3>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Account Validation:</font> the system will check that UVP GL Accounts are provided in the Inventory Groups / Job Cost Category for posting. If not, the system will warn you that “One or more Inventory Groups are Missing GL Accounts. Posting will not be allowed”. When you confirm the message, a workspace viewer report box will appear, allowing you to print the results. Close the report, and the EOM Checklist, and then carefully update your Inventory Group records. When you run the EOM function again, posting should proceed correctly.</p>
+<p>Note that this screen enables you to confirm the post as well as view and adjust the detail on each job.</p>
+<p><font style="font-weight: bold;">Do:<br/></font>This field enables you to select which unvouchered payables will be posted. By default, all are selected.</p>
+<p><font style="font-weight: bold;">PO</font> <font style="font-weight: bold;">Id: Inventory Item Id: Net Amount: GL Account (debit): Account Name:<br/>
+Description: Job Id: GL Account (credit – UVP): Account Name:<br/></font>These display-only fields identify the UVP’s to be posted.</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> Click the Go button to proceed. The system will display the GL Transaction Id generated as a result of this post.</p>
+
+</body></html>

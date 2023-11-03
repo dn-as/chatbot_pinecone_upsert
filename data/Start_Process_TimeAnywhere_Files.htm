@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.5.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Process TimeAnywhere Files</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="TimeAnywhere"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Process TimeAnywhere Files">
+        <span>Start Process TimeAnywhere Files</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Process TimeAnywhere Files</h1>
+<h2>Purpose:</h2>
+<p>This function processes Submitted (but not yet Posted) TimeAnywhere Labor, Expense and Break records to the Message table.  The Start TimeAnywhere Post function then uses these Messages to construct Labor Journal Entries for the time/expenses entered.</p>
+<h2>Usage:</h2>
+<p>The related Start Process TimeAnywhere Files (Automated) function may be used to process TimeAnywhere data as a Scheduled Event.</p>
+<h2>Important Fields:</h2>
+<p><span style="font-weight: bold;">Start Date:  End Date:</span><br/>
+These fields define the range of effective dates for time, expenses and breaks which will be processed.</p>
+<p style="font-weight: bold;">By Date?<br/>
+<span style="font-weight: normal;">If this field is checked, each Message will be limited to a single day for that Employee/Pay Period. This will result in Labor Journal Entries being generated for a single day per Employee when the TimeAnywhere post is run.</span></p>
+<p><span style="font-weight: bold;">Employee Id:</span><br/>
+To process TimeAnywhere records for all eligible employees, leave this field blank. To limit this run to a specific employee, enter his Id. A series of employees can be specified by listing Employee Id&#39;s separated by commas: 1001,1005,1025.</p>
+<p> </p>
+<p> </p>
+
+</body></html>

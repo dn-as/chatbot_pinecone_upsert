@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.20.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Record Billing Adjustments</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="GMP,Guaranteed Maximum Pricing,record billing adjustments,billing,sys-viewer-srcrdbllngadjstmnts"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Record Billing Adjustments">
+        <span>Registry Record Billing Adjustments</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Record Billing Adjustments</h1>
+<h2>Purpose:</h2>
+<p>Defaults.</p>
+<h2>Related Registry:</h2>
+<p><a href="Registry_Start_Compute_GMP_Special_Revenue.htm">Registry 
+ for Start Compute GMP Special Revenue</a>.</p>
+<h2>Important Fields:</h2>
+<p><span style="font-weight: bold;">Id:</span> sys-viewer-srcrdbllngadjstmts</p>
+<h3>Restart Function After Save</h3>
+<p>The following registry automatically restarts Record Billing Adjustments 
+ when a record is saved.</p>
+<p><span style="font-weight: bold;">Id:</span> sys-viewer-srcrdbllngadjstmt</p>
+<p><span style="font-weight: bold;">Setting Key</span>: ReopenViewerWhenRecordWritten 
+   <span style="font-weight: bold;"> Setting Value:</span> 
+ true   (default is false)</p>
+<p style="font-weight: normal;">If this option is enabled, clicking the 
+ red X on the Job Id input screen closes Record Billing Adjustments so 
+ that is does not reopen.</p>
+<h3>Deny Selection of Ready to Post in 
+ Record Billing Adjustments</h3>
+<p>When enabled, this registry denies 
+ selection of &#39;Ready to Post&#39; in Record Billing Adjustments (the Job Invoice 
+ Viewer). This registry is strongly recommended to prevent users from posting 
+ an invoice without having produced a printed copy. It should always be 
+ implemented if autosave is enabled.<br style="font-family: Verdana, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; 
+	 font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; 
+	 text-decoration-color: initial;"/>
+: <br style="font-family: Verdana, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; 
+										 font-size: 14px; font-variant-ligatures: normal; 
+										 font-variant-caps: normal; orphans: 2; 
+										 widows: 2; -webkit-text-stroke-width: 0px; 
+										 text-decoration-style: initial; 
+										 text-decoration-color: initial;"/>
+<span style="font-weight: bold;"> Id:</span> sys-viewer-srcrdbllngadjstmts</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> DenyReadyToPost   <span style="font-weight: bold;">Setting 
+ Value:</span> true  (default false)</p>
+<h3>Specify Job Cost Code Id for GMP Rev 
+ Adjustments</h3>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> DefaultGMPCostCode  <span style="font-weight: bold;">Setting 
+ Value:</span> <span style="font-style: italic;">Record Id for Rev Adjustment</span><br/>
+  <br/>
+ The Setting value must specify the Id for all Job Cost Code records used 
+ for GMP Revenue Adjustments used to account for Over Contract transactions 
+ (but not the fees themselves).</p>
+<p style="margin-left: 48px;">For GMP 
+ Contract type billing, these Job Cost Code records should reference the 
+ Billing Item used to show the Over Contract entry on the AIA invoice (requires 
+ specific AIA report).</p>
+<p style="margin-left: 48px;">For GMP 
+ SoV type billing the Billing Item does not need to be entered. A new GMP 
+ tab has also been added to the Job Cost Code record.</p>
+
+</body></html>

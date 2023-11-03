@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.3.0_24";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="work order"/>
+<meta name="MS-HKWD" content="COD"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Work Order COD Child Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="OpenEdge,Electronic Payments Credit Card Processing,Global Payments,work order,COD"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Work Order COD Child Tab">
+        <span>Work Order COD Child Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Work Order COD Child Tab</h1>
+<h2>Purpose:</h2>
+<p>This tab allows multiple payments (such as part check, part cash) to 
+ be recorded on a work order.</p>
+<p style="margin-left: 48px;">If OpenEdge (formerly APT Accelerated Payment 
+ Processing) is implemented, this tab may also be used to process credit 
+ card payments. See <a href="#Work_Order_COD_Payment_Processing" title="APT Credit Card Processing">Work 
+ Order COD Child Tab#Work_Order_COD_Payment_Processing</a> for details.</p>
+<p style="margin-left: 48px;">If TechAnywhere is implemented, this tab 
+ will be populated when the TechAnywhere Post is run for COD Work Orders.</p>
+<p style="margin-left: 48px;">The Work Order’s Job should reference an 
+ AR Terms record that is correctly configured for COD’s for COD processing. 
+ The COD box in the Job’s AR Terms record must be checked. The AR Terms 
+ Id defaults from the Job when the Work Order is loaded, so the Job’s AR 
+ Terms record must be set correctly from the beginning.</p>
+<h2>Usage:</h2>
+<p><font style="font-weight: bold;">If this Tab is not Visible<br/>
+</font>The following registry entry was implemented to provide a way to 
+ preserve the original COD behavior where a single AR Sales journal was 
+ posted when a COD was invoiced – not a Sales Journal and Cash Receipt.  When 
+ this setting is present, the new WO-COD child tab is not visible and therefore 
+ not available.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Id:</font> 
+ sys-start-ssrvcebllngcmpte <font style="font-weight: bold;">Setting Key:</font> 
+ UseSJForCOD <font style="font-weight: bold;">Setting Value</font> 
+ <font style="font-weight: bold;">:</font>true</p>
+<h5>Reversing a COD Invoice</h5>
+<p style="margin-left: 8px;">To Reverse a COD invoice, the user must remove 
+ the Cash/Check Receipt payment on this tab before using the Job Invoice 
+ Reverse process.  If the Work Order&#39;s COD tab references more 
+ than 1 invoice number (i.e. deposit invoice &amp; balance due invoice) 
+ care should be taken not to reverse all the invoices at the same time, 
+ otherwise the 1st invoice to be re-process will include all the COD payments.  </p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Payment Type Id:<br/>
+</font>Enables the user to record the exact type of COD payment (e.g.,, 
+ cash, check, OpenEdge/APT, etc.). A payment type of “none” is useful for 
+ estimates and no charges.</p>
+<p><font style="font-weight: bold;">Amount:<br/>
+</font>The amount of the payment received (for COD&#39;s) or being processed 
+ via OpenEdge (APT).</p>
+<p><font style="font-weight: bold;">Reference No.:</font><br/>
+Typically, the check number or credit approval number. If you are using 
+ OpenEdge Payment Processing, this field will be completed by the system.</p>
+<p><font style="font-weight: bold;">Invoice Id:<br/>
+</font>This display-only field will be completed by the system when the 
+ invoice is generated.</p>
+<p><font style="font-weight: bold;">GL Account Id:<br/>
+</font>This display-only field defaults from the Payment Type Id.</p>
+<p><font style="font-weight: bold;">CRJ Trx Id:<br/>
+</font>This display-only field will be completed by the system when the 
+ invoice is printed and the Cash Receipt entry is generated (manual entries) 
+ or posted from TechAnywhere.</p>
+<p><img src="assets/images/image/Magnify.gif" alt="image\Magnify.gif" title="image\Magnify.gif" width="18" height="18" border="0"/> Click the Magnify button 
+ to see the following fields.</p>
+<p><font style="font-weight: bold;">GL Entity:<br/>
+</font>This display-only field defaults from the Job in the Work Order 
+ header. Previous validation logic associated 
+ with manually entered WO-COD lines used the Job&#39;s <i style="box-sizing: border-box;">primary </i>GL 
+ Entity instead of the A/R GL Entity. In SAMPro Version 9.1, the Job&#39;s 
+ A/R GL Entity is defaulted first. </p>
+<p style="font-weight: bold;">Masked CC No: (last four digits of the credit 
+ card)<br/>
+CC Expiration Date:   CC Trx 
+ Id:<br/>
+<span style="font-weight: normal;">These display fields are completed when 
+ a Credit Card Payment is successfully processed.</span></p>
+<p><span style="font-weight: bold;">TechAnywhere 
+ Source Rn: Technician Id:</span><br/>
+If these fields are completed, this record/line was created/revised from 
+ TechAnywhere.</p>
+<p><span style="font-weight: bold;">Date 
+ Received:</span><br/>
+It may be necessary to generate multiple invoices on a single WO that has 
+ multiple COD lines from different visits. In previous releases, this 
+ was handled by toggling the &#39;Do Not Apply&#39; flag. In this release, when 
+ invoicing with the revised Service Invoice, the system compares the COD&#39;s 
+ Date Received with the Bill Thru Date selected to determine if a WO COD 
+ line should be included on the invoice. The Cash Receipts Journal entry 
+ generated when the invoice is posting will have its Effective Date set 
+ to the WO COD Tab&#39;s Date Received.  If the Date Received does not 
+ fall within the current default Accounting Period, the Cash Receipt&#39;s 
+ Effective Date is adjusted to be either the Start Date or the End Date 
+ of the defaulted Accounting Period.  The Start Date is chosen 
+ when the current date is less than the Start Date.  The End 
+ Date is chosen when the current date is greater than the End Date.</p>
+<p>If the COD Tab&#39;s Date Received is blank, 
+ the line will be included on the invoice unless the Do Not Apply flag 
+ is set (requires serviceinvoicev90b002.rpt dated 12/17/2014 or later).</p>
+<h3><a name="Work_Order_COD_Payment_Processing" id="Work_Order_COD_Payment_Processing"></a>Work 
+ Order COD/Payment Processing</h3>
+<p>If you have established an account with OpenEdge/Global Payments or 
+ Electronic Payments, you may process a credit card payment 
+ from the Work Order&#39;s COD child tab for service work orders (note: this 
+ tab may be related as Payments in your system).</p>
+<p>1. If this is a taxable Job, use the Compute Sales Tax button to compute 
+ the Sales Tax.</p>
+<p>2. Click the Magnify on the COD / Payments child tab.</p>
+<p>3. Enter the Payment Type for your credit card processing, and set the 
+ Amount to the total amount to be processed on the credit card, including 
+ Sales Tax if applicable.</p>
+<p><img src="assets/images/Process Payment.bmp" alt="" style="border: none;" border="0"/></p>
+<p>4. Verify that the customer has their credit card ready, and then click 
+ the Process Payment button.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">New 
+ OpenEdge/Global Payments Functionality:</span> This change applies only 
+ if the new Open Edge payment processing is enabled via the global registry 
+ entry Setting Key: defaultpaymentprocessor  Setting Value: OEDBX.</p>
+<p style="margin-left: 48px;">If the Client 
+ Site has a payment alias stored, they will be asked if they want to run 
+ this WO COD payment using that credit card on file. If they click yes, 
+ it will process the payment then and there and CC transaction information 
+ will write back to the WO COD line. If they click No to the question, 
+ they will be taken to the usual manual cc entry screen.  This change 
+ will NOT impact users running the old Open Edge functionality or EP users.</p>
+<p>5. SAMPro will display a message reminding you that you will only have 
+ 60 seconds to enter the information; click Yes to continue.  Another 
+ message inform you that the journal entry will be added before Payment 
+ Processing; click Yes again.  </p>
+<p>6. When the portal opens, enter the customer&#39;s credit card number (without 
+ spaces or dashes) and expiration date and click Submit.  If 
+ the Credit Card Information for Tokenization portal is being used, be 
+ sure that the Country field is completed before clicking Submit. </p>
+<p>7. If the card is approved, the web portal will display &quot;Approval&quot; 
+ in red. If it is not approved, check the number and expiration date and 
+ try submitting it again.</p>
+<p>8. When the payment is approved, the system will write the Approval 
+ Code back to the Reference field, and complete the CC Masked Account and 
+ Expiration fields for future reference. </p>
+<p style="margin-left: 48px;">Timing Out: If the Payment is not generated 
+ within 60 seconds, it will not be written back to SAMPro, even if a success 
+ is noted in the web portal.  If this occurs, repeat the process.</p>
+<p style="margin-left: 8px;">The Transaction 
+ Id is will referenced in the Work Order COD, AR Cash Receipts, and AR 
+ History records, when posting COD Service Invoices (where the alias is 
+ set) to the AR Cash Receipts Journal.</p>
+
+</body></html>

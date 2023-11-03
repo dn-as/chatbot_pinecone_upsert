@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.8.0_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="checklist"/>
+<meta name="MS-HKWD" content="client site equipment"/>
+<meta name="MS-HKWD" content="create"/>
+<meta name="MS-HKWD" content="pm schedule"/>
+<meta name="MS-HKWD" content="workorder"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Create New PM WorkOrder Checklist</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="checklist,client site equipment,create,pm schedule,workorder"/><meta name="brsnext" value="Start_Record_Billing_Adjustments.htm"/><meta name="brsprev" value="Start_Uncompute_Invoices.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Create New PM WorkOrder Checklist">
+        <span>Create New PM WorkOrder Checklist</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Create New PM WorkOrder Checklist</h1>
+<h2>Purpose:</h2>
+<p>Verify which PM&#39;s will be added to the schedule and adjust the exact date of the new inspection if needed (for example, change a Saturday to a Monday).</p>
+<h2>Usage:</h2>
+<p>Required to complete the Create New PM Schedule from Old function. Note that after adding the new PM&#39;s, the Generate PM WorkOrder function must be run to create the dispatches on the Dispatch Board.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Do</font><br/>
+This field enables you to select which PM&#39;s will be added to the schedule. By default, no PM&#39;s are selected.</p>
+<p>Double-click on the Do field to select or deselect an item (alternately, press the spacebar when the caret appears on this field); a check appears in the Do field when that pm is selected. Refer to the Important Buttons section of this Help topic for details on selecting or deselecting all items.</p>
+<p><font style="font-weight: bold;">Inspect Date:</font><br/>
+To adjust the proposed new inspection date, click on this field, enter the desired date in <font style="font-style: italic;">mmddyyyy</font> format, and then press Enter. The system will calculate and enter the day of the week for you.</p>
+<p><font style="font-weight: bold;">Client Site Id: Client Site Name: Equipment Id: Agreement Number: Old Date:</font><br/>
+These fields are displayed for informational purposes so that you can verify which new PM&#39;s should be scheduled.</p>
+<p><font style="font-weight: bold;">Cn Cost Cn Value</font><br/>
+The Contract Cost and Value will default from the old PM Schedule but may be adjusted by the user as needed.</p>
+<h2>Important Buttons:</h2>
+<p><img src="assets/images/image/check.gif" alt="image\check.gif" title="image\check.gif" width="48" height="28" border="0"/> Click the Check button to check (select) every item on the list.<br/>
+<br/>
+<br/>
+<br/>
+<img src="assets/images/image/checkoff.gif" alt="image\checkoff.gif" title="image\checkoff.gif" width="48" height="28" border="0"/> Click to de-select every item on the list. <img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Click to add the selected PM&#39;s to the schedule.</p>
+
+</body></html>

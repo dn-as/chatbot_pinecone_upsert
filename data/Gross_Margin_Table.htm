@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.4.3.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="work order invoice"/>
+<meta name="MS-HKWD" content="work order"/>
+<meta name="MS-HKWD" content="service invoice"/>
+<meta name="MS-HKWD" content="invoice"/>
+<meta name="MS-HKWD" content="gross margin"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Gross Margin Table</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="work order invoice,work order,service invoice,invoice,gross margin"/><meta name="brsnext" value="Revenue_Adjustment_Viewer.htm"/><meta name="brsprev" value="Rate_Schedule_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Gross Margin Table">
+        <span>Gross Margin Table</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Gross Margin Table</h1>
+<h2>Purpose:</h2>
+<p>This record defines the gross margins that should be achieved on individual work order invoices. It is designed to be used with the Gross Margin tab of the Work Order. The Gross Margin may be used for analysis only, or to automatically recompute work order revenues.</p>
+<h2>Usage:</h2>
+<p>The Gross Margin Table must be referenced by the Client Site record (the Client Site’s Gross Margin field is located on the Service tab). It is frequently used in conjunction with the Service Compute feature.</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Gross Margin Id:<br/></font>Uniquely describes this record.</p>
+<p><font style="font-weight: bold;">Description:<br/></font>Provides a brief description this Gross Margin table (e.g., Standard T&amp;M).</p>
+<p><font style="font-weight: bold;">Analyze Labor?<br/>
+Analyze Material?<br/>
+Analyze Other?<br/>
+Analyze Subs?<br/></font>These fields define which billing components should be analyzed for gross margin on the work order. Typically, all boxes would be checked.</p>
+<p><font style="font-weight: bold;">Recompute Labor?<br/>
+Recompute Material?<br/>
+Recompute Other?<br/>
+Recompute Subs?<br/></font>One or more of these boxes should only be checked if recalculation of a work order’s revenues to achieve a target margin is desired. These fields determine which revenue components will be recomputed on the work order in order to achieve the designed gross margin, client not-to-exceed value, or specific invoice amount. Typically, all boxes except Labor would be checked to be eligible for re-computation.</p>
+<h2>Important Fields: Lower Section</h2>
+<p><font style="font-weight: bold;">Limit:</font><br/>
+The highest total invoice cost level to which the gross margin applies. Only those cost categories flagged as Analyze will be included in the cost level computation.</p>
+<p><font style="font-weight: bold;">% LAB: % MAT.: % OTH.: %SUB.:<br/></font>The target gross margin as a percentage of markup. For example, if you wanted to make a gross margin of 25% on materials, you would enter 25 in the %Mat column (revenue = 100% of the cost plus 25% of the markup).</p>
+
+</body></html>

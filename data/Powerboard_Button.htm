@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="tech status summary"/>
+<meta name="MS-HKWD" content="button"/>
+<meta name="MS-HKWD" content="dispatch"/>
+<meta name="MS-HKWD" content="powerboard"/>
+<meta name="MS-HKWD" content="dispatch board"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Powerboard Button</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="tech status summary,button,dispatch,powerboard,dispatch board"/><meta name="brsnext" value="Available_Technician_Hours_View.htm"/><meta name="brsprev" value="Set_Date_Button.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Powerboard Button">
+        <span>Powerboard Button</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Powerboard Button</h1>
+<p class="Body_Text"> <img src="assets/images/image/SKIN1_powerboard-.gif" alt="image\SKIN1_powerboard-.gif" title="image\SKIN1_powerboard-.gif" width="63" height="49" border="0"/></p>
+<p class="Body_Text">When you push the Powerboard button, a summary of work orders assigned to each technician (as well as unassigned) work orders appears. <font style="font-weight: bold;">Only those work orders that fit the current Status Filter and Date Range criteria will be included in this summary.</font> This summarized information is displayed in the following columns:</p>
+<h3>Upper Section (Summary)</h3>
+<p><font style="font-weight: bold;">Tech ID</font>  The technician&#39;s ID<br/>
+<font style="font-weight: bold;">Client Site</font>  The Client Site Alpha Id for the active work order (on site or travel unless overridden via <a href="Registry_Entry_Dispatch_Board_Saved_by_User_by_Board.htm">registry</a>)<br/>
+<font style="font-weight: bold;">Code</font>   The work code<br/>
+<font style="font-weight: bold;">Status</font>   The status of the current work order; INACTIVE will appear in this column if the Technician record has been flagged as Inactive<br/>
+<font style="font-weight: bold;">Hours</font>   The total hours assigned for this date range<br/>
+<font style="font-weight: bold;">Calls</font>   The total number of calls assigned for this date range<br/>
+<font style="font-weight: bold;">WrkOrdr</font>  The ID number of the current work order (by the selected sort order)<br/>
+<font style="font-weight: bold;">Zone</font>   The zone of the work order<br/>
+<span style="font-weight: bold;">Tech Phone #: Tech Pager #:</span> The Primary Phone and Pager fields from the Technician record.</p>
+<h3>Lower Section (Work Order List)</h3>
+<p>The lower section displays the Work Order List (unless the <a href="Graphics_Chart_Button__Dispatch_.htm">Time Chart</a> button has been clicked). If more than one technician is assigned to a work order, or a technician is assigned to a work order for more than one day, a separate line will appear on the Work Order List for each technician/date scheduled.</p>
+<p><font style="font-weight: bold;">Changing the Dispatch Column Order<br/></font>To adjust the order in which the work order list appears, select a column (in the work order list, not the title) and drag and drop it in the desired location in the work order list.</p>
+<p> </p>
+
+</body></html>

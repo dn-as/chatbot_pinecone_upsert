@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Remote Time" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>Remote Time and Expense Entry Applet</title>
+<link rel="StyleSheet" href="sampro.css" type="text/css" />
+<link rel="StyleSheet" href="sampro.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("SAMPro Help\nAccounting/Back Office\nPayroll\nRemote Timesheet Applet\nRemote Time and Expense Entry Applet");
+addAvenueInfo("Remote Time and Expense","Remote_Time_Sheet_Setup.htm","Start_Post_Remote_Time_Sheet.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sampro.htm", "", "&gt;", "Home", "Contents.htm");
+document.write("<a href=\"Logging_On.htm\">SAMPro Help<\/a> &gt; <a href=\"Accounting_Period_Viewer.htm\">Accounting/Back Office<\/a> &gt; <a href=\"Payroll_Period_Viewer.htm\">Payroll<\/a> &gt; <a href=\"Remote_Time_Sheet_Setup.htm\">Remote Timesheet Applet<\/a> &gt; Remote Time and Expense Entry Applet<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('sampro.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<h1>Remote Time and Expense Entry Applet</h1>
+<h2>Purpose:</h2>
+<p>This applet enables Full and Remote users to enter their own hours and expenses. In order to use this Applet, the RPC server must be running and the software configured on the user’s system as discussed in <a href="Remote_Time_Sheet_Setup.htm">Remote Time and Expense Setup</a>, and the Employee Id must be entered in the user's record.</p>
+<h2>Usage:</h2>
+<p><img src="image/time_expense086.gif" alt="image\time_expense086.gif" title="image\time_expense086.gif" width="32" height="32" border="0" /> The Remote Time and Expense Applet is started by double-clicking the icon to the left (contact Data-Basics' support for details on installing and running this applet for your firm; customized files may be required).</p>
+<p>When you start the applet, a login screen will appear. Enter your User Id and Password and then click the Login button. The Remote Time &amp; Expense Entry screen contains three sections:</p>
+<p>The upper portion of screen contains the data-entry fields. These fields are described below.</p>
+<p>The middle section typically displays the Summary of time or expenses you have entered for the selected period. The drop down box in this section enables you to control how this section is displayed (by Job, Cost Code, Date, etc.). The display of the lower and middle sections may be controlled by the <a href="Registry_Entry_for_Remote_Time_Sheet_Applet.htm">Registry Entry for Remote Time Expense Applet configurations</a> .</p>
+<p>The Time or Expense section (typically displayed in the lower section) displays one line for each time card entry that has been made for the selected Period. As discussed below, existing entries in the Time Sheet section can be used as templates for new entries.</p>
+<h2>Data Entry:</h2>
+<p>In the Remote Time applet, data may be entered in three different ways:</p>
+<p><font style="font-weight: bold;">Type in the Value:<br /></font>It you know a specific value, you may simply enter it from the keyboard and then press the tab button. If you typed in an invalid entry, the system will alert you.</p>
+<p><font style="font-weight: bold;">Select From a Drop Down Box<br /></font>To select from a list of Id's or other values (e.g., dates, hours, etc.), click the Drop Down arrow. When the drop-down list appears, select a value by clicking on it.</p>
+<p><font style="font-weight: bold;">Select from a Lookup Window<br /></font><img src="image/magnifybutton.gif" alt="image\magnifybutton.gif" title="image\magnifybutton.gif" width="16" height="16" border="0" /> To select from a list of Descriptions, click the Magnify button. When the Lookup window appears, click on the item you wish to select, and then click the Select button. This feature is particularly useful for selecting the Job record, where the Job Id alone (displayed on the drop down list) may not provide enough detail.</p>
+<h2>Important Fields: Upper Section</h2>
+<p>Note: depending upon your customization, the fields discussed in this documentation may not appear on your Remote Time and Expense Applet screen.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Control Buttons: Add&#160;Clear&#160;Print</p>
+<p>When you have completed the data entry fields correctly, click the Add button to add this information to your Timesheet.</p>
+<p>Click the Clear button to clear the data entry fields without adding a line to the Time or Expense Sheet.</p>
+<p>Click the Print button to print a time entry report. When you do so, you will be asked to select a printer, report and date range from drop down lists. When you have done so, click Print to send the report to the printer.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Time Period</p>
+<p>Use the drop down box to select the Time Period you wish to enter time or expenses to. The number of periods available to you is controlled by the <a href="Registry_Entry_for_Remote_Time_Sheet_Applet.htm">Registry Entry for the Remote Time Sheet Applet</a> .</p>
+<p>Labor Expense</p>
+<p>To enter labor (time), click the radio button to the left of the Labor option. To enter expenses, select the Expense option. This option toggles the screen between the Labor and Expenses modes.</p>
+<h2>Labor Data Entry Fields</h2>
+<p><font style="font-weight: bold;">Job Id:<br /></font>Select the job you want to apply your time to. Only jobs that were open as of the Time Period you selected will appear on the Drop Down or Lookup Windows list.</p>
+<p><font style="font-weight: bold;">Cost Code:<br /></font>Select a Cost Code; only Job Cost Codes that match the Job you selected will be displayed on the Drop Down or Lookup lists.</p>
+<p><font style="font-weight: bold;">Cost Category:<br /></font>Select a Cost Category; only Job Cost Categories with a cost type of Labor will be displayed on the Drop Down or Lookup lists.</p>
+<p><font style="font-weight: bold;">Pay Type:<br /></font>Select the appropriate Pay Type for the hours you are entering.</p>
+<p><font style="font-weight: bold;">Date:<br /></font>Select the day you want to apply your time to. Only days within the period that you selected will appear on the Drop Down list.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Hours:</p>
+<p>Enter your hours or click the drop-down box to select from a list.</p>
+<p><font style="font-weight: bold;">Description:</font><br />
+Enter a brief description of the hours.</p>
+<h2>Expense Data Entry Fields</h2>
+<p><font style="font-weight: bold;">Job Id:<br /></font>Select the job you want to apply the expense to. Only jobs that were open as of the Time Period you selected will appear on the Drop Down or Lookup Windows list.</p>
+<p><font style="font-weight: bold;">Cost Code:<br /></font>Select a Cost Code; only Job Cost Codes that match the Job you selected will be displayed on the Drop Down or Lookup lists.</p>
+<p><font style="font-weight: bold;">Other Rate Id:<br /></font>Select an appropriate Other Rate Id for this expense.</p>
+<p><font style="font-weight: bold;">Date:<br /></font>Select the day you want to apply your time to. Only days within the period that you selected will appear on the Drop Down list.</p>
+<p><font style="font-weight: bold;">Units:&#160;Cost:<br /></font>Enter the number of units and cost per unit. The system will calculate the Total when you add the line.</p>
+<p><font style="font-weight: bold;">Description<br /></font>Enter a brief description of the expense.</p>
+<p><font style="font-weight: bold;">Adding a Line of Time or Expense<br /></font>When you have entered all data entry fields, click the Add button to add this line to your Time or Expense Sheet. Once a line has been added to the timesheet, it may be used as a template.</p>
+<p><font style="font-weight: bold;">Using A Timesheet or Expense Sheet Line as a Template<br /></font>You can often save time by using an existing Time Sheet or Expense Sheet line as a template for a new entry. For example, suppose that you just entered eight hours of time to a specific Job, Cost Code and Category for Tuesday. Now assume that you want to add eight more hours for Wednesday. To do so,<br />
+<br />
+1. Click the Time Sheet entry (in the bottom section) that you wish to use as a template; doing so sets the fields in the data entry (top) portion of the screen.</p>
+<p>2. Change any field that you should differ from the template value (in this example, the date and possibly the description would be changed.</p>
+<p>3. When the data entry fields are correctly set, click the Add button.</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p><font style="font-weight: bold;">Deleting a Time or Expense Sheet Line<br /></font>To delete a line from your Time or Expense Sheet that has not yet been posted, click the delete button for that line. Confirm the deletion when requested to do so to actually delete this line. <font style="font-weight: bold;">Only lines with the Posted Status=n can be deleted.</font></p>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>PO to JCH Disabled</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("SAM Pro Help\nRegistry Entries\nGeneral System / Security Registry Entries\n__ PO to JCH Disabled");
+addTocInfo("SAM Pro Help\nRegistry Entries\nPurchasing Registry Entries\nPO to JCH Disabled **Support**");
+addTocInfo("SAM Pro Help\nRegistry Entries\nService Management Registry Entries\n__ PO to JCH Disabled");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >PO to JCH Disabled</P>
+ <P class="support" >This entry essentially allows us to revert to pre-6.0 methodology that postpones the costing of P.O. items until A/P vouchering occurs. This is a nuclear option when the new costing at PO receipt simply will not be accepted by existing users migrating from version 5.1. Everything possible should be done to discourage adoption of this solution.  This will not be mentioned in customer notes.</P>
+ <P class="Style_Support_+_Left___0_5_" >Id: sys-ffv-global-settings<BR>Contents: POReceiptsToJCH=false</P>
+ <P class="support" >Implementation of the above registry option will cause double-costing during the WO Import Costs process.&nbsp; The following registry entry must be made to prevent this:</P>
+ <P class="Style_Support_+_Left___0_5_" >Id: sys-viewer-vwrkordr<BR>Contents: ImportPOs=false</P>
+ <P class="Style1" >Work Order ‘Invoice Ready’ Status</P>
+ <P class="support" >If PO-to-JCH has been disabled, then there will be no cost to import to the WO until AP Vouchering happens for that PO. As such, it is probably desirable to prevent a work order from being set to &quot;invoice ready&quot; and billed knowing that all of the costs ARE NOT yet included. This forces that the Received PO items MUST have been vouchered in AP (where the costs will come from) in order for the WO to go &quot;invoice ready:&quot;.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

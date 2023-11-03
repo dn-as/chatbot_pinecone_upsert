@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.12.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Payroll GL Import</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="payroll import,import,Wells Fargo Payroll GL Import"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Payroll GL Import">
+        <span>Start Payroll GL Import</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Payroll GL Import</h1>
+<h2>Purpose:</h2>
+<p>This Starter function allows for the import of a PR GL file from a payroll 
+ service; currently, Wells Fargo is supported. A GL Journal entry will 
+ be created when this function is successfully run. You may need to run 
+ Start Update Function and enable Start Payroll GL Import in your User 
+ Group to access it. Note that the v.rgstry must have PRInterface enabled 
+ in order to run this function.</p>
+<p>Once the file is obtained from the payroll service, it should be loaded 
+ on your system at a location where your SAM Pro user can browse to.</p>
+<h5>Wells Fargo Format</h5>
+<p>The Wells Fargo import file is comma-delimited. The first row is a header 
+ row, and is ignored by the import. The columns are defined as follows:</p>
+<p style="margin-left: 48px;">Columns 1: Wells Fargo info, skipped by the 
+ import</p>
+<p style="margin-left: 48px;">Column 2: Skipped (user enters date when 
+ function is run)</p>
+<p style="margin-left: 48px;">Column 3: GL Account Id</p>
+<p style="margin-left: 48px;">Column 4: GL Entity Id</p>
+<p style="margin-left: 48px;">Column 5: Debits</p>
+<p style="margin-left: 48px;">Column 6: Credits</p>
+<p style="margin-left: 48px;">Column 7: Description (skipped by the Import)</p>
+<p style="margin-left: 48px;">Columns 8-10: Skipped by the Import but must 
+ be included</p>
+<h3>Registry:</h3>
+<p>The <a href="Registry_Payroll_GL_Import.htm">Registry Payroll GL Import</a> 
+ is required to import payroll data from Wells Fargo.</p>
+<h3>Range Screen:</h3>
+<p><font style="font-weight: bold;">Period Id:<br/>
+</font>The Accounting Period these transactions will be assigned to.</p>
+<p><font style="font-weight: bold;">Effective Date:<br/>
+</font>The effective date of the transactions: this date must fall within 
+ the Accounting Period.</p>
+<p><font style="font-weight: bold;">Transaction Description:<br/>
+</font>This field will be used to generate the Description in the GL Journal 
+ header generated when this function is run.</p>
+<p><font style="font-weight: bold;">Path Name of Import File:<br/>
+Browse Files Button:<br/>
+</font>Enter the name of the file that you wish to import or use the button 
+ to bring up a browser to help you do so.</p>
+<p><font style="font-weight: bold;">Preview File Button:<br/>
+</font>Once you have selected a file, this button enables you to view its 
+ contents to confirm that it is the correct one. If the file format is 
+ incorrect, the system will warn you that ‘The Specified File Does Not 
+ Appear To Be A Properly Formatted Payroll Import File’.</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> 
+  When you are satisfied that the correct import file is selected, 
+ click the Go button. The system will confirm that the file has been imported. 
+ You will only be allowed to import properly formatted files.</p>
+<p>The following validations will be made:</p>
+<p style="margin-left: 48px;">A test is made to check the total debits 
+ in the import file against the total debits in any GL Journal entry; if 
+ these are equal, the user will be warned that this file may already have 
+ been posted, and the use is given the opportunity to proceed or exit.  Multiple 
+ GL Journal entries could possibly show in the warning message.</p>
+<p style="margin-left: 48px;">The system will validate that total debits 
+ = total credits.</p>
+<p style="margin-left: 48px;">The system will validate that all GL Accounts 
+ and GL Entities referenced in the file actually exist in the database.</p>
+
+</body></html>

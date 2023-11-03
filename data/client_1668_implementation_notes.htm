@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Client 1668 Implementation Notes</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nCustom Client Implementations\nClient 1668 Implementation Notes");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_2" >Client 1668 Implementation Notes</P>
+ <P class="Support" >2008-01-23 (jb)-version 7.0.436.039</P>
+ <P class="Support" >1911&nbsp;Work Order: Inventory Tab Description and Service Compute Invoices - APT</P>
+ <P class="Support" style="margin-left:36.00pt;">As of this date, the serviceinvoice.rpt has been enhanced to handle the case where the Price Code’s description is blank. The documentation should now read:</P>
+ <P class="Support" style="margin-left:72.00pt;">The system now sets the workorder inventory description using the Price Code (if the description is completed) and the Inventory Price Exceptions tables (shown on the Inventory Item Pricing tab).  The following registry entry enables you to only include the Inventory Description on service compute invoices – it is designed for companies that do not want the internal part name to appear on customer invoices. Note that the Description defaults from the Inventory Name if there is no Price Code or the description in the Price Code is blank.</P>
+ <P class="Support" style="margin-left:72.00pt;">Id:&nbsp;sys-report-serviceinvoice</P>
+ <P class="Support" style="margin-left:72.00pt;">Contents:&nbsp;ShowOnlyInvntryDesc=Yes</P>
+ <P class="Support" ><FONT style="text-decoration:underline;" >2088</FONT>&nbsp;APT Customization file: custom tab order on Labor Journal Other tab (see case for details)</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

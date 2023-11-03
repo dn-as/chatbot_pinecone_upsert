@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Client 1617 Implementation Notes</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nCustom Client Implementations\nClient 1617 Implementation Notes");
+addAvenueInfo("Implementations","client_1624_implementation_notes.htm","client_1453_implementation_notes.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Client 1617 Implementation Notes</P>
+ <P class="Support_Heading_2" >5/12/2005</P>
+ <P><FONT style="color:#cc0000; " >1617' custom screens and registry entries are designed to enable the processing of their summer service mailing and reporting.<BR><BR>Client Site<BR>------------<BR>A custom field labeled &quot;Send 2nd Mailer?&quot; was added.&nbsp; In the 1617 cus file, this field is located on the Service tab of the Client Site viewer.&nbsp; If I remember right, Tim indicated they had some customers to whom they never send a second mailer.&nbsp; This provides a way to eliminate specific sites from the second mailing.<BR><BR>Client Site Equipment PM<BR>------------------------------<BR>A custom field labeled &quot;Approved?&quot; was added.&nbsp; In the 1617 cus file, this field is located on the PM Schedule tab of the Site Equipment viewer.&nbsp; They should check this box when a customer returns the summer service mailer and indicates their approval for one or more of the proposed services.</FONT></P>
+ <P class="support" >For  sys-start-scrtepmwo use one of these entries: </P>
+ <P class="Style_Support_+_Left___0_5_" >wc=clntsteeqpmntpm_apprvd='Y' <FONT style="text-decoration:underline;" >or</FONT> InspectionMustBeApproved=true</P>
+ <P class="Style_Support_+_Left___0_5_" >This registry entry specifies that the Create PM WOs function skips Site Equipment <FONT style="text-decoration:underline;" >not</FONT> tagged as 'Approved'.</P>
+ <P class="support" ><BR>Summer Service Custom Report<BR>--------------------------------------<BR>Jeff Boyd wrote a custom report to 1617' specifications.&nbsp; It makes use of the previously mentioned custom fields.&nbsp; It also requires that they identify the summer services using these specific Service Task Ids...<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FC (Fireside Cleaning)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WC (Waterside Cleaning)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BC (Burner/Boiler Checkout)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MC (Mid-season Check)<BR><BR>Jeff has report samples and can provide additional details concerning the processing if necessary.<BR><BR>Create PM Work Orders<BR>---------------------------<BR>To prevent this function from generating WOs for unapproved services, they need the following registry entry.<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Id: sys-start-scrtepmwo<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contents: InspectionMustBeApproved=true<BR><BR>Hope this helps.&nbsp; You might also discuss this with Tim C.&nbsp; He probably remembers some additional pertinent details.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

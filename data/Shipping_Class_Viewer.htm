@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.2.0_12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="DOT"/>
+<meta name="MS-HKWD" content="hazardous material"/>
+<meta name="MS-HKWD" content="IATA"/>
+<meta name="MS-HKWD" content="shipping class"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Shipping Class Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="DOT,hazardous material,IATA,shipping class"/><meta name="brsnext" value="Lab_Test_Profile_Viewer.htm"/><meta name="brsprev" value="Price_Code_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Shipping Class Viewer">
+        <span>Shipping Class Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Shipping Class Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain the shipping classes associated with your inventory items. Both DOT and IATA information is included in this viewer.</p>
+<h2>Usage:</h2>
+<p>Referenced by: Inventory Item, Bill of Lading.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of all fields that may be included in this record. If you are using a customized system, the fields displayed on your screen may not exactly match the order or status (required, optional, default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">Shipping Class Id:</font> (10 character, only . and - special characters)<br/>
+A unique Id. This field is required.</p>
+<p><font style="font-weight: bold;">Shipping Class Description:</font> (40 character)<br/>
+A brief description; this field is optional.</p>
+<h2>DOT:</h2>
+<p><font style="font-weight: bold;">Shipping Class</font> (4 character)<br/>
+The Department of Transportation Shipping Class designation (e.g., 60,70, 100, etc). Enter NONE if a DOT Shipping Class designation is not applicable.</p>
+<p><font style="font-weight: bold;">Hazardous?</font><br/>
+If this shipping class is for materials defined as hazardous, flag this field by double-clicking on it. An x appears in the field when it is flagged.</p>
+<p><font style="font-weight: bold;">Hazard Class</font> (4 character)<br/>
+Enter the Hazard Class (e.g., 3.0, 8.0). Enter 0.0 if this is not a hazardous material.</p>
+<p><font style="font-weight: bold;">Non Hazardous Name:</font> (40 characters)<br/>
+This field is used in conjunction with the Hazardous field. On the Bill of Lading and on the Drum Labels, in the code where the Shipping Name field is printed, the system checks the hazardous flag. If the field is checked, the Proper Ship name will be used. If the box is not checked, print the non-hazardous name instead.</p>
+<p><font style="font-weight: bold;">Proper Ship Name:</font> (40 character x 3)<br/>
+<font style="font-weight: bold;">Required Label</font> (40 character)<br/>
+<font style="font-weight: bold;">UN Number:</font> (6 character)<br/>
+<font style="font-weight: bold;">Packing Group:</font> (3 character)<br/>
+<font style="font-weight: bold;">NMFC Number</font> (15 character)<br/>
+Complete these fields as required by the DOT.</p>
+<h2>IATA:</h2>
+<p><font style="font-weight: bold;">Shipping Class</font> (4 character)<br/>
+The IATA Shipping Class designation (e.g., 60,70, 100, etc). Enter NONE if an IATA Shipping Class designation is not applicable.</p>
+<p><font style="font-weight: bold;">Hazardous?</font><br/>
+If this shipping class is for materials defined as hazardous, flag this field by double-clicking on it. An x appears in the field when it is flagged.</p>
+<p><font style="font-weight: bold;">Hazard Class</font> (4 character)<br/>
+Enter the Hazard Class (e.g., 3.0, 8.0). Enter 0.0 if this is not a hazardous material.</p>
+<p><font style="font-weight: bold;">Non Hazardous Name:</font> (40 characters)<br/>
+This field is used in conjunction with the Hazardous field. On the Bill of Lading and on the Drum Labels, in the code where the Shipping Name field is printed, the system checks the hazardous flag. If the field is checked, the Proper Ship name will be used. If the box is not checked, print the non-hazardous name instead.</p>
+<p><font style="font-weight: bold;">Proper Ship Name:</font> (40 character x 3)<br/>
+<font style="font-weight: bold;">Required Label</font> (40 character)<br/>
+<font style="font-weight: bold;">UN Number:</font> (6 character)<br/>
+<font style="font-weight: bold;">Packing Group:</font> (3 character)<br/>
+<font style="font-weight: bold;">NMFC Number</font> (15 character)</p>
+<p><font style="font-weight: bold;">Pass</font><font style="font-weight: bold;">/Cargo Ltd Qty Pkg Inst<br/>
+Pass/Cargo Pkg Inst Qty<br/>
+Cargo Only Pkg Inst/Qty<br/>
+S.P.<br/>
+ERG Code</font></p>
+<p>Complete these fields as required by IATA.</p>
+<h2>IMO/MDG:</h2>
+<p><font style="font-weight: bold;">Shipping Class</font> (4 character)<br/>
+The IMDG Shipping Class designation (e.g., 60,70, 100, etc). Enter NONE if a IMDG Shipping Class designation is not applicable.</p>
+<p><font style="font-weight: bold;">Hazardous?</font><br/>
+If this shipping class is for materials defined as hazardous, flag this field by double-clicking on it. An x appears in the field when it is flagged.</p>
+<p><font style="font-weight: bold;">Hazard Class</font> (4 character)<br/>
+Enter the Hazard Class (e.g., 3.0, 8.0). Enter 0.0 if this is not a hazardous material.</p>
+<p><font style="font-weight: bold;">Proper Ship Name:</font> (40 character x 3)</p>
+<p><font style="font-weight: bold;">Non Hazardous Name:</font> (40 characters)<br/>
+This field is used in conjunction with the Hazardous field. On the Bill of Lading and on the Drum Labels, in the code where the Shipping Name field is printed, the system checks the hazardous flag. If the field is checked, the Proper Ship name will be used. If the box is not checked, print the non-hazardous name instead.<br/>
+<br/>
+<font style="font-weight: bold;">Required Label</font> (40 character)<br/>
+<font style="font-weight: bold;">UN Number:</font> (6 character)<br/>
+<font style="font-weight: bold;">Packing Group:</font> (3 character)<br/>
+<font style="font-weight: bold;">NMFC Number</font> (15 character)<br/>
+<font style="font-weight: bold;">EMS Code:<br/>
+Packing Instruct/Stowage:<br/>
+Marine Pollutants (No or name of):<br/></font>Complete these fields as required.</p>
+
+</body></html>

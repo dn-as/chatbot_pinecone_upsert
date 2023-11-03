@@ -1,0 +1,742 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>7.3 Upgrade Noes</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nSupport Notes - SAM Pro\n__ 7.3 Upgrade Notes");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>7.3 Upgrade Notes</H1>
+ <H2>7.3.498.097</H2>
+ <P><FONT style="font-weight:bold; " >New XmlToPdf.jar File: </FONT>The XmltoPdf.jar file was updated as of 11/08/2011 to support a date field within the email header required by a client’s email server, and should be installed. A copy of the older file (renamed as XmlToPdf[OLD].jar is also included with the image in case it is needed. </P>
+ <P><FONT style="font-weight:bold; " >Update your Java Version:</FONT> Upgrading JAVA on the computer(s) that generate .pdf files is recommended to ensure that these files are made and e-mailed correctly. This includes the server that the Scheduled Event Manager and Scheduled Report Manager run on. </P>
+ <P><FONT style="font-weight:bold; " >Important Installation Note</FONT><FONT style="font-weight:bold; " >:</FONT> The zip file for this release<FONT style="font-weight:bold; " > </FONT>includes a file containing all bitmap definitions in the image (master~pushbuttons.obj) and an executable image (v.exe) stripped of all bitmaps. The bitmaps will be loaded when a user logs on from the master~pushbuttons.obj file and the SKIN1 directory (if bitmap skinning is in effect). Running this release requires the presence of the change.log, recover.log and master~pushbuttons.obj files in the same directory as the image (v.exe) file. This configuration should allow XP users to run without ‘non-continuable protection fault errors’.</P>
+ <P style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >NOTE:</FONT> see the registry entry for sys-gui-skin-skinname for details on enabling this functionality.</P>
+ <P><FONT style="font-weight:bold; " >Import</FONT><FONT style="font-weight:bold; " >ant</FONT><FONT style="font-weight:bold; " > Note on Colors:</FONT> In order to fully support Bitmap Skinning, users’ computer display settings must be set to 24 or 32 bit color.  If the Color Quality is set to 16 bit (Medium in XP, or High Color in Windows 7), the new bitmaps will appear with their standard, pale gray background, but the registry settable background and mouse over color changes will not appear.  Setting the Color Quality to 24 or 32 bit should provide the full bitmap skinning functionality. </P>
+ <P><FONT style="font-weight:bold; " >VM Memory:</FONT> SAM Pro’s Smalltalk virtual memory has been expanded to 250MB from 150MB.  This should better support the running of extremely long reports and the unfiltered display of large record viewers without encountering out of memory errors. </P>
+ <H3>Registry Entries Recommended as Standard by Support:</H3>
+ <TABLE width="636" cellspacing="0" cellpadding="1" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="28.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Registry Id</FONT></P></TD>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Option</FONT></P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Case # / Notes</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-alert-tabmismatchhistory</FONT></P></TD>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Setting Key:</FONT> errorlog</P>
+  <P><FONT style="font-weight:bold; " >Setting Key:</FONT> messagebox</P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>These registry entries should be implemented to record tab mismatch errors to the error log.</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-compute-payroll</FONT></P></TD>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>See Help /  Notes for new features</P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-currency-adjust</FONT></P></TD>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>JCHenabled=false </P>
+  <P>If the JCHenabled value is not found or is blank, the default behavior is to enable currency adjustments. Note that this flag is cached the first time it is referenced during a logon session.<FONT style="font-weight:bold; " > </FONT></P>
+  <P><FONT style="font-weight:bold; " >Note: this registry option should not be implemented if foreign currency processing is or will be implemented! Instead, use the sql to reset the currency factor in existing </FONT><FONT style="font-weight:bold; " >PO</FONT><FONT style="font-weight:bold; " >’s discussed in the next section.</FONT></P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>If upgrading from 7.0 or earlier AND EXISTING PO’s have been generated from QuoteMaster or Create PM WorkOrders, either set this registry option to disable the tab mismatch test to JCH, or update the client’s PO data via sql. The currency factor was NOT set properly in versions 7.0 and earlier for these PO’s. If the user attempts to edit such a PO with a currency factor of 0.0, a Tab Mismatch Error will appear, preventing the edit. </P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" rowspan="6" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-ffv-global-settings</FONT></P>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: maxColumnCountToCompress</P>
+  <P>Setting Value: 30000</P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Need for Bank Rec, Vendor Purchases Tab, and other viewers to display correctly.</P></TD></TR>
+  <TR valign=top>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: maxRowCountToCompress</P>
+  <P>Setting Value: 6000</P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Need for Bank Rec, Vendor Purchases Tab, and other viewers to display correctly.</P></TD></TR>
+  <TR valign=top>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: SamproTempDirectory</P>
+  <P>Setting Value: C:\sampro\temp</P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>1929 / Document Archiving</P></TD></TR>
+  <TR valign=top>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0;margin-bottom:0">   Setting Key: DisableCase1991&nbsp;</P>
+  <P style="margin-top:0;margin-bottom:0">   Setting Value: true&nbsp;</P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>2052 / Anyone entering labor or materials to a WO associated to a Fixed Fee, non-service compute job (RININV3 or RINVIN4) will have to mark workorders 'Ready to Invoice' for the unbilled costs to appear in Record Billing Adjustments.</P></TD></TR>
+  <TR valign=top>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>DefaultGLAccountId=<FONT style="font-style:italic; " >GL Account Id</FONT></P>
+  <P>Where GL Account Id is a valid account created for this purpose (e.g., a 999 type account).</P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>3135 / With this option enabled, any attempt to write a new record to the GL History where a GL Account is not specified will use the GL Account in this entry instead  (e.g., the user postes a construction-type invoice with Retainage $$$ but NO Retainage GL Account.)</P></TD></TR>
+  <TR valign=top>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <H3>Update Work Order Escalation Status in absence of Escalation Profile: add for systems not using Escalation Management. </H3>
+  <P><FONT style="font-weight:bold; " >Setting Key:</FONT> EscalationManager  </P>
+  <P><FONT style="font-weight:bold; " >Setting Value:</FONT> always</P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>3946 / Previously, the WO Escalation status was only updated if an Escalation Profile existed. Due to newer invoicing and credit hold processing, the WO Escalation status should always be updated; this registry should be entered if an Escalation Profile does not exist.</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-newcall</FONT></P>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: DisableClientCreditLimit</P>
+  <P>Setting Value: true</P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Disables this functionality (implemented as a change to default behavior): If the AR Balance exceeds the Client’s Credit Limit (+if it is set to zero), WO goes on credit hold. </P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-report-RAIA_architect</FONT></P>
+  <P><FONT style="font-weight:bold; " >sys-report-RAIA_cm</FONT></P>
+  <P><FONT style="font-weight:bold; " >sys-report-RAIA_owner</FONT></P></TD>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>See Help for options</P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>If using AIA, add new registry options.</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-start-sarchvercrdchngelg</FONT></P>
+  <P>(Start Archive Record Change Log)</P></TD>
+  <TD width="40.95%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: DaysToSave  Setting Value: 30</P></TD>
+  <TD width="30.75%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Requires adding a new scheduled event (process) to trigger function &quot;sarchvercrdchngelg&quot;</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="20" rowspan="2" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-start-scrtepmwo</FONT></P>
+  <P>(Create PM Work Orders)</P></TD>
+  <TD width="40.95%" height="20" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: TechServiceParts  </P>
+  <P>Setting Value: No</P></TD>
+  <TD width="30.75%" height="20" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>2003 / Service Parts List – see support notes for details. </P></TD></TR>
+  <TR valign=top>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+  <TD width="40.95%" height="20" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Setting Key:</FONT> IgnoreCase3242  </P>
+  <P><FONT style="font-weight:bold; " >Setting Value:</FONT> true</P></TD>
+  <TD width="30.75%" height="20" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>In version 7.2.476.071, we corrected a bug so that, if the Work Code Id is different on two lines of the Client Site Equipment PM Schedule for the same day and technician, the system forces a separate work order to be created. Since some users prefer to have PM lines with multiple work codes appear on the same work order, this registry entry is now available. </P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" rowspan="2" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-start-sprgercrdchngelg</FONT></P>
+  <P>(Purge Record Change Log)</P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: MaximumRecordsToDelete</P>
+  <P>Setting Value: 500000</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>886 / Increase from default</P></TD></TR>
+  <TR valign=top>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: DaysToSave  Setting Value: 700</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>886 / Increase from default</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-start-ssrvcebllngwrksht</FONT></P>
+  <P>(Start Service Biling Worksheet)</P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: srvcewrksht_orderby</P>
+  <P>Setting Value: wrkordr.wrkordr_id,jb.jb_id</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Orders the service billing worksheet by invoice id.</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-startscreen-filter</FONT></P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Contents:</P>
+  <P>vjchstry; vglhstry; varhstry; vaphstry; vimhstry; vprhstry; varglshtry; vapglhstry; vtxhstry</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Recommended for larger databases. Use the Contents field in the header for the values.</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-startscreen-form</FONT></P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Contents:</P>
+  <P>vapjrnl;vprchseordrlst;vwrkordr;vlbrjrnl</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Recommended for larger databases. Use the Contents field in the header for the values.</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-viewer-vaccntngprd</FONT></P>
+  <P>(Accounting Period)</P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: OtherToGL  </P>
+  <P>Setting Value: true or false </P>
+  <P>Set to true if the WO Other To GL box should be checked on all (or most) Accounting Periods; set to false if the WO Other to GL box should never be checked.&nbsp; </P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The optional interface of WO Other to GL is controlled by a check box in the Accounting Period record. This registry option should be enabled to help manage the setting of this new field. </P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-viewer-vapjrnl</FONT></P>
+  <P>(AP Journal)</P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: AttachCostsToARInvoiceForWO</P>
+  <P>Setting Value: prompt</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>See the registry help for sys-viewer-vapjrnl – this really depends on the client and if they are using PWP vendors. </P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>In version 7.2.474.050 the obsolete child table account components view in the GL Account viewer are elimindated <FONT style="text-decoration:underline;" >except</FONT> when new registry setting is on. This registry ONLY be implemented if a client is still using the old-style total accounts with components. </P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" rowspan="2" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-viewer-vemplye</FONT></P>
+  <P>(Employee Viewer)</P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: disabledFieldsParent</P>
+  <P>Setting Value: emplye.annl-stndrd-hrs</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The new Standard Hours field in the employee record is used in various payroll calculations for salaried workers. When the new field’s value is zero, the system uses the global standard (as set by the StandardAnnualHours option in sys-ffv-global-setting, or by 2080 (if this registry entry does not exist).  If a firm will NEVER need to define standard hours by employee, disable this field to prevent users from entering random values. </P></TD></TR>
+  <TR valign=top>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: disabledFieldschildPTO </P>
+  <P>Setting Value: emplyepto.prcnt</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Clients that do not implement vacation accruals with a 'percent of wages' option (<FONT style="font-weight:bold; " >most US installations</FONT>) should disable the Prcnt: field on the PTO tab to avoid inadvertent data-entry.</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-viewer- vglaccnt </FONT></P>
+  <P>(GL Account viewer)</P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: ShowComponents </P>
+  <P>Setting Value: true</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>In 7.2.474.050 the obsolete child table account components view in the GL Account viewer was eliminated <FONT style="text-decoration:underline;" >except</FONT> when this registry setting is on. This should ONLY be implemented if a client is still using the old-style total accounts with components. </P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-viewer-vinvntryadjstmnt</FONT></P>
+  <P>(Inventory Adjustment Journal)</P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: NoDefaultBillItem&nbsp; </P>
+  <P>Setting Value:&nbsp; error&nbsp; OR&nbsp; warning</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Will generate an error or warning if the user selects a Job Cost Code without a default Billing Item in the Inventory Adjustment Journal. tab. The lack of a billing item was causing problems in Record Billing Adjustments. </P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-viewer-vqte </FONT></P>
+  <P>Quote Viewer</P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Setting Key:</FONT> RunWizardAfterSavingQuote</P>
+  <P><FONT style="font-weight:bold; " >Setting Value:</FONT> true</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>In 7.2.476.069 and up, Case 3183 rewrote Quotemaster so that Quote is always saved before the Approval Wizard is run. To run the approval Wizard when the record is saved (preserve existing behavior) you must enter this new registry option. If this option is not entered the user will set one or more scopes to ‘Approved’, save the Qutoe, and then click the Approval Wizard button to run the wizard. </P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" rowspan="3" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-viewer-vwrkordr</FONT></P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: INVExpenseFromCostCategory</P>
+  <P>Setting Value: true</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>** required if using Job EOM</P>
+  <P>* Default Changed  - add GL Expense Acct# to Material Cost Categories</P></TD></TR>
+  <TR valign=top>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Disable </FONT> this option if present:</P>
+  <P>Setting Key: DeleteJCH  Setting Value: warning</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD></TR>
+  <TR valign=top>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Setting Key: CreatePOforSub </P>
+  <P>Setting Value: prompt</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-currency-adjust</FONT></P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>JCHenabled=false </P>
+  <P>If the JCHenabled value is not found or is blank, the default behavior is to enable currency adjustments. Note that this flag is cached the first time it is referenced during a logon session.<FONT style="font-weight:bold; " > </FONT></P>
+  <P><FONT style="font-weight:bold; " >Note: this registry option should not be </FONT><FONT style="font-weight:bold; " >used </FONT><FONT style="font-weight:bold; " >if foreign currency processing is or will be implemented! Instead, use the sql </FONT><FONT style="font-weight:bold; " >discussed in the next section </FONT><FONT style="font-weight:bold; " >to reset the currency factor in existing PO’s.</FONT></P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>If you are upgrading from 7.0 or earlier AND EXISTING PO’s have been generated from QuoteMaster or Create PM WorkOrders, either set this registry option to disable the tab mismatch test to JCH, or update the client’s PO data via sql. The currency factor was NOT set properly in v7.0 and earlier for these PO’s. If the user attempts to edit a PO (created in 7.0 or earlier) with a currency factor of 0.0 in this version, a Tab Mismatch Error will appear, preventing the PO from being edited. </P></TD></TR>
+  <TR valign=top>
+  <TD width="28.29%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >sys-zipcode-lookup</FONT></P></TD>
+  <TD width="40.95%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Setting Key:</FONT> default  <BR><FONT style="font-weight:bold; " >Setting Value:</FONT> true or false</P>
+  <P>This option controls the default behavior for the defaulting of the blank City and State fields when a zip code (from the zip code table) is entered.  Exceptions to this setting may be specified by record.</P>
+  <P>Setting Key: afunction  <BR>Setting Value: true or false</P>
+  <P>This option enables you to specify exceptions to the default behavior.</P>
+  <P><FONT style="font-weight:bold; text-decoration:underline;" >Example:</FONT> Default from Zipcode Table Expect for Vendor Viewer</P>
+  <P><FONT style="font-weight:bold; " >Setting Key:</FONT> default  <FONT style="font-weight:bold; " >Setting Value:</FONT> true</P>
+  <P><FONT style="font-weight:bold; " >Setting Key:</FONT> vvndr    <FONT style="font-weight:bold; " >Setting Value:</FONT> false</P></TD>
+  <TD width="30.75%" height="19" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>In V 6.2, the ability to set related fields from the Zipcode table was implemented via registry. At some point, the software stopped recognizing the registry, and always defaulted from the zipcode table. In this release, the registry functionality has been restored. If the registry is not in place, defaulting from the zipcode table will no longer work. Check that your database includes the appropriate registry if you wish the zipcode table fields to default. </P></TD></TR>
+ </TABLE>
+ <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support_Heading_2" >SQL’s and Functions to Run:</P>
+ <P class="Support" >Note: you may have to run Start Function List Update to access the new starter functions.</P>
+ <TABLE width="624" cellspacing="0" cellpadding="1" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="27.88%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Modules / Functions Impacted</FONT></P>
+  <P><FONT style="font-weight:bold; " >Function or SQL </FONT></P>
+  <P><FONT style="font-weight:bold; " >Case # </FONT></P></TD>
+  <TD width="29.81%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P><FONT style="font-weight:bold; " >When to Run</FONT></P></TD>
+  <TD width="42.31%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Details</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="27.88%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Material Requisitioning </FONT></P>
+  <P>Start Update Workorder Reference in IM History</P>
+  <P>2931</P></TD>
+  <TD width="29.81%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>This starter function should be run for all installations that might have fill backorder records that are associated with a workorder (e.g., using Materials Requisitioning). </P></TD>
+  <TD width="42.31%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>Fixes imhstry records written by Material Requisitioning prior to case 2331.&nbsp; It updates the workorder reference fields in IMHistory, and allows requisitioned items to be successfully be imported into the work order.</P></TD></TR>
+  <TR valign=top>
+  <TD width="27.88%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Bank Rec / AP Journal </FONT></P>
+  <P>SQL to fix History</P>
+  <P>2979</P></TD>
+  <TD width="29.81%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>If customer generates AP Credit memo's for Credit Card/EFT transactions AND uses the Bank Rec journal. </P></TD>
+  <TD width="42.31%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>Previously, when the AP Journal posted these transactions to the Check table, they were not written as negative amounts (this is corrected in images 7.1.461.162 and up). </P>
+  <P>Use the SQL attached to the case to identify and then update existing data that was incorrectly configured on AP Journal transactions generated prior to this fix. </P></TD></TR>
+  <TR valign=top>
+  <TD width="27.88%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P><FONT style="font-weight:bold; " >COD Jobs</FONT></P>
+  <P>SQL to fix history </P>
+  <P>2904</P></TD>
+  <TD width="29.81%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>Run to correct JCH postings for COD Jobs invoiced prior to images <FONT style="color:black; " >7.2.474.035 /  7.1.461.153.</FONT></P></TD>
+  <TD width="42.31%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>Previously, the Job Invoice tab did not show COD Invoices as received due to failed posting from AR Sales Journal to JCH. This has been corrected for new invoices, but an SQL is need to fix history. </P>
+  <P>An SQL to fix the failed posting retroactively is available from the case itself (or from Jean). This SQL must be run against database to correct these issues for existing data. </P></TD></TR>
+  <TR valign=top>
+  <TD width="27.88%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Folders Viewers</FONT></P></TD>
+  <TD width="29.81%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>Start Import Registry</P></TD>
+  <TD width="42.31%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>Consider using Start Registry Import for updating the Folders viewer, especially if you are updating from an older version or are adding Requisitioning. </P></TD></TR>
+  <TR valign=top>
+  <TD width="27.88%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Release Recurring Client Orders </FONT></P>
+  <P class="Support" style="margin-left:36.00pt;">&nbsp;</P></TD>
+  <TD width="29.81%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>An SQL update script is available in the case to correct existing inventory history data.  </P>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="42.31%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>Release Recurring Client Order now posts to Inventory History using the Client Id and Name from the Client on the Site’s COP tab in the same fashion as a manually creationed Client Order. </P></TD></TR>
+  <TR valign=top>
+  <TD width="27.88%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Purchase Orders</FONT></P>
+  <P>SQL to set the Purchase Order Currency Factor</P></TD>
+  <TD width="29.81%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>update prchseordr<BR>set prchseordr_crrncy_fctr = 1<BR>where prchseordr_crrncy_fctr = 0<BR>&nbsp; and prchseordr_rn &lt;&gt; 0</P></TD>
+  <TD width="42.31%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>If you are upgrading a client from 7.0 or earlier, AND foreign currency processing is enabled or planned AND EXISTING PO’s have been generated from QuoteMaster or Create PM WorkOrders, use the sql to reset the currency factor to avoid a Tab Mismatch error when editing these types of PO’s.</P></TD></TR>
+  <TR valign=top>
+  <TD width="27.88%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Document Management</FONT></P></TD>
+  <TD width="29.81%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>Start Document Archive Maintenance</P>
+  <P>Note: this function will take some time to run. Verify that adequate disk space is avaible before running.</P></TD>
+  <TD width="42.31%" style="border-top:1.00pt solid black; border-bottom:1.00pt solid black; border-left:1.00pt solid black; border-right:1.00pt solid black; ">
+  <P>This function does the following...</P>
+  <P>1. Archives any source documents (and their children) not already archived.</P>
+  <P>2. Updates the Archive File Location and File Type fields in the document record needed by the Create PDF button to work properly. </P>
+  <P>3. Writes results to sampro_DocumentLog.txt log file. </P></TD></TR>
+ </TABLE>
+ <P class="Support_Heading_2" >Critical Report Updates</P>
+ <P>If a customer updates to a new version, it is advisable to install all updated reports from the .rar files for that version. The following table lists important report updates for version 7.3 that should be imported as needed on build updates or as needed.</P>
+ <TABLE width="583" cellspacing="0" cellpadding="1" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Report Name / Id</FONT></P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Report Date for Version/Build</FONT></P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Notes</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Service Billing Worksheet</P>
+  <P>SERVICEWORKSHEETv73b032.rpt</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>11/22/2011</P>
+  <P>7.3.489.032</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Displays Unknown tax message if tax status is set to Unknown.</P>
+  <P>Report ignores invoice master tax lines with a zero tax base and does not print as separate tax entries on the report.</P>
+  <P>Validation ensures that template-type clients are only billed when the net invoice amount is exactly ZERO DOLLARS. User note 5.9.2.</P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Service Invoice</P>
+  <P>SERVICEINVOICEv73b032.rpt</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>02/13/2012</P>
+  <P>7.3.493.032</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>System writes Invoice #  / date to the document Description when auto-saving.  </P>
+  <P>PM WO Invoices reference PM Invoice WO in the Document record. </P>
+  <P>Auto-saved Invoices attach to the Site as well as the Client, Job, WO, Invoice Master. </P>
+  <P>Option to show detail info by Equipment.  WO lines not associated with Equipment are grouped under ‘Equipment: none specified’.</P>
+  <P>Report ignores invoice master tax lines with a zero tax base and does not print as separate tax entries on the report.</P>
+  <P>Fix for Batch Service Compute of COD invoices.</P>
+  <P>Supports Material, Other and Sub quantity fields of up to 99.999.99 (was 9,999.99.)</P>
+  <P>Corrects suppression and re-initialization of Work Performed and Requested at both the work order and equipment levels. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report JCH Audit </P>
+  <P>RJCHADT.rpt</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>3/11/2010</P>
+  <P>7.2.476.075 +</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Implements auditing of JCH and trx revenue amounts. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Service Invoice Posting Report</P>
+  <P>SERVICEINVOICEPOST.rpt</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>1/21/2010</P>
+  <P>7.2.476.068+</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>By default, COD Service Invoices are posted to both the AR Sales Journal AND the AR Cash Receipts Journal (like TechAnywhere). The Service Invoice Posting now support this new behavior. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report Quote Form (Standard)</P>
+  <P>RQTEFRM.rpt</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>8/29/2011</P>
+  <P>7.2.476.075a+</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Supports Printed option status. </P>
+  <P>Estimated tax option - supported if the Sales Tax Group’s Group Tax Rate completed is completed.  </P>
+  <P>New checkbox, Omit Declined Options. A registry may be used to flag the Omit Declined Options box. </P>
+  <P>Supports extended prices of up to $9,999,999.99.</P>
+  <P>Quantity fields display 2 decimal places consistent with labor detail.</P>
+  <P>The Estimated Tax for Fixed Price Scopes supported. </P>
+  <P>Expands printed Scope Of Services by adding Notes attached to the Quote record via the sidebar Notes button.  Enable by entering the Option Code in the Notes Summary field: the text of these Notes prints following the Scope of Services text for that option. 60 lines of 80 characters each are supported. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report Quote Recap</P>
+  <P>RQTERCP.rpt</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>4/11/2010</P>
+  <P>7.2.476.075a+</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Option to display estimated tax has been added. This enhancement is supported if the Sales Tax Group has the Group Tax Rate completed; graduated sales tax rates are not supported. </P>
+  <P>Expands the Extended Price fields to support options of up to $9,999,999.99. The Quote Total also supports this value. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report Payroll Verification</P>
+  <P>RPRVERI.rpt</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>3/1/2010</P>
+  <P>Version 7.0 and up</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>New Column: WO Id</P>
+  <P>If a Work Order Id is associated with a labor line (from the Work Order Labor tab, from TechAnywhere, or from the Labor Journal ( where the WO Id was specified), it will now be included on the right-hand side for the Payroll Verification report.  </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report W2 Electronic File RW2EF.rpt</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>2/12/2012</P>
+  <P>Version 7.2 and up</P>
+  <P><FONT style="font-weight:bold; " >Id: </FONT>sys-w2-ef</P>
+  <P><FONT style="font-weight:bold; " >Setting Key:</FONT> reEmployerKind&nbsp; <FONT style="font-weight:bold; " >Setting Value:</FONT> N </P>
+  <P>This entry is now REQUIRED for federal processing; the value will default to blank if no entry is made. Most companies will use a Setting Value of N; if your organization is tax exempt or a government agency, see the following for other options:</P>
+  <P>F – Federal Government</P>
+  <P>S- State and Local Government</P>
+  <P>T – Tax exempt Employer</P>
+  <P>Y – State and Local Tax Exempt Employer</P>
+  <P>N – None Apply</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Supports State and Local magnetic media reporting for all state and local authorities that accept the federal (IRS/SSA) file definitions.&nbsp;Special processing for CA, KS, KY and MN is also supported. </P>
+  <P>Supports the Box 12 functionality for Third Party Sick Pay. Third Party Sick Pay flag in type RW records will be set if any PR History is found with a W2 Category of 12:J. </P>
+  <P>1/17/2012 supports reEmployerKind; position 174 is set to N by default. </P>
+  <P>Payroll Tax Reporting in 2011 (different employee / employer tax for Social Security.</P>
+  <P>2/21/2012: in Audit option, the totals row is offset so that larger payroll amounts do not overlap.  </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Construction Invoices </P>
+  <P>rininv4.rpt and rininv3.rpt</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>08/04/2010<BR>7.2.476.092+</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>When auto-saving invoices, system writes the Invoice # and date to document Description. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Job Unbilled Cost Summary</P>
+  <P>DJBUBCS.rpt  </P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>8/17/2010</P>
+  <P>7.0 and up</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Option to include Closed Jobs has been added to mirror more closely Job EOM posting. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report PR 941 Quarterly Summary</P>
+  <P>RPR941S.rpt</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>1/5/’2011</P>
+  <P>7.0 and up</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Updated on 1/5/2011 to support different employee/employer SS tax rates. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report AIA Construction Inventory Report (RAIA.rpt)</P>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+  <P>&nbsp; </P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>8/04/2010</P>
+  <P>7.0 and up</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>This report now supports the sectionkeyvalue for naming the saved report and enhanced document archiving (attaching the report to the Client, Client Site, Job and Invoice Master records). The appropriate registry options (see Release Note 1.21.1) must also be implemented. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report Inventory Audit Report (RINVNTRYADT.rpt)</P>
+  <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>9/01/2010</P>
+  <P>7.0 and up</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>This report was updated to compensate for Purchase Orders received to jobs/work orders. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report AR Drill Down Detail (CARAGE1.rpt)</P>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>9/16/2010</P>
+  <P>7.0 and up</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>This report no longer includes tax in the total line’s profit amount / %. The Total line is labeled to indicate that it does not include taxes.</P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report PR Certified Payroll</P>
+  <P>(RPRCRPR.rpt)</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>11/12/2010</P>
+  <P>Version 7.3</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>New Field: Classification</P>
+  <P>If a line was entered for a Prevailing Wages Job, this field defaults from the new Certified PR Report Label field on the Job Prevailing Wages tab. If the Certified PR Report Label field on the Job Prevailing Wages tab is blank, or this line is not for a Prevailing Wages job, the field defaults from the Labor Rate Description.</P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Client Profitability Report </P>
+  <P>(DCPFTR.rpt)</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>6/10/2011 </P>
+  <P>The component reports (CCPFTR2.rpt &amp; CCPFTR3.rpt) should be updated (dated 10/8/2009) or an error may occur with certain settings.  </P>
+  <P>CCPFTR1.rpt (dated 6/13/2011) must be installed to the Service Account Manager functionality.</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>This report now skips entries with Client Rn = 0. </P>
+  <P>6/10/2011 - The<FONT style="font-weight:bold; " > </FONT>Service Account Manager from the Client Site has been added as a new range field.</P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Unvouchered AP Summary Report</P>
+  <P>(RUNVCHRDAP3.rpt)</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>(12/3/2010) </P>
+  <P>Version 7.0 and Up</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>This version of the Unvouchered AP Summary Report corrects a typo in the GL Entity field. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Payroll Employee Tax Table Report  (RPREMTX.rpt) </P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>12/28/2010</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Enables the user to print the contents of the Employee Record Tax tab; it is useful to confirm data entry,</P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report PR Federal Tax Report (RPRTAXF.rpt)</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>(01/05/2011)</P>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Needed to support Payroll Tax Reporting in 2011 (with the different employee / employer tax for Social Security.</P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Drilldown AP Aging by Vendor (DAPVAGEv73b033.rpt)</P>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>(2/28/2012)</P>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P>
+  <P>Also Install CAPVAGE1.rpt and CAPVAGE2.rpt dated 11/18/2011 or higher)</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>May be aged by the Vendor’s Invoice Date or the new Date. New<FONT style="font-weight:bold; " > </FONT>temp table logic resolves out of memory. </P>
+  <P>(2/28/2012) corrects a problem that occurred with the Invoice Detail option set to Yes. Previously, this resulted in the associated drill-down displaying the incorrect Vendor Name.  </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report AR Aging (DARAGE.rpt) </P>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>3/9/2011</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>This drill-down report has been revised to better handle unapplied cash receipts.</P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report PR Local Tax Report (RPRTAXL.rpt) </P>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>3/4/2011</P>
+  <P>Version 7.0 and Up</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Corrects a ‘Table #lcltx not found’ error’ when run for a tax authority with no activity for the given time period. If no activity is found,the report is displayed with the header and no data.</P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report Service PM Agreement Summary Report (RPMAGRMNT.rpt)</P>
+  <P style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>8/22/2011 </P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>New Option: Use Job Open Date?<FONT style="font-weight:bold; " ><BR></FONT>Check to restrict report to only include history that is greater than or equal to the Job’s Date Open. Default is unchecked. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report Asset Profitability (RASSTPRFTBLY.rpt)</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Version 7.3</P>
+  <P>Install if Asset/Equipment Costing and Tracking is implemented</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>This report compares Earned Revenue with Overhead Costs for the time period the user selects to calculate the Asset Profitability and Asset Cost/Hour for each Asset on the report, as well as a report total profitability. </P></TD></TR>
+  <TR valign=top>
+  <TD width="35.89%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Report Asset Usage (RASSTUSGE.rpt)</P></TD>
+  <TD width="31.86%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Version 7.3</P>
+  <P>Install if Asset/Equipment Costing and Tracking is implemented</P></TD>
+  <TD width="32.25%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>This report provides Overhead and Distributed usage for the time period the user selects. </P></TD></TR>
+ </TABLE>
+ <P class="Support_Heading_2" >Customization File Notes</P>
+ <TABLE width="583" cellspacing="0" cellpadding="1" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="18.45%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Screens Impacted</FONT></P></TD>
+  <TD width="16.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Build / Case</FONT></P></TD>
+  <TD width="65.51%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >Notes</FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="18.45%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Labor Journal</P></TD>
+  <TD width="16.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>7.2.476.058</P>
+  <P>Case 3138</P></TD>
+  <TD width="65.51%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>To support defaulting for operation lockdown,  the column order on the Labor Journal has been changed,  moving the Labor Rate id to the #4 spot (to the right of effective date) so that a OH labor rate id can be selected before selecting a OH job. This will result in the Cost Category defaulting correctly. </P>
+  <P>IMPORTANT NOTE: A revised version of the customization file will be needed to see this change. If a database revision is triggered by installing this version, the customization file will be updated automatically.</P>
+  <P>If a database revision is not triggered and the customer is using the WinII customization file, the newer version in the image’s zip file may be renamed and used. </P>
+  <P>If a database revision is not triggered and the customer is custom v.cus, please obtain an updated version from Data-Basics support. </P></TD></TR>
+  <TR valign=top>
+  <TD width="18.45%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Labor Journal, PO, AP, Job Journal</P></TD>
+  <TD width="16.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Build 7.2.476.085+</P>
+  <P>Case 3222</P></TD>
+  <TD width="65.51%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>The Equipment Id was added to several screens </P></TD></TR>
+  <TR valign=top>
+  <TD width="18.45%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Work Order</P></TD>
+  <TD width="16.04%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>7.2.476.098</P></TD>
+  <TD width="65.51%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Due to popular demand, the Labor Tab’s tab order has been changed so that the Description comes after the Effective Date –  in previous versions of 7.2, it was after the flat rate. If the upgrade to this version did not require a database conversion, a new v.cus file will be needed to see this change. </P>
+  <P>If your client uses a standard customization, the vWinII.cus or vCA.cus files included with this image can be renamed and use. Contact DB support if you need a special customization created.  </P></TD></TR>
+ </TABLE>
+ <P class="Support_Heading_2" >Obsolete View Issues – Service Zone</P>
+ <P>One of our (very old) existing customers reported that prior to the upgrade to version 7.2 they had full access to service zones; after the upgrade they did not. This was caused by the fact that SAMPro once had 2 service zone viewers, vsrvceZne and vsrvcezne (both are named View Service Zones). Notice the &quot;z&quot;. Z did not get along with z and caused headaches for programmers when some users were using Z and some users were using z, so the programmers obsoleted Z. This then made it so that &quot;View Service Zones&quot; (the Z version) was no longer on the list.</P>
+ <P class="support" >Solution: </P>
+ <P>The solution is to have an administrator grant access to the correct Service Zone function after the upgrade. </P>
+ <P class="support" >Support Hint: </P>
+ <P style="margin-left:36.00pt;">1. Before upgrading your customers, access the Service Zone viewer and see if it has an uppercase letter in the function id. If not, you will not have a problem.</P>
+ <P class="Support" >2. If it does include an uppercase letter in the function id, determine which user groups have access to View Service Zone. </P>
+ <P style="margin-left:36.00pt;">3. After the conversion, give the appropriate User Group and Functions records access to the Service Zone viewer. &nbsp;</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.6.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>SubAnywhere Overview</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="Anywhere Suite,SubAnywhere,subcontractor"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SubAnywhere Overview">
+        <span>SubAnywhere Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>SubAnywhere Overview</h1>
+<h2>Purpose:</h2>
+<p>SubAnywhere is a web-enabled module which allows your Subcontractors 
+ to</p>
+<p style="margin-left: 48px;">Accept or decline your work assignments</p>
+<p style="margin-left: 48px;">Review the Work Requested and other pertinent 
+ Work Order information</p>
+<p style="margin-left: 48px;">Update the Work Order&#39;s Status</p>
+<p style="margin-left: 48px;">Add negotiated charges to the Purchase Order 
+ associated with the Work Order</p>
+<p style="margin-left: 48px;">Set up records for their own Techs: a special 
+ mobile web version of SubAnywhere allows these Techs to access Work Order 
+ information and make status updates</p>
+<p style="margin-left: 48px;">Submit Quotes for additional work</p>
+<p style="margin-left: 48px;">Update and download documents (such as PDF&#39;s 
+ and photos)</p>
+<p style="margin-left: 8px;">SubAnywhere includes easy-to-understand Help 
+ available from each of its pages. In addition, you may contact your support 
+ rep or access the User Forum for a Powerpoint presentation on using and 
+ setting up SubAnywhere.</p>
+<p style="margin-left: 8px;">Registries:</p>
+<p style="margin-left: 8px;">See sys-subanywhere for required and related 
+ registries.</p>
+<h2>Setting Up SubAnywhere</h2>
+<p style="margin-left: 8px;">Your support representative will set up the 
+ basic framework of SubAnywhere, but the following records may need to 
+ be updated in SAMPro:</p>
+<p style="margin-left: 48px;">Technician Record:</p>
+<p style="margin-left: 88px;">Main Tab:  Vendor Id is specified</p>
+<p style="margin-left: 88px;">Web Access Tab: Web Access = Subcontractor, 
+ Device = SubAnywhere</p>
+<p style="margin-left: 48px;">Vendor Record:</p>
+<p style="margin-left: 88px;">Defaults Tab: verify that the Rate Schedule 
+ Id is properly completed. SubAnywhere only allows the Other Rates on the 
+ selected Schedule to be entered.  </p>
+<p style="margin-left: 48px;">Rate Schedules  for Vendors:</p>
+<p style="margin-left: 88px;">Only the Other Rate column needs to be completed. 
+  The Other Rate Table defines which Other Rates your Subs will be 
+ allowed to choose in SubAnywhere from their drop-down charges list.</p>
+<p style="margin-left: 48px;">Other Rate Tables for Vendors:</p>
+<p style="margin-left: 88px;">If you have negotiated rates, the Rate column 
+ should be completed with the price the Sub will charge your company; SubAnywhere 
+ users will NOT be able override the price or description when they enter 
+ this charge.</p>
+<p style="margin-left: 88px;">If the Rate column is empty,  the SubAnywhere 
+ user can enter price and unique description.</p>
+<p style="margin-left: 48px;">Site Equipment:</p>
+<p style="margin-left: 88px;">Main Tab: An override to the Vendor’s Rate 
+ Schedules may be specified in the Equipment record&#39;s Service Provider 
+ / Rate Schedule field.  For example, special higher negotiated rates 
+ might exist for equipment located in Manhattan. In this case, this override 
+ would be use to generate the Charges drop down list in SubAnywhere for 
+ this equipment.</p>
+<p style="margin-left: 48px;">Escalation Profiles:</p>
+<p style="margin-left: 88px;">Please discuss with your support rep.</p>
+<p style="margin-left: 48px;">Registry for Documents Uploads / Download 
+ (see <a href="Registry_Start_NetFramework_Post.htm">sys-netframework</a> 
+ for a required registry entry to define the upload folder)</p>
+<p style="margin-left: 48px;">Scheduled Event for Document Upload / Download</p>
+<p style="margin-left: 88px;">Your support rep should set these up with 
+ consultation from your IT department.</p>
+<p style="margin-left: 48px;">Staging Tables for SubAnywhere</p>
+<p style="margin-left: 88px;">These tables will automatically be added 
+ to the database when SubAnywhere is run for the first time, with the applicable 
+ zero records. Information entered by the Subs will held in the staging 
+ tables when it saved but not submitted in SubAnywhere.  When 
+ work is submitted from SubAnywhere it will be posted from the staging 
+ tables to the applicable SAMPro Work Order and PO tables, and deleted 
+ from the staging tables.</p>
+<p style="margin-left: 48px;">Statuses in SAMPro vs SubAnywhere</p>
+<p style="margin-left: 88px;">The following status mapping is used to make 
+ the status that your Sub see will be meaningful to them. For example, 
+ when a Sub has marked a Work Order as Completed on their end, your dispatcher 
+ will see it as wait paperwork as additional paperwork is needed on your 
+ firm&#39;s end to bill your client and handle the PO. </p>
+<p style="margin-left: 88px;"> </p>
+<table class="AlternateBlueWithHeader" style="border-spacing:0px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:outset;width:425;left: 0px; top: 1203px; margin-left: 80px; 
+		 border-collapse: separate; border-collapse: separate;">
+	<colgroup><col style="width: 49.476%;"/>
+	<col style="width: 50.524%;"/>
+	</colgroup><tbody><tr class="t1st" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line" style="font-weight: bold; color: #ffffff; 
+				 font-size: 11pt;">SubAnywhere</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line" style="font-weight: bold; color: #ffffff; 
+				 font-size: 10pt;">SAMPro</p></td>
+	</tr>
+	<tr class="t2Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Unacknowledged</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">unacknowledged</p></td>
+	</tr>
+	<tr class="t1Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Rescheduled</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">rescheduled</p></td>
+	</tr>
+	<tr class="t2Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Waiting Service</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">scheduled</p></td>
+	</tr>
+	<tr class="t1Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">On Site</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">onsite</p></td>
+	</tr>
+	<tr class="t2Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Return Trip</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">scheduled</p></td>
+	</tr>
+	<tr class="t1Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Waiting Parts</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">scheduled</p></td>
+	</tr>
+	<tr class="t2Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Travel</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">travel</p></td>
+	</tr>
+	<tr class="t1Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Completed</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">wait paperwork</p></td>
+	</tr>
+	<tr class="t2Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Quote Declined</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">wait paperwork</p></td>
+	</tr>
+	<tr class="t1Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Needs Quote</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">scheduled</p></td>
+	</tr>
+	<tr class="t2Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Billed</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">completed</p></td>
+	</tr>
+	<tr class="t1Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Quote Submitted</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">waitdispapprvl</p></td>
+	</tr>
+	<tr class="t2Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Quote Approved</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">quote approved</p></td>
+	</tr>
+	<tr class="t1Row" style="">
+		<td style="border-spacing:0px;width: 49.476%;"><p class="reference-line">Cancelled</p></td>
+		<td style="border-spacing:0px;width: 50.524%;"><p class="reference-line">cancelled</p></td>
+	</tr>
+</tbody></table>
+<p style="margin-left: 8px;">A Powerpoint with additional detail is available.</p>
+<p style="margin-left: 8px;"> </p>
+<h3>Start NetFramework Post</h3>
+<p>The Start NetFramework Post function provides a SubAnywhere Scheduled 
+ Event Manager for Document Uploads. Specifically, it handles messages 
+ for SAMNetFramework applications such as SubAnywhere. Currently, 
+ this function supports handling Document Uploads in a fashion similar 
+ to DashboardEventManager and Start Dashboard Post.  This function 
+ should be implemented by adding the Start NetFramework Post to a scheduled 
+ event to be run at an interval of your choosing.</p>
+<p>See <a href="Registry_Start_NetFramework_Post.htm">sys-netframework</a> 
+ for a required registry entry to define the upload folder.</p>
+<p class="MsoNormal"> </p>
+
+<h2>Work Order SubQuote Tab</h2>
+<p style="margin-left: 8px;">This tab will be updated from the SubAnywhere 
+ module&#39;s Quotes tab.</p>
+<p style="margin-left: 8px;">Costing and other information (but not pricing) 
+ will be imported from this tab by the Quote Scope&#39;s Import Sub Quote wizard.</p>
+<p><font style="font-weight: bold;">Quantity:</font><br/>
+The number of this item/charge being quoted.</p>
+<p><font style="font-weight: bold;">Other Rate Id:</font><br/>
+The Other Rate being quoted.  </p>
+<p><span style="font-weight: bold;">Tech Id:</span><br/>
+The Subcontractor quoting this work</p>
+<p><font style="font-weight: bold;">Unit Cost:   Extended Cost:</font><br/>
+The Cost of the item/item being quoted. This is the price the Subcontractor 
+ is charging for the work. These fields will be defaulted from SubAnywhere. 
+  Manual entries to this tab do not default the cost.</p>
+<p style="font-weight: bold;">Unit Price:  Extended Price:<br/>
+<span style="font-weight: normal;">These fields will be ignored by the 
+ Quote Scope&#39;s Import Sub Quote wizard; the markup rules defined in the 
+ Scope (Rate Schedule, Markup % or Gross Margin %) will be applied to the 
+ imported costs to determine the Scope&#39;s revenues.</span></p>
+<p><font style="font-weight: bold;">Description:  Other Rate Description:</font><br/>
+The Description field must be completed in order for this line to be imported 
+ into a Quote Scope; this field will default from SubAnywhere.  The 
+ display-only Other Rate Description appears for informational purposes.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Equipment 
+ Id:</span><br/>
+This field must be completed in order for this line to be imported into 
+ a Quote Scope.</p>
+<h2>Quotes: Importing from the Work Order SubQuote Tab</h2>
+<p>This functionality is available on the Quote Scope&#39;s Main tab and Quotemaster&#39;s 
+ Scope Tab.</p>
+<p><img alt="" src="assets/images/ImportSubCost.bmp" style="border: none;" border="0"/> 
+  </p>
+<p>This functionality is designed for use with SubAnywhere. When clicked 
+ a wizard will be launched to import costing information from the SubQuote 
+ tab of the WO referenced in the Quote Manager/Master header. When the 
+ costs are imported, the markup rules defined in the Scope (Rate Schedule, 
+ Markup % or Gross Margin %) are applied to the imported costs to determine 
+ the Scope&#39;s revenues. This will be done even if Revenue has been entered 
+ on the Work Order&#39;s SubQuote tab.</p>
+<p style="margin-left: 48px;">Note: Wizard Requirements<br/>
+If no lines from the WO SubQuote Tab match the Equip. Id on the Scope, 
+ a message stating “No Sub Quote lines found to import matching the Equipment 
+ Id on the Scope” will appear.</p>
+<p style="margin-left: 48px;">If the WO Id is not completed in the Quote 
+ Manager, the following message will be displayed:  “No Sub Quote 
+ lines found to import matching the Work Order Id on the Quote”.</p>
+<h3>C<span style="font-weight: bold;">reate PM WOs:</span> SubAnywhere 
+ PO&#39;s</h3>
+<p style="margin-left: 8px;">When a PO is generated for a SubAnywhere Tech, 
+ the initial PO status is now set to Released if it will include GEN lines. 
+ This prevents SubAnywhere users from adding charges to PO&#39;s that already 
+ have the a cost associated with it from the Equipment&#39;s PM Schedule&#39;s 
+ Contract Cost.  The Status for a SubAnywhere PO was will be set to 
+ Unreleased if no GEN lines are included so that the SubAnywhere user may 
+ add charges to the PO.</p>
+
+</body></html>

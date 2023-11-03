@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.10.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sales rep"/>
+<meta name="MS-HKWD" content="sales commission"/>
+<meta name="MS-HKWD" content="commission"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Sales Commission History</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="sales rep,sales commission,commission"/><meta name="brsnext" value="Sales_Summary_By_Sales_Rep.htm"/><meta name="brsprev" value="Registry_Scheduled_Event_Manager.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Sales Commission History">
+        <span>Sales Commission History</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Sales Commission History</h1>
+<h2>Purpose:</h2>
+<p>This table was created for reporting and informational purposes. In this release, it may be populated in two ways: by the user (manually) and from the <a href="Sales_Rep_Viewer.htm">Sales Rep Viewer&#39;s Quota Tab</a>. The Delete button has been disabled in this viewer since it functions as a journal.</p>
+<h2>Related Reports:</h2>
+<p><a href="Sales_Summary_By_Sales_Rep.htm">Sales Summary By Sales Rep Report</a></p>
+<h3>Important Fields:</h3>
+<p><font style="font-weight: bold;">Sales Rep Id:<br/></font>The Sales Rep this entry pertains to.</p>
+<p><font style="font-weight: bold;">Invoice Id: Job Id: Work Order Id:<br/></font>To record commission information, enter a valid Invoice Id or double-click to select from a list. The display only Job and Work Order information (if applicable) will default from the Invoice record.</p>
+<p><font style="font-weight: bold;">Job Type Id:<br/></font>This field will default from the Job (if set) when the AR Invoice Id is selected. This field may be changed by the user.</p>
+<p><font style="font-weight: bold;">Date Effective:<br/></font>If this entry was generated from the Sales Rep Quota tab, the date will be set to the first of the month for the scheduled quota. If this entry is being created to record a commission, the user should enter the desired Effective Date.</p>
+<p><font style="font-weight: bold;">Quota:<br/></font>If this entry was generated from the Sales Rep Quota tab, it will be set to the scheduled quota for this month (as defined by the Date Effective).</p>
+<p><font style="font-weight: bold;">Sold:<br/></font>If this entry was generated from the Sales Rep Quota tab, this field may be revised to reflect the Sales Rep’s actual sales for this month, for reporting purposes.</p>
+<p><font style="font-weight: bold;">Commission Base: Commission Rate: Commission: Description:<br/></font>These fields may be completed to record the commission derived from this Invoice for reporting purposes. The system will calculate the Commission is the Commission Base and Rate fields are entered.</p>
+
+</body></html>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.29.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sys-Escalation-Manager"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Escalation Manager (sys-EscalationManager)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="sys-Escalation-Manager,registry"/><meta name="brsnext" value="Registry_Entry_to_Set_Weblog_Escalation_Profile_by_Branch.htm"/><meta name="brsprev" value="Registry_Entry_Terms_for_Alarm_Server.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Escalation Manager (sys-EscalationManager)">
+        <span>Registry Escalation Manager (sys-EscalationManager)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Escalation Manager (sys-EscalationManager)</h1>
+<h2>Purpose:</h2>
+<p> </p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+
+<h2>Related Registries:</h2>
+<p><font><span style="font-weight: normal;">By default, email messages 
+ will include the</span></font> &quot;This important message auto-generated 
+ by SAM Pro Enterprise that is included on all escalation email messages 
+ by default. This text may be eliminated or changed via registry: <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Byline_Escalation_Messages">Suppress 
+ SAM Pro byline message on Escalations</a> .</p>
+<h2>Important Fields</h2>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Id: <font style="font-weight: normal;">sys-EscalationManager</font></p>
+<h3>Disable Triggering of Executed Tech-Based Events When New Tech Added</h3>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"><span style="font-weight: normal;">When 
+ Escalation Management is enabled, act of changing techs on a WO can, by 
+ default, cause initial notification-type events to be automatically delivered 
+ to each &#39;new&#39; tech if they have already been executed for one or more 
+ techs. Firms that wish to exercise a greater level of manual control over 
+ this process may choose to implement this registry entry. This entry disables 
+ the process of triggering tech-based notification events patterned after 
+ similar events that have already executed.</span> </p>
+<h6 class="Heading8"><font style="font-style: normal;">Setting Key:</font> 
+ <font style="font-style: normal; font-weight: normal;">AutoTriggerNewWOTechEvents</font> 
+ <font style="font-style: normal;">Setting Value:</font> <font style="font-style: normal; 
+	 font-weight: normal;">false</font></h6>
+<h3>Turn Off Rn Caching</h3>
+<p>This option should be enabled if the email addresses in Contact records 
+ are frequently changed. By default, the Scheduled Event Manager will only 
+ load the Account Manager (or other records accessing Contact information) 
+ ONE time in a session.  After that initial load, subsequent changes 
+ to the loaded Contact information are not picked up by the system unless 
+ the Scheduled Event Manager is rebooted.  The following registry 
+ settings turn off the default caching for the Scheduled Event Manager/Escalation 
+ Manager; information needed to create the scheduled event (such as the 
+ Account Manager&#39;s Contact Email) will be evaluated when the scheduled 
+ event is generated. Typically, both registries would be entered. </p>
+<h5>Turn off Caching in the Scheduled Event Manager:</h5>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Registry 
+ Id:</span> sys-start-sschdldevntmngr</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting 
+ Key:</span> RnCache    <span style="font-weight: bold;">Setting 
+ Value:</span> false    (default true)</p>
+<h5>Turn off Caching in the Escalation Manager:</h5>
+<p style="font-weight: bold; margin-left: 48px;">Registry Id: <span style="font-weight: normal;">sys-EscalationManager</span></p>
+<p style="font-weight: bold; margin-left: 48px;">Setting Key: <span style="font-weight: normal;">RnCache</span> 
+    Setting Value: <span style="font-weight: normal;">false 
+    (default true)</span></p>
+
+</body></html>

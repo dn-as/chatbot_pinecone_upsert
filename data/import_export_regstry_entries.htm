@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Import-Export Regstry Entries</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nSupport Functions\nImport-Export Registry Entries");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_2" >Import-Export Regstry Entries</P>
+ <P class="Support" >This functionality was previously only available to support personnel running from the smalltalk transcript window (in development).  It has since been enhanced to be run as the  starter functions <A href="start_registry_export.htm"><FONT style="color:black; " >Start Registry Export</FONT></A>  and <A href="start_registry_import.htm">Start Registry Import</A> . It is strongly recommended that you use these functions instead of the transcript version below. </P>
+ <P class="Support" >This functionally was used to export one or more registry entries from the current database running in SAM Pro to an XML file. This XML file may be then be edited if needed (to correct pathing, bitmap names, etc.). This XML may then be imported into another database, or imported back into the original database with corrections.</P>
+ <P class="Support" >Note: templates for these commands have been added to the transcript window. </P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >To export a registry entry to a file: </FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">Execute the following from the transcript window:&nbsp; Conversion exportRegistryEntry:'<FONT style="font-style:italic; " >sys-xyz</FONT>'</P>
+ <P class="Support" style="margin-left:36.00pt;">Note that the registry Id must be single quoted, and must match the actual registry id exactly. Users will select the location of the exported file via a File Dialog.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >To export </FONT><FONT style="font-weight:bold; " >multiple registry entries</FONT><FONT style="font-weight:bold; " > to a file: </FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">Execute the following from the transcript window:&nbsp; Conversion exportRegistryEntry:'<FONT style="font-style:italic; " >sys-xyz</FONT><FONT style="font-style:italic; " >%</FONT>'</P>
+ <P class="Support" style="margin-left:36.00pt;">Note that the registry Id must be single quoted. Use the SQL wildcard notation (e.g. sys-report%) to export multiple entries. Users will select the location of the exported file via a File Dialog.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >To import a registry entry/ registry entries from a file:</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">Users will not be able to overwrite existing registry entries: it is suggested that you rename the entries you wish to replace. Once the new registry entires have been imported and tested, the old, renamed entries may be deleted.</P>
+ <P class="Support" style="margin-left:36.00pt;">Execute the following from the transcript window: Conversion importRegistryEntry</P>
+ <P class="Support" style="margin-left:36.00pt;">Users will select the location of the file to import via a File Dialog.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

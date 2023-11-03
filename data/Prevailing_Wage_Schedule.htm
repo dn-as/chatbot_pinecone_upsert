@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.2.0_13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Prevailing Wage Schedule</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="prevailing wages,wages (prevailing),PW Schedule,job prevailing wages"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Prevailing Wage Schedule">
+        <span>Prevailing Wage Schedule</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Prevailing Wage Schedule</h1>
+<h3>Purpose:</h3>
+<p>The Prevailing Wage Schedule (P.W. Schedule record) may be used instead 
+ of the Job&#39;s Prevailing Wage tab to define a Job&#39;s Prevailing Wage structure. 
+ In this way, when a particular Prevailing Wage Schedule changes, it is 
+ only necessary to change the Prevailing Wage Schedule instead of changing 
+ the Prevailing Wage Tab in each Job record that it impacts. </p>
+<h3>Usage:</h3>
+<p>This feature is ONLY supported if the following registry is enabled:</p>
+<p style="margin-left: 48px;">Id: sys-ffv-global-settings</p>
+<p style="margin-left: 48px;">Setting Key:  LaborRatesAndAccrualMethod 
+   Setting Value: 7687</p>
+<p style="margin-left: 8px;">If a P.W. Schedule Id is specified on the 
+ Job&#39;s Main or Financial Tab, the Prevailing Wage Type must be set to Labor 
+ Rate for the prevailing wage functionality to be enabled.</p>
+<p style="margin-left: 8px;">If both the P.W. Schedule Id field and the 
+ Prevailing Wages Tab are completed on a Job, the P.W. Schedule will have 
+ precedence.</p>
+<h3>Important Fields: Upper Section </h3>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">P.W. Schedule 
+ Id:</font><br/>
+A unique Id for this table. This field is required.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">P.W. Schedule 
+ Name:</font><br/>
+A brief description of this table. This field is optional.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">P.W. Schedule 
+ User 1-2:<br/>
+</font>These fields may be used for informational and reporting purposes</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Obsolete?<br/>
+</font>If this field is checked, the record is considered Obsolete, and 
+ it may not be directly specified during data-entry (either by entering 
+ the Id or selecting it from a list). Obsoleted records can be edited and 
+ the Obsolete option cleared when necessary. </p>
+<h2>Important Fields: Lower Section</h2>
+<p class="Tab">Wages Tab</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;"><span style="font-weight: bold;">S</span>tart: Date:<br/>
+</font>These fields default the effective (work) date range the prevailing 
+ wage is in effect for.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Labor Rate 
+ Id:<br/>
+</font>All Labor Rates that would be impacted by this job’s prevailing 
+ wage functionality should be listed on this tab.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Overtime 
+ / Doubletime Pay Rates:<br/>
+</font>The Pay rate multiplier DOES NOT affect the Prevailing Wage Package 
+ Amount. Regular, overtime and any other pays must be all accommodated 
+ for each Labor Rate specified.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Base Rate:</font><br/>
+This field should be used to enter the base wage rate for this Prevailing 
+ Wage. The system will sum the Fringe Rate and the Base Rate when determining 
+ whether to use the Prevailing Wage during Compute Payroll.</p>
+<p style="margin-left: 48px; text-decoration: underline; ">Standard Calculation:</p>
+<p style="margin-left: 48px;"><font style="text-decoration: underline; ">Example 
+ 1: Employee’s Regular Wages + Fringes Exceed P.W. Base + Fringes</font> 
+ <font style="text-decoration: underline; ">Amount</font></p>
+<p style="margin-left: 48px;">Base Rate: $25.00 / hour<br/>
+Fringe Rate: $0.00<br/>
+Wage Earnings: $24.00 / hour<br/>
+Fringe 1: $2.50 / hour<br/>
+Fringe 2: $1.50 / hour</p>
+<p style="margin-left: 48px;">Since the Employee’s regular Wages + Fringes 
+ total $28.00 / hours (greater than the prevailing wage Base + Fringe of 
+ $25.00/ hour), they will be used for payroll calculations for this Prevailing 
+ Wage job.</p>
+<p style="margin-left: 48px;"><font style="text-decoration: underline; ">Standard 
+ Calculation</font><br/>
+<font style="text-decoration: underline; ">Example 2: Job Base Rate + Fringes</font> 
+ <font style="text-decoration: underline; ">Amount Exceeds Employee’s Regular 
+ Wages + Fringes</font></p>
+<p style="margin-left: 48px;">Base Rate: $40.00 / hour<br/>
+Fringe Rage: $5.00 / hour<br/>
+Wage Earnings: $27.00 / hour<br/>
+Fringe: $1.00 / hour</p>
+<p style="margin-left: 48px;">Since the Employee’s regular Wages + Fringes 
+ total $28.00 / hours, the Prevailing Wage methodology will come into effect 
+ since the Base Rate + Fringe Rate = 45.00 / hour. The system calculates 
+ the Employee’s Wages as follows:</p>
+<p style="margin-left: 48px;">Wage Earnings Calculated Under Prevailing 
+ Wage: $44.00 / hour<br/>
+Fringe: $1.00 / hour</p>
+<p style="margin-left: 48px;">Note that the Employee’s Wages + Fringes 
+ package now equals $45 / hour, the Prevailing Wage Job Package rate. The 
+ increased difference is added to the Employee wage.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Fringe Rate:<br/>
+</font>This field enables you to separate Fringes from the Base Rate for 
+ prevailing wages. The system will sum the Fringe Rate and the Base Rate 
+ when determining whether to use the Prevailing Wage during Compute Payroll.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Note: Excluding 
+ Fringes from Workers Compensation<br/>
+</font>Workers comp &#39;wages&#39; typically should not include any amounts related 
+ to prevailing wage fringes. The Exclude Fringes field in the appropriate 
+ Workers Comp State should be flagged to exclude these fringes from workers 
+ compensation calculation.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Certified 
+ PR Report Label:<br/>
+</font>The Certified Payroll report has been enhanced so that it uses this 
+ field (if completed) instead of the Labor Rate Description. If this field 
+ is blank, the Labor Rate Description will be used.</p>
+
+</body></html>

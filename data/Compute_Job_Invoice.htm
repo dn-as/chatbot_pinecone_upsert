@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.4.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="batch compute"/>
+<meta name="MS-HKWD" content="compute job invoice"/>
+<meta name="MS-HKWD" content="invoice"/>
+<meta name="MS-HKWD" content="job invoice"/>
+<meta name="MS-HKWD" content="pm invoice"/>
+<meta name="MS-HKWD" content="service invoice"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Compute Job Invoice</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="batch compute,compute job invoice,invoice,job invoice,pm invoice,service invoice"/><meta name="brsnext" value="NewTopic_1.htm"/><meta name="brsprev" value="Compute_Payroll.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Compute Job Invoice">
+        <span>Compute Job Invoice</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Compute Job Invoice</h1>
+<p>The Compute Job Invoice function offers the most efficient method of 
+ computing Job Invoices for non-service compute work orders and PM’s that 
+ are not billed from the Client Site Billing schedule.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">COD Functionality:</font><br/>
+This feature is designed for Service users with residential customers. 
+ Typically, payment is calculated with preprinted forms and collected from 
+ certain residential clients by the technician when the work is done. The 
+ status of COD Invoices can be set directly to Ok to Post, and the Cash 
+ Receipt automatically recorded. Note that Labor, Material, and Other charges 
+ must have been recorded on the Work Order.</p>
+<p><font style="font-weight: bold;">1.</font> Go to the Invoicing tab of 
+ the Folders viewer (Accounting Topic) and click the Compute Job Invoice 
+ function.</p>
+<p><font style="font-weight: bold;">2.</font> When the Batch Invoices screen 
+ appears, fill in the following:</p>
+<p>__ Invoice Date: the date that you wish to appear on the Invoice<br/>
+__ End Date (charges with effective dates after the End Date will not be 
+ included on the Invoice)<br/>
+__ Invoice Status for COD Jobs: Ok to Print Ok to Post<br/>
+By default, OK to Print is selected. This option should be selected if 
+ you want to produce hard copy invoices for your COD Jobs. Select OK to 
+ Post if you do not want to print your COD invoices. In this case, the 
+ status of COD Invoices will be set directly to Ok to Post; they will be 
+ included with your non-COD Invoices when you run the post.</p>
+<p>__ GL Bank Account Id: the GL Bank Account Id that specifies where the 
+ COD funds were deposited.<br/>
+__ Job Id (leave blank to compute for all jobs)<br/>
+__ Billing Cycle (note that leaving this field blank computes invoices 
+ only for jobs whose Billing Cycle field is blank)</p>
+<p><font style="font-weight: bold;">3.</font> Click the Go button.</p>
+<p><font style="font-weight: bold;">4.</font> A checklist of jobs will 
+ appear: you may select which are to be computed and then click the Go 
+ button on this screen. At this point, you will also enter the check number 
+ (or the word Cash) for those COD invoices for which you have already received 
+ payment.</p>
+<p>__ Invoice Id: if this field is blank, it will automatically be assigned 
+ the next number by the system. If you are using preprinted forms to invoice 
+ your COD customers, you may enter the appropriate reference number.</p>
+<p>__ Check Number: this field must be completed for COD processing. If 
+ the customer paid by check, enter the check number. If the customer paid 
+ by cash, enter the word cash.</p>
+<p>When you click the Go button, the status of your COD Invoices will be 
+ set to OK to Print or OK to Post, depending upon which option you selected 
+ in the previous screen. The system will make a cash receipt entry to the 
+ specified GL Bank Account Id for all selected COD invoices when they are 
+ posted.</p>
+<p>After running the Compute function, you should print the Billing Worksheet, 
+ make any Billing Adjustments needed, and then Print and Post the Invoices 
+ (as discussed in <a href="Job_Invoice_Overview.htm">Job Invoice Overview</a>. 
+ )</p>
+
+</body></html>

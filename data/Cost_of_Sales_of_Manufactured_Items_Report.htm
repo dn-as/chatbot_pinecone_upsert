@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="cost of sales"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="manufactured"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Cost of Sales of Manufactured Items Report</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="cost of sales,inventory,manufactured,report"/><meta name="brsnext" value="Report_Purchase_Order_Viewer.htm"/><meta name="brsprev" value="PO_Reorder_Advice_Report.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Cost of Sales of Manufactured Items Report">
+        <span>Cost of Sales of Manufactured Items Report</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+<h1>IM Cost of Sales of Manufactured Items Report</h1>
+<h2>Purpose:</h2>
+<p>Designed for use by EMI<font style="font-weight: bold; font-style: italic;">; this report is inappropriate for most user and is no longer available in recent releases</font><font style="font-weight: bold; font-style: italic;">.</font></p>
+<p>The report processes data posted to IMH and JCH from Shop Orders, Shop Order Transfers, the Shop Order Journal and the AR Sales Journal.<br/>
+<br/>
+In order to appear on this report:</p>
+<p style="margin-left: 36.00pt;">Items must be manufactured</p>
+<p style="margin-left: 36.00pt;">tems must be reported as sold in the AR Sales Journal (Costs child tab). </p>
+<p>Contact customer support for information on custom user-defined reports for Job Costing.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Report Options:</font><br/>
+The Report Options selector pane controls how the report will be output. Click <a href="Report_Options.htm">Report Options</a> to learn more.</p>
+<p><font style="font-weight: bold;">Range:</font><br/>
+Enter a unique, alphanumeric name to save and identify your customized report Range. Ranges are defined by the contents of the ID field(s).</p>
+<p><font style="font-weight: bold;">Start Date: End Date:</font><br/>
+Enter date range you want included on this report. Press the Spacebar to enter today&#39;s date, or double-click on this field to access the Calendar viewer to enter the date.</p>
+<p><font style="font-weight: bold;">Inventory Group Id:</font><br/>
+If you only wish to list costs for a specific Inventory Group, enter the Inventory Group Id (or double-click to select from a list). Several Groups may be listed by entering their Id&#39;s separated by commas. A range of Groups can be defined by the first and last items of the range separated by an underscore (Gizmo_Whatsit).</p>
+<p><font style="font-weight: bold;">Inventory Id:</font><br/>
+If you only wish to list costs for a specific Inventory Item, enter the Inventory Id (or double-click to select from a list). Several Items may be listed by entering their Id&#39;s separated by commas. A range of Groups can be defined by the first and last items of the range separated by an underscore (Gizmo_Whatsit).</p>
+<p><font style="font-weight: bold;">Location Id:</font><br/>
+You can list the costs for items at specific Location by entering its Id. Several Locations can be specified by entering their Id&#39;s separated by commas (1005,1007,1020). A range of Locations can be defined by the first and last items of the range separated by an underscore (1010_1015).</p>
+<p><font style="font-weight: bold;">Lines:</font><br/>
+This informational field displays the number of lines per page for this report under the current font setting.</p>
+<p><font style="font-weight: bold;">Multiple Fields</font><br/>
+You can optionally enter Id&#39;s in more than one field. Items will appear on the report only if they fit all the criteria set in the ID fields.</p>
+<p>Example: Assume the first ID field is for Inventory Groups, and the next is for Location. Let&#39;s suppose you set these fields as follows:</p>
+<p>gizmo_whatsit</p>
+<p>1004_1020</p>
+<p>An item will appear in the report only if its Inventory Group Id is within the range gizmo_whatsit <font style="font-weight: bold;">and</font> if the Location Id is between 1004 and 1020.</p>
+<p class="See_Also" style="margin-left: 5.75pt; text-indent: 5.75pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">Power-User Reporting Tip:<br/>
+<font style="font-weight: normal; font-style: normal;">You may also use the comparison operators &gt;,&lt;, = and ! in your report ranges to control the information output to your report. Click</font> <a href="Comparison_Operators.htm" ehlpsource="robohelp classic" data-rhwidget="HyperlinkPopover"><font style="font-weight: normal; font-style: normal;">Comparison Operators</font></a> <font style="font-weight: normal; font-style: normal;">for details.</font></p>
+<p>Important Buttons:<br/>
+<img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Go run the report</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+
+//]]>
+</script><script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a127');
+//]]>
+</script>
+
+</body></html>

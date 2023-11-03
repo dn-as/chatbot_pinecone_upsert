@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.15.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="MS-HKWD" content="user defined report"/>
+<meta name="MS-HKWD" content="import"/>
+<meta name="MS-HKWD" content="start"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Import Report</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="report,user defined report,import,start"/><meta name="brsnext" value="Start_Export_Report.htm"/><meta name="brsprev" value="Report_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Import Report">
+        <span>Start Import Report</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Report Import</h1>
+<h2>Purpose:</h2>
+<p>User Defined reports are stored in your database, not the application 
+ image (v.exe). This function makes it easy to import one or many user-defined 
+ reports into your database. Your support representative will inform you 
+ when you should import new reports (typically, when adding a newly customized 
+ report to your database, or updating the existing reports to correspond 
+ to a new release).</p>
+<h2>Validation:</h2>
+<p>SAMPro&#39;s User Defined Reports share 
+ field definitions. Importing an older report (with a smaller field size) 
+ will reduce the field size for all reports that use it in the database; 
+ this can result in other reports throwing errors. In this release, the 
+ user is alerted when a field being imported is smaller than that found 
+ in the database (unless the global registry setting ReportImportReportFields=Keep 
+ is enabled). </p>
+<p>Field size comparisons are calculated 
+ as follows:</p>
+<p>Decimal fields (Precision - Scale) 
+ for both fields<br style="font-family: Verdana, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; 
+													 font-size: 14px; font-variant-ligatures: normal; 
+													 font-variant-caps: normal; 
+													 orphans: 2; widows: 2; 
+													 -webkit-text-stroke-width: 0px; 
+													 text-decoration-style: initial; 
+													 text-decoration-color: initial;"/>
+ Textbox fields (Precision * Scale) for both fields<br style="font-family: Verdana, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; 
+	 font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-style: initial; 
+	 text-decoration-color: initial;"/>
+ All other types of fields compare only the Precision. </p>
+<p>If the report field definition being 
+ imported is smaller that the corresponding report field in the database, 
+ the following message will be displayed: </p>
+<p style="margin-left: 48px;">The Field 
+ Id: xxxxx now in your database for Report: yyyyyyy</p>
+<p style="margin-left: 48px;">has Field 
+ Size: 15 greater than the report you are importing with Field Size: 10</p>
+<p style="margin-left: 48px;">Do you want 
+ to import the smaller field  (not recommended)?</p>
+<p>We recommend selecting &#39;No&#39; if this 
+ message appears.  Please take a screen capture of this message if 
+ it appears, and contact Support with this information so that the problem 
+ with the report can be corrected. </p>
+<h2>Usage:</h2>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Scheduled 
+ Reports:</span> If a new 
+ version of a currently scheduled report is installed, some new fields 
+ included in the report (such as displayed buttons) will not be included 
+ in the scheduling parameters. In this case, the report will display the 
+ text &quot;Unknown&quot; for the value of the missing field. The report 
+ should be manually rescheduled so that it will be generated with the new 
+ report parameters. </p>
+<p>To import reports, complete the following steps.</p>
+<p><font style="font-weight: bold;">1.</font> To import your user-defined 
+ reports, copy them to a location you can access them from when you are 
+ running the Data-Basics software. For example, if you are running the 
+ software from c:, you might want to copy the report files c:. If this 
+ directory contains earlier copies of reports, we suggest that you move 
+ these files to a backup location (c:). If your reports were delivered 
+ in a zip file format, remember to unzip them! User-defined reports are 
+ distinguished by the file extension .rpt.</p>
+<p><font style="font-weight: bold;">2.</font> (Optional). Next, back up 
+ your database and export your existing reports.</p>
+<p><font style="font-weight: bold;">3.</font> Access the Report Import 
+ function. This function may be accessed from your list of Starter functions 
+ or from the Folders viewer (the Reporting tab of the Utilities topic). 
+ Complete the Important Fields as discussed below.</p>
+<h2>Important Fields: Range Screen</h2>
+<p><font style="font-weight: bold;">Reports Directory:</font><br/>
+Enter the path to the directory containing the reports (for example, c:\samproreports).</p>
+<p><font style="font-weight: bold;">4.</font> When you click the Go button, 
+ the system will display a checklist containing all of the reports that 
+ it locates in the directory you specified.</p>
+<h3>Important Fields: Checklist Screen</h3>
+<p><font style="font-weight: bold;">Do:</font><br/>
+The system will consider the contents of the First Version No:. Install 
+ Version:, and the version of SAM Pro itself when determining whether or 
+ not to flag a report for import. A report will be flagged for import if 
+ its First Version Number is the highest allowable for the SAM Pro version 
+ running.</p>
+<p><font style="font-weight: bold;">Report Id: Report Name:<br/>
+</font>The internal Id and Name of the report. Note that the Id may not 
+ match the report filename, which includes build and version information.</p>
+<p><font style="font-weight: bold;">Revision Number:<br/>
+</font>The revision number of the report; in older custom reports this 
+ was set to 999.</p>
+<p><font style="font-weight: bold;">CaseNo:<br/>
+</font>This field displays the internal Case Number (if completed) from 
+ the report that is being imported.</p>
+<p><font style="font-weight: bold;">First Version No:<br/>
+</font>This field displays the First Version Number (if completed) from 
+ the report that is being imported. This is the first SAM Pro version number 
+ the report should be used with.</p>
+<p><font style="font-weight: bold;">Install Version:<br/>
+</font>This field displays the First Version Number (if completed) of the 
+ report that is currently installed in the system. This field will display 
+ as ‘Not Installed’ if this report is not already in the database, or Unknown 
+ if the First Version Number is not completed in the installed report.</p>
+<p><font style="font-weight: bold;">Path:<br/>
+</font>Displays the location and filename of the report.</p>
+<p><font style="font-weight: bold;">Custom For:<br/>
+</font>This field displays the Custom For field (if completed) from the 
+ report that is being imported.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><font style="font-weight: bold;">5.</font> When you click the Go button 
+ on the checklist, the system will begin the import. Since reports must 
+ be imported in the correct order, the system will take several passes 
+ to complete the import.</p>
+<p><font style="font-weight: bold;">6.</font> Any reports filed in by IMPORT 
+ REPORTS that did not previously exist may require that a corresponding 
+ User Defined function be in order to be executed or assigned to user groups. 
+ In most cases, the user defined function will be created for you during 
+ the import, and it will only be necessary to flag the report in the appropriate 
+ User Groups and Functions records.</p>
+
+</body></html>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.2.0_22";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="field label remapping"/>
+<meta name="MS-HKWD" content="custom"/>
+<meta name="MS-HKWD" content="label"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Field Label Remapping</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="field label remapping,custom,label"/><meta name="brsnext" value="ZIP_Code_Viewer.htm"/><meta name="brsprev" value="Reversing_Journal_Entries.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Field Label Remapping">
+        <span>Field Label Remapping</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Field Label Remapping</h1>
+<h2>Purpose:</h2>
+<p>This starer function enables the system to accommodate language or custom 
+ labeling requirements by replacing the field labels that appear on Data-Basics&#39; 
+ SAMPro software screens with the ones that you specify. Note that web 
+ and applet screens are not currently affected by this function.</p>
+<p>This function also supports changes to labels not directly associated 
+ with a field. An example is on the Site&#39;s parent Contact tab: the Site 
+ Contact 1: label over the contact information block. Click <a href="#Field_Label_Remap_Example">Field 
+ Label Remapping for the Site Contact Label</a> for a step-by-step example. 
+  </p>
+<h2>Usage:</h2>
+<p>This function should be restricted to system-level client users and 
+ support.</p>
+<p>Relabeling done via this function will be overridden labeling implemented 
+ via the <a href="View_Custom_Fields.htm">Custom Fields</a> functionality.</p>
+<h2>Usage:</h2>
+<p>When this function run, it will create or update a dictionary file called 
+ &#39;LabelRemap&#39; that contains the field label replacements that you specify. 
+ This file should live in the same directory as the Data-Basics executable, 
+ v.exe. &#39;LabelRemap&#39; is loaded on startup of the Data-Basics software. 
+ This file should only be edited by running the Start Field Label Remapping 
+ function, and <font style="font-weight: bold;">should be backed up on 
+ a regular basis</font>.</p>
+<p>When you run &#39;Start Field Label Remapping&#39;, the system will display 
+ an Open File dialog box, which should already should point to the LabelRemap 
+ file in the directory containing the Data-Basics executable, v.exe.</p>
+<h2>Important Fields: Initial Screen</h2>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Field Label:<br/>
+<span style="font-weight: normal;">This filter enables you to filter down 
+ which labels will be presented for possible renaming. Pressing Go on an 
+ empty filter field presents the user with all of the approximately 4000 
+ field names in the system.</span></p>
+<p>For example, if you wanted to relabel the Client User 1 field to display 
+ AP Contact, you could enter Client in the Field Label and then click Go.</p>
+<h2>Important Fields: List</h2>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Field Label:<br/>
+<span style="font-weight: normal;">This display-only field lists the standard 
+ field label used within the software.</span></p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Field Label Replacement:<br/>
+<span style="font-weight: normal;">If this field is blank, the standard 
+ label (displayed on the left) will be used by the system. To replace the 
+ standard label, simply enter it as you want it displayed on the screen. 
+ To avoid screen layout difficulties, the length of the replacement label 
+ should not greatly exceed that of the standard label.</span></p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;" color="#0000FF">Tip:<br/>
+</font>To undo a label remapping (just use the default label), simply clear 
+ the remapping field, and the system will start using the original.</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> 
+ Clicking the Go on this screen will complete the function and save the 
+ edited dictionary back to disk.</p>
+<h3><a name="Field_Label_Remap_Example" id="Field_Label_Remap_Example"></a>Example: 
+ Customizing the Site Contact 1: label</h3>
+<p>1. Run &#39;Start Field Label Remapping&#39;, the system will display an Open 
+ File dialog box, which should already should point to the LabelRemap file 
+ in the directory containing the SAMPro executable. Select Open.</p>
+<p>2. The Initial Screen will display a Field Label filter which enables 
+ you to filter down which labels will be presented for possible renaming. 
+ For example, if you wanted to relabel the Site Contact 1: you could enter 
+ Site Contact 1: in the Field Label and then click Go.</p>
+<p>3. A List will appear:</p>
+<p>Field Label:<br/>
+This display-only field lists the standard field label used within the 
+ software.</p>
+<p>Field Label Replacement:<br/>
+If this field is blank, the standard label (displayed on the left) will 
+ be used by the system. To replace the standard label, simply enter it 
+ as you want it displayed on the screen. To avoid screen layout difficulties, 
+ the length of the replacement label should not greatly exceed that of 
+ the standard label.</p>
+<p>4. Click Go to complete the function and save the edited dictionary 
+ back to disk. Reopen the Site view to see the changes to the label.</p>
+<p style="margin-left: 48px;">Tip:<br/>
+To undo a label remapping to use the default label, simply clear the remapping 
+ field, and the system will start using the original.</p>
+
+</body></html>

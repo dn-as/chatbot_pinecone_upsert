@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.31.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry New Call Required/Disable</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="registry,disabled fields,required fields,new call"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry New Call Required/Disable">
+        <span>Registry New Call Required/Disable</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry New Call Required/Disabled Fields</h1>
+<h2>Purpose:</h2>
+<p>This registry entry enables the user to define various fields in New 
+ Call as required or disabled.</p>
+<h2>Usage:</h2>
+<p>Fields defined to be disabled or required by this registry apply to 
+ ALL of SAMPro&#39;s New Call Views:  New Call, New Call 2, New Call Create 
+ Site, and New Call COD.  If a field is required but does not appear 
+ on a particular view (and has not been defaulted-in) you will not be able 
+ to add the new work order.</p>
+<h2>Related Registries:</h2>
+<p>Registry entries for most other <a href="Registry_Entry_for_New_Call_Options.htm">New 
+ Call Options</a>.</p>
+<p>Registry entry to flag <a href="Registry_New_Call_Service_Category.htm">Excessive 
+ Activity by Service Category</a>.</p>
+<p style="margin-left: 8px;"><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Warn_or_Error_if_WO_Date_Scheduled_Set_to_Past_Date">Warn 
+ or Error if Date Scheduled Set to Past Date</a> </p>
+<p>This <a href="Registry_Specify_Site_WO_Other_Lines.htm">Registry</a> 
+ may be used to specify which lines from the Site WO Other Tab should be 
+ added based is the Work Order&#39;s Service Category.</p>
+<h2>Important Fields:</h2>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Registry 
+ Id:</font> sys-start-snwcll</p>
+<h3>To indicate disabled or required fields:</h3>
+<p><span style="font-weight: bold;">Setting Key:</span> requiredFieldsParent 
+  <span style="font-weight: bold;">Setting Value:</span> <font style="font-style: italic;">fieldname1, 
+ fieldname2 ….</font></p>
+<p><span style="font-weight: bold;">Setting Key:</span> disabledFieldsParent 
+ <span style="font-weight: bold;">Setting Value:</span> <font style="font-style: italic;">fieldname1, 
+ fieldname2 ….</font></p>
+<p>The contents of the line can be a field name or a series of field names 
+ separated by commas. When you place the mouse pointer over the field, 
+ the database field name will appear in the extreme left at the bottom 
+ of the screen. The name of the view followed by the  internal field 
+ name appears just to its right – the internal field name is what we need. 
+ In the following example, the internal field name we need is wrkcde.id</p>
+<p><img src="assets/images/NewCallRequired.jpg" alt="" style="border: none;" border="0"/></p>
+<p style="margin-left: 8px;"> </p>
+<h3><font style="font-weight: bold;">Disable the Override Tech Status</font> 
+ <font style="font-weight: bold;">Field</font></h3>
+<p style="margin-left: 8px;">If the dispatcher should NEVER override the 
+ default status, the new Override Tech Status field can be disabled the 
+ following registry setting:</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Setting Key:</font> 
+ DisabledFieldsParent <font style="font-weight: bold;">Setting Value:</font> 
+ wrkordrlgtype.id</p>
+<h3>Require a Technician and Work Code</h3>
+<p>Require that a Technician and a Work Code are selected in New Call Screen 
+ before adding the work order:</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Registry 
+ Id:</font> sys-start-snwcll</p>
+<p><span style="font-weight: bold;">Setting Key:</span> RequiredFieldsParent 
+ <span style="font-weight: bold;">Setting Value:</span> tchncn.id,wrkcde.id</p>
+<p> </p>
+<p> </p>
+
+</body></html>

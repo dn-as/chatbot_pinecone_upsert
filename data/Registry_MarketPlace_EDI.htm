@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.24.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry MarketPlace EDI</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="registry,EDI,Electronic Data Interface,Purchasing EDI,MarketPlace,Quoting EDI,sys-edi"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry MarketPlace EDI">
+        <span>Registry MarketPlace EDI</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry MarketPlace EDI</h1>
+<h2>Registry For Custom MarketPlace EDI Purchasing/Quoting</h2>
+<h3>Purpose:</h3>
+<p>This registry provides the configurations required to run the MarketPlace 
+ functionality for Purchasing/Quoting. See <a href="MarketPlace_Overview.htm">MarketPlace 
+ Overview</a> for details on the integration for this app. </p>
+<h3>Important Fields:</h3>
+<p><span style="font-weight: bold;">Id:</span> sys-edi</p>
+<h3>Enable Markeplace EDI</h3>
+<p><span style="font-weight: bold;">Setting Key:</span> Enabled    <span style="font-weight: bold;">Setting Value:</span> yes (default no)</p>
+<h3>Add Ship Via Line</h3>
+<p>This registry allows an Add ShipVia line element to included the PO 
+ XLM export if so requested: </p>
+<p><span style="font-weight: bold;">Id:</span> sys-edi </p>
+<p><span style="font-weight: bold;">Setting Key:</span> ExportShipVia  <span style="font-weight: bold;">Setting Value:</span> Y </p>
+<p>To turn on the export, the Setting key must be present, and the Setting 
+ Value must begin with ‘Y’, ‘y’, ‘T’, or ‘t’.</p>
+<p><span>T</span>his release includes an Add ShipVia line element to the 
+ PO XLM export if so requested in either of the following Registries.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">NOTE:</span> 
+ An installation using this EDI functionality should have either the registry<b style="color: #000000; font-family: &#39;Segoe UI VSS &#39;, , &#39;Segoe UI&#39;, -apple-system, BlinkMacSystemFont, Roboto, &#39;Helvetica Neue&#39;, Helvetica, Ubuntu, Arial, sans-serif, &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;; 
+	 font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 text-align: start; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 text-decoration-style: initial; text-decoration-color: initial;"> </b>sys-edi-haller  OR sys-edi 
+ implemented. If for some reason both are implemented, sys-edi-haller will 
+ take precedence.  </p>
+<h3>Paths to Folders</h3>
+<p>The folders identified in these registries entry provide the interfaces 
+ with Marketplace. Your Marketplace configuration must reference the locations 
+ of these folders and have access to them.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> InboundFolder   <span style="font-weight: bold;"> Setting Value:</span> <span style="font-style: italic;">path 
+ to inbound folder</span></p>
+<p>Marketplace will deliver .xml files to this folder to be processed by 
+ SAMPro</p>
+<p><span style="font-weight: bold;">Setting Key:</span> InboundAcceptedFolder 
+   <span style="font-weight: bold;"> Setting Value:</span> 
+ <span style="font-style: italic;">path to inbound accepted folder</span></p>
+<p>Files will be moved to this folder after they have been processed by 
+ SAMPro. </p>
+<p><span style="font-weight: bold;">Setting Key:</span> InboundRejectedFolder 
+   <span style="font-weight: bold;"> Setting Value:</span> 
+ <span style="font-style: italic;">path to inbound rejected folder</span></p>
+<p>Files that could not be processed by SAMPro will be moved to this folder. 
+ </p>
+<h3>Logging</h3>
+<p><span style="font-weight: bold;">Setting Key: </span>LogMode<span style="font-weight: bold;"> 
+    Setting Value: </span>on</p>
+<p><span style="font-weight: bold;">Setting Key: </span>LogPath<span style="font-weight: bold;"> 
+   Setting Value: </span><span style="font-style: italic;">path\</span>EDILog.txt</p>
+<p>If logging is enabled (strongly recommended), this registry specifies 
+ the path and filename to be used for logging.</p>
+<h3>Email Alerts</h3>
+<p>These registries are used to send emails whenever errors are encountered 
+ when processing Inbound folder messages.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> EmailEnabled   <span style="font-weight: bold;">Setting Value:</span>  yes (default 
+ no)</p>
+<p><span style="font-weight: bold;">Setting Key:</span> EmailFrom    <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">validemailaddress</span></p>
+<p><span style="font-weight: bold;">Setting Key:</span> EmailTo   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">validemailaddress</span></p>
+<p><span style="font-weight: bold;">Setting Key:</span> EmailSubject   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">string</span> 
+  </p>
+<h3>Setting up the Start EDI Scanner</h3>
+<p style="mso-list: l0 level1 lfo1;">The function Start EDI Scanner (Sscedi) 
+ will be used to poll the Upload Folder for the unprocessed Xml files from 
+ the Marketplace app. It may be necessary to run  Start Function List 
+ Update to and the new Start EDI Scanner function.  It should be added 
+ to the User Group for the special &#39;agent&#39; user that will be running this 
+ function. A Scheduled Event should be set to run Start EDI Scanner every 
+ 60 seconds.</p>
+
+</body></html>

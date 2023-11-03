@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.8.1.0_12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="gl history report"/>
+<meta name="MS-HKWD" content="history (gl)"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>GL History Report</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="gl history report,history (gl),report"/><meta name="brsnext" value="GL_Trial_Balance_Report.htm"/><meta name="brsprev" value="GL_Balance_Sheet_Report.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="GL History Report">
+        <span>GL History Report</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+<h1>GL History Report</h1>
+<h2>Purpose:</h2>
+<p>This viewer runs the GL History Report, and controls the range of data and dates on the GL History report.</p>
+<p>This report is ordered by GL Account Id, and displays the following information for each transaction: Effective Date, Journal, Transaction Id, GL Entity Id, Debit or Credit amount, Balance and Description.</p>
+<h2>Usage:</h2>
+<p>After completing the fields and clicking the go button, the system will ask you to select a printer. After you do so, the Report viewer will appear so that you can select the pages and number of copies to print.</p>
+<p>If <font style="font-weight: bold;">multinational currency</font> is implemented on your system, be aware of the following when reading this report:</p>
+<p style="margin-left: 36.00pt;">A. A/P and A/R Control and Retainage Accounts for Foreign Currency Vendors/Clients:</p>
+<p style="margin-left: 36.00pt;"> These will be maintained in the ‘original amount’ of the foreign currency</p>
+<p style="margin-left: 36.00pt;">B. Inventory Expense Accounts</p>
+<p style="margin-left: 66.25pt;">These accounts will be maintained in your firm’s local currency. Foreign currency amounts will have been converted to your local currency using the Currency Factor in the AP Journal.</p>
+<p style="margin-left: 36.00pt;">C. Foreign Exchange / Currency Adjustment Accounts</p>
+<p style="margin-left: 36.00pt;"> These will balance the difference between A &amp; B (see above).</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Report Options:</font><br/>
+The Report Options selector pane controls how the report will be output. Click <a href="Report_Options.htm">Report Options</a> to learn more.</p>
+<p><font style="font-weight: bold;">Report Ranges:</font><br/>
+The Report Ranges selector pane enables you to select a customized range for the report. When you click on a range, the criteria defining it will appear in the ID field(s). Creating a customized report range is discussed below. Notice that you must name a custom range in order to save it. Enter a unique, alphanumeric name to save and identify your customized report Range.</p>
+<p class="Body_Text_Indent"><font style="font-weight: bold;" color="#0000FF">Hint:</font> You can create user-defined report ranges that are available to all users with access to that report. To do so, the first character of the named range should be an asterisk. Named ranges beginning with an asterisk will appear on all users&#39; report ranges options so that they can be selected (but not altered) by any user with access to that report. Only the user that created the report range is allowed to alter it.</p>
+<p><font style="font-weight: bold;">Start Date End Date</font><br/>
+These required fields define the range of effective dates on the report. Enter the date in <font style="font-style: italic;">mmddyyyy</font> format or double-click on the field to access the Calendar viewer to do so.</p>
+<p><font style="font-weight: bold;">Consolidated Report?</font><br/>
+If this box is blank and your firm uses GL Entities, separate lines will be generated for each applicable entity per entry per account. If you check this box, entity information will be consolidated into one line.</p>
+<p><font style="font-weight: bold;">GL Entity Group:</font><br/>
+Limits the report to entries pertaining to this GL Entity Group(s).</p>
+<p><font style="font-weight: bold;">GL Account</font> <font style="font-weight: bold;">Id:</font><br/>
+To display history for a single GL Account, enter its Id. Multiple GL Accounts may be specified by separating their Id&#39;s with a comma (10011,10012). A range of GL ID&#39;s may be defined by the first and last items of the range separated by an underscore (10011_10067).</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font><br/>
+To display history for a single GL Entity, enter its Id. Multiple GL Entities may be specified by separating their Id&#39;s with a comma (11,12). A range of GL Entities may be defined by the first and last items of the range separated by an underscore (11_67).</p>
+<p><font style="font-weight: bold;">Source</font><br/>
+To only display history from a particular source, enter the 2-character source of the entry (such as AP, AR, WO, PO, PR, GL).</p>
+<p><font style="font-weight: bold;">Source Journal</font><br/>
+To only display history from a particular journal, enter its title (such as AP Check, AP Journal, AR Receipts, AR Sales, WO Inventory, WO Labor, PR Check, GL Journal). See <a href="Source_Journals_Referenced_in_History_Files.htm">Source Journals Referenced in History Reports</a> for further details.</p>
+<p><font style="font-weight: bold;">Transaction Id:</font><br/>
+Limits the report to entries pertaining to this transaction.</p>
+<p><font style="font-weight: bold;">Invoice Id:</font><br/>
+Limits the report to entries pertaining to this invoice.</p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">Power-User Reporting Tip:<br/></font> You may also use the comparison operators &gt;,&lt;, = and ! in your report ranges to control the information output to your report. Click <a href="Comparison_Operators.htm" ehlpsource="robohelp classic" data-rhwidget="HyperlinkPopover">Comparison Operators</a> for details.</p>
+<h2>Important Buttons:</h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Go run the report  </p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+
+//]]>
+</script><script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a129');
+//]]>
+</script>
+
+</body></html>

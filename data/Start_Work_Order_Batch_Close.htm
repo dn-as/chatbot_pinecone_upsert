@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.4.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="batch close work orders"/>
+<meta name="MS-HKWD" content="close work orders"/>
+<meta name="MS-HKWD" content="start work order batch close"/>
+<meta name="MS-HKWD" content="work order batch close"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Work Order Batch Close</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="batch close work orders,close work orders,start work order batch close,work order batch close"/><meta name="brsnext" value="Bonus_Payroll_Checks.htm"/><meta name="brsprev" value="NewTopic_1.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Work Order Batch Close">
+        <span>Start Work Order Batch Close</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Work Order Batch Close</h1>
+<h2>Purpose:</h2>
+<p>This function enables you to assign a Date Closed to your Work Orders. Normally, the Date Closed is set when you mark the work order Invoice Ready or Cancelled, and click the Change Record button, and click Yes to prompt asking if you wish to close the Work Order.</p>
+<p>This function makes the automatic Filtering features more useful, since, by default, only open work orders will appear on the Work Order list. Note that this change does not affect the Dispatch Board.</p>
+<h2>Usage:</h2>
+<p><span style="font-size: 11.0pt; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &#39;Times New Roman&#39;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">When this function is run,  the processing classifies and counts WO Tech lines as either Open (not Cancelled or Billed) or Closed (Cancelled or Billed).</span><span style="mso-spacerun: yes;"> </span><span style="font-size: 11.0pt; font-family: Calibri, sans-serif; mso-ascii-theme-font: minor-latin; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: &#39;Times New Roman&#39;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"> If a WO has any Open lines, it is excluded from the list.</span><span style="mso-spacerun: yes;"> </span>Only Work Orders where all Tech lines are Cancelled or Billed will be eligible for closure unless modified via registry. If the status of all lines is Billed or Canceled, the Work Order will appear on a checklist. For each WO that you check, the system will enter a Closed Date equal to the largest date (if set) on the Technician tab (or to the Closed Date that you specify). An entry to the Work Order’s Change Log will be made when the Work Order is closed.</p>
+
+<h2>Registry:</h2>
+
+<p>See <a href="Registry_Start_Work_Order_Batch_Close.htm">Registry to Add/Change Statuses in Start Work Order Batch Close</a> to define which statuses are eligible for this function.</p>
+
+<h2>Important Fields: Initial Range Screen</h2>
+<p><font style="font-weight: bold;">Closed Date:<br/></font>This field enables you to specify a default Date Closed for the Work Order if all the Date Scheduled fields on the Work Order’s Technician tab are blank.</p>
+<p><font style="font-weight: bold;">Date Opened<br/>
+Work Order Id<br/>
+Client Site Id<br/>
+Client Id<br/></font> By filling in one or more of these range fields, you can control which eligible work orders will be selected to be marked closed. We recommend that you complete at least the Date Opened field.</p>
+<p><font style="font-weight: bold;">Examples:</font><br/>
+To mark eligible work orders created in 2016 closed, you would fill in the Date Opened range field as follows:</p>
+<p>2016-01-01_2016-12-31</p>
+<p>To mark only those work orders for Client ACME that we created in 2015 closed, you would fill in the Date Opened and Client Id fields as follows:</p>
+<p> 2015-01-01_2015-12-31<br/>
+ ACME</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/>  When you click the Go button, a list of work orders eligible for closure will appear.</p>
+<h2>Important Fields: List Screen</h2>
+<p><font style="font-weight: bold;">Do</font><br/>
+This field enables you to select which work orders will be closed. By default, all work orders are selected. Double-click on the Do field to select or deselect an item (alternately, press the spacebar when the caret appears on this field); an &quot;x&quot; appears in the Do field when that work order is selected.</p>
+<p><font style="font-weight: bold;">Date Closed:</font><br/>
+By default, the Date Closed is set equal to the largest date on the Technician tab. To adjust the proposed date closed, click on this field, enter the desired date in <font style="font-style: italic;">mmddyyyy</font> format, and then press Enter. Alternately, you may enter today&#39;s date by clicking the Spacebar.</p>
+<p><font style="font-weight: bold;">Work Order Id: Client Site Id: Client Id: Work Order Name: Date Opened:</font><br/>
+These fields are displayed for informational purposes so that you can verify which work orders should be closed.</p>
+<h2>Important Buttons:</h2>
+<p><img src="assets/images/image/SKIN1_Check.gif" alt="" style="border: none;" border="0"/> Click the Check button to check (select) every item on the list.</p>
+<p><img src="assets/images/image/SKIN1_CheckOff.gif" alt="" style="border: none;" border="0"/> Click to de-select every item on the list.</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/>  When you click the Go button, the system enters the Closed Date specified on the list for all Work Orders that are checked.</p>
+
+</body></html>

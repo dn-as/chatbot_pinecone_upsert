@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.7.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="certification"/>
+<meta name="MS-HKWD" content="technician"/>
+<meta name="MS-HKWD" content="technician certification"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Technician Certification Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="certification,technician,technician certification"/><meta name="brsnext" value="Technician_Service_Zone_Tab.htm"/><meta name="brsprev" value="Technician_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Technician Certification Viewer">
+        <span>Technician Certification Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Technician Certification Tab</h1>
+<h2>Purpose:</h2>
+<p>Create/maintain the list of technician’s equipment certifications. This table may be used for employee technicians as well as subcontracting technicians. It is also used in Tech Finder to match equipment with certified technicians.</p>
+<p>When TechFinder is launched from the Dispatch Board or Work Order, all Certifications for the Site and the first piece of Equipment on the Work Order will be listed. When TechFinder is launched from New Call, all Certifications for the selected and Equipment will be listed. This list is prepended with an ampersand &amp; so that only those Techs with all the Certifications listed appear in TechFinder.</p>
+<h2>Example:</h2>
+<p>Lists the equipment this technician is certified on, and the date the certification expires.</p>
+<h2>Usage:</h2>
+<p>Optional for Dispatching.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Certification Id:</font><br/>
+Enter an appropriate Certification Id or double-click on this field (or press Alt+F7) to select from a list of Certifications.</p>
+<p><font style="font-weight: bold;">Certification Description:</font><br/>
+This informational field is filled in from the Certification Id.</p>
+<p><font style="font-weight: bold;">Date Earned:<br/></font>This informational field may be used to record the date this Technician earned the Certification. It may be used for reporting purposes.</p>
+<p><font style="font-weight: bold;">Expiration Date:</font><br/>
+Enter the expiration date for this certification directly or double-click on this field (or press Alt+F7) to access the Calendar viewer.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important Note: TechFinder<br/></font>When adding a Certification line, the system will allow (default) to a blank expiration date (19000101).  However, if using Certification filtering in Tech Finder, technicians with a blank expiration date are considered expired and will not be displayed in Tech Finder.</p>
+<p><font style="font-weight: bold;">Registration Number:</font><br/>
+Enter the registration number for this technician&#39;s certificate.</p>
+
+</body></html>

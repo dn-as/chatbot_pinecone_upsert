@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.3.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Corporate Metrics"/>
+<meta name="MS-HKWD" content="compute"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="start"/>
+<meta name="MS-HKWD" content="metrics"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Computing Corporate Metrics</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="inventory turns,Corporate Metrics,compute,inventory,start,metrics"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Computing Corporate Metrics">
+        <span>Computing Corporate Metrics</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Compute Corporate Metrics</h1>
+<h2>Purpose:</h2>
+<p>Corporate Metrics enables users of the Shop Order, Service (Work Order), 
+ Client Order and Purchase Order modules to evaluate inventory metrics 
+ by running this function.</p>
+<p>The Compute Corporate Metrics may also be use to recomputation of the 
+ Reorder Level and Order Up To (Min/Max) fields. Typically, this would 
+ be done for a period of less than a year. For example, we could capture 
+ historical startup parts usage from the previous spring and use them to 
+ generate appropriate Reorder/Order Up To levels to assure an adequate 
+ stock new spring.</p>
+<p>This re-computation will ONLY occurs if you check the Compute box for 
+ Min/Max (Reorder Level/Order Up To) in the Compute Corporate Metrics Checklist 
+ screen. If this option is checked, the software does not allow ANY other 
+ option to be checked, and also validates that the Stock days (from the 
+ range screen) is greater than 0. Note that the date range specified on 
+ the range screen would be for prior historical periods therefore wouldn&#39;t 
+ be applicable to any other metric calculations.</p>
+<p>If the Show Log option is selected on the range screen, the system will 
+ display the original min/max and the new min/max for each part calculated.</p>
+<h2>Usage:</h2>
+<p>This function will compute the various metrics for the date range that 
+ you select and store them in the appropriate records.</p>
+<h2>Registries:</h2>
+<p style="margin-left: 8px;">See <a href="Start_Compute_Corporate_Metrics.htm">Registry 
+ Start Compute Corporate Metrics</a> for a registry to set initial values 
+ for this function&#39;s range screen.</p>
+<p>See <a href="Registry_Compute_Metrics.htm">Registry Compute Metrics</a> 
+ for an option to refine the calculation of Inventory Turns.</p>
+<h2>Range Screen: Important Fields</h2>
+<p><font style="font-weight: bold;">Start Date: End Date:<br/>
+</font>Enter the date range for which you wish to compute metrics and Reorder/Order 
+ Up To levels. These fields are required. The date range determines the 
+ period for which the usage is calculated for.</p>
+<p><font style="font-weight: bold;">Lead Time Add On:<br/>
+</font>Enter the number of days that will be added to the system-calculated 
+ Purchasing Lead Time to allow for internal time needed to create and receive 
+ a purchase order. This field used in conjunction with the average daily 
+ use of the item (by Location) to calculate the Reorder Level as follows:</p>
+<p>[Average Daily Quantity Used or Sold] *([Vendor Lead Time] + [Lead Time 
+ Add On])</p>
+<p><font style="font-weight: bold;">Stock Days:<br/>
+</font>The number of days the user would like to keep inventory on hand. 
+ This field is used in conjunction with the average daily use of the item 
+ (by Location) to calculate the Order Up To level as follows:</p>
+<p>[Average Daily Quantity Used or Sold] *[Stock Days]</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><font style="font-weight: bold;">Inventory Item Id:<br/>
+</font>If this field is blank, metrics will be computed for all inventory 
+ items which may take a significant amount of time. To limit the computation, 
+ enter an Item or list of (comma-separated) items in this range.</p>
+<p><font style="font-weight: bold;">Inventory Group:<br/>
+</font> This range allows users to run the calculation for a select group 
+ of inventory.</p>
+<p><font style="font-weight: bold;">Location Id:<br/>
+</font>If completed, the Inventory Item Location fields (including the 
+ Turns field) will only be updated for the specified location. The Location 
+ Id field will not be used for any other purpose.</p>
+<p><font style="font-weight: bold;">Inventory Group:<br/>
+</font>This range may be completed to filter the Inventory Items that are 
+ to be updated.</p>
+<p><font style="font-weight: bold;">Show Log:<br/>
+</font>If this box is checked, a diagnostic log of the computations is 
+ displayed in a pop up box.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Click Go to display the next screen.</p>
+<h2>List Screen: Important Fields</h2>
+<p>The list screen for this function will contain a check box for each 
+ metric described below. The corresponding metric will be computed only 
+ if the corresponding box is checked.</p>
+<p><font style="font-weight: bold;">Compute</font> <font style="font-weight: bold;">Purchases 
+ On Time</font></p>
+<p style="margin-left: 18.00pt;">Purchasing Lead Time for a Vendor /Item 
+ will be displayed in the Percent On Time Requested and Percent On Time 
+ Promised fields on the Inventory Item Viewer’s Vendors tab.</p>
+<p style="margin-left: 18.00pt;">The Purchasing On Time statistics for 
+ a Vendor/Item will be computed from your Purchase Orders by comparing 
+ the Request / Promised PO fields with the date the items are actually 
+ received.</p>
+<p><font style="font-weight: bold;">Compute</font> <font style="font-weight: bold;">Sales 
+ On Time</font></p>
+<p><font style="font-weight: bold;">Compute I</font><font style="font-weight: bold;">nventory 
+ Turns</font></p>
+<p style="margin-left: 36.00pt;">Turns are computed both on an Inventory 
+ Item and on an Inventory Item / Location basis.</p>
+<p style="margin-left: 36.00pt;">Inventory Item Turns for the item in general 
+ are displayed on the Inventory Performance tab. Inventory Item / Location 
+ turns appear on the Inventory Item Viewer’s Locations tab; click the magnify 
+ button to view the Turns detail for his location.</p>
+<p style="margin-left: 36.00pt;">The number of turns over a given period 
+ will be computed as the total usage over the period divided by the average 
+ on-hand quantity over that same period.</p>
+<p style="margin-left: 36.00pt;">If the period is other than one year, 
+ the annualized turns number is computed as the number of turns for the 
+ period multiplied by the number of periods in the year. The annualized 
+ number of turns that will be saved in the Inventory Item and Inventory 
+ Item Location tables. The number of turns (general and by Location) appear 
+ in the Stock Status Report.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><font style="font-weight: bold;">Compute Min/Max (Reorder Level/Order 
+ Up To)</font></p>
+<p style="margin-left: 36.00pt;">The Reorder Level/Order Up to computations 
+ will ONLY occur if this box is checked. If this option is checked, the 
+ software does not allow ANY other option to be checked, and also validates 
+ that the Stock days (from the range screen) is greater than 0.</p>
+<p style="margin-left: 36.00pt;">When you click the Go button, the selected 
+ Metrics will be generated and Reorder / Order Up To levels calculated 
+ on the Inventory Item Location tab.</p>
+<p><font style="font-weight: bold;">Compute</font> <font style="font-weight: bold;">Manufacturing 
+ Lead Time</font></p>
+<p style="margin-left: 36.00pt;">Manufacturing Lead Time is an indication 
+ of the number of days required to manufacture an item; it will be displayed 
+ in the Inventory Item viewer.</p>
+<p style="margin-left: 36.00pt;">The manufacturing time for a shop order 
+ is computed as the number of days between the Entry Date (the Open Date) 
+ and the Close Date of the Shop Order. A Shop Order that was closed on 
+ the same date it was opened will have a manufacturing time of zero.</p>
+<p style="margin-left: 36.00pt;">The Manufacturing Lead Time for an item 
+ is computed as the average manufacturing time for all Shop Orders for 
+ the item. Only Shop Orders that were both opened and closed within the 
+ date range will be considered in performing this calculation.</p>
+<p style="margin-left: 36.00pt;">The suggested usage period is one year. 
+ .</p>
+<p><font style="font-weight: bold;">Sales Lead Time</font></p>
+<p style="margin-left: 36.00pt;">Sales Lead Time is an indication of your 
+ organization’s ability to fill Client Orders. It is displayed in the Inventory 
+ Item viewer.</p>
+<p style="margin-left: 36.00pt;">The lead time is computed as the number 
+ of days between request and ship dates for the item. The request date 
+ for an item is taken from the order line’s ‘Date To Ship’ field. If this 
+ field is blank, the order will be considered an ‘ASAP’ order and the request 
+ date will be taken from the order’s ‘Date Ordered’ field.</p>
+<p style="margin-left: 36.00pt;">If multiple shipments were required to 
+ fill the order, the lead time will be computed as the ‘weighted average’ 
+ of the lead times for each shipment. For example, consider an order that 
+ was fulfilled in two shipments. The first shipment was for a quantity 
+ of 90 lbs and was fulfilled in 3 days with the remaining 10 lbs filled 
+ 4 days later. The lead time will be computed as<br/>
+ ((3 * 90) * (7 * 10)) / 100 = 3.4 days.</p>
+<p style="margin-left: 36.00pt;">Only COP lines having complete shipments 
+ are considered when computing Sales Lead Time.</p>
+<p style="margin-left: 36.00pt;">Only orders within the ‘sample period’ 
+ will be considered in performing this calculation. The suggested usage 
+ period is one year (i.e. within 365 days prior to the running of the report).</p>
+<p><font style="font-weight: bold;">Purchasing Lead Time</font></p>
+<p style="margin-left: 36.00pt;">Purchasing Lead Time is an indication 
+ of your vendors’ ability to fill your Purchase Orders. Purchasing Lead 
+ Time for a Vendor /Item will be displayed in the existing ‘Lead’ field 
+ on the Inventory Item Viewer’s Vendors tab.</p>
+<p style="margin-left: 36.00pt;">Purchasing Lead Time for a Vendor/Item 
+ is computed from your Purchase Orders. The lead time for an item on a 
+ Purchase Order is computed as the number of days between Date Requested 
+ and received dates for the item. If the Date Requested field is left blank, 
+ the PO will be considered as an ‘ASAP’ order and the request date will 
+ be taken from the PO’s ‘Released’ date field.</p>
+<p style="margin-left: 36.00pt;">If multiple shipments were required to 
+ fill the order, the lead time will be computed as the ‘weighted average’ 
+ of the lead times for each shipment. Only PO lines having complete shipments 
+ are considered when computing Purchasing Lead Time.</p>
+<p style="margin-left: 36.00pt;">Only orders entered within the usage period 
+ will be considered in performing this calculation. The suggested usage 
+ period is one year (i.e. within 365 days prior to the running of the report).</p>
+
+</body></html>

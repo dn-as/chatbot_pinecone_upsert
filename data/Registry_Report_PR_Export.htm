@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.23.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="PayChex"/>
+  <meta name="MS-HKWD" content="registry"/>
+  <meta name="MS-HKWD" content="export payroll"/>
+  <meta name="MS-HKWD" content="sys-pr-export"/>
+  <meta name="MS-HKWD" content="payroll"/>
+  <meta name="MS-HKWD" content="Paycor"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry Report PR Export</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="ADP,PrimePay,Canadian ADP,ADPCanada,PayChex,registry,export payroll,sys-pr-export,payroll,Paycor"/>
+<meta name="brsnext" value="Start_CPP_Time_Import.htm"/><meta name="brsprev" value="Report_PR_Export_Paychex.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Report PR Export">
+        <span>Registry Report PR Export</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry Report PR Export</h1>
+  <h2>Purpose:</h2>
+  <p>This registry setting is required to support reporting functionality for Paycor, Paychex, certain ADP formats, PrimePay. See <a href="Report_PR_Export.htm">Report PR Export</a> for details on the function itself.</p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold;">Testing Your Registry Entries</font><br/>
+    <font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.
+  </p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Setting</font>
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Values are Uppercase-Lowercase Sensitive:</font><br/>
+    The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.
+  </p>
+  <h2>Important Fields:</h2>
+  <p>
+    <font style="font-weight: bold;">Id: sys-pr-export</font>
+  </p>
+  <h3>Paycor Users</h3>
+  <p>The following entries are required to implement the Paycor export module.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> Format <font style="font-weight: bold;">Setting Value:</font> Paycor
+  </p>
+  <p>This registry option specifies that the Paycor formatting will be used in the Report Payroll Export function.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> PathName <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">path</font>
+  </p>
+  <p>This registry option specifies the complete path of the directory to which SAM Pro will export the Paycor file.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> AltEmployeeIDField <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">database field with alternate id</span> (optional)</p>
+  <p>The above registry option may be used to modify the Report PR Export function when using the Paycor format. When implemented, the Employee User field indicated by the Setting Value will be used to specify the Employee Id in the export file.</p>
+  <p>The Setting Value of this option should specify the database field name (i.e emplye_usr7) which contains the alternate employee id when using the Paycor format.</p>
+  <h3>Paychex SPI Flex Format</h3>
+  <p>The Report PR Export function supports the Paychex SPI Flex Format. The following registry is required to enable this functionality.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-pr-export</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> format <span style="font-weight: bold;"> Setting Value:</span> PaychexSPI</p>
+  <p>This setting specifies that the Paychex SPI Flex format will be exported. If this setting is enabled, the Paychex format setting should not be enabled!</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> PathName <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">path</font>
+  </p>
+  <p>This setting specifies the complete path of the directory to which SAMPro will export the Paychex file.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ClientNumber <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">client#</font>
+  </p>
+  <p>This required setting specifies the client number assigned to your firm by Paychex. It will be used to generate part of the filename of the Paychex file.</p>
+  <h3>Paychex Users</h3>
+  <p>The following entries are required for the Paychex reporting functionality.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> Format <font style="font-weight: bold;">Setting Value:</font> Paychex
+  </p>
+  <p>This registry option specifies that the Paycor formatting will be used in the Report Payroll Export function.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> PathName <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">path</font>
+  </p>
+  <p>This registry option specifies the complete path of the directory to which SAM Pro will export the Paychex file.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ClientNumber <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">client#</font>
+  </p>
+  <p>This registry option specifies the client number assigned to your firm by Paychex. It will be used to generate part of the filename of the Paychex file.</p>
+  <h5>Custom Paychex Format</h5>
+  <p><span style="font-weight: bold;">Setting Key:</span> Format   <span style="font-weight: bold;">Setting Value:</span> PayChexDayNite</p>
+  <p>The PayChexDayNite version of the Format suppresses the print of the Employee Id and Override Rate for employee detail records. The PayChex Employee # (Employee User1 field) into Employee Id, positions 1-6. Do not extract the SS# into positions 119-128, leave blank.</p>
+  <h3>ADP Users</h3>
+  <p>The following entries are required for ADP Exports implemented with Report PR Export) rather than the earlier ADP Export functionality.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-pr-export</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> Format <font style="font-weight: bold;">Setting Value:</font> ADP
+  </p>
+  <p>This registry option specifies that the ADP formatting will be used in the Report Payroll Export function.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> PathName <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">path</font>
+  </p>
+  <p>This registry option specifies the complete path of the directory to which SAMPro will export the ADP file.</p>
+  <p><span style="font-weight: bold;">
+      <font style="font-weight: bold;">S</font>etting Key:
+    </span> FileId   <span style="font-weight: bold;">Setting Value:</span>
+    <font style="font-style: italic;">YY</font>
+  </p>
+  <p>
+    <font style="font-style: italic;">YY</font> should be replaced by a 1-2 character code used to generate the filename. This is also a field on the input screen. If the FileId is set in the Registry, it will automatically default into the report range screen.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> CompanyCode <font style="font-weight: bold;">Setting Value:</font> 2-3 character code
+  </p>
+  <p>This is also a field on the input screen. If the CompanyCode is set in the Registry, it will automatically default into report range screen.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> AltEmployeeIDField   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">database field with alternate id</span></p>
+  <p>The Setting Value of this option should specify the database field name (i.e emplye_usr1) which contains the alternate employee id.</p>
+  <h3>Custom PR ADP Export (<span style="font-weight: bold;">ADPKaback)</span></h3>
+  <p>This format provides a customized ADP detail record generated by the Report PR Export function. This processing will be enabled via the following registry options and entries in the Employee User2 field and with consultation with ADP.</p>
+  <p>Version 9.1 supports earnings 3 code ADC (Additional Compensation).</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-pr-export</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> format   <span style="font-weight: bold;">Setting Value:</span> ADPKaback</p>
+  <p><span style="font-weight: bold;">Setting Key</span> TaxFrequencyField   <span style="font-weight: bold;">Setting Value:</span> emplye_usr2</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Note:</span> If the ADPKaback format is specified, the FileId, PathName and CompanyCode keys must also be completed in the registry. The AltEmployeeIDField key is supported. It is optional and if the key is not present, the emplye_id field is used.</p>
+  <p style="font-weight: bold; margin-left: 48px;">Employee Record</p>
+  <p style="margin-left: 48px;">The Employee User2 field must be set to the appropriate TaxFrequency value. This value will be included in the ADP export detail for the ADPKaback format.</p>
+  <p style="margin-left: 48px;">The following registry setting may be used to override the Pay # in the PR Export file <span style="font-weight: bold;">for the ADPKaback format only</span>:</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> PayNumberField    <span style="font-weight: bold;">Setting Value:</span> emplye_usr3</p>
+  <p style="margin-left: 48px;">For example, entering a 0 (zero) in emplye_usr3 field would force a blank to be printed in the Pay# field in the export file.</p>
+  <h3>Prime Pay Format</h3>
+  <p>The Start PR Export function supports exports to Prime Pay. The following registry is required to implement the Prime Pay format in the generated text file.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-pr-export</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> Format <font style="font-weight: bold;">Setting Value:</font> PrimePay
+  </p>
+  <p>This required setting specifies that the PrimePay formatting will be used in the Report Payroll Export function.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> PathName <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">path</font>
+  </p>
+  <p>This registry option specifies the complete path of the directory to which SAMPro will export the PrimePay file.</p>
+  <h3>Canadian ADP Format</h3>
+  <p>This release supports Canadian ADP processing. A revised Canadian v.cus is needed. The following registry settings are required to enable this functionality.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-pr-export</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> Format <font style="font-weight: bold;">Setting Value:</font> ADPCanada
+  </p>
+  <p>This required setting specifies that the Canadian ADP formatting will be used in the Report Payroll Export function.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> PathName <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">path</font>
+  </p>
+  <p>This registry option specifies the complete path of the directory to which SAMPro will export the Canadian ADP export file.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> CompanyCodeCA   <span style="font-weight: bold;">Setting Value:</span> 2-3 character code specified by ADP</p>
+  <p>This is also a field on the input screen.  If the CompanyCodeCA is set in the Registry, it will automatically default into report range screen.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> AltEmployeeIDField   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">database employee field with alternate id</span></p>
+  <p>The Setting Value of this option should specify the database field name (for example, emplye_usr3) which contains the alternate employee id.</p>
+  <p><span style="font-weight: bold;">
+      <font style="font-weight: bold;">S</font>etting Key:
+    </span> FileId   <span style="font-weight: bold;">Setting Value:</span>
+    <font style="font-style: italic;">YY</font>
+  </p>
+  <p>
+    <font style="font-style: italic;">YY</font> should be replaced by a 1-2 character code used to generate the filename. This is also a field on the input screen. If the FileId is set in the Registry, it will automatically default into the report range screen.
+  </p>
+  <h3>GMS Format</h3>
+  <p>The following entries are required to implement the GMS export module.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-pr-export</p>
+  <p>
+    <font style="font-weight:bold">Setting Key:</font> Format <font style="font-weight:bold">Setting Value:</font> GMS
+  </p>
+  <p>This required setting specifies that the PrimePay formatting will be used in the Report Payroll Export function.</p>
+  <p>
+    <font style="font-weight:bold">Setting Key:</font> PathName <font style="font-weight:bold">Setting Value:</font>
+    <font style="font-style:italic">path</font>
+  </p>
+  <p>This registry option specifies the complete path of the directory to which SAMPro will export the GMS file.</p>
+
+</body></html>

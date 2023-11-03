@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.9.5.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="ap"/>
+<meta name="MS-HKWD" content="check"/>
+<meta name="MS-HKWD" content="payables"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="MS-HKWD" content="single write"/>
+<meta name="MS-HKWD" content="vendor"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>AP Single Write Check</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="ap,check,payables,report,single write,vendor"/><meta name="brsnext" value="PR_Check_Report.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AP Single Write Check">
+        <span>AP Single Write Check</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Single Write AP Check</h1>
+<h2>Purpose:</h2>
+<p>This report produces a single AP Check. Unlike the AP Check Report, you may specify the vendor invoice number (or numbers) to include on the check. This function also enables you to specify a check number that was previously skipped as long as that number has not been used.</p>
+<h2>Usage:</h2>
+<p>This function is optional, since manual checks can be used instead and recorded in the AP Journal. If discounts are taken, it must be run after the <a href="AP_Date_To_Pay.htm">AP Date to Pay</a> function has been run to confirm the check amount and specify any partial payments to be made or discounts to be taken.</p>
+<p>Be sure to verify that you have completed the fields. Click the Go button, the system will ask you to confirm that the check printed correctly. After you click Yes, the system will then display the Check Print Checklist. At this point, you can decide whether to post the transaction, void the transaction, or reuse the check.</p>
+<h2>Registry Entries:</h2>
+<p><a href="Registry_Entry_AP_Checks.htm">Registry Entry for AP Checks</a>: Most standard registries available for AP Checks are supported for Single Write checks.</p>
+<p><a href="Registry_AP_Manual_(Single_Write)_Checks.htm">Registry Entry for AP Manual Checks</a></p>
+<h2>Report Description:</h2>
+<p>The AP Check will be printed on an 8.5&quot; x 11&quot; form. By default, the dual stubs will be at the top and bottom, but this may be changed by implementing the registry entry above. Up to 23 lines of invoice detail will appear on the stubs: if 23 lines are exceeded, a summary will be printed. Print the <a href="AP_Check_Detail.htm">AP Check Detail Report</a> to provide the Vendor with detail information for all detail lines.</p>
+<p>Verify that your check stock is loaded in the printer and that the correct printer is selected before proceeding.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Report Options:</font><br/>
+The Report Options selector pane controls how the report will be output. Click <a href="Report_Options.htm">Report Options</a> to learn more.</p>
+<p><font style="font-weight: bold;">Range:</font><br/>
+You may enter a unique, alphanumeric name to save and identify your customized report Range (for example, a specific Vendor or Vendors). Ranges are defined by the contents of the ID field(s). Your default Id fields will not be saved unless you name your range.</p>
+<p><font style="font-weight: bold;" color="#0000FF">Hint:</font> You can create user-defined report ranges that are available to all users with access to that report. To do so, the first character of the named range should be an asterisk. Named ranges beginning with an asterisk will appear on all users&#39; report ranges options so that they can be selected (but not altered) by any user with access to that report. Only the user that created the report range is allowed to alter it.</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font><br/>
+If your company departmentalizes or uses profit centers for Vendor checks, enter the appropriate GL Entity to be credited or double-click on this field to select from a list of Id&#39;s. Note that the system uses the combination of GL Entity and GL Account Number when determining the check number sequences; a specific GL Account might have checks 1,2 and 3 for GL Entity 1, checks 1,2,3 and 4 for GL Entity 2, and so on. Therefore, depending upon how your company data is set up, you would most likely <font style="font-weight: bold;">always</font> specify a GL Entity, or <font style="font-weight: bold;">never</font> specify a GL Entity.</p>
+<p><font style="font-weight: bold;">GL Account Id:</font><br/>
+(Required.) The bank (cash) account on which these checks are drawn. Double-click on this field to select from a list of Id&#39;s.</p>
+<p><font style="font-weight: bold;">Check Date</font><br/>
+(Required.) The date as it will appear on the check(s). Press the Spacebar to enter today&#39;s date, or double-click to display the calendar viewer.</p>
+<p><font style="font-weight: bold;">Check Number:</font><br/>
+The number of the check: the system will alert you if the check number that you entered has already been used. You many specify a check number that was skipped (in the regular Print AP Check function) as long as the number has not been used.</p>
+<p><font style="font-weight: bold;">Accounting Period Id:</font><br/>
+Enter the Id of an active accounting period or double-click on this field to select from a list. The check date must fall within the effective dates of this accounting period. This field is required.</p>
+<p><font style="font-weight: bold;">Vendor Id:</font><br/>
+Enter the Vendor Id or double-click on this field to select from a list of Id&#39;s.</p>
+<p><font style="font-weight: bold;">Next Pay Date:</font><br/>
+This field is required. Enter the Next Pay Date (as specified on the AP Date to Pay List) that you wish to issue checks for. Recall that the date that will appear on the checks themselves is specified in the Check Date field described above.</p>
+<p><font style="font-weight: bold;">Invoice Number:</font><br/>
+If this field is left blank, all eligible invoices for this vendor will be paid. If you only wish to pay a selected invoice (or invoices) for this vendor, position the caret at the left edge of this range (e.g., by tabbing into it) and then carefully enter the vendor&#39;s invoice number exactly as it appears in the AP Journal. Multiple invoices may be specified by separating their numbers with a comma (and no spaces). For example, if you wished to pay only the invoices 256 and 258 from this vendor, you would fill in this field as follows:</p>
+<p>256,258</p>
+<h2>Important Buttons<font style="font-size: 9pt;" color="#000000" size="2">:</font></h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Click the Go button to print the check.</p>
+
+</body></html>

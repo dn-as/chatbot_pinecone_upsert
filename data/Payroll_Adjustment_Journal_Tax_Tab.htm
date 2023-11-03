@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.5.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="adjustment (payroll)"/>
+<meta name="MS-HKWD" content="journal"/>
+<meta name="MS-HKWD" content="labor"/>
+<meta name="MS-HKWD" content="payroll adjustment"/>
+<meta name="MS-HKWD" content="tax"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Payroll Adjustment Journal Tax Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="adjustment (payroll),journal,labor,payroll adjustment,tax"/><meta name="brsnext" value="Payroll_Adjustment_Journal_Other_Tab.htm"/><meta name="brsprev" value="Payroll_Adjustment_Journal_WC_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Payroll Adjustment Journal Tax Tab">
+        <span>Payroll Adjustment Journal Tax Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Payroll Adjustment Journal Taxes Tab</h1>
+<h2>Purpose:</h2>
+<p>Enter an adjustment or beginning balance pertaining to taxes or record tax information for a manual paycheck.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Table Id:</font><br/>
+Enter a valid Tax Table Id or double-click to select from a list. If you are making a manual check entry, a line must be entered for each tax table normally included in payroll entries and the GL for this employee. For example, Federal, State, FUTA, SUTA, FICA, MEDICARE all need to be entered for these entries to be properly accounted for in future payroll computations.</p>
+<p><font style="font-weight: bold;">Taxable Earnings: Exempt Earnings:</font><br/>
+Enter the dollar amount of Taxable and Exempt Earnings for the Tax Table you selected on this line. Note that the Taxable plus Exempt Earnings should total the Total Earnings Entered on the main screen. EX: Total FICA earnings are 1000.00 but Federal Earnings might only be 950.00 (Taxable Earnings) if there was a 401K deduction of 50.00 (Exempt Earnings).</p>
+<p><font style="font-weight: bold;">Tax Withheld:</font><br/>
+The total tax withheld from the employee for this authority. Note that the total of all line items entered on this screen must equal the Total Tax field that is manually entered on the parent screen.</p>
+<p><font style="font-weight: bold;">Employer Tax:</font><br/>
+This is the employer&#39;s portion of the tax that is expensed (FICA, Medicare, FUTA, SUTA, and in some states, EDI and SUI). It is important that these be filled in for limitations and future computations to be maintained by the system. This portion of the taxes is not computed for the parent screen.</p>
+<p><font style="font-weight: bold;">Earning Group Id:</font><br/>
+If this entry is for Union Payroll, enter the appropriate Earnings Group Id.</p>
+<p><font style="font-weight: bold;">Share 401(k)</font>  <font style="font-weight: bold;">Share Federal:</font>  <font style="font-weight: bold;">Share FICA:</font>  <font style="font-weight: bold;">Share Other:</font>  <font style="font-weight: bold;">Share Section:</font><br/>
+Reserved for future reporting purposes (for adjustments only). These fields specify the share amount used to obtain the Taxable Earning for a specific tax authority:</p>
+<p>Gross Earnings - Taxable Earnings) = Exempt Earnings<br/>
+= Share 401(k)+ Share Federal + Share FICA + Share Other + Share Section</p>
+
+</body></html>

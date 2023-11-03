@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Change Orders and Last Cost</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nKnown Problems\nChange Orders and Last Cost");
+addAvenueInfo("EMI","inventory_item_unit_cost_calculation.htm","inventory_item_availability_tab.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Change Orders and Last Cost – Known Problem</P>
+ <P class="support" >A known problem exists with a very particular series of events with Change Orders and Last Cost (see below). </P>
+ <P class="support" >We have decided that this example is too obscure to warrant the risks associated with either changing the query or changing the posting rules.&nbsp; To see this specific failure, you must have multiple purchases of the same Item on the same date and 'change' the first purchase after the second purchase.&nbsp; Finally, if you go one step further and close the second PO, the problem goes away.</P>
+ <P class="Support_Heading_2" >Steps to Cause Problem</P>
+ <P class="support" >1. PO 10512 is entered in the system with 2 items 123127 for&nbsp; 50 @ 7.25 and 100-tip for 10 @ 10.50.<BR>2. PRINT PO<BR>3. Received Item 123127 on inventory receipt 10168<BR>4. Partially invoice receipt for item 123127 and it is created in ap journal 10321.&nbsp; <BR>5. You get a price change on the 100-tip making it 10.75 each creating po 10512-01.<BR>6. You reorder item 123127 on another purchase order 10513 and the cost has increased to 7.50.<BR>7. Receive PO 10513 on inventory receipts journal 10169.<BR>8. Create AP journal 10322 to pay for po 10513.<BR>9. Here is where the bug comes in. In Laura's data, put a closed date on change order 10512-01. You will find that it is writing a line to imhstry for a purchase for the item that was received in full (123127)and it is changing the last cost.&nbsp; It is writing a qty on order and a qty order.&quot;</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

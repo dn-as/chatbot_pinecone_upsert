@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.8.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="project manager workbench"/>
+<meta name="MS-HKWD" content="sys-start-sappymntapprvdlst"/>
+<meta name="MS-HKWD" content="approval"/>
+<meta name="MS-HKWD" content="ap"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Start AP Payment Approved List</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="project manager workbench,sys-start-sappymntapprvdlst,approval,ap"/><meta name="brsnext" value="Start_Archive_Work_Orders.htm"/><meta name="brsprev" value="Registry_Entry_PWP_Billed_List.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Start AP Payment Approved List">
+        <span>Registry Start AP Payment Approved List</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Start AP Payment Approved List</h1>
+<h2>(sys-start-sappymntapprvdlst)</h2>
+<h2>Purpose:</h2>
+<p>This registry entry may be used to control the order this list appears in, and to set the Next Pay Date into the future for additional purchase control.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id: sys-start-sappymntapprvdlst</font></p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> for additional Registry Id formats to allow entries for specific Users, Branches, Security, or User Groups to override the main entry.</p>
+<h3>Control the List Order</h3>
+<p><font style="font-weight: bold;">Setting K</font><font style="font-weight: bold;">ey:</font> OrderBy    <font style="font-weight: bold;">Setting Value:</font> jb_id,wrkordr_id</p>
+<p>This option enables the user to specify that the Start AP Payment Approved List is ordered by Job Id (in the PO Header), and then by Work Order Id (in the PO Header) within each Job.</p>
+<h3>Override Pay Date</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> CashManagerPayDate  <font style="font-weight: bold;">Setting Value:</font> 2099-12-31</p>
+<p>This may be used to override the Pay Date entered on the Start AP Approved List (which may have been originally set on the Start AP Approved List PM). It would be used to make this process act like a 3<font style="vertical-align: super;">rd</font> approval function so that invoices approved in this fashion are NOT paid as part of the normal AP Check printing process (because the date is set so far in the future). To pay these checks, a cash manager would run AP Date to Pay, filtering on the date referenced in this entry in the Next Pay Date range. The cash manager could then review the entries, and select an appropriate Pay Date.</p>
+<p><br/></p>
+
+</body></html>

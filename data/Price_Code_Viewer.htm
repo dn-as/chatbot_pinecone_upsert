@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.2.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="exception price code"/>
+<meta name="MS-HKWD" content="price code"/>
+<meta name="MS-HKWD" content="price level"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Price Code Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="client site,exception price code,price code,price level"/><meta name="brsnext" value="Shipping_Class_Viewer.htm"/><meta name="brsprev" value="Purchase_Manager_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Price Code Viewer">
+        <span>Price Code Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Price Code Viewer</h1>
+<h2>Purpose:</h2>
+<p>Price Codes provide the capability to override/customize pricing levels by client site for selected inventory items.</p>
+<h2>Example:</h2>
+<p>Suppose you want most clients to use the standard 9 price levels (say, 50.00, 55.00, 57.00, 58.00, 59.00, 62.00, 63.00, 64.00, 65.00) on the main inventory item screen for item xyz, but that you have a special agreement with other clients for a different price level schedule (40.00, 41.00, 42.00, 43.00, 44.00, 45.00, 46.00, 47.00, 48.00).</p>
+<p>To accommodate this situation, you would first create a Price Code, such as SA1 (Special Agreement 1). This Price Code would then be entered in the Price Code field of all Client Sites that are entitled to this pricing structure. Next, you would edit the Inventory Item Pricing tab of all records (including xyz) subject to this special pricing. The SA1 prices would default on Client Orders and Inventory Items entered on Work Orders for Client Sites with SA1 entered in the Price Code field. The regular price levels would be used for items without appropriate Pricing tab entries.</p>
+<h2>Usage:</h2>
+<p>Optional. Referenced in the Inventory Item Pricing tab and the Client Site record.</p>
+<p>If <font style="font-weight: bold;">foreign currency processing</font> is implemented on your system, price codes for foreign customers must reference revenue in terms of the foreign currency in the Inventory Item’s Pricing tab.</p>
+<h2>Registry Entries:</h2>
+<p>For Service Invoices, the system sets the work order inventory description using the Price Code (if the description is completed) and the Inventory Price Exceptions tables (shown on the Inventory Item Pricing tab). A registry option option enables you to only include the Inventory Description on service compute invoices – it is designed for companies that do not want the internal part name to appear on customer invoices. See <a href="Registry_Entry_Report_Service_Invoice.htm">Registry Report Service Invoice (sys-report-serviceinvoice)</a> for details.</p>
+<p>The parent Inventory Item allows for 9 levels of Material Pricing, but Price Codes only allow for 5. If price codes are in effect, and the default price level from the Client Site is greater than 5, the system now defaults price level 1 from the Price Code. A registry entry <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#globel_settings_price_code">Price Code Handling (sys-ffv-global-settings)</a> is available to always default the value from the Price Code level 1, regardless of the Material Price Level in the Client Site.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of all fields that may be included in this record. If you are using a customized system, the fields displayed on your screen may not exactly match the order or status (required, optional, default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">Price Code:</font> (5 character, only - and . special characters)<br/>
+A unique Id. This field is required.</p>
+<p><font style="font-weight: bold;">Price Code Description:<br/></font> A brief description of this Price Code. This field is optional.</p>
+<p><font style="font-weight: bold;">Obsolete</font><font style="font-weight: bold;">?</font><font style="font-weight: bold;"><br/></font>If this field is checked, the record is considered Obsolete, and it may not be directly specified during data-entry (either by entering the Id or selecting it from a list). Obsoleted records can be edited and the Obsolete option can be un-done when necessary. When you check the Obsolete field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through access to all tables referencing this record: see <a href="References_List.htm">References List</a> for details.</p>
+
+</body></html>

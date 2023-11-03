@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.5.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="adjustment (payroll)"/>
+<meta name="MS-HKWD" content="journal"/>
+<meta name="MS-HKWD" content="labor"/>
+<meta name="MS-HKWD" content="payroll adjustment"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Payroll Adjustment Journal Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="adjustment (payroll),journal,labor,payroll adjustment"/><meta name="brsnext" value="Payroll_Adjustment_Journal_WC_Tab.htm"/><meta name="brsprev" value="Labor_Journal_Viewer_Other_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Payroll Adjustment Journal Viewer">
+        <span>Payroll Adjustment Journal Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Payroll Adjustment Journal Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create/maintain the list of Payroll Adjustment entries.</p>
+<h2>Usage:</h2>
+<p>Make adjustments directly to payroll, enter beginning balances, or record a manual payroll check (such as a bonus). Note that Payroll Adjustment Journal entries can only be added – not changed or deleted.</p>
+<h5>ACA - Employer Sponsored Health Coverage</h5>
+<p>This journal is use to record the dollar amounts for each employee.</p>
+<p style="margin-left: 36.00pt;">1. If necessary, create the appropriate Earnings record for this fringe, and enter 12:DD into the W-2 Category field.</p>
+<p style="margin-left: 36.00pt;">2. Create a PR Adjustment entry for each employee; enter the appropriate Fringe amount on the Earnings tab.  The GL transactions would already have been made; the PR Adjustment entry gets it on the W-2. </p>
+
+<h2>Screen Structure</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of all fields that may be included in this record. If you are using a customized system, the fields displayed on your screen may not exactly match the fields described in this Topic.</p>
+<p>This viewer includes a header or main screen, and detail screen that are accessible by tabs on the lower section of the screen. Click on the one of the following buttons for information on these detail screens:</p>
+<p><a href="Payroll_Adjustment_Journal_Earnings_Tab.htm"><img src="assets/images/image/btn_Earnings.gif" alt="image\btn_Earnings.gif" title="image\btn_Earnings.gif" width="68" height="24" border="0"/></a> <a href="Payroll_Adjustment_Journal_Hours_Tab.htm"><img src="assets/images/image/btn_Hours.gif" alt="image\btn_Hours.gif" title="image\btn_Hours.gif" width="50" height="24" border="0"/></a> <a href="Payroll_Adjustment_Journal_Tax_Tab.htm"><img src="assets/images/image/btn_Taxes.gif" alt="image\btn_Taxes.gif" title="image\btn_Taxes.gif" width="51" height="24" border="0"/></a> <a href="Payroll_Adjustment_Journal_Deductions_Tab.htm"><img src="assets/images/image/btn_Deductions.gif" alt="image\btn_Deductions.gif" title="image\btn_Deductions.gif" width="84" height="24" border="0"/></a> <a href="Payroll_Adjustment_Journal_Other_Tab.htm"><img src="assets/images/image/btn_Other.gif" alt="image\btn_Other.gif" title="image\btn_Other.gif" width="47" height="24" border="0"/></a> <a href="Payroll_Adjustment_Journal_GL_Tab.htm"><img src="assets/images/image/btn_GL.gif" alt="image\btn_GL.gif" title="image\btn_GL.gif" width="30" height="24" border="0"/></a> <a href="Payroll_Adjustment_Journal_WC_Tab.htm"><img src="assets/images/image/btn_Workers_Comp32.gif" alt="image\btn_Workers_Comp32.gif" title="image\btn_Workers_Comp32.gif" width="110" height="24" border="0"/></a></p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">PR Journal Id:</font><br/>
+If you are creating a new transaction, this Id will be generated for you where you save the record.</p>
+<p><font style="font-weight: bold;">Entered By: Date Entered: Time Entered:</font><br/>
+These display-only fields are maintained by the system based on your user Id and the system date and time.</p>
+<p><font style="font-weight: bold;">Employee Id:</font><br/>
+Enter the employee this journal entry pertains to (or double-click to select from your firm&#39;s list of employees).</p>
+<p><font style="font-weight: bold;">Type:</font><br/>
+Adjustment would be used to correct particular entries in payroll reports, or to enter beginning balances. Select the Check option (by double-clicking on its radio button) when you manually want to enter in a payroll check., such as a bonus check where unique amounts are being taken out for taxes and/or deductions, or to record a manual paycheck.</p>
+<p><font style="font-weight: bold;">Pay Period Id:</font><br/>
+Enter the Id of the Pay Period these journal entries belong to, or double click on this field (or press Alt+F7) to select from a list. If this payroll period is to record a manual check, use a Payroll Period that encompasses the check date of the check. The display-only Period Start and Period End Dates and Period Status fields will appear when a Pay Period is selected.</p>
+<p><font style="font-weight: bold;">Date Effective:</font><br/>
+The date to alter the appropriate account balances; this field provides the default effective date for the line item detail. For Check entries, this is the date of the check (the Date when the Cash Account is credited). For Adjustment entries, the Effective Date should also fall within the Check Date range. Enter the effective date in <font style="font-style: italic;">mmddyyyy</font> format (or double-click on this field or press Alt+F7 to access the Calendar viewer). To enter today&#39;s date, press the Spacebar. When you save this record, the system will verify that the Effective Date falls within the date range defined by the Pay Period Check dates.</p>
+<p><font style="font-weight: bold;">Description:</font><br/>
+This optional field may be used to briefly describe this transaction as a whole (e.g., the reason a manual check is being recorded).</p>
+<p><font style="font-weight: bold;">Check #:</font><br/>
+Complete this field if the option Check was selected (in the Type field). Record the actual number of the check. If Adjustment was selected, skip this field.</p>
+<p><font style="font-weight: bold;">GL Account Id:</font> <font style="font-weight: bold;">GL Entity Id:</font><br/>
+Use these fields only if this entry was flagged as a Check (under Type). To log this check in the check file, enter the Id of your Payroll Cash GL Account. If your firm uses profit centers or departmentalizes, also enter the default Entity for this transaction.</p>
+<p><font style="font-weight: bold;">Total Earnings</font><br/>
+This amount must equal the Earnings Entered (calculated by the system based on the Hours tab) in order to save this transaction.</p>
+<p><font style="font-weight: bold;">Total Other</font><br/>
+This amount must equal the Other Entered (calculated by the system based on Other Charges recorded in the tabs) in order to save this transaction.</p>
+<p><font style="font-weight: bold;">Total Tax</font><br/>
+This amount must equal the Tax Entered (calculated by the system based on Taxes recorded in the tabs) in order to save this transaction.</p>
+<p><font style="font-weight: bold;">Total Deductions</font><br/>
+This amount must equal the Deductions Entered (calculated by the system based on Deductions recorded in the tabs) in order to save this transaction.</p>
+<p><font style="font-weight: bold;">Net Pay:<br/>
+Earnings Entered:  Other Entered:  Tax Entered:  Deductions Entered:<br/>
+GL Debits Entered:  GL Credits Entered:</font><br/>
+These display-only fields are maintained by the system. Note that GL Debits must equal GL Credits in order for the entry to be saved.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database system, this informational field displays the Security Id of the local user that created this record. If multiple location security is not implemented on your system, or if this record was created by a global user, this field will be blank.</p>
+<p><font style="font-weight: bold;">Changed:</font><br/>
+This display-only field is maintained by the system.</p>
+
+</body></html>

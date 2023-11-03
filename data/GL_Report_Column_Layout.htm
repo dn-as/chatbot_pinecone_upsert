@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.8.1.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="MS-HKWD" content="gl"/>
+<meta name="MS-HKWD" content="column"/>
+<meta name="MS-HKWD" content="general ledger"/>
+<meta name="MS-HKWD" content="custom"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>GL Report Column Layout</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="report,gl,column,general ledger,custom"/><meta name="brsnext" value="GL_Report_Range_Viewer.htm"/><meta name="brsprev" value="GL_Report_Row_Layout.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="GL Report Column Layout">
+        <span>GL Report Column Layout</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>GL Report Column Layout</h1>
+<h2>Purpose:</h2>
+<p>This viewer is used to create and maintain GL Report Column Layouts.</p>
+<h2>Usage:</h2>
+<p>Required for the newer Custom GL Reporting.</p>
+<h3>Token Mapping and Column Definitions</h3>
+<p class="Body_Text_2" style="margin-left: 5.75pt;">The production of Cash Flow reports requires that certain report rows have column formulas that are different from the column definitions specified in the GL Column Layout. It turns out that this can be accomplished by changing the meaning of certain operand tokens used in the column formulas. See the discussion of the Misc. field in <a href="GL_Report_Row_Layout.htm">GL Report Row Layout</a> for details.</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Report Col Id:</font><br/>
+Uniquely defines this column. Required.</p>
+<p><font style="font-weight: bold;">GL Report Col Name:<br/></font>Describes this column. This field is optional but highly recommended.</p>
+<h2>Important Fields: Lower Section</h2>
+<p>This section is used to enter the column definitions needed for the report. For each column you can define the column’s width, a heading for the column, and what information is to print in the column.<br/>
+Each line defines one column. The first line defines the leftmost column, the second line defines the second column from the left, etc.</p>
+<p><font style="font-weight: bold;">Wdth:<br/></font>The Wdth field sets the width (in characters) of the column.</p>
+<p><font style="font-weight: bold;">Column Heading:<br/></font>The Column Heading field sets the text to appear at the top of the column. The number of characters should not exceed the width.</p>
+<p><font style="font-weight: bold;">HJ<br/></font>The HJ field sets the Heading Justification (L=Left, C=Centered, R=Right). If this is left blank, the Report Writer will make a pretty good guess at the appropriate value.</p>
+<p><font style="font-weight: bold;">Formula:<br/></font>The Formula field contains the formula that defines the actual contents of the field. A formula is a set of ‘operators’ and ‘operands’ which are strung together to form an ‘algebraic expression’ which is used to compute the value that is to be printed in the column.</p>
+<h3>Token Operands</h3>
+<p style="margin-left: 36.00pt;">There are two types of operands: alphabetic and numeric</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Alphabetic</font> operands include:</p>
+<p style="margin-left: 66.25pt;"><font style="font-weight: bold;">ID</font> that evaluates to a GL Account’s Id field.</p>
+<p style="margin-left: 66.25pt;"><font style="font-weight: bold;">NUMBER</font> that is the same as ID.</p>
+<p style="margin-left: 66.25pt;"><font style="font-weight: bold;">NAME</font> that evaluates to a GL Account’s Name.</p>
+<p style="margin-left: 66.25pt;"><font style="font-weight: bold;">ENTITYID</font> which evaluates to a GL Entity’s ID.</p>
+<p style="margin-left: 66.25pt;"><font style="font-weight: bold;">ENTITYNAME</font> that evaluates to a GL Entity’s Name</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Numeric operands</font> consist of a ‘Base Operand’ that may optionally be followed by one or more ‘Operand Modifiers’. Base Operands include:</p>
+<p style="margin-left: 36.00pt; text-indent: 30.25pt;"><font style="font-weight: bold;">NET</font>  (net postings for a specified GL Reporting Period)</p>
+<p style="margin-left: 36.00pt; text-indent: 30.25pt;"><font style="font-weight: bold;">BEG</font>  (balance at the beginning of a specified GL Reporting Period)</p>
+<p style="margin-left: 36.00pt; text-indent: 30.25pt;"><font style="font-weight: bold;">END</font>  (balance at the end of a specified GL Reporting Period)</p>
+<p class="Body_Text_2" style="margin-left: 66.25pt;"><font style="font-weight: bold;">BEGY</font>  (opening balance at the beginning of the year)</p>
+<p class="Body_Text_2" style="margin-left: 66.25pt;"><font style="font-weight: bold;">BEGQ</font>  (opening balance at the beginning of the report period&#39;s quarter)</p>
+<p class="Body_Text_2" style="margin-left: 66.25pt;"><font style="font-weight: bold;">ENDY</font> (synonymous with &#39;END&#39;, added for symmetry)</p>
+<p class="Body_Text_2" style="margin-left: 66.25pt;"><font style="font-weight: bold;">ENDQ</font>  (synonymous with &#39;END&#39;, added for symmetry)</p>
+<p class="Body_Text_2" style="margin-left: 66.25pt;"><font style="font-weight: bold;">NETY</font>  (the year to date net at the ending of the report period)</p>
+<p class="Body_Text_2" style="margin-left: 66.25pt;"><font style="font-weight: bold;">NETQ</font>  (the quarter to date net at the ending of the report period)</p>
+<p class="Body_Text_2" style="margin-left: 102.25pt;">Note that NETQ is equivalent to Quarter To Date and NETY is equivalent to Year To Date.</p>
+<h3>Operand Modifiers</h3>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Operand Modifiers</font> for numeric operands include:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">.&lt;number&gt;</font> will set the Reporting Period for the token to the indicated period.</p>
+<p style="margin-left: 102.25pt;"><font style="font-weight: bold; text-decoration: underline;">Example:</font></p>
+<p style="margin-left: 102.25pt;">The token ‘BEG.1’ will evaluate to the beginning balance for the first period of the current fiscal year. So the function ‘END - BEG.1’ will evaluate to the year-to-date net for the account.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">.P,.Pn, ,Pnn</font> where ‘n’ represent a digit. Without a ‘.P’ modifier, the operand refers to the reporting account period (i.e. the reporting period specified when the report is run). Adding a .P. modifier causes a shift to the prior accounting period. The ‘.Pn’ and ‘.Pnn’ modifiers cause a shift to the nth (or nnth) prior period.</p>
+<p style="margin-left: 66.25pt;"><font style="font-weight: bold; text-decoration: underline;">Examples:</font></p>
+<p style="margin-left: 66.25pt;">END gets the balance at the end of the GL Reporting Period.</p>
+<p style="margin-left: 66.25pt;">END.P or END.P1 gets the balance at the end of the prior GL Reporting Period.</p>
+<p style="margin-left: 66.25pt;">END.P12 gets the balance at the end of the 12<font style="vertical-align: super;">th</font> prior GL Reporting period.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">.B</font> tells the report writer to get the budgeted amount instead of the actual amount.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">.Axxxxx</font> forces the report writer to get the amount for the GL Account with the Id of ‘xxxxxx’ instead of the account identified for the row that is currently being printed. For example. NET.A1001 will get the actual balance for the current reporting period for account 1001.</p>
+<p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">(This feature is especially useful when it is used to refer to total accounts defined via the DefineTot RowType.)</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">.Exxxxx</font> is similar to Axxxxx but forces a particular GL Entity. A change has been made with regards to the ‘.Exxxxx’ account modifier. Previously, if ‘.E’ is used alone (i.e. without the xxxxx) the balance was computed across all entities within the General Ledger. This has been changed so that ‘.E’ will request that the balance be computed across all entities requested when the report is run. To have the balance computed across all entities, you should use the modified ‘.EALL’ where ‘ALL’ must be all in uppercase.</p>
+<p style="margin-left: 36.00pt;">The <font style="font-weight: bold;">.Gxxxxx</font> account modifier allows the retrieval of a single account balance computed as the sum of the balances of the account across all entities within a specified GL Entity Group. If xxxxx is blank (e.g. .G), the balance will be computed across all entities requested when the report is run.</p>
+<p style="margin-left: 72.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;">Combining Modifiers<br/></font>Operand Modifiers can be combined. For example END.P.B will retrieve the budgeted ending balance for the prior period.</p>
+<h3>Operators</h3>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">What kind of ‘operators’ can I have in a formula</font>?<br/>
+The normal arithmetic operators of ‘+’ ‘-‘ ‘*’ and ‘/’ are available. In addition, the percentage operator % can be used to compute the value of one operator as a percentage of another. These operators work only in conjunction with numeric operands.</p>
+<h3>Combining Operands and Operators to make a formula</h3>
+<p>A blank formula will generate a blank column.</p>
+<p>A formula containing a single operand will print the value of that operand.</p>
+<p>A formula containing an ‘algebraic expression’ will be computed using normal arithmetic methods. Note that parentheses may be used to group ‘sub expressions’ within a formula.</p>
+<p style="margin-left: 36.00pt;">Example: the formula ‘NET – NET.B’ will print the variance of the net posting (for the current account, for the reporting period) from the budgeted amount.</p>
+<p style="margin-left: 36.00pt;">Example: the formula ‘END % (END.Acash1 + END.Acash2)’<br/>
+will print the ending balance (for the current account, for the specified reporting period) as a percentage of the sum of the ending balances of the two accounts ‘cash1’ and ‘cash2’.</p>
+<p style="margin-left: 36.00pt;">Note that you can easily request nonsensical (but none the less valid) formulas.</p>
+
+</body></html>

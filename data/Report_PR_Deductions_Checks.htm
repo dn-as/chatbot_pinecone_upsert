@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.7.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="deductions"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="MS-HKWD" content="garnishment"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report PR Deductions Checks</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="deductions,report,garnishment,payroll,employee"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report PR Deductions Checks">
+        <span>Report PR Deductions Checks</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report PR Miscellaneous Deductions Checks</h1>
+<h3>Purpose:</h3>
+<p>This report enables you to print for check for various types of garnishments 
+ that you have withheld from your employee’s pay (child support payments, 
+ for example), as well as for deductions such as United Way.</p>
+<p>Disposable pay calculations for US 
+ and Canadian Payroll users where the garnishment is a percentage of disposable 
+ pay are based on the settings of the Disposable Income fields in the <a href="Deductions_Viewer.htm">Deductions</a> records. </p>
+<h3>Usage:</h3>
+<p>This report must be run <font style="font-weight: bold;">after</font> 
+ your regular payroll checks have been printed. Validation prevents the 
+ user from closing the Checklist (which appears after confirming the print) 
+ by clicking the Windows Red X, abandoning the check run. If the Red X 
+ is clicked, the message &quot;This process cannot be canceled&quot; appears. After 
+ clearing the message, the user must choose to Post, Reuse or Void the 
+ checks, and then click Go.</p>
+<p>The applicable fields in the Employee record’s Deduction tab must have 
+ been added to enable this processing provide check printing/processing 
+ capabilities for Employee PR Deductions.</p>
+<p>If your deductions checks are printed for each employee or vendor, the 
+ detailed deduction information may not all appear on the check. In this 
+ case, the Report PR Miscellaneous Deductions Check Detail function should 
+ be run for any checks that require additional detail; see <a href="Report_PR_Deductions_Check_Detail.htm">Report 
+ PR Deductions Check Detail</a> for further information.</p>
+<p>When Intercompany is enabled, validation 
+ ensures that a Company must  selected and the GL Entity completed 
+ when the report is run.</p>
+<h3>Voiding PR Miscellaneous Deductions Checks</h3>
+<p>The Void PR Check function is used to void PR Miscellaneous Deduction 
+ checks.</p>
+<p>If an Employee Check associated with one or more Payroll Miscellaneous 
+ Deduction Checks (PRMD), the system will issue a warning to the user and 
+ let them decide whether or not to continue. In this case, voiding the 
+ 2nd set of garnishment checks (that might be produced after the employee’s 
+ check is rerun) should be part of the user’s process. As long as the garnishments 
+ are the same, a second set of garnishment checks wouldn&#39;t be required.  Therefore, 
+ in that case, the user wouldn&#39;t have a second set of garnishment checks 
+ to void. A potential problem occurs if the garnishment checks can&#39;t be 
+ voided but the amounts have changed due to the voided and recomputed payroll.  In 
+ that case, the user will be required to submit the net difference on a 
+ manual check or ask for a refund in the event of an overpayment.</p>
+<h5>GL Debit and Credit Posting Entities</h5>
+<p>This function supports GL Debit and 
+ Credit posting for Deductions withholding (PR Check) &amp; relief (PRMD 
+ Check) using the following GL Entity posting precedence:</p>
+<p style="margin-left: 48px;">1. As per 
+ Employee GL Entity reference if present, else</p>
+<p style="margin-left: 48px;">2. As per 
+ Deduction Code GL Entity reference if present, else</p>
+<p style="margin-left: 48px;">3. As per 
+ Respective Check processing &quot;Bank &quot; GL Entity referenced</p>
+<h3>Important Fields:</h3>
+<p><font style="font-weight: bold;">Payroll Period Id:</font><br/>
+Required. Enter a valid Payroll Period Id or double-click on this field 
+ to select from a list. The Start and End Check Date display-only fields 
+ will be filled in when this Id is entered.</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font><br/>
+The system uses the combination of GL Entity and GL Account Number when 
+ determining the check number sequences. Depending upon how your company 
+ data is set up, you would most likely <font style="font-weight: bold;">always</font> 
+ specify a GL Entity, or <font style="font-weight: bold;">never</font> 
+ specify a GL Entity.</p>
+<p><font style="font-weight: bold;">GL Account Id:</font><br/>
+(Required.) The bank (cash) account upon which your deduction checks will 
+ be drawn.</p>
+<p><font style="font-weight: bold;">Check Date</font><br/>
+(Required.) The date as it will appear on the check(s). Press the Spacebar 
+ to enter today&#39;s date, or double-click to display the calendar viewer. 
+ This date must fall within the range specified by the display only Start 
+ and End Check Date fields.</p>
+<p><font style="font-weight: bold;">Check Number:</font><br/>
+The number of the first check to be printed for this range. If you have 
+ run checks for this GL Entity/GL Account combination before, the check 
+ number will default to the last sequentially used number plus 1. The user 
+ may change the Check Number if needed.</p>
+<p><font style="font-weight: bold;">Employee Id</font><br/>
+If you enter an Employee Id, checks will be limited to Vendors being paid 
+ by this employee – however, these Vendor checks will include sums from 
+ other employees, if applicable.</p>
+<p><font style="font-weight: bold;">Vendor Id:<br/>
+</font>This range enables you to select the Vendor or Vendors that you 
+ wish to print checks for.</p>
+<p><font style="font-weight: bold;">Branch Id</font><br/>
+If you enter a Branch Id in this range field (or double-click on this range 
+ to select from a list of branches), only Deduction checks for this Branch 
+ will be include in the check run.</p>
+<p>This report supports the Hard Block 
+ logic (implemented by the BranchFilterWithHardBlock global settings registry 
+ option) in this version.  The Hard Block is maintained regardless 
+ of how the Branch filter range is set.</p>
+<p><font style="font-weight: bold;">Cycle:<br/>
+</font>Enter the deductions cycle that you wish to limit this check run 
+ to.</p>
+<p><font style="font-weight: bold;">Executive Payroll:<br/>
+</font>This range will be initial set to Y if you are an Executive Payroll 
+ User, limiting this check run to employees that are flagged as Executive 
+ Payroll. To run deduction checks for all employees, clear this field.</p>
+<h2>Important Buttons<font style="font-size: 9pt;" color="#000000" size="2">:</font></h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Print the checks.</p>
+
+</body></html>

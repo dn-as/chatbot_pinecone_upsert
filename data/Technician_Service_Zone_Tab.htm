@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.7.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="service zone"/>
+<meta name="MS-HKWD" content="zone"/>
+<meta name="MS-HKWD" content="technician"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Technician Service Zone Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="service zone,zone,technician"/><meta name="brsnext" value="Technician_Evaluation_Summary_Tab.htm"/><meta name="brsprev" value="Technician_Certification_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Technician Service Zone Tab">
+        <span>Technician Service Zone Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Technician Service Zone Tab</h1>
+<h2>Purpose:</h2>
+<p>Create/maintain the list of service zones this technician is associated 
+ with. This table may be used for employee technicians as well as subcontracting 
+ technicians.</p>
+<h2>Usage:</h2>
+<p>When you update the Technician’s Service Zone affiliation and save the 
+ Technician record, the Technician’s affiliations in the Service Zone records 
+ will also be updated. Technician / Service Zone affiliations are used 
+ in conjunction with the <a href="TechFinder_Viewer.htm">TechFinder</a> 
+ .</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Serves<br/>
+</font>If the contents of this field is set to Yes, the Technician is affiliated 
+ with this Service Zone. If the Serves field is blank, the Technician is 
+ not associated with this Service Zone.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">To set the Serves 
+ field to Yes, right-click on it. Right-clicking will also toggle a Yes 
+ to a blank if you wish to remove the Zone affiliation.</p>
+<p>Double-click on a Service Zone to view the service zone record.</p>
+<p><font style="font-weight: bold;">Id - Name<br/>
+</font>The Service Zone Id and Name. Double-click on this field to access 
+ the Service Zone viewer.</p>
+<p><span style="font-weight: bold;">Obsolete 
+ Flag<br/>
+</span>This column will either be blank or will contain the word &#39;Obsolete&#39; 
+ depending on the status of the Service Zone.</p>
+<p style="margin-left: 48px;">If the line 
+ is flagged as &#39;Obsolete&#39;, the user will be prohibited from changing the 
+ &#39;Serves&#39; column <u style="box-sizing: border-box;">from Blank to 
+ &#39;Yes</u>&#39; via the right click mechanism. An appropriate message is issued 
+ instead. </p>
+<p style="margin-left: 48px; box-sizing: border-box;"><u>The 
+ user will continue to be able to change the &#39;Serves&#39; column from &#39;Yes&#39; 
+ to Blank even for Obsolete lines.</u></p>
+
+</body></html>

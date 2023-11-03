@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.23.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="events - employee"/>
+<meta name="MS-HKWD" content="sys-viewer-vemplye"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Employee Viewer (sys-viewer-vemplye)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="social security number - duplicate,social insurance number - duplicate,registry,events - employee,sys-viewer-vemplye,employee"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Employee Viewer (sys-viewer-vemplye)">
+        <span>Registry Employee Viewer (sys-viewer-vemplye)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Employee Viewer (sys-viewer-vemplye)</h1>
+<h2>Purpose:</h2>
+<p>Set defaults/configuration for the Employee viewer.</p>
+<p class="Body_Text_Indent" style="margin-left: 18.00pt; border-top: 0.50pt solid #000000; 
+	 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+	 border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing 
+ Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="margin-left: 18.00pt; border-top: 0.50pt solid #000000; 
+	 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+	 border-right: 0.50pt solid #000000;"><font style="font-weight: bold; 
+												 font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Related Registries:</h2>
+<p style="margin-left: 8px;">Employee 
+ Id Auto-Sequencing: please consult your support representative for details</p>
+
+<p>See <a href="Compute_Overtime_(No_Check_Printing_or_Posting).htm">Compute 
+ Overtime - No Checks Printed or Posted</a> for details/additional 
+ registries for computing overtime when checks will not be generated.</p>
+<p> <a href="Registry_Entry_Labor_Journal_Certified_PR_Warning.htm#Control_Recurring_Labor_Earnings_and_Deduction_Groups_Defaults">A 
+ Labor Journal Registry</a> setting may be used to include Earnings and 
+ Deduction Groups from the Employee Recurring Wages tab for Recurring Labor 
+ entries. </p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id: </font> <font style="font-weight: bold;">sys-viewer-vemplye</font></p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard 
+ Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> 
+ for additional Registry Id formats to allow entries for specific Users, 
+ Branches, Security, or User Groups to override the main entry.</p>
+<h3>Specify the Event Types that may be entered on the Employee Events 
+ tab</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> EventTypes <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">type1,type2,type3,type4 
+ ...</font></p>
+<p>Where the <font style="font-style: italic;">types</font> are replaced 
+ by the name of the event you wish to track. If this registry entry is 
+ present, the user must enter a value from registry list.  Double-click 
+ functionality is also supported.  If the registry entry is not 
+ present the user can key in any value in the Employee Events table.</p>
+<p style="margin-left: 36.00pt; text-indent: 30.25pt;"><font style="text-decoration: underline; ">Example:</font></p>
+<p style="margin-left: 36.00pt; text-indent: 30.25pt;">EventTypes=Hire,Fire,Layoff</p>
+<h3><a id="SSN_SIN_Duplicate_allowed"></a>SSN / SIN Number Duplicate 
+ allowed</h3>
+<p>There are legitimate reasons for the same person (SS#) to be reused 
+ in the employee table...such as rehires or to force multiple W-2&#39;s, etc. This 
+ option enables you to Allow Duplicate Tax Ids. Setting the new registry 
+ entry effectively changes the duplicate Tax Id message from an error to 
+ a warning. </p>
+<p><font style="font-weight: bold;">Id: </font> sys-viewer-vemplye</p>
+<p><font style="font-weight: bold;">Setting Key:</font> AllowDuplicateTaxId 
+ <font style="font-weight: bold;">Setting Value:</font> true</p>
+<p class="Style_Support_+_Left___0_5_">
+ <br/>
+
+ </p>
+<h3>Disable Prcnt: Field on PTO Tab (US Clients)</h3>
+<p>If your firm will not be implementing vacation accruals with the &#39;percent 
+ of wages&#39; option (most US installations), you may wish to disable the 
+ Prcnt: field on the Employee PTO tab to avoid inadvertent data-entry in 
+ this field:</p>
+<p><font style="font-weight: bold;">Setting Key:</font> disabledFieldschildPTO 
+ <font style="font-weight: bold;">Setting Value:</font> emplyepto.prcnt</p>
+<h3>Disable Annual (Standard) Hours Field on Other Tab</h3>
+<p>The new Annual Hours field in the employee record Other tab is used 
+ in various payroll calculations for salaried workers. When the field’s 
+ value is zero, the system uses the global standard (as set by the StandardAnnualHours 
+ option in sys-ffv-global-setting, or by 2080 (if this registry entry does 
+ not exist). If your firm will NEVER need to define standard hours by employee, 
+ disable this field to prevent users from entering random values.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> disabledFieldsParent 
+  <font style="font-weight: bold;">Setting Value:</font> emplye.annl-stndrd-hrs</p>
+<h3>Require that the Payroll Period Per Year is Set</h3>
+<p><font style="font-weight: bold;">Id: </font> sys-viewer-vemplye</p>
+<p><span style="font-weight: bold;">Setting Key:</span> RequiredFieldsParent 
+ <span style="font-weight: bold;">Setting Value:</span> emplye.py-prds</p>
+<h3>Sort Earnings / Deductions By End 
+ Date</h3>
+<p>In previous releases of version 9.1, 
+ the Employee&#39;s Earnings and Deductions group tabs were automatically sorted 
+ in descending order by the End Date of each child line. Due to issues 
+ maintaining complex Earnings and Deduction Groups, the default behavior 
+ has been changed back so that the lines are NOT resorted when the record 
+ is saved. If you wish to have the child lines sorted, the following registry 
+ must be implemented: This functionality is also available in the Earnings 
+ Group and Deductions Group registries. </p>
+<p><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vemplye </p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> NoSortOnChildren  <span style="font-weight: bold;">Setting 
+ Value:</span> false (default is true to prevent sorting)</p>
+
+</body></html>

@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Start Rekey Records</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nSupport Functions\nStart Rekey Records");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Start Rekey Records</P>
+ <P class="Support_Heading_2" >Purpose:</P>
+ <P class="Support" >This function is designed to enable Data-Basics support to &quot;point&quot; all internal references (rn’s) from one record to another. It was originally designed to enable users to combine GL accounts, but may be used (with caution) to aggregate other records.</P>
+ <P class="Support_Heading_2" >Usage:</P>
+ <P class="Support" >This function should only be used by Data-Basics personnel, never a client. </P>
+ <P class="Support" >Make sure a good backup is available; the results of this function are not reversible. </P>
+ <P class="Support" >This function may be run in in developmentmode. If it is run in user mode, it may only be run by a superuser.</P>
+ <P class="Support" >Special procedures must be observed for tables that are referenced by records with compound keys such as the Client Site.  See example 2 below for details. </P>
+ <P class="Support_Heading_2" >Important Fields: Range Screen</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Table Name:</FONT></P>
+ <P class="Support" >Double-click to select the the table that you wish to rekey.</P>
+ <P class="Support_Heading_2" >Important Fields: List Screen</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Id: Name:<BR></FONT>These display-only fields identify each record in the table.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Change to Id:<BR></FONT>If you want all references to the current line to point to a different Id, enter that Id. Note that this must be a valid Id. </P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Delete:</FONT><BR>If you wish to delete this record after the function has pointed all its references to a different Id, check the Delete box.</P>
+ <P class="Support" >You may also check this box to delete a record with no referenences to it (without entered a Change to Id).  The system will warn you to if this record has references (and you have not selected a different Id), and will not allow you to procede. </P>
+ <P class="Support" style="margin-left:41.75pt;"><FONT style="font-weight:bold; " >Important Tip: </FONT>Always tab out of the Delete box if you have selected it. </P>
+ <P class="Support" ><IMG src="images/go.gif" border=0 height=28 width=48 alt="images\go.gif">  Click the Go button to proceed.</P>
+ <P class="Support" ><FONT style="font-weight:bold; text-decoration:underline;" >Example 1: Account Manager</FONT></P>
+ <P class="Support" >Suppose that two of your Account Managers, AL and JK, are going to retire, and that all of their jobs, work orders, and so should now be handled by JT.  To accomplish this, you would run the Start Rekey Records function for AccountManagers. Let’s suppose the list screen resembles the following&quot;</P>
+ <P class="Support" >Id:&nbsp;Name:&nbsp;&nbsp;Change to Id:&nbsp;Delete</P>
+ <P class="Support" >AL&nbsp;Allen Letz&nbsp;</P>
+ <P class="Support" >JK&nbsp;Jean Kerry</P>
+ <P class="Support" >JT&nbsp;Joe Taylor</P>
+ <P class="Support" >TC&nbsp;Tim Carson</P>
+ <P class="Support" >To point all current reference of JK to JT, and then delect JK, you would edit the list as follows:</P>
+ <P class="Support" >Id:&nbsp;Name:&nbsp;&nbsp;Change to Id:&nbsp;Delete</P>
+ <P class="Support" >AL&nbsp;Allen Letz&nbsp;&nbsp;JT&nbsp;&nbsp;X</P>
+ <P class="Support" >JK&nbsp;Jean Kerry&nbsp;JT&nbsp;&nbsp;X</P>
+ <P class="Support" >JT&nbsp;Joe Taylor</P>
+ <P class="Support" >TC&nbsp;Tim Carson</P>
+ <P class="Support" ><FONT style="font-weight:bold; font-style:italic; " >Note that if you double-click on the Change to Id field, all</FONT><FONT style="font-weight:bold; font-style:italic; " > active</FONT><FONT style="font-weight:bold; font-style:italic; " > records EXCEPT the one you are currently on will be listed.</FONT> </P>
+ <P class="Support" >After tabbing out of the Delete field you just flagged, click the Go button.</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support" ><FONT style="font-weight:bold; text-decoration:underline;" >Example 2</FONT><FONT style="font-weight:bold; text-decoration:underline;" >: </FONT><FONT style="font-weight:bold; text-decoration:underline;" >Client Site</FONT></P>
+ <P class="Support" >Suppose that your customer has inadvertently created 2 records that represent the same site, NW02 and NW005.  Further, suppose that both sites include 2 pieces of equipment with the indentical Id’s HVAC and Electric, and both sites have work orders. We will assume that we want to ‘keep’ the NW02 site.  Because of the situation with the identical Id’s, the rekey must be done in 2 steps. </P>
+ <P class="Support" >Step 1:</P>
+ <P class="Support" >Go to the Equipment records for NW005 and change their Id’s to, for example, HVAC1 and Electric1, so they will not be identical to NW02’s equipment.</P>
+ <P class="Support" >Step 2:</P>
+ <P class="Support" >Run the Start Rekey Records function, changing references to NW005 to NW02 and then deleting NW005. Remember to tab out of the Delete box after checking it!</P>
+ <P class="Support" >Id:&nbsp;Name:&nbsp;&nbsp;Change to Id:&nbsp;Delete</P>
+ <P class="Support" >…..</P>
+ <P class="Support" >NW005&nbsp;Northwest Br 5&nbsp;NW02&nbsp;&nbsp;X</P>
+ <P class="Support" >NW02&nbsp;Northwest Br 2&nbsp;</P>
+ <P class="Support" >….</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Note: </FONT><FONT style="font-weight:bold; " >Rekeying </FONT><FONT style="font-weight:bold; " >Client Site Equipment</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">Although this function can be used to rekey Client Site Equipment records after you have rekeyed the Sites, we do <FONT style="font-weight:bold; " >NOT</FONT> recommend doing so. Instead, use the Client Site Equipment view to change the Site the Equipment is assigned to. </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

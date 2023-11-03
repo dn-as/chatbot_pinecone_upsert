@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Auto-sequencing Issues in Job Clone and New Call Backscreen</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nSupport Tips and Tricks\nAuto-sequencing in Job Clone and New Call Backscreen");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_2" >Auto-sequencing Issues in Job Clone and New Call Backscreen</P>
+ <P class="Support" >There are two places where the auto-numbering of Job – and potentially Clients and Sites take place:</P>
+ <P class="Support" style="margin-left:36.00pt;">While using the New Call back screen to create a new site it will create a client site/client/job all with the same ID #. This number is generated from the <FONT style="font-weight:bold; " >nextclnt table.</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">While using the clone job function to create a new job, it will create a job ID # that is generated from the <FONT style="font-weight:bold; " >nextjb table</FONT> if the following registry is in effect: </P>
+ <P class="Support" style="margin-left:72.00pt;">Id:  Sys-ffv-global-settings</P>
+ <P class="Support" style="margin-left:72.00pt;">Contents: AutoSequenceJobId=true (see <A href="internal_registry_job_number_auto_sequencing.htm"><FONT style="color:black; " >Internal Registry Job Number Auto-sequencing</FONT></A> )</P>
+ <P class="Support" >It is possible for Id number &quot;collisions&quot; to occur that will result in a 196 error message if the next id in the sequence already exists, as well as the failure of the creation of the record or records. <FONT style="font-weight:bold; text-decoration:underline;" >Job cloning is smart enough to look for the next sequential number</FONT><FONT style="font-weight:bold; text-decoration:underline;" > if this occurs</FONT><FONT style="font-weight:bold; text-decoration:underline;" >; the New Call Backscreen cloning is not!</FONT></P>
+ <P class="Support" >Three tables you have to keep in mind here are:</P>
+ <P class="Support" style="margin-left:36.00pt;">Nextjb</P>
+ <P class="Support" style="margin-left:36.00pt;">Nextclnt</P>
+ <P class="Support" style="margin-left:36.00pt;">Nextclntste</P>
+ <P class="Support" >Each has a next sequence number that it will use in an auto-numbering setup (Column SEQ).</P>
+ <P class="Support" >To see the trouble you can get into if the sequencing boundaries are crossed, assume no existing jobs/clients/site are present in the database.</P>
+ <P class="Support" >Say you had nextjbn starting at ‘1000’.</P>
+ <P class="Support" >And nextclnt at ‘1500’.</P>
+ <P class="Support" >You continue to clone jobs and now you are at job id 1505 (jobs 1000 through 1505 now exist).</P>
+ <P class="Support" >Now you try to create a new site by going to the new call back screen and you create a client site/client/job all with the ID of 1501. By using this sequence numbering scheme there will be a conflict because job 1501 already exists.</P>
+ <P class="Support" >These tables need to have SEQ numbers that are very far apart so that they never cross paths. Also you have to keep in mind that the jobs/clients/client sites that are manually created never use the same naming convention as the sequence uses, or will ever reach to.&nbsp; If they ever do cross you will get a SQL error that tells you that the ID would not be unique. The same thing goes for the nextclntste table (which should likely be set to your nexclnt sequence). </P>
+ <P class="Support" >If the customer is using this sort of autosequencing, they must understand that manually created Job, Client and Site Id’s should never cross the auto-numbering boundaries. The simplest way of doing this is to always include an alphabetic character in any manually generated Job, Client or Site Id’s. </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.3.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Return to Inventory Wizard"/>
+<meta name="MS-HKWD" content="inventory adjustment wizard"/>
+<meta name="MS-HKWD" content="Inventory Return Wizard"/>
+<meta name="MS-HKWD" content="Work Order Return to Inventory Wizard"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Work Order Return to Inventory Wizard</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Return to Inventory Wizard,inventory adjustment wizard,Inventory Return Wizard,Work Order Return to Inventory Wizard"/><meta name="brsnext" value="Technician_Unavailable_Tab.htm"/><meta name="brsprev" value="Registry_Entry_AR_Sales_Journal.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Work Order Return to Inventory Wizard">
+        <span>Work Order Return to Inventory Wizard</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Work Order Return to Inventory Wizard</h1>
+<h2>Purpose:</h2>
+<p><img src="assets/images/image/Return_To_Inventory.gif" alt="image\Return_To_Inventory.gif" title="image\Return_To_Inventory.gif" width="80" height="28" border="0"/></p>
+<p>This Wizard is launched from the Work Order Return to Inventory button to help you return unused inventory items entered on the selected Work Order to the location of your choice. If the selected Work Order has inventory that can be returned, clicking the button will launch a wizard to step you through the process.</p>
+<p>The Wizard warns the user (WARNING: Job XXX was closed on MM-DD-YYYY) if the WO header&#39;s Job&#39;s Date Closed is not blank or greater than today when this function is launched. If</p>
+<p style="margin-left: 8px;">The Wizard uses the Equipment originally charged (from Job History)  whenever possible. The global registry option (Setting Key: DefaultEquipmentFromWorkOrder  Setting Value: false) is ignored by the wizard.</p>
+<h2>Registry:</h2>
+<p>See <a href="Registry_Entry_Inventory_Adjustments_Journal.htm">Registry Inventory Adjustments Journal (sys-viewer-vinvntryadjstmnt)</a> for a registry entry to set the Quantity Billed from the To Return quantity.</p>
+<h2>Usage:</h2>
+<p>Running the wizard will automatically generate a Inventory Adjustment Journal entry with the transaction type of Job-to-Loc.</p>
+<p style="font-weight: normal;">As much as possible, the actual costs/revenues of the items eligible for return will be used by the wizard so that the original transaction can, in effect, be undone.  Additional fields are displayed to help the user distinguish which item(s) should be returned to inventory.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold; text-decoration: underline;">Fill Lines Wizard: Options Screen</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Work Order Id:   Job Id:<br/>
+<span style="font-weight: normal;">The Work Order Id is completed when the Wizard is launched from the Work Order.  The Job Id should remain blank.</span></font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Location Id:<br/></font>This required field defines the Location to which the Inventory should be returned. It defaults from the Work Order (if one was selected) but may be changed by the user if needed.</p>
+<p style="margin-left: 36.00pt;">Click the Next button at the bottom of the screen to continue.</p>
+<p><font style="font-weight: bold; text-decoration: underline;">Fill Lines Wizard – Items Screen</font></p>
+<p style="margin-left: 36.00pt; font-weight: bold;">Inventory Item Id:  Quantity:<br/>
+<span style="font-weight: normal;">These display-only fields default from Job History for Inventory Items already associated with the selected Job / Work Order that are eligible for return to inventory.</span></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">To Return:<br/></font>Enter the quantity of the selected Inventory Item to return to the Location. If this item should NOT be returned to the Location, leave it set to zero.</p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">To Keep:</span><br/>
+<font style="font-weight: bold;">This field initially indicates the quantity associated with the Work Order. It is automatically</font> decreased by the amount the user enters in the To Return field.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;"><span style="font-weight: bold;">Invoiced:<br/></span><span style="font-weight: normal;">This field displays the quantity of this item that has already been invoiced.</span> <span style="font-weight: bold;"></span></font></p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;"><font style="font-weight: bold;">S</font>erial / Lot Id:<br/></span>If a serialized item was recently added to the work order, the system will be able to complete this field for you because it was recorded in Job History.  If the item was added in an earlier release, the serial number must be carefully entered by the user if it is to be returned. <span style="font-weight: bold;"></span></p>
+<p style="font-weight: bold; margin-left: 48px;">Equipment Id:  Inventory Name:  Extra:  Qty Bill:   Bill Type Id:  Revenue Rate:<br/>
+Unit Price:  TOT Revenue:  Unit Cost:<span style="font-weight: normal;"><br/>
+These display only fields reflect the Job History for items on this work order/job.</span></p>
+<p style="font-weight: bold; margin-left: 48px;">InvoiceId: To Unbill:<br/>
+<span style="font-weight: normal;">If this line has been invoiced, the Invoice Id will be completed.  If you set the To Return quantity for this line, the To Unbill: field will default from it if the registry entry option to set the Quantity Billable from the Quantity Returned is enabled.</span></p>
+<p style="font-weight: bold; margin-left: 48px;">Serial No. From (JCH Serial No?):<br/>
+<span style="font-weight: normal;">If the Serial Number on this line was completed by the system based on it&#39;s value in Job History, this box will be flagged.  If the Serial Number entered manually by the user, the box will be clear.</span></p>
+<p>Click the Finish button to complete the Wizard. When you do so, the Inventory Adjustment Entry will be saved automatically, and you will be returned to the Work Order viewer. In the Work Order, the Get Costs button allows the user to import this transaction into the Work Order, and make any desired changes to the Quantity Billed.</p>
+
+</body></html>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.4.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="security"/>
+<meta name="MS-HKWD" content="CRMAnywhere"/>
+<meta name="MS-HKWD" content="CSRAnywhere"/>
+<meta name="MS-HKWD" content="web"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Web Profile Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="security,CRMAnywhere,CSRAnywhere,web"/><meta name="brsnext" value="Web_Users_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Web Profile Viewer">
+        <span>Web Profile Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Web Profile Viewer</h1>
+<h2>Purpose:</h2>
+<p>This record enables you to construct a ‘profile’ that will enable your web users to only ‘see’ those sites that they should be able to access. This record also enables you to implement custom web graphics and CRMAnywhere formatting.</p>
+<h2>Usage:</h2>
+<p>Referenced in records: Client Site, Web User.</p>
+<p>The Web Profile supercedes the older Web Security record. Although version 6.2 supports both Web Profiles and Web Security, you are strongly urged to migrate to the Web Profile/Web User standard.</p>
+<h2>Example:</h2>
+<p>Typically, a Web Profile record would be made for a logical group of Web Users. For example, if your firm serves Big Bank customers, you would create a Web Profile, Big Bank, for CRMAnywhere users from Big Bank. If Big Bank had branches in several regions, you might create a Web Profile for each region, or create one Big Bank profile, and define the regions/area via the custom values. You would then create a Web User record for each Big Bank customer, specifying which Big Bank Sites this user could access . For example, a Big Bank branch manager would be restricted (in the Web User record) to only his store, while a Big Bank area manager would be able to view information on all branches in her district. Click <a href="Web_Users_Viewer.htm">Web Users Viewer</a> for further information.</p>
+<h2>Important Fields: Upper Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Main Tab</p>
+<p class="Body_Text_3">Web Profile Id:<br/>
+<font style="font-weight: normal;">Uniquely identifies this record.</font></p>
+<p class="Body_Text_3">Description:<font style="font-weight: normal;"><br/>
+Briefly describes the function of this record. Optional but highly recommended.</font></p>
+<p class="Body_Text_3">Custom Field 1 Label:<br/>
+Custom Field 2 Label:<br/>
+Custom Field 3 Label:<br/>
+Custom Field 4 Label:<br/>
+Custom Field 5 Label:<br/>
+<font style="font-weight: normal;">These fields enable you to label the five custom fields specified in the lower section of the screen. These labels will appear on the Client Site Web Profile tab.</font></p>
+<p class="Body_Text_3" style="margin-left: 36.00pt;"><font style="text-decoration: underline;">Example:<br/></font><font style="font-weight: normal;">If your organization is organized into region, area and types of stores, you would enter</font> Region <font style="font-weight: normal;">in field 1,</font> Area <font style="font-weight: normal;">in field 2, and</font> Type <font style="font-weight: normal;">in field 3. Typically, you would not define individual stores or branches here, as this can by done by specifying the Store # (from the Client Site record) in the Web User record.</font></p>
+<h2>Important Fields: Lower Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Custom1 – Custom5 Tabs</p>
+<p class="Body_Text_3">Custom Value:</p>
+<p class="Body_Text_3"><font style="font-weight: normal;">The custom tabs enable you to specify all allowable values for this profile for each of the custom values.</font></p>
+<p class="Body_Text_3" style="margin-left: 36.00pt;">Example:</p>
+<p class="Body_Text_3" style="margin-left: 36.00pt;"><font style="font-weight: normal;">The following example shows a profiles might be set up by Region, Area and Type for Big Bank.</font></p>
+<p class="Body_Text_3" style="margin-left: 36.00pt;">Web Profile Id: <font style="font-weight: normal;">BigBank1 </font>Web Profile Name: <font style="font-weight: normal;">BigBank Midwest</font></p>
+<p class="Body_Text_3" style="text-indent: 36.00pt;">Custom1 (Region) Custom2 (Area) Custom3 (Type)</p>
+<p class="Body_Text_3" style="margin-left: 144.00pt; text-indent: -108.00pt;"><font style="font-weight: normal;">1-Midwest OH  Standalone</font></p>
+<p class="Body_Text_3" style="margin-left: 144.00pt; text-indent: -108.00pt;"><font style="font-weight: normal;">2-South MI-UP  Mall</font></p>
+<p class="Body_Text_3" style="margin-left: 144.00pt; text-indent: -108.00pt;"><font style="font-weight: normal;">3-Altantic MI-DS  Supermarket</font></p>
+<p class="Body_Text_3" style="margin-left: 144.00pt;"><font style="font-weight: normal;">IN  Kiosk</font></p>
+<p class="Body_Text_3" style="margin-left: 144.00pt;"><font style="font-weight: normal;">IL-Chicago</font></p>
+<p class="Body_Text_3" style="margin-left: 144.00pt;"><font style="font-weight: normal;">IL-1</font></p>
+<p class="Body_Text_3" style="margin-left: 144.00pt;"><font style="font-weight: normal;">AL</font></p>
+<p class="Body_Text_3" style="margin-left: 144.00pt;"><font style="font-weight: normal;">GA</font></p>
+<p class="Body_Text_3" style="margin-left: 144.00pt;"><font style="font-weight: normal;">FL-1</font></p>
+<p class="Body_Text_3" style="margin-left: 144.00pt;"><font style="font-weight: normal;">FL-2</font></p>
+<p class="Body_Text_3" style="margin-left: 144.00pt;"><font style="font-weight: normal;">...</font></p>
+<p class="Body_Text_3" style="margin-left: 144.00pt;"> </p>
+<p class="Body_Text_3" style="margin-left: 36.00pt;"><font style="font-weight: normal;">In each</font> <font style="font-weight: normal; text-decoration: underline;">Client Site</font> <font style="font-weight: normal;">record pertaining to a Big Bank branch, you would select the Big Bank Web Profile, and an appropriate value for the Custom1 (Region), Custom2 (Area), and Custom3 (Type).</font></p>
+<p class="Body_Text_3" style="margin-left: 36.00pt;"><font style="font-weight: normal;">In each</font> <font style="font-weight: normal; text-decoration: underline;">Web User</font> <font style="font-weight: normal;">record created for a Big Bank web customer, you would specify the Big Bank Web Profile, and any Region, Area and Type and Store ranges as applicable. For example, branch managers would be limited to their own branch (Store #). The Region and Area fields would be completed for an area or district manager. A supervisor that handled only kiosks for the midwest would have only the Region and Type fields completed.</font></p>
+<p class="Body_Text_3" style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Registry Tab</p>
+<p class="Body_Text_3">Registry Value:</p>
+<p class="Body_Text_3"><font style="font-weight: normal;">The registry options entered on this tab override those specified in the web-settings registry entry. Click</font> <a href="Registry_Entry_Client_Web_Interface.htm"><font style="font-weight: normal;">Registry Entry Client Web Interface</font></a> <font style="font-weight: normal;">the options described for the web-settings registry entry can also be entered on the lines in this tab.</font></p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Sites Tab</p>
+<p class="Body_Text_3"><font style="font-weight: normal;">This tab displays the list of Client Sites that reference this record on their Web Profile tab. You may double-click on a line to open the corresponding Client Site record.</font></p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Users Tab</p>
+<p class="Body_Text_3"><font style="font-weight: normal;">This tab displays the list of</font> <font style="font-weight: normal;">Web Users that reference this record on their CRM Profile. You may double-click on a line to open the corresponding Web User record.</font></p>
+
+</body></html>

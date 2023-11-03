@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.32.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="SubAnywhere"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="topic-check-list" content="Ran Smart Index"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry_SubAnywhere</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="SubAnywhere"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry_SubAnywhere">
+        <span>Registry_SubAnywhere</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry SubAnywhere (sys-subanywhere)</h1>
+  <h2>Purpose:</h2>
+  <p>This provides defaults and configurations for SubAnywhere.</p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold;">Testing Your Registry Entries</font><br/>
+    <font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.
+  </p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Setting</font>
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Values are Uppercase-Lowercase Sensitive:</font><br/>
+    The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.
+  </p>
+  <h2>Related Registry Entries:</h2>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;"><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Purchase_Order_Id">Registry to Not Set Purchase Order Id to Work Order Id (for Subcontractor PO&#39;s)</a></p>
+  <p class="MsoNormal"><u><a href="Internal_Registry_Entry_Web_Access.htm">sys-web-access-Subcontractor</a></u> – to change the default status of a WO created for a Subcontractor</p>
+  <p class="MsoNormal">                Setting Key: DefaultStatus Setting Value: <i>wrkordrlgtype_id</i></p>
+  <p><u><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Purchase_Order_Id">sys-ffv-global-settings</a></u> – to have the PO ID created for a Sub be the same ID as the WO that is created</p>
+  <p class="MsoNormal">                Setting Key: WOSubPOIdEqualsWOId Setting Value: <i>true</i></p>
+  <p class="MsoNormal"><u><a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#Do_Not_Update_NTE_Amounts_when_Quote_Approval_Wizard_Runs">sys-viewer-vwrkordr</a></u> – To turn off update Quote Approval and Work Order NTE Amounts, set the following registry settings  For Both Quote Master and Quote Manager</p>
+  <p class="MsoNormal"><b>            Setting Key</b>: UpdateNTEAmounts  <b>Setting Value:</b>  false (default is true)</p>
+  <p class="MsoNormal"><u><a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm">sys-viewer-vwrkordr</a></u> – to have added sub/tech lines also create a PO.<span style="mso-spacerun: yes;"> </span></p>
+  <p class="MsoNormal">         <b style="mso-bidi-font-weight: normal;">Setting Key:</b> CreatePOForSub   Setting Value: Prompt</p>
+  <p class="MsoNormal"><u>sys-viewer-vqte</u> and sys-viewer-vqtemngr – to make sure that approved quotes don’t go into some other status:</p>
+  <p class="MsoNormal" style="text-indent: .5in;"><b style="mso-bidi-font-weight: normal;">Setting Key:</b> <span style="mso-spacerun: yes;"> </span>ApprovalWizardDefaultTechStatus<span style="mso-spacerun: yes;"> </span> <b style="mso-bidi-font-weight: normal;">Setting Value:</b> <i style="mso-bidi-font-style: normal;">Keep disabled/don’t use</i></p>
+  <p class="MsoNormal"><span style="text-decoration: underline; ">sys-viewer-vwrkordr</span> – to show unreleased POs  on the WO Purchases tab:</p>
+  <p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Setting Key</b>: ShowUnreleasedPOs   Setting Value: true  (default is false)</p>
+  <h2>Important Fields:</h2>
+  <p>Id: sys-subanywhere</p>
+  <h3>Disable Collateral from Attaching to Site/Equipment</h3>
+  <p>When attaching file attachments in SAM Pro from SubAnywhere, the default is to attach the file to the Work Order, Client Site, and Client Site Equipment. These 2 options can enable/disable attaching the documents to the appropriate tables.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> AttachCollateralToSite <font style="font-weight: bold;">Setting Value:</font> false (default is true)
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> AttachCollateralToEquipment <font style="font-weight: bold;">Setting Value:</font> false (default is true)
+  </p>
+  <h2>Path for uploaded documents</h2>
+  <p class="MsoNormal" style="margin-left: 0px;"><span style="mso-tab-count: 1;">  </span><b>Setting Key:</b> UploadFolder <b>Setting Value:</b> <i>path</i><i>  **PATH SHOULD BE NETWORK DRIVE**</i></p>
+  <h3>Specify Collateral Directory</h3>
+  <p>This option is needed when posting SubAnywhere messages which contain file attachments. The posting event will use this directory to look for the collateral file to attach into SAM Pro.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> CollateralDirectory <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">Path to Shared FTP Folder</font>
+  </p>
+  <h3>Email Alert for Failed Posts</h3>
+  <p>When a SubAnywhere message is not able to successfully post, the message status will change to “Failed”, and send out an alerting email to the email address specified. Both the To and From entries must be specified.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> EmailPostLogsFrom <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">Email address</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> EmailPostLogsTo <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">Email address</font>
+  </p>
+  <p style="margin-left: 180.00pt;">
+    <font style="font-style: italic;">(multiple</font>
+    <font style="font-style: italic;">addresses should be</font>
+    <font style="font-style: italic;">separated by commas)</font>
+  </p>
+  
+  
+  
+  <p style="margin-left: 180.00pt;"> </p>
+
+</body></html>

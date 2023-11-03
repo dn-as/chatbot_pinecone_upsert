@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.14.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="guest"/>
+<meta name="MS-HKWD" content="CRMAnywhere"/>
+<meta name="MS-HKWD" content="CRMAnywhere Installation"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="confirm appointment"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>CRMAnywhere Guest Login for Confirm Appointment</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="guest,CRMAnywhere,CRMAnywhere Installation,registry,confirm appointment"/><meta name="brsnext" value="Vendor_Paid_Invoices_Tab.htm"/><meta name="brsprev" value="Internal_Registry_Classic_Board_sys_viewer_vdsptchbrd_classic_.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="CRMAnywhere Guest Login for Confirm Appointment">
+        <span>CRMAnywhere Guest Login for Confirm Appointment</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>CRMAnywhere Guest Login for Confirm Appointment<br/>
+(web-settings-guest)</h1>
+<h2>Purpose:</h2>
+<p>This registry setting is required to implement the Appointment Confirmation functionality.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Registry</font> <font style="font-weight: bold;">Id:</font> web-settings-guest</p>
+<h3>URL for Guest Page</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> URL <font style="font-weight: bold;">Setting Value:</font> URL of guest page</p>
+<h3>Statuses for Confirmed and Rejected Work Order</h3>
+<p>These options control the status changes that will occurred when the customer confirms or rejects the appointment. Only WO Tech lines with the Date/Time Scheduled that match the web page get updated to the new status. The WO Escalation Status gets updated when the WO is escalated which happens shortly after updating the WO Tech lines.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> ConfirmedStatus <font style="font-weight: bold;">Setting Value:</font> valid tech status (e.g., Scheduled)</p>
+<p><font style="font-weight: bold;">Setting Key:</font> RejectedStatus <font style="font-weight: bold;">Setting Value:</font> valid tech status (e.g., Rescheduled)</p>
+<h3>Messages for Confirmed and Rejected Work Orders</h3>
+<p>These options specify the message to display when an appointment is confirmed or rejected.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> ConfirmedMessage <font style="font-weight: bold;">Setting Value:</font> message for confirmed appointment</p>
+<p><font style="font-weight: bold;">Setting Key:</font> RejectedMessage <font style="font-weight: bold;">Setting Value:</font> message for rejected appointment</p>
+<h3>Specify the password and user id for the Guest page</h3>
+<p>Note that system, not the user, will manage the login using the following settings.</p>
+<p><font style="font-weight: bold;">Setting Key:</font>GuestUID <font style="font-weight: bold;">Setting Value:</font> guest</p>
+<p><font style="font-weight: bold;">Setting Key:</font> GuestPWD <font style="font-weight: bold;">Setting Value:</font> guest</p>
+
+</body></html>

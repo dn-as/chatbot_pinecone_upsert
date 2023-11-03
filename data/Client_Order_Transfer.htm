@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.11.1.2.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="record cop transfer"/>
+<meta name="MS-HKWD" content="transfer"/>
+<meta name="MS-HKWD" content="cop"/>
+<meta name="MS-HKWD" content="client order"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Client Order Transfer (record receipt of items)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="record cop transfer,transfer,cop,client order"/><meta name="brsnext" value="Client_Order_to_Ship_Pick_Entry.htm"/><meta name="brsprev" value="Client_Order_Drop_Ship_Wizard.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Order Transfer (record receipt of items)">
+        <span>Client Order Transfer (record receipt of items)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Client Order Transfer</h1>
+<h1>Purpose:</h1>
+<p>Record the receipt of a transfer order at the Transfer to Location.</p>
+<h2>Usage:</h2>
+<p>Required for Client Order Transfers and inventory control.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of all fields that may be included in this record. If you are using a customized system, the fields displayed on your screen may not exactly match the order or status (required, optional, default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p>This viewer is divided into two sections. The upper portion displays the transfer header information. The lower section lists the inventory items included on the specified pick ticket for this transfer. When the Order Id and Pick Ticket number are entered in the upper portion of the screen, the detailed information will be displayed in the lower section of the screen.</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Order Id:</font><br/>
+Enter the Client Order Transfer number printed on the Pick Ticket.</p>
+<p><font style="font-weight: bold;">Pick Ticket Number:</font><br/>
+Enter the Ticket Number (e.g., 1,2, etc.) from the Pick Ticket.</p>
+<p><font style="font-weight: bold;">Date Received</font><br/>
+The date this order was actually received; this field will serve as a default for the Date Received information in the detailed information in the lower section of the screen. Press the Spacebar to enter today&#39;s date; the - or + keys on the numeric keypad decrease or increase the date. Alternately, double-click on this field to access the Calendar viewer.</p>
+<p><font style="font-weight: bold;">Location Id: Transfer Id:</font><br/>
+These informational, display-only fields are maintained by the system. The Location Id specifies the location the inventory was shipped from. The Transfer To field displays the receiving location.</p>
+<h2>Important Fields: Lower Section</h2>
+<p>Inventory Item Id:  Inv Item Name:  PrvAllctd  Alloc.<br/>
+Serial Number:  Shipped (date)  Shipped (Qty)  PrvRec&#39;d  To Pick<br/>
+This information is maintained by the system.</p>
+<p><font style="font-weight: bold;">Date Received<br/></font> The date this items was received; this field defaults from the Date Received field in the upper portion of the screen, but may be changed by the user if needed.</p>
+<p><font style="font-weight: bold;">Transfer Done?<br/></font> If you have received the total quantity ordered, check this field by double-clicking on it (or pressing the Spacebar when the caret is located on it). When you do so, the system will set the QtyRec&#39;d to equal the quantity Shipped.</p>
+<p><font style="font-weight: bold;">Shipped<br/></font> Enter the quantity of the item received on this Pick Ticket.</p>
+<p><font style="font-weight: bold;" color="#0000FF">TIP: Quantity Received Does Not Equal Quantity Shipped</font> <font color="#0000FF"><br/></font>If the quantity received is less that the quantity shipped for a specific pick ticket, simple enter the amount that was actually received but do not check the Pick Done field. If you later receive the balance of the shipment (for that pick ticket), check the Pick Done field. The QtyRec&#39;d field should now equal the quantity Shipped field. Be sure to click the Change Record button to record the change.</p>
+
+</body></html>

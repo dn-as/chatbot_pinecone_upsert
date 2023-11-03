@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>2.0 TimeAnywhere Support Notes</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nSupport Notes - Tech/Sub/TimeAnywhere\n2.0 TimeAnywhere Support Notes");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >2.0 TimeAnywhere Support Notes</P>
+ <P class="support" >TimeAnywhere2.0.000.000_t1219</P>
+ <P class="support" >1297&nbsp;Add Time Hours Validation Against Timesheet - ASI</P>
+ <P class="Style_Support_+_Left___0_5_" >1. Add a new subtotal line(grid) at the bottom of the Time Sheet grid's existing TOTALS line.&nbsp; This grid should have a single column for each day shown in the Time Sheet grid.&nbsp; The value to show in the cell is the accumlated Hours/Minutes from the Time Log grid for each specific day.<BR><BR>2. Implement validation to prevent a user from submitting a Time Sheet where the Time Log entries don't match the Time Sheet hours.&nbsp; Note that the Time Log Entry doesn't attempt to classify hours as Reg/Ovt/Dbl so the comparison we're adding is for the sum of the R/O/D.&nbsp; In other words, the sum of the Time Log hours/minutes must equal the sum of the R/O/D hours for each date.<BR><BR>3. The validation described in #2 doesn't apply to all employees.&nbsp; Currently, SAMPRO offers no way for ASI to identify which employees are subject to the validation.&nbsp; That being the case, they have opted to define the validation rule as follows:&nbsp; when an employee has NO Time Log entries for the period, then the validation is disabled.&nbsp; Basically, it means that an employee can ignore the Time Log entry form and skip that part of the entry.&nbsp; Employees that should have entered Time Log entries and didn't will be identified on a Time Sheet Proofing Report.&nbsp; They think they can manage this situation effectively on the server-side so we'll give them a shot doing it that way first.</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >Important Note:</FONT> an RAQ is required to implement this mod. See case for details. </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

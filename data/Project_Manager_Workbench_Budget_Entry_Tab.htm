@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.8.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="project manager workbench"/>
+<meta name="MS-HKWD" content="budget"/>
+<meta name="MS-HKWD" content="workbench"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Project Manager Workbench Budget Entry Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="project manager workbench,budget,workbench"/><meta name="brsnext" value="Project_Manager_Workbench_Cost_Sources_Tab.htm"/><meta name="brsprev" value="Project_Manager_Workbench_Contacts_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Project Manager Workbench Budget Entry Tab">
+        <span>Project Manager Workbench Budget Entry Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Project Manager Workbench Budget Entry Tab</h1>
+<h2>Purpose:</h2>
+<p>Entries made in this tab will be written to Job History as Budget entries. Edits and changes to this lines will also be written to JCH. This tab also allows for the import of budget data from a .csv spreadsheet. Changes made to this tab will be reflected on the Job viewer. This tab provides a quick way to record budgets for small jobs, but does not replace the Job Journal budgeting functionality. Users that record Budget Changes should continue to use the Job Journal as the budget entry point.</p>
+<h2>Usage:</h2>
+<p>See <a href="Project_Manager_Workbench.htm">Project Manager Workbench</a> for details on this viewer’s upper tabs.</p>
+<p><font style="font-weight: bold;">Editing Budget Entries:<br/></font> The Budget tab functions like the other SAM Pro journals. If it is necessary to change a line, simply change it to the desired value and save the record. If your firm needs Budget Change functionality, the Job Journal should be used to record Budgets.</p>
+<h2>Registry:</h2>
+<p>By default, the Effective Date of budget entries generated from this tab is blank. A registry entry may be used to set the Effective Date to the Job’s Open Date (see Registry Entries section at the beginning of this user note).</p>
+<h3>Important Fields:</h3>
+<p><font style="font-weight: bold;">Hours:</font> <font style="font-weight: bold;">Quantity:</font><font style="font-weight: bold;"><br/></font>The Hours fields should be used to record labor budgets lines, and the Quantity field should be used to record material or other items. On a single line, fill in either the Hours or Quantity field.</p>
+<p><font style="font-weight: bold;">Inventory Item:<br/></font>This option field would be used if you are budgeting for specific parts. Note that the cost / revenue for this part must be specified by the user (or imported from a spreadsheet); these values will not default from inventory history.</p>
+<p><font style="font-weight: bold;">Cost Category:<br/></font>Enter (or import) an appropriate Job Cost Category for this line. For example, a Cost Category of type Labor should be selected for Hours entries. This field is required.</p>
+<p><font style="font-weight: bold;">Job Cost Code: Job Billing Item:<br/></font>The Cost Code and Billing Item this budget is assigned to. These fields are required.</p>
+<p><font style="font-weight: bold;">Unit Cost: Extended Cost:</font><br/>
+The Unit Cost must be entered by the user or imported a spreadsheet. If entering the budget manually, the system will multiply the Hours or Quantity by the Unit Cost to calculate the extended cost.</p>
+<p><font style="font-weight: bold;">Billing Type: Revenue Rate: Extended Revenue:<br/></font>By default, the billing type is set to n/a so that the user can enter/import the Revenue directly. To have the system calculate the Extended Revenue for you, select a Billing Type and enter a Revenue Rate.</p>
+<h3>Important Buttons:</h3>
+<p><img src="assets/images/image/importbudget.gif" alt="image\importbudget.gif" title="image\importbudget.gif" width="48" height="28" border="0"/> The Import Budget button may be used to import budget data from an estimator’s spreadsheet (see below for the format details).</p>
+<p>When you click this button, the system will determine how any existing budget lines should be handled:</p>
+<p>Click &#39;Yes&#39; to REPLACE all existing lines on the Budget tab.<br/>
+Click &#39;No&#39; to ADD the imported lines to the Budget tab.<br/>
+Click &#39;Cancel&#39; to end the import without updating the budget lines.</p>
+<p>If you click Yes (to replace) or No (to add the imported lines to the existing ones), a browser window will open. Browse to the desired spreadsheet and click Save.</p>
+<p>If the system detects any problems with the spreadsheet, it will display them. The spreadsheet must be corrected before it can be imported. You may print and then close the ‘workspace’ listing of errors.</p>
+<p>Once the Budget lines have been imported, remember to Save the Job record. Doing so will make the appropriate budget entries to Job History.</p>
+<h3>Spreadsheet Format:</h3>
+<p>The system expects a spreadsheet with 9 columns. During the import to the Budget tab, SAM Pro will validate that the formatting is correct, and that any referenced Inventory, Cost Code, Cost Category and Billing Item Id’s exist. The Description field must be completed for correct processing.</p>
+<p>The first row should include only column titles, listed in bold below. The additional rows will contain the budget data itself.</p>
+<p>Column 1: <font style="font-weight: bold;">Hours</font> – numeric field for labor budget lines – ######.## max</p>
+<p>Column 2: <font style="font-weight: bold;">Quantity</font> - numeric field for material and other budget lines – #####.### max</p>
+<p>Column 3: <font style="font-weight: bold;">Inv Part #</font> - text field; if included, must correspond to a valid Inventory Item Id – 30 alphanumeric max</p>
+<p>Column 4: <font style="font-weight: bold;">Unit Cost</font> – numeric field – ######.#### max</p>
+<p>Column 5: <font style="font-weight: bold;">Unit Rev</font> – numeric field – ######.#### max</p>
+<p>Column 6: <font style="font-weight: bold;">Cost Code</font> – text field; must correspond to a valid Job Cost Code for this Job – 30 alphanumeric max</p>
+<p>Column 7: <font style="font-weight: bold;">Cost Cat</font> – text field; must correspond to a valid Job Cost Category appropriate for this line</p>
+<p>Column 8: <font style="font-weight: bold;">Bill Item</font> – text field, must correspond to a valid Job Billing Item for this Job – 30 alphanumeric max</p>
+<p>Column 9: <font style="font-weight: bold;">Description</font> – used to enter a description for this entry – 40 alphanumeric max.</p>
+<p> Note that the description column <font style="font-weight: bold;">must</font> contain a value, even it is only a blank space.</p>
+
+</body></html>

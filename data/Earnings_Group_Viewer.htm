@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.3.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="earnings"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Earnings Group Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="earnings,payroll"/><meta name="brsnext" value="Union_Viewer.htm"/><meta name="brsprev" value="Earnings_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Earnings Group Viewer">
+        <span>Earnings Group Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Earnings Group Viewer</h1>
+<h2>Purpose:</h2>
+<p>Typically used to create and maintain the Earnings Groups used to implement 
+ union payroll on your system.</p>
+<h2>Example:</h2>
+<p>Create Earning Groups for Journeymen, Apprentices, Masters, etc. for 
+ each labor union.</p>
+<h2>Usage:</h2>
+<p>Specify the various earnings types applicable to each class of employees 
+ for the time periods that you define. Earnings Groups are typically used 
+ for union payroll.</p>
+<h2>Registry:</h2>
+<p><span><a href="Registry_Earnings_Group.htm">Registry Earnings Group</a> 
+ - sort Earnings by End Date. </span></p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields that may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the order or status (required, optional, 
+ default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p>The upper section of the screen consists of the data-entry fields that 
+ identify this group. The lower section of the screen lists the Earnings 
+ records comprising this group (e.g., wages, fringes, medical, pension, 
+ etc.).</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Earnings Group Id:</font> (15 character, 
+ only . and - special characters)<br/>
+A unique Id for this table. This field is required.</p>
+
+<p><font style="font-weight: bold;">Earnings Group Name:</font> (30 character)<br/>
+A brief description of this table. This field is optional but highly recommended.</p>
+<p><font style="font-weight: bold;">Union Id:</font><br/>
+The Union Id this group is associated with. Double-click on this field 
+ to select from a list of Unions.</p>
+<p><font style="font-weight: bold;">Classification Id:</font><br/>
+This optional field is designed for reporting purposes. If used, it should 
+ describe the union classification of employees associated with this Earnings 
+ Group (Foremen, Apprentices, etc.,). It enables reporting on various classes 
+ of employees within a single union or across all unions. See <a href="Union_Classification_Viewer.htm">Union 
+ Classification Viewer</a> for further information.</p>
+<p><font style="font-weight: bold;">Earnings Group <span>User1-5:</span></font><br/>
+These optional fields may be used for entering any information your company 
+ wishes to retain (e.g., additional account numbers) for payroll setup.</p>
+<p><font style="font-weight: bold;">Obsolete</font><font style="font-weight: bold;">?</font><font style="font-weight: bold;"><br/>
+</font>If this field is checked, the record is considered Obsolete, and 
+ it may not be directly specified during data-entry (either by entering 
+ the Id or selecting it from a list). Obsoleted records can be edited and 
+ the Obsolete option can be un-done when necessary. When you check the 
+ Obsolete field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. 
+ Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through 
+ access to all tables referencing this record: see <a href="References_List.htm">References 
+ List</a> for details.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field typically displays the Security Id of 
+ the local user that created this record unless it is listed as an exception 
+ to use global security. If multiple location security is not implemented 
+ on your system, or if this record was created by a global user, this field 
+ will be blank.</p>
+<h2>Important Fields: Lower Section</h2>
+<p><font style="font-weight: bold;">Earnings Id:</font><br/>
+Enter a valid Earnings Id or double-click on this field to select from 
+ a list.</p>
+<p><font style="font-weight: bold;">Amount:</font><br/>
+The dollar amount per Amount Type unit (hourly or salary) or percentage 
+ for Percent of Wages Amount Types.</p>
+<p><font style="font-weight: bold;">Amount Type:</font><br/>
+This field specifies what the Amount field represents: hourly (for hourly 
+ amounts), salary (for salary amounts), or Percent (if the amount represents 
+ a percent of wages).</p>
+<p>The Amount Type of Fixed (per Payroll Period) is available for Fringes. 
+ This could be used to record taxable, company-owned vehicle usage. Validation 
+ ensures that the Amount Type of Fixed may only be selected if all of the 
+ following are true:</p>
+<p style="margin-left: 48px;">The Earnings Type is set to Fringe<br/>
+The Fringe is not Accrued<br/>
+The Fringe is not Job Costed</p>
+<p><font style="font-weight: bold;">Start Date: End Date:</font><br/>
+The time period this amount is valid for (e.g., fiscal year, contract period, 
+ etc.) If more than one line is entered for the same earnings id, the dates 
+ must <font style="font-weight: bold;">NOT</font> overlap. The system now 
+ validates that no overlap occurs for each Earnings Id/Pay Type combination.</p>
+<p><font style="font-weight: bold;">Add Pay Rate Factor?</font><br/>
+Check this box (by double-clicking or pressing the Spacebar) if this Earnings 
+ record should be multiplied by the Pay Rate factor (regular, overtime, 
+ doubletime, etc.) when making journal entries. For example, you would 
+ probably check this box for hourly wages or payroll taxes, but leave it 
+ blank for medical earnings.</p>
+<p><font style="font-weight: bold;">Wage Fringe N/A</font><br/>
+These display-only fields default from the Earning record, and define whether 
+ these earnings are categorized as wages, fringes or not applicable (job 
+ costing earnings) for journal entries.</p>
+<p><font style="font-weight: bold;">Description</font><br/>
+This display-only field lists a brief description of this Earnings record.</p>
+<p><font style="font-weight: bold;">Taxable? Job Cost Labor Journal? Job 
+ Cost PR Check? Accrue?</font><br/>
+These display-only fields default from the Earning record.</p>
+<h2><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/> 
+ Click the Magnify Button to view the following fields:</h2>
+<p><font style="font-weight: bold;">Pay Type:<br/>
+</font>This field should only be completed to enable an alternative way 
+ of determining overtime or double-time pay. This would be done if overtime 
+ isn&#39;t at a 1.5 multiplier.  In this setup, you would create 
+ two earnings lines for base wages for the same Earnings Id:</p>
+<p style="margin-left: 36.00pt;">The first earnings line for base wages 
+ would be your regular one; the Pay Type would NOT be filled in.</p>
+<p style="margin-left: 36.00pt;">The second earnings line for base wages 
+ line would be for the same Earnings Id, but with the Pay Type Id completed. 
+ Typically, it would point to an OT Pay Type with its Rate Factor set to 
+ 1.0; . In addition, you would specify the actual OT pay rate in the earnings 
+ line. This line would be used instead of the first ONLY IF the Pay Type 
+ matched on the Labor lines entered.</p>
+<p style="margin-left: 36.00pt;">Example:</p>
+<p style="margin-left: 36.00pt;">Earnings Id: Amount: Pay Type 
+ Id: <br/>
+base  27 <br/>
+base  43 OT (rate factor = 1.0. Hours Type=Worked, Category=Overtime)</p>
+<p style="margin-left: 36.00pt;">In this example, when time was entered 
+ using a Pay Type of ‘OT’, the base earnings would be calculated as $43.00 
+ instead of $40.50 per hour (27.00x1.5). In the traditional SAMPRO setup, 
+ the line 2 entry would not exist and the Pay Type would have a Rate Factor 
+ of 1.5.  In that scenario the employee&#39;s OT pay rate would be 
+ $40.50 per hour (27.00x1.5).</p>
+<p><font style="font-weight: bold;">Add to Wages for Wage-Based Fringes?</font> 
+ (eligible for lines that are both &quot;fringe&quot; &amp; &quot;hourly&quot;)</p>
+<p><font style="font-weight: bold;">Subject to Fringe Additions</font><font style="font-weight: bold;">?</font> (eligible for lines that are (&quot;fringe&quot; 
+ or &quot;n/a&quot;) &amp; &quot;hourly&quot;)</p>
+<p>These fields provide the ability to include certain fringes (deferred 
+ compensation) in the basis &quot;wages&quot; for percentage calculations 
+ of other fringe benefits. This functionality was required to satisfy payroll 
+ for a specific union contract, where the 401a (a union equivalent of 401k) 
+ must be separated from the base wage for some calculations but not for 
+ others.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline; ">Example:</font><font style="text-decoration: underline; ">Include 401(a) fringe in calculation 
+ of H&amp;W fringe</font><font style="text-decoration: underline; "><br/>
+</font>Example:<br/>
+Wage  $38<br/>
+401(a) $2<br/>
+H&amp;W 5% (needs to evaluate as 5% of $40=$2)<br/>
+<br/>
+In this example...<br/>
+401(a) is an hourly-based fringe with the Add box checked in &quot;Add 
+ to Wages for Wage-Based Fringes?&quot;.<br/>
+H&amp;W is a percent-based fringe with the Subject box checked in &quot;Subject 
+ to Fringe Additions?&quot;.<br/>
+<br/>
+Prior to this mod, the H&amp;W fringe for each hour worked would have been 
+ computed as $38 x .05.  By setting the new options as indicated 
+ in the example, the computation becomes ($38 + $2) x .05.</p>
+
+</body></html>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.2.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="recurring"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Employee Recurring Wages Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="recurring,employee"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Employee Recurring Wages Tab">
+        <span>Employee Recurring Wages Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Employee Recurring Wages Tab</h1>
+<h2>Purpose:</h2>
+<p>This tab is used in conjunction with the Start Generate Recurring Labor 
+ Entries function (see <a href="Start_Generate_Recurring_Labor_Entries.htm">Start 
+ Generate Recurring Labor Entries</a> ) to generate labor journal entries 
+ for workers that typically record a standard number of hours to a particular 
+ job or jobs. These journal entries may then be edited if needed. Managerial, 
+ IT or administrative workers whose hours are always applied to overhead 
+ jobs would be good candidates for this tab.</p>
+<h2>Registry:</h2>
+<p>The Employee Recurring Wages tab includes 
+ Earnings Group and Deduction Group fields in the detail view. However, 
+ when the Recurring Labor is posted, the system uses the Earning and Deduction 
+ Groups from the Employee Defaults tab by default. <a href="Registry_Entry_Labor_Journal_Certified_PR_Warning.htm#Control_Recurring_Labor_Earnings_and_Deduction_Groups_Defaults">A 
+ Labor Journal Registry</a> setting may be used to include Earnings and 
+ Deduction Groups from the Employee Recurring Wages tab for Recurring Labor 
+ entries. </p>
+<h3>Usage:</h3>
+<p>When setting up this tab, careful thought should be given to how your 
+ Payroll Periods are structured. The days specified on this tab should 
+ map to the time period covered by the payroll period. For example, this 
+ tab would not be suitable for use with monthly pay periods that began 
+ on the first day of the month – regardless of what day of the week it 
+ was. It would be suitable for weekly or bi-weekly pay periods that always 
+ began on the same day of the week.</p>
+<p>See <a href="Employee_Recurring_Other_Tab.htm">Employee Recurring Other 
+ Tab</a> for entering recurring reimbursable expenses.</p>
+<h3>Important Fields:</h3>
+<p><font style="font-weight: bold;">Start Date:</font> (date format mmddyyyy) 
+  <font style="font-weight: bold;">End Date:</font> (date format mmddyyyy)<br/>
+Enter starting and ending <font style="font-weight: bold;">working</font> 
+ dates to define the time period that this recurring entry is valid for. 
+ These fields are compared with the date range of the selected payroll 
+ period when the Generate Recurring Labor Entries function is run. If 
+ the Start/End Dates intersect at ANY point within the Payroll Period Start/End 
+ (work) dates, then the line qualifies as &quot;eligible&quot; when Start 
+ Generate Recurring Labor Entries is run. </p>
+<p><font style="font-weight: bold;">Cycle:<br/>
+</font>This field defines the cycle for which this recurring entry would 
+ be generated. For example, M (monthly), Q (quarterly), W (weekly), P (payroll 
+ period) and so on. The Generate Recurring Labor Entries function checks 
+ this field against the Cycle Code that you entered on the Recurring Wages 
+ tab of the Employee Record. It is recommended that a Cycle Code always 
+ be specified when running this function.</p>
+<p><font style="font-weight: bold;">Day in Period:</font><br/>
+This field controls which day in the payroll period the generated labor 
+ journal entry will be assigned to.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Examples:</font></p>
+<p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">Suppose 
+ your payroll periods are one week in length, and begin on Thursday. For 
+ your employees that work on Monday – Friday, you would create recurring 
+ entries for days 1 (Thursday), 2 (Friday), 5 (Monday), 6 (Tuesday) and 
+ 7 (Wednesday).</p>
+<p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">Alternately, 
+ if your payroll periods are bi-weekly and being on Monday, you would create 
+ recurring lines for days 1-5 and 8-12.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Hours: 
+ Pay Type Id:<br/>
+Job Id: Cost Code: Cost Category:<br/>
+</font>Complete these fields as you wish them to appear when the Labor 
+ Journal Entries are generated by this function. The 
+ Cost Category supports enhanced filtering provided by the Cost Code&#39;s 
+ Job Cost Category Usage Filter.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><span style="font-weight: bold;">Bonus Amount</span><br/>
+This field may be used to pay flat per-period amounts such as Car Allowances. 
+ It will be written to the corresponding Bonus field in the Labor Journal. 
+  If this field is completed, the Hours field should be blank, and 
+ an appropriate Pay Type must be selected (Hours Type and Category should 
+ both be set to Other).</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/>  Click the Magnify 
+ button to view the following fields.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Billing 
+ Item:<br/>
+</font> This field should be completed if these recurring hours are billable 
+ to the above Job.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Labor 
+ Rate Id: <br/>
+</font>This  field may be used to override the Labor Rate located 
+ in on the Defaults tab of the Employee record.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">WorkOrder 
+ Id:</font><br/>
+This field would only be completed if these recurring hours were charged 
+ to a specific work order. This is not recommended.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt; font-weight: bold;">Earning 
+ Group Id: - Deductions Group Id:<br/>
+<span style="font-weight: normal;">When the Recurring Labor is posted, 
+ the system uses the Earning and Deduction Groups from the Employee Defaults 
+ tab by default.</span> </p>
+<p>Version 9.1.611.057 and above supports a<a href="Registry_Entry_Labor_Journal_Certified_PR_Warning.htm#Control_Recurring_Labor_Earnings_and_Deduction_Groups_Defaults"> 
+ Labor Journal Registry</a> for including Earnings and Deduction Groups 
+ from the Employee Recurring Wages tab for Recurring Labor entries.</p>
+
+</body></html>

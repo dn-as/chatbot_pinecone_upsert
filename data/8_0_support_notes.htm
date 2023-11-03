@@ -1,0 +1,728 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>8.0 Support Notes</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nSupport Notes - SAM Pro\n8.0 Support Notes");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_2" >8.0 Support Notes</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Revised Reports</FONT></P>
+ <P class="support" >4553<FONT style="font-weight:bold; " > &nbsp;</FONT>Report W2 Electronic File</P>
+ <P class="support" style="margin-left:36.00pt;">The Audit Report option of Report W2 Electronic File (report RW2EF.rpt dated 2/21/2012) has been modified so that the totals row is offset so that larger payroll amounts do not overlap.  This change impacts the Audit option only. This report is suitable for version 7.2 and up.</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >CHANGE TO DEFAULT BEHAVIOR</FONT></P>
+ <P class="support" style="margin-left:36.00pt;">In this version of the report, a registry entry is now required to set Position 174 on the RE line as the default has been changed to blank to accommodate special processing for the state of Maryland. The following option is now required for the federal process with this report. <FONT style="font-weight:bold; " >Id: sys-w2-ef</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Setting Key:</FONT> reEmployerKind&nbsp; <FONT style="font-weight:bold; " >Setting Value:</FONT> F, S, T, Y or N (default is blank)</P>
+ <P class="support" style="margin-left:36.00pt;">F – Federal Government</P>
+ <P class="support" style="margin-left:36.00pt;">S- State and Local Government</P>
+ <P class="support" style="margin-left:36.00pt;">T – Tax exempt Employer</P>
+ <P class="support" style="margin-left:36.00pt;">Y – State and Local Tax Exempt Employer</P>
+ <P class="support" style="margin-left:36.00pt;">N – None Apply – this is REQUIRED for files uploaded to the federal government.</P>
+ <P class="support" >4568 &nbsp;Drill Down AP Aging</P>
+ <P class="support" style="margin-left:36.00pt;">The updated report (DAPVAGEv73b033.rpt dated 2/28/2012) corrects a problem that only occurred if you ran the Drill Down AP Aging by Vendor report with the Invoice Detail option see to Yes. In earlier reports, this resulted in the associated drill-down (CAPVAGE2) displaying the correct vendor id but the incorrect vendor name. This report is suitable for version 7.3 and up.</P>
+ <P class="support" style="margin-left:36.00pt;">Separate versions for the report with this fix are also available for versions 7.0 and 7.1, and 7.2. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >2012-03-07</FONT><FONT style="font-weight:bold; " > (jt)-version 8.0.509.010</FONT></P>
+ <P class="support" ><FONT style="text-decoration:underline;" >2897</FONT>  &nbsp;Job Invoice GL (table changes)</P>
+ <P class="support" >4029  &nbsp;Project Managers Workbench</P>
+ <P class="support" >&nbsp;New Button: Create Quote</P>
+ <P class="support" style="margin-left:36.00pt;">The Create Quote button launches the Quote viewer to allow Quotes to be generated for the selected Job. The Job/Site Id will be defaulted to the new Quote.  </P>
+ <P class="support" style="margin-left:36.00pt;">New Tab: Quotes</P>
+ <P class="support" style="margin-left:36.00pt;">This new tab displays the Quotes associated with the selected Job. A Quote will appear on this tab if the Job Id is completed in the Quote header. A Quote will also be displayed if it’s Job Id is blank but the Work Order Id is completed and references the selected Job. </P>
+ <P class="support" style="margin-left:36.00pt;">The following Quote fields are displayed:</P>
+ <P class="support" style="margin-left:36.00pt;">Quote Id - Description – DateOpened – Status </P>
+ <P class="support" style="margin-left:36.00pt;">These fields default from the Quote header. </P>
+ <P class="support" style="margin-left:36.00pt;">Equipment Id – Option – Bill Item Id – Bill Item Status – Price – Scope</P>
+ <P class="support" style="margin-left:36.00pt;">These fields default from the Quote Scope tab.  Note that the Bill Item Id and the Bill Item Status are only completed if a Change Order Billing Item has been generated for the specified option. </P>
+ <P class="support" >4509&nbsp;Document Scanning</P>
+ <P class="support" style="margin-left:36.00pt;">When a file is scanned in SAM Pro, the document record must be added before the Show Document button will display the file.  If the user clicked the Show Document button before adding the record, the message “Document must be saved to be available to show”.  Since users found this confusing as the Save button was disabled, the message has been revised to read “Document must be added to be available to show.”</P>
+ <P class="support" >4588  &nbsp;Dispatch Board</P>
+ <P class="support" style="margin-left:36.00pt;"> In previous releases, the Description field on the Dispatch Board’s Work Order List defaulted from the Work Order Name.  In this enhancement, if the Work Order Name is blank, the first 40 characters of the Work Order Work Requested will be displayed in the Description. </P>
+ <P class="support" style="margin-left:36.00pt;">In addition, the following registry option may be implemented to display the first 40 characters of the Work Order Work Requested in the Description first. If the Work Order Work Requested is blank, the Work Order name will be displayed instead. </P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;Id: sys-viewer-vdsptchbrd<BR>Key: DescriptionFromWorkRequested<BR>Value: true (default false)</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4093</FONT>  &nbsp;Job Budget Tab</P>
+ <P class="support" style="margin-left:36.00pt;">Id: sys-viewer-vjb<BR>This registry option allows you to default the Effective Date that will be used when Budget entries are written to Job History from this tab. </P>
+ <P class="support" style="margin-left:36.00pt;">Setting Key: BudgetEffectiveDate</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Value: &nbsp; none or currentdate or DateOpened (Default none)<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; none - date from Job budget Effective date field<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; currentdate - today’s date from system date<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DateOpened – date from Job’s Date Opened </P>
+ <P class="support" style="margin-left:36.00pt;">Job Budget Tab</P>
+ <P class="support" style="margin-left:36.00pt;">New Field (click Magnify button): Date Effective</P>
+ <P class="support" style="margin-left:36.00pt;">This field will be used by the system when writing entries to Job History from this tab, unless overridden by the registry (see above). If the BudgetEffectiveDate job registry option is set to currentdate or DateOpened, the user will be warned and entry in this field will be denied. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4466</FONT>  &nbsp;Log Form viewer </P>
+ <P class="support" style="margin-left:36.00pt;">Enhanced validation added for references to Log Form Lines when the user attempts to delete a line from the child table in the Log Form viewer.&nbsp; When the lgfrmlne_rn has references in wrkordrsystmmtrcs, the system will now popup a message box and deny the delete. In previous version, the ‘deleted’ line reappeared when the record was saved. </P>
+ <P class="support" style="margin-left:36.00pt;">In addition, the user if warned if he or she changes the lgfrm.lne, lgfrm.hdr or lgfrm.unt-msre of a metric that exists in work order system metrics:</P>
+ <P class="support" style="margin-left:36.00pt;">&quot;This field has been referenced in the work order metrics tab *** times. Any changes to this field should only be to correct typos or to clarify the test parameters - NOT to change the purpose of this metric.&quot;</P>
+ <P class="support" > <FONT style="text-decoration:underline;" >4476</FONT>  &nbsp;Inventory Item</P>
+ <P class="support" style="margin-left:36.00pt;">New Field: Obsolete</P>
+ <P class="support" style="margin-left:36.00pt;">If the existing Inactive flag is checked, this item may not be entered on Purchase Orders, but may be entered on Work Orders and Client Orders (to use up existing stock). </P>
+ <P class="support" style="margin-left:36.00pt;">If the new Obsolete flag is also checked, you may not enter this record on anything – Work Orders, Purchase Orders, Client Orders, Job Journal, etc. </P>
+ <P class="support" style="margin-left:36.00pt;">This field effectively produces a 2-tier system for managing inventory. Inactive Items would be ones that you didn't want to purchase, but were still in stock. Once the item was depleted, it could be flagged as Obsolete so it could not be entered on anything.</P>
+ <P class="support" style="margin-left:36.00pt;">The system will automatically set the Inactive flag when the user sets the Obsolete flag, but not the other way around. Clearing the Obsolete flag does not clear the Inactive flag. </P>
+ <P class="support" style="margin-left:36.00pt;">An sql that support can run to set the Obsolete flag if Inactive is set at the customer's request is attached to this case.</P>
+ <P class="support" > 4482  &nbsp;Viewers (general)--** add latest patch</P>
+ <P class="support" style="margin-left:36.00pt;">Additional patch for IM reversals handling. The reversals dictionary for #imhstry should be empty but instead has an empty-type record in it.&nbsp; This causes code previously written for this case to crash when trying to determine the old trx id from the entry to be reversed.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4483</FONT>  &nbsp;Log Form Cycle Codes</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Important Note</FONT><FONT style="font-weight:bold; " > on Metrics</FONT><FONT style="font-weight:bold; " >/Log Form Lines</FONT><FONT style="font-weight:bold; " >:</FONT> when a work order referencing a log form is created in SAM Pro, metrics (log form lines) will only be written to the Work Order Metrics tab if the Technician is not a TechAnywhere tech (e.g., Remote Access is set to None) or if no Tech is specified.  If it is initially assigned to a technician with remote access, metrics will be uploaded to the technician’s device, and then posted to the work order in SAM Pro when they have been completed in the field.  </P>
+ <P class="support" style="margin-left:36.00pt;">Log Form Lines Viewer</P>
+ <P class="support" style="margin-left:36.00pt;">CC: Cycle Code<BR>This field may be used to control which metrics are written to the Work Order Metrics tab when Service or PM Work Orders are generated. Note that Log Form field in the Client Site Equipment record determents which list of metrics is used.</P>
+ <P class="support" style="margin-left:36.00pt;">When a Service Work Order is created in SAM Pro’s New Call, the system will check the Cycle Code Filter in the Work Code; if this field is completed, only those log form line metrics whose CC: field corresponds to the filter or is blank will be written to the Work Order (for Techs without remote access) or uploaded to the Technician’s device. </P>
+ <P class="support" style="margin-left:36.00pt;">When a PM Work Order is created, the system will check the Cycle Code Filter in the Client Site Equipment PM Schedule. If the Cycle Code Filter in the schedule is blank, the system will use the Cycle Code Filter in the Work Code instead. Only those metrics whose CC: field corresponds to the filter or is blank will be written to the Work Order (for Techs without remote access) or uploaded to the Technician’s device. </P>
+ <P class="support" style="margin-left:72.00pt;">Tip: If a log form metric should ALWAYS be recorded, leave the CC field blank.</P>
+ <P class="support" style="margin-left:36.00pt;">Work Code Viewer:</P>
+ <P class="support" style="margin-left:36.00pt;">New Field - Cycle Code Filter:</P>
+ <P class="support" style="margin-left:36.00pt;">This filter is used by Sam Pro and TechAnywhere to filter Work Order Log Form Metrics lists. Note that Log Form Id field in the Client Site Equipment record determines which list of metrics is used. Multiple cycle codes may be entered as a comma-delimited list. If this field is blank, all metrics from the Log Form will be written to the Metrics tab.  </P>
+ <P class="support" style="margin-left:36.00pt;">If one or more Cycle Codes are listed, only those Log Form (metrics) lines whose CC: field corresponds to the filter or is blank will be written to the Work Order (for Techs without remote access) or uploaded to the Technician’s device.</P>
+ <P class="support" style="margin-left:36.00pt;">The Work Code in the Work Order header is used for metrics filtering purposes for Service Work Orders. </P>
+ <P class="support" style="margin-left:36.00pt;">For PM Work Orders, the Cycle Code Filter (if completed) in the PM Schedule Tab of the Client Site Equipment, or the Schedule Tab of the Master Contract will override the Work Code’s Cycle Code Filter. </P>
+ <P class="support" style="margin-left:36.00pt;">Example: Cycle Code Filter: 1,3</P>
+ <P class="support" style="margin-left:36.00pt;">Only those lines from the Log Form whose CC field is set to 1, to 3 or is blank would be written to the Work Order or uploaded to the Technician’s device. </P>
+ <P class="support" style="margin-left:36.00pt;">Client Site Equipment PM Schedule</P>
+ <P class="support" style="margin-left:36.00pt;">New Field (click Magnify button to access) - Cycle Code Filter:</P>
+ <P class="support" style="margin-left:36.00pt;">This filter is used by Sam Pro and TechAnywhere to filter PM Work Order Log Form Metrics lists for this piece of Equipment. Multiple cycle codes may be entered as a comma-delimited list. Note that Log Form field in the Client Site Equipment record determines which list of metrics is used.</P>
+ <P class="support" style="margin-left:36.00pt;">If this field is blank, the system will use the Cycle Code in the Work Code instead. Only those metrics whose CC: field corresponds to the filter or is blank will be written to the Work Order (for Techs without remote access) or uploaded to the Technician’s device.  If the Cycle Code filter in both the Schedule and Work Code are blank, all metrics from the Log form will be written to the Metrics tab.  </P>
+ <P class="support" style="margin-left:36.00pt;">If one or more Cycle Codes are listed, only those metrics whose CC: field corresponds to this field or is blank will be written to the Work Order (for Techs without remote access) or uploaded to the Technician’s device.</P>
+ <P class="support" style="margin-left:36.00pt;">Master Contract Schedule Tab</P>
+ <P class="support" style="margin-left:36.00pt;">New Field (click Magnify button to access) - Cycle Code Filter:</P>
+ <P class="support" style="margin-left:36.00pt;">This filter is used by Sam Pro and TechAnywhere to filter PM Work Order Log Form Metrics lists for the Equipment being maintained. Multiple cycle codes may be entered as a comma-delimited list. Note that Log Form field in the Client Site Equipment record determines which list of metrics is used.</P>
+ <P class="support" style="margin-left:36.00pt;">If this field is blank, the system will use the Cycle Code in the Work Code instead. Only those metrics whose CC: field corresponds to the filter or is blank will be written to the Work Order (for Techs without remote access) or uploaded to the Technician’s device.  If the Cycle Code filter in both the Schedule and Work Code are blank, all metrics from the Log form will be written to the Metrics tab.  </P>
+ <P class="support" style="margin-left:36.00pt;">If one or more Cycle Codes are listed, only those metrics whose CC: field corresponds to this field or is blank will be written to the Work Order (for Techs without remote access) or uploaded to the Technician’s device.</P>
+ <P class="support" style="margin-left:36.00pt;">TechAnywhere:</P>
+ <P class="support" style="margin-left:36.00pt;">CC: Cycle Code. </P>
+ <P class="support" style="margin-left:36.00pt;">TechAnywhere Metrics tables.</P>
+ <P class="support" >4497  &nbsp;CRM Anywhere</P>
+ <P class="support" style="margin-left:36.00pt;">In previous releases, if the registy option disablecrmmanagequotes was set to true in the web-settings registry, the Quote table was also suppressed in the Site View page.  In this release, the Quote table will also be suppressed in the Site View page when this option is implemented in the registry tab of the Web Profile or Web User.</P>
+ <P class="support" >4517  &nbsp;Email – retest in 8.0</P>
+ <P class="support" style="margin-left:36.00pt;">This release (used in conjunction with the xmlToPdf.jar file dated 11/8/2011) supports alternate email ports for emails with .pdf attachments (controlled by the xmlToPdf.jar file) as well as emails without pdf attachments (managed by SAM Pro). The following two additional options in sys-email are required to support this functionality:</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Setting Key:</FONT> portsmtp   <FONT style="font-weight:bold; " >Setting Value:</FONT><FONT style="font-style:italic; " >port#</FONT><FONT style="font-style:italic; " >   (controls emails without pdf’s)</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Setting Key:</FONT> smtpPort   <FONT style="font-weight:bold; " >Setting Value:</FONT><FONT style="font-style:italic; " >port#</FONT><FONT style="font-style:italic; " >   (controls emails with pdf’s)</FONT></P>
+ <P class="support" style="margin-left:36.00pt;">This release also supports secure (SSL) email servers. To implement, the following additional registries are required:</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Setting Key:</FONT> useSSL  &nbsp;<FONT style="font-weight:bold; " >Setting Value:</FONT> true</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Setting Key:</FONT> MailerMethod  <FONT style="font-weight:bold; " >Setting Value:</FONT> Java    <FONT style="font-style:italic; " >(required to send non-pdf emails securely)</FONT></P>
+ <P class="support" style="margin-left:72.00pt;"><FONT style="font-style:italic; " >Example: Use Port 465, Secure Server</FONT></P>
+ <P class="support" style="margin-left:72.00pt;">Setting Key: portsmtp   Setting Value: 465</P>
+ <P class="support" style="margin-left:72.00pt;">Setting Key: smtpPort   Setting Value:465 </P>
+ <P class="support" style="margin-left:72.00pt;">Setting Key: useSSL  &nbsp;Setting Value: true</P>
+ <P class="support" style="margin-left:72.00pt;">Setting Key: MailerMethod  Setting Value: Java    </P>
+ <P class="support" style="margin-left:72.00pt;">Note: the applicable PasswordSMTP, UserNameSMTP, and serversmtp options must also be set. </P>
+ <P class="support" >4521&nbsp;Work Order viewer {Church Services} </P>
+ <P class="support" style="margin-left:36.00pt;">A TechFinder button has been added to the Technicians tab. When this button is clicked, the current work order's Client Site Zone and the Technician Certification (associated with the (*last – should be first*) Client Site Equipment record on the Work Order Equipment tab) are passed to the Tech Finder filters.</P>
+ <P class="support" style="margin-left:36.00pt;">When the user completes the TechFinder processing, the system returns the selected Technician Id, Date and Time to Work Order the appropriate Technician line.</P>
+ <P class="support" >4522  &nbsp;New Call</P>
+ <P class="support" style="margin-left:36.00pt;">In New Call 1, if you decided that your site/equipment selections were not correct and entered a different search string, the fields that were previously completed were not automatically cleared for you although (clicking the New button would do so).</P>
+ <P class="support" style="margin-left:36.00pt;">In this release, whenever a user tabs out of the search text box on New Call 1, the system will performs the equivalent action that pressing the New icon would do with one exception: if the Service Category is completed, it will not be cleared.</P>
+ <P class="support" >4527  &nbsp;Quote Master Approval Wizard</P>
+ <P class="support" style="margin-left:36.00pt;">In case 1730, we implemented a work order viewer registry option, DenyChangesToQuoteMasterLines, that denies the user the ability to change lines that were imported from Quote Master.  In recent versions, however, it was discovered that you could not approve a quote and write to a work order if this registry was enabled. This problem has been corrected in this image. </P>
+ <P class="support" >4533  &nbsp;New Call (Hutchinson mod) </P>
+ <P class="support" style="margin-left:36.00pt;">Add Log Form Id and Escalation Profile Id to the &quot;Flashlight&quot; Site screen of New Call 1 (original New Call back screen) so that users can specify them when creating new customers.</P>
+ <P class="support" style="margin-left:36.00pt;">The Log Form Id: field has also been added to the original New Call screen. This field will default from the Equipment record, but may be changed by the user to specify which log form id will be specified on the work order about to be created. </P>
+ <P class="support" >4536  &nbsp;Release Recurring AP Journal</P>
+ <P class="support" style="margin-left:36.00pt;">In case 4284, we enabled the IgnoreCase3193 registry option to allow users to enter (among other things) a bank account on the Recurring AP Journal Recurring Lines tab. Previously, however, the Release Recurring AP Journal function did not evaluate this settings, and the post failed if a bank (or other denied) account was found. This problem has been corrected so the Release function successfully evaluates the sys-viewer-vrcrrngapjrnl for the IgnoreCase3193 option. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4537</FONT>  &nbsp;Sub Anywhere</P>
+ <P class="support" style="margin-left:36.00pt;">In this release, the Work Performed is always posted to the Work Order. Previously, Work Performed was not being posted if the Original Work Order Id was completed.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4543 </FONT> &nbsp;Tech Anywhere</P>
+ <P class="support" >&nbsp;Corrects problem where metrics were not written to work order from TechAnywhere. </P>
+ <P class="support" >4547  &nbsp;Tech Anywhere Post</P>
+ <P class="support" style="margin-left:36.00pt;">Corrects issue with Labor Rate erroneously defaulting from the Employee record if the client’s customization includes reordering of the Labor Journal Hours tab. See case for details. </P>
+ <P class="support" >4551  &nbsp;Inventory Receipts Journal </P>
+ <P class="support" style="margin-left:36.00pt;">Corrects a problem where Use Tax was not correctly written to the Tax History table when items were received in this viewer.  </P>
+ <P class="support" > 4556  &nbsp;Tech Anywhere</P>
+ <P class="support" style="margin-left:36.00pt;">This release corrects a problem where the Work Order Updates from TechAnywhere caused a WO Tech RN change. This case also changes the timing of email resulting from failed status updates so that both update methods get a chance to fail before the email goes out.&nbsp; Previously, failure to update by wrkordrtchncn_rn sent the email alert and then tried the second method (tech,date,old status) which might actually have been successful.&nbsp; This resulted in an erroneous (false positive) email alert; this should be eliminated in this image.</P>
+ <P class="support" >4557  &nbsp;Work Order viewer</P>
+ <P class="support" style="margin-left:36.00pt;">The Metrics tab is now correctly updated when equipment is added, inserted or deleted from the Equipment tab. This case also corrects an error which occurred when changing the Equipment Id that was associated with lines on the Metrics tab.</P>
+ <P class="support" style="margin-left:36.00pt;">Note: If an Equipment Id associated with metrics is deleted, only those lines on the Metrics tab that have been recorded (a date and/or value entered) will be retained. If the same Equipment Id is re-entered, the system does not restore blank Metrics lines that were not recorded.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4563</FONT>  &nbsp;Sales Tax Authority (table changes)</P>
+ <P class="support" >4567&nbsp;COP Acknowledgement Report</P>
+ <P class="support" style="margin-left:36.00pt;">The COP Order Acknowledgement Report now suppresses the estimated sales tax if the Site COP tab has the Tax Exempt box flagged. </P>
+ <P class="support" >4569  &nbsp;Log Form viewer </P>
+ <P class="support" style="margin-left:36.00pt;">This viewer displays the correct error if you attempt to save the record with two lines having the same heading/line contents: LogFormLinesByDescriptionByParentRn for table ‘lgfrmlne’ would not be unique. The user must edit the offending line to insure its uniqueness before the record can be saved. </P>
+ <P class="support" >4576  &nbsp;Recurring AP Journal</P>
+ <P class="support" style="margin-left:36.00pt;">Corrects the calculation of the Recurring Lines Amount field based on the Quantity and Cost; previously, this calculation only supported Amounts under 100.00. </P>
+ <P class="support" >4580  &nbsp;Tech Anywhere</P>
+ <P class="support" style="margin-left:36.00pt;">Corrects Tech Anywhere intermittent issue posting COD multiple times.</P>
+ <P class="support" >4582  &nbsp;Credit POs (UGH!) – in process.</P>
+ <P class="support" style="margin-left:36.00pt;">Revised posting of credit POs costed to job/wo.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4584</FONT>  &nbsp;Employee Recurring Other (table changes)</P>
+ <P class="support" ><FONT style="font-weight:bold; " >2012-02-13 (jt)-version 8.0.508.009</FONT></P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4321</FONT>  &nbsp;KPI Definitions – awaiting data to test with</P>
+ <P class="support" >4443  &nbsp;Bitmaps Master Pushbuttons Object</P>
+ <P class="support" style="margin-left:36.00pt;">This release improves the error if starting an image without presence of master~pushbuttons.obj file. The message now reads: </P>
+ <P class="support" style="margin-left:72.00pt;">Warning: SAMPRO’s bitmap file (master~pushbuttons.obj file) is either missing or corrupted. </P>
+ <P class="support" style="margin-left:72.00pt;">Contact your Support Representative. </P>
+ <P class="support" >4456  &nbsp;Tech Anywhere</P>
+ <P class="support" style="margin-left:36.00pt;">This release better handles a rare bug that caused NewWOs messages to be sent to SAMPro without a Site ID resulting in a work order being created with no site, no job, and no equipment. SAM Pro now verifies that a TechAnywhere message contains the following before posting: Date Scheduled, Time Scheduled, Technician Id, Site Id Equipment Id. </P>
+ <P class="support" style="margin-left:36.00pt;">The posting of new workorder messages can now handle the time scheduled of &quot;00:00&quot;, a valid time format for midnight.</P>
+ <P class="support" style="margin-left:36.00pt;">Also Fixed bug where workorder created from TechAnywhere would have initial status of &quot;Pending&quot; rather than &quot;Unacknowledged&quot;.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4480</FONT>  &nbsp;Compute PR (PTO Accruals for Alberta)</P>
+ <P class="support" style="margin-left:36.00pt;">Pay Type Record</P>
+ <P class="support" style="margin-left:36.00pt;">New Fields: PTO Accrual Exclusions</P>
+ <P class="support" style="margin-left:72.00pt;">Exclude Regular?<BR>Exclude Overtime?<BR>Exclude Doubletime?<BR>Exclude Vacation?<BR>Exclude Holiday?<BR>Exclude Sick?<BR>Exclude Other?</P>
+ <P class="support" style="margin-left:36.00pt;">Prior to this case, only vacation wages were excluded from the vacation accrual wage base.&nbsp; For example, when an employee takes a week of vacation, no additional vacation pay is earned for that week.&nbsp; The Province of Alberta allows the employer to excluded overtime wages as well.</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >These fields are only applicable if this Pay Type is set to PTO and the PTO Accrual Method is set to Percent.</FONT>  If so, these fields enable the user to specify which types of Pay Types for Hours Worked will exclude this PTO Pay Rate from accrual. </P>
+ <P class="support" style="margin-left:36.00pt;">For the case of Alberta, the fields would be set as follows for the Vacation PTO accrual:</P>
+ <P class="support" style="margin-left:72.00pt;">Hours Type: PTO<BR>Category: Vacation<BR>PTO Accrual Method: Percent<BR>PTO Accrual Exclusions<BR>    Flag the following: Exclude Overtime?, Exclude Doubletime?, Exclude Vacation?<BR></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Important Upgrade Note:</FONT> it is now necessary to flag Exclude Vacation for these wages to be excluded from the accrual wage base. After upgrading to version 8.0, carefully review your Pay Type records to see if any changes should be made. <BR></P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4483</FONT>  &nbsp;WO System Metrics/Log Forms (EEI Mod) *** in process ***</P>
+ <P class="support" >4495  &nbsp;Tech Anywhere</P>
+ <P class="support" style="margin-left:36.00pt;">SAMPro is currently expecting the flat rate message payload to contain:<BR>&quot;wo_flat_rate_headings&quot; &amp; &quot;wo_flat_rate_list&quot;<BR>But this naming convention is broken as all other data structures come in as &quot;completed_****&quot;<BR><BR>Change the SAMPro posting logic to look for and post BOTH the old and new way.<BR>New way: completed_wo_flat_rate_headings &amp; completed_wo_flat_rate_list</P>
+ <P class="support" > 4512  &nbsp;Email Pager labels</P>
+ <P class="support" style="margin-left:36.00pt;">The label, Email Pager, has been changed to Email Address 2 in the following records:</P>
+ <P class="support" style="margin-left:36.00pt;">Account Manager, Client, Client Site, Contact, Dispatcher, Sales Rep, Service Account Manager, Technician, User, and Vendor.</P>
+ <P class="support" style="margin-left:36.00pt;">Note that this change only impacts the label. The field names themselves are not changed: </P>
+ <P class="support" style="margin-left:72.00pt;">accntmngr_eml_pgr<BR>clnt_eml_pgr<BR>clntste_eml_pgr<BR>cntct_eml_pgr<BR>dsptchr_eml_pgr<BR>slsrp_eml_pgr<BR>srvceaccntmngr_eml_pgr<BR>tchncn_eml_pgr<BR>usr_eml_pgr<BR>vndr_eml_pgr</P>
+ <P class="support" style="margin-left:36.00pt;">If any users are bothered by this change, the Custom Fields functionality may be used to change the label back to its previous form. </P>
+ <P class="support" style="margin-top:0;margin-bottom:0"> 4514  &nbsp;Work Order List {Legacy}&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;">The Work Order Original Id has been added as the right-most column of the WorkOrdersByIdByClientSiteName list. </P>
+ <P class="support" > 4505  &nbsp;Stock Status Report Performance</P>
+ <P class="support" style="margin-left:36.00pt;">Added new method getMainList2 which uses a temp table to try and improve performance for SQL users. Performance problem was reported by DelMonde. </P>
+ <P class="support" style="margin-left:36.00pt;">Temp table logic is invoked through a registry setting in  sys-report-rstckstts: </P>
+ <P class="support" style="margin-left:36.00pt;">Setting Key: UseTempTable   Setting Value: true</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4525</FONT>  &nbsp;Log Forms – internal changes, see case.</P>
+ <P class="support" >2012-01-27 (jt)-version 8.0.508.008</P>
+ <P class="support" >4003  &nbsp;AP Payment Approvals (Kaback)</P>
+ <P class="support" >&nbsp;Custom for Kaback: do not display tax in approval functions.</P>
+ <P class="support" >&nbsp;Registry Entry for Start AP Payment Approved List (general enhancement)</P>
+ <P class="support" style="margin-left:36.00pt;">Id: sys-start-sappymntapprvdlst</P>
+ <P class="support" style="margin-left:36.00pt;">Setting key: OrderBy  &nbsp;&nbsp;&nbsp;Setting Value: jb_id,wrkordr_id</P>
+ <P class="support" style="margin-left:36.00pt;">This option enables the user to specify that the Start AP Payment Approved List is ordered by Job Id (in the PO Header), and then by Work Order Id (in the PO Header) within each Job.</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Key: CashManagerPayDate  &nbsp;Setting Value: 2099-12-31</P>
+ <P class="support" style="margin-left:36.00pt;">This may be used to override the Pay Date entered on the Start AP Approved List (which may have been originally set on the Start AP Approved List PM). It would be used to make this process act like a 3<FONT style="vertical-align:super; " >rd</FONT> approval function so that invoices approved in this fashion are NOT paid as part of the normal AP Check printing process (because the date is set so far in the future). To pay these checks, a cash manager would run AP Date to Pay, filtering on the date referenced in this entry in the Next Pay Date range. The cash manager could then review the entries, and select an appropriate Pay Date. </P>
+ <P class="support" >4119  &nbsp;JSON decoding – internal change; see case for details.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4307</FONT>&nbsp;AP Date To Pay</P>
+ <P class="support" style="margin-left:36.00pt;">The AP Date to Pay list is sorted as follows: Vendor Alpha Id, Vendor Id, and Vendor Invoice Number. In previous releases, the Vendor Alpha was not displayed on the list, leading to some confusion regarding the order. In this release, the Vendor Alpha field is now displayed below the AP Invoice Id on the last column.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4321</FONT>  &nbsp;KPI Definitions </P>
+ <P class="support" style="margin-left:36.00pt;">User-Defined Functions</P>
+ <P class="support" style="margin-left:36.00pt;">New</P>
+ <P class="support" style="margin-left:36.00pt;">User-defined functions can now reference Dashboard Gadgets.&nbsp; This allows use of SAMPRO's User Group security to determine which gadgets available to each user.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4329</FONT>  &nbsp;Master Contracts (table changes only)</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4330 </FONT> &nbsp;Technicians (table changes only)</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4404</FONT>  &nbsp;Job Billing Items (table changes only)</P>
+ <P class="support" >4430  &nbsp;Employee viewer –Check Tab</P>
+ <P class="support" style="margin-left:36.00pt;">This release filters the Checks list to exclude rows where both the Payoll Period and Check Effective Date are empty.</P>
+ <P class="support" >4432 &nbsp;Work Order viewer – registry entry for WO Inventory / IM History Alert</P>
+ <P class="support" style="margin-left:36.00pt;">A registry entry now required to validate that the system compares the total cost and quantity entered directly on the tab with the total cost and quantity posted to history. If all is well, the Work Order will be saved. If a discrepancy is found, a TabHistoryMismatch alert box will appear, and the work order will not be saved.  </P>
+ <P class="support" style="margin-left:36.00pt;">The tab mismatch information will be written to the error log.  As a result of the work done in case 4482, this alert should now only appear when erroneous reversal history has already been written to Inventory History, and is therefore only recommended for users that are concerned with tightening up inventory, and who are willing to have support correct issues before work orders can be edited. To implement this option:</P>
+ <P class="support" style="margin-left:36.00pt;">Id: sys-viewer-vwrkordr<BR>Setting Key: TabMismatchINV-IMH<BR>Setting Value: enabled </P>
+ <P class="support" style="margin-left:36.00pt;">If this option is not implemented this alert will not be raised. </P>
+ <P class="support" >4458  &nbsp;Work Order viewer  {RSD}</P>
+ <P class="support" style="margin-left:36.00pt;">Corrects a problem with a client that was recently updated from 7.1 to 7.3. When they changed the date on the Other tab, and then invoiced the work order, the reversal in JCH is written to the new date - so when the WO is invoiced, the original date appears on the invoice, not the date it was changed to on the Work Order. The problem is corrected in this release by fixing the setting of 'closed period entry' flag on Work Order Other lines.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4466</FONT>  &nbsp;Log Form Lines (table changes only)</P>
+ <P class="support" >4474  &nbsp;JSON decoding – Derek testing</P>
+ <P class="support" style="margin-left:36.00pt;">Corrects a TechAnywhere Issue with running out of memory while posting Large Message with many Metrics lines.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4476</FONT>  &nbsp;Inventory Items (table changes only)</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4480</FONT>  &nbsp;Pay Types (table changes only)</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4481</FONT>  &nbsp;Work Order Log Lines (table changes only)</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4483</FONT>  &nbsp;Metrics (table changes only)</P>
+ <P class="support" >4501  &nbsp;COP Sales Tax</P>
+ <P class="support" style="margin-left:36.00pt;">The system now allows changes to Sales Tax Group in Client Orders.</P>
+ <P class="support" style="margin-left:36.00pt;">The Client Site COP Tax Exempt field in tax calculations is now included in COP Invoice calculations. If this box is flagged, sales tax will not be included on the COP Invoice.</P>
+ <P class="support" >2012-01-23 (jt)-version 8.0.507.007</P>
+ <P class="support" >4003  &nbsp;AP Payment Approvals (Kaback) – in process</P>
+ <P class="support" >4252  &nbsp;Work Order Flat Rate Import (and possibly other places)</P>
+ <P class="support" style="margin-left:36.00pt;">This latest patch corrects an “addRecordMenu” not understood error related to the initial implementation of this case. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4268</FONT>  &nbsp;Work Order viewer</P>
+ <P class="support" style="margin-left:36.00pt;">The following registry options permit the log type statuses entered on the work order to be limited to those specified, or to exclude those specified. </P>
+ <P class="support" style="margin-left:36.00pt;">Tip: in most cases, this functionality would be implemented by user or user group (sys-viewer-vwrkordr<FONT style="font-style:italic; " >-branchid-userid, </FONT>sys-viewer- vwrkordr<FONT style="font-style:italic; " >--userid</FONT>  (if Branches are not implemented) or sys-viewer- vwrkordr-<FONT style="font-style:italic; " >usergroupid) </FONT>so that the restrictions are only implemented as appropriate.  </P>
+ <P class="support" style="margin-left:36.00pt;">Id: sys-viewer-vwrkordr</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Key: LogStatusesRemoved<BR>Setting Value: A Comma delimited list of the Log Types that the user may not enter on the Tech Tab / Log Tab of the Work Order. <BR><BR>&nbsp; Id: sys-viewer-vwrkordr<BR>&nbsp; Key: LogStatusesAllowed<BR>Value: A Comma delimited list of the Log Types that the user may enter on the Tech Tab / Log Tab of the Work Order. <BR><BR>Only one registry should be used for each registry entry. Warning - if both are used LogStatusesRemoved will be performed then from that list LogStatusesAllowed will be chosen.</P>
+ <P class="support" > 4333  &nbsp;PR History Export</P>
+ <P class="support" style="margin-left:36.00pt;">Previously, this function attempted to consolidate multiple entries for the same date. In this release, these entries remain broken out as they should be. </P>
+ <P class="support" > 4344  &nbsp;CRM Anywhere</P>
+ <P class="support" style="margin-left:36.00pt;">The system now uses the registry for web-dir setting when displaying splice.gif and right.gif (previously they were hard coded hard coded to exist in \web directory).</P>
+ <P class="support" >  4362  &nbsp;Tech Anywhere</P>
+ <P class="support" style="margin-left:36.00pt;">Previously, data from TechAnywhere can be posted to the default accounting period, even if the effective date is outside of the period range. A problem occurred when the user attempted to bill the WO and encountered an error indicating that the effective date was out of period range. A registry entry is now available to adjust either the date or accounting period to keep them in sync.&nbsp; </P>
+ <P class="support" style="margin-left:36.00pt;">Id: sys-techanywhere</P>
+ <P class="support" style="margin-left:36.00pt;">When the defaulted Date and Accounting Period are NOT out-of-sync, NO adjustments are made to the defaulted values.&nbsp; The rules noted below are used only when an adjustment is necessary.</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Key: AdjustDefaultDateOrPeriod </P>
+ <P class="support" style="margin-left:36.00pt;">Setting Value: period </P>
+ <P class="support" style="margin-left:36.00pt;">The Accounting Period table is queried for eligible Accounting Periods.&nbsp; To qualify, the period must be Active and its date range must include the defaulted Effective Date.&nbsp; When multiple periods are eligible, the one with the smallest Period Id is chosen to become the new Accounting Period for the current transaction.&nbsp; If no eligible period is found, nothing is changed.</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Value: date</P>
+ <P class="support" style="margin-left:36.00pt;">The Effective Date is adjusted to be either the Start Date or the End Date of the defaulted Accounting Period.&nbsp; The Start Date is chosen when the current date is less than the Start Date.&nbsp; The End Date is chosen when the current date is greater than the End Date.</P>
+ <P class="support" style="margin-left:36.00pt;">NOTE: the current TechAnywhere post behavior does not change unless the new registry setting is turned on.&nbsp;.</P>
+ <P class="support" >4333  &nbsp;PR History Export – BME (Benner)</P>
+ <P class="support" style="margin-left:36.00pt;">Previously, this function attempted to consolidate multiple entries for the same date. In this release, these entries remain broken out as they should be. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4361</FONT>&nbsp;Quote Viewer {Legacy}</P>
+ <P class="support" >&nbsp;<FONT style="font-weight:bold; " >New Tab: Gross Margin</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Filter By Option Code:<BR></FONT>If this filter is blank, this tab will summarize all scopes entered on this quote; the quote must be saved to correctly display current information.</P>
+ <P class="support" style="margin-left:36.00pt;">To display the gross margin for a single option, enter the option code and press Enter. The display will be filtered to that option only. </P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Totals:</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Total Cost:  Total Revenue: </FONT><FONT style="font-weight:bold; " >GM</FONT><FONT style="font-weight:bold; " > %  GM$:</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Labor:  Material:  Other:  Subcontract: Total:</FONT></P>
+ <P class="support" style="margin-left:36.00pt;">These display-only fields are computed by the system based on the values entered in the scope and other detail lines of this quote. Note that that revenue adjustment amounts are assigned to a category (Labor, Material, Other or Subcontract) based on their Cost Category.  Click off of this tab and then back onto it to the results of current edits to the quote. </P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" >4363  &nbsp;PM Workbench – SavMor</P>
+ <P class="support" style="margin-left:36.00pt;">The Project Manager Workbench now handles Long Strings in Document Replacement for MS Office 2010.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >436</FONT><FONT style="text-decoration:underline;" >4</FONT>&nbsp;Work Order – DB Custom View</P>
+ <P class="support" style="margin-left:36.00pt;">We use the client site user 3 field for the current sampro version the customer on.&nbsp; This field has been added to the Main tab of on the DB customization. This should help our support people determine if a WO could be closed (because of an existing fix).</P>
+ <P class="support" >4377  &nbsp;AP Journal viewer {ECS} – tested as a file in – support to retest</P>
+ <P class="support" style="margin-left:36.00pt;">This release corrects a problem that only occurred if the deprecated option AllowChangesToPaidInvoices is implement.  In previous releases, changing the GL Account on a PRE-pays (manual check entry) ” in AP journal resulted in an additional line being added to the Check record. The Check record is no longer inappropriately update in this situation. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4410</FONT>  &nbsp;Calendar Date viewer – for use with DB Analytics</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4415</FONT>  &nbsp;GLH Summary – for use with DB Analytices</P>
+ <P class="support" >4416  &nbsp;Work Order viewer</P>
+ <P class="support" style="margin-left:36.00pt;">This release corrects a spurious ‘Client is not a Template’ error that occurred when the user attempted to clear the Override Client field on the Invoicing tab. </P>
+ <P class="support" >4418  &nbsp;Job Journal viewer {RSD}</P>
+ <P class="support" style="margin-left:36.00pt;">When entering expenses in the Job Journal, the Extended Revenue now automatically defaults when the Other Rate is entered if the Billing Item is not fixed fee. In recent 7.3 releases, you had the flag the Extra box to get it to default. For Billing Items that are flagged as Fixed Fee, Allow Extras, it is still necessary to flag the Extra box in order for the Extended Revenue field to default. </P>
+ <P class="support" >4421&nbsp;Implement Remote Tech Labor and Miscellaneous Charges Posting {APT}</P>
+ <P class="support" >&nbsp;This is custom for APT and is not available to other users.</P>
+ <P class="support" >4423  &nbsp;Type-ahead on lists</P>
+ <P class="support" style="margin-left:36.00pt;">The 'Type-Ahead' feature allows the user to position to a specific row of a list just by typing the first few characters of the desired row. In previous releases, this worked only on first column of the list. This release extends this functionality so that it works on whatever the column the cursor is positioned in IF the target column has been pre-sorted in ascending order by clicking the column header of the desired column.</P>
+ <P class="support" >4424&nbsp;Dispatch Board Pop-up Window for Other WOs {APT}</P>
+ <P class="support" >&nbsp;This is custom for APT and only available with the APT customization</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4431</FONT>  &nbsp;Site Equipment viewer – customization project on hold, see case for details.</P>
+ <P class="support" >4432  &nbsp;Work Order  – Registry to Validate Inventory tab vs. Inventory History on save {DayNite}</P>
+ <P class="support" style="margin-left:36.00pt;">A registry entry now required to validate that the system compares the total cost and quantity entered directly on the tab with the total cost and quantity posted to history. If all is well, the Work Order will be saved. If a discrepancy is found, a TabHistoryMismatch alert box will appear, and the work order will not be saved.  </P>
+ <P class="support" style="margin-left:36.00pt;">The tab mismatch information will be written to the error log.  As a result of the work done in case 4482, this alert should now only appear when erroneous reversal history has already been written to Inventory History, and is therefore only recommended for users that are concerned with tightening up inventory, and who are willing to have support correct issues before work orders can be edited. To implement this option:</P>
+ <P class="support" style="margin-left:36.00pt;">Id: sys-viewer-vwrkordr<BR>Setting Key: TabMismatchINV-IMH<BR>Setting Value: enabled </P>
+ <P class="support" style="margin-left:36.00pt;">If this option is not implemented this alert will not be raised. </P>
+ <P class="support" >4435  &nbsp;Work Order Closing Wizard – CLS</P>
+ <P class="support" style="margin-left:36.00pt;">The Work Order Closing Call Script and Service Recommendation functions have been reinstated. This corrects a problem caused by case 4117 in version 7.3.498.073 which enhanced the Service Evaluation wizard, but it not include the Closing Call Script and Service Recommendation in the closing functionality. </P>
+ <P class="support" >4439  &nbsp;Pay Type defaulting of Earnings and Deductions Groups (SavMor)</P>
+ <P class="support" style="margin-left:36.00pt;">When a line is added to the Labor Journal or the Work Order Labor tab, the Earnings and Deductions groups for the default Pay Type now properly completed. The system correctly computes the pay and cost rates after all technician defaults are loaded.</P>
+ <P class="support" >4440  &nbsp;AR Cash Receipts Journal viewer – CLS</P>
+ <P class="support" style="margin-left:36.00pt;">Corrects a problem encountered in the Enter Invoices screen. In previous releases, if the Remove Invoice button was clicked, the following was removed, not the selected line. This has been corrected so that the selected line is removed. </P>
+ <P class="support" >4445  &nbsp;Master Contract </P>
+ <P class="support" >&nbsp;Service Tasks Id added to lines view for WinII customization.</P>
+ <P class="support" style="margin-left:36.00pt;">Legacy Air custom views for Master Contract Schedule tab; also Start/End fields on the Work Order Labor and Labor Journal Hours tab. </P>
+ <P class="support" >4446&nbsp;W2 - modify W3 form printing</P>
+ <P class="support" style="margin-left:36.00pt;">Supports several formatting changes in the W3 form printed for 2011 taxes. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4448</FONT> &nbsp;SQL Server syntax (EMI)</P>
+ <P class="support" style="margin-left:36.00pt;">Miscellaneous syntax issues corrected while reviewing EMI's ancient Job Summary Report.</P>
+ <P class="support" style="margin-left:36.00pt;">Additional performance monitoring tools added to FieldPostingAgent class.</P>
+ <P class="support" >4450  &nbsp;Update Login and Load bitmaps for 2012.</P>
+ <P class="support" >4454  &nbsp;Data Conversion – Security Id’s</P>
+ <P class="support" style="margin-left:36.00pt;">The functionality developed in this case is used to copy data from one Security Id to another, beginning with the Client record. This may be of use if a customer is contemplating a major reorganization involving security id’s.  Internal documentation is included in the case. </P>
+ <P class="support" >4456  &nbsp;Tech Anywhere</P>
+ <P class="support" style="margin-left:36.00pt;">This release better handles a rare bug that caused NewWOs messages to be sent to SAMPro without a Site ID resulting in a work order being created with no site, no job, and no equipment. SAM Pro now verifies that a TechAnywhere message contains the following before posting:</P>
+ <P class="support" style="margin-left:36.00pt;">Date Scheduled<BR>Time Scheduled<BR>Technician Id<BR>Site Id<BR>Equipment Id<BR><BR>If any of the above are missing, the message fails and sends an email alert as usual.</P>
+ <P class="support" >4462  &nbsp;Service Channel / New Call </P>
+ <P class="support" style="margin-left:36.00pt;">The ServiceChannel logic within New Call uses Data Entry Emulation. During the emulation, standard New Call logic is popping up a MessageBox for the user to see. However, since Data Entry Emulation is in progress, the message is blocked from appearing and is treated as an error. This is causing a problem for Service Channel users.This problem was solved by allowing the application to enter a mode in which MessageBoxes are processed normally even when the application is in Data Entry Emulation Mode.</P>
+ <P class="support" >4464  &nbsp;AP Performance Issues {CFS, Hutchinson}</P>
+ <P class="support" style="margin-left:36.00pt;">Some of our Sybase users have experienced performance issues running the AP functions; this appears to be the result of changes made in case 4003 as a custom modification. This release includes performance enhancements to the View AP Date to Pay, Start AP Payment Approved List, and Start AP Payment Approved List PM functions.</P>
+ <P class="support" >4465  &nbsp;Custom WO Tech view (CLS)</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4471</FONT>&nbsp;AP Journal – better alignment of Invoice Total, Total Entered, and Total Tax fields. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4475</FONT>   &nbsp;Viewers (general) / New Call – MSSQL </P>
+ <P class="support" style="margin-left:36.00pt;">Corrects a problem when right-click on Web Log Id failed in New Call (and possibly other areas) produced the following message: </P>
+ <P class="support" style="margin-left:72.00pt;">error 8114 ‘[Microsoft][SQL Server] Error converting data type varchar to numeric.’ </P>
+ <P class="support" style="margin-left:36.00pt;">Previously, the SQL failed in SQL Server because the right-click, viewer opening technology assumed that all Id-type fields were character.&nbsp; The Web Log Id happens to be numeric for some unknown reason. In this release, right-click works for both character and numeric-type Id fields.</P>
+ <P class="support" >4477 &nbsp;PR Check Stubs</P>
+ <P class="support" style="margin-left:36.00pt;">The Payroll Period Start and End dates, and the Check Date, have been added to the Recap portion of the Payroll Check stubs. </P>
+ <P class="support" >4482  &nbsp;Viewers (general) – Reversal Handling</P>
+ <P class="support" style="margin-left:36.00pt;">This case Implements journal validation logic to prevent posting reversals with inappropriate Transaction Ids.  It was developed to handle a recently discovered situation where WO Inventory reversals to imhstry were being generated erroneously.&nbsp; The problem is sporadic and can't be reproduced on demand (but not for want of trying). The problem scenario goes like this ... user edits and saves Work Order A then edits and saves Work Order B without closing the viewer.&nbsp; In some situations, reversing entries are made against Work Order A with Work Order B taking credit for the reversal.</P>
+ <P class="support" style="margin-left:36.00pt;">In this release, if SAM Pro detects this situation about to occur, it will suppress the erroneous reversal, AND make an error in the error log noting the reversal suppression. If the cus file is DB or the user is running in development mode, a message box will also appear. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >2011-12-22 (jt)-version 8.0.505.006</FONT></P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4093</FONT>  &nbsp;Job Budgets (table change only)</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4264</FONT><FONT style="text-decoration:underline;" >**</FONT>  &nbsp;Canadian AFT – awaiting test results from Paul and Mark</P>
+ <P class="support" style="margin-left:36.00pt;">See customer user note 10.2 for Report AFT and customer user note 2.11 for the corresponding registry entry. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4389</FONT>  &nbsp;Custom Index </P>
+ <P class="support" style="margin-left:36.00pt;">New Field: Description</P>
+ <P class="support" style="margin-left:36.00pt;">This 400 character field should be used to document the need for / purpose of this index. </P>
+ <P class="support" style="margin-left:36.00pt;">New Field: Reference</P>
+ <P class="support" style="margin-left:36.00pt;">This field may be used to cross-reference the index to a D-B WO# or FogBugz Case#.</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">  4430  &nbsp;Employee viewer –Check Tab &nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;">This release filters the Checks list to exclude cchck rows where both the pyrllprd_rn and the chck_dte_effctve are empty.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4431</FONT><FONT style="text-decoration:underline;" >**</FONT>  &nbsp;Site Equipment viewer  {Legacy} – CANCELLED FOR NOW</P>
+ <P class="support" >2011-12-20 (jt)-version 8.0.505.005</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4264</FONT>  &nbsp;Canadian AFT (table change only)</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4274</FONT>  &nbsp;Viewers (general) – output file name</P>
+ <P class="support" style="margin-left:36.00pt;">Corrects a problem that occurred with the creation of a Windows type file which cannot have any of the following characters in the file name (\ / * | : ? “ &lt; &gt;). This error could occur anywhere in DB where we are trying to build file names which contain field values from DB.</P>
+ <P class="support" style="margin-left:36.00pt;">Since we do not deny users the ability to enter the characters */\:?&quot;&gt;&lt; in Id fields (we do deny the pipe|), the solution in this release is to replace the illegal windows filename character with an underscore. </P>
+ <P class="support" > <FONT style="text-decoration:underline;" >4321</FONT>  &nbsp;KPI Definitions (Key Performance Indicators)</P>
+ <P class="support" > <FONT style="text-decoration:underline;" >4384</FONT>  &nbsp;Dashboard Tables – Joe will introduce later this week</P>
+ <P class="support" > <FONT style="text-decoration:underline;" >4410</FONT> &nbsp;Calendar Dates table</P>
+ <P class="support" style="margin-left:36.00pt;">Create Calendar (clndr) table to simplify KPI definitions and reporting in general.</P>
+ <P class="support" style="margin-left:36.00pt;">NOTE: There is no SAMPRO viewer for this table. Records are inserted/updated as a result of Add and Change actions performed on GL Reporting Periods. The Smalltalk code noted below can be used from a Smalltalk workspace. It will automatically create all the clndrdte records for each existing GL Reporting Period. At some point, we may want to incorporate this into the database conversion process.</P>
+ <P class="support" style="margin-left:36.00pt;">Vglrprtngprd createCalendarDatesForAllReportingPeriods</P>
+ <P class="support" style="margin-left:36.00pt;">NOTE: the above code has been added to the SUPPORT.TXT workspace that is kept open in the master image.</P>
+ <P class="support" > <FONT style="text-decoration:underline;" >4412</FONT>  &nbsp;GL Account and Account Types</P>
+ <P class="support" style="margin-left:36.00pt;">This case implements additional ways of classifiying GL Accounts and Account Types: fields added for use with KPI/Dashboards. </P>
+ <P class="support" style="margin-left:36.00pt;">GL Account Types</P>
+ <P class="support" style="margin-left:36.00pt;">New Field: Category –</P>
+ <TABLE width="583" cellspacing="0" cellpadding="1" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="25.38%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Current Asset</P></TD>
+  <TD width="18.38%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Current Liab</P></TD>
+  <TD width="18.62%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Capital</P></TD>
+  <TD width="18.80%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Operating Inc</P></TD>
+  <TD width="18.82%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Cost of Sales</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.38%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Fixed Asset</P></TD>
+  <TD width="18.38%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Long-term Liab</P></TD>
+  <TD width="18.62%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Ret Earnings</P></TD>
+  <TD width="18.80%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Other Inc</P></TD>
+  <TD width="18.82%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Operating Exp</P></TD></TR>
+  <TR valign=top>
+  <TD width="25.38%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Other Asset </P></TD>
+  <TD width="18.38%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Other Liab</P></TD>
+  <TD width="18.62%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="18.80%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P></TD>
+  <TD width="18.82%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Other Expense</P></TD></TR>
+ </TABLE>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;">This new field has been added to support the new DB Analytics KPI (Key Performance Indicators) Dashboard functionality. </P>
+ <P class="support" style="margin-left:36.00pt;">During database conversion, the old Account Type Category field (with values of Asset, Liability, Equity, Income and Expense) will be used to set the new Category field as follows:</P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <TABLE width="438" cellspacing="0" cellpadding="1" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="54.79%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Old Field (Asset Category) Type</P></TD>
+  <TD width="45.21%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >New Field (Category)</P></TD></TR>
+  <TR valign=top>
+  <TD width="54.79%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Asset</P></TD>
+  <TD width="45.21%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Other Asset</P></TD></TR>
+  <TR valign=top>
+  <TD width="54.79%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Liabilty </P></TD>
+  <TD width="45.21%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Other Liability</P></TD></TR>
+  <TR valign=top>
+  <TD width="54.79%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Equity</P></TD>
+  <TD width="45.21%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Retained Earnings</P></TD></TR>
+  <TR valign=top>
+  <TD width="54.79%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Income</P></TD>
+  <TD width="45.21%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Other Inc</P></TD></TR>
+  <TR valign=top>
+  <TD width="54.79%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Expense</P></TD>
+  <TD width="45.21%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P class="support" >Other Expense</P></TD></TR>
+ </TABLE>
+ <P class="support" >SAM Pro will continue to use the old Account Type Category field, but DB Analytics will use the new Category field. Therefore, if DB Analytics will be implemented, support or a designated user should </P>
+ <P class="support" > <FONT style="text-decoration:underline;" >4415</FONT>  &nbsp;GLH Summary table – for use with DB Analytics – still in process</P>
+ <P class="support" style="margin-top:0;margin-bottom:0"> &nbsp;</P>
+ <P class="support" >2011-12-07 (jt)-version 8.0.503.004</P>
+ <P class="support" >3555  &nbsp;AP Journal (Storee mod)</P>
+ <P class="support" style="margin-left:36.00pt;">This is an addition to the following registry option:</P>
+ <P class="support" style="margin-left:36.00pt;">The Description field on the GEN tab (apjrnllst_dscrptn) has been added to the list of fields which may be edited even if the Vendor Invoice has been paid if the following registry option is implemented:</P>
+ <P class="support" style="margin-left:36.00pt;">Registry Id: sys-viewer-vapjrnl<BR>Setting Key: AllowChangesToPaidInvoices&nbsp; Setting Value: true</P>
+ <P class="support" style="margin-left:36.00pt;">Note that this registry option is not recommended and is only listed in support help.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4321</FONT>  &nbsp;KPI Definitions (import/export)</P>
+ <P class="support" >4325  &nbsp;Service Billing – COD Template Client Processing</P>
+ <P class="support" style="margin-left:36.00pt;">Corrections to this release allow zero dollar invoices with only costs (and no revenues/COD entries) to be billed to a template Client.  In addition, the Service Worksheet processing no longer brings up the list of each WO/Job combination; this is reserved for Service Invoicing only. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4361</FONT>**  &nbsp;Quote Gross Margin Tab (Legacy) – in progress</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4371</FONT>  &nbsp;Viewers (general)</P>
+ <P class="support" style="margin-left:36.00pt;">Latest patch corrects ‘receiver is not a boolean’ error on initial log in that occurred as an unintended result of this case.</P>
+ <P class="support" style="margin-left:36.00pt;">The standard view of the Check viewer was change simply initial data entry in case 3814, making it desirable to disable all fields in this viewer via registry so that group ‘All’ users would not accidentally make changes to this record. This case corrects an issue that occurred when all the fields in the Check viewer were disabled, the system locked when the viewer was accessed. </P>
+ <P class="support" style="margin-left:36.00pt;">To disable all Check fields:</P>
+ <P class="support" style="margin-left:36.00pt;">Id: sys-viewer-vchcklst</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Key: DisabledFieldsParent</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Value: gl-bnk: glaccnt.id,glentty.id,chck.nmbr,chck.amnt,chck.rfrnce-nme,chck.dte-chck,chck.type,chck.dscrptn</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Key: disabledFieldschild</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Value: chcklst.amnt-grss</P>
+ <P class="support" style="margin-left:36.00pt;">Note: Each viewer has to have its validate method changed to ignore display only fields. The code referenced in the case must be added to each via that requires this functionality. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4384 </FONT> &nbsp;Dashboard Tables</P>
+ <P class="support" >2011-12-02 (jt)-version 8.0.503.003</P>
+ <P class="support" >Sybase 11 and 12</P>
+ <P class="support" style="margin-left:36.00pt;">Sybase 11 and 12 are NOT recommended for use with SAM Pro due to problems with floating point arithmetic. If a client does install Sybase 11 or 12, each SAM Pro image they run MUST be updated with the code from case 4305 before it is delivered to them.  As of this date, only Vector is on this database: all images give to them must be updated with the 4305 code first.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >3814 </FONT> &nbsp;Check viewer</P>
+ <P class="support" style="margin-left:36.00pt;">When SAM Pro is first implemented, checks originally written from the client’s old system are often manually added in SAM Pro. In the past, this required that a separate check ‘view’ be implemented via the customization field to allow entry to the check field, adding to the programming overhead for new install.</P>
+ <P class="support" style="margin-left:36.00pt;">In this version, the standard Check viewer uses the standard User Group functionality to enable/disable user entry into this record.  After the initial checks have been loaded (if applicable), all User Groups and Functions records should be updated as follows:</P>
+ <P class="support" style="margin-left:36.00pt;">For User Groups allowed to View Checks:</P>
+ <P class="support" style="margin-left:72.00pt;">Access box checked: Add, Change, Delete and Export boxes cleared. </P>
+ <P class="support" style="margin-left:36.00pt;">For User Groups that should NOT View Checks:</P>
+ <P class="support" style="margin-left:72.00pt;">Access, Add, Change, Delete and Export boxes cleared. </P>
+ <P class="support" >4085&nbsp;Bitmap Refactoring</P>
+ <P class="support" style="margin-left:36.00pt;">All bitmaps have been permanently removed from the SAMPRO image effective in 7.3.498.081 and 8.0.503.003. The bitmaps are now stored outside the image in a file named master~pushbuttons.obj. This is a Smalltalk object file. The SAMPRO &quot;app&quot; now consists of v.exe, change.log, recover.log and the new object file.<BR><BR>From the programmer's standpoint, not much has really changed. The bitmaps are read into memory when needed and automatically saved back out when &quot;FieldTest checkMaster&quot; is executed before saving the image.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4204</FONT>  &nbsp;Employee viewer</P>
+ <P class="support" style="margin-left:36.00pt;">New Buttons:  AddTech / EditTech<BR>If a Technician is already associated with Employee, clicking the Edit Tech displays the appropriate Technician record.</P>
+ <P class="support" style="margin-left:36.00pt;">If a Technician is not yet associated with the Employee, clicking the Add Tech button will launch the Technician form, with the Employee Id and the following fields completed from the Employee viewer:</P>
+ <P class="support" style="margin-left:72.00pt;">Technician Name (from the Employee First + Middle + Last Name fields)</P>
+ <P class="support" style="margin-left:72.00pt;">Technician Cellphone (from the Employee Cellphone) </P>
+ <P class="support" style="margin-left:72.00pt;">Technician Pager (from Employee Pager 1) </P>
+ <P class="support" style="margin-left:72.00pt;">Technician Email (from Employee Email) </P>
+ <P class="support" style="margin-left:72.00pt;">Technician Address (from Employee Mailing Address) </P>
+ <P class="support" style="margin-left:36.00pt;">The user should then complete the remaining Technician fields (being sure to set the Web Access fields correctly) and save the record. </P>
+ <P class="support" > 4236  &nbsp;Service Channel</P>
+ <P class="support" style="margin-left:36.00pt;">Now properly passes fileName (not pathName) to 'fileAlreadyExists:'.</P>
+ <P class="support" style="margin-left:36.00pt;">There was a bug (originally caused by this case) that allowed the data from multiple ServiceChannel tracking #'s to merge into a single file rather than individual files. The processing function is not capable of processing said type of data files, and therefore would reject the incoming data from ServiceChannel. The latest update to this case fixes this problem to ensure all data is separated into individual files.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4252</FONT>  &nbsp;Viewers (general)</P>
+ <P class="support" style="margin-left:36.00pt;">Corrects an obscure problem deleting records opened via right-click. See case for details. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4263</FONT>  &nbsp;CRM Anywhere Enhancements</P>
+ <P class="support" style="margin-left:36.00pt;">Other Documents - new CRMAnywhere page:</P>
+ <P class="support" style="margin-left:36.00pt;">This page is desired to allow your CRMAnywhere customers the ability to access and download .pdf documents such as sales and service specials and other company literature.  The page will display the Document Category, Document Id, and Document Description of the documents that qualify for the list. Clicking on the Document Id will display the Document.</P>
+ <P class="support" style="margin-left:36.00pt;">This page will only appear if the following new registry setting is present AND these documents are located in your data. When the Web User selects the new option, the list of Other Documents will be displayed.</P>
+ <P class="support" style="margin-left:72.00pt;">Registry Id: web-settings</P>
+ <P class="support" style="margin-left:72.00pt;">Setting Key: GlobalDocumentCategories</P>
+ <P class="support" style="margin-left:72.00pt;">Setting Value: comma-delimited list of Document Categories</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Up the Global Documents</P>
+ <P class="support" style="margin-left:36.00pt;">A document record must be made for each .pdf document that you wish to appear on the CRMAnywhere Other Documents page.</P>
+ <P class="support" style="margin-left:72.00pt;">The Document Category must exactly correspond to one referenced in the registry setting</P>
+ <P class="support" style="margin-left:72.00pt;">The Document Name should briefly describe the document: it will be displayed on the Other Documents page. </P>
+ <P class="support" style="margin-left:72.00pt;">The Document must be flagged as CRM Web Viewable</P>
+ <P class="support" style="margin-left:72.00pt;">In the References list, enter the Table Name field as Document, and select any Reference Id.  If you do not complete this step, your document will not appear on SAM Pro’s View Document list (although it will appear in CRMAnywhere). </P>
+ <P class="support" style="margin-left:36.00pt;">If the document is only good for a limited time, clearing the CRM Web Viewable flag will remove it from the CRMAnywhere View Document list. </P>
+ <P class="support" style="margin-left:36.00pt;">New Column for CRMAnywhere Open Work Order List</P>
+ <P class="support" style="margin-left:36.00pt;">The user is allowed to specify the columns of information that may be displayed in the Open Work Orders list using the woopencolumns and woopentitles registry options. The Work Order Name has been added to the list of columns that may be specified as woname. No changes have been made to the default displays.</P>
+ <P class="support" style="margin-left:36.00pt;">Work Order Viewer: Web Log Field</P>
+ <P class="support" style="margin-left:36.00pt;">A new column has been added to the wrkordr table for the purpose of providing a simple/reliable link to the associated Web Log. The Invoicing tab of the Work Order viewer shows the data from the associated Web Log entry if a Web Log was used to generate the Work Order. Any function capable of creating a new work order (New Call for example) from an existing Web Log entry will now set this field. </P>
+ <P class="support" style="margin-left:36.00pt;">The new database column is not being retroactively loaded during database conversion due to concerns about performance. For anyone that requests it, the script attached to this case can be used to update the new column.</P>
+ <P class="support" style="margin-left:36.00pt;">CRMAnywhere Open and Completed Work Order Lists</P>
+ <P class="support" style="margin-left:36.00pt;">The Web Log Id (labeled Service Request in CRM) has been added to the CRM Anywhere Work Order lists so that users can better track their Service Requests as the default display. To add the Service Request to a custom list use the column name servicerequest. </P>
+ <P class="support" >4301   &nbsp;SubAnywhere</P>
+ <P class="support" style="margin-left:36.00pt;">Currently there is a sys-subanywhere registry setting to disable collateral from attaching to the site Setting Key: AttachCollateralToSite  Setting Value: false (default is true)&quot;<BR><BR>In this release, you may disable collateral from attaching to the equipment by implementing the following option:</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Key: AttachCollateralToEquipment  Setting Value: false (default is true)</P>
+ <P class="support" >4302 &nbsp;Printer Selection – unusable printers removed from list</P>
+ <P class="support" style="margin-left:36.00pt;">In previous release, an error was being generated when the user was trying to print to certain unusable printers appearing on the PrinterSelect dialog. The error occurred when printing logic was trying to obtain the DEVMODE structure for the printer. The PrintDialog logic has been changed so than all printers having an unavailable DEVMODE structures do not appear on the printer list.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4321</FONT>  &nbsp;Dashboard KPI Definition viewer</P>
+ <P class="support" >4325  &nbsp;Service Billing – COD Processing </P>
+ <P class="support" style="margin-left:36.00pt;">Template-type clients should only be billed when the net invoice amount is exactly ZERO DOLLARS. This situation would be normal for residential accounts serviced and billed on a COD basis. SAMPRO must prevent the production of a non-zero-dollar invoice to any template-type client. <BR><BR>The Service Billing Worksheet report has been modified to display a very noticeable warning for each WO/Job invoice that would result in a template-type client being billed for any amount other than zero. In addition, the following changes have been added to the process of preparing Service Invoices ...</P>
+ <P class="support" style="margin-left:36.00pt;">1. Compile a list of each WO/Job combination that meets the exclusion criteria implemented in the Service Invoice Report.<BR>2. Show the compiled list to the user in a Smalltalk workspace.<BR>3. Auto-save the compiled list as a text file. If the dbreportfiles registry entry exists, the system will use it to get the location to save the file with the Template Client errors. If the dbreportfiles registry entry does not exist, the Sampro base directory will be used to save the file with the Template Client errors.<BR>4. Work Orders that make the list CANNOT be included in the invoicing run.<BR></P>
+ <P class="support" >4326  &nbsp;Tech Anywhere</P>
+ <P class="support" style="margin-left:36.00pt;">The TechAnywhere posting function runs as a global user; in previous versions, Labor Journal and other transactions generated by the post were assigned global security.&nbsp; In this release, the post has been changed so that the security override from the Work Order is correctly applied to Labor Journal, Purchase Order, Sales Journal, Work Order children, and new Client Site Equipment records UNLESS the record is included in the sys-securityexceptionsbytable registry.</P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" >4327  &nbsp;Remote Tech Helper (CLS mod)</P>
+ <P class="support" style="margin-left:36.00pt;">This code was added to allow CLS to start a web listener for purposes of sending TechAnywhere like messages to SAM Pro's message table using HTTP POST commands. The reason this code is necessary is so that messages could post instantly to SAMPro and submit a result to the client. This differs from TechAnywhere's method in which the message is submitted without confirmation of a result.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4332</FONT>  &nbsp;AP Journal viewer – Add Taxes</P>
+ <P class="support" style="margin-left:36.00pt;">The Add Taxes button has been enhanced to support Tax Groups with cumulative tax authorities. </P>
+ <P class="support" style="margin-top:0;margin-bottom:0"> 4337  &nbsp;Email {JJ Madden}&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;">This case corrects a client’s outbound email Issue with an email server that rejects incoming emails generated from within SAMPRO and/or XMLTOPDF.<FONT style="font-family:'Verdana'; font-size:9pt; color:black; " > </FONT>This release adds a 'Date:' header line to the message, immediately following the 'Subject:' header line.</P>
+ <P class="support" style="margin-left:36.00pt;">An updated version of the XmlToPdf.jar file is included in the zip file for this release that also supports the Date header line for emails with .PDF attachments sent from SAM Pro.</P>
+ <P class="support" >4339 &nbsp;Dispatch Board – Classic Board (Carmichael)</P>
+ <P class="support" style="margin-left:36.00pt;">This release extends the Unavailable Technician functionality to the Classic Board when the Change Orientation button is clicked. Unavailable Techs will now have their row header displayed with a red background. </P>
+ <P class="support" >4340  &nbsp;Job Journal viewer (Jeff C)</P>
+ <P class="support" style="margin-left:36.00pt;">This release corrects a sporadic error that resulted in the Job Journal posting incorrect reversals to GL history. See case for details.</P>
+ <P class="support" >4346  &nbsp;Recurring AP Journal viewer (no code changes required)</P>
+ <P class="support" style="margin-left:36.00pt;">Validation has been added to prevent the entry of negative amounts in the following fields to prevent errors when these entries are released:</P>
+ <P class="support" style="margin-left:36.00pt;">Main Tab: </P>
+ <P class="support" style="margin-left:36.00pt;">Recurring Amount:</P>
+ <P class="support" style="margin-left:36.00pt;">Recurring Lines Tab:</P>
+ <P class="support" style="margin-left:36.00pt;">Quantity, Quantity Billable, Unit Cost, Amount</P>
+ <P class="support" style="margin-left:36.00pt;">Revenue Rate, Amount Revenue</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" > 4349  &nbsp;SQL History – New Runtime option</P>
+ <P class="support" style="margin-left:36.00pt;">Previously, the option to capture and view SQL History was only available in development mode. Since there are times when it would be helpful for a 'regular' SAMPRO user to capture and then send the captured statements to support and/or programming, this feature has been added to the runtime Help menu. </P>
+ <P class="support" style="margin-left:36.00pt;">New Help Menu Option: SQL History:</P>
+ <P class="support" style="margin-left:36.00pt;">There may be times when your support representative needs to see the SQL generated by certain actions: the SQL History option has been added to the Help menu to enable this. </P>
+ <P class="support" style="margin-left:36.00pt;">To capture SQL History, select Help &gt; SQL History.  This menu provides three options: Capture SQL History, View SQLHistory and Clear SQL History.  If a check mark does not yet appear next to Capture SQL History select this option to turn this feature on. </P>
+ <P class="support" style="margin-left:36.00pt;">Next, perform the steps that your support representation tells you.</P>
+ <P class="support" style="margin-left:36.00pt;">To view the SQL, use the menu option Help&gt;SQL History&gt;View SQL History</P>
+ <P class="support" style="margin-left:36.00pt;">A workspace window will appear with the SQL history that has been logged. In the workspace, select File &gt; Save As.  A browser window will appear: browse to a location you will be able to retrieve the file from, and save it using an appropriate name. </P>
+ <P class="support" style="margin-left:36.00pt;">The Help&gt;Clear SQL History option may be used to clear SQL history before making another test.</P>
+ <P class="support" style="margin-left:36.00pt;">To toggle Capture SQL History off, select Help&gt;SQL History&gt; Capture SQL History.</P>
+ <P class="support" style="margin-left:36.00pt;">Note that even if you do not explicitly turn this feature off, it will be disabled when you log off. </P>
+ <P class="support" >4351  &nbsp;Tech Anywhere – MJI and Kaback</P>
+ <P class="support" style="margin-left:36.00pt;">This release corrects a Tech Anywhere and Scheduled Event Manager Posting Conflict. Previously, while the TA posting agent is in the act of posting a completed work order message, the Scheduled Event Manager tries to process the UNCOMMITTED Web Log entry made for the tech's Service Recommendations. The solution is to have TA initially create the Web Log entry with a 'bogus' status that would prevent SEM from processing it. Then, immediately before TA commits its work, it would change the Web Log Status to its normal value of 'New'.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4353</FONT>  &nbsp;Start View DB Reports</P>
+ <P class="support" style="margin-left:36.00pt;">In Start View DB Reports, path names were arbitrarily restricted to 60 characters, resulting in some reports with lengthy titles and paths not being viewable. Maximum size has been changed to 160.</P>
+ <P class="support" style="margin-left:36.00pt;">SQL Server had an issue with the size of the time field in the temp table; this has been corrected.  </P>
+ <P class="support" >4365  &nbsp;Job viewer</P>
+ <P class="support" style="margin-left:36.00pt;">This release corrects a display issue on the JC Summary tab: in previous releases, moving the mouse over this tab result in buttons from the Main or Invoicing tabs showing through. </P>
+ <P class="support" >4366  &nbsp;Physical Counting - Sue</P>
+ <P class="support" style="margin-left:36.00pt;">This release corrects a problem in the List Physical Count report. Previously, only the items listed on the Physical Count Viewer were included in the report when the List Missing Items option was checked. The List Missing Items options, as well as the First and Last Uncounted fields in this report now work properly.</P>
+ <P class="support" >4367   &nbsp;Asset viewer - Sue</P>
+ <P class="support" style="margin-left:36.00pt;">This release corrects a spurious ‘Job is a Template record’ message when the user attempts to clear the Default Overhead Job fields from the Costing tab.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4371</FONT><FONT style="text-decoration:underline;" >**</FONT>  &nbsp;Viewers (general) – Check viewer – in progress</P>
+ <P class="support" > 4372  &nbsp;Windows Menu (Tech Finder)</P>
+ <P class="support" style="margin-left:36.00pt;">In previous releases, SAM Pro’s Windows menu did not list the TechFinder window when it was opened, including an extra Dispatch Board entry instead if it was launched from the Dispatch Board. When the TechFinder window was closed, the erroneous Dispatch Board entry was not removed from the menu, resulting in the software informing you that multiple Boards were open when in fact they were not. In this release, a TechFinder entry is added to the Windows menu when a TechFinder window is opened. When the TechFinder window is closed, it will be removed from the Windows menu. </P>
+ <P class="support" >4374   &nbsp;Custom Index viewer – Internal</P>
+ <P class="support" style="margin-left:36.00pt;">In this release, we added performance monitoring to Create and Drop Custom Index processing. This enhancement was implemented as a tool to enable programming to better determine where SQL bottlenecks exist and then to correct them.  See case for additional details. </P>
+ <P class="support" >4376  &nbsp;Quote Master Wizard – CLS</P>
+ <P class="support" style="margin-left:36.00pt;">The sys-viewer-vqte option ApprovalWizardDefaultTechStatus is used to set the default status in the Approval Wizard's Technician pane. In recent 7.3 releases, this option worked correctly UNLESS the technician was a subcontractor. In this release, the software has been corrected so that the ApprovalWizardDefaultTechStatus is also used for subcontractor technicians.</P>
+ <P class="support" >4380  &nbsp;PM Workbench</P>
+ <P class="support" style="margin-left:36.00pt;">The Progress tab now displays the Job Progress information correctly; in previous releases it was not displayed.</P>
+ <P class="support" >4388  &nbsp;PM Workbench</P>
+ <P class="support" style="margin-left:36.00pt;">This case extends the work done in case 191 that allows specific values to be passed from SAMPRO to an external app (for example, Crystal Reports) as a command line parameter.&nbsp; This functionality already exists for printing Quotes, POs, WO Tickets and Shop Tickets. </P>
+ <P class="support" style="margin-left:36.00pt;">As we have done in the WO, Quote, PO and Shop Packet in previous SAM Pro versions, this enhancement allows Crystal Reports to pick up the specific ID (Job ID in this case) that is currently active in the program (PM Workbench in this case). With this new ability, Crystal Report Functions added to the Reports tab of the PM Workbench do not require the user to enter in the Job ID if the report is job based. The Crystal Report must use a parameter named exactly jb_id in order for it to have SAM Pro pass it to the report. </P>
+ <P class="support" style="margin-left:36.00pt;">In the specific example of how it is being used, the Client wanted to print out a “log record” of Submittals and RFI requests made for the job so that they could give that document to the Client/Architect. Without this enhancement, they would have to double-click on the Crystal Report Function in the Reports tab and remember the job id so they could manually fill it in. With this feature, the user immediately gets the report to run with no interaction for that specific job they are on.</P>
+ <P class="support" >2011-10-21 (jt)-version 8.0.501.002</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Important Installation Note</FONT><FONT style="font-weight:bold; " >:</FONT> The zip file for this release<FONT style="font-weight:bold; " > </FONT>includes a Smalltalk object file containing all bitmap definitions currently being stored in the image (master~pushbuttons.obj) and an executable (v.exe) stripped of all bitmaps. This configuration should allow XP users to run without ‘non-continuable protection fault errors’. The bitmaps will be loaded at runtime from the master~pushbuttons.obj file and the SKIN1 directory (if bitmap skinning is in effect). Running this release requires the presence of the v.exe, change.log, recover.log and master~pushbuttons.obj files.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Enhanced Report</FONT><FONT style="font-weight:bold; " >s</FONT><FONT style="font-weight:bold; " >: </FONT></P>
+ <P class="support" style="margin-left:36.00pt;">Report Customer Statement</P>
+ <P class="support" style="margin-left:36.00pt;">This report now supports auto-emailing in the Customer Statements report (RCUSTSTMNT.rpt) dated 8/30/2011 or later. If an e-mail address exists in the Client Collections Email Address field, a pdf copy of their section of the report will be emailed to that address. In addition to installing the updated report, the following registry options must be added to the sys-report-rcuststmnt registry to enable this behavior. This report is suitable for version 7.0 and above.</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Key: emailbysection  Setting Value: true</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Key: autoemail  Setting Value: true </P>
+ <P class="support" style="text-indent:36.00pt;">RININV4  (case 4197)</P>
+ <P class="support" style="margin-left:36.00pt;">This report has been revised to increase the Size of Rate Fields For NonLabor Lines From (9,4) To (10,4). Report dated 8/22/2011 is suitable for version 7.2 and higher.</P>
+ <P class="support" >3500  &nbsp;Sales Journal viewer</P>
+ <P class="support" style="margin-left:36.00pt;">Validation now prevents the user from changing the Entry Type on an existing entry. By default, the Entry Type may only be changed in the Sale Journal is in ‘add’ mode. The following registry entry overrides the above validation, effectively restoring the previous behavior. Implementing this option is not recommended.</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Registry Id:</FONT> sys-viewer-varslslst</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Setting Key:</FONT> OkToChangeEntryType  <FONT style="font-weight:bold; " >Setting Value:</FONT> true (default is false)</P>
+ <P class="support" >3768  &nbsp;Tech Unavailability</P>
+ <P class="support" style="margin-left:36.00pt;">All 3 of the following enhancements only work if the registry setting<BR>IdentifyUnavailableTechs in sys-viewer-vdsptchbrd is set to true.<BR><BR>NewCall<BR>If the technician and date scheduled are both entered; when the NewCall is saved a Warning will appear saying the Tech is Unavailable.<BR><BR>TechFinder<BR>In TechFinder, the word ‘OFF’ will appear on the Technician gridpane of hours if the technician is Unavailable. In addition, a Warning now appears saying the Tech is Unavailable if you select an Unavailable date.<BR><BR>View Workorder.<BR>On a WorkOrder tech line when either a tech or date scheduled is changed, a Warning now appears saying the Tech is Unavailable if the date is included in the Unavailable hours for that Technician.</P>
+ <P class="support" >3862  &nbsp;Service Channel</P>
+ <P class="support" style="margin-left:36.00pt;">This release now allows our ServiceChannel FMMS Bridge to support multiple companies (ServiceChannel PIN's) if needed. To support this, additional SAMPro registries can be made in the form of:</P>
+ <P class="support" style="margin-left:36.00pt;">sys-fmms-vendor-ServiceChannel-pin-XXXX<BR><BR>This registry setting should only need to contain the user/password (InvoiceUID &amp; InvoicePWD) for that particular company (pin), but could be used to override other settings if needed. All other registry settings default from the base registry setting (sys-fmms-vendor-ServiceChannel), and the &quot;pin&quot; registry can be used to override the settings on a pin by pin basis.</P>
+ <P class="support" >4031  &nbsp;Purchase Order viewer</P>
+ <P class="support" style="margin-left:36.00pt;">Previously, users could go into purchase orders and change them from purchase orders to credit purchase orders and vice versa. This had more impact on clients using the Unvouchered Option in the Accounting period as it produced an out-of-balance gl transaction. In this release, validation has been added to lock this down. If the PO is in add mode, the user is allowed to switch between the Purchase and Credit types. Once the record has been added, however, the user must cancel the PO, and add it as the correct type. </P>
+ <P class="support" style="margin-left:36.00pt;">A registry entry (not recommended) is available to ignore this validation and restore the previous behavior and allow the PO Type to be changed on existing Purchase Orders: </P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Id:</FONT> sys-viewer-vprchseordrlst</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Setting Key:</FONT>  OkToChangePOType   <FONT style="font-weight:bold; " >Setting Value:</FONT> true </P>
+ <P class="support" >4072  &nbsp;Service Channel</P>
+ <P class="support" style="margin-left:36.00pt;">Fixes/accommodates a bug caused from bad data occasionally sent to us from ServiceChannel. See case for details. </P>
+ <P class="support" >4085  &nbsp;Bitmaps – Refactoring Image to Exclude bitmaps; master~pushbuttons.obj file</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4086</FONT><FONT style="text-decoration:underline;" >**</FONT>  &nbsp;Document Management – in progress</P>
+ <P class="support" >4096&nbsp;Work Order Escalation tab: double click on a line to open the applicable Scheduled Event. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4099</FONT>  &nbsp;GUI</P>
+ <P class="support" style="margin-left:36.00pt;">The Status Pane now also shows the field the Mouse Pointer is over. For example, it the mouse is over the Add line button, the Status line will appear as follows:</P>
+ <P class="support" style="margin-left:36.00pt;">PointerOver&gt;&gt;&gt;AddLine: Click or press ctrl+O to add a new line of data</P>
+ <P class="support" style="margin-left:36.00pt;">The status pane text will be based on the field in focus if nothing else is found to display:</P>
+ <P class="support" style="margin-left:36.00pt;">InFocus&gt;&gt;&gt;(1:15)clntsteeqmnt_id</P>
+ <P class="support" >4103  &nbsp;Viewers: extends the ability to create a named range to history viewers opened at the filter.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4185**</FONT>  &nbsp;DashBoard Helper – in progress</P>
+ <P class="support" >4186  &nbsp;AP Journal viewer {RSD}</P>
+ <P class="support" style="margin-left:36.00pt;">In previous releases, the system erred when you added an entry with a single quote ' in the EFT/Credit Trx Id: field, but allowed the entry to be saved. Unfortunately, the entry could not be deleted. In this release, the user is no longer allowed to enter the single quote in this field.</P>
+ <P class="support" >4193  &nbsp;Registry viewer</P>
+ <P class="support" style="margin-left:36.00pt;">Corrects “Runtime error: RnFetchErrorForKeyName:RegistryListByNumber field name:rgstrylst.rn(error RecordNotFound)” when deleting a registry entry with one or more Setting Values.</P>
+ <P class="support" >4199**  &nbsp;Generate PM Billings – In process</P>
+ <P class="support" style="margin-left:36.00pt;">If the Job’s Tax Status is set to Unknown, it will be excluded from the list of eligible billings and instead be included in the workspace list of failed jobs.</P>
+ <P class="support" >4203  &nbsp;Viewers (mouse-over)</P>
+ <P class="support" style="margin-left:36.00pt;">In previous releases, the mouse over box drawn around bitmaps was not always removed when the mouse was quickly run over a series of buttons.  This problem has been corrected in this build so that these “leftover” boxes no longer appear when the mouse has moved off of the button.  </P>
+ <P class="support" >4232  &nbsp;EOM UVP – {Temp Service}</P>
+ <P class="support" style="margin-left:36.00pt;">In previous releases, Start Create EOM Unvouchered AP GL Entries skipped GEN lines from Credit PO’s but picked up Inventory lines.  In this release, applicable Inventory and Gen on Credit PO’s lines will be processed by this function. </P>
+ <P class="support" >4236  &nbsp;Service Channel – Change to File Naming Logic</P>
+ <P class="support" style="margin-left:36.00pt;">Previously, the naming logic took into account the possibility that another service request had previously been received at the same date and time (to seconds). It did this by checking the Inbound folder for file naming conflicts. This logic has been expanded so that the Archive and Reject folders are included in the naming conflict resolution.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4240</FONT><FONT style="text-decoration:underline;" >**</FONT>  &nbsp;ManagersDispatchBoard Helper – in process</P>
+ <P class="support" >4244&nbsp;Client Site viewer – Sagequest</P>
+ <P class="support" style="margin-left:36.00pt;">This release handles an error that occurred in previous releases when the Sage Quest interface was on and the user loaded a client site record with these properties ...<BR><BR>1. Site Latitude is blank, and<BR>2. Work/Ship Street Address includes the @ character.</P>
+ <P class="support" style="margin-left:36.00pt;">The problem was caused because SageQuest uses the @ sign to parse the return information. When the information is returned from SageQuest, SAM Pro now only looks at the Geo Code, eliminating the problems previously caused by the @ sign in the address. </P>
+ <P class="support" >4251  &nbsp;Inventory Item Stock Status viewer</P>
+ <P class="support" style="margin-left:36.00pt;">This function now excludes non-inventory items. This release also corrects a display issue with the On Hand and Available quantities – these fields now correctly display their values to the right of the decimal point. </P>
+ <P class="support" >4253  &nbsp;Inventory Item</P>
+ <P class="support" style="margin-left:36.00pt;">The Equipment Type Id has been added as a Range Field to the Inventory Item Filter Screen.</P>
+ <P class="support" >4254  &nbsp;Scheduled Event Viewer </P>
+ <P class="support" style="margin-left:36.00pt;">This release corrects a performance issue launching the Scheduled Event viewer from Work Order viewer’s Scheduled Event button.</P>
+ <P class="support" >4259  &nbsp;Physical Count Processing</P>
+ <P class="support" style="margin-left:36.00pt;">Corrects ‘Batch Number Mis-Match’ error when importing entries from a previously exported .csv file. </P>
+ <P class="support" >4260  &nbsp;Quote viewer</P>
+ <P class="support" style="margin-left:36.00pt;">In case 3185 validation was added to disallow changes to any scope lines if the status is set Printed, Accepted, Approved or Declined, forcing the user to change the status to Open to make changes. In addition, changes to Labor, Inventory, Material, Other and Subcontractor lines were only allowed if the associated Scope Option was set to Open.<BR><BR>The validation associated with Accepted options resulted in procedural issues for some of our customers. For this reason, the following registry setting may be implemented to allow changes Accepted options on the Scope tab, and also to Labor, Inventory, Material, Other and Subcontractor lines associated with Accepted Scope Options. <BR>Registry Id: sys-viewer-vqte<BR>Setting Key: IgnoreAcceptedValidation Setting Value: true (default is false)</P>
+ <P class="support" >4262  &nbsp;History Table viewers now start at the Range screen to avoid the unnecessary load time.</P>
+ <P class="support" >4266  &nbsp;Notes viewer</P>
+ <P class="support" style="margin-left:36.00pt;">This problem occurred when a user who was not a notes administrator accessed a private note created by someone else, and then attempted to change it. When attempting to leave the not, the message “you cannot change the record because the change button is disabled” would appear, but it was impossible to refresh the record, close the notes viewer or exit SAM Pro correctly. In this release, the message appears, but the user is allowed to leave the notes viewer.</P>
+ <P class="support" >4270  &nbsp;Viewers (bitmap cloning)</P>
+ <P class="support" style="margin-left:36.00pt;">In some environments, the ‘Not enough storage is available to process this command. (OS error 16r8 )’ error occurred to some users after the user provides name and password. It appears to be related to the bitmap cloning introduced in case 4054.  In this release, the cloning of bitmaps is disabled when any of the following conditions apply ...</P>
+ <P class="support" style="margin-left:72.00pt;">1. 'sys-gui' registry not available<BR>2. Skin Id not specified<BR>3. Logging in as special user in RunTime mode</P>
+ <P class="support" >4272  &nbsp;Quote Master Approval Wizard {AGAPE}</P>
+ <P class="support" style="margin-left:36.00pt;">When a Quote included multiple Subcontractor lines, the approval wizard attempted to generate one Tech tab line for each Subcontractor line, resulting in the violation of the constraint that multiple lines per Tech per day are not allowed, and the failure of the quote to post. In this release, the approval wizard sums the Subcontractor lines so that only one line for each Subcontractor will be written to the work order’s Tech tab, and the quote will post successfully. </P>
+ <P class="support" >4280  &nbsp;Start Job Cost Allocation</P>
+ <P class="support" style="margin-left:36.00pt;">Corrects Start Job Cost Allocation ‘Key is missing’ error that occurred when attempting to enter the Start Date.</P>
+ <P class="support" >4284  &nbsp;Recurring APJ</P>
+ <P class="support" style="margin-left:36.00pt;">By default, the Recurring AP Journal prohibits the entry of AR Control, AP Control &amp; Bank accounts on GEN lines. Some users have found that these validations conflict with their internal processing procedures: the following registry entry may be implemented turn the default error behavior into a warning. </P>
+ <P class="support" style="margin-left:36.00pt;">Id: sys-viewer-vrcrrngapjrnl<BR>Setting Key: IgnoreCase3193 Setting Value: true</P>
+ <P class="support" >4286  &nbsp;Service Management</P>
+ <P class="support" style="margin-left:36.00pt;">New registry option to define statuses to Release to Tech</P>
+ <P class="support" style="margin-left:36.00pt;">Registry Id: sys-ffv-global-settings<BR>Setting Key: TechReleaseFromStatuses   Setting Value: {list of from statuses) (default is Pending)<BR><BR>By default, clicking the Release to Tech button changes the status of the selected Technician line from ‘Pending’ to the application status for the Technician (most likely Unacknowledged). This enhancement allows the customization of the release to tech button located on the dispatch board and the WorkOrder technician line to specify the &quot;from&quot; status (statuses) so that they no longer are forced to used just the status of &quot;Pending&quot;. The &quot;to&quot; status will continue to follow the same rules as it always has.</P>
+ <P class="support" style="margin-left:36.00pt;">Example: Setting Key: TechReleaseFromStatuses   Setting Value: pending, waitcustapprvl</P>
+ <P class="support" >4287&nbsp;Viewers</P>
+ <P class="support" style="margin-left:36.00pt;">This release eliminates a sporadic problem where the Change Record message displayed twice.</P>
+ <P class="support" >4294 &nbsp;Client Site Equipment and Job Billing Item Viewers</P>
+ <P class="support" style="margin-left:36.00pt;">This release corrects a problem where the wrong sidebar appeared when the Refresh button was clicked. </P>
+ <P class="support" ><FONT style="font-weight:bold; text-decoration:underline;" >4303</FONT><FONT style="font-weight:bold; " >  &nbsp;</FONT><FONT style="font-weight:bold; " >Location viewer</FONT><FONT style="font-weight:bold; " > – import Stock Levels</FONT></P>
+ <P class="support" style="margin-left:36.00pt;">In <FONT style="font-family:'Verdana'; font-size:9pt; " >case 1418</FONT> we implemented the Import Stock Levels in the Location viewer. Currently, the Picking Sequence, Reorder Level and Order Up To fields for all selected items are imported, regardless of whether or not the item is flagged as Stocked.  This enhancement provides a registry entry that will filter out all items not flagged as 'Stocked'. </P>
+ <P class="support" style="margin-left:36.00pt;">Id: sys-start-simprtlvls<BR>Setting Key: Set LimitToStockItems  Setting Value: true (default false)</P>
+ <P class="support" >4309  &nbsp;UserReport Internal Statistics - internal</P>
+ <P class="support" style="margin-left:36.00pt;">In previous releases, UserReport-type wasted time and effort keeping internal stats that never get used. In this release, this stat-keeping effort is disabled except when a Performance Monitor is enabled.</P>
+ <P class="support" >4317  &nbsp;Location viewer {APT}</P>
+ <P class="support" style="margin-left:36.00pt;">The Location viewer now displays correctly if one or more inventory items on the Location Items tab have a quantity-on-hand of 100,000 or more. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >2011-09-16 (jt)-version 8.0.500.001</FONT></P>
+ <P class="support" ><FONT style="font-weight:bold; " >Revised startme.exe</FONT></P>
+ <P class="support" style="margin-left:36.00pt;">This release includes a new startme.exe file.  In this new file:</P>
+ <P class="support" style="margin-left:36.00pt;">When the first user (of a particular OS) accesses a new image, the underscore version of the v.exe runtime will be generated with the user’s OS designation. For example, if you have XP and Windows 7 users, you would expect to see two runtime images: </P>
+ <P class="support" style="margin-left:36.00pt;">V_2011_9_16_12_13__18_[Microsoft_Windows_XP].exe and </P>
+ <P class="support" style="margin-left:36.00pt;">V_2011_9_16_12_13__18_[Microsoft_Windows_7_Professional].exe </P>
+ <P class="support" style="margin-left:36.00pt;">XP users will be directed to the XP runtime, and Windows 7 Professional users will be access the Windows 7 runtime. It is hoped that this will reduce the incidence of non-continuable protection fault errors. </P>
+ <P class="support" >4003  &nbsp;AP Payment Approval (Kaback mods) </P>
+ <P class="support" style="margin-left:36.00pt;">When running under the KABACK cus; there are changes to the screen displays for Start AP Payment Approved List PM (approver1), Start AP Payment Approved List (approver2), View AP Date To Pay List (approver3).</P>
+ <P class="support" style="margin-left:36.00pt;">They all have been reconstructed to look very similar with slight variations. New fields add. Functionally, a change was made that now we track how much each approver releases for payment. This is done so that we now know what approver's list to send the transaction back to after payment processing. </P>
+ <P class="support" style="margin-left:36.00pt;">An example may better describe this functionality.<BR>Vendor's invoice is for $1000.00. Approver 1 approves $800, Approver 2 is at $800, Approver 3 pays $500. In this example Approver 1 and 2 will not see this invoice on their list again until Approver 3 pays the remaining $300. Example 2: Vendor's invoice is for $1000. Approver 1 approves $800, Approver 2 is at $800, Approver 3 pays $800. Now this transaction will be back on Approver 1's list to allow him to approve the remaining $200.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4086</FONT>    &nbsp;Document Management (table changes)</P>
+ <P class="support" >4212 &nbsp; Client Site PM Schedule Job Validation *** disabled **</P>
+ <P class="support" >4238 &nbsp;Viewers (general) right-click open of viewers</P>
+ <P class="support" style="margin-left:36.00pt;">The Work Order viewer provides two ways to get to the Purchase Order viewer.&nbsp; The first is with a right-click on the Purchase Order Id field found on the WO viewer's Main parent tab.&nbsp; The second is with a double-click on a PO line found on the viewer's Purchases (FieldListPane) parent tab. <BR>The second method appears to initiate fewer events associated with the viewer's #keyNames and #keyValues panes.&nbsp; This makes for a more efficient and quicker open.&nbsp; This release changes the right-click methodology to match that used for the double-click methodology on a FieldListPane list line.</P>
+ <P class="support" style="margin-left:36.00pt;">This case also implements debugging aid that shows current Stack Trace in a new workspace.</P>
+ <P class="support" >2011-09-14 (jt)-version 8.0.499.000</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >3743 </FONT><FONT style="text-decoration:underline;" >**</FONT> &nbsp;PM Billings/Inspections {South Shore Generator} – in process</P>
+ <P class="support" >4073 &nbsp;CRM Anywhere (EEI)</P>
+ <P class="support" style="margin-left:36.00pt;">Registry entry to allow<FONT style="font-weight:bold; " > </FONT>sorting of open work orders and service request lists if multiple sites are involved.</P>
+ <P class="support" style="margin-left:36.00pt;">Id: web-settings</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Setting Key:</FONT> AllowMultiSiteSorting  <FONT style="font-weight:bold; " >Setting Value:</FONT> true</P>
+ <P class="support" >4011  &nbsp;Expanded Smalltalk VM to 250</P>
+ <P class="support" style="margin-left:36.00pt;">SAM Pro’s Smalltalk virtual memory has been expanded to 250MB from 150MB.  This should better accommodate the running of extremely long reports and the unfiltered display of history viewers. </P>
+ <P class="support" >4225  &nbsp;Job Cost Code and Billing Item</P>
+ <P class="support" style="margin-left:36.00pt;">The Job Id is now a required field in the Job Cost Code and Job Billing Item viewers. </P>
+ <P class="support" >4231&nbsp;SQL Server Data Conversion</P>
+ <P class="support" style="margin-left:36.00pt;">Internal update to better handle data conversion issues relative to redefined UNIQUE KEYS. See case for details. </P>
+ <P class="support" >Note: Version 8.0 was split off from Version 7.3 on 9/14/2011. See the 7.3 support notes for changes to the image before this date. </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

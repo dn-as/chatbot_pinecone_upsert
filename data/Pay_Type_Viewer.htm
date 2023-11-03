@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.3.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="labor"/>
+<meta name="MS-HKWD" content="pay type"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Pay Type Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="labor,pay type"/><meta name="brsnext" value="Workers_Comp_State_Viewer.htm"/><meta name="brsprev" value="Employee_Type_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Pay Type Viewer">
+        <span>Pay Type Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Pay Type Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain the Pay Type records used in Payroll, Labor Journal and Remote Time entries.</p>
+<h2>Example:</h2>
+<p>Regular, holiday, sick, overtime, etc.</p>
+<h2>Usage:</h2>
+<p>Required for Payroll Processing / Export</p>
+<p>Referenced in Records: Workers Compensation Category, Work Order, and Employee.<br/>
+Referenced in Journals: Labor, Payroll, Job, And Remote Time.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of all fields that may be included in this record. If you are using a customized system, the fields displayed on your screen may not exactly match the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">Pay Type Id:</font> (15 character, only . and - special characters)<br/>
+A unique Id for this pay type. This field is required.</p>
+<p><font style="font-weight: bold;">Description:</font> (40 character)<br/>
+A brief description. This field is optional.</p>
+<p><font style="font-weight: bold;">Check Label:</font> (10 character)<br/>
+The text that will appear on payroll checks for this type of pay (e.g., overtime, regular, holiday, etc.).</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">If you enter &lt;OMIT&gt; in this field, the detail information for this pay type will not be printed on the check stub. The dollars from this Pay Type will still be included in the gross.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">To Show PTO Pay Types as Dollars instead of Hours on the Check Stub Recap</font><font style="font-weight: bold;"><br/></font>If the sys-report-rprchck registry ShowPTOAvailableAs=dollars is implemented, the Check Label field MUST include a dollar sign ($) to define which PTO Pay Types will be displayed as a dollar amount on the ‘PTO Available’ section of the Recap portion of the check stub.  </p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold; text-decoration: underline;">Example:</font></p>
+<p style="margin-left: 72.00pt;">Suppose that you want your employee’s available sick time to appear as dollars, management sick time to appear as hours, and all vacation time to appear as hours.</p>
+<p style="margin-left: 72.00pt;">Emp. Sick Time Pay Type Check Label: Sick $</p>
+<p style="margin-left: 72.00pt;">Mgr. Sick Time Pay Type Check Label: Sick Hours</p>
+<p style="margin-left: 72.00pt;">Vacation Time Pay Type Check Label: Vac. Hours</p>
+<p class="Body_Text">The check label &quot;Various&quot; will be used when the number and type of Pay Types on the check stub exceed the available space.</p>
+<p class="Body_Text" style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline;">Example:<br/></font> If for a particular payroll run an employee has the following PTO types (Holiday, Vacation, Sick, Personal). The results on the check stub for labels may be something like Holiday, Vacation, Various. This is also true for other pay types and deductions as well.</p>
+<p><font style="font-weight: bold;">Rate Factor</font> (numeric format 0.000)<br/>
+The system uses this field and the Pay Rate in the Employee Record to calculate Pay Rates in Labor and Payroll Adjustment journal entries. For example, the Rate Factor for <font style="font-style: italic;">regular</font> Pay Type wages would generally be set to 1.0; an employee would be paid at his regular pay rate for this Pay Type. For a Pay Type of <font style="font-style: italic;">doubletime</font>, however, the Rate Factor would be set to 2.0 so that an employee would be paid at double his normal pay rate. Typically, the rate factor for <font style="font-style: italic;">overtime</font> would be set to 1.5.</p>
+<p><font style="font-weight: bold;">Show Rate on Check?</font><br/>
+Flag this field (by double-clicking on it or pressing the spacebar when the caret is on it) if this rate should be printed on payroll checks.</p>
+<p><font style="font-weight: bold;">Hours Type: Worked PTO Other</font><br/>
+The Worked option should be selected for Pay Types used for actual work (regular, travel, etc.). Depending upon how you elect to handle overtime pay, it might or might not be flagged as Worked.</p>
+<p>The PTO option would be selected for hours that were paid but not worked (sick, vacation, etc.).</p>
+<p>The Other option could be used to define an overtime premium for hours worked over the your standard work week. For example, suppose an employee enters 50 hours of straight time on a standard 40 hour week. On reviewing this employee&#39;s entries, the Payroll department would then add a journal entry for 10 hours (50-40 hours) of Overtime Premium pay (at a rate factor of, for example, .5) . In this way, the employee would be compensated for the work, but the overtime cost could be charged to an overhead job. Contact your Data-Basics support representative for further details.</p>
+<p style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;">Remote Time Entry<br/></font>Pay types marked as Worked and PTO will be available for use from the Remote Time applet. Pay type marked as Other will not be available for use from the Remote Time applet.</p>
+<p><font style="font-weight: bold;">Category: Reg</font><font style="font-weight: bold;">ular Overtime Doubletime</font> <font style="font-weight: bold;">Vacation Holiday</font> <font style="font-weight: bold;">Other</font> <font style="font-weight: bold;"><br/></font>During data conversion, the system will set the new field&#39;s value based on the existing Hours Type field.  The rules are as follows:  If the Hours Type is &#39;Worked&#39; then set the Category to &#39;Regular&#39;, otherwise set the Category to &#39;Other&#39;.</p>
+<p>The Vacation and Holiday fields are used in the Compute Payroll process that calculates percent-of-wage PTO earnings accruals for Employees with a PTO line having the Percent field filled in.  Validation code has been added to enforce proper use of Hours Type and Category combinations as follows:</p>
+<p style="margin-left: 36.00pt;">When Hours Type is &#39;Worked&#39;, Category must be &#39;Regular&#39;, &#39;Overtime&#39;, or &#39;Doubletime&#39;.</p>
+<p style="margin-left: 36.00pt;">When Hours Type is &#39;PTO&#39;, Category must be &#39;Holiday&#39;, &#39;Sick&#39;, &#39;Vacation&#39; or &#39;Other&#39;.</p>
+<p style="margin-left: 36.00pt;">When Hours Type is &#39;Other&#39;, Category must be &#39;Other&#39;.</p>
+<p style="font-weight: bold; text-decoration: underline;">Canadian Installations:</p>
+<p style="font-weight: bold;">PTO Accrual Method: Hours - Percent - CurrentPayRate</p>
+<p>This field allows for specification of the PTO Accrual Method.  Three options are currently supported.</p>
+<p style="margin-left: 36.00pt;">&#39;Hours&#39; is the general default.</p>
+<p style="margin-left: 36.00pt;">&#39;Percent&#39; is the method implemented for Canadian Vacation pay <span style="font-weight: bold; text-decoration: underline;">only</span>.</p>
+<p style="margin-left: 36.00pt;">&#39;CurrentPayRate&#39; is the alternate methodology implemented with the registry entry ShowPTOAvailableAs=dollar in sys-report-rprchck.</p>
+<p><span style="font-weight: bold;">The Pay Type viewer will default the methodology to &#39;Percent&#39; for</span> <span style="font-weight: bold; text-decoration: underline;">Canadian</span> <span style="font-weight: bold;">v.cus file users whenever the Pay Type&#39;s Category is set to Vacation for new or changed records.</span> Note that Pay Types that existed before these enhancements should be manually updated.</p>
+<p>The Employee viewer validates the use of the PTO amounts (hours or percent) relative to the Pay Type&#39;s Accrual Method.</p>
+<p><font style="font-weight: bold;">PTO Accrual Exclusions</font></p>
+<p style="margin-left: 36.00pt;">Exclude Regular?<br/>
+Exclude Overtime?<br/>
+Exclude Doubletime?<br/>
+Exclude Vacation?<br/>
+Exclude Holiday?<br/>
+Exclude Sick?<br/>
+Exclude Other?</p>
+<p>Prior to this release, only vacation wages were excluded from the vacation accrual wage base.  For example, when an employee takes a week of vacation, no additional vacation pay is earned for that week.  The Province of Alberta allows the employer to excluded overtime wages as well.</p>
+<p><font style="font-weight: bold;">These fields are only applicable if this Pay Type is set to PTO and the PTO Accrual Method is set to Percent.</font> If so, these fields enable the user to specify which types of Pay Types for Hours Worked will exclude this PTO Pay Rate from accrual.</p>
+<p><font style="font-weight: bold;">Important Upgrade Note:</font> it is necessary to flag Exclude Vacation for these wages to be excluded from the accrual wage base. After upgrading from 7.3 or earlier, carefully review your Pay Type records to see if any changes should be made.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline;">Example:</font></p>
+<p style="margin-left: 36.00pt;">For the case of Alberta, the fields would be set as follows for the Vacation PTO accrual:</p>
+<p style="margin-left: 36.00pt;">Hours Type: PTO<br/>
+Category: Vacation<br/>
+PTO Accrual Method: Percent<br/>
+PTO Accrual Exclusions<br/>
+Flag the following: Exclude Overtime?, Exclude Doubletime?, Exclude Vacation?</p>
+
+<p><span style="font-weight: bold;">Union Exempt:</span><br/>
+ This box should ONLY be flagged if this Pay Type is used for certain types of union-exempt pay. Wages connected to union-exempt Pay Types (vacation, holiday, etc) post a zero to the PR History Earnings Group column so they will <span style="text-decoration: underline;">not</span> be picked up by Union reports. Two things happen differently when time is charged to a Pay Type that is Union Exempt when Compute Payroll is run:</p>
+
+<p style="margin-left: 48px;">1. All fringe-type lines from the Earnings Group are ignored.<br/>
+2. All lines from the Deduction Group are ignored.</p>
+
+<p><font style="font-weight: bold;">GL Account Id:</font><br/>
+The expense account pay is charged (debited) against. Double-click on this field to select from a list. Note that if this field is completed, it will override the GL Account entered in the Earnings record for journal entries. Therefore, the Pay Type GL Account should only be filled in if all Earnings associated with this pay type should be charged against the same GL Account. For example, you could charge Holiday and Vacation Pay Types to an administrative GL Account, regardless of the type of work the employee normally does. For a Pay Type of Regular, however, you would most likely leave this field blank, specifying the appropriate GL Expense Account in your Earnings record.</p>
+<p><font style="font-weight: bold;">Default Earnings Group Id:<br/></font>If completed, this Earnings Group will override the Earnings Group found in the Employee record when time is entered for this Pay Type.</p>
+<p><font style="font-weight: bold;">Default Deductions Group Id:<br/></font>If completed, this Deductions Group will override the Deductions Group found in the Employee record when time is entered for this Pay Type.</p>
+<p><font style="font-weight: bold;">Job Use: All Direct Indirect<br/></font>The default value of All preserves the existing validation behavior which means there are no restrictions on the combinations. Direct and Indirect (Overhead) are used to indicate the type of jobs that can be used with records having this attribute.</p>
+<p>The following viewers are affected by this functionality, and will not allow records with the Job Use field set to Direct to be used with Indirect (Overhead) Jobs. Likewise, Direct Jobs (Overhead flag not checked) may not be used with Pay Types flagged as Indirect.</p>
+<p style="margin-left: 36.00pt;">Employee viewer  Job viewer (Employee Overrides)<br/>
+Job Journal   Labor Journal<br/>
+Work Order viewer   Work Order Entry viewer</p>
+<p><font style="font-weight: bold;">PRS Pay Code</font><font style="font-weight: bold;">:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Paycor Users:</font><br/>
+Hours entered with a Pay Type using the Categories ‘Doubletime’ or ‘Other’ are listed as Coded Hours and require a Paycor code (consult your Paycor documentation for a list of valid codes). If this field is completed, it will be used to set this code; if this field is blank, the Pay Type Id will be used instead.  </p>
+<p style="margin-left: 36.00pt;">For Bonuses, the Pay Type PRS Pay Code: field (if completed) will be used to set the Ern Cde 1 column; otherwise, the Pay Type Id will be used.</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Note:</font> the PRS Pay Code should NOT be set for Regular or OT Pay Types.</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">To Skip Hours Sent to Paycor:</font><br/>
+To skip the hours sent to Paycor for a specific Pay Type, enter <font style="font-weight: bold;">&lt;skip&gt;</font> in the PRS Pay Code field.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline;">Paychex Users:</font><br/>
+Paychex requires that Pay Types of all Pay Categories (Regular, Overtime, Doubletime and Other) are associated with a valid Paychex Earnings Code. The PRS Pay Code field will be used (if completed); if this field is blank, the Pay Type Id will be used to set the Earnings Code. Consult your Paychex documentation for a list of valid, 2 character Earnings Codes.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold; text-decoration: underline;">ADP Users:</font></p>
+<p style="margin-left: 48px;">Any hours charged to a pay type with a Category of Regular or Overtime will automatically be classified as Regular Hours or OT Hours in ADP. No additional ADP coding is required. Pay Types with a Category of Doubletime or Other must include the applicable ADP Codes. The system uses the following fields hierarchy for ADP codes:</p>
+<p style="margin-left: 88px;">Pay Type PRS Pay Code (overrides User 1 and Id)<br/>
+Pay Type User 1 (overrides Id)<br/>
+Pay Type Id</p>
+<p style="margin-left: 48px;">The export will process all pay types <font style="text-decoration: underline;">unless</font> the Pay Type User1 field is set to N/A. Pay Type User1 should be set to N/A if it should not be processed (N/A is not supported in the PRS Pay Code field).  <span style="font-weight: bold;">IMPORTANT:</span> TechAnywhere also uses the PRS Codes/User 1 fields: do NOT change your setup with consulting your TechAnywhere and SAMPro support reps.</p>
+<p><font style="font-weight: bold;">Pay Type User1: User2:</font> <span style="font-weight: bold;">User3: User4: User5:</span> (30 character)<br/>
+These optional fields may be used for entering any information your company wishes to retain (e.g., additional account numbers). It may also be used for ADP Coding (see above) or TechAnywhere.</p>
+<p><font style="font-weight: bold;">Obsolete?<br/></font>If this field is checked, the record is considered Obsolete, and it may not be directly specified during data-entry (either by entering the Id or selecting it from a list). Obsoleted records can be edited and the Obsolete flag cleared when necessary. When you check the Obsolete field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through access to all tables referencing this record: see <a href="References_List.htm">References List</a> for details.</p>
+
+</body></html>

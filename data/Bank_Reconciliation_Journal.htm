@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.3.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="journal"/>
+<meta name="MS-HKWD" content="bank"/>
+<meta name="MS-HKWD" content="reconciliation"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Bank Reconciliation Journal</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="journal,bank,reconciliation"/><meta name="brsnext" value="Contact_Viewer.htm"/><meta name="brsprev" value="Bank_Transfer_Journal.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Bank Reconciliation Journal">
+        <span>Bank Reconciliation Journal</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Bank Reconciliation Journal</h1>
+<h2>Purpose:</h2>
+<p>This function enables you to reconcile your GL Accounts with the statement 
+ that you receive from your bank. It also enables you to record interest 
+ income and fee expense without having to make separate GL entries.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Tip: 
+ Bank Reconciliation Report<br/>
+</font>Run the Bank Reconciliation Report to ensure that all transactions 
+ have been recorded. The report details beginning and ending bank balances 
+ for a specified account- compare it to your bank statement before starting 
+ the Bank Reconciliation Journal to be sure your starting balance is correct. 
+ Also run the report after your Bank Reconciliation is complete to be sure 
+ your ending balance is correct.</p>
+<p>The Bank Reconciliation Journal supports Intercompany Processing:</p>
+<p style="margin-left: 48px;">1. GL Entity Ids are required for Interco 
+ customizations.<br/>
+2. All entities must reference the same Company when intercompany is ON.<br/>
+3. The system posts Company Security Rn to GLH Security Rn when intercompany 
+ is ON.</p>
+<h2>Usage:</h2>
+<p>If you track more than one account, a reconciliation entry should be 
+ done for each.</p>
+<p class="Block_Text" style="font-weight: bold;">Do not use the Clear Checks 
+ Function when Bank Reconciliation is used, since the function sets the 
+ clear date. Voided Checks will not be loaded into the Reconciliation viewer; 
+ they are already reconciled based on the fact that they have been voided.</p>
+<p class="Block_Text">The Delete Record and Delete Line are not available 
+ in this Journal to avoid inadvertent deletions by the user. If you must 
+ change an entry, note that blanking the CL box on a Check entry will blank 
+ the Date Reconciled in the Check record so that the check will once again 
+ be eligible for reconciliation.</p>
+<p>The system allows an unbalanced transaction to be saved, but does not 
+ post it to GL. Once the transaction is completed and balanced, it will 
+ be posted to GL when it is saved. The system will prevent a new entry 
+ for the same GL Account/Entity if an unreconciled entry is found.</p>
+<p><span>Existing Bank Reconciliation transaction may qualify as eligible 
+ for edit, provided the edit won’t undermine or conflict with a more recent 
+ transaction.  This means that transactions may be “undone” via 
+ edit in reverse transaction id sequence in order to work backwards to 
+ address an issues in Bank Reconciliation transactions prior to just the 
+ last one posted versus previously when ONLY that last transaction posted 
+ could be edited.</span></p>
+
+
+<h2>Registries:</h2>
+<p><span>A <a href="Registry_Bank_Reconciliation_Journal.htm">registry</a> 
+ is available to always set new checks lines to not cleared when in Add 
+ Mode.</span></p>
+<h2>Range Viewer:</h2>
+<p>Since multiple GL accounts are present in the ‘parent’ tab of this journal, 
+ simple range filters (where you enter the GL Account Id) will not work 
+ for these &quot;encapsulated&quot; fields. To enable the user to filter 
+ on a specific parent GL Account, special filter ranges with the necessary 
+ SQL to filter on a specific GL Account have been added for the GL Bank 
+ Account Id:, GL Fees Account Id: and GL Interest Account Id:. When you 
+ first access the Range screen, the GL Bank Account range will be completed 
+ as follows:</p>
+<p><font style="font-weight: bold;">GL Bank Account Id:<br/>
+</font>sql= gl_bnk_glaccnt_rn in (select glaccnt_rn from glaccnt where 
+ glaccnt_id like &#39;%&#39;)</p>
+<p>Suppose that your firm uses more than one Bank Account. To filter Entries 
+ for a specific GL Bank Account, simply replace the % in the SQL statement 
+ with the GL Bank Account Id you wish to filter on. For example, to filter 
+ on the GL Bank Account Id 1005, simply change the SQL statement in the 
+ range to:</p>
+<p>sql= gl_bnk_glaccnt_rn in (select glaccnt_rn from glaccnt where glaccnt_id 
+ like &#39;<font style="font-weight: bold;">1005</font>&#39;)</p>
+<p>Tip: Saving Ranges</p>
+<p>Rather than adjust the SQL statement each time you use the filter, you 
+ may save your settings as a range. See <a href="Filter_Button.htm#Filter_Save_Range">Save 
+ Filter Range</a> for details.</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Period Id:<br/>
+</font>The Accounting Period to which this reconciliation is assigned. 
+ The system validates that the Accounting Period is Active before allowing 
+ the user to continue with the reconciliation.</p>
+<p><font style="font-weight: bold;">Effective Date:<br/>
+</font>The Effective Date of the reconciliation. This date must fall within 
+ the date range of the accounting period.</p>
+<p><img src="assets/images/image/AutoFillP.gif" alt="image\AutoFillP.gif" title="image\AutoFillP.gif" width="94" height="28" align="left" border="0"/> When the fields 
+ in the upper section of this screen are completed, click this button to 
+ automatically populate the tabs in the lower section of the screen.</p>
+<p>All auto-fill actions are based on the Effective Date; checks, deposits 
+ and transfers dated after the Effective Date you enter will not be imported.</p>
+<p>If the user clicks the Auto Fill button in an existing entry the system 
+ asks “Retain previously record reconciliation info?”. If Yes is clicked, 
+ the system will merge existing transaction lines with any un-reconciled 
+ lines that are discovered. If No is clicked, existing transaction lines 
+ will be replaced by all un-reconciled lines, enabling you to effectively 
+ restart the entry.</p>
+<p><font style="font-weight: bold;">GL Bank Account:</font></p>
+<p><font style="font-weight: bold;">GL Account:<br/>
+</font>The account that you are reconciling. The system verifies that the 
+ GL Account Type is set to &#39;Bank&#39; for this account.</p>
+<p><font style="font-weight: bold;">GL Entity:<br/>
+</font>The GL Entity affected, if any (required for Intercompany Processing). 
+  All entities must reference the same Company when intercompany is 
+ ON.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">GL Account 
+ and Entity Validations:</span><br/>
+Validation denies a change to the GL Account or Entity fields when the 
+ viewer is not in Add mode.</p>
+<p style="margin-left: 48px;">If the viewer is in Add mode, changing the 
+ GL Account and/or Entity fields will automatically clear all child lines; 
+  this forces the user to Auto-Fill for the currently selected GL 
+ Account/Entity combination.</p>
+<p><font style="font-weight: bold;">Interest Account:</font></p>
+<p><font style="font-weight: bold;">GL Account:<br/>
+</font>The Income Account to be credited with the Total Interest Earned. 
+ The system verifies that the GL Account Type is set to Normal. A warning 
+ “Interest is normally posted to an income account” if the GL Account Type 
+ Category is not set to &#39;Income&#39; for this account.</p>
+<p><font style="font-weight: bold;">GL Entity:<br/>
+</font>The GL Entity affected, if any (required for Intercompany Processing). 
+  All entities must reference the same Company when intercompany is 
+ ON.</p>
+<p><font style="font-weight: bold;">Fees Account:</font></p>
+<p><font style="font-weight: bold;">GL Account:<br/>
+</font>The Expense Account to be debited with the Total Fees Charged. The 
+ system verifies that the GL Account Type is set to Normal. The system 
+ will display a warning “Fees is normally posted to an expense account” 
+ if the GL Account Type Category is not set to “expense” for this account.</p>
+<p><font style="font-weight: bold;">GL Entity:<br/>
+</font>The GL Entity affected, if any (required for Intercompany Processing). 
+  All entities must reference the same Company when intercompany is 
+ ON.</p>
+<p><font style="font-weight: bold;">Beginning Balance:<br/>
+</font>The Beginning Balance from your bank statement for this account.</p>
+<p><font style="font-weight: bold;">Total Interest Earned:<br/>
+</font>The total interested earned for this account, as listed on your 
+ bank statement.</p>
+<p><font style="font-weight: bold;">Total Fees Charged:<br/>
+</font>The total fees charged on this account, as listed on your bank statement.</p>
+<p><font style="font-weight: bold;">Total Transfers: Total Checks: Total 
+ Deposits:<br/>
+</font>These display-only fields are maintained by the system based on 
+ your entries in the lower tabs.</p>
+<p><font style="font-weight: bold;">Ending Balance:<br/>
+</font>The Ending Balance from your bank statement for this account.</p>
+<p><font style="font-weight: bold;">Unreconciled Balance:<br/>
+</font>This display-only field is calculated by the system based on the 
+ Beginning and Ending Balances, and the entries selected on the Checks, 
+ Deposits, Transfers To and Transfers From tabs.</p>
+<p><font style="font-weight: bold;">Transaction Id:<br/>
+</font>This field will be completed by the system when you save/change 
+ this transaction.</p>
+<p><font style="font-weight: bold;">Transaction Description:<br/>
+</font>Briefly describes this transaction.</p>
+<h2>Important Fields: Checks Tab</h2>
+<p>When you clicked the Auto Fill Trans button on the upper section of 
+ the screen, this tab was populated with a list of your posted AP and/or 
+ payroll checks that had not as yet been reconciled.</p>
+<p>You may resort the data on this tab by clicking on the desired column 
+ header.  </p>
+<p><font style="font-weight: bold;">Clear:<br/>
+<span style="font-weight: normal;">By default, t</span></font>his column 
+ will initially be set to ‘Yes’ if its entry date precedes the “effective 
+ date” you specified above. If this check appeared on your bank statement, 
+ the Clear column should be set to Yes by single-clicking it. If the check 
+ did not appear on the statement, the Clear column should be blanked by 
+ single-clicking on it.</p>
+<p style="margin-left: 48px; font-weight: bold;">Registry to Always Default 
+ Lines to Not Cleared</p>
+<p style="margin-left: 48px;"><span>A <a href="Registry_Bank_Reconciliation_Journal.htm">registry</a> 
+ is available to override the date comparison and simply always set new 
+ checks lines to not cleared, but only when not in Add Mode.</span></p>
+<p><font style="font-weight: bold;">Check #: Check Amount:  Payee 
+ Name:<br/>
+</font>These fields are displayed by the system to help you decide whether 
+ a check should be selected for reconciliation. They represent checks have 
+ not as yet been cleared.</p>
+<h2>Important Fields: Deposits Tab</h2>
+<p>When you clicked the Auto Fill Trans button, this tab was populated 
+ with a list of your Bank Deposit Journal Entries that have not as yet 
+ been reconciled.</p>
+<p>You may resort the data on this tab by clicking on the desired column 
+ header.  </p>
+<p><font style="font-weight: bold;">Clear:<br/>
+</font>This column will initially be set to ‘Yes’ if its entry date precedes 
+ the “effective date” you specified above. If this deposit appeared on 
+ your bank statement, the Clear column should be set to Yes by single-clicking 
+ it. If the deposit did not appear on the statement, the Clear column should 
+ be blanked by single-clicking on it.</p>
+<p><font style="font-weight: bold;">Total Deposit: Deposit Date: Transaction 
+ Id:<br/>
+</font>These fields are displayed by the system to help you decide whether 
+ a deposit should be selected for reconciliation. They represent entries 
+ to the Bank Deposit Journal have not as yet been cleared.</p>
+<h2>Important Fields: Transfers To Tab</h2>
+<p>When you clicked the Auto Fill Trans button, this tab was populated 
+ with a list of your Bank Transfer Journal Entries to this account that 
+ have not as yet been reconciled.</p>
+<p>You may resort the data on this tab by clicking on the desired column 
+ header.  </p>
+<p><font style="font-weight: bold;">Clear:<br/>
+</font>This column will initially be set to ‘Yes’ if its entry date precedes 
+ the “effective date” you specified above. If this transfer appeared on 
+ your bank statement, the Clear column should be set to Yes by single-clicking 
+ it. If the transfer did not appear on the statement, the Clear column 
+ should be blanked by single-clicking on it.</p>
+<p><font style="font-weight: bold;">Effective Date: Transaction Id: Total 
+ Deposit: <br/>
+</font>These fields are displayed by the system to help you decide whether 
+ a deposit should be selected for reconciliation. They represent entries 
+ to the Bank Transfer Journal have not as yet been cleared.</p>
+<h2>Important Fields: Transfers From Tab</h2>
+<p>When you clicked the Auto Fill Trans button, this tab was populated 
+ with a list of your Bank Transfer Journal Entries from this account that 
+ have not as yet been reconciled.</p>
+<p>You may resort the data on this tab by clicking on the desired column 
+ header.  </p>
+<p><font style="font-weight: bold;">Clear:<br/>
+</font>This column will initially be set to ‘Yes’ if its entry date precedes 
+ the “effective date” you specified above. If this transfer appeared on 
+ your bank statement, the Clear column should be set to Yes by single-clicking 
+ it. If the transfer did not appear on the statement, the Clear column 
+ should be blanked by single-clicking on it.</p>
+<p><font style="font-weight: bold;">Effective Date: Credit Amount: Transaction 
+ Id: Description:<br/>
+</font>These fields are displayed by the system to help you decide whether 
+ a deposit should be selected for reconciliation. They represent entries 
+ to the Bank Transfer Journal have not as yet been cleared.</p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">See 
+ Also</font><br/>
+<a href="Bank_Deposit_Journal.htm">Bank Deposit Journal</a>  <a href="Bank_Transfer_Journal.htm">Bank 
+ Transfer Journal</a></p>
+
+</body></html>

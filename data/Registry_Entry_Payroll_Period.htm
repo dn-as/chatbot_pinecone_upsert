@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.23.0_22";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="defaults"/>
+<meta name="MS-HKWD" content="period"/>
+<meta name="MS-HKWD" content="sys-viewer-vpyrllprd"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Payroll Period (sys-viewer-vpyrllprd)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="defaults,period,sys-viewer-vpyrllprd,registry,payroll"/><meta name="brsnext" value="Registry_Entry_Labor_Journal_Certified_PR_Warning.htm"/><meta name="brsprev" value="Registry_Cigna_401_k__Report_Entry.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Payroll Period (sys-viewer-vpyrllprd)">
+        <span>Registry Payroll Period (sys-viewer-vpyrllprd)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Payroll Period (sys-viewer-vpyrllprd)</h1>
+<h2>Purpose:</h2>
+<p>This registry entry enables you to define which options should be (or 
+ should not be) selected when a payroll period is created or modified.</p>
+<h2>Usage:</h2>
+<p>The registry entry was designed to prevent posting inconsistencies generated 
+ when a payroll period is inadvertently created with one or more options 
+ which are not set in accordance with your firm’s standard practices.</p>
+<p>If you define the setting for an option as <font style="font-weight: bold;">true</font>, 
+ a user will be warned if the option should be checked and is blank.</p>
+<p>If you define the setting for an option as <font style="font-weight: bold;">false</font>, 
+ the user will be prevented from adding or saving the record if the option 
+ is checked.</p>
+<p>If an option is not defined in this registry entry, the user may elect 
+ to either check the option or leave it blank.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Related Registries:</h2>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#PR_Period_Standard_Cost_Only">Designate 
+ a Payroll Period to be Standard Cost Only</a> in Global Settings Registry</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font> <font style="font-weight: bold;">sys-viewer-vpyrllprd</font></p>
+<p><font style="font-weight: bold;">Description:</font></p>
+<p>Briefly describes the function of this registry entry (e.g., Payroll 
+ Period Settings). Optional but recommended.</p>
+<h3>Accrue to GL Option</h3>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">AccrueToGL</font> Setting Value: <font style="font-weight: normal;">true or false</font></p>
+<p>This option should be set to true if the Accrue to GL box should be 
+ checked on all (or most) Payroll Periods. If the user creates a Payroll 
+ Period without checking the Accrue To GL box, he or she will be warned 
+ that this option has not been selected.</p>
+<p>This option should be set to false if the Accrue to GL box should never 
+ be checked. The user will be unable to save the record with the Accrue 
+ to GL box checked.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Important:</span> 
+ use the following registry instead if the Accrue To GL box should ALWAYS 
+ be set!</p>
+<h3>Require the Accrue-To-GL Box to be <span style="text-decoration: underline; ">Always</span> 
+ be Set</h3>
+<p><span style="font-weight: bold;">Id:</span> sys-viewer-vpyrllprd</p>
+<p><span style="font-weight: bold;">Setting Key:</span> RequiredFieldsParent 
+   <span style="font-weight: bold;">Setting Value:</span> pyrllprd.accre</p>
+<h3>Pay With EFT Option</h3>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">PayWithEFT</font> Setting Value: <font style="font-weight: normal;">true or false</font></p>
+<p>This option should be set to true if the Pay With EFT box should be 
+ checked on all (or most) Payroll Periods. If the user creates a Payroll 
+ Period without checking the Pay With EFT box, he or she will be warned 
+ that this option has not been selected.</p>
+<p>This option should be set to false if the Pay With EFT box should never 
+ be checked. The user will be unable to save the record with the Pay With 
+ EFT box checked.</p>
+<h3>Accrue PTO Option</h3>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">AccruePTO</font> Setting Value: <font style="font-weight: normal;">true or false</font></p>
+<p>This option should be set to true if the Accrue PTO box should be checked 
+ on all (or most) Payroll Periods. If the user creates a Payroll Period 
+ without checking the Accrue PTO box, he or she will be warned that this 
+ option has not been selected.</p>
+<p>This option should be set to false if the Accrue PTO box should never 
+ be checked. The user will be unable to save the record with the Accrue 
+ box checked.</p>
+<h3>Remote Tech Option</h3>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">RemoteTechUse</font> Setting Value: <font style="font-weight: normal;">true or false</font></p>
+<p>This option should be set to true if the Remote Technician Applet: Ok 
+ to Use box should be checked on all (or most) Payroll Periods. If the 
+ user creates a Payroll Period without checking the Ok to Use box, he or 
+ she will be warned that this option has not been selected.</p>
+<p>This option should be set to false if the Remote Technician Applet: 
+ Ok to Use box should never be checked. The user will be unable to save 
+ the record with the Ok to Use box checked.</p>
+<h3>Enable Post History Processing (for ADP users)</h3>
+<p>The Post History button (in the Payroll Period) should only be enabled 
+ for payroll service users who export data, but do not print and post checks.  If 
+ you use the Post History function, you cannot print a paycheck for employees 
+ impacted by the post for the selected Payroll Period.</p>
+<p>The new process replaces the print/post check functionality to enable 
+ use of certain payroll reports that present valid information such as 
+ workers compensation. When run, it sets the Payroll History Date Effective 
+ to the Last Check Date from the Payroll Period, and the Source Journal 
+ to registry setting described below or ‘ADP Export’ if the registry is 
+ not present.</p>
+<p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vpyrllprd</p>
+<p><span style="font-weight: bold;">Setting Key:</span> PostSourceDescription            <span style="font-weight: bold;"> Setting Value:</span> <i>Description</i></p>
+<p>This registry option provides a description for Payroll History entries 
+ generated by clicking the Post History button. If this registry entry 
+ is not enabled, the default value of ‘ADP Export’ will be written to Payroll 
+ History.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> OkToPostPRHistory                   <span style="font-weight: bold;">Setting Value:</span> true</p>
+<p>This functionality may be enabled for all users with access to the Payroll 
+ Period by implementing this registry entry. The preferred method is to 
+ implement it for specific users via the User record’s Registry tab.</p>
+<p style="font-weight: bold;"> </p>
+<p style="font-weight: bold;">User Registry Tab:</p>
+<p><span style="font-weight: bold;">Key:</span> OkToPostPRHistory                <span style="font-weight: bold;"> Value:</span> true</p>
+<p>This functionality may be implemented for specific users via the User 
+ record’s Registry tab.</p>
+<p> </p>
+
+</body></html>

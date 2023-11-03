@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.8.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="GL Report Overview"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>GL Report Overview</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="GL Report Overview"/><meta name="brsnext" value="GL_Reports_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="GL Report Overview">
+        <span>GL Report Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2>GL Report Overview</h2>
+<p>Data-Basics&#39; GL Reporting and Layout tool supports strategic enterprise planning by providing integrated financial and performance data:</p>
+<p style="margin-left: 18.00pt;">Supports arithmetical operations: percentages &amp; variances can be reported</p>
+<p style="margin-left: 18.00pt;">Allows for &quot;what if&quot; modeling</p>
+<p style="margin-left: 18.00pt;">Empowers your accounting staff to design and generate their own special use reports:</p>
+<p style="margin-left: 54.00pt;">Income statement with expenses as a percentage of total expense or income</p>
+<p style="margin-left: 54.00pt;">Cash Flow Analysis</p>
+<p style="margin-left: 54.00pt;">Comparative Financial Statements</p>
+<p style="margin-left: 54.00pt;">Ratio Analysis</p>
+<p style="margin-left: 54.00pt;">Customized Expense</p>
+<p style="margin-left: 54.00pt;">Export to CSV: The GL Reporting Tool allows users to save previewed Reports as CSV (delimited) for import into Excel. This enhancement segments lines so that fields are distinct when saving as CSV so that files will reasonably formatted in Excel.</p>
+<h2>What is a GL Report?</h2>
+<p>GL Reports are comprised of the following components:</p>
+<p style="margin-left: 36.00pt;">A Column Layout. This defines the layout of the columns which will be printed for the report. All lines of the generated report will follow this column layout.</p>
+<p style="margin-left: 36.00pt;">A Row Layout. This defines the set of row definitions that define the lines that will appear on the report. There are several types of rows that can be specified. These will be described below.</p>
+<p style="margin-left: 36.00pt;">A Report Definition. This is the ‘glue’ that binds a Column Layout and a Row Layout together to define a specific report. The Report Definition also provides for setting certain report formatting information. Note that you can define multiple reports with the same Column Layout and different Row Layouts, and multiple reports with the same Row Layout and different Column Layouts.</p>
+<h2>How do I setup a Column Layout?</h2>
+<p>Go to the Folder Viewer and select the General Ledger tab from the Accounting topic. Click the ‘Layout GL Report Columns’ button. This will open a parent/child viewer.<br/>
+<br/>
+The parent window is used only to define the Column Layout’s ID and Name. In the child window, you can enter the column definitions needed for the report. For each column you can define the column’s width, a heading for the column, and what information is to print in the column.</p>
+<p>For details on creating a Column Layout, click <a href="GL_Report_Column_Layout.htm">GL Report Column Layout</a> .<br/></p>
+<h2>How do I setup a Row Layout?</h2>
+<p>Go to the Folder Viewer and select the General Ledger tab from the Accounting topic. Click the ‘Layout GL Report Rows’ button. This will open a parent/child viewer.</p>
+<p>The parent window is used only to define the Row Layout’s ID and Name. In the child window, you can enter the row definitions needed for the report. Again, there are several types of rows that can be defined and these will be described below.</p>
+<p style="margin-left: 18.00pt;">For details on creating a Row Layout, click <a href="GL_Report_Row_Layout.htm">GL Report Row Layout</a> .<br/></p>
+<h2>How do I setup a Report Definition?</h2>
+<p>Go to the Folder Viewer and select the General Ledger tab from the Accounting topic. Click the ‘View/Print User Defined Report’ button. Enter a Row Layout Id and a Column Layout Id in the fields provided for. Fill out the remainder of the parent window with additional report options.</p>
+<h2>How do I run a GL Report?</h2>
+<p>Bring up the desired report via the GL Reports Viewer and press the ‘Show Report’ button.</p>
+<h2>GL Report Range Viewer</h2>
+<p>The ‘ranges’ area on the Report Options is taken into account is selecting entities to be reported.</p>
+<p>The GL Report will now contain a line for each entity posted. This behavior can be overridden by checking the ‘Consolidated Report’ field on the Report Options screen.</p>
+<p>Zero Line Suppression. If all the numeric columns of a report line contain zeroes, that line will no longer be printed. This behavior can be overridden by checking the ‘Include Zero Lines’ field on the Report Options screen.</p>
+<h2>Setting Up a GL Report as a User Defined Function</h2>
+<p>A GL Report can now be set up as a User-Defined Function. This works just like setting up a User Defined Report except the user fills in the GL Report Id field instead of the Report Id field.</p>
+
+</body></html>

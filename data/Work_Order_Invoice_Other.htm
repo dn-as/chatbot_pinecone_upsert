@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.3.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="invoice"/>
+<meta name="MS-HKWD" content="other"/>
+<meta name="MS-HKWD" content="work order invoice"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Work Order Other Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="invoice,other,work order invoice"/><meta name="brsnext" value="Work_Order_Technicians.htm"/><meta name="brsprev" value="Work_Order_Invoice_Labor.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Work Order Other Tab">
+        <span>Work Order Other Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Work Order Other Tab</h1>
+<h2>Purpose:</h2>
+<p>Specifies the quantity, rate, and type of other miscellaneous and non-inventory 
+ material charges applied to this work order.</p>
+<h2>Example:</h2>
+<p>2 days rental for a backhoe, electrical supplies purchased at a local 
+ hardware store, mileage charges, trip charges, etc.</p>
+<h2>Usage:</h2>
+<p>Trip and other additional charges may be automatically defaulted into 
+ this tab for work orders created in New Call. These charges (if any) are 
+ pulled from the WO Other tab of the Client Site Viewer.</p>
+<p>Insert Line with Copy is enabled for all lines except the following: 
+ Insert-with-copy IS disabled when the line being copied references a closed 
+ Accounting Period that has the WO-Other-to-GL option turned on.</p>
+
+<p><font style="font-weight: bold;">Quote Box Validation:</font></p>
+<p>This validation applies to lines that are <font style="text-decoration: underline; ">not</font> 
+ associated with a Quote: it prevents an &#39;actual&#39; line (that has already 
+ been saved into the database) from being switched to a Quote-type line. 
+ Note that the Quote box of Work Orders associated with a Quote still cannot 
+ be changed at all.</p>
+<h2>Important Fields:</h2>
+<p><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/> 
+ Double-click the Magnify button to display all fields for this line.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><img src="assets/images/image/LinesView.gif" alt="" style="border: none;" border="0"/>  Click the Lines View 
+ button to display the multiple line view again.</p>
+<p><font style="font-weight: bold;">Qu (Quote?)<br/>
+</font>If this line represents an estimate for work you are quoting a customer, 
+ check this box by double-clicking it (or press the spacebar when the caret 
+ is on it). If the quote is approved, the system will ultimately use the 
+ Quote lines to generate billable revenue and budgeted costs. When you 
+ check the Quote box, the Extra box will automatically be flagged.</p>
+<p>As the work for this quote is completed, the actual quantities should 
+ be recorded on lines that are <font style="font-weight: bold;">not</font> 
+ flagged as Quotes: these costs will be written to Job History. Billable 
+ revenue should only be included on these lines if it represents additional 
+ billable dollars not included in the original quote.</p>
+<p>Flag the Work Order as Invoice Ready when it has been approved and you 
+ are ready to bill it.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">PM Work 
+ Orders – JCH Budgets<br/>
+</font>This <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#registry_workorder_disable_budget_posting">registry 
+ option</a> will disable the posting of job history of budget cost and 
+ budget revenue for Preventive Maintenance work orders where the work order 
+ lines are marked QU.</p>
+<p><font style="font-weight: bold;">Effective Date:</font><br/>
+This field is required in order for the system to access the Rate Schedule 
+ correctly. Generally, you would enter the date on which the material was 
+ used or the charge incurred. Use the <font style="font-style: italic;">MMDDYY</font> 
+ format to enter the date from the keyboard or double-click on this field 
+ (or press Alt+F7) to access the Calendar viewer to do so. Press Spacebar 
+ to enter today&#39;s date.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Lines 
+ from Quote Master:</span> When the Work Order is set to Invoice Ready 
+ and saved, the Effective Date of Quoted lines and Revenue Adjustments 
+ from Quote Manager will be updated to the Work Order Date Work Completed 
+ (if set). In previous releases, the Effective Date of these lines was 
+ set to the origination date of the Quote. Since this date could be months 
+ in the past, revenue was recognized way too early through the Job EOM 
+ function. See <a href="Quoted_and_Rev_Adjustment_Line_Dates.htm">Quote 
+ and Rev Adjust Lines</a> for details.</p>
+<p><font style="font-weight: bold;">Quantity: Qty Billed:<br/>
+</font>The Quantity (Actually Used) and Billable Quantities may be specified 
+ separately. The Quantity Used will be used for costing, and the Quantity 
+ Billed will be used to compute revenue for billing purposes. Note that 
+ the Quantity Billed field defaults when you enter the Quantity Used, but 
+ may be adjusted by the user if needed.</p>
+<p><font style="font-weight: bold;">Unit Cost</font><br/>
+The Unit Cost of this item/charge. For standard Other charges defined on 
+ your system, this field will default when the Other Rate Id is filled 
+ in. In the case of non-Inventory materials purchased for this job, you 
+ would simply enter the cost per unit at which you obtained this part.</p>
+<p><font style="font-weight: bold;">Amount Cost:</font><br/>
+The Unit Cost X Quantity. The system will calculate this field for you.</p>
+<p><font style="font-weight: bold;">Description:</font><br/>
+This optional field may be used to enter a brief description of this item/charge.</p>
+<p><font style="font-weight: bold;">Other Rate Id:</font><br/>
+Enter a valid Other Rate Id or double-click on this field to select from 
+ a list. The Description field defaults from the Other Rate record, but 
+ may be modified by the user if desired.</p>
+<p><font style="font-weight: bold;">Cost Category Id:</font><br/>
+A valid Cost Category with the Cost Type set to Other, Material, Subcontract 
+ or Equipment. When you double-click on this field, the 
+ list will be filtered so that only those Job Cost Categories these Selection 
+ Cost Types will be displayed. This field is required.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> 
+ If edits are made to work order detail lines AFTER a change has been made 
+ to the Posting Type of the Cost Category, updates to JCH will use the 
+ <font style="text-decoration: underline; ">original Cost Type</font>.  For 
+ example, if a cost type was changed from Material to Other, the changed 
+ amounts continue to be classified as Other.</p>
+<p style="margin-left: 8px;">This field 
+ supports enhanced filtering provided by the Cost Code&#39;s Job Cost Category 
+ Usage Filter. Cost Categories are validated (relative to Cost Codes) during 
+ data entry upon leaving the Cost Category Id field.  The full relationship 
+ is validated again when leaving a child line or saving a record.</p>
+<p><font style="font-weight: bold;">Tax Type Id:</font><br/>
+The appropriate Tax Type for this line: enter a valid Id or double-click 
+ to select from a list.</p>
+<p><font style="font-weight: bold;">Unit of Measure</font><br/>
+This field defaults to each but may be changed by the user.</p>
+<p><font style="font-weight: bold;">Flat Rate Id:</font><br/>
+If this line was created by the system when a Flat Rate Category was imported, 
+ this field will be filled in. It is either used to associate flat rates 
+ with actual costs for reporting purposes, or to enter the revenue amount 
+ to be billed.</p>
+<p><font style="font-weight: bold;">Bill Type Id:  Revenue Rate:</font><br/>
+These fields default from the Other Rate table specified on the Rate Schedule 
+ Schedule&#39;s Other tab for Cost Categories of type Other. If a Cost Category 
+ Type of Material is selected, the Material Markup table in the Rate Schedule 
+ will be used instead. These fields may be adjusted if needed.</p>
+<p style="margin-left: 36.00pt;">If the Bill Type Id is set to <font style="font-weight: bold;">Unit 
+ Price</font>, the Revenue Rate will equal the Unit Price.</p>
+<p style="margin-left: 48px;">If the default 
+ markup methodology is in effect this field will be set to Unit Price because 
+ the price calculation is the result of an aggregate calculation. If the 
+ old markup methodology is in effect this field will be set to the applicable 
+ value (margin, markup or multiplier).</p>
+<p style="margin-left: 36.00pt;">If <font style="font-weight: bold;">Markup</font> 
+ is selected, the Revenue Rate will default from the Markup table (specified 
+ in the Rate Schedule for this Job). For example, a 120% markup applied 
+ to an item costing $100 would generate a unit price of $220. A 30% markup 
+ applied to an item costing $100 would generate a unit price of $130.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Margin</font> 
+ enables the user to set the desired profit margin ((Unit Price - Unit 
+ Cost)/Unit Price)for this item in the Revenue Rate field.</p>
+<p style="margin-left: 36.00pt;">If you select <font style="font-weight: bold;">Multiplier</font>, 
+ the system will multiply the figure in Revenue Rate X Unit Cost to obtain 
+ the Unit Price. For example, a multiplier of 1.2 applied to an item costing 
+ $100 would yield a unit price of $120.</p>
+<p style="margin-left: 36.00pt;">Select the Billing Type of <font style="font-weight: bold;">n/a</font> 
+ if a special price has been agreed on for this customer. In this case, 
+ you will leave the Revenue Rate field blank, and enter the Amnt Revenue 
+ fields directly.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Unit 
+ Price:</font><br/>
+The Unit Price is calculated based on the Unit Cost, Bill Type Id, and 
+ Revenue Rate you have selected.</p>
+<p><font style="font-weight: bold;">Amount Revenue:</font><br/>
+The price that will appear on the invoice (Unit Price x Quantity). The 
+ Extra box must be checked to complete this field if the Billing Item is 
+ flagged as Fixed Fee / Allow Extra.</p>
+<p><font style="font-weight: bold;">Job Id:</font><br/>
+This field defaults from the Work Order main screen unless a registry entry 
+ is in place to default it from the Equipment record’s Service Job.</p>
+<p><font style="font-weight: bold;">Job Cost Code Id:</font><br/>
+This field defaults from the Work Order main screen. Enter a Job Cost Code 
+ Id created for the Job Id you selected. You may double-click on this field 
+ to select from a list of Job Cost Codes.</p>
+<p><font style="font-weight: bold;">Job Billing Item Id:</font><br/>
+This field defaults from the Job Cost Code record. Enter a Job Billing 
+ Item for the Job Id entered above. You may double-click on this field 
+ to select from a list of Job Billing Items.</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font><br/>
+This field defaults from the Job record but may be changed by the user. 
+ It identifies the profit center to be charged with this item. You may 
+ double-click to select from a list of Id&#39;s.When 
+ Intercompany is enabled any changes to the line&#39;s GL Entity are validated 
+ to ensure that the new GL Entity belongs to the same company as the Job.</p>
+<p><font style="font-weight: bold;">Extra?</font><br/>
+If this is an &quot;extra&quot; that can be billed for, check this box 
+ by double-clicking or pressing the Spacebar. <font style="font-weight: bold;">Note 
+ that this Box can only be checked if the Job Billing Item you selected 
+ allows extras.</font> The Revenue Rate, Unit Price, and Amnt Revenue fields 
+ will not be completed unless an Item is marked as an Extra. Items that 
+ are not Extras will be used to calculate job costing and profitability, 
+ but will not be invoiced for directly.</p>
+<p><font style="font-weight: bold;">Equipment Id:</font><br/>
+Enter the Equipment Id this miscellaneous material or other charge was 
+ used on or double-click to select from a list. Note that only Equipment 
+ Id&#39;s included on the Equipment tab will appear on the list.</p>
+<p> <img src="assets/images/image/Magnify.gif" alt="image\Magnify.gif" title="image\Magnify.gif" width="18" height="18" border="0"/> <font style="font-weight: bold;">Click 
+ the Magnify button to view</font> <font style="font-weight: bold;">the 
+ following fields:</font></p>
+<p><font style="font-weight: bold;">Asset Id:<br/>
+</font>Enter the appropriate company equipment Asset Id if you wish to 
+ charge it to this Work Order. The Other Rate Id (and the associated Cost 
+ and Revenue fields) will default from the Asset record’s Operating Other 
+ Rate field (if completed). An Asset must be flagged as Chargeable to be 
+ entered in this fields.  Entering/Changing 
+ an Asset Id also loads the Asset&#39;s Other Rate and populates the Description 
+ field. Clearing the Asset Id does not auto-load or clear existing Other 
+ Rates and related data.</p>
+<p><font style="font-weight: bold;">o Operating o Idle<br/>
+</font> This field controls whether the Operating Other Rate or Idle Other 
+ rate will default from the asset record.</p>
+<p><font style="font-weight: bold;">Posted toGLH:<br/>
+</font>The system will flag this display-only field when a WO Other line 
+ is posted to GL.</p>
+<p><font style="font-weight: bold;">Period Id:<br/>
+</font>This field will be completed by the system using the default Accounting 
+ Period; however, it will only be used to write to GL History if the Accounting 
+ Period has the WO Other to GL option flagged. The system will validate 
+ that the Effective Date falls within the selected accounting period if 
+ the Accounting Period’s WO Other to GL field is flagged.</p>
+<p><font style="font-weight: bold;">GL Debit Id:<br/>
+</font> This field will default from the Job Cost Category GL Expense field 
+ and should reference a Cost of Sales account. However, it will ONLY be 
+ used to write to GL History If the selected Accounting Period has the 
+ WO Other to GL option flagged</p>
+<p><font style="font-weight: bold;">GL Credit Id:<br/>
+</font><span>This field will default from the Other Rate’s GL Credit Account. 
+  </span>It will ONLY be used to write to GL History If the selected 
+ Accounting Period has the WO Other to GL option flagged.</p>
+<p style="font-weight: bold;">GL Credit 
+ Entity: <br/>
+<span style="font-weight: normal;">This field will default using the first 
+ non-blank GL Entity Id from:</span> </p>
+<p style="margin-left: 48px;">1.) Asset 
+ Id&#39;s OH Job Cost Code GL Entity</p>
+<p style="margin-left: 48px;">2.) Registry 
+ UseDefaultBalanceSheetGLEntity   ***see note below</p>
+<p style="margin-left: 48px;">3.) Other 
+ Rate Credit GL Entity</p>
+<p style="margin-left: 48px;">4.) Company 
+ Default GL Entity</p>
+<p style="margin-left: 48px;">*** If &quot;UseDefaultBalanceSheetGLEntity&quot; 
+ = true/enabled; but &quot;DefaultBalanceSheetEntity&quot; value is 
+ not defined, blank or disabled....then Company Record Default GL Entity 
+ behaves as a STAND-IN as value.</p>
+<p><font style="font-weight: bold;">Imported From JCH:<br/>
+</font>This box will be checked if this line was imported from Job Cost 
+ History (e.g., a Purchase Order) rather than being entered directly on 
+ the work order.</p>
+<p><font style="font-weight: bold;">Computed:<br/>
+</font>This display-only field is maintained by the system.</p>
+<p><span style="font-weight: bold;">User1-5</span><br/>
+ These user-defined fields may be used 
+ for reporting and informational purposes.  </p>
+<p><span style="font-weight: bold;">TechAnywhere 
+ Source Rn: Technician Id:</span><br/>
+If these fields are completed, this record/line was created/revised from 
+ TechAnywhere.</p>
+
+</body></html>

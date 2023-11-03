@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Internal Registry Audit Changes (sys-viewer-vfunctionid)</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("SAM Pro Help\nRegistry Entries\nGeneral System / Security Registry Entries\nAudit Changes / Secure Notes **Support**");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Internal Registry Audit Changes (sys-viewer-vfunctionid)</P>
+ <P class="support" >The basic idea behind this entry is to capture all field changes, buttons pushed, etc. that occur while a user is in the viewer.&nbsp; When the user saves the record, the captured activity will be automatically documented as a Secure Note attached to the changed record. </P>
+ <P class="support" >As of version 7.2, accepted and rejected activity will be recorded: rejected entries will be flagged with *REJECTED*</P>
+ <P class="Style_Support_+_Left___0_5_" >Note: Record Change Log<BR>This registry entry provides a much greater level of detail than is maintained in the record change log table, which only records the user, date, time and record being changed. </P>
+ <P class="support" >The existing Note record already had an access-type field that supported two values ... Public and Private.&nbsp; 'Secure' has been added as a third option.&nbsp; Note records that are auto-created for auditing purposes are assigned the new Secure access type.&nbsp; Secure means that the record cannot be edited or deleted by SAMPRO users although, at this point, they can be created.&nbsp; </P>
+ <P class="support" >Secure notes can be viewed, however. Secure-type notes are filtered out of the Notes list when the Notes viewer initially opens.&nbsp; To include the secure type of notes in the list, the user must change the filter option for the Access field.&nbsp; By default it gets set to '!secure' in the filter ranges list.</P>
+ <P class="Style_Support_+_Left___0_5_" >To implement for a specific viewer:</P>
+ <P class="support" >Id: sys-viewer-vemplye<BR>Contents: AuditChanges=true</P>
+ <P class="Style_Support_+_Left___0_5_" >To implement for all viewers...</P>
+ <P class="support" >Id: sys-ffv-global-settings<BR>Contents: AuditChanges=true </P>
+ <P class="support" >This option is <FONT style="font-weight:bold; " >not</FONT> recommended, as it will generate more data than is probably needed. </P>
+ <P class="support" >Related Registry Entry – recommended for trouble-shooting in 7.2+:</P>
+ <P class="support" >The Work Order Id has been added to the Work Order Tab Mismatch box. The recommended registry entry below should be implemented to write this information to the error log.  Audit Changes information (from secure notes that are not saved because the record is not saved) is now written to error log.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >WARNING:</FONT> If a Tab Mismatch box appears, it can lock data for others. If it appears, the user must clear the error box, and then capture the workspace text. </P>
+ <P class="support" >Recommended Registry Entry:</P>
+ <P class="support" >This existing registry entry should be implemented to record tab mismatch errors to the error log.</P>
+ <P class="support" >Id: sys-alert-tabmismatchhistory</P>
+ <P class="support" >Setting Key: errorlog</P>
+ <P class="support" >Setting Key: messagebox</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

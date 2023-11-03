@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.10.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="alarm server"/>
+<meta name="MS-HKWD" content="email"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Alarm Server</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="alarm server,email"/><meta name="brsprev" value="Web_Security_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Alarm Server">
+        <span>Alarm Server</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Alarm Server</h1>
+<h2>Purpose:</h2>
+<p>Data-Basics Alarm Server enables external alarms to be received by the SAM Pro system and used to create web logs. In addition to the topics discussed below, specific registry entries sys-email and term entries must be created. It is recommended that you discuss these topics with your Data-Basics support representative.</p>
+<h2>Usage: Starting Alarm Server</h2>
+<p>Currently, the AlarmService must be started from a transcript window by entering and executing the following text:</p>
+<p style="margin-left: 36.00pt;"><font style="font-family: &#39;Courier New&#39;;" face="Courier New">server := AlarmServer new.<br/>
+server openServer.</font></p>
+<h2>General Notes:</h2>
+<p>When the Alarm Server is running, it checks its email box (defined by the sys-email registry entry pop3user) every cycle (defined by pop3secondswait) to see if it has any email to process. If it finds something, it can do one of the following:</p>
+<p>If the email is bogus or invalid, display an error message. This is currently displayed in the DOS window where the alarm server is running, but in the future it may be written to the error log.</p>
+<p>If the email is valid, the software will create a web log for the equipment. Typically, an escalation profile would be attached to the equipment specifying that an e-mail notification immediately be sent to the appropriate party (e.g., a service provider).</p>
+<h2>Email Format:</h2>
+<p><font style="font-weight: bold;">Subject</font><br/>
+Subject must start with the word ALARM in caps followed by a space, and then EID=clntsteeqpmnt_id<br/></p>
+<p>Example: <font style="font-family: &#39;Courier New&#39;; font-size: 10pt;" face="Courier New" size="2">ALARM EID=</font><font style="font-family: &#39;Courier New&#39;; font-size: 10pt; font-style: italic;" face="Courier New" size="2">1234fred</font><br/></p>
+<p>Note that in order for this to work, the client site equipment id must be unique, not just the combination of client site and client site equipment id.<br/></p>
+<p><font style="font-weight: bold;">Contents</font><br/>
+The contents can be blank or contains semi-colon separated key value pairs; extra spaces past 1 are trimmed.</p>
+<p>If the contents is blank, an alarm will be entered for this equipment.</p>
+<p>Key value pairs, if included, can be used to pass any additional information: <font style="font-style: italic;">key1=value1;key2=value2;...</font></p>
+<p class="See_Also" style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">See Also<br/>
+<br/>
+<a href="Registry_Entry_Terms_for_Alarm_Server.htm"><font style="font-weight: normal; font-style: normal;">Registry Entry Terms for Alarm Server</font></a> <a href="Registry_Entry_System_Email.htm"><font style="font-weight: normal; font-style: normal;">Registry Entry System Email</font></a></p>
+
+</body></html>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.2.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="cost category"/>
+  <meta name="MS-HKWD" content="job"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Job Cost Category Viewer</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="cost category,job"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Cost Category Viewer">
+        <span>Job Cost Category Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Job Cost Category Viewer</h1>
+  <h2>Purpose:</h2>
+  <p>Create and maintain the Cost Category records required to describe expenses and labor for job costing purposes. May also be used to assign Worker&#39;s Comp Category for hours entered for this Category.</p>
+  <h2>Usage:</h2>
+  <p>Job Cost Category records are not job-specific. They are required for the Job Journal, Payroll Journal, and Labor Journal, and for Job Costing entries in the Inventory Journal. They determine how your reports will break out.</p>
+  <p>Cost Categories are referenced in the Other Rate records. <font style="font-weight: bold;">The Cost Type will drive the behavior of the Rate Schedule.</font> A Cost Type of Material will look to the Material Markup; whereas, a Cost Type of Other will look to the Other Rate Table.</p>
+  <p>For COP, the Inventory Groups must include a Job Cost Category with an Avalara code of NT if items in the group are to be non-taxed.  By default, if no Job Cost Category exists in the Inventory Group, all items will be taxed.</p>
+  <h5>Special Find Data Ranges / Indices:</h5>
+  <p><span style="font-weight: bold;">GL Account Id: - GL Account Type Id:</span><br/>
+    These range is sensitive to the Index selected:</p>
+  <p style="margin-left: 48px;">When JobCostCategorybyGLExpenseAccountById is selected, the Cost Category&#39;s GL Expense Account (or the Account Type Id it references) will be filtered on.</p>
+  <p style="margin-left: 48px;">When JobCostCategorybyGLIncomeAccountById is selected, the Cost Category&#39;s GL Income Account (or the Account Type Id it references) will be filtered on.</p>
+  <p style="margin-left: 48px;">When one of the other Indices is selected, the system will filter for a match using both the GL Income and GL Expense Account.</p>
+  <h2>Example:</h2>
+  <p>Assembly, Supervision, Expenses, Maintenance, etc.</p>
+  <h2>Important Fields: Upper Section</h2>
+  <p>
+    <font style="font-weight: bold;">Job Cost Category Id:</font> (15 character, only . and - special characters)<br/>
+    Uniquely identifies this record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Job Cost Category Description:</font> (40 character)<br/>
+    Briefly describes this record. Recommended but not required.
+  </p>
+  <p style="font-weight: bold;">Cost Category Group<br/>
+    <span style="font-weight: normal;">This optional field has been added to support future reporting needs.</span>
+  </p>
+  <p><span style="font-weight: bold;">Cost Category Group:</span><br/>
+    For Avalara Web users, this field should reference the Avalara group for Cost Categories used for Service Invoice processing.</p>
+  <p>
+    <font style="font-weight: bold;">Posting Cost Type: Labor - Material - Subcontract - Other</font><br/>
+    This category will be used by the system for posting purposes. Select the option (Labor, Material, Subcontract or Other) that best describes this cost category by double-clicking on its radio button (or pressing the spacebar when the focus is on the option). The Selection Cost Type field determines where this Cost Category will be available.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Posting Cost Type Changes</font>
+    <font style="font-weight: bold;">:</font> The user will be warned when the Posting Type is changed in Cost Categories having Job History. Note that edits made to work order detail lines AFTER a change has been made to the Posting Type of the a Cost Category. From this point onward, changes made in the WO viewer to be updated into the JCH using the <font style="text-decoration: underline; ">original Cost Type</font>.  For example, if a cost type was changed from Material to Other, the changed amounts continue to be classified as Other.
+  </p>
+  
+  
+  
+  
+  
+  <p>
+    <font style="font-weight: bold;">Selection Cost Type: Labor - Material - Subcontract - Other  - Equipment</font><br/>
+    In most journals, the Cost Categories that you may select (by double-clicking on this field or entering a valid id) are limited to those referencing the ‘appropriate’ cost type: labor in the Labor Journal, material on the Inventory tab of the Work Order, and so on. This field controls which Cost Categories may be selected, while the Post Cost Type field above controls the actual posting behavior.
+  </p>
+  <p>The Selection Cost Type of <font style="font-weight: bold;">Equipment</font> should be reserved for Job Cost Categories that are used to charge company equipment (Assets) to jobs to enable proper tracking of costs and reporting. The Posting Cost Type of Other should be chosen when the Selection Cost Type of Equipment is selected.</p>
+  <p>Generally the Posting and Selection Cost Type fields will remain the same. However, the Selection Cost Type would be set to a different value if, for example you would want a Cost Category with a Posting Type of &quot;Other&quot; to be made available for &quot;selection&quot; in areas that would normally post to Labor (Labor Journal, WO Labor Tab, Job Journal Labor tab).</p>
+  
+  <p>
+    <font style="font-weight: bold;">Job Use: All Direct Indirect</font><br/>
+    The default value of All preserves the existing validation behavior which means there are no restrictions on the combinations. Direct and Indirect (Overhead) are used to indicate the type of jobs that can be used with records having this attribute.
+  </p>
+  <p>The following viewers are affected by this functionality, and will not allow records with the Job Use field set to Direct to be used with Indirect (Overhead) Jobs. Likewise, Direct Jobs (Overhead flag not checked) may not be used with Cost Categories flagged as Indirect.</p>
+  <p style="margin-left: 36.00pt;">AP Journal   Recurring AP Journal<br/>
+    Sales Journal   Cash Receipts Journal<br/>
+    Site Equipment  Employee<br/>
+    Inventory Adjustment Jrnl  Job<br/>
+    Job Journal  Labor Journal<br/>
+    Master Contract  Purchase Order<br/>
+    Quote   Shop Order<br/>
+    Work Order  Work Order Entry<br/>
+    Quote viewer   Flat Rate viewer - Job Use in Cost Category must be All or Direct</p>
+  <p>
+    <font style="font-weight: bold;">GL Income Account</font><br/>
+    If this field is completed it will supersede the default income account found in the cost code when automated invoicing posts lines to the Sales Journal. If this field is blank, the default income account in the cost code will be used.
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Expense Account</font><br/>
+    This field will be used when creating PO&#39;s to provide a default expense account. The system will first look for the default GL expense account in the Cost Category (if present), then in the Vendor if no account is specified in the Cost Category.
+  </p>
+  <p>For cost types of Labor this expense account is <font style="text-decoration: underline; ">only</font> used in Job EOM processing.  If you accrue labor to GL (as specified in the <a href="Payroll_Period_Viewer.htm">Payroll Period</a>), the GL expense account used for cost types of Labor is determined by the Pay Type or Earnings ID depending on your configuration.</p>
+  <p>See <a href="Inventory_Group_Viewer.htm">Inventory Group Viewer</a> for details on usage when Inventory WO to GL is turned on (as specified in the <a href="Accounting_Period_Viewer.htm">Accounting Period Viewer</a> ).</p>
+  <p>This field also provides the default GL Debit Account for Work Order Other lines if the Accounting Period option Work Order Other to GL is flagged.</p>
+  <p>This field is also in conjunction with the <a href="Create_EOM_Unvouchered_AP_GL_Entries.htm">Create EOM Unvouchered AP GL Entries</a> function.</p>
+  <p>
+    <font style="font-weight: bold;">Default Labor Rate:</font><br/>
+    This field should be completed if you want to replace what defaults from the employee record when a given cost category is selected within the Remote Time Applet or Labor Journal. It will also be used to override the labor rate from the Technician record when entering time in the Work Order Labor tab.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Job Cost Category User1:  Job Cost Category User2:</font> (30 character x 2)<br/>
+    These optional fields may be used to record additional information.
+  </p>
+  <p><span style="font-weight: bold;">Avalara Tax Code:</span><br/>
+    Service Invoice Job Cost Categories should have this field completed with the appropriate value if the Avalara-defined default value should not be used.</p>
+  <p>
+    <font style="font-weight: bold;">Obsolete</font>
+    <font style="font-weight: bold;">?</font><br/>
+    If this field is checked, the record is considered Obsolete, and it may not be directly specified during data-entry (either by entering the Id or selecting it from a list). Obsoleted records can be edited and the Obsolete option can be un-done when necessary. When you check the Obsolete field, the following message box will be displayed:
+  </p>
+  <p style="margin-left: 36.00pt;">“You have elected to obsolete this record. Would you like to see existing references to this record?”</p>
+  <p>If you click Yes, the system will display a viewer that provides click-through access to all tables referencing this record: see <a href="References_List.htm">References List</a> for details.</p>
+  <h2>Important Fields: Lower Section</h2>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Worker’s Comp</p>
+  <p>The Worker&#39;s Comp Category normally defaults from the employee when recording hours...but is replaced if designated in this tab so that different tasks can lead to different category assessments for Field hours. <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Global_Settings_Cost_Category_Workers_Comp_Office">Registry options</a> are needed to also apply this methodology to Office hours.</p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">WC Category:<br/>
+    <font style="font-weight: normal;">Enter the Worker’s Comp Category that should override the default value in the Employee record. If you maintain Worker’s Comp Categories for multiple states, a line should be entered for each state. The system will use the state field to determine which Workers Comp category to use for each journal entry.</font>
+  </p>
+  <p class="Tip_Note_Heading">Discipline Id:<br/>
+    <span style="font-weight: normal;">This field supports multiple Worker&#39;s Comp Categories per Worker&#39;s Comp State. When Field time is entered, the system uses the entries on this tab to determine the correct WC Category using the state (from the Job record) and the Discipline (from the Job Cost Code record). It this field is NOT completed, only a single Worker&#39;s Comp Category per state is supported.</span>
+  </p>
+
+</body></html>

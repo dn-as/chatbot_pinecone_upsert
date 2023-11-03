@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.6.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Create Job Scheduler WOs</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="job scheduler,wo creator,installation work order"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Create Job Scheduler WOs">
+        <span>Start Create Job Scheduler WOs</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Create Job Scheduler WOs</h1>
+<h3>Purpose:</h3>
+<p>The information on the Job&#39;s WO Creator tab is used by this function to generate Work Orders for this Job. This Starter function will only be available in database that needs it. See <a href="Job_Scheduling_Overview.htm">Job Scheduling Overview</a> for additional details.</p>
+<h2>Registries:</h2>
+<p>See the <a href="Registry_Entry_Job_and_Job_Cloning.htm#Registry_WO_Creator_Tab_for_Job_Scheduling">Job Registry</a> for the entries needed to Enable the WO Creator Tab and to Limit the Techs allowed on the WO Creator Tab.</p>
+<p>See the <a href="Registry_Start_Create_Job_Schedule_WOs.htm">Start Create Job Scheduler WOs Registry</a> for the options needed to configure this function.</p>
+<h2>Range Screen:</h2>
+<p><font style="font-weight: bold;">Start Date: End Date:</font><br/>
+These fields define the range of Start Work Dates on the Job&#39;s WO Creator tab that you wish to create Installation Work Order. You may enter the dates in mm-dd-yyyy format or double-click on these fields to access the calendar viewer to do so.</p>
+<p><font style="font-weight: bold;">Job Id:</font><br/>
+If you wish to only create work orders for specific Job Id (or double-click to select from a list). Several Jobs may be specified by separating their Id&#39;s with a comma.</p>
+<p>Click the Go button to continue.</p>
+<h2>Checklist Screen</h2>
+<p>This checklist appears immediately after the Create Job Schedular WOs starter function has been run so that you can verify which Installation Work Orders will be generated</p>
+<p><font style="font-weight: bold;">Do</font><br/>
+This field enables you to select which Installation Work Orders should be generated. A check appears in the Do field if an item is selected. Double-click on the Do field to select or deselect an item (or press the Spacebar when the caret appears on this field).</p>
+<p><font style="font-weight: bold;">Job Id: Cost Code: Bill Item:  Work Code Id:  Equipment Id:<br/>
+Work Start:  EstiHrs:  </font><span style="font-weight: bold;">Tech Id:  Cert Id:</span><br/>
+These fields are displayed for informational purposes so that you can verify which PM&#39;s should be generated.</p>
+<p>Click the Go button to generate the selected Work Orders.</p>
+
+</body></html>

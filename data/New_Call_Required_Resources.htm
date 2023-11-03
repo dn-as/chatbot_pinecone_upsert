@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.2.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="requisitioning"/>
+<meta name="MS-HKWD" content="material requisitioning"/>
+<meta name="MS-HKWD" content="required resource"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>New Call Required Resources</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="requisitioning,material requisitioning,required resource"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="New Call Required Resources">
+        <span>New Call Required Resources</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>New Call Required Resources</h1>
+<p><img src="assets/images/image/rr_off.gif" alt="image\rr_off.gif" title="image\rr_off.gif" width="48" height="28" border="0"/> <font style="font-family: Tahoma;" face="Tahoma">If the WO Materials Requisitioning module is implemented in your system (and the</font> <font style="font-family: Tahoma;" face="Tahoma">sys-ffv-global-settings registry’s</font> UseWORequiredResources=true option is set), the Required Resources button will enabled on the New Call viewer’s side button bar. This button enables you to add required resources (inventory items and flat rates) to the work order you are creating AFTER selecting the Site, Equipment and other fields but BEFORE clicking New Call’s Add button.</p>
+<p><img src="assets/images/image/rr_on.gif" alt="image\rr_on.gif" title="image\rr_on.gif" width="48" height="28" border="0"/> When the Required Resource button is toggled to On, the lower section of the New Call screen change to display the Flat Rate and Inventory tabs.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">FlatRate Tab</p>
+<p>This tab enables you to add one or more Flat Rate categories to the Work Order you are creating. Materials and other required resources will be written to the Required Resource tab. A billing line will be written to the Other tab.</p>
+<p><font style="font-weight: bold;">Quantity:</font><br/>
+Enter the quantity of this flat rate category to be billed on this work order (typically, 1).</p>
+<p><font style="font-weight: bold;">Flat Rate Id:</font><br/>
+Enter a valid Flat Rate Id or double-click on this field to select from a list of Flat Rates.</p>
+<p><font style="font-weight: bold;">Level</font> (1 numeric)<br/>
+Enter the flat rate pricing level (1-9) to be used for setting the default prices. Note that not all flat rate pricing services support 9 levels of pricing. Level 1 will be used if you do not enter a level.</p>
+<p><font style="font-weight: bold;">Unit Price:</font> <br/>
+This field defaults from the Flat Rate Category’s Pretax Price for the selected Level.</p>
+<p><font style="font-weight: bold;">Billing Description:<br/></font>This field defaults from the Flat Rate Category’s Description but may be adjusted by the user.</p>
+<p><font style="font-weight: bold;">Description:<br/></font>This display-only field defaults from the Flat Rate Category’s Description.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Inventory Tab</p>
+<p>This tab enables you to add one or more required Inventory items to the Work Order you are creating. These items will be written to the Required Resource tab.</p>
+<p><font style="font-weight: bold;">Quantity:</font><br/>
+Enter the quantity of the item to be added to the Required Resource tab.</p>
+<p><font style="font-weight: bold;">Inventory Item Id:</font><br/>
+Enter a valid Inventory Item Id or double-click on this field to select from a list of items.</p>
+<p><font style="font-weight: bold;">Cost Category:</font><br/>
+Enter a material type Job Cost Category.</p>
+
+</body></html>

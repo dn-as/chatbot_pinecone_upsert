@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.5.0_16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="client site equipment"/>
+<meta name="MS-HKWD" content="client site"/>
+<meta name="MS-HKWD" content="equipment"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Client Site Equipment Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="client site equipment,client site,equipment"/><meta name="brsnext" value="Client_Site_Equipment_Viewer.htm"/><meta name="brsprev" value="Client_Site_Other_WO_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Site Equipment Tab">
+        <span>Client Site Equipment Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Client Site - Site Equipment Tab</h1>
+<p><font style="font-weight: bold;">Equipment Id: Name: Mfg: Model: S/N: 
+ Under Contract: Contract #:<br/>
+</font>This Query-View tab displays all active Client Site Equipment associated 
+ with this Site. You may double-click on an Equipment line to launch the 
+ Client Site Equipment viewer for that record. </p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; margin-left: 8px;"><u style="text-decoration: none; "><span>W</span></u>ith the UseMasterContractEquipmentTable 
+ global registry set to true, processing for the SiteEquipment list has 
+ changed slightly so that the Contract Start and End Dates are displayed 
+ and a Status column added. </p>
+<p style="font-weight: bold; mso-fareast-font-family: &#39;Times New Roman&#39;; 
+	 margin-left: 8px;">Equipment Id:  Name:  Contract#: Starts: 
+  Ends:   Mfg: Model: S/N: </p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; margin-left: 8px;"><u>T</u>his 
+ tab displays active Client Site Equipment associated with this Site. It 
+ also lists the Master Contract or Contracts the equipment is associated 
+ with. You may double-click on an Equipment line to launch the Client Site 
+ Equipment viewer for that record. </p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; margin-left: 8px;">S<span style="font-weight: bold;">tatus:</span></p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; margin-left: 8px;">The 
+ Status column indicates the status of the Master Contract (if any) associated 
+ with the Equipment. If multiple contracts exist for a piece of equipment, 
+ multiple equipment lines may be displayed. </p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; margin-left: 48px;">Active: 
+  Today&#39;s date falls within the Master Contract Start and End Dates. 
+ If a Master Contract&#39;s Date Cancelled falls after today&#39;s date it will 
+ appear as Active. </p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; margin-left: 48px;">Pending: 
+  Today&#39;s date falls before the Master Contract Start Date.</p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; margin-left: 48px;">NoContract: 
+ The equipment is not assigned to a Master Contract</p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; margin-left: 48px;">Expired: 
+ The equipment is assigned to an expired Master Contract - today&#39;s Date 
+ falls after the End Date of the Master Contract.  Note that status 
+ filtering must be set to show Expired Contracts.</p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; margin-left: 88px;"><span>Cancelled: 
+ The equipment is assigned to a cancelled Master Contract - today&#39;s Date 
+ falls after the Cancelled Date of the Master Contract.  Note that 
+ status filtering must be set to show Cancelled Contracts.</span></p>
+
+</body></html>

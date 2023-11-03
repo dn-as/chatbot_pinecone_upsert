@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.1.0_24";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="internal"/>
+<meta name="MS-HKWD" content="sys-zipcode-lookup"/>
+<meta name="MS-HKWD" content="zip code"/>
+<meta name="MS-HKWD" content="support document"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Internal Registry Zip Code Lookup (sys-zipcode-lookup)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="registry,internal,sys-zipcode-lookup,zip code,support document"/><meta name="brsprev" value="Internal_Registry_Entry_Application_Association_Override.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Internal Registry Zip Code Lookup (sys-zipcode-lookup)">
+        <span>Internal Registry Zip Code Lookup (sys-zipcode-lookup)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Internal Registry Zip Code Lookup (sys-zipcode-lookup)</h1>
+<h2>Purpose:</h2>
+<p>This registry entry is required to enable defaulting by ZIP code. The 
+ City, State, Service Zone, Branch and Tax Group fields will only default 
+ from the zip code record if they are blank; existing values will not be 
+ overwritten.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Usage:</h2>
+<p>The Zipcode table in SAM Pro must be populated with the appropriate 
+ entries; these records may be entered by hand or imported from a database.</p>
+<p>The Branch Id was added to the Zip Code record for defaulting purposes. 
+ The Branch (if completed) defaults in the Job, Site, Vendor and New Call 
+ / COD Site records. If you do not want the Branch to default in Vendor 
+ records, be sure that is it is not included in the registry entry that 
+ sets the zip code enablement, sys-zipcode-lookup.</p>
+<h2>Related Registries:</h2>
+<p>By default, data entry in the State / Province address field is limited 
+ to the official abbreviations of the US States and Canadian Provinces. 
+ See the <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Global_Settings_State_Id">State 
+ / Province Field Validation Registry</a> if you need to add to or change 
+ the list of valid State / Province codes. </p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font> sys-zipcode-lookup</p>
+<h3>Control default behavior</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> default <font style="font-weight: bold;">Setting 
+ Value:</font> true or false</p>
+<p>This option controls the default behavior for the defaulting of the 
+ blank City and State fields when a zip code (from the zip code table) 
+ is entered. Exceptions to this setting may be specified by record.</p>
+<h3>Specify Exceptions to Default Behavior</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> afunction <font style="font-weight: bold;">Setting Value:</font> true or false</p>
+<p>This option enables you to specify exceptions to the default behavior.</p>
+<p> Example:</p>
+<p style="margin-left: 36.00pt;">Setting Key: default Setting Value: true</p>
+<p style="margin-left: 36.00pt;">Setting Key: vvndr Setting Value: false</p>
+<p>In this example, blank fields will default from the zip code table in 
+ all records except the Vendor record.</p>
+<p class="Support" style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Support">Also See .... <a href="ZIP_Code_Viewer.htm">ZIP Code 
+ Viewer</a></p>
+
+</body></html>

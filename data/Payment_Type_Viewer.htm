@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.1.0_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="client"/>
+<meta name="MS-HKWD" content="payment type"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Payment Type Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="client,payment type"/><meta name="brsprev" value="Account_Managers_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Payment Type Viewer">
+        <span>Payment Type Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Payment Type Viewer</h1>
+<h2>Purpose:</h2>
+<p>This record is typically used to define how the client says they will 
+ pay (e.g., Cash, Check, Account, CreditCard, etc.).</p>
+<h2>Registry:</h2>
+<p><a href="Registry_AR_Cash_Receipts.htm#Force_GL_Bank_Account_to_be_Set_from_Payment_Type">Registry 
+ to Force Setting the AR Cash Receipts Bank Account from the Payment Type.</a> 
+ </p>
+<h2>Usage:</h2>
+<p>Referenced in New Call, the Work Order Viewer (for COD work orders) 
+ and the AR Cash Receipts Journal.</p>
+<h5>Credit Card Processing</h5>
+<p>A Payment Type record is required if 
+ PM credit card processing with OpenEdge or Electronic Payments is being 
+ used. This Payment Type must be reference in the appropriate registry 
+ setting for <a href="Registry_Payment_Processor_APT_Accelerated_Payment_Technology.htm">OpenEdge</a> 
+ or <a href="Registry_Electronic_Payment_Credit_Card_Processing.htm">Electronic 
+ Payments</a>. We recommend setting the Id to CreditCard or EPCreditCard 
+ and the GL Bank Account set to the appropriate bank or sweep account for 
+ these. This will be used for recurring payment processing (e.g, PM&#39;s). 
+ </p>
+<h2>Important Fields:</h2>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Payment Type Id:<br/>
+<span style="font-weight: normal;">Uniquely identifies this Payment Type. 
+ This field is required.</span> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Description:<br/>
+<span style="font-weight: normal;">Briefly describes this payment type. 
+ Optional but highly recommended.</span></p>
+<p><font style="font-weight: bold;">GL Bank Account Id:<br/>
+</font>This field may be completed for Payment Types associated with COD 
+ payments or automated credit card processing with OpenEdge or 
+ Electronic Payments. </p>
+<p>When a Payment Type is selected on the Work Order COD parent or child 
+ tab (or posted from TechAnywhere), the GL Bank Account specified in this 
+ viewer will be defaulted in. Note that the Work Order will deny changes 
+ to the GL Bank Account on the COD data entry forms when it has defaulted 
+ from the Payment Type.</p>
+<p><font style="font-weight: bold;">Payment Type</font> <font style="font-weight: bold;">User 
+ 1-5:<br/>
+</font>These fields may be used by TechAnywhere assist in filtering records 
+ for TechAnywhere access, or for entering any information your company 
+ wishes to retain.</p>
+<p><font style="font-weight: bold;">Obsolete?<br/>
+</font>If this field is checked, the record is considered Obsolete, and 
+ it may not be directly specified during data-entry (either by entering 
+ the Id or selecting it from a list). Obsoleted records can be edited and 
+ the Obsolete option can be cleared when necessary. When you check the 
+ Obsolete field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. 
+ Would you like to see existing references to this record?”</p>
+<p style="margin-left: 48px;">If you click Yes, the system will display 
+ a viewer that provides click-through access to all tables referencing 
+ this record.</p>
+
+</body></html>

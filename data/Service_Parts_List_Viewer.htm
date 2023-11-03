@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.6.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="parts"/>
+<meta name="MS-HKWD" content="service parts"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Service Parts List Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="parts,service parts"/><meta name="brsnext" value="Service_Tasks_List_Viewer.htm"/><meta name="brsprev" value="Service_Category.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Service Parts List Viewer">
+        <span>Service Parts List Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Service Parts List Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain lists of parts to include as checklists on WorkOrders.</p>
+<h2>Example:</h2>
+<p>Various types of Service Parts Lists can be created on both for Preventative Maintenance and Installation WorkOrders. For example, you can create &quot;hero lists&quot; of all parts that might be required to install a piece of equipment. In addition, you can create lists of the actual parts and quantities that should be replaced at a PM (filters, belts, etc).</p>
+<h2>Usage:</h2>
+<p>Optional for Installation Work Orders and PM Work Orders.</p>
+<h3>Special processing of Service Parts List</h3>
+<p>The Filters - Pltd Filters - Belts and Other check boxes in the Client Site Equipment record PM tab are supposed to identify which Service Parts List items should be included in PM work orders. These boxes map to the Inventory Type Id in the Service Parts List viewer.</p>
+<p>SAM Pro uses special processing on the flagged Service Parts items based on whether the Tech assigned to the PM is a Subcontractor or not (as specified on the tech web access tab). By default, this processing works as follows:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">If the Technician is a Subcontractor:</font> the flagged parts list items will be added to the Work Requested field in the Work Order Equipment tab for the applicable piece of equipment.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">If the Technician is NOT a Subcontractor:</font> the flagged parts list items are to be added to the Inventory or Other tab AND flagged as Quotes. Note that the Date Effective, Cost and Location will not be filled in. If these parts are in fact used on the work order, these fields should be filled in and the quote flag removed when the work order is completed.</p>
+<p style="margin-left: 36.00pt;">In additional, if Requisitioning is enabled, parts will written to the PM Work Order&#39;s ReqResource tab.</p>
+<p>This functionality may be adjusted by the <a href="Registry_Entry_Create_PM_WO.htm">Registry Entry Create PM WO</a> by implementing the Option to Control Flagged Service Parts.</p>
+<h2>Important Fields: Upper Section</h2>
+<p>This viewer is divided into two sections. The upper section includes the Id and Name fields for this Service Parts List. The lower section lists the inventory and non-inventory parts and quantities to be included on the list.</p>
+<p><font style="font-weight: bold;">Service Parts Id:</font><br/>
+A unique Id. This field is required.</p>
+<p><font style="font-weight: bold;">Service Parts List Name:</font><br/>
+This optional field briefly describes the Service Parts List.</p>
+<p><font style="font-weight: bold;">Obsolete</font><font style="font-weight: bold;">?</font><font style="font-weight: bold;"><br/></font>If this field is checked, the record is considered Obsolete, and it may not be directly specified during data-entry (either by entering the Id or selecting it from a list). Obsoleted records can be edited and the Obsolete option can be un-done when necessary. When you check the Obsolete field, a message box appears:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through access to all tables referencing this record: see <a href="References_List.htm">References List</a> for details.</p>
+<h2>Important Fields: Lower Section</h2>
+<p><font style="font-weight: bold;">Quantity:</font><br/>
+The amount of parts or material.</p>
+<p><font style="font-weight: bold;">Inventory Item Id:</font><br/>
+For inventory parts, enter a valid Inventory Item Id or double-click on this field to select from a list.</p>
+<p><font style="font-weight: bold;">Inventory Item Name:</font><br/>
+This field will be filled in from the Inventory Item record.</p>
+<p><font style="font-weight: bold;">Description:</font><br/>
+Enter a brief description of non-inventory parts. This field can also be used to provide optional information about inventory parts.</p>
+<p><font style="font-weight: bold;">Part Type Id:<br/></font>This field may be used to identify this item as a belt, standard filter, pleated filter or other. It is used in conjunction with Create PM Work Orders to determine which items will be included on the parts list recorded in the Description of Work Performed field of the Equipment tab of PM Work Orders that were generated for Subcontractors. This enables the same parts list to be attached to different types of PM’s.</p>
+<p style="margin-left: 36.00pt;">Example:</p>
+<p style="margin-left: 36.00pt;">Suppose this field is set to filter. When the PM Work Order is being created, the system checks the appropriate line of the Site Equipment PM Schedule to see if the Filter box is checked. If it is, items flagged as filters will be included on the parts list in the Work Requested field. In this way, filters would be included for the season startup, for example, but not in a monthly checkup.</p>
+<p><font style="font-weight: bold;">Part Type Field Defaults to Other During Database Update<br/></font>This field will be automatically set to ‘other’ when your database is updated from version 5.2 or earlier. Be sure to review all of your Service Parts Lists to tag items as filters or belts as needed.</p>
+
+</body></html>

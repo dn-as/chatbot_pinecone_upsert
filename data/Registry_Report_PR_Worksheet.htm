@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.23.0_21";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Report PR Worksheet</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="payroll,medicare additional tax,PR Worksheet"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Report PR Worksheet">
+        <span>Registry Report PR Worksheet</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Report PR Worksheet</h1>
+<h2 class="MsoNormal">Purpose:</h2>
+<p>The <a href="Report_PR_Worksheet.htm">PR Worksheet</a> report is designed 
+ to be run after Compute Payroll has been run for the specified Payroll 
+ Period, but before the Payroll Checks have been printed.</p>
+<h2>Important Fields:</h2>
+<p class="MsoNormal"><span style="font-weight: bold;">Registry Id:</span> 
+ sys-report-rprwrks</p>
+<h3>Option to Default the Report&#39;s FICA MC Wage Threshold Field</h3>
+<p>If the newer 9.1 functionality is in 
+ effect to support the automatic computation of FICA MCAD tax this registry 
+ is not needed.</p>
+<p class="MsoNormal">The Additional Medicare Tax statute requires U.S. 
+ employers to withhold Additional Medicare Tax on wages it pays to an employee 
+ in excess of $200,000 in a calendar year. For SAMPro users, this requires 
+ adding the FICA MCAD Tax Table to an Employee&#39;s Tax tab when he/she is 
+ projected to exceed $200,000 in the next payroll (NOT before).  When 
+ this field is completed, the following warning will appear in the report 
+ in red, bold text:</p>
+<p class="Support" style="margin-left: 48px; font-weight: bold;">*** YTD 
+ FICA MC WAGES OF $ (employee&#39;s wages) HAVE EXCEEDED THE WAGE THRESHOLD 
+ of $ (value entered on input field) ***</p>
+<p class="MsoNormal">A registry option may be used to set the report&#39;s 
+ FICA MC Wage Threshold input field to either the $200,000 or a lesser 
+ value (to provide a warning before the next paycheck or bonus is generated). 
+  </p>
+<p class="MsoNormal"><span style="font-weight: bold;">Setting Key:</span> 
+ InitialValueFor~p_fica_wge_thrshhld   <span style="font-weight: bold;">Setting 
+ Value:</span> <span style="font-style: italic;">threshold amount</span></p>
+<p class="MsoNormal">This Setting Value should be set to the default threshold 
+ amount for the report. For example,</p>
+<p class="MsoNormal">Setting Value: 180000  (to display the warning 
+ BEFORE computed pay exceeds the US government threshold)</p>
+<p class="MsoNormal">Setting Value: 200000  (to display when computed 
+ pay exceeds the US government threshold)</p>
+
+</body></html>

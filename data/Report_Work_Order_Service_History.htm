@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.5.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report Work Order Service History</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="Report Work Order Service History,Service History Report,Work Order Service History Report"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report Work Order Service History">
+        <span>Report Work Order Service History</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report Work Order Service History</h1>
+<h2>Purpose:</h2>
+<p>This system report provides information on the services performed, parts 
+ used and metrics taken for one or more Site. </p>
+<h2>Registry:</h2>
+<p>Since the Work Order Age and Max Calls fields are required, you may 
+ wish to provide initial values for them via <a href="Registry_Entry_to_Autosave_Report.htm#Registry_Report_Default_Settings">Registry</a>. 
+ </p>
+<h2>Important Fields:</h2>
+<p><span style="font-weight: bold;">Sort By: Work Order Id - Equipment 
+ Id</span><br/>
+Select Work Order Id to sort the information for each Site by Work Order. 
+  Select Equipment Id to sort by Equipment, then Work Order. </p>
+<p><span style="font-weight: bold;">Work Order Age (Days):</span><br/>
+This required field specifies the maximum age of the work order in days. 
+ </p>
+<p><span style="font-weight: bold;">Max Calls:</span><br/>
+This required field specifies the maximum number of Work Orders on the 
+ report. </p>
+<p><span style="font-weight: bold;">Show Parts - Show Misc. - Show Metrics:</span><br/>
+Select one or more option to include this information on the report. </p>
+<p><span style="font-weight: bold;">Changed Since:</span><br/>
+This optional field limits the report to Work Orders changed since this 
+ date.</p>
+<p><span style="font-weight: bold;">Show For WO Recommendation:<br/>
+Show From WO Recommendation:<br/>
+Show Unacknowledged Recommendation:</span><br/>
+Select One or more of these options to include Weblog information on the 
+ report. </p>
+
+</body></html>

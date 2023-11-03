@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.1.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="job"/>
+<meta name="MS-HKWD" content="prevailing wages"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job Employee Overrides</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="job,prevailing wages,employee"/><meta name="brsnext" value="Job_Employee_Prevailing_Wage_Tab_7_1_.htm"/><meta name="brsprev" value="CRMAnywhere_Appointment_Confirmation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Employee Overrides">
+        <span>Job Employee Overrides</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Job Employee Overrides Tab</h1>
+<p>This tab provides employee overrides for time entered on this job in the Labor Journal, Remote Labor Journal, and Work Order Labor screen. In previous releases, prevailing wage type jobs were only handled on an employee by employee basis by specifying overrides on this tab. Although the earlier functionality is still supported (with the tab renamed ‘Employee Overrides’), new functionality has been implemented via a NEW Prevailing Wages tab which allows you to specify the Prevailing ‘package’ rate by Labor Rate. See <a href="Job_Employee_Prevailing_Wage_Tab_7_1_.htm">Job Prevailing Wage Tab (7.1)</a> for details.</p>
+<p><font style="font-weight: bold;">Registry options enable you to control how prevailing wage overrides are implemented.</font> If you only wish to implement them for Job Cost Codes flagged as Field, click <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm">Registry Entry Global Settings: Field/Office</a> in the Labor Journal, Work Order Labor tab.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Employee Id:<br/></font> The Employee for whom these exceptions are being entered. Enter a valid Employee Id or double-click to select from a list.</p>
+<p><font style="font-weight: bold;">Earnings Group Id:<br/></font> If this field is completed, it will provide the default value when entering time in the Labor Journal, Remote Labor Journal, and Work Order Labor tab. When making these journal entries, this value will override the Earnings Group Id from the Employee record (most likely blank for non-union workers).</p>
+<p><font style="font-weight: bold;">Deduction Group Id:<br/></font> If this field is completed, it will provide the default value when entering time in the Labor Journal, Remote Labor Journal, and Work Order Labor tab. When making these journal entries, this value will override the Deduction Group Id from the Employee record.</p>
+<p><font style="font-weight: bold;">Labor Rate Id:<br/></font> If this field is completed, it will provide the default value when entering time in the Labor Journal, Remote Labor Journal, and Work Order Labor tab. When making Labor and Remote Labor journal entries, this value will override the Labor Rate Id from the Employee record when you enter the Job Id and tab out of the field. Note that hours entered on the Labor tab of the Work Order normally look to the Employee’s Defaults tab first, then the Labor Rate in the Technician Record, and finally the Labor Rate Id in the Employee record.</p>
+<p><font style="font-weight: bold;">Pay Type Id:<br/></font> If this field is completed, it will provide the default value when entering time in the Labor Journal, Remote Labor Journal, and Work Order Labor tab. When making these journal entries, this value will override the Pay Type Id from the Employee record when you enter the Job Id and tab out of the field.</p>
+
+<p><span style="font-weight: bold;">PyRateAdj:</span><br/>
+This field enables a Pay Rate Adjustment to be specified by Employee for this Job.  This Adjustment will be added to the Employee&#39;s Pay Rate for hours entered for the Labor Rate / Pay Type specified on this tab. This adjustment will also be added to the Job Cost rate for wage-type earnings if the wages are being costed AND the global registry option LaborJobCostRateMethod is set to 7687.</p>
+
+<p>On Hourly Employees (that are not using standard cost), it will Accrue to GL and Job Cost the additional amount if Earnings Id setup this way.</p>
+
+<p>On Hourly Employees that are setup to use standard cost, it will pay the employee the additional amount &amp; accrue it to GL but it will not job cost the additional amount unless a special Standard Cost Earnings Group Id is setup to include the additional amount (and added to the Job&#39;s Employee Override tab).<br/>
+<br/>
+This additional amount is always ignored on Salary type employees.</p>
+
+
+</body></html>

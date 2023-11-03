@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.26.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Quote Scope</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Quote Scope">
+        <span>Registry Quote Scope</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Quote Scope</h1>
+<h2>Purpose:</h2>
+<p>This registry entry enables you to set a number of configuration for 
+ the Quote Scope viewer. This registry it is NOT used by the Quote Manager 
+ or the older Quotemaster viewers.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Related Registry Entries:</h2>
+<p>Registry to <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#Do_Not_Update_NTE_Amounts_when_Quote_Approval_Wizard_Runs">Prevent 
+ Work Order NTE fields from being updated by Approval Wizard</a>.</p>
+<p>The ‘Imported from Quote’ fields on Labor, Inventory and Other Work 
+ Order lines will be checked if the line was imported from QuoteMaster. 
+ A registry entry (see <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#registry_workorder_qm_lines">Work 
+ Order Registry Entry to Deny Changes to QM lines</a> ) may be implemented 
+ to deny all changes to imported lines.</p>
+<p>See <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Required_Resources">Global 
+ Settings: Material Requisitioning</a> for using Material Requisition in 
+ conjunction with Quotemaster.</p>
+<p style="margin-left: 8px;"><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_rev_adj_management_fee_tax_type">Set 
+ Tax Type on Revenue Adjustment Management Fee</a> is a global setting 
+ that impacts the Quote and Work Order.</p>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Default_to_Non-Aggregate_Material_Markup">Registry 
+ to Enable Old Markup Methodology</a></p>
+<h2>Important Fields</h2>
+<p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vqtescpe</p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;"> </p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard 
+ Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> 
+ for additional Registry Id formats to allow entries for specific Users, 
+ Branches, Security, or User Groups to override the main entry.</p>
+<h3 class="Normal_Indent">Registry to Permit Manual Setting of Printed 
+ Scope Status</h3>
+<p>This registry allows the user to manually set the Quote Scope&#39;s Status 
+ to Printed in the Quote Scope Viewer. The registry was implemented to 
+ allow users running Crystal Reports to set their Quotes to Printed since 
+ Crystal does not support the print confirmation available in the SAMPro 
+ Quote report. Note that fully approved scopes may not be set to Printed.</p>
+<p><span style="font-weight: bold;">Id:</span> sys-viewer-vqtescpe</p>
+<p><span style="font-weight: bold;">Setting Key:</span> AllowPrintedScopeStatusToBeSetManually 
+    <span style="font-weight: bold;">Setting Value:</span> 
+ (default false)</p>
+<h3 class="Normal_Indent">Flat Rate Lock</h3>
+<p><span style="font-weight: bold;"><font style="font-weight: bold;">R</font>egistry 
+ Id:</span> sys-viewer-vqtescpe</p>
+<p><font style="font-weight: bold;">Setting Key:</font> FlatRateLock <font style="font-weight: bold;">Setting Value:</font> false</p>
+<p>This registry option enables you to clear the Lock option in the Flat 
+ Rate entry form displayed when you click the Import Flat Rate button on 
+ the Main tab. If the Lock option is checked when the flat rate is imported, 
+ the system will prevent additional Flat Rates from being imported after 
+ the first one is referenced.  If the user wishes to use flat 
+ rates as assemblies, the lock option should be blanked.</p>
+<h3>Disable Inventory Tab Default Vendor</h3>
+<p>This registry setting disables the VENDOR ID from being loaded from 
+ the Inventory Item’s Vendor Id field (on the Purchasing Tab) to the Quote’s 
+ Inventory tab. Note that the PO generation process is still be available 
+ in the Wizard if the USER enters a VENDOR ID. The Registry option to activate 
+ this feature is:</p>
+<p><span style="font-weight: bold;"><font style="font-weight: bold;">R</font>egistry 
+ Id:</span> sys-viewer-vqtescpe</p>
+<p><font style="font-weight: bold;">Setting Key:</font> ImportPrimaryVendor<font style="font-weight: bold;"> Setting Value:</font> false</p>
+<h3>Flat Rate Import Tax Rules</h3>
+<p>By default, the Flat Rate Import code forces each line&#39;s Tax Type Id 
+ to &#39;n/a&#39; instead of applying normal SAMPRO tax rules. The following registry 
+ setting may be used to use the Job’s tax rules when setting the Tax Type.</p>
+<p><span style="font-weight: bold;"><font style="font-weight: bold;">R</font>egistry 
+ Id:</span> sys-viewer-vqtescpe</p>
+<p><font style="font-weight: bold;">Setting Key:</font> ApplyTaxRulesOnFlatRateImport <font style="font-weight: bold;">Setting Value:</font> true</p>
+<h3>Allow Changes to Accepted Options</h3>
+<p>Default validation disallows changes to any Scope lines if the status 
+ is set Printed, Accepted, Approved or Declined, forcing the user to first 
+ change the status to Open to make changes. The following registry setting 
+ may be implemented to also allow changes to Accepted options.  </p>
+<p><font style="font-weight: bold;">Note:</font> this registry option should 
+ be used with caution if FMAnywhere is enabled; options that a customer 
+ has accepted should not be altered.</p>
+<p><span style="font-weight: bold;"><font style="font-weight: bold;">R</font>egistry 
+ Id:</span> sys-viewer-vqtescpe</p>
+<p><font style="font-weight: bold;">Setting Key:</font> IgnoreAcceptedValidation 
+ <font style="font-weight: bold;">Setting Value:</font> true (default is 
+ false)</p>
+<h3>Set Default Status When Creating Job Billing Change Orders</h3>
+<p>This registry enables you to set the status of Change Orders generated 
+ by the Create CO button.</p>
+<p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vqte</p>
+<p><span style="font-weight: bold;">Setting Key:</span>  JobBillingItemStatusDefault 
+   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">any valid Job Billing Status Id</span></p>
+<p style="font-weight: bold;"> </p>
+
+</body></html>

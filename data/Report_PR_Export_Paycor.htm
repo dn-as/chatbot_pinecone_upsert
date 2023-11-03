@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.10.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="export payroll"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="MS-HKWD" content="Paycor"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report PR Export Paycor</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="export payroll,payroll,Paycor"/><meta name="brsnext" value="Report_PR_Export_Paychex.htm"/><meta name="brsprev" value="Report_PR_Export.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report PR Export Paycor">
+        <span>Report PR Export Paycor</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report PR Export (Paycor Users)</h1>
+<h2>Purpose:</h2>
+<p>Report PR Export creates a text file that Paycor will use to generate 
+ paychecks. A report for the user to review/file will also be printed.</p>
+<h2>Usage:</h2>
+<p>This functionality requires that a vrgstry.cus file with the necessary 
+ permissions be in place. It may be necessary to run Start Update Functions 
+ to see this report. Note that this report is part of the image itself 
+ and does not have to be imported into the database.</p>
+<p>The report function Report PR Export must be run AFTER the Compute Payroll 
+ function is run for the desired Payroll Period.</p>
+<p>The report will be saved in the directory specified in the sys-pr-export 
+ registry as PAYCOR-<font style="font-style: italic;">payrollperiodid</font>.txt 
+ (for example, if the payroll period id was 10June, the filename would 
+ be PAYCOR-10June.txt).</p>
+<p><font style="font-weight: bold;">Important Note on Paycor PRS Codes:</font><br/>
+In order for the data in the PR Export Report to be interpreted correctly, 
+ the appropriate codes (consult your Paycor documentation) must be present 
+ in your data – either in the PRS fields in the Tax Authority, Pay Type, 
+ and Other Rate records, or as the Id’s of these record (the record Id 
+ will be used if the PRS field is blank).</p>
+<p><font style="font-weight: bold;">To Skip Hours Sent to Paycor:</font><br/>
+To skip the hours sent to Paycor for a specific Pay Type, enter &lt;skip&gt; 
+ in the Pay Type’s PRS Code field.</p>
+<h2>Registry:</h2>
+<p>Click <a href="Registry_Report_PR_Export.htm">Registry Report PR Export</a> 
+ for details on the registry entry required for this report. An 
+ option to specify an alternate Employee Id is available via registry. 
+ </p>
+<h2>Report Range:</h2>
+<p><font style="font-weight: bold;">Payroll Period:<br/>
+</font>Enter the Payroll Period you wish to run the report for. This field 
+ is required.</p>
+<p><font style="font-weight: bold;">Employee Id:<br/>
+</font>An Employee Id or list of Employee Id’s may be specified if you 
+ wish to filter this report to specific employees.</p>
+<p><span style="font-weight: bold;">Executive 
+ PR:</span><br/>
+If you are an Executive Payroll user, this field will default to Y; to 
+ run this function for all employees (Executive or not) clear this range. 
+ If your User record is not flagged as Executive Payroll, you will only 
+ be able to run this function for other non-Executive users even if you 
+ clear the filter.</p>
+<h2>Report Format: Printed Version</h2>
+<p><font style="font-weight: bold;">Emp #<br/>
+</font>This column is pulled from the Employee Id.</p>
+<p><font style="font-weight: bold;">Reg Hours<br/>
+</font>Hours entered for this Employee with a Pay Type using the Category 
+ ‘Regular’ will be listed in this column.</p>
+<p><font style="font-weight: bold;">OT Hours<br/>
+</font>Hours entered for this Employee with a Pay Type using the Category 
+ ‘Overtime’ will be listed in this column.</p>
+<p><font style="font-weight: bold;">Coded Hours<br/>
+Hrs Code<br/>
+</font>Hours entered for this Employee with a Pay Type using the Categories 
+ ‘Doubletime’ or ‘Other’ will be listed in the Coded Hours column. If the 
+ PRS Code is set in the Pay Type record, it will be used to complete the 
+ Hrs Code column; if the PRS Code field in the Pay Type record is blank, 
+ the Pay Type Id will be used to set the Hrs Code column.</p>
+<p><font style="font-weight: bold;">Note:</font> the PRS Code should NOT 
+ be set for Regular or OT Pay Types.</p>
+<p><font style="font-weight: bold;">Errngs1  <br/>
+Ern Cde 1<br/>
+</font>The Errngs1 column is only set for bonuses (Labor Journal entries 
+ with Earnings but with NO hours) and for Labor Journal reimbursable entries 
+ recorded on the Labor Journal Other tab. For reimbursables, the Ern Cde 
+ 1 column is set from the PRS Reimb Code (if completed) in the Other Rate 
+ record. For Bonuses, the Pay Type PRS Code: field (if completed) will 
+ be used to set the Ern Cde 1 column; otherwise, the Pay Type Id will be 
+ used.</p>
+<p><font style="font-weight: bold;">Exc Rate<br/>
+</font>This field displays the base rate for Regular, Overtime and Hours. 
+ Note that the rate for Overtime Hours and Coded Hours is NOT marked up 
+ in this report: it will be handled by Paycor.</p>
+<p><font style="font-weight: bold;">Exc Dept</font><br/>
+This column specifies the local Tax Auth this line is associated with. 
+ If the PRS Tax Code is set in the Tax Authority record, it will be used 
+ to complete the Exc Dept column; if the PRS Tax Code field in the Tax 
+ Authority Type record is blank, the Tax Authority Id will be used to set 
+ the Exc Dept column.</p>
+
+</body></html>

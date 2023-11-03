@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.4.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="labor rate"/>
+<meta name="MS-HKWD" content="rate"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Labor Rate Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="labor rate,rate"/><meta name="brsnext" value="Labor_Rate_Table_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Labor Rate Viewer">
+        <span>Labor Rate Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Labor Rate Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain the standard rates charged for various types of 
+ labor.</p>
+<h2>Example:</h2>
+<p>Create a &quot;tech&quot; labor rate for your technicians, assembly 
+ rates for your assemblers (assembly1, assembly2), engineers, etc.</p>
+<h2>Usage:</h2>
+<p>The standard billable rate for this type of labor, unless overridden 
+ by the Labor Rate (exception) table specified in the Rate Schedule in 
+ the Job record. Standard labor rates must be created before you can create 
+ Labor Rate Tables for a specific year or other time period for your various 
+ classes of customers.</p>
+<p>Referenced in Records: Technician, Labor Rate Table, Employee, Quote, 
+ and Work Order.</p>
+<p>Referenced in Journals: Labor, Job.</p>
+<h2>Important Fields: <span>Upper Section </span></h2>
+<p><font style="font-weight: bold;">Labor Rate Id:</font> (15 character, 
+ only . and - special characters)<br/>
+A unique Id for this Labor Rate. This field is required.</p>
+<p><font style="font-weight: bold;">Labor Rate Description:</font> (40 
+ characters)<br/>
+A brief description. This field is optional.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field displays the Security Id of the local 
+ user that created this record. If multiple location security is not implemented 
+ on your system, or if this record was created by a global user, this field 
+ will be blank.</p>
+<p><font style="font-weight: bold;">Unit of Measure:</font><br/>
+Specifies the unit in which Labor is measured (e.g., hours).</p>
+<p><font style="font-weight: bold;">Standard Regular Rate:</font><br/>
+The current, standard billable rate for this labor (e.g., $80/hour for 
+ techs, $55/hour for assemblers, etc.).</p>
+<p><font style="font-weight: bold;">Billing Rate Type Id:</font><br/>
+In most cases, <font style="font-weight: bold;">Unit Price</font> will 
+ be selected for Labor entries. The system will use the Rate specified 
+ in the appropriate Labor Rate Table to default the Revenue Rate in this 
+ tab.</p>
+<p style="margin-left: 36.00pt;">If <font style="font-weight: bold;">Markup</font> 
+ (added to cost) is selected, a 120% markup to labor costing $10/hour would 
+ generate a unit price of $22/hour. A 30% markup applied to $20 labor would 
+ generate a unit price of $26.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Margin</font> 
+ enables the user to set the desired profit margin ((Unit Price - Unit 
+ Cost)/Unit Price)in the Revenue Rate field.</p>
+<p style="margin-left: 36.00pt;">If you select <font style="font-weight: bold;">Multiplier</font>, 
+ the system will multiply the figure in Revenue Rate X Unit Cost to obtain 
+ the Unit Price. For example, a multiplier of 1.2 applied to labor costing 
+ $100 would yield a unit price of $120.</p>
+<p style="margin-left: 36.00pt;">Select the Billing Type of <font style="font-weight: bold;">n/a</font> 
+ if the Amount Revenue should always be entered manually by the user instead 
+ of being calculated by the system.</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Note 
+ on Entering Labor Lines</font> <font style="font-weight: bold;">with a 
+ Billing Rate Type of n/a</font><font style="font-weight: bold;">:<br/>
+</font>If the billing type is n/a, the system will not calculate the Amount 
+ Revenue when entering labor lines, even if the Revenue Rate is completed! 
+ Typically, you would leave the Revenue Rate field blank, and enter the 
+ Amount Revenue field directly when billing for labor. Note that if you 
+ edit a labor line, selecting a labor rate with a Billing Type of n/a, 
+ the Amount Revenue on the labor line will NOT be changed.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Quote Cost<br/>
+<font style="font-weight: normal;">This field is used to default in the 
+ Hourly Cost field on the Labor tab of the Quote Master Viewer.</font></p>
+<p><font style="font-weight: bold;">Cost Category</font> <font style="font-weight: bold;">Id</font><font style="font-weight: bold;">:<br/>
+</font>When entering time, the Cost Category defaults from this field to 
+ capture Earnings type WAGES. This will become a requirement in the future 
+ to be set-up for Tech Anywhere (as user can not pick/select the cost category 
+ in tech anywhere).</p>
+<p>This field is also used to default in the Cost Category field on the 
+ Labor tab of the Quote Master Viewer.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> 
+ <font style="font-weight: bold;">Cost Category</font> <font style="font-weight: bold;">in 
+ the Earnings Record</font><font style="font-weight: bold;"><br/>
+</font>The Cost Category field should be completed in the Earnings record 
+ if the Earning Record is used for Type = &quot;FRINGE&quot; and is also 
+ checked &quot;JOB COST PR CHECK&quot;. It is used by the system to post 
+ actual fringes vs. estimated (source PR Check) during the POST CHECK function.</p>
+<p><font style="font-weight: bold;">Obsolete</font><font style="font-weight: bold;">?</font><font style="font-weight: bold;"><br/>
+</font>If this field is checked, the record is considered Obsolete, and 
+ it may not be directly specified during data-entry (either by entering 
+ the Id or selecting it from a list). Obsoleted records can be edited and 
+ the Obsolete option can be un-done when necessary. When you check the 
+ Obsolete field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. 
+ Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through 
+ access to all tables referencing this record: see <a href="References_List.htm">References 
+ List</a> for details.</p>
+<h2>Important Fields: Lower Section</h2>
+<h3>References Tab</h3>
+<p>This tab displays all Rate Schedules associated with this Labor Rate 
+ via the Labor Rate Table. Only Labor Rate Tables referenced on a Rate 
+ Schedule will appear on this tab. </p>
+<p><span style="font-weight: bold;">Rate Schedule - Description</span> 
+ <br/>
+The Rate Schedule Id and Description this Labor Rate is associated with.</p>
+<p><span style="font-weight: bold;">Start - End</span><br/>
+The Starting and Ending Date of the Rate Schedule</p>
+<p><span style="font-weight: bold;">Labor Rate Table - Rate Type - Rate</span><span><br/>
+These fields default from the Labor Rate Table entry for this Labor Rate. 
+ </span></p>
+
+</body></html>

@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="dispatch"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Dispatch Board Overview</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="dispatch"/><meta name="brsnext" value="Classic_Board_Day_Board_Button.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Dispatch Board Overview">
+        <span>Dispatch Board Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+<h1>Dispatch Board</h1>
+<h2>Purpose:</h2>
+<p>Used to access, track, update and schedule Work Orders. The Dispatch 
+ Board is divided into upper and lower sections, each of which is individually 
+ scrollable.</p>
+<h2>Usage:</h2>
+<p>Work Order changes are only allowed 
+ from the Dispatch Board if the User belongs to a Group with Change permission 
+ for View Work Order or Work Order Dispatcher. <span style="font-weight: bold;"> </span></p>
+<p><span style="font-weight: bold;">Subcontractor 
+ Techs:</span> &#39;Purchases Blocked&#39; and &#39;Payments Blocked&#39; subcontractor 
+ Techs may NOT be selected on the board  if their required insurance 
+ is expired on the selected date.</p>
+<p><font style="font-weight: bold;">Multiple Dispatch Boards<br/>
+</font>When the Dispatch Board button is pushed from within a Dispatch 
+ Board, a new board will be opened. When pushed from anywhere else, the 
+ user will be notified to use the Windows Task Bar or Windows Menu to choose 
+ one of the Dispatch Boards if more than one is open. The Id of the current 
+ Dispatch Board appears on the title of the Work Order list. The <a href="Board_Technicians_Viewer.htm">Board 
+ Technicians Viewer</a> may be used to define the lists of technicians 
+ that appear on the dispatch board.</p>
+<p><font style="font-weight: bold;">Closing Call Script / Additional Service 
+ Recommendations Wizard</font><br/>
+When a Work Order is completed (resulting in the Escalation Status being 
+ set to Completed), a wizard may be invoked. If a Closing Call Script field 
+ is set in the Work Order, the wizard steps the user though completing 
+ the closing call script entries. The wizard also lets you add one or more 
+ Service Recommendations (regardless of whether or not a Closing Call Script 
+ is specified). These Service Recommendations will be saved as notes to 
+ the applicable Client Site record. These notes will be tagged with the 
+ summary description Additional Service Note.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Service 
+ Evaluation Wizard<br/>
+</font>The Service Evaluation Wizard 
+ will be launched when a work order that references a Service Evaluation 
+ table is completed or invoiced. Your responses will be written to the 
+ Evaluation tab.</p>
+<h2>Registry Entries:</h2>
+<p>If the number of technician lines would exceed the throttle 
+ value determined by the Board Row Limit (see <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Dispatch_Board_Rows">Dispatch 
+ Board Rows</a> ) a message instructing the user to refine their search 
+ parameters is displayed and the board will come up empty.</p>
+<p>If the board is displayed on a large monitor in the dispatch room, it 
+ is set to Auto-Refresh by pressing a toggle button. To control how often 
+ the board refreshes: <a href="Registry_Entry_to_Remove_Statuses_from_Dispatch_Board_s_Status_List.htm">Set 
+ Auto Refresh Duration</a> .</p>
+<p>The registry <a href="Registry_Entry_to_Set_Color_Coding_on_Lower_Section_of_DBoard.htm">sys-dispatchboard-colors-powerboard</a> 
+ <font style="font-weight: bold;">must</font> be created for color-coding 
+ to be implemented on the lower half of the dispatch board. .</p>
+<p><a href="Registry_Entry_Dispatch_Board_Saved_by_User_by_Board.htm">Registry 
+ Entry Dispatch Board</a> enables you to save dispatch board settings by 
+ user and by board, remove statuses from the status list and specify a 
+ variety of other customizations.  </p>
+<p>See <a href="Registry_Entry_System_Email.htm">Registry Entry System 
+ Email</a> for information on e-mail configuration relating to e-mailing 
+ messages and work order dispatches.</p>
+<p>The following entries provide control of the Classic/Day Board Colors:</p>
+<p><a href="Registry_Entry_to_Set_Dispatch_Board_Colors_by_Priority.htm">Registry 
+ Entry to Set Dispatch Board Colors by Priority</a></p>
+<p><a href="Registry_Entry_to_Set_Color_Coding_on_Lower_Section_of_DBoard.htm">Registry 
+ Entry to Set Color Coding on Lower Section of DBoard</a></p>
+<h2>The Upper Section:</h2>
+<p>The Powerboard Tech Summary appears when the board first opens, showing 
+ technician location, status, and other information. If you click on a 
+ technician in the upper section, only those work orders assigned to him 
+ (or her) will appear in the lower section.</p>
+<p>The upper section also controls the display of the board, enabling you 
+ to access the Classic or Day boards.. The tab-style buttons (and the Available 
+ Hours toggle button) discussed below also enable you to filter work orders 
+ by status, change and add work dates, and so on. To learn more about a 
+ button, click on its description.</p>
+<table style="border-spacing:0px;width:549;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+		 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+		 border-collapse: separate;">
+	<colgroup><col style="width: 26.496%;"/>
+	<col style="width: 17.822%;"/>
+	<col style="width: 55.682%;"/>
+	</colgroup><tbody><tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p>Button</p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><font style="font-weight: bold;">Keystroke</font></p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><font style="font-weight: bold;">Description</font></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_powerboard-.gif" alt="image\SKIN1_powerboard-.gif" title="image\SKIN1_powerboard-.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>n/a</p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><a href="Powerboard_Button.htm">Powerboard Button</a></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_classicboard-.gif" alt="image\SKIN1_classicboard-.gif" title="image\SKIN1_classicboard-.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>n/a</p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><a href="Classic_Board_Day_Board_Button.htm">Classic Board/Day Board 
+		 Button</a></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_orientation.gif" alt="image\SKIN1_orientation.gif" title="image\SKIN1_orientation.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>n/a</p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><a href="Classic_Board_Day_Board_Button.htm">Orientation Button (on 
+		 Classic Board)</a></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_FilterCalls-.gif" alt="image\SKIN1_FilterCalls-.gif" title="image\SKIN1_FilterCalls-.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Ctrl+F</p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><a href="Filter_Button_Dispatch_Board.htm">Set Work Order Status 
+		 and Other Filters</a></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_Dates-.gif" alt="image\SKIN1_Dates-.gif" title="image\SKIN1_Dates-.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Ctrl+D</p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><a href="Date_Range_Button__Dispatch_.htm" ehlpsource="robohelp classic" data-rhwidget="HyperlinkPopover">Select Date Range</a></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_Sort-.gif" alt="image\SKIN1_Sort-.gif" title="image\SKIN1_Sort-.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Ctrl+S</p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><a href="Sort_Button__Dispatch_.htm">Change Sort Order</a></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_TechnicianChange-.gif" alt="image\SKIN1_TechnicianChange-.gif" title="image\SKIN1_TechnicianChange-.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>n/a</p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><a href="Change_Technician_Button__Dispatch_.htm" ehlpsource="robohelp classic" data-rhwidget="HyperlinkPopover">Change/assign a Tech to 
+		 Selected Work Order</a></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_SetDate-.gif" alt="image\SKIN1_SetDate-.gif" title="image\SKIN1_SetDate-.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>n/a</p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><a href="Set_Date_Button.htm" ehlpsource="robohelp classic" data-rhwidget="HyperlinkPopover">Calendar: Change/Add a Date on Selected Work Order</a></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_techlist-.gif" alt="image\SKIN1_techlist-.gif" title="image\SKIN1_techlist-.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><a href="Change_Dispatch_Board_Button.htm">Select a Different List 
+		 of Techs</a></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_TechHours-.gif" alt="image\SKIN1_TechHours-.gif" title="image\SKIN1_TechHours-.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>n/a</p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><a href="Available_Technician_Hours_View.htm">Toggle Upper Section 
+		 to/from Available Hours View</a></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_NewCall.gif" alt="image\SKIN1_NewCall.gif" title="image\SKIN1_NewCall.gif" width="63" height="35" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>n/a</p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><a href="New_Call_Button.htm">Take a New Call</a></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_AutoRefresh.gif" alt="image\SKIN1_AutoRefresh.gif" title="image\SKIN1_AutoRefresh.gif" width="63" height="35" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>n/a</p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Toggle 
+		 on or off. When autoRefresh is on the Board refreshes every timer 
+		 duration. Only use this for a board that is displayed, not actually 
+		 used by a dispatcher. Scroll the top bar down to access this button.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_WorkorderChartTopOn.gif" alt="image\SKIN1_WorkorderChartTopOn.gif" title="image\SKIN1_WorkorderChartTopOn.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>The 
+		 <a href="Graphics_Chart_Button__Dispatch_.htm" ehlpsource="robohelp classic" data-rhwidget="HyperlinkPopover">Graphic Time Chart</a> 
+		 button toggles the work order list between text and graphic modes; 
+		 click on the link for hints on its scheduling features.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_editWOsTop.gif" alt="image\SKIN1_editWOsTop.gif" title="image\SKIN1_editWOsTop.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Click 
+		 this button to edit the work order lines displayed on the Dispatch 
+		 Board  (Tech Id,  status, date/ time, estimated hours). 
+		 Click <a href="Daily_WO_Edit.htm">Daily WO Edit</a> for details 
+		 on this function.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.496%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_WOEntryTop.gif" alt="image\SKIN1_WOEntryTop.gif" title="image\SKIN1_WOEntryTop.gif" width="63" height="49" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 17.822%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 55.682%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Click 
+		 to launch the <a href="Work_Order_Entry.htm">Work Order Entry</a> 
+		 function which streamlines the entry of time, materials, and other 
+		 charges to open the Work Orders.</p></td>
+	</tr>
+</tbody></table>
+<h2>The Lower Section (Work Order List)</h2>
+<p>The lower section displays the Work Order List. If more than one technician 
+ is assigned to a work order, or a technician is assigned to a work order 
+ for more than one day, a separate line will appear on the Work Order List 
+ for each technician/date scheduled. Only those work orders, which fit 
+ the criteria, you have selected in the upper portion of the Board appear 
+ on the list. For example, if you selected a Work Order Status of Waiting 
+ Service, Work Orders with a status of Travel or OnSite would <font style="font-weight: bold; 
+	 font-style: italic;">not</font> appear. The top two lines of the Work 
+ Order List section display these criteria.</p>
+<p><font style="font-weight: bold;">Changing the Dispatch Column Order<br/>
+</font>To adjust the order in which the work order list appears, select 
+ a column (in the work order list, not the title) and drag and drop it 
+ in the desired location in the work order list.</p>
+<p><font style="font-weight: bold;">Accessing a Work Order<br/>
+</font>To access the Work Order viewer, simply double-click on the line 
+ you wish to view.</p>
+<p><font style="font-weight: bold;">Update Board?<br/>
+</font>If you return to the Dispatch Board after changes have been made 
+ to Work Orders, the system will prompt you to confirm the refresh (by 
+ clicking OK) or postpone the refresh (by clicking Cancel).</p>
+<p><font style="font-weight: bold;">Changing Work Order Status<br/>
+</font>The following buttons (located on the Side Button Bar) enable you 
+ to change the status of the selected dispatch in the work order list; 
+ to select a work order, left-click on it once. If a Work Order has unbilled 
+ costs, the system will warn you if the Tech status is set to cancelled.</p>
+<h2>Side Bar Buttons</h2>
+<a name="Dispatch_Board_Email_Button" id="Dispatch_Board_Email_Button"></a> 
+ 
+<table style="border-spacing:0px;width:620;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+		 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+		 border-collapse: separate;">
+	<colgroup><col style="width: 26.659%;"/>
+	<col style="width: 13.446%;"/>
+	<col style="width: 59.677%;"/>
+	</colgroup><tbody><tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p style="font-weight: bold;">Button</p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><font style="font-weight: bold;">Keystroke</font></p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><font style="font-weight: bold;">Description</font></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_HoldStatus.gif" alt="image\SKIN1_HoldStatus.gif" title="image\SKIN1_HoldStatus.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>F11</p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Change 
+		 status to Hold</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_WaitingParts.gif" alt="image\SKIN1_WaitingParts.gif" title="image\SKIN1_WaitingParts.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;">F2</p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Change 
+		 status to Waiting Parts</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_Travel.gif" alt="image\SKIN1_Travel.gif" title="image\SKIN1_Travel.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>F3</p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Change 
+		 status to Travel</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_OnSite.gif" alt="image\SKIN1_OnSite.gif" title="image\SKIN1_OnSite.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>F4</p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Change 
+		 status to On Site</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_Completed.gif" alt="image\SKIN1_Completed.gif" title="image\SKIN1_Completed.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>F5</p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Change 
+		 status to Completed</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_WaitingService.gif" alt="image\SKIN1_WaitingService.gif" title="image\SKIN1_WaitingService.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>F6</p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Change 
+		 status to Waiting Service</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_Cancelled.gif" alt="image\SKIN1_Cancelled.gif" title="image\SKIN1_Cancelled.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>F7</p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Change 
+		 status to Cancelled. Note that setting the Tech Status to Cancelled 
+		 will also set the Tech&#39;s Scheduled Events to Cancelled if they 
+		 have not yet been executed. If the Work Order Escalation status 
+		 is also set to Cancelled unexecuted Scheduled Events that are 
+		 not tech-based will also be set to Cancelled. </p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_SetToday.gif" alt="image\SKIN1_SetToday.gif" title="image\SKIN1_SetToday.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>F9</p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Set 
+		 scheduled date to today</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_SetStatusWO.gif" alt="image\SKIN1_SetStatusWO.gif" title="image\SKIN1_SetStatusWO.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Select 
+		 any Status</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_Printer.gif" alt="image\SKIN1_Printer.gif" title="image\SKIN1_Printer.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Click 
+		 to print the selected work order. If e-mail is implemented, you 
+		 may e-mail the work order instead.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_SendEmail.gif" alt="image\SKIN1_SendEmail.gif" title="image\SKIN1_SendEmail.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Displays 
+		 an Email form with the address in your User record in the From: 
+		 box and the tech’s Email Address 2 in the To: box. If you are 
+		 using the SAMPro emailer, double-click in the To: box or CC: box 
+		 and select additional Email addresses from the Site, Tech, or 
+		 Job’s Client record.</p>
+		<p>The Contact Id field provides access to SAMPro Contact records. 
+		 When a Contact record is selected, SAMPro automatically adds its 
+		 main email address to the list of recipients in the Email To field. When 
+		 the Contact record contains multiple addresses, they are added 
+		 to the list of Email Addresses displayed when the user double-clicks 
+		 in the Email To or CC fields.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_CreatePO.gif" alt="image\SKIN1_CreatePO.gif" title="image\SKIN1_CreatePO.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Click 
+		 to launch the Purchase Order and enter the Id of the selected 
+		 Work Order in its WO Id field. If the user is in the process of 
+		 editing an existing PO, they are warned that changes to the PO 
+		 have not been saved, and is given the option to return to the 
+		 existing PO and save the changes.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_TechFinder.gif" alt="image\SKIN1_TechFinder.gif" title="image\SKIN1_TechFinder.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Schedule 
+		 the selected WO using the <a href="TechFinder_Viewer.htm">TechFinder 
+		 Viewer</a></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_NotesOn.gif" alt="image\SKIN1_NotesOn.gif" title="image\SKIN1_NotesOn.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p class="Reference_Line" style="margin-bottom: 0.00pt;">Displays 
+		 a Notes Option box to allow the user to select and view existing 
+		 Site, Job or WO notes for the selected work order.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_Notes.gif" alt="image\SKIN1_Notes.gif" title="image\SKIN1_Notes.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p class="Reference_Line" style="margin-bottom: 0.00pt;">Displays 
+		 a Notes Option box to allow the user to select and view existing 
+		 Site, Job or WO notes for the selected work order.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_ReleaseWO.gif" alt="image\SKIN1_ReleaseWO.gif" title="image\SKIN1_ReleaseWO.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p class="Reference_Line" style="margin-bottom: 0.00pt;">When 
+		 clicked, the line’s status is changed from Pending (or the statuses 
+		 defined via registry: <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Global_Settings_Release_To_Tech_Statuses">Release_To_Tech_Statuses</a> 
+		 ) to the Default Status for that technician.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_TimeDist.gif" alt="image\SKIN1_TimeDist.gif" title="image\SKIN1_TimeDist.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p class="Reference_Line" style="margin-bottom: 0.00pt;">Provides 
+		 distance and directions from the Technician’s current location 
+		 to the Work Order Site (Fleetmatics).</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_SageQuest.gif" alt="image\SKIN1_SageQuest.gif" title="image\SKIN1_SageQuest.gif" width="94" height="28" border="0"/> 
+		 V 8.2</p>
+		<p><img src="assets/images/Fleetmatics.BMP" alt="" style="border: none;" border="0"/> 
+		 V.9.0</p>
+		<p><img src="assets/images/verizonbutton.jpg" alt="" style="border: none;" border="0"/> 
+		 V9.1</p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p class="Reference_Line" style="margin-bottom: 0.00pt;">Upload 
+		 the selected Work Order to Verizon /  Fleetmatics / SageQuest; 
+		 this would be used if it is missing on Fleetmatics.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 26.659%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; 
+			 border-left-style: solid; border-left-width: 0.50pt; border-left-color: #000000;"><p><img src="assets/images/image/SKIN1_ExportToRTD.gif" alt="image\SKIN1_ExportToRTD.gif" title="image\SKIN1_ExportToRTD.gif" width="94" height="28" border="0"/></p></td>
+		<td style="border-spacing:0px;width: 13.446%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p style="margin-top: 0; margin-bottom: 0;"> </p></td>
+		<td style="border-spacing:0px;width: 59.677%;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Obsolete. 
+		 Previously used with the Remote Tech Device / Blackberry to export 
+		 an RTD XML file for the selected dispatch line. </p>
+		<p class="Support" style="margin-left: 8px;"></p></td>
+	</tr>
+</tbody></table>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Tip: Right Click 
+ to Set Status or Update WorkOrder<br/>
+</font>An alternate way of changing status or updating the dispatching 
+ fields of the work order is to <font style="font-style: italic;">right</font> 
+ click a line in the work order list. When you do so, the system lets you 
+ Select Status or Update Work Order. If you Select Status, a list of statuses 
+ appear; click on one to apply it to the work order line.</p>
+<p style="margin-left: 36.00pt;">If you select Update WorkOrder, a dispatcher&#39;s 
+ summary of the workorder appears: click <a href="Update_WorkOrder.htm">Update 
+ WorkOrder</a> for details on using this feature.</p>
+<p><font style="font-weight: bold;">Assigning Additional Technicians or 
+ Service Dates</font><br/>
+A Work Order can be scheduled for multiple days and/or assigned additional 
+ technicians. To do so, double-click the desired Work Order, and then add 
+ the additional tech and/or dates on its Technician tab.</p>
+<p><font style="font-weight: bold;">Adding a Service Date</font><br/>
+The Set Date (Calendar) of the Dispatch Board also lets you create additional 
+ work order dates as well as change the date scheduled. This feature corresponds 
+ to adding a line to the Work Order&#39;s TEC tab. For additional information, 
+ click on the following topic: <a href="Set_Date_Button.htm">Using the 
+ Set Date Calendar to Add a Work Order Date</a>.</p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a104');
+	FilePopupInit('a105');
+	FilePopupInit('a106');
+	FilePopupInit('a107');
+//]]></script>
+
+</body></html>

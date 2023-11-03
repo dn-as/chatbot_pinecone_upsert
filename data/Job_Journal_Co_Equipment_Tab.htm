@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.4.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="job"/>
+<meta name="MS-HKWD" content="asset"/>
+<meta name="MS-HKWD" content="company equipment"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job Journal Co Equipment Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="job,asset,company equipment"/><meta name="brsnext" value="CRMAnywhere_Appointment_Confirmation.htm"/><meta name="brsprev" value="Report_AFT_Canadian_.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Journal Co Equipment Tab">
+        <span>Job Journal Co Equipment Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Job Journal Co. Equipment Tab</h1>
+<h2>Purpose:</h2>
+<p>This tab enables the user to charge company equipment assets to a Job 
+ or Work Order.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Asset Id:<br/>
+</font>Enter the company equipment Asset Id you wish to charge to a Job 
+ / Work Order. The Other Rate Id (and the associated Cost and Revenue fields) 
+ will default from the Asset record’s Operating Other Rate field.</p>
+<p><font style="font-weight: bold;">Quantity: Qty Billed:</font><br/>
+The quantity (hours, days, mileage) charged for this equipment. The Actual 
+ (Used) and Billable Quantities may be specified separately. The Quantity 
+ Used will be used for costing, and the Quantity Billed will be used to 
+ compute revenue for billing purposes. Note that the Quantity Billed field 
+ defaults when you enter the Quantity Used, but may be adjusted by the 
+ user if needed.</p>
+<p><font style="font-weight: bold;">Period: Effective Date:<br/>
+</font> These fields from the corresponding fields in the Main tab when 
+ you tab out of the Quantity field, but may be changed by the user if needed.</p>
+<p><font style="font-weight: bold;">Job Id:</font><br/>
+The Id of the Job this line is being entered against. If this is a Service 
+ Compute job, the WO Id should be entered first.</p>
+<p><font style="font-weight: bold;">Job Cost Code Id: Job Billing Item 
+ Id:</font><br/>
+Enter the appropriate Id&#39;s for this Job or double-click to select from 
+ a list.</p>
+<p><font style="font-weight: bold;">Cost Category:</font><br/>
+The field defaults from the Asset record. Only Cost Categories with a Select 
+ Posting Type of Equipment may be selected. This field is required.</p>
+<p><span>This field also supports enhanced filtering provided by the Cost 
+ Code&#39;s Job Cost Category Usage Filter. Cost Categories are validated (relative 
+ to Cost Codes) during data entry upon leaving the Cost Category Id field. 
+  The full relationship is validated again when leaving a child line 
+ or saving a record. A <a href="Registry_Entry_Job_Journal.htm">registry 
+ entry</a> may be implemented to turn the validation error into a warning.</span></p>
+<p><font style="font-weight: bold;">WO Id:</font><br/>
+If this line is to be applied to a specific Work Order, enter its Id (or 
+ double-click to select from a list). If this is a Service Compute job, 
+ the WO Id must be entered.</p>
+<p><font style="font-weight: bold;">Equipment Id:<br/>
+</font>If the user enters a Work Order Id, the system will default in the 
+ first piece of equipment on the Work Order’s Equipment tab UNLESS this 
+ behavior is disabled via registry.</p>
+<p><font style="font-weight: bold;">Unit Cost: Extended Cost:</font><br/>
+If needed, enter the costing information into one of these fields. The 
+ system will calculate the other.</p>
+<p><font style="font-weight: bold;">Revenue Rate: Extended Revenue:</font><br/>
+The system calculates the Extended Revenue based on the Revenue Rate, Billing 
+ Rate Type, and Quantity.</p>
+<p><font style="font-weight: bold;">Other Rate Id:</font><br/>
+This field defaults from the Asset record Operating Other Rate field. The 
+ Other Rate selected must have the GL Credit field completed. If this entry 
+ is being made to log Idle time, click the Magnify button and select the 
+ Idle option.</p>
+<p><font style="font-weight: bold;">Extra?</font><br/>
+If this entry is for an &quot;extra&quot; (not explicitly included in a 
+ contract), check this box (by double-clicking or pressing the Spacebar). 
+ Doing so flags this item as eligible for invoicing as a contract extra.</p>
+<p><img src="assets/images/image/magnifybutton.gif" alt="image\magnifybutton.gif" title="image\magnifybutton.gif" width="16" height="16" border="0"/> Click this button to view 
+ additional fields.</p>
+<p style="font-weight: bold;">o Operating o Idle<br/>
+This field controls whether the Operating Other Rate or Idle Other rate 
+ will default from the asset record.</p>
+<p><span style="font-weight: bold;"><font style="font-weight: bold;">D</font>escription:</span> 
+ <br/>
+When the Other Rate Id defaults from the Asset record, the Other Rate&#39;s 
+ Description field populates the Co Equip tab&#39;s Description field.</p>
+<p><font style="font-weight: bold;">GL Info:<br/>
+</font><font style="font-weight: bold;">GL Account Id:</font><font style="font-weight: bold;"><br/>
+</font>This field defaults from the Cost Category’s Expense Account field 
+ but may be change by the user.</p>
+<p style="font-weight: bold;">GL Credit</p>
+<p><span style="font-weight: bold;">Credit GL Entity</span><br/>
+ The hierarchy for setting the Credit-side GL Entity uses the first non-blank 
+ GL Entity Id from: </p>
+<p style="margin-left: 48px;">1.) Asset Id&#39;s OH Job Cost Code GL Entity</p>
+<p style="margin-left: 48px;">2.) Registry UseDefaultBalanceSheetGLEntity   ***see 
+ note below</p>
+<p style="margin-left: 48px;">3.) Other Rate Credit GL Entity</p>
+<p style="margin-left: 48px;">4.) Company Default GL Entity</p>
+<p style="margin-left: 48px;">*** If &quot;UseDefaultBalanceSheetGLEntity&quot; 
+ = true/enabled; but &quot;DefaultBalanceSheetEntity&quot; value is 
+ not defined, blank or disabled....then Company Record Default GL Entity 
+ behaves as a STAND-IN as value.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Important:</span><span> 
+ the display-only GL Credit GL Entity field displays the Other Rate&#39;s GL 
+ Entity. Note that this may NOT be the Entity that is actually posted to 
+ GL. </span></p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">GL Account 
+ Id:<br/>
+</font>These display-only fields default from the Other Rate record.</p>
+
+</body></html>

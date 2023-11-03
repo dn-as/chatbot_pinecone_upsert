@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.1.0_17";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="security"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="exceptions"/>
+<meta name="MS-HKWD" content="sys-securityexceptionsbytable"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Security Exceptions by Table (sys-securityexceptionsbytable)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="security,registry,exceptions,sys-securityexceptionsbytable"/><meta name="brsnext" value="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm"/><meta name="brsprev" value="Registry_Entry_for_Defaulting_DB_Engine__Name_or_Datasource_on_Log_In.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Security Exceptions by Table (sys-securityexceptionsbytable)">
+        <span>Registry Security Exceptions by Table (sys-securityexceptionsbytable)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Security Exceptions by Table (sys-securityexceptionsbytable)</h1>
+<h2>Purpose:</h2>
+<p>This registry entry enables you to make all instances of a particular 
+ type of record global (security id will be blank), regardless of the security 
+ of the user that created it. Note that a user will only be allowed to 
+ access those records defined by his user group.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Usage:</h2>
+<p>Normally, the security of a record (e.g., branch or global) is determined 
+ by the security level of the user that creates it. For example, if Mary&#39;s 
+ security is set to 110 (her branch or division), all of the records she 
+ creates will be assigned the security id 110. If she needed to create 
+ a global record that everyone could see (e.g., a national vendor), one 
+ option would be to log in under a global security id.</p>
+<p>Note that an alternative to using this registry setting is to implement 
+ multiple user securities, as discussed in the <a href="User_Account_Viewer.htm">User 
+ Account Viewer</a> in the User Security Table.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id</font><font style="font-weight: bold;">:</font> 
+ <font style="font-weight: bold;"> sys-securityexceptionsbytable</font></p>
+<h3>Listed Tables Subject to User’s Security</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> ExceptionProperty 
+ <font style="font-weight: bold;">Setting Value:</font> IncludeOnly <font style="font-weight: bold;"><br/>
+</font>If this option is included, the tables NOT listed in this entry 
+ WON&#39;T BE subject to security logic. This enhancement allows the system 
+ handle the exceptions in one-way or the other...to provide additional 
+ flexibility in configuration.</p>
+<p>If this option is specified, all tables listed in this registry entry 
+ (see the following option) will be included in the user’s security level. 
+ All tables not specified will be created as global (no security id). It 
+ is strongly recommended that you discuss this option with your support 
+ representative before implementing: changing your security methodology 
+ in midstream can lead to unintended consequences.</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">WARNING:</font></p>
+<p style="margin-left: 72.00pt;">This option should NEVER be used in conjunction 
+ with the following registry setting:</p>
+<p style="margin-left: 72.00pt;">Registry Id:   sys-ffv-global-settings 
+ Option:    SecurityOverrideFrom=job</p>
+<p style="margin-left: 72.00pt;">Doing so can lead to undesirable results 
+ in your security setup.</p>
+<h3>Specify Exception Tables</h3>
+<p style="font-weight: bold; margin-left: 8px;">Setting Key:  <span style="font-weight: normal; font-style: italic;">tablename1,tablename2,.... 
+  </span>Setting Value:<span style="font-weight: normal; font-style: italic;"> 
+ </span><i style="font-weight: normal;"><span style="mso-ascii-font-family: Calibri; 
+												 mso-ascii-theme-font: minor-latin; 
+												 mso-hansi-font-family: Calibri; 
+												 mso-hansi-theme-font: minor-latin; 
+												 mso-bidi-font-family: &#39;Times New Roman&#39;; 
+												 mso-bidi-theme-font: minor-bidi; 
+												 font-weight: normal;">not 
+ used for this registry</span></i></p>
+<p>The Setting Key should list only those database tables that should <font style="font-style: italic;">always</font> be assigned global security 
+ (unless the ExceptionProperty’s IncludeOnly option described above is 
+ implemented). </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Tip: </span>Multiple 
+ registry lines may be used to enable this function. To make these registries 
+ easier to read, you may want to enter one table per line.<span style="font-weight: bold;"> 
+ </span></p>
+<p>The internal table name must be used - a partial list of records and 
+ their corresponding table names follow:</p>
+<p style="margin-left: 72.00pt;">Record   Tablename</p>
+<p style="margin-left: 72.00pt;">GL Account  glaccnt</p>
+<p style="margin-left: 72.00pt;">GL Entity  glentity</p>
+<p style="margin-left: 72.00pt;">Client   clnt</p>
+<p style="margin-left: 72.00pt;">Vendor   vndr</p>
+<p style="margin-left: 72.00pt;">Vendor Insurance  vndrinsrnce</p>
+<p style="margin-left: 72.00pt;">Vendor Contact  vndrcntct</p>
+<p>Note that the last two items on this list are child tables of the Vendor 
+ record. If you are implementing this registry entry, all applicable child 
+ tables should also be specified, otherwise the parent record will have 
+ global security and the child table will have the user&#39;s security (which 
+ may or may not be global). This situation can lead to undesirable results. 
+ We strongly recommend that you discuss your firm’s security structure 
+ with your Data-Basics support representative before implementing this 
+ registry option.</p>
+
+</body></html>

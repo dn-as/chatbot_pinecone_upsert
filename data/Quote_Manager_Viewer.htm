@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.14.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Quote Manager Viewer</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="quote,quote manager,manager (quote)"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Quote Manager Viewer">
+        <span>Quote Manager Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Quote Manager Viewer</h1>
+  <h2>Purpose:</h2>
+  <p>The Quote Manager Viewer provides a streamlined approach to Quoting. Quotes may be initiated from this Viewer, or from CRMAnywhere. The Quote may be approved and then written to a Work Order for billing, or to a Job for budgeting.</p>
+  <p>The Quote Manager provides the basic header information (e.g., Site, Job, etc.) for the Quote. It is used to print, approve, and run the approval wizard for the various Quote Scopes associated with the Quote Manager.</p>
+  <p>The <a href="Quote_Scope_Viewer.htm">Quote Scope</a> Viewer is used to enter the detailed Scope Option information.</p>
+  <h2>Usage:</h2>
+  <p>Quotes that were originally generated in the Quote Viewer may be updated, printed and posted from Quote Manager (for header information) and the Quote Scope Viewer (for detail Scope Option information).</p>
+  <p><span>All Notes attached to the Quote Manager and each of its associated Scopes will be available from the Quote Manager AND Quote Scope viewers. For example, for a quote with 2 scopes and notes entered on the Quote, Scope 1 and Scope 2, will have all 3 notes attached.  </span></p>
+  <h2>Registry Entries:</h2>
+  <p><a href="Registry_Entry_Quotemaster.htm">Registry Entry Quote</a></p>
+  <p>‘Imported from Quote’ fields are present in the Labor, Inventory and Other lines of the Work Order record. These fields will be checked if the line was imported from QuoteMaster. A registry entry (see <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#registry_workorder_qm_lines">Work Order Registry Entry to Deny Changes to QM lines</a> ) may be implemented to deny all changes to imported lines.</p>
+  <p>See <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Required_Resources">Global Settings: Material Requisitioning</a> for using Material Requisition in conjunction with Quotemaster.</p>
+  <p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_rev_adj_management_fee_tax_type">Set Tax Type on Revenue Adjustment Management Fee</a> is a global setting that impacts the Quote and Work Order.</p>
+  <p><a href="Registry_Report_Quote_Form.htm">Registry Report Quote Form</a> discussed bitmap overrides and other configurations for the printed report.</p>
+  <h2>Screen Organization:</h2>
+  <p>The tabs in the upper section of this screen organize the primary quote information. Click on one of the following links to jump to detailed information on the tab.</p>
+  <p><a href="#Main_Tab">Main Tab</a>  <a href="#Notes_Tab">Notes Tab</a>  <a href="#Small_Print_Tab">Small Print Tab</a>  <a href="#Opportunity_Tab">Opportunity Tab</a>  <a href="#Gross_Margin_Tab">Gross Margin Tab</a></p>
+  <p>The tabs on the lower section of this screen display summarized information from the Quote Scope records associated with this record. Click on the following links to see additional information.</p>
+  <p><a href="#Scope_Tab">Scope Tab</a>  <a href="#Labor_Tab">Labor Tab</a>  <a href="#Inventory_Tab">Inventory Tab</a>  <a href="#Materials_Tab">Materials Tab</a>  <a href="#Subcontractors_Tab"> Subcontractor Tab</a>   <a href="#Other_Tab">Other Tab</a>  <a href="#Equipment_Tab">Equipment Tab</a>   <a href="#RevAdjust_Tab">RevAdjust Tab</a>  <a href="#Techs_Tab">Techs Tab</a></p>
+  <h5>Important Fields: Upper Section</h5>
+  <p class="Tab"><a name="Main_Tab" id="Main_Tab"></a>Main Tab</p>
+  <p>
+    <font style="font-weight: bold;">Quote Id:</font><br/>
+    This field is automatically generated by the system when you click the Add Record button.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Description:</font><br/>
+    This optional field may be used to briefly describe the Quote. If this Quote was submitted from Techanywhere, this field lists how the problem was found <span id="BugEvents171">(Unit Down, PM Visit or Service Call) and the Tech Id of the Tech submitting the Quote.</span>
+  </p>
+  <p><span style="font-weight: bold;">Submitted By:</span><br/>
+    This optional field may be used to record the submitter&#39;s name or initials.</p>
+  <p>
+    <font style="font-weight: bold;">Expiration Date:</font><br/>
+    This field indicates the last day on which the customer can accept the quote. This field is available for reporting purposes, but NO warnings or validations are performed relative to approving options.
+  </p>
+  <p>
+    <font style="font-weight: bold;">WorkOrder Id:</font><br/>
+    If this quote is being generated in response to a source Work Order, enter its Id: the Site Id, Tax Group and Status, Sales Rep, and Rate Schedule (from the associated Job record) will default in. A Work Order may be used as the source for multiple Quotes.
+  </p>
+  <p>You are not allowed to select Archived or Credit Hold Work Orders.  Closed Work Orders may only be specified if a registry setting is in effect. The Quote Approval wizard requires the use of the New WO option when the Quote&#39;s source WO is closed.</p>
+  <p>
+    <font style="font-weight: bold;">Job Id:</font><br/>
+    This field defaults from the Work Order or may be selected by the user to provide the default Job when the Approval Wizard is run. This Job’s Material Price Level will be used for default pricing on the Quote’s Inventory tab, overriding the Client Site Material Price.
+  </p>
+  <p>If the Job Id is selected manually, the system defaults in the Report Id, Quote Notes and Small Print from Job&#39;s Site, and the Branch Id (if completed in the Job record) or from the Job’s Site (if the Branch is blank in the Job but completed in the Site).</p>
+  <p style="font-weight: bold;">Site Id:<br/>
+    <span style="font-weight: normal;">The Site for which the Quote is being generated. If this field has not already defaulted in enter a valid Site Id. The Site may not be changed if the WO or Job are filled in, or if any Scope lines exist.</span>
+  </p>
+  <p style="font-weight: bold;">Date Opened:<br/>
+    <span style="font-weight: normal;">This field defaults to today’s date, but may be changed by the user if needed.</span>
+  </p>
+  <p style="margin-left: 8px;">
+    <font style="font-weight: bold;"><span style="font-weight: normal;">R</span>ate Schedule Id:</font><br/>
+    This field provides the default Rate Schedule for Quote Scopes. This field defaults from the Job but may be changed by the user. If this field is completed, the Gross Margin and Percent Markup fields must remain blank.  The individual Scopes may reference their own Rate Schedule, Margin or Markup to allow for &#39;what if&#39; scenarios when building a quote.
+  </p>
+  <p style="margin-left: 8px;">
+    <font style="font-weight: bold;">Gross Margin Percent</font>:<br/>
+    The default Gross Margin Percent to use on Scopes for this Quote (<span>((Unit Price - Unit Cost)/Unit Price) x 100)</span>. If this field is completed, the Rate Schedule and Percent Markup fields must remain blank.
+  </p>
+  <p style="margin-left: 8px;">
+    <font style="font-weight: bold;">Markup Percent</font>:<br/>
+    The default Percent Markup to use on Scopes for this Quote. If this field is completed, the Rate Schedule and Gross Margin fields must remain blank.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Tax Group Id:</font>
+    <font style="font-weight: bold;">Tax Status:</font><br/>
+    The Tax Group Id and Tax Status should be selected. The Tax Group Id defaults as follows:
+  </p>
+  <p style="margin-left: 36.00pt;">If there is a source Work Order, the Sales Tax Group / Status from the WO&#39;s default Job.</p>
+  <p style="margin-left: 36.00pt;">If a Job (but no WO) is selected, the Sales Tax Group/Status defaults from the Job.</p>
+  <p style="margin-left: 36.00pt;">If there is NO Work Order or Job, the Sales Tax Group defaults from the Site&#39;s COP tab.</p>
+  <p style="margin-left: 36.00pt;"><span style="font-weight: bold;">NOTE:</span> These fields are only used for determining estimate tax on the Quote report. When the Approval Wizard is run, the Tax Group and Tax Status in the selected Job are now used when generating Work Order detail lines.  </p>
+  <p>
+    <font style="font-weight: bold;">Sales Rep Id:</font><br/>
+    The Sales Rep for this Quote. This field defaults from the primary Sales Rep in the Site record, but may be changed by the user if needed.
+  </p>
+  <p><span style="font-weight: bold;">Account Manager Id:</span><br/>
+    When a Quote is created, the system will default the Account Manager from the Site; it may be changed by the user if needed. When the Approval Wizard is run and a NEW work order is generated, SAMPro uses the Quote&#39;s Account Manager to write to the corresponding field in the newly generated Work Order. </p>
+  <p>
+    <font style="font-weight: bold;">WorkCode Id:</font><br/>
+    If you entered the Work Order Id, this field defaults from the Work Order. When the quote is approved, this field will be used by the Approval Wizard to supply the header (and Equipment line) Work Code for any new Work Orders generated.
+  </p>
+  <p>When the Approval Wizard writes back to the source Work Order, the Work Code on existing Equipment tab entries is retained. The Work Code from this field sets the Work Code on any newly generated Equipment lines.</p>
+  <p>
+    <font style="font-weight: bold;"><span style="font-weight: bold;">C</span>ost Category Id:</font><br/>
+    A valid Cost Category with the Cost Type set to Other. This field will be used when the system generates the Other tab line for Fixed fee quotes.
+  </p>
+  <p style="margin-left: 8px; font-weight: bold;">Service Category Id:<br/>
+    <span style="font-weight: normal;">This optional field defaults from the Work Code, and specifies the Service Category this quote is related to. When creating a new work Order, the Quote&#39;s Service Category (if completed) will be used to set the Work Order&#39;s Service Category. If the Quote&#39;s Service Category is empty, the new Work Order&#39;s Service Category will be set based on the Work Code.</span>
+  </p>
+  <p style="margin-left: 8px;">
+    <font style="font-weight: bold;"><span style="font-weight: bold;">E</span>stimator Id:<br/>
+      <span style="font-weight: normal;">This field specifies the</span>
+    </font> Estimator responsible for this Quote (optional); it <font><span style="font-weight: normal;">defaults from the Job record</span></font> anytime the Job is changed (by edits to the Job Id or by changing the Work Order Id).
+  </p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Opportunity Id:</span><br/>
+    This field will be completed if this Quote was generated from an Opportunity in SAMPro or CRMAnywhere.</p>
+  <p><span><img alt="" border="0" src="assets/images/image/resetTaxStatusJCH.gif" style="border: none;"/> Click this button to reset the Tax Type of the detail lines for all Open Scopes based on the Quote Manager&#39;s Tax Status and Tax Group, as well as the Cost Category of the Scope detail lines. This button would be used if Scope lines were entered before the Sales Tax Group was set, or if the Sales Tax Group or Tax Status was changed after adding lines. The Quote report calculates Estimated Tax for non-Fixed Fee Scopes on a line by line basis so it is important that the Tax Type is set correctly.</span></p>
+  <p><img alt="image\SKIN1_ComputeRevAdjust.gif" border="0" height="28" src="assets/images/image/SKIN1_ComputeRevAdjust.gif" title="image\SKIN1_ComputeRevAdjust.gif" width="88"/>  If a Revenue Adjustment  field is completed on a Scope, clicking this button generate entries to the RevAdjust tab. Since previous revenue adjustment entries (that are not fully approved) will be deleted, the system will ask you to confirm the deletion before proceeding.</p>
+  <p><img alt="image\ApproveAll_new.gif" border="0" height="28" src="assets/images/image/ApproveAll_new.gif" title="image\ApproveAll_new.gif" width="88"/>  When pushed, the system prompts for confirmation...&#39;Set ALL Open, Printed and Accepted Scope options to Approved?&#39;. If you click Yes the options will be approved.</p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;"> </p>
+  <p class="Reference_Line"><img alt="image\ApprovalWizard_new.gif" border="0" height="28" src="assets/images/image/ApprovalWizard_new.gif" title="image\ApprovalWizard_new.gif" width="88"/> Unless a registry entry is enabled to automatically launch the Wizard when the Quote is saved, the user will set one or more scopes to ‘Approved’, save the Quote, and then click the Approval Wizard button to run the wizard. The system will warn you to save the quote if it determines that unsaved changes have been made prior to clicking the button. See <a href="Quotemaster_Approval_Wizard.htm">Quote Approval Wizard</a> for help on using the Wizard.</p>
+  <p><span><img alt="" border="0" src="assets/images/DeclineAll.bmp" style="border: none;"/> When clicked, this new button will set all Open, Accepted and Printed Scope options to Declined. Options set to Approved and Diagnostic will not be set to Declined. Note that the user must save the Quote Manager record after clicking Decline All in order to correctly update the Quote Manager&#39;s status. </span></p>
+  <p><img alt="image\ViewRecap_new.gif" border="0" height="28" src="assets/images/image/ViewRecap_new.gif" title="image\ViewRecap_new.gif" width="88"/> Click this button to view/print the Quote Recap report.</p>
+  <p><img alt="image\PrintQuote_quote.gif" border="0" height="28" src="assets/images/image/PrintQuote_quote.gif" title="image\PrintQuote_quote.gif" width="88"/> Click this button to print the Quote Report specified in the Report Id field. If you elect to e-mail this form, the Client Site E-mail Address will be defaulted into the To: field. See <a href="Registry_Entry_System_Email.htm">Registry Entry System Email</a> for information on e-mail configuration.</p>
+  <p><img alt="image\PrintChangeOrder.gif" border="0" height="28" src="assets/images/image/PrintChangeOrder.gif" title="image\PrintChangeOrder.gif" width="88"/> Use this button for change order management with construction-type jobs. When clicked, this button will launch Report Change Order (this report MUST be installed). The Create CO button on the Quote’s Option lines may be used to create the Change Order itself.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Tip:</font> When the Change Order is approved, the Quote Approval Wizard’s Create Job Budget Option may be used to generate Job Budget Tab entries to the Change Order. Alternately, the standard Export to Work Order option may be used to manage the work in the field.
+  </p>
+  <p><img alt="image\VendorApproval_new.gif" border="0" height="28" src="assets/images/image/VendorApproval_new.gif" title="image\VendorApproval_new.gif" width="88"/> Click this button to email the <a href="Vendor_Approval_Form.htm">Vendor Approval Form</a>. If Outlook is enabled in the sys-email registry entry, the regular SAM Pro email form will appear when the Vendor Approval button is clicked.</p>
+  <p><br/>
+    <span><img alt="" border="2" src="assets/images/XOilink.png" style="border: Solid 2px #808080;"/> This button launches a link  to XOi&#39;s page, to display XOi &quot;Jobs&quot; linked to the selected Quote (these are not SAMPro Jobs). The user will be alerted if XOi is implemented but XOi &quot;Jobs&quot; are not associated with this Quote. If XOi is not implemented, nothing will happen when the button is clicked. This release also includes fixes to the SSCHelper initialization.</span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Report Id:<br/>
+      <span style="font-weight: normal;">This field defaults from the Site&#39;s Quote Defaults tab. It specifies t</span>
+    </font>he report that should be used to generate the printed (or .pdf) copy of this Quote for the customer. Typically, this would be RQTEFRM.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Billing Address Id:</font><br/>
+    If this field is completed, it will be used by the system to set the Invoice Address if a new Work Order is generated by the Quote Manager Wizard. If this field is blank, the Billing Address in the Job record will be used for invoicing. Otherwise, the Client Mailing address (in the Job record that you select in the approval process) will be used.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Submitted By:</font><br/>
+    The name or initials of the person submitting the quote.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Print Quote Total?</font><br/>
+    Check this box (by double-clicking or pressing Spacebar) if you want the total cost of the options printed on the quote report .
+  </p>
+  <p>
+    <font style="font-weight: bold;">Web Viewable CRM?</font><br/>
+    This box should be flagged if you would like your Client for be able to view this Quote on FMAnywhere. Clearing the box will prevent the Quote from being displayed on FMAnywhere (for example, if it has not been completed yet). <strong>Note: Documents uploaded through the Web Viewable CRM will always default to viewable, as they come from a web source.</strong>
+  </p>
+  <p> </p>
+  <p class="Tab"><a name="Notes_Tab" id="Notes_Tab"></a>Notes Tab</p>
+  <p>
+    <font style="font-weight: bold;">Notes<br/>
+      <span style="font-weight: normal;">M</span>
+    </font>ay be used to enter notes for this quote. These notes will be printed on the quote report.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Quote U</font>
+    <font style="font-weight: bold;">ser</font>
+    <font style="font-weight: bold;">1-10:</font><br/>
+    Optional, user-defined fields.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Statuses: Open, Accepted, Approved, Declined, Mixed, Printed<br/>
+      Categories: Active, Inactive</font><br/>
+    These fields provide for an Overall Quote Status to assist in the management of quotations. These fields are set by the system when a Quote is added or modified, and when your database is updated. See <a href="Quote_Status.htm">Quote Status</a> for detailed information.
+  </p>
+  <p><span style="font-weight: bold;">Status Date:</span><br/>
+    This field is set to the current date when the Quote&#39;s Status is changed.</p>
+  <p class="Tab"><a name="Small_Print_Tab" id="Small_Print_Tab"></a>Small Print Tab</p>
+  <p>
+    <font style="font-weight: bold;">Small Print:</font><br/>
+    This text box is typically used for the boilerplate legalese and terms ‘small print’ text to be included at the end of the Quote that you send to your customer. It defaults from the Site record.
+  </p>
+  <p class="Tab"><a name="Opportunity_Tab" id="Opportunity_Tab"></a>Opportunity Tab</p>
+  <p>If an Opportunity is specified on the Quote&#39;s Main tab, its detailed information will be displayed.</p>
+  <p class="Tab"><a name="Gross_Margin_Tab" id="Gross_Margin_Tab"></a>Gross Margin Tab</p>
+  <p>This tab displays the Gross Margin for each Scope.</p>
+  <h2>Important Fields: Lower Section</h2>
+  <p class="Tab"><a name="Scope_Tab" id="Scope_Tab"></a>Scope Tab</p>
+  <p>This tab provides the summary information for each Scope on this quote.  Double-click on a line to access the selected Quote Scope record.</p>
+  <p class="Tab"><a name="Labor_Tab" id="Labor_Tab"></a>Labor Tab</p>
+  <p>This tab displays the labor lines on each Scope on this Quote.  Double-click on a line to access the Labor tab of the selected Quote Scope record.</p>
+  <p class="Tab"><a name="Inventory_Tab" id="Inventory_Tab"></a>Inventory Tab</p>
+  <p>This tab displays the Inventory materials lines on each Scope on this Quote.  Double-click on a line to access the Inventory tab of the selected Quote Scope record.</p>
+  <p class="Tab"><a name="Materials_Tab" id="Materials_Tab"></a>Materials Tab</p>
+  <p>This tab displays the non-inventory materials lines on each Scope on this Quote.  Double-click on a line to access the Materials tab of the selected Quote Scope record.</p>
+  <p class="Tab"><a name="Subcontractors_Tab" id="Subcontractors_Tab"></a>Subcontractors Tab</p>
+  <p>This tab displays the Subcontractor lines on each Scope on this Quote.  Double-click on a line to access the Subcontractor tab of the selected Quote Scope record.</p>
+  <p class="Tab"><a name="Other_Tab" id="Other_Tab"></a>Other Tab</p>
+  <p>This tab displays the Other lines on each Scope on this Quote.  Double-click on a line to access the Other tab of the selected Quote Scope record.</p>
+  <p class="Tab"><a name="Equipment_Tab" id="Equipment_Tab"></a>Equipment Tab</p>
+  <p>This tab displays the Additional Equipment lines on each Scope on this Quote.  Double-click on a line to access the Additional Equipment tab of the selected Quote Scope record.</p>
+  <p class="Tab"><a name="RevAdjust_Tab" id="RevAdjust_Tab"></a>RevAdjust Tab</p>
+  <p>This tab displays the Revenue Adjustment lines on each Scope on this Quote.  Double-click on a line to access the Revenue Adjustment tab of the selected Quote Scope record.</p>
+  <p class="Tab"><a name="Techs_Tab" id="Techs_Tab"></a>Techs Tab</p>
+  <p>The Techs tab lists all Work Order Technician lines for Work Orders referenced by this Quote. When a line is right-clicked, a prompt appears displaying Work Order information. The Technician Status may be changed from this prompt.</p>
+
+</body></html>

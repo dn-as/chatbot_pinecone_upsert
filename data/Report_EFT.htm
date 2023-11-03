@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.7.0_20";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="generate EFT Register"/>
+<meta name="MS-HKWD" content="ACH"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="MS-HKWD" content="direct deposit"/>
+<meta name="MS-HKWD" content="eft"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report EFT (Generate EFT Register)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="generate EFT Register,ACH,report,direct deposit,eft,employee"/><meta name="brsprev" value="Report_Positive_Pay.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report EFT (Generate EFT Register)">
+        <span>Report EFT (Generate EFT Register)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report EFT Payroll  (United States)</h1>
+<h2>Purpose:</h2>
+<p>This function is designed to generate the electronic file that will be transmitted to the Automated Clearing House for direct deposit. It will also produce a printed EFT Register report for your records.</p>
+
+<h2>Usage:</h2>
+<p>A <a href="Registry_Viewer.htm">Registry</a> entry must be in place for each GL Account/GL Entity combination you intend to create direct deposit files for. In addition, the <a href="Employee_Direct_Deposit_Tab.htm">Employee&#39;s DDEP</a> tab must be filled in with his or her direct deposit information.</p>
+<p>The Generate EFT Register (Report EFT) function should be run <font style="font-weight: bold;">after</font> the Print Payroll Checks function has been completed. After printing the register, you will be asked to confirm that an electronic file should be created.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Report Options:</font><br/>
+The Report Options selector pane controls how the report will be output. Click <a href="Report_Options.htm">Report Options</a> to learn more.</p>
+<p><font style="font-weight: bold;">Range:</font><br/>
+Enter a unique, alphanumeric name to save and identify your customized report Range (for example, a specific GL Account and Entity (if used) combination). Ranges are defined by the contents of the ID field(s). Your default Id fields will not be saved unless you name your range.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;" color="#0000FF">Hint:</font> You can create user-defined report ranges that are available to all users with access to that report. To do so, the first character of the named range should be an asterisk. Named ranges beginning with an asterisk will appear on all users&#39; report ranges options so that they can be selected (but not altered) by any user with access to that report. Only the user that created the report range is allowed to alter it.</p>
+<p><font style="font-weight: bold;">Start Date: End Date:</font><br/>
+Defines the date range for effective check dates and or pre-notes to be included in the file. Enter these dates in a <font style="font-style: italic;">mmddyyyy</font> format or double-click to access the calendar to help you do so.</p>
+<p><font style="font-weight: bold;">GL Account Id:</font><br/>
+(Required.) The bank (cash) account on which these payroll checks are drawn. Double-click on this field to select from a list of Id&#39;s.</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font><br/>
+If a GL Entity was specified in the Print Payroll Check function, a GL Entity Id must also be specified here.</p>
+<p><font style="font-weight: bold;">Include Checks?<br/>
+Include Void Checks?<br/>
+Include Pre-Notes?</font><br/>
+Check the field/fields to select which information to include on this file run. Note that direct deposit check information will only be included in the file if the Include Checks field is flagged. These fields may be checked/cleared by double-clicking on them (or by pressing the Spacebar when the focus is on them).</p>
+<h2>Important Buttons:</h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" align="left" border="0"/> Generate the EFT File. <font color="#000000">By default, the ACH file will be placed in the same directory as SAM Pro executable unless otherwise specified via registry.</font></p>
+
+</body></html>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.11.1.2.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="client order"/>
+<meta name="MS-HKWD" content="commerical invoice"/>
+<meta name="MS-HKWD" content="currency conversion"/>
+<meta name="MS-HKWD" content="proforma table"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>ProForma Table Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="client order,commerical invoice,currency conversion,proforma table"/><meta name="brsnext" value="Report_COP_Quote.htm"/><meta name="brsprev" value="Fill_Backorder_for_COP.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="ProForma Table Viewer">
+        <span>ProForma Table Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Pro Forma Table Viewer</h1>
+<h2>Purpose:</h2>
+<p>ProForma Tables are used by the system to automatically convert US weights, 
+ measures and currency into those used in the Client Site&#39;s country. The 
+ Pro Forma Advice lines will also print as Comments on the COP Invoice 
+ itself, and may be used as additional text on regular invoices. </p>
+<h2>Example:</h2>
+<p>For conversion to Canadian units, a conversion from gallons to liters 
+ and pounds to kilograms would be specified.</p>
+<h2>Usage:</h2>
+<p>Referenced in the Client Site record&#39;s COP tab; it will default to Client 
+ Orders made for that Site. </p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields that may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the order or status (required, optional, 
+ default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p>This screen is divided into two sections. The upper section of the screen 
+ consists of the data-entry fields that identify this table and the currency 
+ conversion information.</p>
+<p><font style="font-weight: bold;">ProForma Table Id:</font> (10 character, 
+ only - and . special characters)<br/>
+A unique Id (e.g., England, Canada, etc.). This field is required.</p>
+<p><font style="font-weight: bold;">Repack Table Name:</font> (20 character)<br/>
+A brief description of this Table.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field displays the Security Id of the local 
+ user that created this record. If multiple location security is not implemented 
+ on your system, or if this record was created by a global user, this field 
+ will be blank.</p>
+<p><font style="font-weight: bold;">Currency Symbol</font> (2 character)<br/>
+The currency symbol to be used in the commercial invoice.</p>
+<p><font style="font-weight: bold;">Currency Conversion Factor</font><br/>
+The conversion from the base currency to the client&#39;s currency. For example, 
+ if your base currency is U.S. Dollars, and this is a ProForma table for 
+ Canada, a typical conversion factor might be 1.45. <font style="font-weight: bold;">Be 
+ sure to update this field frequently to account for international market 
+ conditions.</font></p>
+<p><font style="font-weight: bold;">Advice Lines</font>(60 character x 
+ 6)<br/>
+The Pro Forma Advice lines will also print as Comments on the COP Invoice 
+ itself, and may be used as additional text on regular invoices. </p>
+<h2>Important Fields: Lower Section</h2>
+<p><font style="font-weight: bold;">BUOM:</font><br/>
+The Base Unit of Measure exactly as listed in the Inventory Item record 
+ (e.g., ga, lb, etc.).</p>
+<p><font style="font-weight: bold;">CUOM:</font><br/>
+The Converted Unit of Measure as it should appear on the commercial invoice 
+ sent to the client (e.g., Ltr, Kg, etc.).</p>
+<p><font style="font-weight: bold;">Factor:</font><br/>
+The conversion factor required to go from the Base to the Converted Unit 
+ of measure. For example, if the BUOM is ga (gallons) and the CUOM is Ltr 
+ (liters), the Factor would be entered as 3.7853.</p>
+
+</body></html>

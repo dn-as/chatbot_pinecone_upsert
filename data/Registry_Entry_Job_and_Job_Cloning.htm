@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.22.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="clone job"/>
+<meta name="MS-HKWD" content="sys-viewer-vjb"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="job"/>
+<meta name="MS-HKWD" content="pm schedule"/>
+<meta name="MS-HKWD" content="pm"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Job and Job Cloning (sys-viewer-vjb)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="WBS,job scheduler,import WBS,scheduler (job),clone job,sys-viewer-vjb,registry,job,pm schedule,pm"/><meta name="brsnext" value="Internal_Registry_Entry_Job_EOM_Process.htm"/><meta name="brsprev" value="Registry_Entry_Project_Manager.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Job and Job Cloning (sys-viewer-vjb)">
+        <span>Registry Job and Job Cloning (sys-viewer-vjb)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Job and Job Cloning (sys-viewer-vjb)</h1>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Usage:</h2>
+<p><font style="font-weight: bold;">Important Note</font> <font style="font-weight: bold;">on 
+ Registry Options:</font><br/>
+Registry options specified in sys-viewer-vjb will also impact the Project 
+ Manager Workbench unless overridden by that option in sys-viewer-vjbpm. 
+ See <a href="Registry_Project_Manager_Workbench.htm">Registry Project 
+ Manager Workbench</a> for details.</p>
+<p><span style="font-weight: bold;">Job Id Auto-Sequencing:</span><br/>
+Registry entries are available to generate auto-sequenced Job Id&#39;s: please 
+ consult your support representative for details.</p>
+
+<h2>Related Registry Entries:</h2>
+<p>By default, data entry in the State / Province address field is limited 
+ to the official abbreviations of the US States and Canadian Provinces. 
+ See the <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Global_Settings_State_Id">State 
+ / Province Field Validation Registry</a> if you need to add to or change 
+ the list of valid State / Province codes. </p>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Global_Settings_Alternate_Prevailing_Wages">Global 
+ Setting for Alternate Prevailing Wage Calculations (NY)</a></p>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Completed_JC">Registry 
+ to Prevent Selection of Completed Cost Codes / Billing Items</a></p>
+<p style="margin-left: 8px;"><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Refine_Job_Cost_Calculation_for_Labor_">Refine 
+ Job Cost Calculation for Labor</a></p>
+<h2>Important Fields</h2>
+<p><font style="font-weight: bold;">Registry Id: <span style="font-weight: normal;">sys-viewer-vjb</span></font></p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard 
+ Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> 
+ for additional Registry Id formats to allow entries for specific Users, 
+ Branches, Security, or User Groups to override the main entry.</p>
+<h3>Allow Projected to Exceed Actual on 
+ Job&#39;s JC Summary Tab</h3>
+<p>In previous releases, if the Job went 
+ over budget, the Job&#39;s JC Summary tab showed the Projected Values that 
+ exceeded the Actual. In this release, Projected will be adjusted to match 
+ Actual if Actual &gt; Projected by default. </p>
+<p style="margin-left: 8px;">The previous 
+ behavior will be implemented via the following registry:</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vjb</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting 
+ Key:</span> ActualCanExceedProjected  <span style="font-weight: bold;">Setting 
+ Value:</span> true  (default false)</p>
+<h3>Set Cloned Job&#39;s Branch from Site 
+ instead of Job  </h3>
+<p>By default,when a Job is cloned via 
+ the Clone Job button in the Job record, the new Job&#39;s Branch Id defaults 
+ from the Job (or Job Template) it was cloned from.  If the following 
+ registry is enabled, the new Job&#39;s Branch will be derived from the Site 
+ selected in the Clone Job wizard. </p>
+<p><span style="font-weight: bold;">Registry 
+ Id:</span> sys-viewer-vjb<br style="margin-bottom: 0px; color: #000000; font-family: Verdana, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; 
+	 font-size: 14px; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-style: initial; text-decoration-color: initial;"/>
+ <span style="font-weight: bold;">Setting 
+ Key:</span> UseCloneSiteBranchForClonedJob 
+   <span style="font-weight: bold;">Setting 
+ Value:</span> true (default 
+ false) </p>
+<h3>Prevent Copy From Client Button from 
+ Setting Job&#39;s Sales Tax Group from Client</h3>
+<p>The Job Viewer&#39;s Copy From Client button 
+ has been changed so that the Sales Tax Group, Service Zone and Branch 
+ will be set from the Zipcode table (if enabled). For Commercial / Industrial 
+ Jobs, this is not desirable. The following registry changes default behavior 
+ so that only Client Address fields are set when Job viewer&#39;s Copy From 
+ Client button is clicked.</p>
+<p><span style="font-weight: bold;">Registry 
+ Id:</span> sys-viewer-vjb</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> JustSetAddressFromClient   <span style="font-weight: bold;"> Setting 
+ Value:</span> true     (default false)</p>
+
+<h3><a id="Small_Jobs_Processing_Modification_to_use_Job_Date_Completed"></a> 
+ Registry for Small Jobs Processing Modification to use Job Date Completed</h3>
+<p>This enhancement modifies way Small 
+ Jobs processing is handled. Instead of using the Job Date Closed as the 
+ trigger date for Small Jobs revenue recognition, the Date Completed will 
+ be used instead. The Job&#39;s Date Completed field is implemented via the 
+ v.cus file as a special, non-database field that is used to update a Job 
+ User field (specified via registry), ensuring that the Job User field 
+ is set to the correct date format.  Note that a revised v.cus file 
+ is required to support this functionality. </p>
+<p>In addition to the customized v.cus 
+ file with the Job Date Completed, the following registry is also required 
+ to define the Job User field used to sort the Date Completed. </p>
+<p><span style="font-weight: bold;">Registry 
+ Id:</span> sys-viewer-vjb</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> DateCompletedUserField   <span style="font-weight: bold;">Setting 
+ Value:</span> <span style="font-style: italic;">number of Job User Field 
+ (1-10)</span></p>
+<p style="margin-left: 88px;">Example: 
+ to specify Job User Field 4:  Setting Key: DateCompletedUserField 
+   Setting Value: 4</p>
+<p>The following validation has been added 
+ when changing the new Job Date Completed field:</p>
+<p style="margin-left: 48px;">Prevent 
+ the Job Date Completed field from being changed to a date equal or less 
+ than any Job EOM entries for that Small Job.</p>
+<p style="margin-left: 48px;">Change from 
+ Original Blank Date To New Non-Blank Date (OK)</p>
+<p style="margin-left: 48px;">Change from 
+ Original Non-Blank Date to New Non-Blank Date within same Accounting Period 
+ (OK)</p>
+<p>If New Job Date Completed NOT in same 
+ Accounting Period as Original Date Completed:</p>
+<p style="margin-left: 48px;">Prevent 
+ the Job Date Completed field from being changed to a date equal or less 
+ than any Job EOM entries for that Small Job.</p>
+<p style="margin-left: 48px;">If Non-Reversing 
+ JC EOM Entries found for Original Accounting Period (ERROR)</p>
+<p style="margin-left: 48px;">If Non-Reversing 
+ JC EOM Entries NOT found for Original Accounting Period and New Job Date 
+ Completed is blank (OK)</p>
+<p style="margin-left: 48px;">If Non-Reversing 
+ JC EOM Entries found for Date &gt;= New Job Date Completed (ERROR) </p>
+<h3>Set Cost Code and Billing Item Date Completed when Job Closed</h3>
+<p>If the following registry is set, when the user sets the Date Closed 
+ in the Job record, a prompt will appear:</p>
+<p><span id="BugEvents4111">&quot;Would you like to close all Job Cost 
+ Codes and Job Billing Items?&quot;</span></p>
+<p><span>If the user clicks Yes, if the Date Completed in the Job&#39;s Cost 
+ Codes and Billing Items is blank, it will be set to the Date Closed in 
+ the Job record. Note that clearly the Job&#39;s Date Closed will NOT clear 
+ the Date Completed in the Job Cost Codes and Billing Items.  </span></p>
+<p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vjb</p>
+<p><span style="font-weight: bold;">Setting Key:</span> SetCCBICompletedOnClose 
+   Setting Value: true or false  (default is false)</p>
+<h3>Allow PM Billing and Inspection Schedules to be Cloned</h3>
+<p class="Block_Text">By default, when new Site and Equipment records are 
+ created, the Site PM Billing and Equipment PM Scheduling tables will not 
+ be cloned from the originals. This registry entry enables to override 
+ the default and clone the Equipment PM and/or Site Billing Schedules.</p>
+<p><span style="font-weight: bold;"><font style="font-weight: bold;">R</font>egistry 
+ Id:</span> sys-viewer-vjb</p>
+<p><font style="font-weight: bold;">Setting Key:</font> ClonePMBillingSchedule <font style="font-weight: bold;">SettingValue:</font> true</p>
+<p><font style="font-weight: bold;">Setting Key:</font> ClonePMInspectionSchedule 
+ <font style="font-weight: bold;">SettingValue:</font> true</p>
+<h3>Allow Cloning From Templates Only</h3>
+<p>When this registry option is set, cloning (using the Job record’s Clone 
+ Job button) will only be allowed from template jobs.</p>
+<p><span style="font-weight: bold;"><font style="font-weight: bold;">R</font>egistry 
+ Id:</span> sys-viewer-vjb</p>
+<p><font style="font-weight: bold;">Setting Key:</font> CloneFromTemplatesOnly  <font style="font-weight: bold;">Setting Value:</font> true</p>
+<h3>Job Clone Option to Require Existing Client, Site</h3>
+<p>The Job viewer&#39;s Clone function verifies that the user has Add privileges 
+ or they can&#39;t create Client / Site records. The following registry option 
+ may be used to further restrict the ability to add Clients / Sites via 
+ the clone.</p>
+<p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vjb</p>
+<p><span style="font-weight: bold;">Setting Key:</span> CloneRequireExistingSite 
+    <span style="font-weight: bold;">Setting Value:</span> 
+ true  (default is false)</p>
+<p><span style="font-weight: bold;">Setting Key:</span> CloneRequireExistingClient 
+   <span style="font-weight: bold;">Setting Value:</span> true 
+ (default is false)</p>
+<h3><a id="Clone_Job_Equipment"></a> Clone Job’s Equipment if an Existing 
+ Site is Selected</h3>
+<p>Default behavior is to only clone equipment if a Site is NOT selected 
+ in the Clone Wizard form. This registry option changes the behavior to 
+ clone a job’s equipment with the Clone Job button if an existing Site 
+ is selected. Note that, if this registry setting is in effect, equipment 
+ Id’s will only be created if they do not already belong to the existing 
+ site.</p>
+
+<p><span style="font-weight: bold;"><font style="font-weight: bold;">R</font>egistry 
+ Id:</span> sys-viewer-vjb</p>
+<p><font style="font-weight: bold;">Setting Key:</font> CloneJobEquipmentExistingSite 
+ <font style="font-weight: bold;">Setting Value:</font> true</p>
+<p>Default is false.</p>
+<p style="margin-left: 48px;">Examples:</p>
+<p style="margin-left: 48px;">If the Site has Equipment Id GIZMO, and so 
+ does the Job you are cloning from, the existing site’s equipment record 
+ GIZMO will be retained.</p>
+<p style="margin-left: 48px;">If the Site has only an Equipment Id WIDGET, 
+ and the Job you are cloning from has equipment Id GIZMO, when the job 
+ is cloned the existing site will now have two equipment records: GIZMO 
+ and WIDGET.</p>
+<h3>Allow Change to Job with Retainage</h3>
+<p>In this release, if Retainage has been billed the Client Id cannot be 
+ changed.  This validation can be changed from an error to a 
+ warning with the following registry setting:</p>
+<p><font><span style="font-weight: bold;">R</span></font><span style="font-weight: bold;">egistry 
+ Id:</span> sys-viewer-vjb</p>
+<p><font style="font-weight: bold;">Setting Key:</font> AllowChangeToJobClient <font style="font-weight: bold;">Setting Value:</font> true</p>
+<h3>Default Budget Tab Effective Date</h3>
+<p>This registry option allows you to default the Effective Date that will 
+ be used when Budget entries are written to Job History from this tab. 
+ This registry also impacts the Project Manager&#39;s Workbench.</p>
+<p><font><font><span style="font-weight: bold;">R</span></font></font><span style="font-weight: bold;">egistry Id:</span> sys-viewer-vjb</p>
+<p><font style="font-weight: bold;">Setting Key:</font> BudgetEffectiveDate</p>
+<p><font style="font-weight: bold;">Setting Value:</font>   none 
+ or currentdate or DateOpened (Default none)</p>
+<p style="margin-left: 36.00pt;">none – use the user-entered date from 
+ the Job budget Effective date field</p>
+<p style="margin-left: 36.00pt;">currentdate – use today’s date from system 
+ date</p>
+<p style="margin-left: 36.00pt;">DateOpened – use the date from Job’s Date 
+ Opened</p>
+<h3>Registry to Show Employee Name on the Job Revenues Tab</h3>
+<p>In this release, the Employee Name no longer appears on the Job Revenues 
+ tab to prevent sensitive pay information from being displayed. The following 
+ registry entry may be enabled so that the user or users eligible to see 
+ this information may have access to it.</p>
+<p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vjb-<font style="font-style: italic;">branchid-userid</font> or  sys-viewer-vjb--<font style="font-style: italic;">userid</font></p>
+<p><span style="font-weight: bold;">Setting Key:</span> ShowEmployeeNames 
+ <span style="font-weight: bold;">Setting Value:</span> true</p>
+<h3> <a name="Registry_Job_Prevent_Overhead_Change" id="Registry_Job_Prevent_Overhead_Change"></a>Registry 
+ To Prevent Changing Overhead Flag for Jobs With Non-Zero History</h3>
+<p style="margin-left: 8px;">By default, 
+ the user is warned when changing the Overhead? flag on a Job which has 
+ non-zero Job History based on the JCH Hours, Quantity, Total Cost and 
+ Total Revenue fields.</p>
+<p style="margin-left: 8px;">The following 
+ registry changes the warning to an error to prevent the user from changing 
+ the Overhead? flag for Jobs with non-zero history.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Registry 
+ Id:</span> sys-viewer-vjb</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting 
+ Key:</span> ValidateOverheadChange    <span style="font-weight: bold;">Setting 
+ Value:</span> error or warning (default)</p>
+<h3><a name="Registry_Job_WBS" id="Registry_Job_WBS"></a> 
+ WBS (Work Breakdown Structure Registries)</h3>
+<p>Also see <a href="Registry_WBS_(sys-behavior).htm">Registry 
+ WBS</a> .</p>
+<h5>Disable Job Record Budget Reversals 
+ for WBS Import</h5>
+<p><span style="font-weight: bold;">This 
+ option should ONLY be implemented if the WBS Configurator/Import process 
+ is being used to import Job Budget Entry child lines.</span>  Without 
+ this registry setting, the Budget Entry child posts like other &#39;journals&#39;. 
+  It makes new plus entries and offsets them with reversing entries 
+ to achieve the desired &#39;net effect&#39;. With this registry setting, all Budget 
+ Entry Job History is completely replaced (deleted) by new lines posted 
+ from the child rows.</p>
+<p><span style="font-weight: bold;">Registry 
+ Id:</span> sys-viewer-vjb</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> NoReversing   <span style="font-weight: bold;">Setting 
+ Value:</span> true {Default is false}</p>
+<h5>Specify the Import WBS Cost Code GL 
+ Income Account</h5>
+<p style="line-height: 110%;">This registry 
+ is required for WBS imports.</p>
+<p style="line-height: 110%;"><span style="font-weight: bold;">Registry 
+ Id:</span> sys-viewer-vjb</p>
+<p style="line-height: 110%;"><span style="font-weight: bold;">Setting 
+ Key:</span> ImportWBSGLAccount  Setting Value: <span style="font-style: italic;">GLAccountId</span></p>
+<p style="line-height: 110%;">This field 
+ should specify the value to be set in the Cost Code&#39;s GL Income Account.</p>
+<h5>WBS 
+ Import Registry to Specify Fee Code</h5>
+<p>The Job viewer&#39;s WBS Import process 
+ also needs to know which of the specific Cost Codes should be marked as 
+ the &#39;Fee Code&#39;.  The following registry is used to enable this functionality.</p>
+<p><span style="font-weight: bold;">Id:</span> sys-viewer-vjb</p>
+<p><span style="font-weight: bold;">Setting Key:</span> ImportWBSFeeCodeCodeId 
+   <span style="font-weight: bold;">Setting 
+ Value:</span>  JobCostCodeId</p>
+<p>When BOTH this registry and the sys-viewer-vjbprgrss 
+ registry&#39;s LumpSumUsrFldNmbr options are present, the selected user-definable 
+ field will be marked with either a Y or N to indicate which of the cost 
+ codes is the &#39;Fee Code&#39;.</p>
+<p>Also see <a href="Registry_WBS_(sys-behavior).htm">Registry 
+ WBS (sys-behavior)</a> to Implement Optional Job Cost Burdening by Cost 
+ Code (Fab Shop Burden).</p>
+<h5>Registry to Set Job Cost Code&#39;s GL 
+ Entity from Discipline Id During WBS Import</h5>
+<p style="margin-left: 8px;">When a new 
+ Job Cost Code is created in during the WBS Import, the GL Entity is set 
+ by default from the Job Entity on the Job&#39;s Financial tab. The following 
+ registry may be used to specify that the Cost Code&#39;s GL Entity instead 
+ comes from the Discipline Id specified in the Import.  </p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vjb</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting 
+ Key:</span> ForWBSGetEntityFromDiscipline    <span style="font-weight: bold;">Setting 
+ Value:</span> true  (default is false) </p>
+<p style="margin-left: 8px;">Note that 
+ if the WBS import is being used to <span style="font-weight: bold;">update 
+ existing</span> Job Cost Codes, the GL Entity will be left alone, 
+ regardless of whether or not this registry is set. </p>
+<h5><a id="Prompt_for_Cost_Codes_Certified_PR_Flag_WBS_Import"></a>Registry 
+ to Prompt for Cost Codes Certified PR Flag Setting in WBS Import</h5>
+<p>Previously when creating new Cost Codes 
+ via the Job viewer&#39;s WBS Import function, the Cost Codes Certified PR 
+ Flag would always be checked if the work type was set to field. The following 
+ registry allows a change this default behavior to allow a prompt to be 
+ displayed to allow control the setting of the Cost Codes Certified PR 
+ Flag. </p>
+<p><span style="font-weight: bold;">Registry 
+ Id:</span> sys-viewer-vjb</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> promptForJobRequireCertifiedPayroll</p>
+<p><span style="font-weight: bold;">Setting 
+ Value:</span> true,false (default is false,false)</p>
+<p>The first true/false in the setting 
+ value is whether to display the prompt at all, which asks if the job requires 
+ certified payroll. The second true/false is the default answer (Yes or 
+ No) to the prompt, which can be changed at time of prompt.</p>
+<p>There is a hierarchy at play. The system 
+ will first look to existing cost codes before evaluating the registry 
+ setting. If the existing cost codes have the Certified PR flag set (or 
+ at least a majority), the prompt appears, set to Yes. If NO Certified 
+ PR flags are set in existing cost codes, the prompt will not appear and 
+ Certified PR Flag will not be set. </p>
+<p>If there are no cost codes, or cost 
+ codes have same amount of Certified PR Flags checked and non-checked, 
+ the registry setting is evaluated. </p>
+<h3><span style="line-height: 110%;"><a name="Registry_WO_Creator_Tab_for_Job_Scheduling" id="Registry_WO_Creator_Tab_for_Job_Scheduling"></a></span>Enable 
+ WO Creator Tab for Job Scheduling</h3>
+<p>The following registry entry is required 
+ to make the new WO Creator tab (Scheduler child table) visible in the 
+ Job Viewer. Also see the <a href="Registry_Start_Create_Job_Schedule_WOs.htm">Start 
+ Create Job Scheduler WOs Registry</a> .</p>
+<p><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vjb</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span>  ShowJobScheduler  <span style="font-weight: bold;">Setting 
+ Value:</span> true  (default is false)</p>
+<h3>Limit Techs Allowed on Job&#39;s WO Creator 
+ Tab</h3>
+<p><span style="font-weight: bold;">Id:</span> 
+ sys-viewer-vjb</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span>  JobCreatorTechnicianFilter   <span style="font-weight: bold;">Setting 
+ Value:</span> <span style="font-style: italic;">listoftechs</span></p>
+<p>The Setting Value <span style="font-style: italic;">listoftechs</span> 
+ would be replaced by a comma separated string of Technician Ids which 
+ are allowed to be entered on the Job&#39;s WO Creator tab. This registry may 
+ be used to force Work Orders to be created for &quot;techs&quot; representing 
+ areas or groups instead of actual Technicians.  Since the Date and 
+ Hours on Work Orders created from the WO Creator tab are generally estimates, 
+ some users may not wish to immediately assign them to real Techs.</p>
+<p> </p>
+
+</body></html>

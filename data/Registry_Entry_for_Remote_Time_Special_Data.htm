@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sys-remotetime-special-data"/>
+<meta name="MS-HKWD" content="Remote Time and Expense Entry Applet"/>
+<meta name="MS-HKWD" content="remote time sheet"/>
+<meta name="MS-HKWD" content="remote entry"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="time entry"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="MS-HKWD" content="timesheet"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Remote Time Special Data (sys-remotetime-special-data)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="sys-remotetime-special-data,Remote Time and Expense Entry Applet,remote time sheet,remote entry,registry,time entry,payroll,timesheet"/><meta name="brsnext" value="Registry_Entry_for_Taxable_Fringe_Benefits.htm"/><meta name="brsprev" value="Registry_Entry_for_Remote_Time_Sheet_Applet.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Remote Time Special Data (sys-remotetime-special-data)">
+        <span>Registry Remote Time Special Data (sys-remotetime-special-data)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Remote Time Special Data (sys-remotetime-special-data)</h1>
+<h2>Purpose:</h2>
+<p>This registry entry helps to streamline the remote time process by automatically defaulting values for certain types of time entry (e.g., Holiday, Vacation, etc.).</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline;">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Related Registries:</h2>
+<p><a href="Registry_Entry_for_Remote_Time_Sheet_Applet.htm">Remote Time Sheet Applet Configurations</a></p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font> <font style="font-weight: bold;">sys-remotetime-special-data</font></p>
+<p><font style="font-weight: bold;">Setting Key:</font> <font style="font-style: italic;">descriptivename</font> <font style="font-weight: bold; font-style: italic;">Setting Value</font><font style="font-style: italic;">:</font> <font style="font-style: italic;">job</font><font style="font-style: italic;">_id</font><font style="font-style: italic;">,costcode</font><font style="font-style: italic;">_id</font><font style="font-style: italic;">,costcat</font><font style="font-style: italic;">_id</font><font style="font-style: italic;">,paytype</font><font style="font-style: italic;">_id</font></p>
+<p>where <font style="font-weight: bold; font-style: italic;">descriptivename</font> is replaced by a unique name (e.g., Holiday, Vacation, Sick). The job,costcode,costcat and paytype variables should be replaced by the appropriate Job, Job Cost Code, Cost Category and Pay Type Id’s. This would typically be implemented in a situation where the remote user’s entering one field (say, a Pay Type Id of Holiday) should always generate the same Job, Cost Code and Cost Category Id’s.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline;">Example:<br/></font>Setting Key: Holiday Setting Value:100,holiday,holiday,holiday<br/>
+Setting Key: Vacation Setting Value: 100,vacation,vacation,personal</p>
+<p><font style="font-weight: bold;">Important Note</font><br/>
+If you have more than one line in this registry entry, the variable combinations must be unique for each line. When the user specifies the Pay Type, the other fields should default in.</p>
+
+</body></html>

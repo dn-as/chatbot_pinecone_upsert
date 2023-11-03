@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.24.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="MS-HKWD" content="work order"/>
+  <meta name="MS-HKWD" content="registry"/>
+  <meta name="MS-HKWD" content="purchase order"/>
+  <meta name="MS-HKWD" content="po"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry Purchase Order (sys-viewer-vprchseordrlst)</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="sys-viewer-vprchseordrlst,work order,registry,purchase order,po"/>
+<meta name="brsprev" value="Registry_Entry_Print_Purchase_Order.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Purchase Order (sys-viewer-vprchseordrlst)">
+        <span>Registry Purchase Order (sys-viewer-vprchseordrlst)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry Purchase Order (sys-viewer-vprchseordrlst)</h1>
+  <h2>Purpose:</h2>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">This registry option enables you to reference closed work orders on a purchase order, control the fields used to generate the Ship-To address, and to automatically complete the Quantity Received Field on purchase orders.</p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold;">Testing Your Registry Entries</font><br/>
+    <font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.
+  </p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Setting</font>
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Values are Uppercase-Lowercase Sensitive:</font><br/>
+    The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.
+  </p>
+  <h2>Related Registry Entry:</h2>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;"><a href="Registry_Entry_Print_Purchase_Order.htm">Registry Entry Print Purchase Order</a></p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;"><span>See <a href="Registry_PO_Form_Portrait_Format.htm">Registry PO Form Portrait Format</a> for a registry to print PO&#39;s in portrait rather than the default landscape format. Note that graphics changes will be needed if your company will be switching formats.  </span></p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;"><a href="Registry_Start_Generate_Purchase_Orders.htm">Registry Start Generate Purchase Orders</a> (Version 9.0 and above only)</p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;"><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Purchase_Order_Id">Registry to Not Set Purchase Order Id to Work Order Id (for Subcontractor PO&#39;s)</a></p>
+  <h2>Important Fields:</h2>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> Id:       <span style="font-weight: normal;">sys-viewer-vprchseordrlst</span></p>
+  <p>See the <a href="Registry_Viewer.htm">Registry Viewer</a> Standard Hierarchy section for additional Id formats if specific branches, securities, user groups or users need to override the main registry entry.</p>
+  <h3>Registry To Require a Work Order for Service Compute Jobs</h3>
+  <p>Jobs indicated as &quot;Service Compute&quot; get billed by the Work Order, yet we allow costs to be entered and posted to Jobs w/o reference to any specific work order, leaving these unbilled costs in limbo. This feature may be activated to warn or error if a Work Order is not specified for Jobs flagged as &#39;Service Compute&#39; when manual entries are recorded.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Note:</span> This setting may also be made globally in the sys-ffv-global-settings registry. If so, the local setting by Journal will trump the global entry.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vprchseordrlst</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> NeedWOInServiceComputeJobs  <span style="font-weight: bold;">Setting Value: </span>Error, Warning or Neither (default Neither)</p>
+  <p><span style="font-weight: bold;">W</span>hen the Setting Value is set to <span style="font-weight: bold;">Error</span>, the user will be alerted when leaving a line lacking a Work Order Id and will not be able to save the record. Note that implementing Error on an existing system impacts your ability to edit existing entries. It should be implemented with caution.</p>
+  <p>When <span style="font-weight: bold;">Warning</span> is implemented, the user will be alerted when leaving a line lacking a Work Order Id but will be able to save the record.</p>
+  <p>If <span style="font-weight: bold;">Neither</span> is implemented (or the registry option does not exist) the user will not be alerted if a Service Compute type Job lacks a Work Order reference.</p>
+  <h3><a id="Auto_Receive_Credit_PO"></a> Auto Receive Credit PO&#39;s</h3>
+  <p>If the Quantity Received amount is not set in a Credit PO, JCH posts as a negative committed cost versus negative actual cost...and isn&#39;t eligible for import to WO prior to the credit memo getting posted in APJ. To prevent this issue, when enabled via the following registry, only Credit type PO&#39;s will be auto received. When the user enters the Quantity in the Inventory or General tab of the Purchase Order, the Quantity Received field will default from the Quantity only for Credit PO&#39;s (which cannot be received in the Inventory Receipt Journal.</p>
+  <p>This option would be a recommended companion to disabling QTY Received fields in the PO.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vprchseordrlst</p>
+  <p><span style="font-weight: bold;">Setting Key:</span>  AutoFillReceivedCreditOnly   <span style="font-weight: bold;">Setting Value:</span> true (default is false)</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Note:</span> The &#39;quantity ordered less than quantity received&#39; error message will not appear if the autoFillReceived or autoFillReceivedCreditOnly registry entries are enabled. Other existing validations still apply.</p>
+  <h3>Invoiced Work Order Id Validation</h3>
+  <p>This registry controls the validation of Work Orders which have been Invoiced.  By default, when the user enters an invoiced Work Order Id in a journal or purchase order, the warning &#39;Work Order has already been invoiced.  Ok to Continue?&#39; will be displayed. The user will be allowed to select the Work Order.</p>
+  <p>The following registry may be set in Purchase Order (as well as other viewers, such as the Labor Journal) to either error when an invoiced Work Order is entered, or to disable the message altogether.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-viewer-vprchseordrlst  </p>
+  <p><span style="font-weight: bold;">Setting Key:</span> WorkOrderInvoiceValidation  </p>
+  <p><span style="font-weight: bold;">Setting Value:</span> error, warning, or disabled  (default warning)</p>
+  <p>Note that &#39;error&#39; does not allow the user to continue, &#39;warning&#39; gives an option to continue, and &#39;disabled&#39; eliminates the warning/error. The default behavior with the registry absent is to give a warning.</p>
+  <h3>Disable Warning When User Accesses a PO That Has Been Replaced</h3>
+  <p>When PO&#39;s are handled as controlled, the PO number (Id) will be appended with a &#39;tack&#39; number when it is saved as Changed. At this point, the original PO record cannot be edited since it has been replaced with a new entry (with a &#39;tack&#39; number).  In this release, users are warned if they access a PO entry which has been replaced.  For example, if Purchase Orders are used as controlled documents, the following warning would appear:</p>
+  <p style="margin-left: 48px;">WARNING: Purchase Order 123456 has been replaced by 123456-01.</p>
+  <p style="margin-left: 48px;">This record cannot be changed.</p>
+  <p>This warning is designed to prevent the user from wasting time by attempting to make changes to a journal entry record which cannot be saved because it has already been replaced. This new default behavior may be disabled globally (sys-ffv-global-settings) or by individual viewer. :</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vprchseordrlst</p>
+  <p><span style="font-weight: bold;">Setting Key:</span><span> DisableCase6552 </span><span style="font-weight: bold;">Setting Value:</span><span> true</span></p>
+  <h3>Adjust Date or Accounting Period</h3>
+  <p>By default, if a Subcontractor PO is auto-generated in New Call, there is no validation as to the Release Date and the Accounting period; today&#39;s date and the default Accounting Period are always used on the auto-generated PO unless trumped by the sys-newcall registry option AutoPOPeriodID.</p>
+  <p>The following registry entry allows either the Date or Accounting Period to be adjusted to keep them in sync.  If this registry is not enabled, the default Accounting Period and today&#39;s date will continue to be used. Note: this setting will also be trumped by the sys-newcall registry option AutoPOPeriodID if enabled.</p>
+  <p>When the defaulted Release Date and Accounting Period are NOT out-of-sync, NO adjustments are made to the defaulted values when a PO is generated from New Call.  The rules noted below are used only when an adjustment is necessary.</p>
+  <p><span style="font-weight: bold;">Id:</span> sys-viewer-vprchseordrlst</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> AdjustDefaultDateOrPeriod   </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Value:</span> period<br/>
+    The Accounting Period table is queried for eligible Accounting Periods.  To qualify, the period must be Active and its date range must include the defaulted Release Date.  When multiple periods are eligible, the one with the smallest Period Id is chosen to become the new Accounting Period for the current transaction.  If no eligible period is found, nothing is changed.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Value:</span> date<br/>
+    The Release Date is adjusted to be either the Start Date or the End Date of the defaulted Accounting Period.  The Start Date is chosen when the current date is less than the Start Date.  The End Date is chosen when the current date is greater than the End Date.</p>
+  <h5><a name="Use_Default_Service_Job_in_the_Equipment" id="Use_Default_Service_Job_in_the_Equipment"></a> Registry to Use Default Service Job in the Equipment record for all but PM WO’s</h5>
+  <p>
+    <font style="font-weight: bold;">Registry Id: sys-viewer-</font>vprchseordrlst
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> DefaultJobByEquipmentId <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>Note that this registry is also applied to PO&#39;s posted from TechAnywhere.</p>
+  <p>By default, the system uses the Job in the Work Order header as the default job for entering WO-related detail in the Labor, Purchase Order and AP Journal. This release supports the above registry settings to alter this behavior. If this registry entry is enabled (and the referenced WO is NOT preventative maintenance), the system will check to see if there is a default service job in the equipment header. If so, the Job, Cost Code and Billing item to the from the Equipment will be defaulted instead of from the WO header. If the job info is blank in the equipment record, the system uses the job info in the work order header.</p>
+  <p>For Preventive Maintenance Work Orders, Job information defaults from the WO header, regardless of whether or not this registry entry is enabled.</p>
+  <p>Note: a registry option to provide this functionality in the Work Order itself is already supported in sys-viewer-vwrkordr.</p>
+  <p><span>Note: registry options to provide this functionality are also available in the Work Order, AP Journal and Labor Journal registries.</span></p>
+  <h3>PO Status defaults from User Purchasing Agent Property</h3>
+  <p>The system determines the default status of a new PO as follows:</p>
+  <p>1. If the user is not a Purchasing Agent, the default status is Unreleased.</p>
+  <p>2. If the user is a Purchasing Agent, the following registry option has been implemented that allows for specification of a default status.  The intention here is to allow the status to default to Unreleased even when the user is a Purchasing Agent.</p>
+  <p>3.  If the user is a Purchasing Agent and no registry setting is available, the default status is Released.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> DefaultPOStatus <font style="font-weight: bold;">Setting Value:</font> Unreleased
+  </p>
+  <h3>Warn user if WO has been invoiced</h3>
+  <p>When the purchase order is loaded into its viewer, WARN the user that it references a Work Order that has invoiced.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> WOInvoicedWarning <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">option</font>
+  </p>
+  <p>Where <font style="font-style: italic;">option</font> is replaced by</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">al</font>l to have the system check all wo&#39;s referenced in the po
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">header</font> to check the wo in the po header only
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">none</font> to not perform the check (this is the default)
+  </p>
+  <h3>Deny Users Access to the PO’s Remit To Tab Fields</h3>
+  <p>If you do not want your employees to have access to this feature, you may disable these fields via registry OR by the next option to remove the tab entirely.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> DisabledFieldsParent
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Value:</font> po.rmt-vndrmlto: vndrmlto.id,prchseordr.addrss-rmt: addrss-po-rmt: addrss-strt,prchseordr.addrss-rmt: addrss-po-rmt: addrss-cty,prchseordr.addrss-rmt: addrss-po-rmt: addrss-stte,prchseordr.addrss-rmt: addrss-po-rmt: addrss-zp
+  </p>
+  <h3>Eliminating the Purchase Order’s Remit To Tab:</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ParentTabs
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Value:</font> Main,Mail Address,Ship Address,Comments,Extended Desc,Status,IMH,JCH,GLH
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Warning:</font> If you upgrade to a newer version of SAM Pro and a new parent tab has been added to the PO Veiwer, it MUST added to this registry or it will NOT appear in the viewer.
+  </p>
+  <h3>Option to Reference a Closed Work Order</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> AllowClosedWorkOrder <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt; margin-left: 8px;">By default, you are not allowed to reference a closed Work Order on a Purchase Order. This registry enables you to reference closed work orders on a purchase order.</p>
+  <p>If you implement this option, a closed work order may be referenced on a purchase order.</p>
+  <h3>Options to Customize Setting of Purchase Order Shipping Address</h3>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">These registry options enable you to customize how the shipping address is to be generated when the various Ship-To options (StockLocation, ServiceProvider or WorkSite) are selected on the Purchase Order’s Ship Address tab. Please contact your support representative for details on implementing this option.</p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt; margin-left: 48px;"><span style="font-weight: bold;">TIP:</span> By default, the Stock Location &#39;Ship To&#39; is selected when manually generating a PO; this may this may be adjusted via the <a href="View_Custom_Fields.htm">Custom Fields</a> functionality if needed.</p>
+  <p>The Ship To address setting (sqlShipToWorkSite) also supports Purchase Orders generated as Client Order Drop-Ships. This allows the Client Site Name to be included in the Shipping Address.</p>
+  <p style="margin-left: 8px; font-weight: bold;">Setting the Ship To Options</p>
+  <p style="font-weight: bold; margin-left: 48px;">sqlShipToStockLocation<font style="font-style: italic;">={SQL select list}</font>
+  </p>
+  <p style="margin-left: 48px; font-weight: bold;">sqlShipToServiceProvider<font style="font-style: italic;">={SQL select list}</font>
+  </p>
+  <p style="font-weight: bold; margin-left: 48px;">sqlShipToWorkSite<font style="font-style: italic;">={SQL select list}</font>
+  </p>
+  <p style="margin-left: 8px; font-weight: normal;">The above options enable you to specify how the Ship-To options (StockLocation, ServiceProvider or WorkSite) operate when filling in the Purchase Order’s Ship Address.</p>
+  <p style="font-weight: bold; margin-left: 8px;">Specifying SQL Select List</p>
+  <p style="margin-left: 8px; font-weight: normal;">The SQL Select List defines which fields from the Location, Technician or Client Site record (depending upon which option you selected) will be inserted into the corresponding fields in the Purchase Order Ship To address.</p>
+  <p style="margin-left: 8px; font-weight: normal;">The select list MUST include all seven columns necessary to construct the ship-to address as follows:</p>
+  <p style="margin-left: 8px; font-weight: normal;">    1. street address line 1<br/>
+        2. street address line 2<br/>
+        3. street address line 3<br/>
+        4. street address line 4<br/>
+        5. city<br/>
+        6. state<br/>
+        7. zip code</p>
+  <p style="margin-left: 8px; font-weight: normal;">If you will not be using all of the address lines, you may include a blank ‘ ‘ in the select list. Token replacement for ^companyname^ has also been implemented.  If you are shipping to your firm’s stocking location, you may specify column 1 as ‘^companyname^’ if the <a href="Registry_Company_Name_Entry.htm">Registry Entry to set your Company Name</a> has been implemented.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="text-decoration: underline; ">Example: Work Site</font>
+  </p>
+  <p style="margin-left: 36.00pt;">This option also supports Purchase Orders generated as Client Order Drop-Ships. This allows the Client Site Name to be included in the Shipping Address.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> sqlshipToWorkSite
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Setting Value:</font> clntste_nme, &#39;RE: Order# &#39;, clntste_addrss_shp_addrss_strt, clntste_addrss_shp_addrss_strt_2, clntste_addrss_shp_addrss_cty, clntste_addrss_shp_addrss_stte, clntste_addrss_shp_addrss_zp
+  </p>
+  <p style="margin-left: 36.00pt; text-decoration: underline; ">Service Provider</p>
+  <p style="margin-left: 36.00pt;">The following example customizes the ServiceProvider option. It will set the first line of the Shipping Address to the Technician Name, and the second to ‘Parts Department’ field for a subcontractor vendor. The third and fourth lines will be set to the street address fields from the technician record.</p>
+  <p style="margin-left: 36.00pt;">sqlShipToServiceProvice=tchncn_nme, ‘Parts Department’, tchncn_strt_addrss1, tchncn_strt_addrss2, tchncn_cty, tchncn_stte, tchncn_zp</p>
+  <h3>Option to Default Quantity Received Field</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> AutoFillReceived <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>Implementing this registry entry will cause the system to default in the Quantity Received from the Quantity – unless the Disable PO Autofill field in the Vendor record is flagged. This allows disabling of the AutoFill option on a vendor-specific basis.</p>
+  <p>This option is ignored in the case of COP Drop Ship PO’s: COP PO’s are never auto-received.</p>
+  <p>The system also applies the AutoFillReceived registry setting when making Subcontractor POs (e.g., when PO’s are created for a subcontractor in Create PM Work Orders). Note that even if autofill is enabled by registry, checking the Vendor field Disable PO Autofill prevents the autofill.</p>
+  <h3>Prevent Use of Completed Job Cost Code or Billing Items</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> CostCodeDateCompletedValidation <font style="font-weight: bold;">Setting Value:</font> error
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> BillingItemDateCompletedValidation <font style="font-weight: bold;">Setting Value:</font> error
+  </p>
+  <p>Currently, the system warns you if you enter a billing item or job cost code whose Date Completed exceeds the effective transaction date. These options change the current warning to an error.</p>
+  <p>It&#39;s also important to note that the validation logic implemented by this registry entry only applies when either a Cost Code Id or a Billing Item Id field&#39;s value is explicitly changed by the data entry user.  The Cost Code and Billing Item registry entries are independent from one another.  Note that these options may be specified in <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm">Registry Entry Global Settings</a> registry entry for a more far-reaching implementation.</p>
+  <h3>Require a GL Entity for Income / Expense Accounts – Inventory and Gen Tabs</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ValidateGLEntityIE <font style="font-weight: bold;">Setting Value:</font> Error or Warning (pick one or the other)
+  </p>
+  <p>Specify Error if users should be prevented from saving the entry without specifying a GL Entity (if the GL Account is an Income or Expense account) or Warning if the user should simply be warned of the situation. This registry is NOT applicable if InterCompany is enabled since GL Entities are always required.</p>
+  <h3>Deny a GL Entity for Balance Sheet Accounts – Inventory and Gen Tabs</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ValidateGLEntityBS <font style="font-weight: bold;">Setting Value:</font> Error or Warning (pick one)
+  </p>
+  <p>Specify Error if users should be prevented from saving the entry with a GL Entity specified for a Balance Sheet Account, or Warning if the user should simply be warned of the situation.</p>
+  <h3>Option to control saving Extended PO Description to Inventory Item</h3>
+  <p>The PO Viewer&#39;s Inventory tab includes an &#39;Extended Description&#39; field (note: you must click the Magnify button to view this field). <span style="font-weight: bold;">By default, when the PO is saved, the contents of this field is copied to the corresponding inventory item&#39;s Purchase Order Description field on the PO Description tab.</span> For some customers this is an undesirable behavior. The following registry entry option <span style="font-weight: bold;">overrides</span> this default behavior:</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> saveInventoryExtendedDescription <font style="font-weight: bold;">Setting Value:</font> No or Yes
+  </p>
+  <p>If this entry is implemented with the No option, the extended description will <font style="text-decoration: underline; ">not</font> be written to the Inventory Item record’s PO Description tab when the purchase order is saved.</p>
+  <p>If this entry is not present (or implemented with the Yes option), the extended description will be written to the Inventory Item record when the purchase order is saved, maintaining the previous default behavior.</p>
+  <h3>Allow PO Type Change on Existing Record</h3>
+  <p>In previous releases, users had the ability to go into purchase orders and change them from purchase orders to credit purchase orders and vice versa without any checks or tests. This had more impact on clients using the Unvouchered Option in the Accounting period as it produced an out-of-balance gl transaction. In this release, validation has been added to lock this down. If the PO is in add mode, the user is allowed to switch between the Purchase and Credit types. Once the record has been added, however, the user must cancel the PO, and add it as the correct type.</p>
+  <p>A registry entry (not recommended) is available to ignore this validation and restore the previous behavior and allow the PO Type to be changed on existing Purchase Orders:</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> OkToChangePOType <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p style="margin-top: 0; margin-bottom: 0;"> </p>
+  <h3>Set Cost from Standard</h3>
+  <p>When a PO is created, an Inventory Item&#39;s cost defaults from the Inventory Item&#39;s Vendor tab. The following registry setting overrides this behavior and instead uses the Item’s Standard Cost. If the Standard Cost is not completed, the Last Cost is used.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> useStandardCostFirst <span style="font-weight: bold;">Setting Value:</span> true (default is false)</p>
+  <h3>TechAnywhere PO&#39;s Posting Style (v9.1+)</h3>
+  <p>The registry that controls how TechAnywhere Purchase Orders are handled has been changed so that the default value is now &#39;standard&#39;.  The standard SAMPro posting method (where job history is written) will now be used by default for PO&#39;s generated from TechAnywhere.</p>
+  <p>In previous releases, the standard method could only be used if COD work orders were NEVER used. In this version, COD and (and other PO changes) are successfully handled since the Billable Quantity and Price updates are posted to the Purchase Order so the standard posting method is now the default.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vprchseordrlst</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> TechAnywherePostingStyle <span style="font-weight: bold;">Setting Value:</span> standard  (default standard)</p>
+  <p><span>To return to the old style (where PO&#39;s were NOT created with job history) the Setting Value would be set to nonstandard. This is </span><span style="font-weight: bold;">NOT</span><span> recommended, and should be discussed with your TechAnywhere Support Rep. </span></p>
+  <h3><span>P</span>urchase Order Registry for TechAnywhere</h3>
+  <p>The following registry setting for the Purchase Order viewer should be used to provide control over changes to POs that were generated in the field via TechAnywhere.  In the absence of this setting, changes are allowed and the user is not alerted.</p>
+  <p>TechAnywhere has a special way of posting Purchase Orders to SAMPro that makes them different from PO&#39;s created in SAMPro. Specifically, the TechAnywhere Post sets the Job Quantity Ordered and Job Quantity Received to zero so that the parts do not import to the Work Order (double up) because TechAnywhere will post these to the Work Order when complete. Changing a TechAnywhere Purchase Order may have adverse effects by negating this special post.</p>
+  
+  <p><span style="font-weight: bold;">Setting Key:</span> EditTechAnywherePOs</p>
+  <p><span style="font-weight: bold;">Setting Values:</span> warning  OR error</p>
+  <p>Warning Message: &quot;WARNING:  This PO was created from TechAnywhere.&quot;</p>
+  <p>Error Message: &quot;This PO was created from TechAnywhere.  Changes are not allowed.&quot;  </p>
+  <h3>Default PO Tax Group from Job</h3>
+  <p>By default, the PO Tax Group defaults from the Vendor record if the Vendor record has a Tax Group. The following setting causes the PO parent Sales Tax Group to be set from the header Job / Work Order.</p>
+  <p>I<span>f this registry is enabled, entering the Vendor after the Job/Work Order has been set will only update the PO&#39;s Tax Group from the Vendor Record if is was blank in the PO so that the Vendor&#39;s Tax Group will not override the Job&#39;s Tax Group.</span></p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vprchseordrlst  </p>
+  <p><span style="font-weight: bold;">Setting Key:</span> DefaultPOTaxGroupFromJob  <span style="font-weight: bold;">Setting Value:</span> true (default is false)</p>
+  <h3><strong>Corrects Random Inventory Purchase Lines Set to Tax Type = Prepaid Defect</strong></h3>
+  <p>Previously when creating Purchase Orders for sales taxable jobs, utilizing the inventory tab, random inventory parts would get coded as tax type = &quot;prepaid&quot; due to existing logic set on data input, when in some uses cases they should not be.</p>
+  <p>To add a check to ensure the value for the Tax Group on the purchase order General and Inventory tabs match the values on the child lines, a registry has been created:</p>
+  <p><strong>Id:</strong> sys-viewer-vprchseordrlst</p>
+  <p><strong>Setting Key:</strong> ValidateTaxGroupMismatch    <strong>Setting Value:</strong> (blank), error, warn</p>
+  <p>When this registry is set to &quot;warn&quot; then on save, an error message will display stating that the Tax Group on all child lines should match that in the header, but the Purchase Order will be allowed to save.</p>
+  <p>When it is set to &quot;error&quot; - a similar message will appear but the save will NOT complete until the tax group is manually updated on to match.</p>
+  <p>When blank or disabled, no message displays and saves are allowed.</p>
+
+</body></html>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.4.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="client web interface"/>
+<meta name="MS-HKWD" content="web"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Client Web Interface Installation</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="CRM (old - now Client Web),client web interface,web"/><meta name="brsnext" value="CSRAnywhere_Installation.htm"/><meta name="brsprev" value="Web_Users_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Web Interface Installation">
+        <span>Client Web Interface Installation</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Client Web Interface Installation</h1>
+<h2>Network Considerations</h2>
+<p>If you want to be able to access the CRMAnywhere website from outside of the local network, the appropriate network policies for the TCP port will need to be changed in the network firewall.</p>
+<h2>Installing the Client Web Interface</h2>
+<p>Load the appropriate graphics and default.css files into a subdirectory of SAMPRO (see the graphics files specifications below). If you are implementing client branding, you will need to create additional directories to contain the appropriate graphics files for your customers.</p>
+<p style="text-indent: 18.00pt;">- Create a temp files subdirectory</p>
+<p style="text-indent: 18.00pt;">- Make the appropriate <a href="Registry_Entry_Client_Web_Interface.htm">Registry Entry Client Web Interface</a> record to specify the location of the graphics files and temp files. Note the some of these graphics will be standard ones obtained from your support representative and others will be your own custom ones.</p>
+<p style="text-indent: 18.00pt;">- Restart the web server</p>
+<p style="text-indent: 18.00pt;">- Import the Web reports</p>
+<p style="text-indent: 18.00pt;">- Make user-defined function entries for those reports</p>
+<p style="text-indent: 18.00pt;">- Java Runtime Environment installed</p>
+<p style="text-indent: 18.00pt;">- Latest jar file uploaded</p>
+<h2>Notes on SAM Pro Records</h2>
+<p><font style="font-weight: bold;">Creating accounts for your Web Clients:</font> Client Web users are set up in the <a href="Web_Users_Viewer.htm">Web Users Viewer</a>. Create a new Web User Record for each Client you wish to give web access to.</p>
+<p>The Client Web Interface now applies the Web User&#39;s Service Category filtering (if set) to the Equipment and Open and Completed WO lists. Only Work Orders with blank Service Categories (in the Work Order header) or those that match those specified in the Web User’s record will appear in the Equipment and WO lists.</p>
+<p><font style="font-weight: bold;">Web Profiles</font>: these records filter. client site equipment (and client sites) for users, as well as Service Categories, and through them, Work Codes. Web Profiles may also be used to implement corporate branding by customer – see <a href="Web_Profile_Viewer.htm">Web Profile Viewer</a> for details.</p>
+<p>Update the <font style="font-weight: bold;">Client Site</font> record’s Web Access tab to point to appropriate Web Profile and custom values; see <a href="Client_Site_Viewer.htm#Client_Site_Web_Profile_Tab">Client Site - Web Profile</a> for detail.</p>
+<p><font style="font-weight: bold;">Purchase Order</font> numbers don’t have a pre-defined field in the New Call page in this release. You can set up a P.O.# call script field to handle it (to be entered manually into the work order on work order creation).</p>
+<p>CRMAnywhere supports user-defined remapping of work order status codes (see <a href="Registry_Entry_to_Remap_WO_Status_on_Web_Client.htm">Registry Entry to Remap WO Status on Web Client</a>).</p>
+<p><font style="font-weight: bold;">Service Categories</font> are <font style="text-decoration: underline;">required</font> in order to generate new service requests from the New Call page. If you do not have service categories set up, create one (e.g., All), and point all applicable Work Codes at this Service Category.</p>
+<p>In <font style="font-weight: bold;">the Work Code</font> record:</p>
+<p style="margin-left: 36.00pt;">Check the <font style="font-weight: bold;">Web Access: Allowed?</font> box if you want it to appear on the CRMAnywhere New Call page. This box should remain blank if you do not want your client to be able to select this work code.</p>
+<p style="margin-left: 36.00pt;">In addition, <font style="font-weight: bold;">the Service Category</font> field must be set in order for the CRMAnywhere user to be able to select the work code successfully when requesting a New Call.</p>
+<p>To display <font style="font-weight: bold;">Call Script</font> questions in CRMAnywhere, a Call Script Id must be referenced Work Codes that are flagged for web access.</p>
+<p>See <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_auto_gen_weblogs_to_WOs">Auto-Generate Work Orders from Web Logs</a> for details on implementing this functionality.</p>
+<h2>Service History Report</h2>
+<p>The web Client Web Service History Report has been enhanced so that the equipment that appears on the report may be selected, and a custom date range may be specified.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setup Information:<br/></font>To implement this functionality, the zipped file WebCalendarCode.zip needs to be unzipped to the SAMPro folder specified by the web-settings registry’s web-dir= option.</p>
+<p style="margin-left: 36.00pt;">An up-to-date version of RSRVCEHSTRYDTL.rpt should be installed in the datatabase.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Service History Report Page</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">New Field: Equipment Id:<br/></font>An Equipment Id drop down box has been added to the Service History Report range screen; it will initially be set to &quot;ALL&quot; so that all active equipment will be included on the report. To limit the report to a specific item, you may select it from the list of Id’s.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Date Range:<br/></font>A new option, &quot;Custom Date Range&quot; has been added to the date range drop down for the Service History Report.  If this is selected, two fields for start and end dates will be added to the right of the drop down.  The way to set their values is through a pop up calendar. </p>
+<h3>Manage Quotes Page</h3>
+<p>The print quote code uses the Report Id in the Quote viewer to select which format quote form to use. If the Quote doesn&#39;t include a Report Id (or when the Report Id links to a report produced outside of SAMPRO) the user-defined function &#39;RQTEFRM&#39; is executed to print the standard quote.  If RQTEFRM doesn&#39;t exist as a user-defined function, then the user sees an error message ... &quot;The function entry was not found for this report.&quot;.</p>
+<h2>Notes on SAM Pro Records – Version 6.1</h2>
+<p>Note: Before version 6.2, the Technician and Web Security records controlled web access and structure. Although these records are still supported, the Web User and Web Profile records are preferred.</p>
+<h2>Reporting on Customer Logons</h2>
+<p>When a user logs on, an entry will be added to the User Logon Table. This table may then be queried for reporting purposes such as marketing analyses of which customers are using web access and so on. Information in this table includes: user id, date and time of logon, date and time of logoff, user access type, virtual machine and user name, logon status, and sampro version number.</p>
+<h2>Graphics File Specifications – New Header Styles</h2>
+<p>This enhancement may be enabled to improve the way the page headers are handled. If CRM was implemented in an earlier release, modifications to your existing graphics will be needed to support the change.</p>
+<p>When these functions were first implemented, lower resolution screens were the norm, and the headers were designed be left justified on 600X800 pixel screens, with the HTML generated by SAM Pro centered.</p>
+<p>To be more suitable for larger screen, the following registry entry may be used to enable the centering of headers with an appropriated background graphic, and a right-justified graphic to complete the screen:</p>
+<p>Id: web-settings<br/>
+Setting Key: NewHeaders Setting Value: true</p>
+<ol class="p">
+<li class="p" style="font-size: 9pt;">
+<p>The right-hand side of the header should be named right.gif. This graphic will appear at the right-hand side of the header for all pages. It should be 68 pixels high, and wide enough to display the desired graphic.</p>
+</li>
+<li class="p" style="font-size: 9pt;">
+<p>The portion of the header gif’s containing the title (e.g., Main Menu, View Quotes, etc.) should be wide enough to display the appropriate title, and be 68 pixels high. These graphics will be centered in header.</p>
+</li>
+</ol>
+<p>sign_in.gif<br/>
+main_menu<br/>
+new_work_request.gif<br/>
+view_open_requests.gif<br/>
+manage_quotes.gif<br/>
+customer_reports.gif<br/>
+invoiced_work_orders.gif<br/>
+siteview.gif<br/>
+change_password.gif<br/>
+password_reminder.gif<br/>
+view_other_documents.gif (Version 8.0 and up only)</p>
+<p>A one or two pixel wide and 68 pixel high vertical slice of the graphic’s background should be saved as slice.gif. This graphic will be repeated as the header background.</p>
+<ol start="3" class="p">
+<li class="p" style="font-size: 9pt;">
+<p>A sidebar area - 112 pixels wide by 440 pixels high should be save as sidebar.gif. This will stay the same for all screens. The top 80 pixels may include your logo. The software will overlay menu options on the middle 300 pixels. A message or additional graphic may be positioned on the bottom 80 pixels of the sidebar.</p>
+</li>
+</ol>
+<p>The web server should be restarted after the registry change has been made and the revised graphics installed.</p>
+<p>The following illustration compares the older and newer graphics formats.</p>
+<p><img src="assets/images/image/CRMheaders.gif" alt="image\CRMheaders.gif" title="image\CRMheaders.gif" width="503" height="595" border="0"/></p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>Graphics Files Specifications</h2>
+<p>The Client Web Interface allows for your customer’s corporate branding on individual page headers, a standard sidebar, and buttons. Your graphics must be named as follows (and use the following specifications) in order to work properly. Branding by customer is accomplished by placing the customized files in subdirectories, and referencing the appropriate path in the Web Profile or Web User record.</p>
+<p>1. All graphics must use the gif format.</p>
+<p>2. Filename: sidebar.gif</p>
+<p>A sidebar area - 112 pixels wide by at least 440 pixels high. This will stay the same for all screens. The top 80 pixels may include your logo. The software will overlay menu options on the middle 300 pixels. A message or additional graphic may be positioned on the bottom 80 pixels of the sidebar.</p>
+<p>3. Filenames: <br/>
+sign_in.gif<br/>
+main_menu<br/>
+new_work_request.gif<br/>
+view_open_requests.gif<br/>
+manage_quotes.gif<br/>
+customer_reports.gif<br/>
+invoiced_work_orders.gif</p>
+<p>siteview.gif</p>
+<p>change_password.gif<br/>
+password_reminder.gif</p>
+<p>view_other_documents.gif</p>
+<p>These graphics are used for an area at the top right-hand portion of the screen - 68 pixels high. We recommend a width of at least 681 pixels - but you can go wider if needed. This graphic will be left-justified against the side bar. You can create a new graphic for each page, including your branding and the appropriate page title (Sign In, Main Menu, New Work Request, View Open Requests, Manage Quotes, Customer Reports, and Invoiced Work Orders). In the example at the end of this topic, notice that we elected to title each on the left, but you can choose whatever format you prefer.</p>
+<p>4. Filenames: binocbutton1.gif</p>
+<p style="margin-left: 72.00pt;">reportbutton.gif</p>
+<p style="margin-left: 72.00pt;">starterbutton.gif</p>
+<p style="margin-left: 72.00pt;">servicebutton.gif</p>
+<p style="margin-left: 72.00pt;">or button.gif (if using only one button)</p>
+<p>Your buttons should not exceed 36 by 36 pixels. If you only wish to use one image, simply copy it and rename for each of the four instances.</p>
+<p><font style="font-weight: bold;">5. Setting up the Calendar for the Service History Report Enhancement</font></p>
+<p>The web Service History Report has been enhanced so that the equipment that appears on the report may be selected, and a custom date range may be specified.</p>
+<p>To implement the new functionality, the zipped file WebCalendarCode.zip needs to be unzipped to the SAMPro folder specified by the web-settings registry’s web-dir= option.</p>
+<p>RSRVCEHSTRYDTL.rpt should be installed in the database.</p>
+<p>A &quot;Custom Date Range&quot; appears in the date range drop down for the Service History Report.  If this is selected, two fields for start and end dates will be added to the right of the drop down.  The way to set their values is through a pop up calendar.  If both values are present in the fields, they will be used for the date range of the report.  A message to fill both fields will be alerted to the user if only one field has a value.  If the &quot;Custom Date Range&quot; entry is deselected, the two fields will disappear and the selected date range will be used as per normal.</p>
+<p class="RNH2">Stylesheet Options</p>
+<p>The Client Web Interface uses standard stylesheet conventions to customize various elements such as the font type and color, background color, and so on. If you are not familiar with standard .css conventions, please contact your support representative.</p>
+<p class="RNH2">Example Client Web Graphics<br/></p>
+<p><img src="assets/images/image/62webusers.gif" alt="image\62webusers.gif" title="image\62webusers.gif" width="720" height="540" border="0"/></p>
+
+</body></html>

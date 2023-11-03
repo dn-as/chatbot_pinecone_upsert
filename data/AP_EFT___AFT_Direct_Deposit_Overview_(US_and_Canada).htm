@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.9.6.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>AP EFT / AFT Direct Deposit Overview (US and Canada)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="AFT - Canadian AP,EFT - Canadian AP,direct deposit,EFT - US AP Direct Deposit,ACH,Electronic Funds Transfer,Automated Funds Transfer"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AP EFT / AFT Direct Deposit Overview (US and Canada)">
+        <span>AP EFT / AFT Direct Deposit Overview (US and Canada)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>AP EFT / AFT Direct Deposit Overview (US and Canada)</h1>
+<p>This enhancement implements the electronic funds transfer of AP checks for our US customers to US banks and Canadian customers to Canadian banks. The actual printing of the EFT check is automatically skipped to avoid wasting physical checks on EFT/AFT transactions.</p>
+<p>To implement this functionality:</p>
+<ol style="list-style: decimal;">
+<li>
+<p>Your firm must arrange with a bank or other originator to provide this functionality.</p>
+</li>
+<li>
+<p>Import Report EFT AP Check Detail Vendor (REFTCHCKDTLVNDR.rpt)  and Report EFT AP Detail (REFTCHCKDTL.rpt) into your database.</p>
+</li>
+<li>
+<p>Complete the required registries</p>
+<ol style="list-style: decimal;">
+<li>
+<p>Registry Entries for your Vendor records: <a href="Registry_Vendor_Viewer.htm">Vendor Email Options</a></p>
+</li>
+<li>
+<p>Complete the required registry specifying the account information for your electronic files</p>
+<ol style="list-style: decimal;">
+<li>
+<p>US Firms - <a href="Registry_Report_EFT_Accounts_Payable_(US).htm">Report EFT Accounts Payable Registry</a></p>
+</li>
+<li>
+<p>Canadian Firms - <a href="Registry_AFT_AP_(Canadian).htm">Report AFT Accounts Payable</a></p>
+</li>
+</ol>
+</li>
+<li>
+<p>Complete the registry for Report EFT AP Check Detail Vendor:<a href="Registry_Report_EFT_Check_Detail_Vendor.htm">Registry Report EFT Check Detail Vendor</a></p>
+</li>
+</ol>
+</li>
+<li>
+<p>For the Vendors that wish to be paid via EFT (US) or AFT (Canada), complete the EFT Bank Id, EFT Account Number, and Email address in their Vendor record.  Note that this is the trigger for the system to generate an EFT or AFT rather than a physical check.</p>
+</li>
+<li>
+<p>Print and post AP Checks and EFT&#39;s; EFT&#39;s will appear on the screen but will not be output to the printer.</p>
+</li>
+<li>
+<p>Run Report EFT Accounts Payable (US) or Report AFT Accounts Payable (Canada) to generate the EFT / AFT  (Electronic File Transfer) AP file that will be transmitted for direct deposits. It will also create a printed EFT report for your records. After printing the report, you will be asked to confirm that an electronic file should be created.</p>
+</li>
+<li>
+<p>Upload the EFT/ AFT file to your bank as they specify.</p>
+</li>
+<li>
+<p>Run Report EFT AP Check Detail Vendor to automatically e-mail to your vendors, alerting them that they been paid.</p>
+</li>
+</ol>
+
+</body></html>

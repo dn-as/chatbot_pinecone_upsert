@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.10.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="message box"/>
+<meta name="MS-HKWD" content="internal"/>
+<meta name="MS-HKWD" content="suppress message box"/>
+<meta name="MS-HKWD" content="scheduled event manager"/>
+<meta name="MS-HKWD" content="agent type user"/>
+<meta name="MS-HKWD" content="schedule a report"/>
+<meta name="MS-HKWD" content="disable message box"/>
+<meta name="MS-HKWD" content="support document"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Suppressing Messages Boxes for Agent Type Users</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="message box,internal,suppress message box,scheduled event manager,agent type user,schedule a report,disable message box,support document"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Suppressing Messages Boxes for Agent Type Users">
+        <span>Suppressing Messages Boxes for Agent Type Users</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Suppressing Messages Boxes for Agent Type Users</h1>
+<p>If you are running SAM Pro functions such as web services, scheduled event manager, or scheduled report manager with an agent type user, you will probably wish to start the agent with a .bat file. The .bat file will in turn reference a .txt file specifying the appropriate switches and parameters.</p>
+<p>Include the following in your .txt file to suppress messages to the screen and instead write them to a log file:</p>
+<p>-messageBoxSuppress=yes</p>
+<p>-messageBoxLog=path\filename.log</p>
+<p>Where filename is replaced by the pathname of the log file to be generated (e.g., reportanywhere.log or scheduledevents.log).</p>
+<p style="margin-left: 36.00pt;">Example:</p>
+<p style="margin-left: 36.00pt;">-messageBoxLog=\\sampro\docs\logs\report.log</p>
+
+</body></html>

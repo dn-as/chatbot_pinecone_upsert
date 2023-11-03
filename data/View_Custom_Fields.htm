@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.2.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="field label remapping"/>
+<meta name="MS-HKWD" content="custom"/>
+<meta name="MS-HKWD" content="label"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>View Custom Fields</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="default values,initial values,field label remapping,custom,label"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="View Custom Fields">
+        <span>View Custom Fields</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Custom FieldsViewer</h1>
+<h2>Purpose:</h2>
+<p>This viewer provides the following functionality:</p>
+<p style="margin-left: 36.00pt;">a. An alternative way of relabeling field 
+ names.</p>
+<p style="margin-left: 36.00pt;">b. A way to define Quick Pick lists that 
+ can be used to control values entered in text fields.<br/>
+c. A way to define a Default Value for a text field.</p>
+<p style="margin-left: 36.00pt;">d. Set the initial default value of Check 
+ Boxes, Radio Buttons, Integer, Decimal, Date and Time fields for new records.</p>
+<h2>Usage:</h2>
+<p>This function should be restricted to system-level client users and 
+ support.</p>
+<p>Relabeling done via this function overrides labeling specified via the 
+ <a href="Field_Label_Remapping.htm">Field Label Remap</a> functionality.</p>
+<h5>Custom Field Enhancements - Version 9.1 and Above</h5>
+<p>In previous releases, the Custom Fields functionality was label-specific. 
+ In other words, if you changed a common label such as &quot;Email Address:&quot; 
+ in one viewer (say, the Client record) to &quot;Client Email:&quot; it 
+ would appear in all Viewers (e.g, Job, Client Site, etc.) as &quot;Client 
+ Email&quot;.  A new v.cus field is required to see this new functionality: 
+ contact your Support Representative if needed.</p>
+<p>The Custom Fields functionality implemented in record viewers also displays 
+ on report input screens. For example, if &#39;Client Id&#39; is changed to &#39;Customer#&#39; 
+ in the Client viewer, report ranges previously labeled &#39;Client Id&#39; will 
+ now be labeled &#39;Customer#&#39;. Note that this enhancement is for the &#39;user&#39; 
+ reports obtained from Data-Basics.</p>
+<p>In this release the Custom Fields functionality has been enhanced to 
+ be <span style="text-decoration: underline; ">viewer-specific with the 
+ following exceptions:</span></p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Id Field 
+ Labels:</span> <br/>
+ Custom Field Labels for record Id&#39;s are used wherever that record is reference. 
+ For example, if you change the label &quot;Client Id:&quot; to &quot;Customer#&quot; 
+ the label Customer# will appear in the Client viewer as well as in the 
+ Job viewer. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Labels to 
+ the right of the field:</span><br/>
+ This release does not support the customization of labels that appear 
+ to the right of the fields, as is the case with most Checkbox (boolean) 
+ fields. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Fields without 
+ Standard Labels:</span><br/>
+ Some fields do not have a standard label defined; these may not be customized.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Address 
+ Fields:</span><span><br/>
+Address fields may not be changed via Custom Fields but may be changed 
+ for all instances via Start Field Label Remap. </span></p>
+<p><span style="font-weight: bold;">Standard Labels Appear On Status Pane:</span><br/>
+The ability to rename Field Labels is a good thing, but the user and/or 
+ support may need to see the Standard Label.  The Standard Label and 
+ been added to the Status Pane display to the left of the internal field 
+ name and database name and will be displayed when the mouse hovers over 
+ or selects the field.</p>
+<h2>Important Fields: Main Tab</h2>
+<p><font style="font-weight: bold;">Custom Field Id</font><font style="font-weight: bold;">:</font><font style="font-weight: bold;"><br/>
+</font>This value must uniquely identify a specific field in SAMPRO.  Note 
+ that Rn-type fields are not permitted, as well as any Field Id that contains 
+ &#39;cstmfld&#39;. The system will check for the validity of the field name when 
+ you tab out of the field, and alert you if it is not valid.</p>
+<h3>Getting the Field Id:</h3>
+<p>A simple mechanism (right-click) helps to define Custom Fields; it can 
+ be launched and pre-filled for a specific field.  Note that 
+ this option is only available to users that are allowed access to the 
+ View Custom Field function. For example, open the Vendor viewer to the 
+ form view and right-click on the Zip Code field: the system will ask if 
+ you want to customize this field. If you click ‘Yes’, the Custom Field 
+ viewer will launch with the select Field Id completed.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Examples 
+ of Field Names:</font></p>
+<table style="border-spacing:0px;width:583;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+		 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+		 border-collapse: separate;">
+	<tbody><tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 52.99%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Standard 
+		 Label</p></td>
+		<td style="border-spacing:0px;width: 47.01%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Field 
+		 Name</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 52.99%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Job 
+		 Id:</p></td>
+		<td style="border-spacing:0px;width: 47.01%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>job.id</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 52.99%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Work 
+		 Requested (on WO Equipment Tab)</p></td>
+		<td style="border-spacing:0px;width: 47.01%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>wrkordreqpmnt.wrk-rqstd</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 52.99%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Work 
+		 Performed (on WO Equipment Tab)</p></td>
+		<td style="border-spacing:0px;width: 47.01%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>wrkordreqpmnt.wrk-prfrmd</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 52.99%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Invoice 
+		 Description of Work Performed:</p></td>
+		<td style="border-spacing:0px;width: 47.01%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>wrkordr.wrkprfrmd 
+		 (on the WO Invoicing tab)</p></td>
+	</tr>
+</tbody></table>
+<p style="margin-left: 36.00pt;"> </p>
+<p><font style="font-weight: bold;">Custom Field Label:<br/>
+</font>The field provides an alternative label for a field.  If 
+ not specified, the standard label is used.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Example: 
+ Changing the Dispatcher Id Label</font></p>
+<p style="margin-left: 36.00pt;">In this case, let’s assume that we want 
+ the Dispatch Id label to display as Acct Coordinator:</p>
+<p style="margin-left: 36.00pt;">Custom Field Id: dsptchr.id<br/>
+Custom Field Label: Acct Coordinator:</p>
+<p><font style="font-weight: bold;">Default Value:<br/>
+</font>This field provides the initial value for a text field when starting 
+ a new record.  If not specified, the standard default value 
+ is used. </p>
+<p>The Custom Fields Default Value functionally may also be applied to 
+ Check Boxes, Radio Buttons, Integer, Decimal, Date and Time fields. <font style="font-weight: bold;">These fields should only be set on record 
+ header fields.</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> 
+ Certain fields are hard-coded to specific values. In these cases, the 
+ Default Value you entered will be overridden by the hard-coded value.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Set 
+ t</font><font style="font-weight: bold; text-decoration: underline; ">he 
+ Default Value of a Check Box</font></p>
+<p style="margin-left: 36.00pt;">1. Go to the viewer you wish to customize, 
+ and select and right-click on the check box you wish to set to checked. 
+ Click &#39;Yes&#39; when the system asks if you wish to customize this field.</p>
+<p style="margin-left: 36.00pt;">2. When the Custom Fields viewer opens, 
+ enter a Y in the Default Value header field, and save the Custom Fields 
+ record (NOTE: for Boolean-type fields, only the first character of the 
+ Default Value field is evaluated. If the first character is &#39;t&#39;, &#39;T&#39;, 
+ &#39;y&#39; or &#39;Y&#39;, then the field defaults to True.)</p>
+<p style="margin-left: 36.00pt;">3. <font style="font-weight: bold; font-style: italic; 
+											 text-decoration: underline; ">Close 
+ and re-open your original viewer.</font> When you click the New button, 
+ the check box you customized should now default to checked when you start 
+ a new record.</p>
+<p class="Support" style="margin-left: 66.25pt;"> </p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Set 
+ the Default Value of a Radio Button</font></p>
+<p style="margin-left: 36.00pt;">1. Go to the viewer you wish to customize. 
+ Carefully note the exact spelling of the radio button you wish to select 
+ as the default. Select and right-click on the radio button, and then click 
+ &#39;Yes&#39; when the system asks if you wish to customize this field.</p>
+<p style="margin-left: 36.00pt;">2. Set the Default Value in the Custom 
+ Fields viewer to the exact spelling of the radio button. Specifying an 
+ unsupported value results in no button being selected. Save the Custom 
+ Fields record.</p>
+<p style="margin-left: 36.00pt;">3. <font style="font-weight: bold; font-style: italic; 
+											 text-decoration: underline; ">Close 
+ and re-open your original viewer.</font> When you click the New button, 
+ the radio button you set as default should be selected when you start 
+ a new record.</p>
+<p style="margin-left: 36.00pt;"> </p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Set 
+ the Default Value of a Integer or Decimal Field</font></p>
+<p style="margin-left: 36.00pt;">1. Go to the viewer you wish to customize. 
+ Carefully note the format of the field so that the default value you enter 
+ does not exceed the size of the field. Select and right-click on the field, 
+ and then click &#39;Yes&#39; when the system asks if you wish to customize this 
+ field.</p>
+<p style="margin-left: 36.00pt;">2. Set the Default Value in the Custom 
+ Fields viewer to the integer or decimal value desired. Errors WILL occur 
+ if the user-specified default value isn&#39;t appropriate for the field type.</p>
+<p style="margin-left: 36.00pt;">3. <font style="font-weight: bold; font-style: italic; 
+											 text-decoration: underline; ">Close 
+ and re-open your original viewer.</font> When you click the New button, 
+ the integer or decimal field should be set to the default value you specified.</p>
+<p style="margin-left: 36.00pt;"> </p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Set 
+ the Default Date / or Time</font></p>
+<p style="margin-left: 36.00pt;">Date and Time include special support 
+ for <font style="font-weight: bold;">now</font> entered in the Default 
+ Value which sets the default value the current system date/time.</p>
+<p style="margin-left: 36.00pt;">1. Go to the viewer you wish to customize, 
+ and select and right-click on the date or time field you wish to default. 
+ Click &#39;Yes&#39; when the system asks if you wish to customize this field.</p>
+<p style="margin-left: 36.00pt;">2. When the Custom Fields viewer opens, 
+ enter <font style="font-weight: bold;">now</font> in the Default Value 
+ header field, and save the Custom Fields record</p>
+<p style="margin-left: 36.00pt;">3. <font style="font-weight: bold; font-style: italic; 
+											 text-decoration: underline; ">Close 
+ and re-open your original viewer.</font> When you click the New button, 
+ the date/time field you customized should now to the current system value 
+ when you start a new record.</p>
+<p style="margin-left: 88px;"><span style="font-weight: bold;">WARNING:</span> 
+ Default values such as &#39;30 days&#39; in a Date Field are NOT currently supported 
+ and may result in a &#39;index out of bounds&#39; error when accessing a record 
+ with a date or time field set incorrectly.</p>
+<p><font style="font-weight: bold;">Field Type: Field Size: Standard Label: 
+ Table Name DB: Column Name DB:<br/>
+</font>When you select a Field Id, these display-only fields will show 
+ the standard attributes for the field.</p>
+<h2>Important Fields:</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Values Tab</p>
+<p>The &#39;Values&#39; child table can be used to specify the list of acceptable 
+ values that can be entered into a customized text field. Note that 
+ the Field Values that you specify in this table will not impact the values 
+ in the existing data in this field. However, if you change the contents 
+ of a custom field, the system will require that you select a valid value, 
+ as defined by the Values tab.</p>
+<p><font style="font-weight: bold;">Custom Field Values:<br/>
+</font>Custom Values are only permitted for fields of type &#39;text&#39; or &#39;textbox&#39;.  A 
+ Value may not contain more characters than the customized field can hold.</p>
+<p style="margin-left: 36.00pt; font-weight: bold; text-decoration: underline; ">Example: 
+ Setting the Job User 2 field to specify market segments</p>
+<p style="margin-left: 36.00pt; font-weight: bold;"><font><span style="font-weight: normal; 
+	 text-decoration: none; ">In this example, only values of Residential, 
+ Commercial and Industrial may be entered in the Job User 2 field (named 
+ Market Segment).</span></font></p>
+<p style="margin-left: 48px;">Custom Field Id: jb.usr2<br/>
+Custom Field Label: Market Segment:<br/>
+</p>
+<table class="AlternateBlueWithBlankHeader" style="border-spacing:0px;width:334;left: 0px; top: 2614px; 
+		 margin-left: 40px;">
+	<colgroup><col style="width: 45.971%;"/>
+	<col style="width: 54.029%;"/>
+	</colgroup><tbody><tr class="t1st" style="">
+		<td style="border-spacing:0px;width: 45.971%;"><p>Value</p></td>
+		<td style="border-spacing:0px;width: 54.029%;"><p>Description</p></td>
+	</tr>
+	<tr class="t2Row" style="">
+		<td style="border-spacing:0px;width: 45.971%;"><p>Residential</p></td>
+		<td style="border-spacing:0px;width: 54.029%;"><p>Residential Sites</p></td>
+	</tr>
+	<tr class="t1Row" style="">
+		<td style="border-spacing:0px;width: 45.971%;"><p>Commercial</p></td>
+		<td style="border-spacing:0px;width: 54.029%;"><p>Commercial Sites</p></td>
+	</tr>
+	<tr class="t2Row" style="">
+		<td style="border-spacing:0px;width: 45.971%;"><p>Industrial</p></td>
+		<td style="border-spacing:0px;width: 54.029%;"><p>Industrial Sites</p></td>
+	</tr>
+</tbody></table>
+<p style="margin-left: 36.00pt; font-weight: bold; text-decoration: underline; ">Example: 
+ Allowing a Blank in the Job User 2 field</p>
+<p style="margin-left: 36.00pt; font-weight: normal; text-decoration: none underline; "><span style="text-decoration: none; ">In this example, the values of Residential, 
+ Commercial, Industrial and blank may entered in the Job User 2 field (named 
+ Market Segment).  In this case, in the last line, the Value field 
+ is empty, but the Description is completed so that the software knows 
+ to save the last row.</span></p>
+<p style="margin-left: 48px;">Custom Field Id: jb.usr2<br/>
+Custom Field Label: Market Segment:|<br/>
+</p>
+<table class="AlternateBlueWithBlankHeader" style="border-spacing:0px;width:334;left: 0px; top: 2614px; 
+		 margin-left: 40px;">
+	<colgroup><col style="width: 45.971%;"/>
+	<col style="width: 54.029%;"/>
+	</colgroup><tbody><tr class="t1st" style="">
+		<td style="border-spacing:0px;width: 45.971%;"><p>Value</p></td>
+		<td style="border-spacing:0px;width: 54.029%;"><p>Description</p></td>
+	</tr>
+	<tr class="t2Row" style="">
+		<td style="border-spacing:0px;width: 45.971%;"><p>Residential</p></td>
+		<td style="border-spacing:0px;width: 54.029%;"><p>Residential Sites</p></td>
+	</tr>
+	<tr class="t1Row" style="">
+		<td style="border-spacing:0px;width: 45.971%;"><p>Commercial</p></td>
+		<td style="border-spacing:0px;width: 54.029%;"><p>Commercial Sites</p></td>
+	</tr>
+	<tr class="t2Row" style="">
+		<td style="border-spacing:0px;width: 45.971%;"><p>Industrial</p></td>
+		<td style="border-spacing:0px;width: 54.029%;"><p>Industrial Sites</p></td>
+	</tr>
+	<tr class="t1Row" style="">
+		<td style="border-spacing:0px;width: 45.971%;"><p> </p></td>
+		<td style="border-spacing:0px;width: 54.029%;"><p>Blank</p></td>
+	</tr>
+</tbody></table>
+<p style="margin-left: 48px;">In this example, the field may be changed 
+ to blank. When you double-click on the field, the following selector box 
+ will be displayed.</p>
+<p style="margin-left: 48px;"><img src="assets/images/image/selectblank.gif" alt="" style="border: none;" border="0"/></p>
+<p style="font-weight: bold;"> </p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Values in DB Tab</p>
+<p>The &#39;Values in DB&#39; tab has been included so that the user can see what 
+ values are currently in the database.</p>
+<p class="Support" style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Support"><br/>
+<br/>
+<br/>
+</p>
+
+</body></html>

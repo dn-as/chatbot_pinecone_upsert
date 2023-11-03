@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.9.1.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="accounts payable"/>
+<meta name="MS-HKWD" content="ap"/>
+<meta name="MS-HKWD" content="journal"/>
+<meta name="MS-HKWD" content="payables"/>
+<meta name="MS-HKWD" content="subcontractor"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>AP Journal Subcontractor Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="accounts payable,ap,journal,payables,subcontractor"/><meta name="brsnext" value="AP_Journal_INV_Tab_Viewer.htm"/><meta name="brsprev" value="Accounts_Payable_Journal_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AP Journal Subcontractor Tab">
+        <span>AP Journal Subcontractor Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>AP Journal Subcontractor Tab</h1>
+<h2>Purpose:</h2>
+<p>Detail from the Subcontractor tab of the Purchase Order will appear 
+ on this tab. You must have earned an amount Earned on the Subcontractor 
+ tab of the Purchase Order to be able to voucher it.</p>
+<p>The GL accounts entered on this tab cannot be the same as any of the 
+ header accounts on the GL or Main tabs.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Amount:</font><br/>
+The amount to be vouchered. This field defaults from the Earned - Previously 
+ Vouchered Amount. This field cannot exceed the Approved (display only) 
+ field. A <a href="Registry_Entry_AP_Journal.htm">registry</a> 
+ must be in place to allow vendor billings to exceed the amount earned.</p>
+<p><font style="font-weight: bold;">Retainage%  Retainage:</font><br/>
+These fields default from the Purchase Order but may be changed by the 
+ user. Note that the Retainage dollar amount cannot exceed the Amount field. 
+ Also, the Retainage% cannot exceed 100.00%</p>
+<p><font style="font-weight: bold;">GL Account:</font><br/>
+The expense account to be debited for this item. This field defaults from 
+ the PO but may be changed by the user. The display-only GL Account Name 
+ field defaults from the GL Account record.</p>
+<p><font style="font-weight: bold;">GL Entity:</font><br/>
+The Id of the GL Entity for which this expense was incurred. 
+ When Intercompany is enabled and a detail line contains a Job Id, any 
+ changes to the line&#39;s GL Entity are validated to ensure that the new GL 
+ Entity belongs to the same company as the Job. This field 
+ should be entered if your firm departmentalizes or tracks profit centers. 
+ This field defaults from the PO but may be changed by the user. SAM Pro 
+ may validate the consistency of the GL Entities entered in the parent 
+ and lines of the AP Journal.  The validation can take the form 
+ of either an error or a warning based on the content of the registry entry 
+ discussed in <a href="Registry_Entry_AP_Journal.htm">Registry Entry AP 
+ Journal</a>.</p>
+<p><font style="font-weight: bold;">Ordered:</font><br/>
+This display-only field defaults from the Purchase Order as the total of 
+ the original amount plus approved Change Orders.</p>
+<p><font style="font-weight: bold;">Earned:</font><br/>
+This display only field is calculated by the system from the amount earned 
+ in the Purchase Order Subcontractor tab.</p>
+<p><font style="font-weight: bold;">Vouchered:</font><br/>
+The amount that has been previously vouchered (from the Purchase Order).</p>
+<p><font style="font-weight: bold;">Approved:</font><br/>
+Earned - Vouchered (defaults from the Purchase Order).</p>
+<p><font style="font-weight: bold;">Work Order Id:</font><br/>
+This optional field defaults from the PO, and indicates the work order 
+ (if any) for which this expense was incurred.</p>
+<p><font style="font-weight: bold;">Equipment Id:<br/>
+</font>If the user enters a Work Order Id, the system will default in the 
+ first piece of equipment on the Work Order’s Equipment tab UNLESS this 
+ behavior is disabled via registry (see <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_journal_equipment_id">Registry 
+ Option - Do Not Default Equipment Id</a>). If the user double clicks on 
+ this field, the system will display a list of all equipment associated 
+ with the Client Site referenced in the Work Order.</p>
+<p>If the sys-ffv-global setting &#39;DefaultEquipmentFromWorkorder&#39; is set 
+ to false, the user is allowed to set the Equipment Id back to blank. If 
+ this registry option is not present or set to true, the Equipment Id must 
+ be completed if a Work Order Id is referenced.</p>
+<p><font style="font-weight: bold;">Job:</font><br/>
+This field defaults from the PO, and indicates the Job (if any) for which 
+ this expense was incurred. The display-only Job Name: field defaults from 
+ the Job record.</p>
+<p><font style="font-weight: bold;">Cost Category Id:</font>  <font style="font-weight: bold;">Job Cost Code Id:</font>  <font style="font-weight: bold;">Job 
+ Bill Itm Id:</font><br/>
+If a Job Id is specified, these fields are required. Job 
+ Cost Categories are not needed if a Job/Work Order is not specified. The 
+ Job Cost Category will be cleared if a Job is NOT specified. </p>
+<p> The Cost Category supports enhanced 
+ filtering provided by the Cost Code&#39;s Job Cost Category Usage Filter. 
+ Cost Categories are validated (relative to Cost Codes) during data entry 
+ upon leaving the Cost Category Id field.  The full relationship is 
+ validated again when leaving the line or saving the record. Cost Categories 
+ of Equipment and Subcontract are allowed; the use is warned if other types 
+ are selected.</p>
+<p><font style="font-weight: bold;">Other Rate Id:  Bill Type Id:</font><br/>
+These fields default from the PO Record. The Bill Type Id field is required 
+ if job information is filled in.</p>
+<p style="font-weight: bold; margin-left: 48px;">Tip: <span style="font-weight: normal;">If 
+ a PO is generated without an Other Rate Id, when it is partially vouchered 
+ will change the Bill Type ID to n/a and remove the Revenue Rate. To avoid 
+ this problem, add a line to Other Rate tables related to Subcontractors 
+ to define how the Bill Type Id and Revenue Rate should be set if an Other 
+ Rate was NOT specified.</span></p>
+<p><font style="font-weight: bold;">Extra?</font><br/>
+Flag this field if this item was ordered as a contract extra that you can 
+ bill your customer for.</p>
+<p><font style="font-weight: bold;">Revenue Rate:</font><br/>
+This field defaults from the Rate Schedule for the Job (or Work Order) 
+ these items are being vouchered for, but may be changed if needed.</p>
+<p><font style="font-weight: bold;">Amount Revenue:</font><br/>
+If a WO or Job is associated with this line, this field represents the 
+ amount you will bill your client for this item. The system will attempt 
+ to calculate this field for both T&amp;M and Fixed-Allow Extras Billing 
+ Items. In the latter case, the Revenue will be only calculated if the 
+ Extra box is checked.</p>
+<p><font style="font-weight: bold;">Close PO Line?</font><br/>
+Flag this field if you wish to close this line even if the total amount 
+ has not been earned.</p>
+
+</body></html>

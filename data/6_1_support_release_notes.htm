@@ -1,0 +1,809 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>6.1 Support Release Notes</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addAvenueInfo("Support","6_2_support_release_notes.htm","");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" style="margin-top:0;margin-bottom:0"> Data-Basics Support Services&nbsp;</P>
+ <P class="Support_Heading_1" >6.1 Support Release Notes</P>
+ <P class="See_Also" >Important Notice: this help file is intended for use by Authorized Data-Basics Support Personnel only.  Incorrect implementation of the information discussed here can create problems with software functionality and/or data. </P>
+ <P class="Support_Heading_2" >Fogbugz Cases</P>
+ <P class="Support_Heading_2" >BUGS and FEATURES</P>
+ <P class="support" >The following bugs have been corrected recently for version 6.1.  If you have access to Fogbugz, log on to see details.  If not, contact Jean for details on specific fixes. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >Note:</FONT> <FONT style="font-weight:bold; " >a star </FONT>*<FONT style="font-weight:bold; " > preceding the case number</FONT> indicates that testing is not complete on this fix.  </P>
+ <P class="support" >Case  &nbsp;Title Description </P>
+ <P class="support" >2007-12-04 -version 6.1.358.070</P>
+ <P class="support" >1995&nbsp;2007 W-2 Format Changes</P>
+ <P class="support" >In the actual W-2, the Social Security Number has been moved to the government mandated position so that it will not show through an envelope window. The Control number has also been relocated.  Note that the Plain Paper copy does not reflect these changes. </P>
+ <P class="support" >2007-11-21 - version 6.1.358.069</P>
+ <P class="support" >219&nbsp;ODBC Statements</P>
+ <P class="support" >2007-11-09 (JB)-version 6.1.358.068</P>
+ <P class="support" >219&nbsp;ODBC Statements – system primitive failed error - replaces lost code</P>
+ <P class="support" >1974&nbsp;Improved code merge technology – internal refinements – see case for details</P>
+ <P class="Support_Heading_2" >Build 67</P>
+ <P class="support" >1818&nbsp;Inventory Item Serialized Tab – corrects various display issues</P>
+ <P class="support" >1841&nbsp;Error detection on Save – TechAnywhere (Internal)</P>
+ <P class="Style_Support_+_Left___0_5_" >Any errors detected during the emulation of the Save button are now being transferred to the FieldFormViewer instance's list of detected errors. This effects only certain applications which use Data Entry Emulation mode to update records. There are just two such applications: the Kappus Blackberry Tech Anywhere project and the regular Tech Anywhere when it updates a Client Site Equipment record.</P>
+ <P class="Style_Support_+_Left___0_5_" >Before this change, if the actual writing of a new record encountered an error, this error was not properly identified and not properly handled. This could result in the record not being saved while the application thought the save was successful.</P>
+ <P class="support" >1795&nbsp;Inventory Adjustments Journal – correct stack overflow problem caused by earlier code. </P>
+ <P class="support" >1818&nbsp;Inventory Item Serialized tab </P>
+ <P class="support" >&nbsp;Corrects sporadic display issue when PO number but no Vendor appeared.</P>
+ <P class="Style_Support_+_Left___0_5_" >Also sets PO Id for Inventory Adjustments</P>
+ <P class="support" >1518&nbsp;GL Type Reports</P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects problem with GL Type Reports when a report is defined with both the Font For Report Lines and Font For Heading Lines set as bold. If both these fields were set to bold, the user got an error lineSpacing Not Understood.&nbsp;Also note that if the Heading Font was not the default and the Line Font was the default, the number of lines per inch were being determined by the heading, not the line. This patch fixes this unreported problem.</P>
+ <P class="support" >1795&nbsp;Inventory Adjustments Journal – relax serialized inventory constraints – Kappus only</P>
+ <P class="support" >1765&nbsp;CSRAnywhere – corrects display of on-hand serialized inventory – Kappus customization</P>
+ <P class="support" >1754&nbsp;Remote Time Entry (Dialect)</P>
+ <P class="Style_Support_+_Left___0_5_" >Correction to problem with truncation of digits in Expense entry. Correction is available in time_expense_viewer dialect application dated 7/02/2007.</P>
+ <P class="support" >1750&nbsp;CSRAnywhere – corrections for MSSQL server for Kappus</P>
+ <P class="support" >1738&nbsp;Work Order: when Insert/Copy is used on tabs, don’t copy AR Invoice Id</P>
+ <P class="support" >1748&nbsp;Inventory Item Serial tab – fix loading problem in MSSQL – see case for details</P>
+ <P class="support" >1721&nbsp;Kappus – Expesite change to message tags – see case for details</P>
+ <P class="support" >1704&nbsp;CRM/CSR changes for Kappus Expesite under MSSQL – see case for details</P>
+ <P class="support" >451&nbsp;GL Report Execution from GL Report Viewer </P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects error when running reports for which no UD function has been created from GL Report viewer </P>
+ <P class="support" >1524&nbsp;Inventory Restock Function</P>
+ <P class="Style_Support_+_Left___0_5_" >The methodology has been changed in this function. Effective now...the &quot;trigger&quot; mechanism is that when &quot;on hand&quot; quantity is less than the &quot;reorder level&quot;, an item will qualify for replenishment, and the Quantity to PICK will be however many are required to bring the &quot;on hand&quot; quantity up to the &quot;Order Up To Level.<BR><BR>for instance...if 2 are on hand<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3 is the reorder level<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 10 is the order up to<BR><BR>then an item would qualify for 8 to be picked.</P>
+ <P class="Support_Heading_2" >Build 66</P>
+ <P class="support" >1268&nbsp;Start EOM Unvouchered Payables</P>
+ <P class="support" >&nbsp;Corrects problem where costs of over 1,000,000 were being truncated.</P>
+ <P class="support" >1432&nbsp;Labor Journal</P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects error introduced by 1362 that allowed edits to transactions that have a following entry.</P>
+ <P class="support" >1396&nbsp;Inventory Purchases Tab – display problem in Vendor Name, Id fields corrected</P>
+ <P class="support" >1394&nbsp;New Call – performance enhancement in AR fetch when selecting site – see case for details.</P>
+ <P class="support" >1384&nbsp;1.16 Daylight Savings Time</P>
+ <P class="Style_Support_+_Left___0_5_" >SAM Pro has been updated to conform to the new rules that, starting in March 2007, daylight time in the United States will begin on the second Sunday in March and end on the first Sunday in November.  This information is used for Time Zone offsets.  It is dependent upon a correct server time; be sure to verify that your customers servers are displaying the correct time when Daylight Savings goes into effect. </P>
+ <P class="Support_Heading_2" >Build 65</P>
+ <P class="support" >1362&nbsp;Implement a registry entry that relaxes the restrictions on Labor Journal edits </P>
+ <P class="Style_Support_+_Left___0_5_" >This registry entry relaxes the restrictions on edits to transactions where the Payroll Period is no longer active and/or the Employee has already been paid for the Pay Period.&nbsp; Changes to the parent record (Employee Id, Total Hours, Pay Period, etc.) will NOT be permitted. It's also important to note that changes to Cost Codes and Cost Categories (which may change GL Accounts and/or Entities) will not be reflected in the general ledger.</P>
+ <P class="support" >Id: sys-viewer-vlbrjrnl<BR>Contents: AllowEditAfterPayrollProcessed=true</P>
+ <P class="Support_Heading_2" >Build 64</P>
+ <P class="support" >1326&nbsp;W2 Partial Year Reporting – see user notes 2.32. 1/24 image includes fix for Sybase 7 databases.</P>
+ <P class="Support_Heading_2" >Build 63</P>
+ <P class="support" >1174&nbsp;Inventory Adjustment Journal </P>
+ <P class="support" >&nbsp;For serialized items, a ‘to’ location must be specified if a ‘from’ location is.</P>
+ <P class="support" >1242&nbsp;Fix typo for Compute PR when Allow FICA Exemption is in use – see case for details</P>
+ <P class="support" >1240&nbsp;Compute Service Invoice</P>
+ <P class="Style_Support_+_Left___0_5_" >Prevents reprinting of invoice while post in progress, which could result in double post of invoice.</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >IMPORTANT:</FONT> this patch does not prevent reprinting of invoices if the olddialog registry option is set in sys-printer-dialog-ssrvcebllngcmpte. The old dialog option enables you to select the alternate print tray for invoice stationary. It is advised that you avoid the olddialog option and instead set up an additional print driver to select when printing invoices that specifies the appropriate paper drawer as the default. <FONT style="font-weight:bold; " > </FONT></P>
+ <P class="support" >1192&nbsp;GL Report 3 – now adjusts line spacing when font size changed</P>
+ <P class="support" >1191&nbsp;User Defined Report 2 – now adjusts line spacing when font size changed</P>
+ <P class="support" >1160&nbsp;Work Order Viewers</P>
+ <P class="support" >&nbsp;The system now prevents you from deleting invoiced lines (unless you first reverse them).</P>
+ <P class="support" >1133&nbsp;Inventory Receipts Journal</P>
+ <P class="Style_Support_+_Left___0_5_" style="margin-top:0;margin-bottom:0"> Now validates the Date Received against eligible dates in the accounting period selected.&nbsp; This will prevent users from selecting dates that are in closed accounting periods, by selecting an active period and using closed dates.&nbsp;</P>
+ <P class="support" >1169&nbsp;Fill Backorders for Shop – fixed SQL Service incompatibility – see case for details.</P>
+ <P class="Support_Heading_2" >Build 62</P>
+ <P class="support" >1165&nbsp;New Call WO History Pane now displays Work Code from WO Equipment lines </P>
+ <P class="support" >1123&nbsp;Fixes problem with launch of PO from WO caused by this enhancement</P>
+ <P class="support" >1091&nbsp;crv Registry Entry (for CrystalView) – means to extract additional registry settings</P>
+ <P class="support" >AdditionalRegistrySettings=<FONT style="font-style:italic; " >registry1,registry2,...</FONT></P>
+ <P class="Style_Support_+_Left___0_5_" >If found in the crv registry setting, this will pass the appropriate registry settings implemented by the specified registry entries to Crystal View. Note that if multiple registry entries are specified, they should be separated with commas.</P>
+ <P class="support" >Example:</P>
+ <P class="support" >AdditionalRegistrySettings=sys-email</P>
+ <P class="support" >This passes the sys-email registry options settings to CrystalView so that email settings used for SAM Pro will also be available for Crystal View. </P>
+ <P class="support" >1123&nbsp;General Viewer technology performance enhancement</P>
+ <P class="Style_Support_+_Left___0_5_" >Some viewers (the Inventory Item Viewer, for example) can exhibit very poor performance when generating the record list screen. The problem is actually that after generating the list, the method eventRecordRetrieved is invoked, even though no record has been chosen. The logic is convoluted and dangerous to modify. However it is clear that the referenced record is the empty record. Modify the process so as not to invoke eventRecordRetrieved at this inappropriate time.</P>
+ <P class="support" >1126&nbsp;Dispatch Board – Classic Board</P>
+ <P class="Style_Support_+_Left___0_5_" >When you change the Date and the tech of a WO on the classic board, using the bottom of the screen, and save it, it did not actually change the tech, just the date. Problem corrected.</P>
+ <P class="support" >1079&nbsp;Dispatch Board – internal, see case for details.</P>
+ <P class="support" >1073&nbsp;Bank Reconciliation and Clear Checks</P>
+ <P class="Style_Support_+_Left___0_5_" >The system no longer lists Checks reconciled via Clear Check when the AutoFill button is clicked. This enhancement enables users who have previously been using Clear Check to switch over to the new Bank Reconciliation functionality.</P>
+ <P class="support" >1041&nbsp;Data Conversion Utility – bad date handling, see case for details.</P>
+ <P class="support" >1099&nbsp;Cost Code and Billing Item not Filtered by Job Record</P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects problem (introduced for a couple of builds by case 1070) on clicking Billing Item / Cost Code icons in Job record.</P>
+ <P class="support" >1070&nbsp;Changes to Work Orders (and other records) not prompting for save</P>
+ <P class="Style_Support_+_Left___0_5_" >If you change a field in a record, and, without leaving the field, switch back to the pick list, the viewer was unaware of the changed field and did not prompt for save.  Corrects problem. </P>
+ <P class="support" >1090&nbsp;AP Journal – deny changes to PO # on existing AP Journal entries</P>
+ <P class="Style_Support_+_Left___0_5_" >Changing the PO Id in an existing transaction was resulting in erroneous postings.&nbsp; To prevent this, the new procedure will be to delete the erroneous entry and start a new one for the correct PO Id. If a check has already been cut, it must be voided before the entry can be deleted. </P>
+ <P class="support" >1081&nbsp;Dispatch Board references incorrect method name</P>
+ <P class="Style_Support_+_Left___0_5_" >Notice in error log review – not reported by customer. See case for details.</P>
+ <P class="support" >1054&nbsp;View Document</P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects problem where documents pointing URLs (http, https, www) didn't successfully launch when the user's default browser was Firefox.</P>
+ <P class="support" >1053&nbsp;AP Journal viewer</P>
+ <P class="Style_Support_+_Left___0_5_" >If a second Manual AP Check is created immediately following the first check, then the second check's chcklst.chcklst_rfrnce_rn entry refers back to the first check's vndrinvce_rn.</P>
+ <P class="support" >1065&nbsp;Employee viewer – SSN range added to filter view for easy lookup</P>
+ <P class="support" >1050&nbsp;Field class enhancements (internal) - see case for details</P>
+ <P class="support" >Build 61</P>
+ <P class="support" >543&nbsp;Implement trx date/time stamping on history entries</P>
+ <P class="support" >Extends to Job Invoice and Reverse. See this case and case 1031 for details.  </P>
+ <P class="support" style="margin-top:0;margin-bottom:0">  1045&nbsp;Data Import Utility&nbsp;</P>
+ <P class="Style_Support_+_Left___0_5_" >In previous releases, the file import utility reads in the entire input file before performing the import. For large imports, this could result in the exceeding of the Smalltalk memory limits. This process has been revised to avoid this problem. See case for more details.</P>
+ <P class="Style_Support_+_Left___0_5_" >8/24/2006 – corrects error where the input file was not being properly closed when the import was aborted because of a fatal error or because the error limit was exceeded. </P>
+ <P class="support" >1041&nbsp;Data Import Utility</P>
+ <P class="Style_Support_+_Left___0_5_" >The following changes have been made to the Data Import Utility:</P>
+ <P class="support" >Do not treat a bad date (e.g. 06/31/2006) as a fatal error. Instead, issue a warning and set the date to the empty value.</P>
+ <P class="support" >Expand the maximum width of a line on the log from 100 characters to 1000 characters.</P>
+ <P class="support" >Some errors marked FATAL may not actually cause an abort and rollback. Fix this. Also, indicate at the end of the report if any FATAL errors were encountered.</P>
+ <P class="support" >517&nbsp;History Posting </P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects some/all extraneous WO reversals. Should also fix record lock bug. See case for detail.</P>
+ <P class="support" >1039&nbsp;Saved Report Ranges handle single quotes correctly</P>
+ <P class="Style_Support_+_Left___0_5_" >In previous builds, problems could occur if you entered and saved a report range that included a quote mark (e.g. sql=(jb_id like '1%')). When the range was later recalled, each single quote has been replaced by two single quotes. (e.g. sql=(jb_id like ''1%'')).</P>
+ <P class="support" >982&nbsp;ReportAnywhere now supports user’s branch graphics defined in report registry settings</P>
+ <P class="support" >1035&nbsp;Purchase Order viewer</P>
+ <P class="Style_Support_+_Left___0_5_" >Changes to the PO parent Job Id are now prevented once the PO has either IRJ receipts or AP Journal transactions recorded. </P>
+ <P class="support" >Build 60</P>
+ <P class="support" >Sporadic Stack Overflow Error</P>
+ <P class="support" >This problem has hopefully been corrected with this build.</P>
+ <P class="support" style="margin-top:0;margin-bottom:0"> 815 &nbsp;Error processing – more informative messages for row lock conditions&nbsp;</P>
+ <P class="support" >1019*&nbsp;Record Billing Adjustments – correction to Hold property issue</P>
+ <P class="support" >1020*&nbsp;Revised Processing for SQL Server Data Conversion&nbsp;</P>
+ <P class="support" >Build 59</P>
+ <P class="support" >1013&nbsp;View Inventory Stock Status</P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects a problem where right-clicking an item on the list view displayed the last item on the stock status list. The selected item now appears.</P>
+ <P class="support" >1003&nbsp;Employee Viewer - SS # removed from view list indices for security reasons. </P>
+ <P class="support" >968&nbsp;TechFinder – registry setting </P>
+ <P class="Style_Support_+_Left___0_5_" >If additions to the tech status or escalation status are needed (for example, if you use the pending status) there is a Registry Override in that lets you do so.  See section 2.31 of the 6.1 Customer Release Notes for details. </P>
+ <P class="support" >980&nbsp;Purchase Order Viewer - Field Removed: Sales Tax Group</P>
+ <P class="Style_Support_+_Left___0_5_" >In previous releases, this field defaulted from the Vendor record. It is<FONT style="font-weight:bold; " > </FONT>not currently used by the software and has been removed as obsolete.  Note that the Sales Tax Group in the PO lines is set from the Job record (if specified) as in previous releases. </P>
+ <P class="support" >968&nbsp;TechFinder Viewer</P>
+ <P class="Style_Support_+_Left___0_5_" >In previous releases, the TechFinder Scheduled Hours grid included hours for work orders lines that were set to the following statuses:  On Break, onsite, scheduled, travel, unacknowledged, waiting service, waiting quote.  We added ‘completed’ with this case. Work Orders with an Escalation Status and Status Category of ‘completed’ are also included as of this mod.  </P>
+ <P class="support" >975&nbsp;Vendor Viewer – Sales Tax Group field removed</P>
+ <P class="Style_Support_+_Left___0_5_" >The sales tax group field was originally added to the Vendor record to support some anticipated custom work that didn’t pan out.  This field is not currently used by the software as is being removed as obsolete.  </P>
+ <P class="support" >891&nbsp;Purchase Order Viewer</P>
+ <P class="Style_Support_+_Left___0_5_" >The Inventory tab's Job Qty cannot be set to zero if the line contains either a WO Id or a Job Id. This was implemented to prevent a problem where PO costs (and a Job Quantity of 0) were imported into Work Orders. If the Job Qty is zero, then the costs should not be associated with the WO/Job at all.</P>
+ <P class="support" >927&nbsp;Classic Dispatch Board locking users</P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects a problem where drag-and-drop WO reassignment from Classic Board was leaving wrkordrtchncn rows with uncommitted SQL updates related to re-sequencing the calls.</P>
+ <P class="support" >Previously Undocumented Feature</P>
+ <P class="support" >~&nbsp;(Global Not)</P>
+ <P class="Style_Support_+_Left___0_5_" >The tilde (~) is a NOT operator. When the first character is a ~ the rest of the filter indicates which to exclude.  For example, <FONT style="font-weight:bold; " >~a,p,m</FONT> will include all values except a, p or m. This operator allows for more flexibility than ! or &lt;&gt;.</P>
+ <P class="support" >900&nbsp;Start View DBReport – corrects error on opening report viewer.</P>
+ <P class="support" >899&nbsp;Client Site Viewer</P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects ‘record not found’ error on ClientSitesByClientSiteAlpha sort when Days field of record selected contained a dollar sign. </P>
+ <P class="support" >901&nbsp;WO’s can be set to Invoice Ready with Open PO Lines <FONT style="font-weight:bold; " >(change to default behavior!)</FONT></P>
+ <P class="Style_Support_+_Left___0_5_" >In version 6.1.358.055 the system would allow you to bill Work Orders using Service Invoicing when the Work Order had open purchase orders attached to the Work Order.&nbsp; In order to do this you had to manually check the Ready to Invoice button within the Work Order instead of using the OK to Invoice (thumbs up icon).&nbsp; This version of the software didn’t restrict the billing process when purchase orders were ‘open’.&nbsp; Version 6.1.358.056 and up does restrict the billing of any Work Order if there are attached ‘open’ purchase orders regardless if you manually check this box of use the Thumbs up Icon.</P>
+ <P class="Style_Support_+_Left___0_5_" >Since some customers wish to bill even if a PO is open, the default behavior of the system has been effectively changed to allow Invoice Ready with open POs.&nbsp; The user will get a warning stating that open POs do exist for the WO.&nbsp; The new default behavior can be overridden by registry entry as follows...<BR><BR>Id:&nbsp; sys-viewer-vwrkordr<BR>Contents:&nbsp; OkToBillWithOpenPOs=false</P>
+ <P class="support" >869&nbsp;Kappus WebServices – escalation management  -see case for details.</P>
+ <P class="support" >169&nbsp;Shop Order viewer </P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects problem with incorrect reversal entries for Inventory-Centric Shop Orders</P>
+ <P class="support" >629&nbsp;Shift Tab Behavior</P>
+ <P class="Style_Support_+_Left___0_5_" >Pressing Shift Tab now correctly back-tabs in the Log On and Report Range screens. </P>
+ <P class="support" >857&nbsp;Flat Rate Category</P>
+ <P class="Style_Support_+_Left___0_5_" >If you create a new flat rate category, the line numbers for the Price Grid will display as all 9's instead of 1-9. Once the new flat rate has been created, all existing flat rate line numbers will also display incorrectly.</P>
+ <P class="support" >849&nbsp;Job Cost Category</P>
+ <P class="Style_Support_+_Left___0_5_" >Fix for MSQL so that Cost Selection Type defaults from Cost Type during conversion.</P>
+ <P class="support" >Build 58</P>
+ <P class="support" >822&nbsp;Unable to Email from DBoard with Outlook=True – problem corrected</P>
+ <P class="support" >840&nbsp;Consolidated Invoice Viewer</P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects problem where Site Id’s were not displayed correctly when the Autofill button was pressed.</P>
+ <P class="support" >766&nbsp;Client Order Viewer</P>
+ <P class="Style_Support_+_Left___0_5_" >This build corrects an error that appeared when the user attempted to select a Site with an associated COP Client (regardless of Status) that was introduced in build 56. This build corrects this issue so that the Client Order now operates as follows:</P>
+ <P class="Style_Support_+_Left___0_5_" >When creating a Client Order, the system now checks the status of the Client Site as well as the Client (specified in the COP Tab of the Site record).  Orders are now permitted only if both the Site and Client have a status of ‘Active.’ </P>
+ <P class="support" >815 &nbsp;Error.log</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">            Implements more informative error.log messages associated with row lock conditions.&nbsp;</P>
+ <P class="support" >812&nbsp;AP Journal</P>
+ <P class="Style_Support_+_Left___0_5_" >AP Journal now denies the deletion of INV/GEN lines that were 'Copied for Edit'.</P>
+ <P class="support" >714&nbsp;CRMAnywhere</P>
+ <P class="Style_Support_+_Left___0_5_" >The ‘Work Requested’ field on New Work Requested is now displayed as a text box. The character limit is still 1024. </P>
+ <P class="support" >146&nbsp;CSRAnywhere and CRMAnywhere</P>
+ <P class="Style_Support_+_Left___0_5_" >Minor formatting changes.</P>
+ <P class="support" >Build 57</P>
+ <P class="support" >779&nbsp;Quote Master</P>
+ <P class="Style_Support_+_Left___0_5_" >NOTE:&nbsp; these fixes apply to v6.1 only!<BR>Quote Master Wizard creates revenue lines on the WO-OTH tab for Fixed Price quote scope lines.&nbsp; Currently, the revenue is not being written in the WO-OTH line.<BR><BR>The WO viewer's Quote tab is showing doubled quote amounts for Fixed Price quote scope lines.<BR><BR>Add registry entry to disable the Auto-Receiving that occurs when Quote Master creates POs (see user notes 2.30).</P>
+ <P class="support" >777&nbsp;Start Renew Service Contracts – Corrects SQLServer Syntax problems</P>
+ <P class="support" >Build 56</P>
+ <P class="support" >770&nbsp;New Call Create New Site, Client, Job (Flashlight)</P>
+ <P class="Style_Support_+_Left___0_5_" >The Client Alpha, Voice Phone and Fax Phone now default from the corresponding Site fields when you click the Copy Site to Client button. </P>
+ <P class="support" >764&nbsp;AR Cash Receipts Journal</P>
+ <P class="Style_Support_+_Left___0_5_" >The Description field no longer blanks if you click out of it (e.g., to select an invoice). In previous releases, the Description text was retained only if you tabbed out of the field.</P>
+ <P class="support" >461&nbsp;CRM Anywhere </P>
+ <P class="Style_Support_+_Left___0_5_" >See Customer Notes 2.29: Registry Entry specifies CRM Viewable Document Categories.</P>
+ <P class="support" >763&nbsp;PWP Approval Function – corrected syntax problem with SQLServer. </P>
+ <P class="support" >743 &nbsp;CRM Anywhere - Site ID with # returned with url encoding</P>
+ <P class="Style_Support_+_Left___0_5_" >When logged on to the CRM web interface a customer views the list of sites for one of the reports (Equipment Report).&nbsp; The site ID has a # sign in it (Bigbox #2300).&nbsp; It gets returned from the lookup as Bigbox %xxxxx and you cannot process the report. This problem has been corrected.</P>
+ <P class="support" >754&nbsp;CRMAnywhere – custom work for client 1569 – see case for details.</P>
+ <P class="support" >750&nbsp;Print Screen</P>
+ <P class="Style_Support_+_Left___0_5_" >In the Inventory Item viewer, when the user selected 'Print Screen...' from the 'File' pull down menu at the top of the screen, a blank page was printed. 'Print Screen...' corrected to work for all viewers. </P>
+ <P class="support" >751&nbsp;Old Print Dialog and Orientation Options in <FONT style="font-style:italic; " >sys-printer-dialog-reportfunctionid</FONT> Registry</P>
+ <P class="Style_Support_+_Left___0_5_" >When the 'old' dialog registry option (olddialog) was set for a report in the <FONT style="font-style:italic; " >'sys-printer-dialog-reportfunctionid’</FONT> registry entry, the 'orientation' option of the registry entry was being ignored.  This problem has been corrected. </P>
+ <P class="support" >747&nbsp;COP/PO Drop Ship Orders</P>
+ <P class="Style_Support_+_Left___0_5_" >When an AP Journal line corresponding to a Drop Ship is saved, the clntordrtoshp table is updated so that an AR Invoice will be generated for the originating Client Order line. Normally, the saving of the AP Journal entry can be repeated with no ill effects.<BR><BR>However, if the clntordrtoshp line has already been invoiced, that line will be erased and be replaced with a line without an invoice number. This will result in the duplicate invoicing of the Client Order line.                     </P>
+ <P class="support" >744&nbsp;COP/PO Drop Ship Orders</P>
+ <P class="Style_Support_+_Left___0_5_" >Outside of Generation from COP there should be no way to create a &quot;drop ship&quot; PO.<BR>However, the boolean for this is available for edit in the Purchase Order viewer; To edit this field manually will create problems. Recording RECEIPTS to drop ship PO's also creates problems.<BR><BR>-The drop ship boolean in the PO Viewer needs to be disabled for edit.<BR>-Inventory Receipts Journal should NOT load Purchase Orders with the setting drop-ship &quot;Y&quot;</P>
+ <P class="support" >741&nbsp;CRMAnywhere</P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects ‘Key is Missing’ error when downloading attached documents in the Client Web application.          </P>
+ <P class="support" >733 &nbsp;Classic Dispatch Board</P>
+ <P class="Style_Support_+_Left___0_5_" >This corrects a System Primitive Error that occurred when a technician not included on the current dispatch board was selected in a Work Order Summary (on the lower half of the board).  In this build, the system will warn you that the technician is not on the board, and disallow the change.</P>
+ <P class="Style_Support_+_Left___0_5_" >If you need to change to a technician that is not listed on the board, access the full Work Order Viewer and edit the Technicians tab.</P>
+ <P class="support" >49&nbsp;CRMAnywhere (custom work – does not effect standard features)</P>
+ <P class="support" >642 &nbsp;Bank Deposits Journal</P>
+ <P class="Style_Support_+_Left___0_5_" >The Bank Deposit Journal has been enhanced to recognize AR SALES TRANSACTIONS that have a GL BANK ACCOUNT reference set. (UNDEPOSITED CASH RECEIPTS or otherwise). This means that the Bank Deposits Journal now reads cash receipts that are generated from the COD tab within the Work Order.&nbsp; <FONT style="text-decoration:underline;" >The GL Account referenced on the COD tab of the Work Order should be the sweep account. </FONT></P>
+ <P class="support" >677&nbsp;Job EOM</P>
+ <P class="Style_Support_+_Left___0_5_" >Client reported that a Job which had 2 Inventory Items on the Workorder, JOB EOM function only picked up 1 of the 2 items on the SAME workorder --- seems these items use the same cost category but use different inventory groups, the last entry posted to the GL using the GL Acct from the Cost Category (not Inventory Group... opposite of the new default behavior). If 2 Inventory Items on W/O are going to 2 different Inventory Groups but both use the same Job Cost Category, system is only picking up the last entry but booking this to wrong GL account.&nbsp;This problem has been corrected. </P>
+ <P class="support" >721&nbsp;JC Job Invoice Reverse</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">             Allow zero-dollar invoice reversals. &nbsp;</P>
+ <P class="support" >544&nbsp;Exclude Retainage from Sales Tax Base</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">            For Canadian Invoicing – see customer notes section 2.19 for this registry entry.&nbsp;</P>
+ <P class="support" >670&nbsp;Conversion method to encrypt passwords</P>
+ <P class="support" ><FONT style="font-weight:bold; " >&nbsp;</FONT>Included in an earlier build: see section 1.5 of support release notes for documentation.</P>
+ <P class="support" >683&nbsp;Work Order – Enhance Is Ok to Post test</P>
+ <P class="Style_Support_+_Left___0_5_" >If PO-to-JCH has been disabled, then there will be no cost to import to the WO until AP Vouchering happens for that PO. As such, it is probably desirable to prevent a work order from being set to &quot;invoice ready&quot; and billed knowing that all of the costs ARE NOT yet included. This forces that the Received PO items MUST have been vouchered in AP (where the costs will come from) in order for the WO to go &quot;invoice ready:&quot;.</P>
+ <P class="Style_Support_+_Left___0_5_" >Also note</P>
+ <P class="support" ><FONT style="font-family:'Wingdings'; " >q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span></FONT>Case 672 has the registry entry (sys-ffv-global-settings) option: POReceiptstoJCH=false.</P>
+ <P class="support" ><FONT style="font-family:'Courier New'; " >o&nbsp;</FONT>With this option job costing will happen upon PO Receipt</P>
+ <P class="support" ><FONT style="font-family:'Wingdings'; " >q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span></FONT>Since job costing will be delayed until AP Vouchering &quot;invoice ready&quot; is prevented until vouchering occcurs...that is what this logic does</P>
+ <P class="support" ><FONT style="font-family:'Wingdings'; " >q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span></FONT>Preventing JCH probably should not be done <FONT style="text-decoration:underline;" >w/o</FONT> also enabling</P>
+ <P class="support" ><FONT style="font-family:'Courier New'; " >o&nbsp;</FONT>sys-viewer-vwrkordr: ImportPOs=false</P>
+ <P class="support" ><FONT style="font-family:'Courier New'; " >o&nbsp;</FONT>to omit this option will lead to importing and costing of PO in Work Order, then again when AP vouchering occurs.</P>
+ <P class="support" >471&nbsp;Quote Master – additional validations before invoking wizard</P>
+ <P class="Style_Support_+_Left___0_5_" >The system now performs additional validations for required fields before launching the Quote Master Wizard. This should correct a problem that previously occurred if you if you set the status of an option to approved and attempt to save it (and it had not been previously saved as open). If you then changed the status to Open, you could successfully save the record - and correct the missing information.&nbsp; However, if you don't notice that the record wasn't saved, none of the warning message indicate this - it looked like the wo would just be missing a field.</P>
+ <P class="support" >Build 55</P>
+ <P class="support" >672&nbsp;PO Receipts to JCH</P>
+ <P class="Style_Support_+_Left___0_5_" >A new registry entry is now available that essentially allows us to revert to pre-6.0 methodology that postpones the costing of P.O. items until A/P vouchering occurs. This is a nuclear option when the new costing at PO receipt simply will not be accepted by existing users migrating from version 5.1. Everything possible should be done to discourage adoption of this solution.  This will not be mentioned in customer notes.</P>
+ <P class="support" >Id: sys-ffv-global-settings<BR>Contents: POReceiptsToJCH=false</P>
+ <P class="Style_Support_+_Left___0_5_" >Implementation of the Case 672 registry option will cause double-costing during the WO Import Costs process.&nbsp; The following registry entry must be made to prevent this:</P>
+ <P class="support" >Id: sys-viewer-vwrkordr<BR>Contents: ImportPOs=false</P>
+ <P class="support" >674&nbsp;Currency Conversion</P>
+ <P class="Style_Support_+_Left___0_5_" >See case for details.  This is basically a no-opt as currency conversion is not working in 6.1. It is working in version 6.2, and the appropriate registry entry to set the currency adjustment account is noted in that version of the help. </P>
+ <P class="support" >678&nbsp;GL Report Writer II</P>
+ <P class="Style_Support_+_Left___0_5_" >This fix corrects behavior of the entityid token when report is executed as &quot;consolidated&quot; when a GL Entity Group is specified. </P>
+ <P class="support" >200&nbsp;Bank Reconciliation Journal</P>
+ <P class="Style_Support_+_Left___0_5_" >On the Bank Reconciliation Journal &quot;Deposits&quot; TAB there is a viewer display field bnkdpstjrnl_dpst_dte for each child deposit record. For &quot;saved&quot; transactions this field does not get loaded when the viewer is opened, making it difficult to use. This problem has been corrected.</P>
+ <P class="support" >563&nbsp;Client Viewer Collections</P>
+ <P class="Style_Support_+_Left___0_5_" >In previous builds, the field INVAMT was NOT displayed for NON-sales typed invoices (credit memos, debit memos, finance charge invoices, and &quot;unapplied cash&quot; invoice records that may be relevant to the overall collection perpective).&nbsp; The resulting effect was that the ORIGINAL amount of ISSUED document is not known when reviewing the screen...only the &quot;'outstanding amount&quot; is provided.&nbsp; This change allows for the display of OTHER invoice types, while continuing to prevent the receipts from factoring in.</P>
+ <P class="support" >666&nbsp;PO viewer – Inactive Accounting Period Reversal Logic</P>
+ <P class="Style_Support_+_Left___0_5_" >Implement the technology in the Purchase Order as was done in other journals so that switching out an inactive period does not lead undesirable activity in inactive periods. See case for details.</P>
+ <P class="support" >676&nbsp;Help File name</P>
+ <P class="Style_Support_+_Left___0_5_" >Code checks for existence of sampro.hlp in SAMPRO program folder.&nbsp; If found, it uses it.&nbsp; Otherwise, it uses the old name emi.hlp.  Ironically, Jean’s help authoring software is being obtuse about this, so the help and contents files will have to retain their old names for a little while longer.  </P>
+ <P class="support" >653&nbsp;Work Order viewer – computed labor lines</P>
+ <P class="Style_Support_+_Left___0_5_" >With this new code, the WO viewer works more like the Labor Journal with regards to edits and deletes on the LAB tab.&nbsp; The new code makes a distinction between 'computed' and 'paid'.</P>
+ <P class="Style_Support_+_Left___0_5_" >Lines that have been computed AND paid can't be deleted and have restrictions as to which fields can be changed.</P>
+ <P class="Style_Support_+_Left___0_5_" >Lines that have been computed but NOT paid can be changed and/or deleted.&nbsp; However, when this happens, a recompute of the PR calculations is required.&nbsp; The WO viewer will advise the user when this requirement is being initiated.&nbsp; Furthermore, the computed PR is adjusted so that a check can't be printed without recomputing.</P>
+ <P class="support" >670&nbsp;Conversion class</P>
+ <P class="Style_Support_+_Left___0_5_" >Internal; added encryption capabilities to conversion class functionality.  </P>
+ <P class="support" >Build 54</P>
+ <P class="support" >637&nbsp; AP/PO/IRJ Committed Cost Issues</P>
+ <P class="Style_Support_+_Left___0_5_" >Over Receipts will lead to excess Committed Cost &amp; Qty reductions to JCH from the APJ<BR>when APJ is handling the Costing for a pre-existing PO Line. This is true for BOTH INV or GEN PO items. APJ provides a message when a PO has unreceipted items. This warning is presented anytime ORDERED &lt;&gt; RECEIVED even if the reason is due of an OVER-RECEIPT. This is true for BOTH INV or GEN PO items.</P>
+ <P class="support" >603 &nbsp;Consolidate Invoice viewer</P>
+ <P class="Style_Support_+_Left___0_5_" >When you click the Auto-Fill button in the Consolidated Invoice viewer, the list of AR Invoices does not display (where applicable) the WO Id associated with the AR Invoice Id. Now, iif a WO id exists in the invoice master, it displays on the AR Invoices list correctly.</P>
+ <P class="support" >651 and 476 -  Job Cost EOM</P>
+ <P class="Style_Support_+_Left___0_5_" >This case corrects a problem where the summary revenue adjustment amount was being shown as a multiple of the actual adjustment amount seen when looking at the details. The View Summary returns an error &quot;Receiver is not a boolean&quot;.  Finally, steps have been taken to prevent data loss when duplicate keys encountered in dLines dictionary.       </P>
+ <P class="support" >654 &nbsp;Invoicing – Sales Tax on Labor not being calculated correctly</P>
+ <P class="Style_Support_+_Left___0_5_" >This turned out to be a problem in the lower-level code responsible for loading values into fields.&nbsp; The original code was evaluating ' n/a' as being equal to 'n/a'.&nbsp; This caused a problem in the invoicing process where ' n/a' has a special meaning.&nbsp; The fix required changing 'trimBlanks' to 'trimTrailingBlanks' in Field&gt;&gt;contentsFromRecordString.</P>
+ <P class="support" >643&nbsp;Quote Master Approval Wizard</P>
+ <P class="Style_Support_+_Left___0_5_" >The Job Budget option is not currently implemented, so it has been removed from the wizard screen.  </P>
+ <P class="support" >641 &nbsp;Tax Group, Type Defaults in Quote Master</P>
+ <P class="Style_Support_+_Left___0_5_" >This case corrects a problem where if you create a quote and attach it to an existing work order the quote doesn’t bring across the tax group from the job record that given work order is attached to. This case corrects this problem and reads the taxable cost types within the defaulted tax group and marks line items accordingly when entered instead of always defaulting to n/a.</P>
+ <P class="support" >640&nbsp;WO Purchase Tab</P>
+ <P class="Style_Support_+_Left___0_5_" >When a PO is genned by quotemaster, its information should be reflected in the WO's Purchases tab. In previous builds, the Unit Cost and Amount were not displayed for Materials (with or without other rates) and Inventory because the currency factor was not being defaulted from the Vendor record (if the currency id is blank in the vendor record, a currency factor of 1.0 should be applied). This problem has been corrected: the costs of PO’s generated by Quote Master from this build forward will be displayed in the applicable WO Purchases tab. This fix is not retroactive: WO Purchase costs from purchase orders previously generated by Quote Master will not be revised. </P>
+ <P class="support" >639&nbsp;Quotemaster – material markup not right if other rate specified</P>
+ <P class="Style_Support_+_Left___0_5_" >If you specify an Other Rate that is associated with a material cost category type, the system runs the cost through the material markup table at level 1, not the applicable level for the cost if a standard cost is included in the other rate.  </P>
+ <P class="support" >600&nbsp;Payroll: Labor Journal / Work Order Pay Rate Calculations</P>
+ <P class="Style_Support_+_Left___0_5_" >IMPORTANT!!!&nbsp; MUST REVIEW USER SETUP PRIOR TO DELIVERING THIS IMAGE TO ANYONE CURRENTLY RUNNING A BUILD PRIOR TO 6.1.358.054.&nbsp; IT MAY BE NECESSARY TO ADD THE REGISTY ENTRY PRIOR TO UPDATE TO THIS BUILD TO AVOID A CHANGE IN USER EXPERIENCE.</P>
+ <P class="Style_Support_+_Left___0_5_" >In versions prior to 6.1, the employee pay rate was replaced by the earnings group rate when an earnings group was designated.&nbsp; A change was made to accommodate that an employee could have a base rate and the earnings group could be used to add a premium ON TOP of that base employee rate.&nbsp; This change in business logic NEEDS TO BE dependent on a registry option that is defaulted to &quot;disabled&quot;, so that it doesn't interfere with existing setup for installed users.</P>
+ <P class="support" >Id: sys-compute-payroll<BR>Contents: CombineEmployeeAndGroupPayRates=true<BR><BR>NOTE:&nbsp; the combined rates concept applies to the hourly job cost rate as well as the pay rate.</P>
+ <P class="support" ><BR>474&nbsp;Enhance DBFieldTable</P>
+ <P class="Style_Support_+_Left___0_5_" >Internal; see case for details. </P>
+ <P class="support" >Build 53</P>
+ <P class="support" >634<FONT style="font-weight:bold; " >&nbsp;</FONT>Problems encountered with Receipted-to-JCH when switching from v5.1 to v6.1 </P>
+ <P class="Style_Support_+_Left___0_5_" >This fixes a variety of AP/PO problems related to POs created in v5.1 and edited in v6.1. Editing PO-GEN lines originally entered using v5.1 resulted in a situation where the Receipted-to-JCH flag was set to true but the corresponding JCH receipts were incorrect.&nbsp; </P>
+ <P class="support" >Build 52</P>
+ <P class="support" >59&nbsp;PO Validations Added</P>
+ <P class="Style_Support_+_Left___0_5_" >Prevent Receipt quantity edits resulting in less than AP Voucher Quantities and restrict edits to P.O. JOB ORDER &amp; RECEIVE Quantities subject to RECEIPT Activity. This case provides additional validation in the following situations:</P>
+ <P class="Style_Support_+_Left___0_5_" >1.) Create PO line...receive in Inventory Receipts Journal, can delete line from P.O. orphaning receipts in the Inventory Receipts Journal...deletion s/b prevented if &quot;Quantity Received on IRJ&quot;&lt;&gt;0. <BR><BR>2.) Create PO line...fully receive in IRJ...full voucher in APJ...return to IRJ trx. and reduce receipted quantity...should NOT be allowed to reduce to less than quantity vouchered, BUT CAN!<BR><BR>3.) Same as above, except receipt on the P.O. Line...notice that validation IS in place on the INV Tab to prevent receipt quantity from being reduced below invoiced quantity...now try same test on the GEN Tab...create line...fully receive &quot;ONLINE&quot; in the P.O.,...fully voucher in APJ...you will then be able to reduce the quantity received to less than Quantity vouchered on the P.O. GEN TAB.</P>
+ <P class="support" >Build 51</P>
+ <P class="support" >509&nbsp;Converting RININV3 invoice to PDF</P>
+ <P class="Style_Support_+_Left___0_5_" >When an invoice is displayed using the RININV3 format, converting to PDF for mailing fails.&nbsp; No error message is generated to the application.&nbsp;</P>
+ <P class="support" >593&nbsp;COP Invoice not printing Serial Number correctly<FONT style="font-family:'Tahoma'; font-size:13pt; font-weight:bold; " > </FONT>(WO#10111)</P>
+ <P class="support" >&nbsp;Problem occurred on subsequent lines with larger serial numbers. </P>
+ <P class="support" >586 &nbsp;AP and GL Journal Undo (Delete) Transactions implemented in Runtime </P>
+ <P class="Style_Support_+_Left___0_5_" >This case addresses the issue of the inability to edit an APJ Trx. referencing a Manual Check. Since editing &quot;out&quot; a transaction is the stated manner of &quot;reversing&quot; transactions, this left a user &quot;stuck&quot; for a Manual Check APJ transaction. Voiding a Manual check also lead to a problem that resulted in reversing the check but not the A/P &amp; Expense, which were ‘orphaned.’</P>
+ <P class="Style_Support_+_Left___0_5_" >The general idea behind this fix was to enable the &quot;delete&quot; icon so that clicking it would perform the steps of deleting all lines, setting the transaction to $0, reversing all history involved, leaving the transaction with no editable version (it will be filtered out on the list screen). </P>
+ <P class="Style_Support_+_Left___0_5_" >In section 3.1.2 of the customer release notes for 6.1, our customers are instructed:</P>
+ <P class="support" >DO NOT use the Void AP Check function to void a manual check.&nbsp; Changes to AP Transactions for manual checks should be accomplished by first deleting the transaction (to remove the entire invoice/check#) and then re-entering it. </P>
+ <P class="Style_Support_+_Left___0_5_" >When these notes were first published, however, this functionality was IN the software, but disabled except in DEVELOPMENT MODE.&nbsp; This case ENABLES this functionality the RUNTIME version for the GL Journal and the AP Journal (along with the special manual check logic). </P>
+ <P class="support" >481&nbsp;PO viewer</P>
+ <P class="Style_Support_+_Left___0_5_" >Renaming or deleting MISC Inventory Group causes GL Entity to always default blank on P.O. Gen Tab lines.&nbsp; The existence of this Group enables correct behavior that GL Entity defaults from Job Cost Code on line.&nbsp; No such dependency should be necessary. See Brian for details.</P>
+ <P class="support" >482&nbsp;Process PWP Billed List</P>
+ <P class="Style_Support_+_Left___0_5_" >In previous builds, if this was performed on a jchstry line that has revenue an out of synch situation would arise. Start Job Synch does rectify, but situation could be avoided.  This case corrects this issue. </P>
+ <P class="support" >576&nbsp;AP Journal viewer</P>
+ <P class="Style_Support_+_Left___0_5_" >When you voucher a PO with inventory lines that are neither lot-controlled nor serialized, the character 'U' erroneously appears in the dsply_text_1 field of the Inventory tab. The &quot;U&quot; is now cleared when you save the transaction.</P>
+ <P class="support" >557&nbsp;Create New PM Schedules from Old</P>
+ <P class="Style_Support_+_Left___0_5_" >When using the function CreateNewWorkorderSchedules the boxes flagged with filters, belts and other do not carry forward to the new entry.  This problem has been corrected. </P>
+ <P class="support" >556&nbsp;AP Journal Incorrectly loading job for inventory</P>
+ <P class="Style_Support_+_Left___0_5_" >Receive a PO that has items destined for Inventory and a Job (multiple inventory items).<BR>The second item (portion destined for inventory) is picking up the job information from the previous line.&nbsp; Problem corrected (WO  10103).</P>
+ <P class="support" >552&nbsp;Email by Section</P>
+ <P class="Style_Support_+_Left___0_5_" >Additional code refinements added to use scheduled event's emailFrom when available.</P>
+ <P class="support" >539&nbsp;Tab order not advancing line on child views</P>
+ <P class="Style_Support_+_Left___0_5_" >Correct problem when tabbing through fields on a child line view of a record (ie work order labor tab) the cursor won't advance to a new line after reaching the end of the tab order. It just rolls back to the first field of the same line.</P>
+ <P class="Style_Support_+_Left___0_5_" >Also corrects a problem when the last field on the 'line' is a button-type field.&nbsp; This scenario exists on the Tech tab of the WO viewer in version 6.2.</P>
+ <P class="support" >536&nbsp;Validation of Work Order Labor Lines</P>
+ <P class="Style_Support_+_Left___0_5_" >The system now Validates work order labor line modifications disallowing changes to the Hours (actual), Effective Date, Payroll Period and Technician fields if the line has been computed in payroll. This validation is also noted in the customer notes. </P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >POTENTIAL ISSUE:</FONT>  <BR>Because SAM Pro defaults in the Technician, Payroll Period and Effective date when you tab out of the Billable Hours field, it is somewhat of a challenge to add a different technician’s labor if the first tech has had payroll computed AND the default payroll period is the same one that was computed. The system thinks you are trying to add labor for the computed tech.  The solution to this situation is to change the default payroll period (which should probably be done anyway) or to enter the Tech Id field first: this way the system is not checking for the payroll-computed tech and you can enter the rest of the fields.</P>
+ <P class="support" >520&nbsp;Cash Receipts Line Discounts</P>
+ <P class="Style_Support_+_Left___0_5_" >RSD reported this from one of their clients.&nbsp; In Cash Receipts when processing multiple invoices.&nbsp; If you enter a discount amount on a line the next invoice selected will be displayed with the discount amount filled from the preceeding invoice.&nbsp;Problem corrected. </P>
+ <P class="support" >516&nbsp;WO viewer - Thumbs Up</P>
+ <P class="Style_Support_+_Left___0_5_" >Clicking the THUMBS UP button on the Main tab sets the Billing Agent Id whereas clicking the &quot;ready to invoice&quot; checkbox does NOT set the billing agent. The Billing Agent Id field  is now also  set when the Ready to Invoice box is checked and the WO saved.</P>
+ <P class="support" >Build 50</P>
+ <P class="support" >552&nbsp;Email by Section</P>
+ <P class="Style_Support_+_Left___0_5_" >One of our reports for client 1598 included an e-mail by section option.  This functionality is now correctly implemented. </P>
+ <P class="support" >534&nbsp;Other Rates do not import to WO from PO</P>
+ <P class="Style_Support_+_Left___0_5_" >Other Rates derived from Service Provider rate schedules populate the PO with unit and extended cost.&nbsp; When these are imported into the work order the extended cost is zero.&nbsp; markup and margin calculations subsequently are incorrect.&nbsp;Problems corrected.</P>
+ <P class="support" >Build 49</P>
+ <P class="support" >512&nbsp;Void Check GL History has wrong accounting period</P>
+ <P class="Style_Support_+_Left___0_5_" >When voiding an AP Check, the system is using the original trx's accounting<BR>period, not the accounting period entered by the user. This has been corrected.</P>
+ <P class="support" >543&nbsp;Make all history entries created on a given event have the same posting date and time</P>
+ <P class="Style_Support_+_Left___0_5_" >Currently, when the user of a viewer presses the Add, Save, or Delete, each history entry is stamped with the current date and time. Often the time it takes to process the transaction crosses the second barrier in which case history entries can be stamped with different posting times. This makes it difficult to identify all of the history entries that were generated by a given Add, Save, or Delete.<BR><BR>Modify the Add, Save, and Delete cycles so that all history entries generated by a given Add, Save, or Delete are stamped with the same posting Date and Time. </P>
+ <P class="Style_Support_+_Left___0_5_" >Note that histories not generated by Viewers or Viewer emulators currently will not make use of the transaction Date/Time cache and will use the current date as before.</P>
+ <P class="support" >499&nbsp;WO Inventory Expense Account Assignment (impacts Job EOM)</P>
+ <P class="Style_Support_+_Left___0_5_" >New registry entry – see 6.1 customer notes section 2.5 and 6.5. <FONT style="font-weight:bold; " >CHANGES DEFAULT BEHAVIOR OF JOB EOM!</FONT></P>
+ <P class="support" >500&nbsp;New Call Create</P>
+ <P class="Style_Support_+_Left___0_5_" >Corrections to error when creating a new site and job to an existing client. </P>
+ <P class="support" >517&nbsp;Work Order History Reversing Logic - REMOVED</P>
+ <P class="Style_Support_+_Left___0_5_" >This apparently caused problems in build 48 and has been undone in this release. </P>
+ <P class="Style_Support_+_Left___0_5_" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" >Build 48</P>
+ <P class="support" >466   &nbsp;New Call residential cloning</P>
+ <P class="Style_Support_+_Left___0_5_" >Additional updates: 1 - Service Zone entered on NewCall-Flashlight now retained by newly created Client Site., 2 - When Client Site Name &quot;residential&quot; is overwritten the value should be moved to the Client Name field (lower on the viewer).</P>
+ <P class="Style_Support_+_Left___0_5_" >Any residual issues with this case will be dealt with in case 500 (see the Features section), which will use copy buttons to clone the site information to the client, and the site or client to the job. </P>
+ <P class="support" style="margin-top:0;margin-bottom:0"> 473 &nbsp;GLH viewer&nbsp;</P>
+ <P class="Style_Support_+_Left___0_5_" style="margin-top:0;margin-bottom:0"> Display problem in detail view corrected; fixed the problem with the Accounting Period getting killed during by the auto-load process.&nbsp;&nbsp;</P>
+ <P class="support" >486&nbsp;AP Journal PO Import line edits</P>
+ <P class="Style_Support_+_Left___0_5_" >In version 6.1 since the change that causes JCH to be recorded @ PO Receipt...the fields available for edit on lines imported from PO's has been restricted in the lines view.... the only field for which edits are allowed is the Quantity.&nbsp; To edit any other field requires selection of the &quot;magnifying glass&quot; icon, which makes a JCH reversing line copy. In this build, GL Account, GL Entity (when UVP is not enabled in the Accounting Period), Allow Discount edits ARE NOW allowed.&nbsp; All other edits continue to require a line-copy &amp; edit (by clicking the magnifying glass on the line).</P>
+ <P class="support" >489&nbsp;Dispatch Board not remembering column changes / MSSQL</P>
+ <P class="Style_Support_+_Left___0_5_" >Customer was customizing their dispatch board but this information was not retained when logging in again. Problem was the size of the &quot;content&quot; field in the &quot;ranges&quot; table in Microsoft SQL (not Sybase). It was marked as 500 and needed to be 1500 in size. Go into Enterprise manager and manually change the size to 1500 to correct the problem for the moment.&quot;</P>
+ <P class="Style_Support_+_Left___0_5_" >This correction has been made to build 48. IMPORTANT: if moving to this build does not trigger a data conversion, you must reset your revlev and trigger a new conversion.&nbsp;   </P>
+ <P class="support" >494&nbsp;Dispatch Board – Classic Board</P>
+ <P class="support" ><FONT style="font-weight:bold; " >&nbsp;</FONT>Sequence numbers are now correctly reassigned<FONT style="font-weight:bold; " > </FONT> when re-ordering calls on the classic board.</P>
+ <P class="support" >514&nbsp;Fix handling of apostrophes embedded in notes.txt</P>
+ <P class="Style_Support_+_Left___0_5_" >Special code added to UserReport-type reports doesn't always handle the embedded apostrophe character.</P>
+ <P class="support" >515&nbsp;Wheel Mouse</P>
+ <P class="Style_Support_+_Left___0_5_" >An edit to a field is &quot;forgotten&quot; if wheel mouse is used to scroll pane (and field has not been tab/entered)...behavior is inconsistent with what happens when the screen-pane scroll control is used.</P>
+ <P class="support" >517&nbsp;Work Order History Reversing Logic</P>
+ <P class="Style_Support_+_Left___0_5_" >First step of correcting rare, non-reproducible posting reversal errors originating from WO Children to jchstry &amp; glhstry. </P>
+ <P class="support" >518&nbsp;COP Transfer Order Posting</P>
+ <P class="Style_Support_+_Left___0_5_" >The current logic for posting the client description field to invntryitmbyclnt includes the proviso that the invntryitmbyclnt client description field is not to be updated for items which are being sold at no charge. Amend this logic so that the client description field is always updated for transfer orders regardless of the contents of the unit price field.</P>
+ <P class="support" >519&nbsp;All reversals: automatically set any crrncy-fctr fields have a value of 0 to 1</P>
+ <P class="Style_Support_+_Left___0_5_" >The jchstry table (for example) contains a crrncy-fctr field that is never set to any value other than its default of zero. Forward postings automatically check for zero crrncy-fctrs and reset their values to one. Reversals, however, did not automatically perform this check – this case corrects this situation.</P>
+ <P class="support" >478&nbsp;Conversion Method gets low / out of memory error</P>
+ <P class="Style_Support_+_Left___0_5_" >When running the import script for imhstry Low/out of memory error occurs.&nbsp; Even though the list of records to update is very limited (20 records).&nbsp; It appears the conversion utility is reading all of the imhstry file to perform a RN to ID mapping.<FONT style="font-size:11pt; " >&nbsp;</FONT></P>
+ <P class="Style_Support_+_Left___0_5_" >The solution is to add a 'NoRnMap' command to the [Options] section of the script as documented in <A href="file_import_utility.htm"><FONT style="color:black; " >File Import Utility</FONT></A>  The appropriate paragraph is excerpted below:</P>
+ <P class="support" >NoRnMap: If the NoRnMap is present {in the Options section}, RnMapping is disabled. RnMapping is a mechanism for improving performance by generating a map of [key column] values to record numbers in the database table. This is normally done before beginning the processing of the input file. However, when the database table is much larger than the input file, this process actually decreases performance instead of improving it. If the database table is large enough, the RnMapping process may not even be able to complete. In these cases, the NoRnMap command should be used to disable RnMapping.</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" >Build 47</P>
+ <P class="support" >190&nbsp;Quotemaster</P>
+ <P class="support" >&nbsp;Code from 6.2 mistakenly added to 10/28 version of build 47 has been removed. </P>
+ <P class="support" >445 &nbsp;Dispatch Board</P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects Work Order Log problem when drag/drop is done on Classic Board.<BR>Escalation also corrected when Tech is changed via Available Hours or via Classic Board.</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">  451&nbsp;User GL Reporting&nbsp;</P>
+ <P class="Style_Support_+_Left___0_5_" >The fix implemented with the earlier build for this case caused a error &quot;index 1: is outside of collection bounds&quot;&nbsp; When using the SHOW REPORT button in the GL report writer.&nbsp; This is caused by no function created for the report.&nbsp; Creating a function will solve the user problem.&nbsp; However, when designing a report a function may not be created until the report is completed.</P>
+ <P class="Style_Support_+_Left___0_5_" >Secondary issue corrected – closed case 12/15.</P>
+ <P class="support" >453&nbsp;Client Web Interface</P>
+ <P class="Style_Support_+_Left___0_5_" >Change 'Open Requests' code to show both New and Unacknowledged weblogs.  In previous builds, only ‘New’ weblogs appeared in the CRMAnywhere Open Requests tab.</P>
+ <P class="support" >454 &nbsp;Inventory Item viewer</P>
+ <P class="Style_Support_+_Left___0_5_" >This case resulted in our discovery of a REALLY BAD Sybase build - version<FONT style="font-family:'Tahoma'; color:black; " > </FONT>7.0.4.3443 – that should <FONT style="text-decoration:underline;" >not</FONT> be installed, ever. </P>
+ <P class="support" >457&nbsp;Recurring and Actual GL Journal Validations</P>
+ <P class="Style_Support_+_Left___0_5_" >Recurring GL Viewer values for total debit &amp; total credits was not properly loading.<BR>These values are supposed to validate that the record is in balance...<BR>GL Journal Viewer:  Change validation of total debit &amp; credit to be sensitive to the actual sum of the viewer lines as validation has been implemented in other places. <BR>Available in versions... &nbsp; 6.1.358.047test &nbsp; 6.2.401.beta_1028</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">  459&nbsp;Post Job Invoices&nbsp;</P>
+ <P class="Style_Support_+_Left___0_5_" >Corrects problem where old invoice reverse can't complete when processing COD. <BR>Available in versions...&nbsp; 6.1.358.047 AND 6.2.400.beta_1024</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">  464 &nbsp;User-defined Reporting&nbsp;</P>
+ <P class="support" >Internal (for Jeff Boyd’s work). </P>
+ <P class="support" style="margin-top:0;margin-bottom:0"> 466&nbsp;New Call Create&nbsp;</P>
+ <P class="support" >&nbsp;Setting Client and Job addresses; see customer note 9.2.1. </P>
+ <P class="support" style="margin-top:0;margin-bottom:0"> 468&nbsp;New Call&nbsp;</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">             See customer note 9.2 (WO History Pane) for details. &nbsp;</P>
+ <P class="support" >Build 46</P>
+ <P class="support" >*191&nbsp;Crystal Viewer Technology</P>
+ <P class="support" >*422&nbsp;Keystone LIFO Analysis Report</P>
+ <P class="Style_Support_+_Left___0_5_" >Add a radio button set to the settings portion of the KeystoneLifoPoolAnalyisReport. This button set will tell the report whether to take the On Hand information from 'imhstry_qntty_on_hnd', 'imhstry_qntty_rjctd' or 'imhstry_qntty_in_tst'. The choice indicated by the user should be displayed in the report header.</P>
+ <P class="Style_Support_+_Left___0_5_" >Available in versions 6.1.358.046,  6.2.400beta1018a</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">   424&nbsp;Shop Order Viewer&nbsp;</P>
+ <P class="Style_Support_+_Left___0_5_" >When the user is in the Shop Order Viewer and double clicks on the Lot Number field in the child window, the displayed list of Lot Numbers includes lots for all items, not just for the item on the shop order line. This fix corrects this behavior.</P>
+ <P class="Style_Support_+_Left___0_5_" >Available in versions 6.1.358.046,  6.2.400beta1018a</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">   *446&nbsp;Client Order Viewer&nbsp;</P>
+ <P class="Style_Support_+_Left___0_5_" >When entering a line item on a client order, invntryitmbyclnt table is checked to see if there was a prior order for the same item for the same client. If such a record is found, the item description field ('clntordrlst.clnt-dscrptn') in the order line is set to the value of the corresponding field in the invntryitmbyclnt record ('invntryitmbyclnt.clnt-dscrptn'). Otherwise, it is set to the inventory item's name field.<BR><BR>A mod requested by Keystone was implemented on 12/10/1999. This mod requested that, for transfer orders only, this behavior was overridden so that the client description field is always set to the inventory item's name field. Keystone is now requesting that this mod be reversed. Since I (RM) believe that no one but Keystone cares about this issue, I am adding this reversal of behavior to the general distribution.</P>
+ <P class="Style_Support_+_Left___0_5_" >Available in versions 6.1.358.046,  6.2.400beta1018a</P>
+ <P class="support" >*449&nbsp;AR Sales Journal Viewer / Return Authorizations</P>
+ <P class="Style_Support_+_Left___0_5_" >The Return Authorization process involves referencing an RA when creating a new Sales Journal Entry. The GL Entities on both the Sales and Costs tabs of the resulting auto filled SJ entry are currently taken from the inventory group (as per Keystone). Modify the process to take the GL Entities from the line on the referenced Client Order pertaining to the referenced Inventory Item. This is the source of the GL Entities on the Sales Journal entry being 'credited'.</P>
+ <P class="Style_Support_+_Left___0_5_" >Available in versions 6.1.358.046,  6.2.400beta1018a</P>
+ <P class="support" >450&nbsp;Generate PM Work Orders</P>
+ <P class="Style_Support_+_Left___0_5_" >Fix clears PO# before processing new WO.  The WO's PO number wasn't being cleared after creating a WO.&nbsp; This resulted in successive WOs referring to the last(same) legitimately assigned PO#.&nbsp; In other words, if the first WO was assigned to a sub/tech and the second WO wasn't, the second WO was created with a reference to the PO created for the first WO.</P>
+ <P class="support" >451&nbsp;GL Report Execution</P>
+ <P class="Style_Support_+_Left___0_5_" >G/L Report Execution via Report Anywhere encounters an error due to how settings are loaded from the event to the report definition. Corrected in 6.1.358.046, 6.2.400.beta_1018.</P>
+ <P class="support" >455&nbsp;GLHSTRY - Performance enhancement. </P>
+ <P class="Style_Support_+_Left___0_5_" >The glhstry table needs an index on glhstry_srce_jrnl, glhstry_srce_trnsctn_id, glhstry_rn.&nbsp; Without this index the Currency Adjustment queries are forced to pass sequentially through the table.&nbsp; The AP Check Post, AP Journal, Cash Receipts Journal, Sales Journal and PO viewers are the ones that would suffer the most from the missing index.<BR>Since existing v6.1 users don't have this index and won't undergo data conversion until moving beyond v6.1, the simplest way to insert the index is to run the starter function named 'Start MS Access ODBC Setup'.   </P>
+ <P class="support" >Build 45</P>
+ <P class="support" >444&nbsp;Common Phrases</P>
+ <P class="Style_Support_+_Left___0_5_" >Now subject to security – see customer notes. </P>
+ <P class="support" >Build 44</P>
+ <P class="support" >445&nbsp;Dispatch Board / Escalation Updates</P>
+ <P class="Style_Support_+_Left___0_5_" >Escalation event that should have been triggered by changing technicians on the Dispatch Board were sometimes getting mixed.  This update corrects the problem if you change the tech via the Change Tech button.  Fixes to the Available Hours method of changing techs will be available in the near future. </P>
+ <P class="support" >8&nbsp;Web Services<BR>&nbsp;Method filed in – corrects bug noted in ‘known issue’ e-mail 10/14/2005<BR>&nbsp;Available in 6.1.358.044.</P>
+ <P class="support" >*250&nbsp;E-mail with Outlook</P>
+ <P class="Style_Support_+_Left___0_5_" >Encoding of Outlook command line changed so that the string delivered following the /m switch is NOT double-quoted. Outlook emails now work for non-Java emails.  <BR>Requires both New version of XmlToPdf (version 1.13) <FONT style="text-decoration:underline;" >and</FONT> build 6.1.358.044 or 6.2.400beta_1012 and higher. </P>
+ <P class="support" >*441&nbsp;Create PM WO</P>
+ <P class="Style_Support_+_Left___0_5_" >Location now defaults correctly when a Technician is assigned.<BR>Available in versions: 6.1.358.044, 6.2.400.beta_1014</P>
+ <P class="support" >442&nbsp;Work Order Viewer – Flat Rate Import   [WO=9630]</P>
+ <P class="Style_Support_+_Left___0_5_" >WO Inventory Tax Type now set to n/a if blank so <FONT style="font-family:'Tahoma'; " >it can </FONT>be evaluated during invoicing process<FONT style="font-family:'Tahoma'; " >.<BR></FONT>Available in versions...   6.1.358.044<BR>Resolved (Fixed) 10/14/2005 3:35 PM</P>
+ <P class="support" >407&nbsp;Job Cost EOM Problems</P>
+ <P class="Style_Support_+_Left___0_5_" >Intermittent problems with reversing entries not being recorded.  Fix available in 6.1.358.040+ and 6.2.396.0920+ Resolved (fixed) 9/20/2005.  </P>
+ <P class="support" >427&nbsp;Inventory Receipts Journal – wrong received cost for serialized items</P>
+ <P class="Style_Support_+_Left___0_5_" >1. Create PO for 2 of any serialized item.<BR>2. Do the following in the IRJ...<BR>&nbsp; a. Enter QtyRecd of 1.0 on line one.<BR>&nbsp; b. Enter Serial# on line one.<BR>&nbsp; c. Change QtyRecd to 2.0 on line 1 and try to leave field.<BR>&nbsp; d. Acknowledge error message.<BR>&nbsp; e. Reset QtyRecd to 1.0 and leave field.<BR><BR>At this point, the Cost Received will be equal to 2 times the PO unit cost.</P>
+ <P class="Style_Support_+_Left___0_5_" >Fix available in versions 6.1.358.043+ and 6.2.400.beta_1004+</P>
+ <P class="Style_Support_+_Left___0_5_" >Resolved (Fixed) 10/04/2005</P>
+ <P class="support" >415&nbsp;Shop orders generating incorrect imhstry records for rejected lots on closing</P>
+ <P class="Style_Support_+_Left___0_5_" >This was implemented for Keystone. The problem was that the component lot status was taken from the 'a-invntryitmsrlzd:' group that always contained the lot record of the component on the last component line.  The correct field from which to take the lot status is 'a-shpordrlst: srl-lt: invntryitmsrlzd.lt-stts'</P>
+ <P class="Style_Support_+_Left___0_5_" >Resolved (fixed) 9/28/2005.</P>
+ <P class="support" >391&nbsp;COP Invoicing – Sales tax on freight is not being computed correctly.</P>
+ <P class="support" >The sales tax on freight was only being computed on the freight charge associated with the last line on the invoice. It is now being computed on the total freight charges.<BR>Resolved (fixed) 9/6/2005    6.1 and higher</P>
+ <P class="support" >418&nbsp;Clear job-related fields in response to user removing Job Id or WO Id on PO lines    <BR>Resolved (Responded) 9/29/2005 2:48 PM 6.1 &amp; higher Purchasing</P>
+ <P class="support" >400&nbsp;GL entity in COP header not being set correctly when location is changed  - as per&nbsp;registry setting.   </P>
+ <P class="Style_Support_+_Left___0_5_" >Resolved (Fixed) 10/3/2005 (Today) 3:15 PM All COP</P>
+ <P class="support" >416  &nbsp;New Call Create - problem with creating job and other records from</P>
+ <P class="support" >&nbsp;residential template.  </P>
+ <P class="Style_Support_+_Left___0_5_" >Resolved (Fixed) 10/3/2005 (Today) 2:16 PM 6.1+ New Call   </P>
+ <P class="support" >419&nbsp;Fixes New Call Create operation with call script. </P>
+ <P class="Style_Support_+_Left___0_5_" >Resolved (Fixed) 10/3/2005 (Today) 2:16 PM 6.1+ New Call   </P>
+ <P class="support" >403&nbsp;WO Order Inventory to GL</P>
+ <P class="Style_Support_+_Left___0_5_" >WO INV Tab contains line validation of accounting period status for edits affecting Cost, Quantity Used, etc. (when WO Inventory to GL is ON).&nbsp; While those &quot;edit&quot; validations appear to work properly there is a fundamental gap in the logic.&nbsp; Add Line and Delete Lines DO NOT test accounting period the status.  Additional Tests Required...</P>
+ <P class="Style_Support_+_Left___0_5_" >Need to test accounting period status prior to delete line process.<BR>Need to confirm that ALL lines present ADDED or CHANGED refer to an active period upon Record SAVE.</P>
+ <P class="Style_Support_+_Left___0_5_" >Code implemented in versions, 6.1.358.041 &amp; 6.2.397.beta_0926 DOES restrict behavior, however, it is overly restrictive.&nbsp; Newly implemented tests for Add, Delete, Insert need to be subject to the additional criteria that accntngprd_enble_woinvntry_to_gl ='Y'...otherwise do not perform the validations.</P>
+ <P class="Style_Support_+_Left___0_5_" >I also added this to the customer help as it changes the behavior of the viewer and may disallow certain behaviors they had allowed in the past. </P>
+ <P class="Style_Support_+_Left___0_5_" >Additional work done to prevent manual entry of an inactive Accounting Period Id.</P>
+ <P class="Style_Support_+_Left___0_5_" >Updated 10/4/2005</P>
+ <P class="support" >410 &nbsp;Enhance billing compute functions to ensure that deferred and write-off </P>
+ <P class="Style_Support_+_Left___0_5_" >JCH fields get cleared when necessary. This case results from situations caused by using the WO viewer to adjust imported-JCH entries that apply to jobs that don't use the newer service billing compute methodology.&nbsp; The following was a scenario known to cause problems...</P>
+ <P class="Style_Support_+_Left___0_5_" >1. Post to JCH for a non-service billing job from a source journal other than the WO viewer.<BR>2. Launch Record Billing Adjustments and set the next invoice amount to zero but don't set the job to invoice ready.&nbsp; This moves the revenue into the writeoff category.<BR>3. Import the JCH entry into the WO viewer and change the revenue value.<BR>4. Try launching RBA and you should get an out-of-balance condition.</P>
+ <P class="Style_Support_+_Left___0_5_" >Resolved (Fixed) 9/26/2005 3:57 PM 6.1 &amp; higher Invoicing </P>
+ <P class="support" >398  &nbsp;MSSQL Syntax Problems New Call &amp; Dispatch Board </P>
+ <P class="Style_Support_+_Left___0_5_" >Software now handles single quotes embedded in search text field<BR>Resolved (Fixed) 9/12/2005 3:30 PM 6.1 &amp; Higher New Call </P>
+ <P class="support" >368  &nbsp;WO viewer test for unreceipted POs needs refined. </P>
+ <P class="support" >SQL used to retrieve unreceipted PO lines needs to incorporate Base PO Id into the process.&nbsp; Otherwise, the test doesn't work for users that create Change Orders from POs.    <BR>Resolved (Fixed) 8/25/2005 3:56 PM 6.1 &amp; higher <FONT style="font-size:10pt; " >  </FONT></P>
+ <P class="support" >284  &nbsp;Quote Net Price not totaling correctly    <BR><FONT style="font-size:10pt; " >Resolved (Fixed)   6.1 &amp; Higher Quote Master  </FONT></P>
+ <P class="support" >328  &nbsp;Start Generate POs has SQL Server issues.<BR>Resolved (Fixed) 8/15/2005 6:46 AM 6.1 &amp; higher Purchasing 8/15/2005 6:46 AM   </P>
+ <P class="support" >206  &nbsp;Drop Ship COP not always creating the PO properly so that it ref’s the Client Order.  <BR>Resolved (Fixed) 8/10/2005 11:08 AM 6.1 &amp; higher COP 8/10/2005 11:08 AM   </P>
+ <P class="support" >279  &nbsp;Cancelled P.O. items appear on W.O. Purchases Tab.<BR>Resolved (Fixed) 8/11/2005 6.1.358.026 – fixed on 6/20/2005  </P>
+ <P class="support" >350  &nbsp;Remove Technician column from open requests in CRM for 6.1.<BR>Resolved (Fixed) 8/10/2005 6.1 CRM Anywhere   </P>
+ <P class="support" >349  &nbsp;Records not appearing in Purchase Order Viewer list.<BR>Resolved (Fixed) 8/11/2005 12:48 PM 6.1.058.035 </P>
+ <P class="support" >220  &nbsp;Drop ship lines posting to imhstry when COP Invoice is posted<BR>Resolved (Fixed) 8/9/2005 – fix has been in for a while.  </P>
+ <P class="support" >169  &nbsp;Shop Orders generating incorrect reversing entries<BR>Resolved (Fixed) 8/9/2005 – fix has been in for a while  </P>
+ <P class="support" >269  &nbsp;Call sequence set in New Call not writing to work order.<BR>Resolved (Fixed) 8/9/2005 – fix has been in for a while   </P>
+ <P class="support" >274  &nbsp;PM Work Orders</P>
+ <P class="support" >Not totaling est. hours correctly on Technician Tab if multiple equipment was on work order.   <BR>Resolved (Fixed) 8/9/2005 – fix has been in for a while   </P>
+ <P class="support" >157  &nbsp;Emailing problems reported by RSD   <BR>Resolved (Fixed) 8/9/2005 – fix has been in for a while   </P>
+ <P class="support" >348  &nbsp;Client Site Equipment Viewer - Records not appearing on list view<BR>Problem in filter settings, corrected.<BR>Resolved (Fixed) 8/9/2005    </P>
+ <P class="support" >337  &nbsp;Project Manager viewer should not attempt to fill list panes until PM and Job have been selected<BR>Resolved (Fixed) 7/28/2005 8:37 AM 6.1 &amp; higher  </P>
+ <P class="support" >327&nbsp;Client Order viewer </P>
+ <P class="support" >Should not allow changes to Site Id or Location Id after Inventory Items <BR>have been entered    (documented in customer help)<BR>Resolved (Fixed) 7/15/2005 4:27 PM   Version 6.1 &amp; higher   </P>
+ <P class="support" >323  &nbsp;Labor Journal reversing entries missing the default Currency Factor of 1<BR>Resolved (Fixed) 7/14/2005 10:05 AM Version 6.1 &amp; higher </P>
+ <P class="support" style="margin-top:0;margin-bottom:0"> 325  &nbsp;ReportAnywhere not properly rescheduling repeat events when repeat time includes range&nbsp;</P>
+ <P class="Style_Support_+_Left___0_5_" >Range may now use _ or – to separate the endpoints. <BR>Resolved (Fixed) 7/14/2005 4:04 PM Version 6.1 &amp; higher </P>
+ <P class="support" >321  &nbsp;Web Log escalation doesn't work with refactored SEM class components</P>
+ <P class="support" >Fixed 'currentRns' problem.&nbsp; Also, added code to have ScheduledEventManager's timer go off open initially launching the function.&nbsp; This prevents the 60-second wait for the first execution.  Resolved (Fixed) 7/12/2005 3:14 PM Version 6.1 &amp; higher </P>
+ <P class="support" >322&nbsp;Certain Bitmaps are not processed correctly by the Bitmap class <BR>Resolved (Fixed) 7/12/2005 3:22 PM  Versions – All</P>
+ <P class="support" >283  &nbsp;sys-viewer-wrkordr ParentTabs= key  - quirky bug; corrected. <BR>Resolved (Fixed) 7/12/2005 9:19 AM Version 6.1+</P>
+ <P class="support" >317  &nbsp;Fix WO viewer print function </P>
+ <P class="Style_Support_+_Left___0_5_" >Recent mod for CLS introduced new code that assumes a particular field will always be in the viewer's workArea.&nbsp; This isn't guaranteed to be true for installations not using standard WOList.<BR>Resolved (Fixed) 7/7/2005 8:40 AM Version 6.1 &amp; higher   </P>
+ <P class="support" >310  &nbsp;COP PO Wizard vendor change..</P>
+ <P class="support" >WHEN A SWITCH of the vendor id is made within the wizard screen...we should RE-EVALUATE the InvVendor tab and re-enter the logic to use the price if found, $0.00 if not.<BR>Resolved (Fixed) 7/6/2005 3:42 PM Version 6.1 </P>
+ <P class="support" >297  &nbsp;Create PM WO generation not setting primary PO# in PM WOs created   <BR>Resolved (Fixed) 6/29/2005 9:55 AM Version 6.1</P>
+ <P class="support" >311  &nbsp;PO not displaying correctly when launched from WO viewer's Purchases tab  <BR>Resolved (Fixed) 6/30/2005 9:42 AM Version 6.1 </P>
+ <P class="support" >302  &nbsp;COP Drop Ship PO Creation Wizard </P>
+ <P class="support" >Corrects the following identified by Brian: the determination of the &quot;unit cost&quot; defaulting to P.O. Wizard lines created by Drop Ship COP does not accurately &quot;simulate&quot; the determination of &quot;unit cost&quot; as performed in the Purchase Order manually...that logic use the Item/Vendor cross-reference if available then falls through last cost by location, last cost overall, standard cost, etc.<BR><BR>The wizard does...Item/Vendor cross-reference, but ends up w/ the UNIT PRICE entered on the COP line when that fails...it does not, appear anyway, to step through the last cost logic...and in NO case should the determination be that the Cost for the P.O. is based on the SELL PRICE from the COP order.  </P>
+ <P class="support" >Resolved (Fixed) 6/28/2005 1:59 PM  Version 6.1</P>
+ <P class="support" >275 &nbsp;UserReport2 integer totals and subtotals are being printed as decimals    <BR>Resolved (Fixed) 6/24/2005 4:47 PM  Reporting (General) </P>
+ <P class="support" >214  &nbsp;Problem with inventory unit costs calculations that should exclude job / wo purchases  <BR>Resolved (Fixed) 6/22/2005 10:18 AM 6.0 &amp; Higher Inventory Management </P>
+ <P class="support" >287  &nbsp;Change default port of Web Server to 7001 from 443  <BR>Resolve (Fixed) 6/21/2005 3:37 PM 6+ CRM Anywhere </P>
+ <P class="support" >292  &nbsp;New Call Client Site Filtering  <BR>Resolved (Fixed) 6/21/2005 10:50 AM 6.1 New Call </P>
+ <P class="support" >289  &nbsp;Technician viewer not storing Tech Remote Passwords<BR>Resolved (Responded) 6/20/2005 12:52 PM 6.1 &amp; higher Service Management</P>
+ <P class="support" >285  &nbsp;Dispatch Board not showing all WOs for RSD customer<BR>Resolved (Fixed) 6/15/2005 9:22 AM 6.1 &amp; higher Dispatch Board </P>
+ <P class="support" >268  &nbsp;Service Compute not processing scheduled events    <BR>Resolved (By Design) 6/10/2005 1:30 PM 6.1 &amp; Higher Escalation Manager</P>
+ <P class="support" >278  &nbsp;Physical Count not properly handling imhstry_qntty_on_jb  <BR>Resolved (Fixed) 6/9/2005 1:26 PM 6.1 &amp; higher Inventory Management</P>
+ <P class="support" >273  &nbsp;COP - Credit Check not working correctly   </P>
+ <P class="support" >Resolved (Fixed) 6/7/2005 5:35 PM  COP</P>
+ <P class="support" >272  &nbsp;Duplicate COP invoices can be created when 2 users simultaneously generate invoices    \&nbsp;Resolved (Fixed) 6/7/2005 5:34 PM  COP </P>
+ <P class="support" >266  &nbsp;Sales tax group not reflecting change in tax authorities <BR>Resolved (Won't Fix) 6/7/2005 10:11 AM 6.1 only Invoicing</P>
+ <P class="support" >152  &nbsp;General viewer problem with date-type fields when switching from pick list to viewer form    Resolved (Responded) 6/7/2005 9:51 AM 6.1 &amp; higher </P>
+ <P class="support" >270  &nbsp;EOM Unvouchered AP not committing database updates   <BR>Resolved (Fixed) 6/7/2005 9:48 AM 6.1 &amp; higher Accounts Payable </P>
+ <P class="support" >37  &nbsp;Inventory Receipts...improper postings when Quantity Received is edited w/o leaving field.  Resolved (Fixed) 6/6/2005 2:38 PM 6.1 &amp; Higher Misc </P>
+ <P class="support" >219  &nbsp;ODBC sporadically getting 'system primitive failed' error  <BR>Resolved (Fixed) 6/6/2005 1:34 PM  Database 6/6/2005 1:34 PM   </P>
+ <P class="support" >251  &nbsp;Sampro My Desktop    <BR>Resolved (Fixed) 6/2/2005 3:15 PM 6.1 &amp; Higher </P>
+ <P class="support" >261 &nbsp; WO#8856 - odd posting for 'old' billing methodology  <BR>Resolved (Fixed) 6/2/2005 2:43 PM 6.1 &amp; higher Invoicing   </P>
+ <P class="support" >253  &nbsp;Add Qty Used to editable fields on WO lines imported from JCH    <BR>Resolved (Responded) 6/1/2005 3:53 PM 6.1 &amp; higher Service Management</P>
+ <P class="support" >254  &nbsp;Disable 'line insert with copy' in the PO viewer  <BR>Resolved (Fixed) 6/1/2005 3:51 PM 6.1 &amp; higher Purchasing  </P>
+ <P class="support" >242  &nbsp;WO form view in Classic Dispatch Board accepts bogus data entry <BR>Resolved (Fixed) 6/1/2005 1:41 PM 6.1 Dispatch Board </P>
+ <P class="Style1" >Fogbugz Features </P>
+ <P class="support" style="margin-top:0;margin-bottom:0"> Build 51 &nbsp;</P>
+ <P class="support" style="margin-top:0;margin-bottom:0"> 560*&nbsp;GLReportWriter&nbsp;</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">            Many Changes and Enhancements– see customer release note 5.2 for details.&nbsp;</P>
+ <P class="support" >Build 48</P>
+ <P class="support" >500&nbsp;New Call Template</P>
+ <P class="Style_Support_+_Left___0_5_" >This case takes a new approach to cloning client, site and job records from a template by adding  2 new buttons to copy the Site Address to Client Address and to copy Client Address to Job Address.  See section 9.2.1 of the Customer Release Notes for details. </P>
+ <P class="support" >Build 47</P>
+ <P class="support" >393&nbsp;Keystroke Equivalents</P>
+ <P class="Style_Support_+_Left___0_5_" >Control-G now also works correctly in Void Checks. </P>
+ <P class="support" >458     AR Cash Receipts Journal</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">            Make glentty.rn sticky – done for RSD customer. This is also noted in Customer notes. &nbsp;</P>
+ <P class="support" >462 &nbsp;Fill Backorders - COP &amp; Shop Location Filter</P>
+ <P class="Style_Support_+_Left___0_5_" >See Customer release notes 11.7. <BR>Available in versions... &nbsp; 6.1.358.047test, &nbsp; 6.2.401.beta_1028</P>
+ <P class="support" >469&nbsp;Registry Option to control Service Task List post to Equipment Work Request</P>
+ <P class="support" >&nbsp;See customer release note 2.26. </P>
+ <P class="support" >475&nbsp;Create PM Billings</P>
+ <P class="support" >&nbsp;Registry entry to ignore tighter accounting period validation; see customer note 2.9</P>
+ <P class="support" >480&nbsp;Viewer Pre-filtering Registry</P>
+ <P class="Style_Support_+_Left___0_5_" >The Registry functionality that overrides&nbsp;viewer filters has been extended to&nbsp;the PICK-LIST’s that are displayed from &quot;double left-clicks&quot;.  Since these registry entries will interact with pre-filtering done by the system for ‘take-backs’, care must be taken to test the results and ensure that unintended consequences are obtained. See Support Release Note 2.7 for details.&nbsp; Available in versions .1.358.047test (11/8) and&nbsp;6.2.403.beta_1108</P>
+ <P class="support" >"""""""""""""""""""""""""____________________________</P>
+ <P class="support" >Build 46</P>
+ <P class="support" >49&nbsp;Kappus/Expesite – customer testing</P>
+ <P class="Style_Support_+_Left___0_5_" >Available in versions 6.1.358.046,  6.2.400beta1018a</P>
+ <P class="support" >440&nbsp;Message viewer for customer testing by Kappus.</P>
+ <P class="Style_Support_+_Left___0_5_" >Merged into 6.1.358.044 (already in 6.20).</P>
+ <P class="support" >434&nbsp;Webservices</P>
+ <P class="Style_Support_+_Left___0_5_" >Extend the Sampro web server to return valid HTTP headers status codes (e.g. 200 OK) when sending back html pages.</P>
+ <P class="Style_Support_+_Left___0_5_" >Resolved 10/7/2005</P>
+ <P class="support" >376  &nbsp;Service Compute Invoice &amp; Worksheet; enable progress meter @ each step  </P>
+ <P class="Style_Support_+_Left___0_5_" >Resolved (Implemented) 8/30/2005 10:12 AM 6.1 Invoicing    </P>
+ <P class="support" >306&nbsp;Vendor Invoice Status report updated.</P>
+ <P class="Style_Support_+_Left___0_5_" >Add filters for Client Site Id and WO Escalation Status.<BR>Print Job Id for each invoice - print under Vendor Name.<BR>Resolved (Implemented) 8/23/2005 6:55 AM</P>
+ <P class="support" >167  &nbsp;Service Job / Create New Job from WO   - New Call</P>
+ <P class="Style_Support_+_Left___0_5_" >In pre-version 6 releases, a field in the Client Site record, New Job for Each WO?, defaulted to the New Call viewer. When you created a new service call and the field was flagged, the system used job cloning to create a new set of job records using the default job information in the Client Site record as the templates so that the charges from each work order will be assigned to their own job, and printed on a separate invoice. This was obsoleted by the Service Compute functionality. However, the ‘New Job for Each WO?’ may still be set in the Client Site record (though it is no longer displayed on the screen).  This case prevents New Call from triggering this job cloning, which is no longer desired. <BR>Resolved (Implemented) 6/20/2005 5:01 PM 6.1 &amp; Higher   </P>
+ <P class="Support_Heading_1" >1.  System Changes</P>
+ <P class="Support_Heading_2" >1.1 Change Log on Tools Menu</P>
+ <P class="support" >When you viewing a record or journal entry, the Tools menu now includes the ‘Change Log’ option.  When you select this option, a list of the users who have modified the parent record will be displayed, along with the date and time of the modification (e.g., with the ‘Save’ button was pushed).  Changes to child tables (where the parent record was not impacted) are not recorded in the change log.  Information regarding were fields have been changed is not recorded. </P>
+ <P class="support" >Changes made to a record by running a system feature are not fully supported as yet: omissions should be reported to Jean Knox or Jeff Carr.  Where supported, a description of the change will be listed.  The following shows the Change Log of a Work Order that has been modified once directly, and then again from the dispatch board.</P>
+ <P class="support" >Date               &nbsp;Time &nbsp;          Userid</P>
+ <P class="support" >Mar 03, 2005   &nbsp;03:34:43pm     sampro</P>
+ <P class="support" >Mar 03, 2005    &nbsp;03:35:22pm     sampro         DispatchBoard</P>
+ <P class="Support_Heading_2" >1.2 Logon History Table</P>
+ <P class="support" >A logon history table, lgnhstry, is included in SAM Pro databases, and may be accessed via SQL. This table records the User Id, Logon Date and Time, Engine, Logoff Date and Time, Success (of logon), and Windows Logon name (Windows Logon name is not supported in Windows 98 and ME).  </P>
+ <P class="Support_Heading_2" >1.3 Splash Bitmaps</P>
+ <P class="support" >When a system is upgraded, the existing splash bitmap (v.bmp) will be copied to a version with the date included in the filename (_yyyymmdd.bmp).  If present, startme.exe will reference this bitmap instead of v.bmp.  To have a new splash screen appear, delete the v – dated bitmaps and replace the existing v.bmp bitmap with the new splash screen.  When startme.exe is run, it will create the appropriate copy of the bitmap and display that. </P>
+ <P class="Support_Heading_2" >1.4 Logon Time Monitoring</P>
+ <P class="support" >The new startme.exe files distributed with versions 6.1.358.025 and 6.2.378.beta_0610 (and later) support a new logging feature that enables our support representatives to monitor the time it takes to execute the various phases of the login process.&nbsp; Monitoring could be implemented if, for example, logon’s seemed to be taking an unreasonably long time for one or more users at a client’s site. </P>
+ <P class="support" >To implement this option (with an appropriate version of the startme.exe file), you must include a new command line option. To do so,  change the startme shortcut to read:</P>
+ <P class="support" ><FONT style="font-weight:bold; " >startme.exe -timeLogon<BR></FONT><BR>The results can be found in the SAMPRO folder in a file named  &quot;&lt;SAMPROUserId&gt;~Logon.txt&quot; that will be automatically generated by the system.</P>
+ <P class="Style1" >1.5 New Conversion Method to Encrypt Passwords</P>
+ <P class="support" >This new conversion method may be applied to encrypt passwords and load them into the database. </P>
+ <P class="support" >getEncryptedvalueFor: webpassword</P>
+ <P class="Style_Support_+_Left___0_5_" >The encrypted value is the passed parameter after applying standard SAMPRO encryption logic.</P>
+ <P class="Style_Support_+_Left___0_5_" ><IMG src="images/conversionmethod.gif" border=0 height=605 width=791 alt="images\conversionmethod.gif"> </P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support_Heading_1" >2. Registry</P>
+ <P class="Support_Heading_2" >2.1  New Registry Options for sys-viewer-vwrkordr</P>
+ <P class="support" >InventoryDescription=invntryitm.id </P>
+ <P class="support" >This new option was implemented to enable a client’s service invoice to display inventory item id instead of the description.  Contact Brian to determine if this option is supported by your clients invoice option. </P>
+ <P class="support" >(Note: also see note 2.7 for an example of Work Order Filtering). </P>
+ <P class="support" >ImportPOs=false</P>
+ <P class="support" >This restricts the Cost Import to entries accumulated from JCH. </P>
+ <P class="support" >When using the Sub-Contractor tab on PO's &amp; Service Workorders --- setting this option will then prevent the system from importing costs from the PO's subcontract and from the AP invoice twice, it will then only import cost/revenue from AP (based on % earned on PO).&nbsp;&nbsp; </P>
+ <P class="support" >When this registry setting is setup, it will also prevent CREDIT PO's from importing into the workorder.<BR>On CREDIT PO's if this registry setting is setup, then only the AP Voucher/Invoice (source AP Journal) will import into the workorder, without the setting, then credit PO's import twice into the workorder causing double costing.&nbsp;&nbsp; It seems this registry option may control &quot;un-received&quot; PO's as both CREDIT PO's and SUB-CONTRACT items appear in JCH as the source 'purchase'.</P>
+ <P class="Support_Heading_2" >Deprecated Options:</P>
+ <P class="support" >INVfromJCHAllowAdditionalEdits=true<BR>OTHfromJCHAllowAdditionalEdits=true<BR>LABfromJCHAllowAdditionalEdits=true&nbsp; &nbsp;</P>
+ <P class="support" >It is strongly recommended that you do <FONT style="text-decoration:underline;" >not</FONT> enable these options which allow edits to job id, cost code id, cost cat, gl entity on WO OTH &amp; INV tabs for imported P.O. lines that HAVE the JCH posted flag set to yes.  </P>
+ <P class="support" >In version 6.1, we tightened down edits to cost code, cost cat for lines that are imported to W.O. from P.O.'s...this was done because decisions relevant to G/L regarding entities, accounts, etc. would already have been posted from the AP Journal...therefore edits to these values should be prohibited or you won't have way to be confident that what happened in GL is consistent with how the final w.o. ended up.&nbsp; A customer insisted on having the ability to change these values, regardless of the consequences, so we enabled this (undesirable) functionality for them via registry.</P>
+ <P class="Support_Heading_2" >2.2 Quotemaster Recap Report Substitution with sys-function-substitutions</P>
+ <P class="support" >The Quotemaster &quot;View Recap&quot; button is hard-coded to the function &quot;rqtercp&quot;. If a different Recap report is to be used it should be entered into the Registry entry sys-function-substitutions as follows:</P>
+ <P class="Style_Support_+_Left___0_5_" >rqtercp=rqtercp1</P>
+ <P class="Support_Heading_2" >2.3 Report Registry Entries</P>
+ <P class="support" >The system now ignores bitmap registry entries with invalid paths instead of generating an error message.</P>
+ <P class="Support_Heading_2" >2.4  Registry Entry to Control Type Ahead in Id Fields sys-id-autofill</P>
+ <P class="Support_Heading_2" >Purpose:</P>
+ <P class="support" >This registry entry enables the default type-ahead (also known as Autosearch) behavior to be altered on a table-by-table basis. </P>
+ <P class="support" >Background</P>
+ <P class="support" >In previous releases, Type Ahead was enabled in most Id fields:  you would start entering the Id, and the system would complete it for you as soon as it located a ‘match’.  However, due to performance issues, this functionality was disabled for the job, client, and client site within the image itself.  This hard-coding of type-ahead meant that it could not easily be tuned to specific user implementations. </P>
+ <P class="support" >Changes in this Release</P>
+ <P class="support" >In the absence of this registry entry, versions 6.1.358 and up observe the following default behavior:</P>
+ <P class="support" >No Type Ahead By Default:</P>
+ <P class="Style_Support_+_Left___0_5_" >Numeric Id’s generated by the system, including Journal Id’s, PO’s, Work Orders, Client Orders, Quotes. In these cases, type ahead does not gain the user anything because the id is most likely not defined until the last digit is typed in. </P>
+ <P class="Style_Support_+_Left___0_5_" >The special cases of Job Cost Code, Job Billing Item, Client Site Equipment (because these records are children of the Job and Client Site records (respectively)). </P>
+ <P class="support" >Type Ahead Turned On By Default</P>
+ <P class="Style_Support_+_Left___0_5_" >All other records with alphanumeric Id’s.</P>
+ <P class="Support_Heading_2" >Important Fields:</P>
+ <P class="support" >Id:</P>
+ <P class="support" >&nbsp;sys-id-autofill</P>
+ <P class="support" >Contents / Additional Contents:</P>
+ <P class="support" >&nbsp;<FONT style="font-weight:bold; font-style:italic; " >tableid</FONT><FONT style="font-weight:bold; " >=true</FONT>  (turns on type ahead) or</P>
+ <P class="support" ><FONT style="font-weight:bold; font-style:italic; " >tableid</FONT><FONT style="font-weight:bold; " >=false  </FONT>(turns off type ahead)</P>
+ <P class="support" >where <FONT style="font-style:italic; " >tableid</FONT> is replaced by the function id of the table. </P>
+ <P class="support" >Example:</P>
+ <P class="Style_Support_+_Left___0_5_" >Assume that your sys-id-autofill registry entry has the following contents:</P>
+ <P class="support" >clntste=false</P>
+ <P class="support" >wrkordr=true</P>
+ <P class="Style_Support_+_Left___0_5_" >In this case, all the type-ahead defaults would be observed except that type ahead would be turned off for client site id fields, and on for work order id fields. </P>
+ <P class="Support_Heading_1" >2.5 All Registry Entries – New Comment Functionality </P>
+ <P class="support" >Contents / Additional Contents:</P>
+ <P class="support" >Starting with release 6.1.358.031,<FONT style="font-family:'Tahoma'; " > </FONT>comments may be included in the Contents/Additional Contents fields of Registry records. This new feature allows the user to attach comments to entry values without interfering with SAM Pro's use of the values.&nbsp; The double exclamation point (!!) is used to indicate the beginning of a comment.&nbsp; SAM Pro terminates the registry value when it encounters the comment marker.&nbsp; </P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; text-decoration:underline;" >Example:<BR></FONT><BR> COPDropShipReceipts=manual&nbsp; !!options are manual, serialized or automatic (default)<BR><BR>To SAMPRO, this is equivalent to...<BR><BR>&nbsp; COPDropShipReceipts=manual</P>
+ <P class="support" >You may wish to use your demo database as a storage vehicle for registry entries that you've created and/or used.&nbsp; It makes a good reference source when searching for vaguely remembered registry options.&nbsp;</P>
+ <P class="Support_Heading_2" >2.6 Global Settings Registry Entry  (sys-ffv-global-settings) </P>
+ <P><FONT style="font-weight:bold; " >Contents / Additional Contents </FONT></P>
+ <P class="Support_Heading_2" >COP Dropship Options</P>
+ <P class="support" >COPDropShipReceipts=<FONT style="font-style:italic; " >option</FONT>&nbsp; </P>
+ <P class="support" >Where <FONT style="font-style:italic; " >option</FONT> is replaced by manual, serialized or automatic (the default value if no entry is created). This allows entry of receiving transactions for serialized inventory items in order to get serial numbers into IMH.&nbsp; In certain cases, this is needed for sales reporting and warranty tracking. </P>
+ <P class="support" >'Manual' requires ALL drop ship items to be received via the Receiving <BR>Journal.</P>
+ <P class="support" >'Serialized' requires only serialized, drop ship items to be received <BR>via the Receiving Journal.</P>
+ <P class="support" >If this registry setting is not specified, SAM Pro continues to function <BR>as it does now.</P>
+ <P class="Support_Heading_2" >Maximum Sales Tax Per Invoice (for North Dakota)</P>
+ <P style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >SalesTaxMaxPerInvoice=true  (included in customer help)<BR></FONT>This option was implement to accommodate a Sale Tax Authority rule for North Dakota, where a maximum sales tax amount per invoice is observed. If this option is implemented, the License field in the Sales Tax Authority record will used to hold the maximum sales tax amount per invoice (service and COP).  </P>
+ <P style="margin-left:36.00pt;">If this option is implemented, it is strongly recommended that you use the <A href="emi_field_label_remapping.htm">Field Label Remapping</A> function to change the label 'License Number:' to 'Max Tax per Invoice:'&nbsp; If this field is being used to specify the Max Tax per Invoice in some records, it should not be used for the License number in other.  <BR><BR>Finally, you must edit all <A href="emi_sales_tax_authority_viewer.htm">Sales Tax Authority</A>  records and enter in the Max Tax per Invoice values where appropriate.&nbsp; Only digits (0-9) and the decimal point should be entered in the field.&nbsp; '25' and '25.00' are equivalent. Validation logic has been added to the Sales tax Authority viewer to prevent entry of bogus characters in the 'Max Tax per Invoice' field.</P>
+ <P style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >COPTaxOnFreightStates=</FONT><FONT style="font-weight:bold; font-style:italic; " >WI,MN,ND,etc </FONT><FONT style="font-weight:bold; " >(included in customer help)</FONT><BR>This registry entry must only be used in conjunction with SalesTaxMaxPerInvoice=true. If implemented, tax will be assessed on freight on Client Order Invoices.  </P>
+ <P class="Support_Heading_2" >Eliminate The &quot;By Line&quot; On Escalation Messages</P>
+ <P class="support" >byline=</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:maroon; " >This entry sets the ‘byline’ to blank.</FONT><FONT style="color:maroon; font-weight:bold; " > </FONT><FONT style="color:maroon; " >RESULTS:&nbsp; THIS WILL DISABLE THE MESSAGE &quot;This important message auto-generated by SAM Pro Enterprise – </FONT><FONT style="color:blue; text-decoration:underline;" >www.databasics.com</FONT><FONT style="color:maroon; " > &quot; that is included on all escalation messages by default.</FONT></P>
+ <P class="Style1" >Postpone Costing of PO Items Until AP Vouchering Occurs</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >POReceiptsToJCH=false<BR></FONT>this option essentially allows us to revert to pre-6.0 methodology that postpones the costing of P.O. items until A/P vouchering occurs. </P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support_Heading_1" >2.7  Registry Entry to Override Viewer Pre-Filtering Options for All, Active (Open) and Closed Records (sys-viewer-<FONT style="font-style:italic; " >afunction</FONT>)</P>
+ <P class="Support_Heading_2" >Purpose:</P>
+ <P class="support" ><IMG src="images/allfilter.gif" border=0 height=28 width=48 alt="images\allfilter.gif"> <IMG src="images/activefilter.gif" border=0 height=28 width=48 alt="images\activefilter.gif"> <IMG src="images/closed.gif" border=0 height=28 width=48 alt="images\closed.gif"> This registry option may be used to override one of the default settings for the Open, Closed and All filter options on a viewer-by-viewer basis.  </P>
+ <P class="support" >If you specify the registry Id to the user level (sys-viewer-afunction-branchid-userid or sys-viewer-afunction--userid) you can accommodate the requirements of individuals in your system.  For instance, an ‘active’ work order would be very different for a dispatcher or a billing clerk or a parts manager.  </P>
+ <P class="Support_Heading_2" >Usage:</P>
+ <P class="support" >Registry overrides impact filters are used for viewers opened from folders, menus, and right-clicks, and the PICK-LIST’s that are displayed from &quot;double left-clicks&quot;.  Since these registry entries will interact with pre-filtering done by the system for ‘take-backs’, care must be taken to test the results and ensure that unintended consequences are not obtained. </P>
+ <P class="support" >Dates may be specified (e.g., ‘1900-01-01’).</P>
+ <P class="support" >The token replacement of ^today^ is also supported. </P>
+ <P class="support" >In version 6.2, the user may set filter ranges that will be saved by the system.  However, this registry entry will still be supported, and may be desirable in specific implementations. </P>
+ <P class="Support_Heading_2" >Important Fields:</P>
+ <P class="support" >Id:</P>
+ <P class="support" >&nbsp;sys-viewer-afunction-securityid</P>
+ <P class="support" >&nbsp;sys-viewer-afunction-branchid-userid</P>
+ <P class="support" >&nbsp;<FONT style="font-weight:bold; " >sys-viewer-</FONT><FONT style="font-weight:bold; font-style:italic; " >afunction--userid</FONT>  (if branches are not implemented)</P>
+ <P class="support" >&nbsp;sys-viewer-afunction</P>
+ <P class="support" >Additional Contents:</P>
+ <P class="support" >Filter{type}:{display field name}={filter string value}</P>
+ <P class="Style_Support_+_Left___0_5_" >{type} must be 'All', 'Open' or 'Closed'.</P>
+ <P class="Style_Support_+_Left___0_5_" >{display field name} must match the name of the range display exactly.</P>
+ <P class="Style_Support_+_Left___0_5_" >{filter string value} can be anything supported during manual entry of filter values. </P>
+ <P class="support" >Dates may be specified (e.g., ‘1900-01-01’).</P>
+ <P class="support" >The token replacement of ^today^ is also supported. </P>
+ <P class="support" >Example:</P>
+ <P class="support" >In the Work Order Viewer, the system compares two fields, Date Closed and Date Work Completed with the current system date, to determine if the work order is active (open) or closed.  </P>
+ <P class="support" >The following values (entered in sys-viewer-vwrkordr--billingagent) override the system values for the Date Closed and Completed settings, and base the filter parameters solely on the escalation status of the work order. Since this entry is designed for a billing agent user (with user id=billingagent), the escalation statuses are set in a corresponding fashion. </P>
+ <P class="support" >FilterOpen:wrkordr.escltn-stts=Invoice Ready, Invoice Review,Wait Paperwork</P>
+ <P class="support" >FilterAll:wrkordr.escltn-stts= Invoice Ready, Invoice Review,Wait Paperwork,Billed</P>
+ <P class="support" >FilterClosed:wrkordr.escltn-stts=Billed</P>
+ <P class="support" >FilterAll:wrkordr.dte-clsd=            !! The following lines override the system values</P>
+ <P class="support" >FilterOpen:wrkordr.dte-clsd=</P>
+ <P class="support" >FilterClosed:wrkordr.dte-clsd=</P>
+ <P class="support" >FilterAll:wrkordr.dte-wrk-cmpltd=</P>
+ <P class="support" >FilterOpen:wrkordr.dte-wrk-cmpltd=</P>
+ <P class="support" >FilterClosed:wrkordr.dte-wrk-cmpltd=</P>
+ <P class="Block_Text" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support_Heading_1" >2.8 Registry Entry for Crystal Report Viewer</P>
+ <P class="Support_Heading_2" >Purpose:</P>
+ <P class="support" >This registry setting is required to enable Crystal Report Viewer functionality within SAM Pro’s Service and Back Office (Windows) modules.</P>
+ <P class="Support_Heading_2" >Usage:</P>
+ <P class="support" >In addition to this registry entry, the Crystal View application from Data-Basics must be installed. This is available in Install Shield format from Data-Basics support.  It may be installed as a fat client on the Windows Desktop, or under Citrix. </P>
+ <P class="support" >A User Defined Function record must be created for each Crystal Report.  Remember to enable these functions for all applicable User Groups. </P>
+ <P class="support" >Crystal Reports run from within SAM Pro must be designed and created using off-the-shelf Crystal Reports software.  Documentation and training courses for this software is readily available. </P>
+ <P class="Support_Heading_2" >Important Fields</P>
+ <P class="support" >Id:</P>
+ <P class="support" >&nbsp;CRV-securityid</P>
+ <P class="support" >&nbsp;CRV-branchid-userid</P>
+ <P class="support" >&nbsp;CRV<FONT style="font-style:italic; " >--userid</FONT>  (if branches are not implemented)</P>
+ <P class="support" >&nbsp;CRV</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Description:<BR></FONT>Although this field is optional, we strongly recommend that you use it to briefly describe this registry entry (e.g., Crystal Report Viewer). </P>
+ <P class="support" >Contents:</P>
+ <P class="support" >&nbsp;RegistryASStringSeparatedBy=~</P>
+ <P class="support" >&nbsp;This line is required any must be entered as listed. </P>
+ <P class="support" >Additional Contents:</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >exe=</FONT><FONT style="font-weight:bold; font-style:italic; " >path</FONT><FONT style="font-weight:bold; " >\CRV.eve <BR></FONT>where <FONT style="font-style:italic; " >path</FONT> is replaced by the full path (share path or drive designation) to the directory containing the Crystal Viewer executable. </P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; text-decoration:underline;" >Example of a Share Path:<BR></FONT>exe=\\myserver\sampro\crystal\CRV.eve</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >rptpath=</FONT><FONT style="font-weight:bold; font-style:italic; " >path</FONT><FONT style="font-weight:bold; " > <BR></FONT>where <FONT style="font-style:italic; " >path</FONT> is replaced by the full path (share path or drive designation) to the directory containing the Crystal Reports used by this company.  </P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; text-decoration:underline;" >Example of a Share Path:<BR></FONT>rptpath=\\myserver\sampro\crystal\reports</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >dsn=</FONT><FONT style="font-weight:bold; font-style:italic; " >samprodsn</FONT><FONT style="font-style:italic; " ><BR></FONT>where samprodsn is replaced by the data source name for your SAM Pro database.</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >mode=u  </FONT>or<FONT style="font-weight:bold; " > mode=a<BR></FONT>Enter mode=u to enable users to specify report settings, or mode=a to automatically launch the selected report. One of these options must be specified. </P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >companyname=^companyname^<BR>user=^user^<BR>branch=^branchfilter^<BR>pm=^pmfilter^<BR>location=^locationfilter^<BR></FONT>These contents lines are required for correct filtering of reports, and must be entered exactly as shown above. </P>
+ <P class="Support_Heading_2" >2.9  New Registry Option for sys-viewer-vapjrnl for Work Order Import Warning </P>
+ <P class="support" >Client 1598 uses the SAMPRO feature that allows them to record Vendor Invoices directly into the Vendor Invoice viewer prior to recording them as AP Journal entries.&nbsp; This case involves adding a check during the WO cost import that warns them when they have Vendor Invoices that haven't yet been recorded in AP.</P>
+ <P class="support" >Client 1598 has a registry setting for the AP Journal (UseVendorInvoiceViewer=true) that alters SAMPRO behavior to fit their processes.&nbsp; This entry indicates that vendor invoices are entered manually in the Vendor Invoice viewer prior to recording them in the AP Journal.&nbsp; This was done as a mod for them in October 2004.<BR><BR>This case (387) extends that methodology to include the Work Order viewer.&nbsp; The Import Costs process tests for vendor invoices that have been recorded in the Vendor Invoice viewer but not in the AP Journal.&nbsp; When this situation is detected, a warning message is appended to the old message...the one that summarizes the import.<BR><BR>The WO Import Costs process has NOT been changed for anyone not implementing the special registry entry as noted above.</P>
+ <P class="support" >Enhanced to ignore vndrinvce records where vndrinvce_amnt_invcd=0 in versions: <BR>&nbsp; 6.1.358.044<BR>&nbsp; 6.2.400.beta_1013 </P>
+ <P class="support" >See SAM Pro WO 9654. </P>
+ <P class="Support_Heading_2" >2.10 Registry Entries for Reports and Starters – New Where Claus Functionality </P>
+ <P class="support" >The 'wc' functionality has been implemented generically and is available for use with any function that sends messages to 'FFV &gt;&gt; rangeWhereClause'.&nbsp; That should include most functions that begin with an input screen that includes a range-type section...reports and starter functions.</P>
+ <P class="support" >Id:&nbsp;</P>
+ <P class="support" style="margin-top:0;margin-bottom:0"> sys-start-scrtepmwo<BR>&nbsp;Contents:&nbsp; &nbsp;</P>
+ <P class="support" >wc=rangename=’desiredvalue’&nbsp;</P>
+ <P class="support" >Example:</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >wc=clntsteeqpmnt_undr_cntrct='Y'<BR></FONT><BR>This functionality was implemented in response to an issue from client 1598 that wanted the Create PM WOs function to skip Site Equipment <FONT style="text-decoration:underline;" >not</FONT> tagged as 'Under Contract'.<BR></P>
+ <P class="Support_Heading_1" >3 Service Management</P>
+ <P class="Support_Heading_2" >3.1  Work Order Viewer</P>
+ <P class="Support_Heading_2" >3.1.1 Main Tab</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Technician Id:<BR></FONT>This field was displayed on earlier builds of this release, but not visible in 6.1, but will be again in 6.2.  This is what is happening behind the scenes.  </P>
+ <P class="support" >This field identifies the primary work order technician, and is used in conjunction with the Technician Profitability Report.  It is set to the technician selected when a work order is created in New Call.  If only one technician is listed on the Technician tab, it will be updated to that Tech when the Technician is changed on the Dispatch board or in the Work Order Technician Tab itself (the change will appear when the record is saved). The only exception to this is that if the status of the of the first Tech (on the Technician Tab) is set to cancelled, the system will choose the first Tech that is <FONT style="text-decoration:underline;" >not</FONT> set to canceled as the primary work order technician. </P>
+ <P class="Support_Heading_2" >3.2 Escalation Profile</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Return Receipt?<BR></FONT>This field is for future use only.  It is not yet implemented, and clicking it doesn’t do anything.  It is listed in the help as ‘future use only’, but is not listed in the customer’s release notes. </P>
+ <P class="Support_Heading_1" >4 Job Related</P>
+ <P class="Support_Heading_2" >4.1 Billing Item Viewer</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Ok to Bill?<BR></FONT>The meaning of ‘OK to Bill’ has been refined with release 6.1.  In previous releases, if a Billing Item was <FONT style="text-decoration:underline;" >not</FONT> flagged as Ok To Bill, the costs put against it would be put on hold, and could potentially remain unbilled forever.  Although this is acceptable from a T&amp;M standpoint, it was creating a problem with various types of fixed costs that were not being flushed through the system (typically, those not caught on AIA billings).  </P>
+ <P class="support" >In this release, if the following are all true, the unbilled costs associated with this Billing Item will be attached to the job invoice when it is computed:</P>
+ <P class="support" ><FONT style="font-family:'Wingdings'; " >q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span>q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span>q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span>q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span></FONT>Billing Item is Fixed Fee</P>
+ <P class="support" ><FONT style="font-family:'Wingdings'; " >q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span>q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span>q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span>q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span></FONT>Billing Item has No Contract Value </P>
+ <P class="support" ><FONT style="font-family:'Wingdings'; " >q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span>q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span>q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span>q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span></FONT>Billing Item is Not OK to Bill</P>
+ <P class="support" ><FONT style="font-family:'Wingdings'; " >q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span>q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span>q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span>q<span style="font-size:8pt; font-family='Times New Roman';">&nbsp;&nbsp;&nbsp;</span></FONT>Job History for Billing Item shows no revenue</P>
+ <P class="Support_Heading_1" >5 Web Related</P>
+ <P class="Support_Heading_2" >5.1 Integration of Web Front-End Sign On with Extranets</P>
+ <P class="Support_Heading_2" >Purpose:</P>
+ <P class="support" >This enhancement implements a web front-end mechanism to enable the users of extranets (who are logged into the extranet) to transition smoothly to parts of Sampro's CRM/CSR web interface without having to log in again. </P>
+ <P class="support" >This feature extends the Login web RPC to allow extranet users to pass on a pre-generated Session ID string (and a timeout length), along with the username and password (for authentication by SAM Pro). The idea is that when external users log into their extranet and receive a session id, they can also log that session id with SAM Pro, so it can be used at any time during their browsing session.</P>
+ <P class="Support_Heading_2" >Usage:</P>
+ <P class="support" >An external application (within the customer’s extranet) must be able to generate a valid session number and call to SAM Pro’s web front-end using a regular web request (http GET) to the address:</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; text-decoration:underline;" >http://domain:port/action?rpc=registerSession&amp;session=[session-id]&amp;user=[username]&amp;password=[password]&amp;timeout=[number_of_seconds]</FONT></P>
+ <P class="Support_Heading_2" >Parameters:</P>
+ <P class="support" >[session-id]&nbsp; -- (Required) an alphanumeric session id, generated by the external application. <BR>[username]&nbsp; &nbsp; -- (Required) a valid Sam Pro web user (either a technician with 'client' or 'csr' web access, or the new style Web User (version 6.2 only)<BR>[password] -- (Required) a valid password for the user, plain text (either from the technician record with 'client' or 'csr' web access, or the new style Web User (version 6.2 only)).<BR>[number of seconds]&nbsp; -- (Optional, defaults to 10000 if not present) session timeout period, in seconds.</P>
+ <P class="support" >Note that the external application must be able to generate the session id.  The extranet log in and the SAM Pro web logins should be identical. </P>
+ <P class="Support_Heading_2" >Login In Results:</P>
+ <P class="Style_Support_+_Left___0_5_" >If the username, password or session id is missing, an HTTP</P>
+ <P class="support" >400 Bad Request<BR>status code is returned, along with an explanation for the error, in the http body.</P>
+ <P class="Style_Support_+_Left___0_5_" >If the username or password is invalid, disabled or expired, an HTTP</P>
+ <P class="support" >403 Forbidden<BR>status code is returned, along with an explanation in the http body.</P>
+ <P class="Style_Support_+_Left___0_5_" >If neither of the previous results is returned, the 'registerSession' rpc method then registers the session with the web server (and creates the necessary temporary tables, for technician users). <BR></P>
+ <P class="Style_Support_+_Left___0_5_" >If the operation is successful, an HTTP</P>
+ <P class="support" >200 OK<BR>status code is returned.</P>
+ <P class="Support_Heading_2" >Accessing the SAM Pro Web Interface After Log In:</P>
+ <P class="support" >The Sam Pro web interface can now be accessed at any time (within the timeout period) by the external application by, linking to any valid rpc action. </P>
+ <P style="margin-top:0.00pt;"><FONT style="color:maroon; font-weight:bold; text-decoration:underline;" >Example: To link to the Main menu:</FONT><FONT style="color:maroon; text-decoration:underline;" ><BR></FONT><FONT style="color:maroon; " ><BR></FONT><FONT style="font-family:'Tahoma'; color:#cc0000; " >http://domain:port/action?rpc=main&amp;session=[session-id]</FONT><FONT style="color:maroon; " ><BR><BR>(the session id has to be one that was previously registered).</FONT></P>
+ <P class="Support_Heading_2" >Logging Off / Ending the SAM Pro Session:</P>
+ <P class="support" >The external program can either let the session time out (at which point it's removed), or<BR>can call the logout rpc when the user exits the extranet:</P>
+ <P style="margin-top:0.00pt;"><FONT style="color:blue; text-decoration:underline;" >http://domain:port/action?rpc=logout&amp;session=[session-id</FONT><FONT style="color:#cc0000; " >]</FONT></P>
+ <P class="Support_Heading_1" >6  Payroll</P>
+ <P class="Support_Heading_2" >6.1 Payroll Period – Undocumented Feature</P>
+ <P class="support" >This has been around for a while but has not yet been included in the documentation.  I have added it to customer help for Payroll Periods and Bonus checks.  </P>
+ <P class="support" ><FONT style="font-weight:bold; " >NOTE:&nbsp; BONUS</FONT> amounts (entered on the Labor Journal) will <FONT style="font-weight:bold; " >NOT</FONT> Accrue/post to<BR>the GL, regardless of how the Accrue to GL field is checked.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

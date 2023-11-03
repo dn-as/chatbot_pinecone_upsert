@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.1.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="job"/>
+<meta name="MS-HKWD" content="prevailing wages"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job Employee Prevailing Wage Tab (7.1)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="job,prevailing wages,employee"/><meta name="brsnext" value="Registry_COP_Invoice_sys_printer_rcopinvce_.htm"/><meta name="brsprev" value="Job_Employee_Overrides.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Employee Prevailing Wage Tab (7.1)">
+        <span>Job Employee Prevailing Wage Tab (7.1)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Job Prevailing Wage Tab</h1>
+<h2>Usage:</h2>
+<p>When the Employee’s Labor rate matches one on this tab, the system compares 
+ the Package amount with the Employee’s wages + fringe total when hours 
+ are entered in the Work Order Labor Tab, Labor Journal and Remote Labor 
+ time entry (including TechAnywhere). If the Employee’s wages + fringes 
+ exceed the Package amount, the Employee’s Wages will be used for the Wage 
+ calculation.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Tip:</span> 
+ The <a href="Prevailing_Wage_Schedule.htm">Prevailing Wage Schedule</a> 
+ (P.W. Schedule record) may be used instead of the Job&#39;s Prevailing Wage 
+ tab to define a Job&#39;s Prevailing Wage structure. In this way, when a particular 
+ Prevailing Wage Schedule changes, it is only necessary to change it in 
+ the P.W. Schedule record, instead of changing the Prevailing Wage Tab 
+ in each Job record that it impacts. </p>
+<p>Take the case of an Employee pay package (base wage plus fringes): on 
+ any given labor line, the line&#39;s package has three potential sources ...</p>
+<p style="margin-left: 36.00pt;">1. Defaulted from Employee record (Earnings 
+ tab or Earnings Group)</p>
+<p style="margin-left: 36.00pt;">2. Defaulted from Job&#39;s Employee Overrides</p>
+<p style="margin-left: 36.00pt;">3. User typed it</p>
+<p>The prevailing wage calculations do not care about the source ... only 
+ that there is an Employee pay package to compare against a Job’s Prevailing 
+ Wage Package for a common Labor Rate Id. <font style="font-weight: bold;">Note, 
+ however, that the pay rate multiplier DOES NOT affect the prevailing wage 
+ package amount on this tab during the comparison. What this means that 
+ during setup, overtime and any other pays must be accommodated in the 
+ Prevailing Wage Labor rate list on the job.</font></p>
+<p style="margin-left: 36.00pt; font-weight: bold;">Tip: Set the Prevailing 
+ Wage Field on the Financial / Main 
+ Tab to Labor Rate</p>
+<p style="margin-left: 36.00pt;">If this is to be a Labor Rate Prevailing 
+ Wage Job, select Labor Rate, and save the record before attempting to 
+ add any lines to the Prevailing Wage tab. The following validation rules 
+ have been added to the Job Viewer added for this field and the new &#39;Prevailing 
+ Wages&#39; tab:</p>
+<p style="margin-left: 66.25pt;">Deny all data entry on the Prevailing 
+ Wages tab when the Job&#39;s Prevailing Wage Type is &#39;N/A&#39;.</p>
+<p style="margin-left: 66.25pt;">Deny entry changes to the Job&#39;s Prevailing 
+ Wage Type field when the Prevailing Wages child tab is not empty.</p>
+<h3>Note for Users Converting from Version 7.0 or Earlier</h3>
+<p>In previous releases, prevailing wage type jobs were handled on an employee 
+ by employee basis by specifying overrides on the Job’s old Prevailing 
+ Wages tab. This tab provided overrides for time entered on this job in 
+ the Labor Journal, Remote Labor Journal, and Work Order Labor screen. 
+ Although the earlier functionality is still supported (with the tab renamed 
+ ‘Employee Overrides’ – see <a href="Job_Employee_Overrides.htm">Job Employee 
+ Overrides</a> for details), new functionality has been implemented via 
+ a NEW Prevailing Wages tab which allows you to specify the Prevailing 
+ ‘package’ rate by Labor Rate.</p>
+<h3>Important Fields:</h3>
+<p><font style="font-weight: bold;">Start: Date:<br/>
+</font>These fields default the effective (work) date range the prevailing 
+ wage is in effect for.</p>
+<p><font style="font-weight: bold;">Labor Rate Id:<br/>
+</font>All Labor Rates that would be impacted by this job’s prevailing 
+ wage functionality should be listed on this tab.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Overtime 
+ / Doubletime Pay Rates:</font><font style="font-weight: bold;"><br/>
+</font>The Pay rate multiplier DOES NOT affect the Prevailing Wage Package 
+ Amount. Regular, overtime and any other pays must be all accommodated 
+ in the Package field for each Labor Rate specified.</p>
+<p style="margin-left: 72.00pt;"><font style="text-decoration: underline; ">Example:</font></p>
+<p style="margin-left: 72.00pt;">Labor Rate Id: Package:</p>
+<p style="margin-left: 72.00pt;">Tech-Reg         51.50                    </p>
+<p style="margin-left: 72.00pt;">Tech-OT   72.50</p>
+<p style="margin-left: 72.00pt;">Operator-Reg 38.75                    </p>
+<p style="margin-left: 72.00pt;">Operator-OT  56.25</p>
+<p><font style="font-weight: bold;">Base Rate:</font><br/>
+This field should be used to enter the base wage rate for this Prevailing 
+ Wage. If your data was converted from an earlier version, this field will 
+ contain the value stored in the field previously labeled Package. The 
+ system will sum the Fringe Rate and the Base Rate when determining whether 
+ to use the Prevailing Wage during Compute Payroll.</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Alternate 
+ Calculations:</font> See <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Global_Settings_Alternate_Prevailing_Wages">Global 
+ Setting for Alternate Prevailing Wage Calculations (NY)</a> for a registry 
+ entry to enable State of New York calculations – an example is included 
+ in this topic link.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline; ">Standard 
+ Calculation -</font> <font style="text-decoration: underline; ">Example 
+ 1: Employee’s Regular Wages + Fringes Exceed Job</font> <font style="text-decoration: underline; ">Base 
+ + Fringes</font> <font style="text-decoration: underline; ">Amount</font></p>
+<p style="margin-left: 36.00pt;">Base Rate: $25.00 / hour</p>
+<p style="margin-left: 36.00pt;">Fringe Rate: $0.00</p>
+<p style="margin-left: 36.00pt;">Wage Earnings: $24.00 / hour</p>
+<p style="margin-left: 36.00pt;">Fringe 1: $2.50 / hour</p>
+<p style="margin-left: 36.00pt;">Fringe 2: $1.50 / hour</p>
+<p style="margin-left: 36.00pt;">Since the Employee’s regular Wages + Fringes 
+ total $28.00 / hours (greater than the prevailing wage Base + Fringe of 
+ $25.00/ hour), they will be used for payroll calculations for this Prevailing 
+ Wage job.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline; ">Standard 
+ Calculation -</font> <font style="text-decoration: underline; ">Example 
+ 2: Job Base Rate + Fringes</font> <font style="text-decoration: underline; ">Amount 
+ Exceeds Employee’s Regular Wages + Fringes</font></p>
+<p style="margin-left: 36.00pt;">Base Rate: $40.00 / hour</p>
+<p style="margin-left: 36.00pt;">Fringe Rage: $5.00 / hour</p>
+<p style="margin-left: 36.00pt;">Wage Earnings: $27.00 / hour</p>
+<p style="margin-left: 36.00pt;">Fringe: $1.00 / hour</p>
+<p style="margin-left: 36.00pt;">Since the Employee’s regular Wages + Fringes 
+ total $28.00 / hours, the Prevailing Wage methodology will come into effect 
+ since the Base Rate + Fringe Rate = 45.00 / hour. The system calculates 
+ the Employee’s Wages as follows:</p>
+<p style="margin-left: 36.00pt;">Wage Earnings Calculated Under Prevailing 
+ Wage: $44.00 / hour</p>
+<p style="margin-left: 36.00pt;">Fringe: $1.00 / hour</p>
+<p style="margin-left: 36.00pt;">Note that the Employee’s Wages + Fringes 
+ package now equals $45 / hour, the Prevailing Wage Job Package rate. The 
+ increased difference is added to the Employee wage.</p>
+<p><font style="font-weight: bold;">Fringe Rate:<br/>
+</font> This field enables you to separate Fringes from the Base Rate for 
+ prevailing wages. The system will sum the Fringe Rate and the Base Rate 
+ when determining whether to use the Prevailing Wage during Compute Payroll.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note: 
+ Excluding Fringes from Workers Compensation<br/>
+</font>Workers comp &#39;wages&#39; typically should not include any amounts related 
+ to prevailing wage fringes. The Exclude Fringes field in the appropriate 
+ Workers Comp State should be flagged to exclude these fringes from workers 
+ compensation calculation.</p>
+<p><font style="font-weight: bold;">Certified PR Report Label</font><font style="font-weight: bold;">:</font><font style="font-weight: bold;"><br/>
+</font>The Certified Payroll report uses this field (if completed) instead 
+ of the Labor Rate Description. If this field is blank, the Labor Rate 
+ Description will be used.</p>
+
+</body></html>

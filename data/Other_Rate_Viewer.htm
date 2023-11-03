@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.4.3.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="PayChex"/>
+<meta name="MS-HKWD" content="rate"/>
+<meta name="MS-HKWD" content="ADP"/>
+<meta name="MS-HKWD" content="other rate"/>
+<meta name="MS-HKWD" content="Paycor"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Other Rate Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="PayChex,rate,ADP,other rate,Paycor"/><meta name="brsnext" value="Other_Rate_Table_Viewer.htm"/><meta name="brsprev" value="Labor_Rate_Table_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Other Rate Viewer">
+        <span>Other Rate Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+<h1>Other Rate Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain the rates charged for other types of services and 
+ reimbursable expenses.</p>
+<h2>Usage:</h2>
+<p>Your individual Other Rate records must be created before you can create 
+ Other Rate Tables.</p>
+<p>The system defaults Other Rate values from the Other Rate Table specified 
+ in the Rate Schedule on the Job Record. When a specific Other Rate is 
+ NOT found on the Other Rate Table the system will simply use the &quot;default&quot; 
+ values contained in the Other Rate record itself.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Other 
+ Rates for Assets:<br/>
+</font>Create Operating and Idle Other Rates to be used when charging company 
+ equipment Assets to Jobs. The GL Credit Account must be completed. The 
+ Cost Category should have a Selection Cost Type of Equipment.</p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">Other 
+ Rate for W-2 Moving Expenses (Box 12:P)</span><br/>
+See the W-2 Category field below for details.</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Other Rate Id:</font><br/>
+A unique Id for this Rate. This field is required.</p>
+<p><font style="font-weight: bold;">Other Rate Description:</font><br/>
+A brief description of this Rate. This field is optional but recommended.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your system, this informational 
+ field displays the Security Id of the local user that created this record. 
+ If multiple location security is not implemented on your system, or if 
+ this record was created by a global user, this field will be blank.</p>
+<p><font style="font-weight: bold;">Unit of Measure:</font><br/>
+Specifies the unit in which this rate is measured (e.g., hours, days, and 
+ miles).</p>
+<p><font style="font-weight: bold;">Standard Regular Rate:</font><br/>
+Generally, the standard regular billing rate per unit of measure (e.g., 
+ $50/hour). This rate may also be expressed as a percentage if markup or 
+ margin is selected below.</p>
+<p><font style="font-weight: bold;">Billing Type Id:</font><br/>
+This field determines how the rate will be applied during invoicing. Enter 
+ a valid Billing Type Id or double-click on this field to select from a 
+ list of Id&#39;s.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Unit 
+ Price</font> multiplies the units billed times the rate (in dollars).</p>
+<p style="margin-left: 36.00pt;">If <font style="font-weight: bold;">Markup 
+ Added to Cost</font> is selected the rate defines the markup that is added 
+ to the cost. For example, a 100% markup applied to an item costing $100 
+ would generate a unit price of $200. A 30% markup applied to an item costing 
+ $100 would generate a unit price of $130.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Margin</font> 
+ enables the user to set the desired profit margin ((Unit Price - Unit 
+ Cost)/Unit Price) for this item in the Revenue Rate field (entered as 
+ a percentage). For a given Unit Cost, Unit Price=Unit Cost / (100 - Margin). 
+ For example, if the Margin was set to 50%, an item with a cost of $7.00 
+ would be priced at $14.00. A margin of 30% would yield a price of $10 
+ for the same $7 cost ($10=$7/(100 - 30).</p>
+<p style="margin-left: 36.00pt;">If you select <font style="font-weight: bold;">Multiplier</font>, 
+ the system will multiply the figure in Revenue Rate X Unit Cost to obtain 
+ the Unit Price. For example, a multiplier of 1.2 applied to labor costing 
+ $100 would yield a unit price of $120.</p>
+<p style="margin-left: 36.00pt;">Select the Billing Type of <font style="font-weight: bold;">n/a</font> 
+ if a special price has been agreed on for this customer. In this case, 
+ you will leave the Revenue Rate field blank, and enter the Amnt Revenue 
+ field directly.</p>
+<p><font style="font-weight: bold;">Cost Category Id:</font><br/>
+Enter a Cost Category to default in when this rate is selected: choose 
+ Other or Material categories. The Cost Type drives the behavior of the 
+ Rate Schedule and markup when invoicing. A Cost Type of Material will 
+ look to the Material Markup; whereas, a Cost Type of Other will look to 
+ the Other Rate Table. Do <font style="font-weight: bold;">NOT</font> select 
+ a Cost Category of Cost Type Labor.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Other 
+ Rates for Assets:<br/>
+</font>If this Other Rate is to be used when charging company equipment 
+ Assets to Jobs, the Cost Category should have a Selection Cost Type of 
+ Equipment and a posting type of Other.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">GL Debit:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Account 
+ - GL Entity</font><br/>
+The GL Account field should only be completed if this Other Rate category 
+ is used for Payroll Reimbursables. The debit account is the expense account 
+ to which you want the reimbursables charged. The GL Entity field would 
+ be completed if your firm departmentalizes (or uses profit centers) and 
+ you wish to assign these charges to a specific entity. Note that in this 
+ case a separate Other Rate record would have to be created for each department</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">GL Credit:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Account 
+ - GL Entity</font><br/>
+The GL Account field should be completed if this Other Rate category is 
+ used for Payroll Reimbursables <font style="font-weight: bold;">and</font> 
+ you are accruing Payroll. For Payroll, the credit account is the accrued 
+ reimbursable liability account. Typically, the GL Entity field would be 
+ completed if your firm wishes to assign these charges to an administrative 
+ department.</p>
+<p style="margin-left: 36.00pt;">If interfacing WO Other to GL (in the 
+ Accounting Period), complete field if this Other Rate will be entered 
+ on the WO Other Tab. This functionality may be used in conjunction with 
+ the expense of Assets on the Work Order Other tab and Job Journal Co. 
+ Equipment tab. This field also provides the default GL Credit on the Job 
+ Journal’s CoEquip Tab which enables chargeable Assets to be charged to 
+ a Job or Work Order.</p>
+<p><font style="font-weight: bold;">PRS Reimb Code:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Paycor 
+ Users:</font><br/>
+Other Rates that may be used for reimbursable expenses for employees (entered 
+ on the Labor Journal Other tab) must have a valid Paycor Earnings code. 
+ This field (if completed) is used to set the Ern Cde 1 in the Paycor report; 
+ if it is blank, the Other Rate Id will be used. Consult your Paycor documentation 
+ for a list of valid Earnings codes.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Paychex</font> 
+ <font style="font-weight: bold;">Users:</font><br/>
+Other Rates that may be used for reimbursable expenses for employees (entered 
+ on the Labor Journal Other tab) must have a valid Paychex Earnings code. 
+ This field (if completed) is used to set the Earnings Code field in the 
+ Paychex report; if it is blank, the Other Rate Id will be used. Consult 
+ your Paychex documentation for a list of valid Earnings codes.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">TechAnywhere</font> 
+ <font style="font-weight: bold;">Users:<br/>
+</font>Other Rates that may be used for reimbursable expenses by TechAnywhere 
+ technicians should have this field completed. If the PRS Reimb Code is 
+ completed, TechAnywhere Other tab entries will be posted to the Labor 
+ Journal Other tab as a reimbursable. If this field is blank, TechAnywhere 
+ Other entries will continue to post to the Work Order Other tab.</p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">ADP Users:</span><br/>
+This release supports the use of the PRS Reimb Code field in the Other 
+ Rate record to classify reimbursables for ADP by entering a 1-2 character 
+ code appropriate for ADP the applicable field (see below). This allows 
+ for multiple codes to be used.  <span style="font-weight: bold;">IMPORTANT:</span> 
+ TechAnywhere also uses the PRS Codes/User 1 fields: do NOT change your 
+ setup with consulting your TechAnywhere and SAMPro support reps.</p>
+<p style="margin-left: 88px;"><span style="text-decoration: underline; ">Other 
+ Rate Hierarchy for ADP Codes:</span></p>
+<p style="margin-left: 88px;">Other Rate PRS Reimb Code (overrides User 
+ 1 and registry)<br/>
+Other Rate User 1 (overrides registry)<br/>
+Registry Entry (sys-adp-export DefaultReimbCode option in sys-adp-export)</p>
+<p><span style="font-weight: bold;">W</span><font style="font-weight: bold;">-2 
+ Category:</font><br/>
+This field enables the user to write to W-2 boxes for entries made on the 
+ Labor Journal Other tab and in the Payroll Adjustment Journal. Only those 
+ boxes that can be controlled by an Other Rate entry to PR History (via 
+ normal Compute Payroll or PR Adjustment entries) are supported. For example, 
+ enter <span style="font-weight: bold;">12:P</span> in this field to indicate 
+ that this Other Rate is used for excludable moving expense reimbursements 
+ paid directly to the employee. <span style="font-weight: bold;">12:L</span> 
+ would be used for reporting substantiated employee business expense reimbursements 
+ (see the appropriate IRS documents for details).</p>
+<p>Click <a data-target="POPUP616903483" data-rhwidget="DropSpot" href="#" class="dropspot"><span data-open-text="true" data-skip-index="true">Box 12 Code 
+ P Support for Moving Expenses for details</span><span data-close-text="true">Box 12 Code 
+ P Support for Moving Expenses for details</span></a>.</p>
+<div data-targetname="POPUP616903483">
+	<p style="margin-left: 36.00pt; font-weight: bold;"><span style="font-weight: bold;">Create 
+	 an Other Rate Id for REIMB MOVE:</span></p>
+	<p style="margin-left: 88px;">Set the description to Moving Expense 
+	 Reimbursement<br/>
+	Set the W-2 Category to <span style="font-weight: bold;">12:P</span><br/>
+	Set the GL Debit to the GL Account you want to charge<br/>
+	The GL Credit should be set to the Accrued PR account<br/>
+	Do not set any dollar amounts in the Rate or Cost fields<br/>
+	Set the billing rate type as N/A</p>
+	<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Recording 
+	 the Moving Expense:</font></p>
+	<p style="margin-left: 88px;"><font style="text-decoration: underline; ">If 
+	 the employee has not yet been reimbursed for the moving expenses</font>, 
+	 enter the expense on the Labor Journal Other tab. When the check is 
+	 cut, the reimbursement will be recorded in PR History and will appear 
+	 on the employee’s W2 based on the 12:P code.</p>
+	<p style="margin-left: 88px;"><font style="text-decoration: underline; ">If 
+	 the employee has already been reimbursed for these expenses</font>, 
+	 you will need to create a PR Adjustment (in the PR Journal) to enter 
+	 this information into PR History. Create a PR Journal entry referencing 
+	 the Other Rate Id on the PR Journal’s Other Tab for the Amount reimbursed. 
+	 You will also have to specify the Total Other in the PR Journal header. 
+	 When the PR Journal is saved, the reimbursement will be recorded in 
+	 PR History and will appear on the employee’s W2 based on the 12:P 
+	 code.</p></div>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">NOTE:</span> 
+ in previous releases, it was necessary to enter 12:P in the Other Rate 
+ User 2 field to support Excludable moving expense reimbursements. This 
+ functionality is still supported so that it is not necessary to change 
+ your current setup if it was implemented last year.</p>
+<p><font style="font-weight: bold;">O</font><font style="font-weight: bold;">ther 
+ Rate User 1-2</font><font style="font-weight: bold;">:<br/>
+</font>These fields may be used for informational and reporting purposes</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">ADP Export:<br/>
+</font> The Other Rate User1 field can be used to classify reimbursables 
+ for ADP by entering a 1-2 character code appropriate for ADP. When a code 
+ is specified this field, it will override the DefaultReimbCode registry 
+ entry, allowing for multiple codes to be used.</p>
+<p><font style="font-weight: bold;">Obsolete?<br/>
+</font>If this field is checked, the record is considered Obsolete, and 
+ it may not be directly specified during data-entry (either by entering 
+ the Id or selecting it from a list). Obsoleted records can be edited and 
+ the Obsolete option can be cleared if necessary. When you check the Obsolete 
+ field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. 
+ Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through 
+ access to all tables referencing this record: see <a href="References_List.htm">References 
+ List</a> for details.</p>
+<h2>Important Fields: Lower Section</h2>
+<h3>References Tab</h3>
+<p>This tab displays all Rate Schedules 
+ associated with this Other Rate via the Other Rate Table. Only Other Rate 
+ Tables referenced on a Rate Schedule will appear on this tab. </p>
+<p><span style="font-weight: bold;">Rate 
+ Schedule - Description</span> <br/>
+The Rate Schedule Id and Description this Other Rate is associated with.</p>
+<p><span style="font-weight: bold;">Start 
+ - End</span><br/>
+The Starting and Ending Date of the Rate Schedule.</p>
+<p><span style="font-weight: bold;">Other 
+ Rate Table - Rate Type - Rate</span><br/>
+These fields default from the Other Rate Table entry for this Other Rate. 
+ </p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1', 'POPUP616903483');
+//]]></script>
+
+</body></html>

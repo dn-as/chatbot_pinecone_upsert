@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.1.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="document"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="QuickAttach"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Quick Attach</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="document,registry,QuickAttach"/><meta name="brsnext" value="Create_PDF_Button.htm"/><meta name="brsprev" value="Registry_Sticky_Fields_by_Security_Id_sys_viewer_afunctionid_.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Quick Attach">
+        <span>Registry Quick Attach</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Quick Attach</h1>
+<h3>Purpose:</h3>
+<p>QuickAttach lets the user select and archive a file to the existing 
+ record they are editing or a new record that has not yet been added (e.g., 
+ attaching a previously scanned vendor invoice to an AP entry that you 
+ are creating). In addition, QuickAttach bypasses several of the steps 
+ required by the Attachment button when it is used to attach a file.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">IMPORTANT 
+ NOTE:</font> All QuickAttach Registry Settings are cached when the user 
+ logs on (both sys-ffv-global-settings <span style="text-decoration: underline; ">and</span> 
+ for individual viewers). You must log off and back on for the registry 
+ entries to be in effect.</p>
+<h2>Usage:</h2>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<p><img src="assets/images/SKIN1_QuickAttach.bmp" alt="" style="border: none;" border="0"/>The 
+ Quick Attach sidebar button appears in all viewer sidebars. If QuickAttach 
+ is not enabled for the viewer via registry, the system will warn you that 
+ QuickAttach is disabled for this function.</p>
+<p>If QuickAttach is enabled for this viewer, pressing the button opens 
+ a browser with the directory to the QuickAttachOpenPath (defined via registry), 
+ and then shows all files in that directory.</p>
+<p>Once you select a file Windows will open the appropriate viewer (e.g., 
+ MS Paint, or the Adobe Reader). If the correct file is selected, the user 
+ should click Open, and the name file will be stored in the FFV settings 
+ cache as quickAttach_(fuctionid).</p>
+<p>When the viewer tries to add or change the record, the system checks 
+ to see if an attachment has been cached. If so, the user is asked ‘ Would 
+ you like to attach referenced file’. Pressing Yes:</p>
+<p style="margin-left: 48px;">- Quick Attaches the file by creating a new 
+ document record that references the new or existing record (as well as 
+ any other DocumentReferences. (PO, Vendor, Job, WO, etc) from the transaction)</p>
+<p style="margin-left: 48px;">- AND deletes the attached file from the 
+ QuickAttachOpenPath directory</p>
+<p>Pressing No simply clears the cache: the file is not deleted from the 
+ QuickAttachOpenPath directory, and is also not attached to the record.</p>
+<h3>Global or Individual Settings:</h3>
+<p>These values can be set in sys-ffv-global-settings (if all types of 
+ attachments may reside together) or in each viewer registry (if separate 
+ directories will be maintained for ease of processing).</p>
+<p><font style="font-weight: bold;">Setting Key:</font> QuickAttachOpenPath 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">path</font><font style="font-weight: bold; font-style: italic;"><br/>
+</font> This is the directory you want QuickAttach to open to for selecting 
+ file: the windows browser will open to the QuickAttachOpenPath value. 
+ The files will be deleted from this directory AFTER they have been successfully 
+ attached.  </p>
+<p><font style="font-weight: bold;">Setting Key:</font> QuickAttachSavePath 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">path</font> 
+ <font style="font-weight: bold;"><br/>
+</font>This is the directory you want your Quick Attach files to be copied 
+ to.</p>
+<h3>Individual Quick Attach Registry Settings (for viewer registry):</h3>
+
+<p style="font-weight: bold; margin-left: 48px;">Reminder: <span style="font-style: italic;">All 
+ QuickAttach Registry Settings are cached (both sys-ffv-global-settings 
+ and for individual viewers).</span> <span style="font-weight: normal;">You 
+ must log off and back on for the registry entries to be in effect.</span></p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><font style="font-weight: bold;">Setting Key:</font> QuickAttachCategory 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">Category</font></p>
+<p>This is the document category you need to set to have Quick Attach work. 
+ This should be set at the viewer level.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> QuickAttachDescription  <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">Description</font></p>
+<p>This is a description that is automatically added to the document.</p>
+<p style="margin-left: 36.00pt;">Literals</p>
+<p style="margin-left: 36.00pt;">^anyRn or Id in File^</p>
+<p style="margin-left: 36.00pt;">^date^,^time^, ^usr_id^</p>
+<p><font style="font-weight: bold;">Setting Key:</font> DocumentReferences 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">table1, 
+ table2…</font></p>
+<p>This option references the table(s) you want the document to reference 
+ in addition to the table (viewer) the registry is for. For example, if 
+ you have created QuickAttach entries for the Work Order, and you ONLY 
+ wish to the attached documents to reference the Work Order table, a DocumentReferences 
+ entry would not be required. However, if you wish to attach documents 
+ to the job referenced in the work order header as well as the work order, 
+ a DocumentReferences enter would be needed to enable the attachment to 
+ the job record. Contact your support representative for details on specific 
+ examples.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> 
+ Journals already have a method for associating additional records with 
+ the document - so you don’t need to create a DocumentReferences registry 
+ entry for journals.</p>
+<p style="margin-left: 36.00pt;">Examples:</p>
+<p style="margin-left: 36.00pt;">Below is an example of registry settings 
+ to specify the location that the documents will be stored for processing, 
+ and then saved.</p>
+<p style="margin-left: 36.00pt;"> <font style="font-weight: bold;">Id:</font> 
+ sys-ffv-global-settings</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting 
+ Key:</font> QuickAttachOpenPath <font style="font-weight: bold;">Setting 
+ Value:</font> C:\newDocuments</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting 
+ Key:</font> QuickAttachSavePath <font style="font-weight: bold;">Setting 
+ Value:</font> C:\savedDocuments</p>
+<p><font style="font-weight: bold;">AP Journal Viewer:</font></p>
+<p>This registry allows the user to quickly attach a previously scanned 
+ version of the Vendor’s Invoice from the AP Journal viewer. Since this 
+ entry is for a Journal, we did not create a DocumentReferences registry 
+ entry; the Quick Attached document will reference the PO, Vendor Invoice, 
+ Purchase Order, Work Order and Job in addition the AP Journal itself.</p>
+<p> Id: sys-viewer-vapjrnl</p>
+<p>Setting Key: QuickAttachCategory Setting Value: Vendor Invoice</p>
+<p>Token replacement support has been enabled for the QuickAttachDescription 
+ so that the users can more easily identify their documents.</p>
+<p style="margin-left: 36.00pt;">Example (for the AP Journal sys-viewer-vapjrnl 
+ ):</p>
+<p style="margin-left: 36.00pt;">Setting Key: QuickAttachDescription</p>
+<p style="margin-left: 36.00pt;">Setting Value: AP ^vndr_id^ ^apjrnl_invce_nmbr^ 
+ ^date^</p>
+<p><font style="font-weight: bold;">Quote Viewer:</font></p>
+<p>This registry allows the user to quickly attach specifications to a 
+ Quote. Since this entry is NOT for a Journal, we set the DocumentReferences 
+ registry entry to make the attachment the Work Order referenced in the 
+ Quote header. If a Work Order is not referenced, the document will only 
+ be attached to the Quote. We also set Open and Save paths for this function.</p>
+<p style="margin-left: 48px;">Id: sys-viewer-vqte</p>
+<p style="margin-left: 48px;">Setting Key: QuickAttachCategory Setting 
+ Value: Quote</p>
+<p style="margin-left: 48px;">Setting Key: QuickAttachDescription Setting 
+ Value: Quote ^qte_id^ Specs</p>
+<p style="margin-left: 48px;">Setting Key: DocumentReferences Setting Value: 
+ wrkordr</p>
+<p style="margin-left: 48px;">Setting Key: QuickAttachOpenPath Setting 
+ Value: C:\newQuoteSpecs</p>
+<p style="margin-left: 48px;">Setting Key: QuickAttachSavePath Setting 
+ Value: C:\savedQuoteSpecs</p>
+<p style="font-weight: bold;">Purchase Order Viewer: <span style="font-weight: normal;">By 
+ default, if a Job is specified on the Main tab, Quick Attachments will 
+ reference that Job, the PO, and the Vendor. If Work Order is specified 
+ on the Main tab, Quick Attachments will reference that WO, the PO, and 
+ the Vendor.</span> <span style="font-weight: normal;">Quick Attachments 
+ also attach to Job &amp; Work Orders referenced on PO Detail lines as 
+ well as the PO header.</span><span> </span></p>
+<p style="font-weight: bold;">Work Order: <span style="font-weight: normal;">By 
+ default, Quick Attachments only reference the Work Order. Document References 
+ are needed enabled attachments to the header Job or Client Site.</span></p>
+<p style="font-weight: bold;">Job: <span style="font-weight: normal;">By 
+ default, Quick Attachments only reference the Job. Document References 
+ are needed enabled attachments to the Client or Client Site.</span></p>
+<p><span style="font-weight: bold;">Labor Journal:</span> By default, Quick 
+ Attachments are made to the Labor Journal, Employee, Pay Period, Jobs 
+ and Work Orders.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">AR Cash Receipts:</span> 
+ Quick Attachments also attach to the WorkOrder (via the Service Invoice) 
+ per detail line.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Inventory 
+ Receipt Journal:</span> Quick Attachments also attach to the Job and Work 
+ Order per detail line</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Inventory 
+ Adjustment Journal:</span><span> - Quick Attachments also attach to the 
+ Work Order/Job per detail line.</span></p>
+
+</body></html>

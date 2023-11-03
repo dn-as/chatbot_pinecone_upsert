@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="check"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="sys-viewer-vchcklst"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Check Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="check,registry,sys-viewer-vchcklst"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Check Viewer">
+        <span>Registry Check Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Check Viewer</h1>
+<h2>Purpose:</h2>
+<p>The standard view of the Check viewer was changed to simplify initial data entry, making it desirable to disable all fields in this viewer via registry so that group ‘All’ users would not accidentally make changes to this record. Access/rights to this record should already be controlled via User Groups and Functions for members of other User Groups.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id: sys-viewer-vchcklst</font></p>
+<h3>To disable all Check fields (after initial data entry)</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> DisabledFieldsParent</p>
+<p><font style="font-weight: bold;">Setting Value:</font> gl-bnk: glaccnt.id,glentty.id,chck.nmbr,chck.amnt,chck.rfrnce-nme ,chck.dte-chck,chck.type,chck.dscrptn</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><font style="font-weight: bold;">Setting Key:</font> disabledFieldschild</p>
+<p><font style="font-weight: bold;">Setting Value:</font> chcklst.amnt-grss</p>
+<h3>Registries Required for Initial Data Entry for Checks</h3>
+<p>This functionality depends on the following registry entry to automatically assign a record Id value</p>
+<p><font style="font-weight: bold;">Setting Key:</font> IdFromRn <font style="font-weight: bold;">Setting Value:</font> true</p>
+<p>To avoid confusion during the manual entry process also implement the following registry option<br/></p>
+<p><font style="font-weight: bold;">Setting Key:</font> NewRecordAfterAdd <font style="font-weight: bold;">Setting Value:</font> true</p>
+<p>Without this setting the only way the user can initiate a new check record is to hit the New Record button.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">IMPORTANT:</font> After initial data entry has been completed, the options required for Initial Data Entries should be disabled.</p>
+
+</body></html>

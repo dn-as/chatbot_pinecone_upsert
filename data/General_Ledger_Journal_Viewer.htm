@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.8.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="gl journal"/>
+<meta name="MS-HKWD" content="journal"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>General Ledger Journal Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="gl journal,journal"/><meta name="brsnext" value="Labor_Journal_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="General Ledger Journal Viewer">
+        <span>General Ledger Journal Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>General Ledger Journal Viewer (Journal Entries)</h1>
+<h2>Purpose:</h2>
+<p>Create/maintain the list of General Ledger Journal transactions.</p>
+<h2>Usage:</h2>
+<p>This viewer is required to record transactions directly to the General 
+ Ledger Journal.</p>
+<p><font style="font-weight: bold;">Operation Lockdown Validations<br/>
+</font>The GL Journal now refuses the use of any GL Account that is intended 
+ to be used with only direct or indirect jobs.  Ideally, you 
+ could say that &#39;All&#39; should also be excluded but that is considered acceptable 
+ to preserve all original behavior for installations that choose not to 
+ implement any of the Operation Lockdown functionality.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields that may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the order or status (required, optional, 
+ default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p>This viewer is divided into two sections. The upper section contains 
+ the basic transaction header information. The lower section displays the 
+ transaction item detail.</p>
+<p><img src="assets/images/SKIN1_ImportCSV.bmp" alt="" style="border: none;" border="0"/> 
+ The Import .CVS button supports the import of a .csv file use to generate 
+ a GL Journal entry. When the GL Journal header information is entered 
+ and the icon is clicked, a browser window will be opened to a registry-defined 
+ folder to allow the user to select a .csv file to import as the GL Journal 
+ child lines. See <a href="Registry_Entry_GL_Journal.htm#Import_.CVS_file_Registry_and_File_Definition">Import_.CVS_file_Registry_and_File_Definition</a> 
+  for the required .CVS format and optional registry.</p>
+<p>The import process includes an option 
+ that allows imported lines to APPEND to or REPLACE(default) existing child 
+ rows.  The Import loads the child rows.<span style="font-weight: bold;"> 
+ The User is responsible for saving the transaction.</span></p>
+<h2>Upper Section:</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Main Tab</p>
+<p><font style="font-weight: bold;">Transaction Id:</font><br/>
+If you are creating a new transaction, this Id will be generated for you 
+ when you save the record. If you wish to correct or reverse an entry, 
+ enter its Id.  </p>
+<p><font style="font-weight: bold;">Effective Date:</font><br/>
+Enter the effective date directly, double-click on this field (or press 
+ Alt+F7) to access the Calendar viewer, or press Spacebar to enter today&#39;s 
+ date. When you save this record, the system will verify that the Effective 
+ Date falls within the date range defined by the Accounting Period.</p>
+<p><font style="font-weight: bold;">Accounting Period Id:</font><br/>
+Enter an Id or double-click on this field (or press Alt+F7) to select from 
+ a list of accounting period batches. To create a new Accounting Period, 
+ use the right mouse button to double-click on this field to access the 
+ standard Accounting Period viewer. This field is required.</p>
+<p><font style="font-weight: bold;">Accounting Period Name:</font><br/>
+This information-only field defaults from the Accounting Period record.</p>
+<p><font style="font-weight: bold;">Period Start Date: Period End Date</font><br/>
+These display-only fields default from the Accounting Period record.</p>
+<p><font style="font-weight: bold;">Transaction Description:</font><br/>
+This optional field enables the user to briefly describe the transaction. 
+ This field will be completed by the system for automatically generated 
+ entries (e.g., PM Accruals).</p>
+<p><font style="font-weight: bold;">Closing Entry</font><br/>
+This box is checked (by double-clicking on it or pressing the Spacebar 
+ when the caret is positioned on it) if this is a closing entry. For example, 
+ income and expense accounts could be closed to retained earnings. Normally, 
+ closing entries are created by running the <a href="Create_End_of_Fiscal_Year_GL_Entry.htm">Create 
+ End of Year GL Entry</a> (labeled as Create Fiscal Year Closing Entry 
+ on the GL Folder viewer), although you may choose to make them directly 
+ to the General Ledger.</p>
+<p>When reports are run for the current period and a closing entry exists 
+ for the last day of the current period, this closing entry will be disregarded. 
+ Reports run where the date of the closing entry does not equal the last 
+ date of the current period will include this closing entry. For example, 
+ suppose you make a closing entry dated Dec. 31, 1999. If you then run 
+ a report for a current period defined as Dec.1, 1999 - Dec. 31, 1999, 
+ the closing entry will <font style="font-weight: bold;">not</font> be 
+ included in the report. However, suppose you next run a report for the 
+ current period Dec. 25, 1999 - January 6, 2000. In this case, the closing 
+ entry dated Dec. 31, 1999 will be included in the report because it is 
+ not the last day of the current period.</p>
+<p><font style="font-weight: bold;">Reversing Entries: Period Id<br/>
+</font>If this field is completed, the system will make detailed transaction 
+ entries as usual, plus reversing entries to the first day of the reversing 
+ entries period. This would typically be done in conjunction with adjusting 
+ entries that are made at the end of a month so that a balance is affected 
+ but with no net change to the accounts. Reversals must be made to a later 
+ period than the period for the GL entry.</p>
+<p><font style="font-weight: bold;">Previous Id:</font><br/>
+The Transaction Id of the previous journal entry that generated the current 
+ entry as a correcting or reversing transaction. This display-only field 
+ is maintained by the system.</p>
+<p><font style="font-weight: bold;">Next Id:</font><br/>
+If this transaction was used to generate a correcting or reversing entry, 
+ the Id of the next (correcting or reversing) entry will be displayed. 
+ If this display-only field is filled in, the current transaction cannot 
+ be corrected or reversed.</p>
+<p><font style="font-weight: bold;">Entered By: Date Entered: Time Entered:</font><br/>
+These fields are maintained by the system based on your user Id and the 
+ system date and time.</p>
+<p><font style="font-weight: bold;">Recurring Journal Id:<br/>
+</font>If this GL Journal Entry was created by the Release Recurring GL 
+ Entry function, this display-only field will be completed.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field displays the Security Id of the local 
+ user that created this record. If multiple location security is not implemented 
+ on your system, or if this record was created by a global user, this field 
+ will be blank.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">GLH Tab</p>
+<p>This tab displays the GL History postings associated with this entry. 
+ The following columns appear on this tab:</p>
+<p style="margin-left: 36.00pt;">Account - Account Name – Entity - Period 
+ – Company - Security<br/>
+I/C (Yes if this post was generated by Intercompany Processing, No if not)<br/>
+Journal - Trx Id – Date - Trx Count</p>
+<h2>Lower Section:</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">List</p>
+<p><font style="font-weight: bold;">Total Debits: Total Credits</font><font style="font-weight: bold;">: Net:</font><br/>
+These fields are maintained by the system as you enter the transaction 
+ detail. The Total Debits must equal the Total Credits (for a Net of $0) 
+ in order to save the record.</p>
+<p><font style="font-weight: bold;">GL Account</font><font style="font-weight: bold;">:</font><br/>
+The GL account to be debited or credited.</p>
+<p><font style="font-weight: bold;">GL Entity:</font><br/>
+The Id of the GL Entity to be affected by this transaction.</p>
+<p><font style="font-weight: bold;">Account Name:</font><br/>
+This display only field is filled in from the GL Account record.</p>
+<p><font style="font-weight: bold;">GL Entity Name:</font><br/>
+This display only field is filled in from the GL Entity record.</p>
+<p><font style="font-weight: bold;">Debit Amount: Credit Amount:</font><br/>
+Enter a debit in the Debit Amount field or a credit in the Credit Amount 
+ field.</p>
+<p><font style="font-weight: bold;">Description:</font><br/>
+This optional field briefly describes this line.</p>
+<p><img src="assets/images/image/magnifybutton.gif" alt="image\magnifybutton.gif" title="image\magnifybutton.gif" width="16" height="16" border="0"/> Click this button to display 
+ the detail view of the selected line. The following fields are only available 
+ in this view.</p>
+<p><font style="font-weight: bold;">Job Id:<br/>
+PO Id:</font><font style="font-weight: bold;"><br/>
+</font>Relevant Job and/or PO Id values will be displayed when available. </p>
+
+</body></html>

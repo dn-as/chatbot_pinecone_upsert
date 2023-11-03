@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.13.4.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="EPO"/>
+<meta name="MS-HKWD" content="Taylor"/>
+<meta name="MS-HKWD" content="electronic Purchase Order"/>
+<meta name="MS-HKWD" content="purchase order"/>
+<meta name="MS-HKWD" content="po"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report Taylor EPO Export</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="EPO,Taylor,electronic Purchase Order,purchase order,po"/><meta name="brsnext" value="Registry_Intercompany_Processing.htm"/><meta name="brsprev" value="Registry_Report_Reorder_Advice.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report Taylor EPO Export">
+        <span>Report Taylor EPO Export</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report Taylor Electronic Parts Order Export</h1>
+<h2>Purpose:</h2>
+<p>This release supports Taylor Electronic Purchase Orders. SAM Pro can now generate an electronic parts order that may be transmitted to Taylor via secure ftp program. </p>
+<p><img src="assets/images/image/CreateEPO.gif" alt="image\CreateEPO.gif" title="image\CreateEPO.gif" width="73" height="28" align="left" border="0"/> A new bitmap, Create EPO, has been added to the Purchase Order’s Main tab for Taylor customizations (and customizations using the Taylor customization). This button launches the report described below.</p>
+<h2>Report Description:</h2>
+<p>A SAM Pro User Defined report, Report Taylor Electronic Parts Order (RTYLREPOEXPRT.rpt) must be imported to support this function. The user will have an option to print an audit report OR print the export file. To save the export file the user must save the report as a text file and then rename the file with the correct file name.</p>
+<p>The following fields are displayed on the Audit Report:</p>
+<p style="margin-left: 36.00pt;">Order Type (from the registry or PO User1)</p>
+<p style="margin-left: 36.00pt;">Account Number (from the registry)</p>
+<p style="margin-left: 36.00pt;">Ship To (from the registry or 1<font style="vertical-align: super;">st</font> four characters of the Location Id)</p>
+<p style="margin-left: 36.00pt;">Order Date (from the Purchase Order’s Date Released)</p>
+<p style="margin-left: 36.00pt;">Zip Code (from the Location record)</p>
+<p style="margin-left: 36.00pt;">Item No/Quantity/Unit of Measure (from the Purchase Order Inventory Tab)</p>
+<h2>Registry:</h2>
+<p>See <a href="Registry_Taylor_EPO.htm">Registry Taylor EPO</a> for details.</p>
+
+</body></html>

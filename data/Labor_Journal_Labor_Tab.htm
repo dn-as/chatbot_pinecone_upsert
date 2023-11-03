@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.4.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Labor Journal Hours Tab"/>
+<meta name="MS-HKWD" content="Labor Journal Labor Tab"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Labor Journal Hours Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Labor Journal Hours Tab,Labor Journal Labor Tab"/><meta name="brsnext" value="Labor_Journal_Viewer_Other_Tab.htm"/><meta name="brsprev" value="GL_Budget_Journal_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Labor Journal Hours Tab">
+        <span>Labor Journal Hours Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Labor Journal Hours Tab</h1>
+<h2>Purpose:</h2>
+<p>Enter hours in the Labor Journal.</p>
+
+<h2>Important Fields: Hours Detail</h2>
+<p><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/> 
+ Click the Magnify button to display all fields for this line.</p>
+<p><img src="assets/images/image/LinesView.gif" alt="" style="border: none;" border="0"/> 
+ Click the Lines View button to display the multiple line view.</p>
+<p><font style="font-weight: bold;">Start</font> <font style="font-weight: bold;">Time 
+ :</font> <font style="font-weight: bold;">End Time</font><font style="font-weight: bold;">: 
+ (Custom Fields)</font> <font style="font-weight: bold;"><br/>
+</font>If you would like to be able to access these fields for entering 
+ and recording employee data, please contact your support representative: 
+ a customization file will be needed to display these fields. The following 
+ validations will be performed on these fields:</p>
+<p>1. Start Time can&#39;t exceed End Time unless End Time is empty.<br/>
+2. End Time can&#39;t precede Start Time.<br/>
+3. Time must be entered in military (24-hour) format.</p>
+<p>Changes to either the Start or End times triggers a computation of the 
+ Hours. </p>
+<p><font style="font-weight: bold;">Hours:  Hrs Billable:<br/>
+</font>Hours (Actual) and Billable Hours. Hours will be used for costing, 
+ while Hours Billable will be used to compute revenue for billing purposes. 
+ Note that the Hrs Bill field defaults when you enter Hours, but may be 
+ adjusted by the user if needed (e.g., enter a single line of labor for 
+ a situation where an employee spent three hours on a job (for costing 
+ purposes), but you only wished to bill the customer for 2 hours).</p>
+<p><font style="font-weight: bold;">Effective Date:</font><br/>
+This field defaults from the Effective Date in the header record but may 
+ be changed by the user if needed. Enter this date in <font style="font-style: italic;">mmddyyyy</font> 
+ format or double-click on this field to access the calendar.</p>
+<p><font style="font-weight: bold;">WO Id:</font><br/>
+If these hours are to be applied to a specific Service or PM Work Order, 
+ enter its Id (or double-click to select from a list). Note that if a Work 
+ Order is entered, the Job Id, Job Cost Code, and Billing Item Id&#39;s will 
+ default.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Time 
+ Applied to PM Work Orders:</font><br/>
+The PM Invoice Id is typically set in work orders created via Create PM 
+ Work Orders. If the PM Invoice field is completed, then all lines entered 
+ for this PM Work Order (excluding those marked extra or having revenue) 
+ are recorded as being associated to the PM Invoice that has been previously 
+ computed/posted. </p>
+<p><font style="font-weight: bold;">Equipment Id:<br/>
+</font>If the user enters a Work Order Id, the system will default in the 
+ first piece of equipment on the Work Order’s Equipment tab UNLESS this 
+ behavior is disabled via registry (see <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_journal_equipment_id">Registry 
+ Option - Do Not Default Equipment Id</a>). If the user double clicks on 
+ this field, the system will display a list of all equipment associated 
+ with the Client Site referenced in the Work Order.</p>
+<p>If the sys-ffv-global setting &#39;DefaultEquipmentFromWorkorder&#39; is set 
+ to false, the user is allowed to set the Equipment Id back to blank. If 
+ this registry option is not present or set to true, the Equipment Id must 
+ be completed if a Work Order Id is referenced.</p>
+<p><font style="font-weight: bold;">Job Id:</font><br/>
+The Id of the Job these hours are being entered against. You complete this 
+ field if you did not enter the Work Order Id is not filled in. If the 
+ Effective Date of the entry falls after the Date Closed of the Job (if 
+ any), a warning message will be displayed.</p>
+<p><font style="font-weight: bold;">Cost Category:</font><br/>
+This required field defaults from the Labor Rate if it is specified in 
+ the Labor Rate record. Only those Job Cost Categories with a cost type 
+ of Labor will be displayed when you double-click this field. Note that 
+ if this field is manually changed, the Labor Rate on this line will default 
+ to the Labor Rate specified in the selected Cost Category.</p>
+<p>When entering hours for a field employee for a indirect (overhead) job, 
+ the Cost Category from the Labor Rate is cleared if the previously auto-loaded 
+ Cost Category of the selected job would cause a job/cost category error 
+ . This allows an appropriate Cost Category to easily be entered manually. For 
+ a field employee, when entering hours for a direct job the cost category 
+ defaults from the Labor Rate in the employee record as in previous releases.</p>
+<p><span>This field supports enhanced filtering provided by the Cost Code&#39;s 
+ Job Cost Category Usage Filter. Cost Categories are validated (relative 
+ to Cost Codes) during data entry upon leaving the Cost Category Id field. 
+  The full relationship is validated again when leaving a child line 
+ or saving a record.</span></p>
+<p><font style="font-weight: bold;">Job Cost Code Id: Job Billing Item 
+ Id:</font><br/>
+If the Work Order Id field is not filled in, enter the appropriate Id&#39;s 
+ for this Job or double-click to select from a list.</p>
+<p><font style="font-weight: bold;">Labor Rate Id: Pay Type Id: Billing 
+ Rate Type Id:</font><br/>
+These fields default from the Employee record but may be changed by the 
+ user. For example, if the default Pay Type is &quot;regular&quot;, you 
+ might need to change it to &quot;overtime&quot; if overtime hours are 
+ being recorded. You may double-click to select from a list of Id&#39;s. <font style="font-weight: bold;">If a Pay Type/Labor Rate is specified in 
+ the Job Cost Category you selected it will override the one entered in 
+ the Employee or Job (Prevailing Wages) record.</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note 
+ on Overhead Jobs:</font> Although the system initially defaults the regular 
+ Pay Type Id in the Employee record, the system will check to see if this 
+ Job is flagged as Overhead when you enter the Job Id. If it is an Overhead 
+ job, the system will look to the Overhead Pay Type Id in the Employee 
+ Record and use this for the Labor Journal Entry. If the Overhead Pay Type 
+ field is blank in the Employee record, the regular Pay Type will be retained.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note: 
+ Prevailing Wages Jobs</font> <font style="font-weight: bold;">- Employee 
+ Overrides</font><font style="font-weight: bold;"><br/>
+</font>If you are entering time for a Prevailing Wages Job, the values 
+ found in the Employee Overrides tab of the Job record will override the 
+ default employee Labor Rate and Pay Type. These wage overrides will only 
+ be implemented when the cost code type is set to Field.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Registry 
+ Setting: Office/Field Determined by Job Cost Code<br/>
+</font>An option of the sys-ffv-global-settings registry entry (<a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm">Registry 
+ Entry Global Settings</a> ) enables the system to determine whether hours 
+ should be considered &#39;office&#39; or &#39;field&#39; depending on the Job Cost Code&#39;s 
+ Work Type setting. If this option is implemented, hours charged to a &#39;Field&#39; 
+ Job Cost Code will be considered field hours, regardless of whether the 
+ employee is Office or Field.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note 
+ on Entering Labor Lines</font> <font style="font-weight: bold;">with a 
+ Billing Rate Type of n/a</font><font style="font-weight: bold;">:<br/>
+</font>If the billing type is n/a, the system will not calculate the Amount 
+ Revenue when entering labor lines, even if the Revenue Rate is completed! 
+ Typically, you would leave the Revenue Rate field blank, and enter the 
+ Amount Revenue field directly when billing for labor. Note that if you 
+ edit a labor line, selecting a labor rate with a Billing Type of n/a, 
+ the Amount Revenue on the labor line will NOT be changed.</p>
+<p><font style="font-weight: bold;">Description:</font><br/>
+This optional field may be used to briefly describe this time card entry.</p>
+<p><font style="font-weight: bold;">Earnings Group Id:</font><br/>
+If this employee is a member of an Earnings Group (typically, a Union member), 
+ this field defaults from the Employee record and will be used to control 
+ earnings calculations for payroll. If this field is empty (typically, 
+ non-Union employees), the earnings detail on the ERN tab of the Employee 
+ record will be used to control earnings calculations for payroll. Note 
+ that if you blank out the Earnings Group Id, and the ERN tab is blank, 
+ the employee will not be paid for these hours.</p>
+<p><font style="font-weight: bold;">Deduction Group Id:</font><br/>
+If this employee is a member of a Deduction Group (typically, a Union member), 
+ this field defaults from the Employee record and will be used to calculate 
+ payroll deductions. In addition to the deductions specified in the Deduction 
+ Group, the deductions specified on the DED tab of the Employee record 
+ will <font style="font-weight: bold; font-style: italic;">also</font> 
+ be applicable. If this field is empty (typically, non-Union employees), 
+ only the deduction detail on the DED tab of the Employee record will be 
+ used.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note: 
+ Prevailing Wages Jobs</font><br/>
+If you are entering time for a Prevailing Wages Job, the values found in 
+ the EMP tab of the Job record will override the default Earnings Group 
+ and Deduction Group. Prevailing wage overrides will only be implemented 
+ when the cost code type is set to field.</p>
+<p><font style="font-weight: bold;">Discipline Id:<br/>
+</font>This field defaults from the Job Cost Code record, but may be changed 
+ by the user. It is typically used in conjunction with union payroll for 
+ reporting purposes.</p>
+<p><span style="font-weight: bold;">Supervisor Id:</span><br/>
+If completed, this field specifies the Supervisor responsible for the work 
+ in this entry.</p>
+<p><span><font style="font-weight: bold;">GL Entity:</font><br/>
+This field defaults from the Job Cost Code record but may be changed by 
+ the user. </span><span>When Intercompany is enabled and a detail line 
+ contains a Job Id, any changes to the line&#39;s GL Entity are validated to 
+ ensure that the new GL Entity belongs to the same company as the Job. 
+ </span>It identifies the profit center to be charged with these hours. 
+ You may double-click to select from a list of Id&#39;s.</p>
+<p><font style="font-weight: bold;">State Tax Authority:  Local Tax 
+ Authority:  Other Tax Authority:</font><br/>
+If this entry is for an Office employee, these fields default from the 
+ Employee record. If this timecard entry is for a Field employee, these 
+ fields default from the Job record. They should reflect the physical location 
+ of the employee when he worked these hours for Payroll Tax calculations. 
+ You may double-click these fields to select from a list of Tax Authorities.</p>
+<p><span>These fields also default from the Employee record when a Bonus 
+ amount is entered. If a Field type Cost Code is then selected, the fields 
+ are overridden from the Job record. This defaulting works the same as 
+ when hours are entered. </span> </p>
+<p><font style="font-weight: bold;">Salary:<br/>
+</font>This field defaults from the employee record (checked for salaried 
+ employees, blank for hourly employees). Note that if this entry is designed 
+ to pay a salaried employee an additional amount (such as a bonus), you 
+ must blank this field by double-clicking on it.</p>
+<p><font style="font-weight: bold;">Extra?</font><br/>
+If these hours are an &quot;extra&quot; (not explicitly included in a contract), 
+ check this box (by double-clicking or pressing the Spacebar). Doing so 
+ flags these hours as eligible for invoicing as a contract extra.</p>
+<p><font style="font-weight: bold;">WC Category:<br/>
+</font>This field normally defaults from the Employee record if the time 
+ entered is for an employee working on an ‘office’ Job. It will also default 
+ from the Employee record if this an ‘office’ employee working on a ‘field’ 
+ job.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt; font-weight: normal;">The 
+ default WC in the Employee record may be overridden by the Worker’s Comp 
+ Category (if any) specified in the Job Cost Category record. If you maintain 
+ Worker’s Comp Categories for multiple states, a line should be entered 
+ for each state. The system will use the WC State field (in the job record) 
+ to determine which Workers Comp category to use for each journal entry 
+ for field employees.</p>
+<p class="Tip_Note_Heading"><span><font style="font-weight: normal;"><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/></font> 
+ Click the Magnify Button to see the following fields.</span></p>
+<p><font style="font-weight: bold;">Bonus Amount:</font><br/>
+<span>This field enables you to pay a bonus or commission to your employees. 
+ If this field is completed, the Salary box must be blank. Since a Bonus 
+ should never be entered on a line which also records hours, validation 
+ prevents the user from entering hours and a Bonus on the same line.</span></p>
+<p><span>A negative Bonus posts to the GL as follows: Debit to Accrued 
+ Payroll and Credit to Expense. Computing Payroll relieves Accrued 
+ Payroll correctly for amount of Gross Wages including Credited Bonus. 
+ This allows the user to enter bonus line with a negative amount to account 
+ for having to reduce a salaried employee&#39;s gross pay.</span></p>
+<p><span>The Local, State and Other Tax Authority fields default from the 
+ Employee record when a Bonus amount is entered. If a Field type Cost Code 
+ is then selected, the fields are overridden from the Job record. This 
+ defaulting works the same as when hours are entered. </span> </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Important:</span> 
+ See <a href="Special_Bonus_Configuration.htm">Special Bonus Posting and 
+ Accrual Configuration</a> if the Employee doesn’t get wages over and above 
+ the Union wages (Earnings Group) specified in the Employee record&#39;s Default 
+ Tab. This setup is required to ensure that the Bonus is posted correctly. 
+ </p>
+<p>In addition, this field would be used to pay commissions: these would 
+ be calculated manually, and the net amount recorded in this field. See 
+ <a href="Bonus_Payroll_Checks.htm">Bonus Payroll Checks</a> for additional 
+ details.</p>
+<p><span>For large or year-end bonuses, the optional Federal and State 
+ Tax Rate fields may be completed to tax the bonus at the flat rate specified 
+ by the taxing authority.</span></p>
+<p style="font-weight: bold;">Federal Tax Rate:<br/>
+State Tax Rate:<br/>
+These fields provide a flat rate override to the Federal / State Income 
+ Tax rate brackets in the Employee&#39;s Federal (FED-M or FED-S) and State 
+ Tax Tables. These fields are intended to be used for Bonus pay only. If 
+ these field are blank, the applicable Federal / State Tax Table will be 
+ used as before.</p>
+<p style="font-weight: bold; margin-left: 48px;">Important Notes On Tax 
+ Override Usage:</p>
+<p style="margin-left: 48px;">1. The overriding federal and/or state tax 
+ rates are applied directly to the Bonus Amount with which they are associated. 
+  Taxable wage reductions (125, 401k, etc) are NOT applied to the 
+ Bonus Amount before computing FIT/SIT using the special tax rates.</p>
+<p style="margin-left: 48px;">2. Taxable wage reductions will eventually 
+ reduce the Taxable Wages so payroll reports, including W2s, will have 
+ the correct info.</p>
+<p style="margin-left: 48px;">Consider the example where an employee received 
+ a $10,000 bonus with 20% special FIT tax rate, 10% special SIT tax rate 
+ and 5% 401k deduction.  In the event special tax rates have been 
+ specified, the following is the order in which the calculations occur:</p>
+<p style="margin-left: 88px;">Gross Wages = $10,000</p>
+<p style="margin-left: 88px;">FIT = $2,000 (10,000 x .2)</p>
+<p style="margin-left: 88px;">SIT = $1,000 (10,000 x .1)</p>
+<p style="margin-left: 88px;">401k = $500 (10,000 x .05)</p>
+<p style="margin-left: 88px;"><span>Taxable Wage = $9,500 (10,000 - 500)</span></p>
+<p><font style="font-weight: bold;"><span style="font-weight: bold;">R</span>evenue 
+ Rate:<br/>
+</font>The rate at which you will bill the customer. The field defaults 
+ from the Labor Rate field.</p>
+<p><span style="font-weight: bold;">TechAnywhere Source Rn: Technician 
+ Id</span> <br/>
+If these fields are completed, this record/line was created/revised from 
+ TechAnywhere.</p>
+
+</body></html>

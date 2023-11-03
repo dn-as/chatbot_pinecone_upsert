@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Client Site CRM Data</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="client site,site,CRMAnywhere,opportunity"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Site CRM Data">
+        <span>Client Site CRM Data</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Client Site CRM Data</h1>
+<h2>Purpose:</h2>
+<p>This new viewer will be launched when the <a href="Opportunity.htm">Opportunity</a> record&#39;s Add Site button is used to successfully create a new Site for the Opportunity.  It provides access to those fields needed to create a Quote.</p>
+<h2>Important Fields:</h2>
+<p class="Tab">Main Tab</p>
+<p><span style="font-weight: bold;">Site Id:</span><br/>
+This display-only field specifies the Site Id; it may not be changed from this screen.</p>
+<p><span style="font-weight: bold;">Site Name:</span><br/>
+If this Site was generated from an Opportunity record, this field defaults from the CRM template.  It may be changed by the user to conform to your firm&#39;s naming conventions for Sites.</p>
+<p><img src="assets/images/CopyFromContact.bmp" alt="" style="border: none;" border="0"/> Clicking this button copies the Voice and Fax Phone Numbers, Email Address, and Work/Ship Address from the last Contact line on the Contacts tab.</p>
+<p><font style="font-weight: bold;">Site Voice Phone:</font>  <font style="font-weight: bold;">Site Fax Phone:</font><br/>
+The main voice and fax number at this site.</p>
+<p><span style="font-weight: bold;">Email Address:</span><br/>
+The e-mail address for this Site.</p>
+<p><font style="font-weight: bold;">Store #:</font><br/>
+Optional. The Store number uniquely associated with this site.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Work/Ship Address:</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt; margin-left: 48px;">Street Address:<br/>
+City:  State:  Zip:<br/>
+<span style="font-weight: normal;">The actual (street) address of this Site.</span></p>
+<p class="Tab">Contacts Tab</p>
+<p class="Tip_Note_Heading" style="font-weight: normal;">The Contact tab enables you to attach one or more Contacts to a Site for informational and reporting purposes.  The last Contact listed will be used when the Copy From Contact button is clicked.</p>
+<p><font style="font-weight: bold;">Contact Id:</font><br/>
+Enter a valid Contact Id (or double-click to select from a list). You may create as many lines as needed to accommodate all contacts. The display-only Name, Firm, Email and Phone number fields will default from the Contact record.</p>
+<p><font style="font-weight: bold;">Contact Type Id:</font><br/>
+This optional field defaults from the Contact record but may be changed by the user if needed.</p>
+
+</body></html>

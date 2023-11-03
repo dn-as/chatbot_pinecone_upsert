@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.33.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="work order"/>
+  <meta name="MS-HKWD" content="registry"/>
+  <meta name="MS-HKWD" content="sys-techanywhere"/>
+  <meta name="MS-HKWD" content="TechAnywhere"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry TechAnywhere (sys-techanywhere)</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="work order,registry,sys-techanywhere,TechAnywhere"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry TechAnywhere (sys-techanywhere)">
+        <span>Registry TechAnywhere (sys-techanywhere)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry TechAnywhere (sys-techanywhere)</h1>
+  <h3>Purpose:</h3>
+  <p>Provides defaults for how TechAnywhere related functions are handled.</p>
+  <p class="Body_Text_Indent" style="margin-left: 5.75pt; border-top: 0.50pt solid #000000; 
+	 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+	 border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold;">Testing Your Registry Entries</font><br/>
+    <font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.
+  </p>
+  <p class="Body_Text_Indent" style="margin-left: 5.75pt; border-top: 0.50pt solid #000000; 
+	 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+	 border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold; 
+												 font-style: italic;">Setting</font>
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Values are Uppercase-Lowercase Sensitive:</font><br/>
+    The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.
+  </p>
+  <h3>Related Registry Entries:</h3>
+  <p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#sys-ffv-global-settings_TA_Default_OH_Job_CC">TechAnywhere - Default OH Job Cost Category</a> details this option that should be implemented in the sys-ffv-global-settings registry.</p>
+  <p>A registry entry for sys-viewer-vwrkordr) was added to enable the Job in the Equipment Record to be used as the default for detail lines (for non-preventative maintenance work orders) instead of the Job in the WO header (Id: sys-viewer-vwrkordr Setting Key: DefaultJobByEquipmentId Setting Value: true). If this registry entry is enable, this functionality is enable in the Work Order viewer, Work Order Entry and in the TechAnywhere Post.</p>
+  <p><a href="Registry_Entry_Inventory_Receipts_Journal.htm#TechAnywhere_PO_Receipt_Post_Date_Period_Adjustment">Registry to Adjust Date or Period</a> on TechAnywhere PO Receipt Post</p>
+  <p><a href="Registry_Entry_Labor_Journal_Certified_PR_Warning.htm#Use_Default_Service_Job_in_the_Equipment">Registry to Set Job from Equipment Service Tab on Labor Journal Posts</a></p>
+  <p><a href="Registry_Entry_Purchase_Order.htm">Registry to Set Job from Equipment Service Tab when Creating PO&#39;s</a></p>
+  <p>This <a href="Registry_Specify_Site_WO_Other_Lines.htm">Registry</a> may be used to specify which lines from the Site WO Other Tab should be added based is the Work Order&#39;s Service Category.</p>
+  <h3>Important Fields:</h3>
+  <p>
+    <font style="font-weight: bold;">Id:  <span style="font-weight: normal;">sys-techanywhere</span></font>
+  </p>
+  <h3>Email Log Options (Required)</h3>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">EmailPostLogsFrom</font> Setting Value: <font style="font-style: italic; font-weight: normal;">emailaddress</font>
+  </p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt; font-weight: normal;">Email address to send from when TechAnywhere messages fail.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key</font>
+    <font style="font-weight: bold;">:</font> EmailPostLogsTo <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">emailaddress</font>
+  </p>
+  <p>Email address to send when TechAnywhere messages fail. techanywhere@databasics.com should be added along with internal emails.</p>
+  <h3>Default Cost Category for Inventory (Required)</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> InventoryCostCategoryId <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">jobcostcategoryid</font>
+  </p>
+  <p>This option provides the default Job Cost Category to use when posting parts if one is not defined elsewhere. The TechAnywhere post to WO-INV will only use this option if the Default Cost Category from the Inventory Group is blank. The registry is also used to default the Cost Category for TechAnywhere PO&#39;s in Version 9.0 and below.</p>
+  <p>In Version 9.1 and above, when an Inventory PO is created in TechAnywhere, the Cost Category now defaults from the Item&#39;s Inventory Group.  If the Cost Category is not set in the Inventory Group, this registry is used as a backup to derive the Cost Category.</p>
+  <h3><span style="font-size: 11.0pt; font-family: Arial, sans-serif; mso-fareast-font-family: Calibri; 
+			 mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; 
+			 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Collateral Directory (Required)</span></h3>
+  <p><span style="font-weight: bold;">Setting Key:</span> CollateralDirectory   <span style="font-weight: bold;">Setting Vaue:</span> path                                                  </p>
+  <p>FTP network share folder where TechAnywhere FTP stores documents.</p>
+  <h3>Adjust Default Date or Accounting Period (Required)</h3>
+  <p>Data from TechAnywhere can be posted to the default accounting period, even if the effective date is outside of the period range. However, a problem occurs when the user attempts to bill the WO and encounters an error indicating that the effective date was out of period range. A registry entry is now available to adjust either the date or accounting period to keep them in sync. </p>
+  <p>When the defaulted Date and Accounting Period are NOT out-of-sync, NO adjustments are made to the defaulted values.  The rules noted below are used only when an adjustment is necessary.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> AdjustDefaultDateOrPeriod <font style="font-weight: bold;">Setting Value:</font> <span style="font-style: italic;">period or date</span>
+  </p>
+  <p>If period is selected (the recommended value), the Accounting Period table is queried for eligible Accounting Periods.  To qualify, the period must be Active and its date range must include the defaulted Effective Date.  When multiple periods are eligible, the one with the smallest Period Id is chosen to become the new Accounting Period for the current transaction.  If no eligible period is found, nothing is changed.</p>
+  <p>If date is selected, the Effective Date is adjusted to be either the Start Date or the End Date of the defaulted Accounting Period.  The Start Date is chosen when the current date is less than the Start Date.  The End Date is chosen when the current date is greater than the End Date.</p>
+  <h3>COD Posting (Required)</h3>
+  <p><span style="font-weight: bold;">Setting Key:</span>  AutoPostCOD   <span style="font-weight: bold;">Setting Value:</span> false                                                  </p>
+  <p><span style="font-weight: bold;">Never</span> change this to True (it would implement the old TechAnywhere posting method for COD work orders)!</p>
+  <h3>Discount Cost Category (Required)</h3>
+  <p>TechAnywhere 2.7 Android will now create Revenue Adjustment lines based on the discounts the tech took in the field. The following registry option must be implemented to provide the correct cost category for the Revenue Adjustment on Work Orders.</p>
+  <p>In Version 9.0.572.053 and above, TechAnywhere Quotes also use this registry to define the cost category used to record the revenue adjustment on the quote.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> DiscountCostCategory <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">CostCategoryId of discount</font>
+  </p>
+  <h3>Disregard Old Status when updating New Status</h3>
+  <p>Support recommends this be set to true, so that the Techanywhere status overrides no matter what the status was. This helps with ‘out of sync’ scenarios.<br style="mso-special-character: line-break;"/>
+    <br style="mso-special-character: line-break;"/>
+    <font style="font-weight: bold;">Setting Key:</font> DisregardOldStatus  <font style="font-weight: bold;">Setting Value:</font> true (default is false)
+  </p>
+  <p> </p>
+  
+  
+  
+  <h3>Post Labor by Work Order</h3>
+  <p>
+    <font style="font-weight: bold;">Id:</font> sys-techanywhere
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> PostLaborByWorkorder <font style="font-weight: bold;">Setting Value:</font> true<br/>
+    <br/>
+    With this registry setting in place, individual labor journals will be created to break out a journal per work order if multiple work orders are contained in a labor message payload.
+  </p>
+  <p>Note: this option is one of those required for the Time Review process; see <a href="Registry_Entry_Labor_Journal_Certified_PR_Warning.htm">Labor Journal Registry</a>  for details.</p>
+  <h3>Control FM Viewable Documents by File Extension</h3>
+  <p>By default, all documents sent over from TechAnywhere are flagged as FM Viewable when posted to SAMPro. With this registry setting you can control by file extension if you do not want a certain file type to post with the FM Viewable flag checked. This is a temporary fix as TechAnywhere will eventually give technician control of the FM Viewable flag (Old CRM + New FM) for attached collateral.</p>
+  <p>
+    <font style="font-weight: bold;">Registry Id:</font> sys-techAnywhere
+  </p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> NonCRMViewableTypes <font style="font-weight: bold;">Setting Value:</font> list of file type extensions
+  </p>
+  <p>The Setting Value provides a list of the file extensions that you don&#39;t want flagged as FM Viewable. For example:</p>
+  <p style="margin-left: 36.00pt;"><span style="font-weight: bold;">Setting Key:</span> NonCRMViewableTypes <span style="font-weight: bold;">Setting Value:</span> jpg,jpeg</p>
+  <h3><span style="mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; 
+			 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Tech Viewable Settings</span></h3>
+  <p><span style="font-weight: bold;">Setting Key:</span> CollateralTechViewable  <span style="font-weight: bold;">Setting Value:</span>  true or false  (default true)    </p>
+  <p>Option to flag attachments from TechAnywhere as ‘web viewable tech’ or not. The default value of true is recommended.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> ReceiptsTechViewable   <span style="font-weight: bold;">Setting Value:</span> (default false)                    </p>
+  <p style="mso-fareast-theme-font: minor-latin;"><span style="mso-ansi-language: EN-US; 
+														 mso-fareast-language: EN-US; 
+														 mso-bidi-language: AR-SA;">Option to flag receipts from TechAnywhere as ‘web viewable tech’ or not; we recommend that you retain the default value of false.</span></p>
+  <h3><span style="mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; 
+			 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">Attach Collateral to Site</span></h3>
+  <p><span style="font-weight: bold;">Setting Key:</span>  AttachCollateralToSite  <span style="font-weight: bold;">Setting Value:</span> true or false (default true)                       </p>
+  <p>Option to attach attachments from TechAnywhere to both the work order and site (true) or just the work order (false).</p>
+  <h3>Attach TechAnywhere Collateral Files to the Job Record</h3>
+  <p style="margin-left: 8px;">This registry tells the post whether or not to include a reference to the Work Order&#39;s Job in the Document records created from the uploaded collateral.  Note that collateral files will always be attached to the Work Order and to the Equipment record referenced in the TA Collateral List.  The collateral being posted from TechAnywhere would add a document reference to the Job from the Work Order.</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Id:</span> sys-techanywhere</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> AttachCollateralToJob  <span style="font-weight: bold;">Setting Value:</span> true or false (default false)</p>
+  <h3>Obsolete Entry for GL Bank Account</h3>
+  <p>Setting Key: GLBankAccountId</p>
+  <p>This entry is obsolete as of SAMPro Version 7.3. Do Not Use.</p>
+  <h3><span id="BugEvents121">Handle T</span>echAnywhere PO&#39;s Like SAMPro PO&#39;s  </h3>
+  <p>In previous SAMPro versions, TechAnywhere created purchase orders were always treated in a unique way. A new method (implemented via registry in 8.2) allows TechAnywhere purchase orders to be generated in the same manner as those created in SAMPro. No TechAnywhere changes are/were required for this new functionality but it may <span style="font-weight: bold;">NOT</span> be implemented if your firm does any COD Work Orders.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-viewer-vprchseordrlst  (note that this is enabled in the PO&#39;s registry!)</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> TechAnywherePostingStyle <span style="font-weight: bold;">Setting Value:</span> standard</p>
+  <p style="font-weight: bold;">DO NOT set this registry for anyone who does any COD Work Orders because the billQTY and price updates from the field have no place to post.</p>
+  <p>If this registry option is in effect, the following changes will appear in new purchase orders generated from TechAnywhere with the new (Standard) posting style:</p>
+  <p style="margin-left: 48px;">Purchase orders are now created with job history (previously were not).</p>
+  <p style="margin-left: 48px;">PO&#39;s can be imported to the work order just like a SAMPro created purchase order.</p>
+  <p style="margin-left: 48px;">Tech can still purchase &quot;X&quot; and still use a different, lesser quantity &quot;Y&quot;.</p>
+  <p style="margin-left: 48px;">When using less than the original purchased amount, purchase order is edited to change the JobQty and JobQtyRcvd via TechAnywhere post.</p>
+  <p>The Purchase Order Viewer and Posting have been enhanced to distinguish the difference OLD and NEW TechAnywhere posting styles to manage the limitations in previous posting styles during the migration period.</p>
+  <h3>Do Not Auto Post TechAnywhere Invoices</h3>
+  <p><span style="font-weight: bold;">Setting Key:</span> AutoPostCOD    <span style="font-weight: bold;">Setting Value:</span> false</p>
+  <p><span style="font-weight: bold;">This entry is required;</span>  if it is set to true or is absent the post will not operate correctly.</p>
+  <p>In earlier  SAM Pro releases, the post would create an Invoice, AR Sales Journal, and Cash Receipt. This was found to not be desirable in practice because the back office wished to retain control over the process, and often needed to adjust various billing amounts.</p>
+  <p><span style="text-indent: 30.25pt;">When the Setting Value is false (as it is for all current TechAnywhere installations), the behavior is completely changed. An invoice master record is still created, but now left at the status of New, and no AR Sales Journal or Cash Receipt is created. All imported lines come in without an AR invoice reference ID so that they can be billed normally via Service Compute. AR entries can then be created through SAMPro.</span></p>
+  <h3><span style="text-indent: 30.25pt;">Collateral Files</span></h3>
+  <p><span style="font-weight: bold;">Setting Key:</span>
+    <font style="font-weight: bold;"><span style="font-weight: normal;">CollateralDirectory</span>   Setting Value:</font>
+    <font style="font-style: italic;">path</font> to uploaded TA collateral files
+  </p>
+  <p>The CollateralDirectory is required.  It identifies the location where uploaded files can be found.    It will be a path pointing to the server&#39;s Visual Works installation.  The value of the entry is dictated by the Visual Works installation.  This entry ONLY impacts the server-side posting, not the actual uploading of the files from TechAnywhere to the server.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key: <span style="font-weight: normal;">AttachCollateralToSite</span>  Setting Value: <span style="font-weight: normal;"> true</span></font> or false<br/>
+    <br/>
+    AttachCollateralToSite is optional and defaults to true.  This tells the post whether or not to include a reference to the Client Site in the Document records created from the uploaded collateral.    Note that collateral files will always be attached to the Work Order and to the Equipment record referenced in the TA Collateral List.
+  </p>
+  <h3>
+    <font style="font-weight: bold;">Change to Default Behavior for TA Viewable Invoices</font>
+  </h3>
+  <p>The default behavior of the Start TechAnywhere Post function has been changed so that any uploaded documents with Category equal to &#39;Invoice&#39; or &#39;Receipt&#39; do NOT have the document record&#39;s Tech Viewable automatically set to True unless this registry entry is found:</p>
+  <p style="margin-left: 48px;">NOTE:  This change does not affect the CRM Viewable and CSR Viewable values.  They continue to be set to True for all uploaded documents as coded.</p>
+  <p style="margin-left: 48px; font-style: italic; font-weight: bold;">To reinstate the previous default behavior, the system will check for the following registry entry:</p>
+  <p style="margin-left: 48px; font-weight: bold;">Setting Key: <span style="font-weight: normal;">ReceiptsTechViewable</span>  Setting Value: <span style="font-weight: normal;">True</span></p>
+  <p style="margin-left: 48px;">If this option is set, any uploaded documents from TechAnywhere with the Category equal to &#39;Invoice&#39; or &#39;Receipt&#39; will have the document record&#39;s Tech Viewable automatically set to True.</p>
+  <h3>Limit TechAnywhere Messages Per Posting Cycle</h3>
+  <p>SAMPro Version 9.1.611.054 improves the overall posting of TechAnywhere by limiting the number of messages TechAnywhere would post per cycle by adding a TOP N. What this does is limit the messages posted during the Start TechAnywhere Post function, which allows for more time for the TechAnywhere Event Manager to post its type of messages which tend to have higher importance (status changes, new work order creation, etc.).  A default value of 10 messages is specified if the registry doesn&#39;t exist.</p>
+  <p>The following registry may be used to adjust the number of messages posted per cycle.<span style="font-weight: bold;"> </span></p>
+  <p><span style="font-weight: bold;">Registry Id: </span>sys-techanywhere</p>
+  <p><span style="font-weight: bold;">Setting Key: </span>MessagesPerCycle</p>
+  <p><span style="font-weight: bold;">Setting Value: </span>Integer Value(N) for SQL TOP N statement  (default 10)</p>
+  <h3>Default Email for Quote Scope Changes</h3>
+  <p>If a Quote Scope is changed by TechAnywhere, an email will be sent to:</p>
+  <p style="margin-left: 48px;">The Sales Rep associated with the Quote</p>
+  <p style="margin-left: 48px;">If the Sales Rep/Sale Rep&#39;s Email is not available, the email will be sent to the emailto address defined in this registry.</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Id:</span> sys-techanywhere</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> emailto   <span style="font-weight: bold;">Setting Value:</span> validemailaddress</p>
+  <h3>Override Job Cost Code for Inventory Items</h3>
+  <p>SAMPro Version 9.1.611.0056 adds the ability (via registry) to specify a Job Cost Code to be used to override the Work Order Default Job Cost Code when the TechAnywhere posting service posts inventory line items to the WO Inventory child tab.</p>
+  <p>The overriding Job Cost Code will also be used when TechAnywhere PO&#39;s are created for Inventory items. The registry has an option default for all inventory items or just those marked &quot;Stocked.&quot;</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-techanywhere</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> inventorycostcodeid   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">CostCodeId</span></p>
+  <p>Note that all Service Invoice jobs should have the Job Cost Code Id specified in this registry.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> inventorycostcodeuse  <span style="font-weight: bold;">Setting Value:</span> (blank) or stocked</p>
+  <p>If the Setting Value is set to stocked, only Inventory Items flagged as Stocked will use the override Job Cost Code.</p>
+  <h3>Add &quot;Quote Submitted By&quot; to Email Generated for Quote Approval</h3>
+  <p>When a technician submits a quote for approval, the email subject will have the technician Id of the person who created the quote in the subject line of the email.</p>
+  <p><strong>Id:</strong> sys-techanywhere    </p>
+  <p><strong>Setting Key: </strong>QuoteEmailIncludeSubmittedBy  <strong>  Setting Value:</strong> True</p>
+  <p> </p>
+
+</body></html>

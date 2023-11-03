@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.31.0_20";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="work order daily edit"/>
+<meta name="MS-HKWD" content="daily"/>
+<meta name="MS-HKWD" content="start work order daily edit"/>
+<meta name="MS-HKWD" content="edit"/>
+<meta name="MS-HKWD" content="daily WO edit"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Work Order Daily Edit</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="work order daily edit,daily,start work order daily edit,edit,daily WO edit"/><meta name="brsnext" value="Report_PR_Export.htm"/><meta name="brsprev" value="Start_Get_Geocodes.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Work Order Daily Edit">
+        <span>Registry Work Order Daily Edit</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Work Order Daily Edit</h1>
+<h2>Related Registry Entries:</h2>
+
+<p>Use the <a href="Registry_Entry_Dispatch_Board_Saved_by_User_by_Board.htm#Registry_WO_Daily_Edit_From_DBoard">Standard Settings in this Registry When Running WO Daily Edit From Dispatch Board</a></p>
+
+<h3>Limit the Number of Work Orders to be Processed</h3>
+<p>It is possible to inadvertently run this function for many more work orders than the user intended. The following registry entry limits the number of records which may be selected for processing on the Checklist screen.</p>
+<p><span style="font-weight: bold;">Registry Id:</span>  sys-start-swrkordrdlyedt</p>
+<p><span style="font-weight: bold;">Setting Key:</span> MaxWorkOrderCount    <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">maxnumberofrecordsallowed</span></p>
+<p>We recommend setting this registry to 500 as a starting point. It is possible that firms with extremely large PM runs may need to set this value somewhat higher.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> MaxWorkOrderCount    <span style="font-weight: bold;">Setting Value:</span> 500</p>
+<p style="margin-left: 48px;">When this registry is enabled and the number of selected lines exceeds the registry setting, the system will display a message similar to the following when the Go button is clicked on the checklist screen:</p>
+<p style="margin-left: 48px;">ERROR: 556 Records have been selected for adjustments.</p>
+<p style="margin-left: 48px;">This process is limited to 500 records.<br/>
+You must select fewer records before proceeding.</p>
+<p style="margin-left: 8px;">Once the user deselects enough records to meet the limit, clicking the Go button will process the Work Orders.</p>
+<h3>Always Escalate the Work Order</h3>
+<p>To enhance the performance of this function, by default it will now escalate the work order only when necessary.  That is, only when either the Technician Id or Work Order Log Type Id gets changed. The following registry (not recommended) may be enable to return the function to it&#39;s previous behavior.</p>
+<p><font style="font-weight: bold;">Id:</font> sys-start-swrkordrdlyedt</p>
+<p><font style="font-weight: bold;">Setting Key:</font> EscalateAlways <font style="font-weight: bold;">Setting Value:</font> true (default is false)</p>
+
+</body></html>

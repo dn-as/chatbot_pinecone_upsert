@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 10" />
+<title>8.2 Upgrade Notes</title>
+<link rel="StyleSheet" href="sampro.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8">
+</script>
+</head>
+<body page-style="x-size: Letter;">
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("Support/Advanced Topics\nSupport /Upgrade Notes\n__ 8.2 Upgrade Notes");
+addAvenueInfo("82ANDUP","Version_8_2_Customer_Notes.htm","");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sampro.htm", "", "&gt;", "Home", "Contents.htm");
+document.write("<a href=\"8_2_Upgrade_Notes.htm\">Support/Advanced Topics<\/a> &gt; <a href=\"8_2_Upgrade_Notes.htm\">Support /Upgrade Notes<\/a> &gt; __ 8.2 Upgrade Notes<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('sampro.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<h1>8.2 Upgrade Notes</h1>
+<h2>8.2.545.081 (2015-10-12)</h2>
+<h5>AP Journal (Important Note)</h5>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Main Tab - GL Entity</span><br />
+In V8.2, this field also sets the GL Entity for manual checks, EFT and CC/DR Card transactions when posting to a Bank Account. Previously, it only assigned an Entity to the AP Control Account and Discounts Earned. Because of this change:</p>
+<p style="margin-left: 48px;">If InterCompany IS enabled, set to a Corporate GL Entity for the company.</p>
+<p style="margin-left: 48px;">If InterCompany is NOT enabled, this field should be BLANK for manual checks, EFT and CC transactions to avoid Bank Reconciliation issues. &#160;</p>
+<h5 style="font-style: normal;"><span><i style="font-style: normal;">Do I Need an Updated v.cus File?</i></span></h5>
+<p><i style="font-style: normal;">W</i>hen a system upgrade triggers a data-conversion, the v.cus is automatically upgraded, too. If there is no data conversion, the system does not update the v.cus. The most recent 8.2 change requiring a revised customization was an Inventory Adjustment Journal enhancement which went in as of <span style="font-weight: bold;">2014-08-05 -</span> if the v.cus is older than that date,a refresh wouldn’t hurt.</p>
+<p>For installations using one of the standard v.cus files (WinII, CA, etc.), relabel the current v.cus as v.cusOUT<span style="font-style: italic;"><i>date,</i></span> and then simply pick the new version of the applicable file in the zipped release, and RENAME it as v.cus.&#160;If the client has their own special customization, a revised version may be obtained by from Support.</p>
+<h5><i style="font-style: normal;">O</i>pen SAMPro Attachments in Windows Picture Viewer:</h5>
+<p>This release corrects a problem when certain users couldn't open picture files (jpg and jpegs) in Windows 8 running on Server 2008 R2 64 bit (may also be present in other environments). &#160;In some cases a registry entry may also be required; see <a href="Internal_Registry_Entry_Application_Association_Override.htm">sys-openapp-commands</a>.</p>
+<h5><i style="font-style: normal;">J</i>ava 8:</h5>
+<p style="margin-left: 8px;">Some users have experienced an issue where the Java 8 upgrade did not remove Java 7. When Java 7 &amp; 8 are installed at the same time errors occur. <span style="text-decoration: underline;"><u>Un-install Java 7 to correct this problem.</u></span></p>
+<h5>Converting Files to PDF's:</h5>
+<p>A problem has been reported converting SAMPro reports to pdf documents by using the Save As PDF function. The message 'you are not permitted to run this function' was displayed, but in reality the call to see if java existed was returning a 'file not found'. <span style="text-decoration: underline;"><u>The work-around to solve this problem is to place the path to java in the Window's Path environment variable.</u></span></p>
+<h5><i>Important Autoemail Registry Change!</i></h5>
+<p style="margin-left: 8px; font-weight: normal; font-style: normal;"><i>If any registry entries with autoemail=true AND autosavewhenprinted=true enabled, the following line must be added to the appropriate registry in order for the auto-mail to occur:</i></p>
+<p style="font-weight: bold; margin-left: 48px;"><b>Setting Key:</b> autoemailwhenprinted&#160;&#160;&#160;<b>Setting Value:</b> true</p>
+<p style="margin-left: 8px;">Registries which may be impacted:</p>
+<p style="margin-left: 48px;">Service Invoice (sys-report-serviceinvoice): This entry requires autoemail (to change the address on the Invoice to the e-mail address) AND autoemailwhenprinted to do the e-mailing. &#160;</p>
+<p style="margin-left: 48px;">Vendor Expiration Report (sys-report-rexprdinsrnce); if autosavewhenprinted is enabled, add the autoemailwhenprinted line and disable autoemail or two copies of the report will be sent.</p>
+<p style="margin-left: 48px;">Customer Statement (sys-report-rcuststmnt): if autosavewhenprinted is enabled, add the autoemailwhenprinted line and disable the autoemail or two copies of the report will be sent.</p>
+<h5>Multiple Tech Lines Per Day Per Work Order:</h5>
+<p>The system now allows multiple lines on the Work Order Technician tab with the same Tech Id and Date but a different Time Scheduled (compatible with TechAnywhere 3.0.048.006+). A change to the Work Order indices is required for current 8.2 installations; this may be done by dropping the revlev and letting the database convert up. Contact Data-Basics support for help. &#160;</p>
+<h5><font style="font-weight: bold;">DB Analytics/FMAnywhere:</font></h5>
+<p>If these modules are used, verify that your GL Reporting Periods are correctly defined for at least the next full year: they are required for date-related functionality. If a ‘beginning’ period was used for loading data, the Start Date should be set to the beginning of the loading year, not the ‘blank’ date (01011900) before upgrading.</p>
+<p>The GL Account Type record includes a new Category field. SAMPro will continue to use the old Account Type Category field, but DBAnalytics used the new field. Support or a designated user should categorize the new field in all GL Account Type records if DBAnalytics is implemented.</p>
+<h5><span style="font-weight: bold;"><font style="font-weight: bold;">N</font>ew XmlToPdf.jar</span></h5>
+<p>The revised file dated 2015-07-08 corrects a problem in the previous version (2015-06-22) which failed to save PFD's properly if the save path and/or File name contained SPACES.</p>
+<h5>WebHelp:</h5>
+<p>See Customer Note 1.7 for details on configuring Internet Explorer to run SAMPro WebHelp correctly.</p>
+<h5>Required Files:</h5>
+<p>The change.log, recover.log, v.bak and master~pushbuttons.obj files must be in the same directory as the image (v.exe) file.</p>
+<h5>Colors:</h5>
+<p>To fully support Bitmap Skinning, display settings must be set to 24 or 32 bit color. If the Color Quality is set to 16 bit (High Color), the background and mouse over color changes will not appear.</p>
+<h5><font style="font-weight: bold;">VM Memory:</font></h5>
+<p>SAM Pro’s Smalltalk virtual memory was expanded to 600MB to better support the running of extremely long reports and large record viewers without encountering out of memory errors.</p>
+<h3>Registry Entries Recommended as Standard by Support:</h3>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<table style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;" cellspacing="0" width="658">
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Registry Id</font></p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Option</font></p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Case # / Notes</font></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>sys-printer-dialog-rcopinvce</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>For Portrait COP Invoices Only</p>
+<p><span style="font-weight: bold;">Setting Key:</span> orientation</p>
+<p><span style="font-weight: bold;">Setting Value:</span> 1</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>7016. A change made in case 6855 caused the Portrait option (orientation=1) of the COP Invoice to be ignored in sys-printer-rcopinvce unless a default printer is specified.&#160;&#160;Add this option in a new sys-printer-<span style="font-weight: bold;">dialog</span>-rcopinvce registry to correct.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><span style="font-weight: bold;">sys-start-swrkordrdlyedt</span></p>
+<p>Start WorkOrder Daily Edit</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><span style="font-weight: bold;">Setting Key:</span> MaxWorkOrderCount &#160;&#160;&#160;</p>
+<p><span style="font-weight: bold;">Setting Value:</span> 500</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Limits number of Work Orders to be processed at one time to avoid running wide open.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-alert-tabmismatchhistory</font></p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Setting Key:</font> errorlog</p>
+<p><font style="font-weight: bold;">Setting Key:</font> messagebox</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Required to record tab mismatch errors to the error log.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-currency-adjust</font></p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Don’t implement</font> <font style="font-weight: bold;">if foreign currency processing is/will be</font> <font style="font-weight: bold;">enabled!</font> Use sql's instead to reset PO currency factor.</p>
+<p>Setting Key: JCHenabled<br />
+Setting Value: false</p>
+<p>If this option is absent or blank, default behavior enables currency adjustments.</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>If upgrading from 7.0/earlier with EXISTING PO’s generated from Quotes or Create PM WOs, either set this option to disable the tab mismatch test to JCH, or update the PO data via sql.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td rowspan="8" style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-ffv-global-settings</font></p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: maxColumnCountToCompress</p>
+<p>Setting Value: 120000</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Need for viewers to display correctly.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: maxRowCountToCompress</p>
+<p>Setting Value: 20000</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Need for viewers to display correctly.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: SamproTempDirectory</p>
+<p>Setting Value: C:\sampro\temp</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>1929 / Document Archiving</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: DisableCase1991<br />
+Setting Value: true</p>
+<p>Allows Construction Invoicing (RINVINV3/4) to bill WO fixed fee costs without marking WO ready-to-invoice</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Without this entry, WO’s using non-Service Compute jobs must be marked Ready To Invoice for unbilled costs to appear in Record Billing Adjustments.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>DefaultGLAccountId=<font style="font-style: italic;">GL Account Id</font></p>
+<p>Where GL Account Id is a valid account created for this purpose (e.g., a 999 type account).</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Writing to GL History when GL Account is not specified uses this entry (posting a construction invoice with Retainage $$$ but NO Retainage GL Account.)</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Update Work Order Escalation Status in absence of Escalation Profile</p>
+<p><font style="font-weight: bold;">Setting Key:</font> EscalationManager<br />
+<font style="font-weight: bold;">Setting Value:</font> always</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>3946 / Enter this option if an Escalation Profile does not exist.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-weight: bold;">Setting Key:<br />
+<span style="font-weight: normal;">DisableMCFutureInspectionsTable</span></p>
+<p><span style="font-weight: bold;">Setting Value:</span> true</p>
+<p>Use if Master Contract DBAnalytics are NOT enabled</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Disables the Master Contract future inspections table. Implement ONLY if DBAnalytics or other reports that depend on the table are not used.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><span style="font-weight: bold;">Setting Key:</span> CreateMasterSiteEquipmentPMTable &#160;&#160;&#160;&#160;&#160;</p>
+<p><span style="font-weight: bold;">Setting Value:</span> true</p>
+<p>Use if DBAnalytics KPI's for Master Contract Future Inspections ARE implemented.</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><span style="font-weight: bold;">Important:</span> if this registry entry is enabled, the registry entry above (DisableMCFutureInspectionsTable) must be absent or disabled. &#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-newcall</font></p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: DisableClientCreditLimit</p>
+<p>Setting Value: true</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Disables this functionality: If AR Balance exceeds the Client’s Credit Limit (+if it is set to zero), WO goes on credit hold.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-report-RAIA</font></p>
+<p><font style="font-weight: bold;">sys-report-RAIA</font><font style="font-weight: bold;">-</font><font style="font-weight: bold;">R</font></p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>See Help for options</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Required for AIA with or without Retainage.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-start-sarchvercrdchngelg</font></p>
+<p>Start Archive Record Change Log</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: DaysToSave Setting Value: 30</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Requires a new scheduled event (process) to trigger function "sarchvercrdchngelg"</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td rowspan="2" style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-start-scrtepmwo</font></p>
+<p>Create PM Work Orders</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: TechServiceParts</p>
+<p>Setting Value: No</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>2003 / Service Parts List – see support notes for details.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Setting Key:</font> IgnoreCase3242</p>
+<p><font style="font-weight: bold;">Setting Value:</font> true</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Enter to allow PM lines with multiple work codes appear on the same work order.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td rowspan="2" style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-start-sprgercrdchngelg</font></p>
+<p>(Purge Record Change Log)</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: MaximumRecordsToDelete</p>
+<p>Setting Value: 500000</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>886 / Increase from default</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: DaysToSave Setting Value: 700</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>886 / Increase from default</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td rowspan="2" style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-start-ssrvcebllngwrksht</font></p>
+<p>(Start Service Billing Worksheet)</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: srvcewrksht_orderby</p>
+<p>Setting Value: wrkordr.wrkordr_id,jb.jb_id</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Orders the service billing worksheet by invoice id.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: AllowWorksheetBeforeInvoiceReady</p>
+<p>Setting Value: true (default false)</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Allows the Billing Worksheet to be run for work order(s) not yet flagged as invoice ready.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-startscreen-form</font></p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Contents:</p>
+<p>vapjrnl;vprchseordrlst;vwrkordr;vlbrjrnl</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Use the Contents field in the header for the values.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-viewer-vaccntngprd</font></p>
+<p>(Accounting Period)</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: OtherToGL<br />
+Setting Value: true or false</p>
+<p>Set to true if the WO Other To GL box should be checked on all/most period; false if the box should never be checked.&#160;</p>
+<p>Setting Key: UnvoucheredAP &#160;<br />
+Setting Value: <font style="font-style: italic;">true or false</font></p>
+<p>Set this option to false if Unvouchered AP if not used (most installation). Set to true if the box should be checked.</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>The optional interface of WO Other to GL is controlled by a check box in the Accounting Period record. This registry to help manage this field.</p>
+<p>The Unvouchered AP option to be set as applicable for each installation to avoid a big mess if the accounting period is incorrectly configured.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-viewer-vapjrnl</font></p>
+<p>(AP Journal)</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key:AttachCostsToARInvoiceForWO</p>
+<p>Setting Value: prompt</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>See the registry help for sys-viewer-vapjrnl – PWP vendors is a consideration.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td rowspan="2" style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-viewer-vemplye</font></p>
+<p>(Employee Viewer)</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: disabledFieldsParent</p>
+<p>Setting Value: emplye.annl-stndrd-hrs</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+<p>If standard hours will never be defined by employee, disable this field to prevent users from entering random values.</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>The Standard Hours field in the employee record is used in payroll calculations for salaried workers. When the field is set to zero, the system uses the StandardAnnualHours option in sys-ffv-global-settings, or 2080 (if no global registry).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: disabledFieldschildPTO</p>
+<p>Setting Value: emplyepto.prcnt</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>If vacation accruals with a 'percent of wages' option is not implemented (<font style="font-weight: bold;">most US</font> <font style="font-weight: bold;">firms</font>), disable the Prcnt: field on the PTO tab to avoid inadvertent data-entry.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-viewer- vglaccnt</font></p>
+<p>(GL Account viewer)</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: ShowComponents<br />
+Setting Value: true</p>
+<p>ONLY implement if a client still uses old-style total accounts with components.</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>The obsolete child table account components view in the GL Account viewer was eliminated <font style="text-decoration: underline;">except</font> when this registry setting is on.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-viewer-vinvntryadjstmnt</font></p>
+<p>Inventory Adjustment Journal</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: NoDefaultBillItem&#160;</p>
+<p>Setting Value:&#160;&#160;error&#160;&#160;OR&#160;&#160;warning</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Will generate an error or warning if the user selects a Job Cost Code without a default Billing Item in the Inventory Adjustment Journal.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-viewer-vqte</font></p>
+<p>Quote Viewer</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Setting Key:</font> RunWizardAfterSavingQuote</p>
+<p><font style="font-weight: bold;">Setting Value:</font> true</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>To run the Approval Wizard when the record is saved (previous behavior) enter this registry option. If not enabled, user must click the Approval Wizard button to run the wizard.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td rowspan="4" style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-weight: bold;">sys-viewer-vwrkordr</p>
+<p>Work Order Viewer</p>
+<p>&#160;</p>
+<p style="font-weight: bold; font-style: italic;">Last Option also impacts the Quote Master Wizard post to the Work Order</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: INVExpenseFromCostCategory</p>
+<p>Setting Value: true</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>** required if using Job EOM</p>
+<p>* Default Changed - add GL Expense Acct# to Material Cost Categories</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Disable</font> this option if present:</p>
+<p>Setting Key: DeleteJCH<br />
+Setting Value: warning</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Setting Key: CreatePOforSub</p>
+<p>Setting Value: prompt</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 40.95%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="MsoNormal" style="margin-left: 0px;"><b style="mso-bidi-font-weight: normal;">Setting Key:</b> FFQtyBillZero &#160;</p>
+<p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Setting Value:</span> true</p>
+<p class="MsoNormal" style="margin-left: 0px;">Sets Qty Bill to zero on Fixed Fee lines not flagged as Extra when Quote Master Wizard posts to the WO. <span style="font-weight: bold;">This option is in the WO's Registry, not the Quote’s.</span></p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 30.75%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="margin-top: 0; margin-bottom: 0;">Set this option if Billing Items reference detailed formats resulting in Lines with a Qty Bill appearing on the invoice even though they are not marked as extra.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-zipcode-lookup</font></p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Setting Key:</font> default<br />
+<font style="font-weight: bold;">Setting Value:</font> true or false</p>
+<p>Controls behavior for defaulting blank City /State fields when a zip code (from the zip code table) is entered. Exceptions may be specified by record.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> afunction<br />
+<font style="font-weight: bold;">Setting Value:</font> true or false</p>
+<p>Exceptions to the default behavior.</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>This registry is required to enable defaulting from the Zipcode table.</p>
+<p><font style="font-weight: bold; text-decoration: underline;">Example:</font> Default from Zipcode Table Except for Vendor Viewer</p>
+<p>Setting Key: default<br />
+Setting Value: true<br />
+Setting Key: vvndr<br />
+Setting Value: false</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">sys-document-archive</font></p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Setting Key:</font> UseSubdirectories <font style="font-weight: bold;"><br />
+Setting Value:</font> true</p>
+<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Results in archived document being put into the appropriate YYYY-MM subfolder</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 28.29%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-weight: bold;">sys-techanywhere</p>
+</td>
+<td style="width: 40.95%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Setting Key:</font> DisregardOldStatus</p>
+<p><font style="font-weight: bold;">Setting Value:</font> true (default is false)</p>
+</td>
+<td style="width: 30.75%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Reduces the occurrence of the Status Change Error Alerts.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 28.29%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="margin-left: 8px; font-weight: bold;">sys-viewer-vvndr</p>
+<p style="margin-left: 8px; font-weight: normal;">Vendor Viewer</p>
+<p style="margin-left: 48px;">&#160;</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 40.95%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><span style="font-weight: bold;">Setting Key:</span> disabledFieldsParent &#160;</p>
+<p style="font-weight: bold;">Setting Value:</p>
+<p>&#160;vndr.eft-bnk-id-frmttd,vndr.eft-accnt-nmbr</p>
+<p>Enter if AP EFT/AFT is NOT implemented to prevent users from inadvertently triggering the EFT functionality!</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 30.75%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;"><span style="font-weight: normal;">The EFT Bank Id and EFT Account Number fields on the Defaults tab support Electronic/Automated Funds Transfer.</span></font> If the AP EFT functionality is NOT implemented, we suggest disabling these fields.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 28.29%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-weight: bold;">sys-viewer-vprchseordrlst</p>
+<p>Purchase Order Registry for TechAnywhere</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 40.95%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><span style="font-weight: bold;">Setting Key:</span> EditTechAnywherePOs</p>
+<p><span style="font-weight: bold;">Setting Value:</span> warning OR error</p>
+<p>Warning: "WARNING: &#160;This PO was created from TechAnywhere."</p>
+<p>Error: "This PO was created from TechAnywhere.&#160;Changes are not allowed."</p>
+<p>Provides control over changes to POs generated via TechAnywhere. &#160;</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 30.75%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>The TechAnywhere Post sets the Job Quantity Ordered / Received to zero so that the parts do not import to the WO (double up) because TechAnywhere post these to the WO when complete. Changing a TechAnywhere PO may have adverse effects by negating this special post.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 28.29%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="margin-left: 8px; font-weight: bold;">sys-start-smtrlrqstnng</p>
+<p style="margin-left: 8px; font-weight: normal;">Start Material Requisitioning</p>
+<p style="margin-left: 8px;">&#160;</p>
+<p style="margin-left: 8px;">&#160;</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 40.95%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="margin-left: 0px;">Setting Key: InitialValueFor~dte-as-of &#160;&#160;&#160;</p>
+<p style="margin-left: 0px;">Setting Value: ^today^</p>
+<p style="margin-left: 0px;">Set Key: InitialValueFor~dte-schdld-end &#160;&#160;&#160;Setting Value: ^today^</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 30.75%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>An enhancement allows the user to will limit the processing to only work order with a WO Technician tab Date Scheduled within the date range specified.&#160;This registry provides reasonable initial values for this function:</p>
+</td>
+</tr>
+</table>
+<h2>SQL’s and Functions to Run:</h2>
+<p class="Support">Note: you may have to run Start Function List Update to access new starter functions. They must also be flagged to allow &#160;Access to the applicable User Groups and Functions record(s).</p>
+<table style="border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000;" cellspacing="0" width="658">
+<tr style="vertical-align: top;">
+<td style="width: 27.88%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Modules</font></p>
+<p><font style="font-weight: bold;">Function or SQL</font></p>
+<p><font style="font-weight: bold;">Case #</font></p>
+</td>
+<td style="width: 29.81%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">When to Run</font></p>
+</td>
+<td style="width: 42.31%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Details</font></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 27.88%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-weight: bold;">Material Requisitioning</p>
+<p>Start Tech Material Pickup</p>
+<p>7049</p>
+</td>
+<td style="width: 29.81%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>It is important to run the Tech Material Pickup Function to clear out your firm's Staging Locations prior to upgrading to this version.</p>
+</td>
+<td style="width: 42.31%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>The Unit Cost from the stocking location is now written to the staging location by this function. This cost will be used by the Tech Material Transfer function, resulting in a more accurate cost when applied to the Work Order.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 27.88%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Material Requisitioning</font></p>
+<p>Start Update Workorder Reference in IM History</p>
+<p>2931</p>
+</td>
+<td style="width: 29.81%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Use if updating from 7.0 or earlier for installations that might have fill backorder records associated with a WO (Materials Requisition).</p>
+</td>
+<td style="width: 42.31%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Fixes imhstry records written by Material Requisitioning prior to 7.1.455.064.&#160;Updates WO reference fields in IMHistory, so requisitioned items can be &#160;successfully imported into the WO order.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 27.88%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Bank Rec / AP Journal</font></p>
+<p>SQL to fix History</p>
+<p>2979</p>
+</td>
+<td style="width: 29.81%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Use if updating from 7.0 or earlier.</p>
+<p>If customer generates AP Credit memo's for Credit Card/EFT transactions AND uses the Bank Rec journal.</p>
+<p>&#160;</p>
+</td>
+<td style="width: 42.31%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Previously, when the AP Journal posted these transactions to the Check table, they were not written as negative amounts (corrected in 7.1.461.162)</p>
+<p>Use the SQL attached to the case to identify and then update existing data that was incorrectly configured on AP Journal transactions prior to this fix.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 27.88%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">COD Jobs</font></p>
+<p>SQL to fix history</p>
+<p>2904</p>
+</td>
+<td style="width: 29.81%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Run to correct JCH postings for COD Jobs invoiced prior to images <font color="#000000">7.2.474.035 / 7.1.461.153.</font></p>
+</td>
+<td style="width: 42.31%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Previously, the Job Invoice tab did not show COD Invoices as received due to failed posting from AR Sales Journal to JCH. This has been corrected but the SQL needed to fix history - is available on the case.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 27.88%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Folders Viewers</font></p>
+</td>
+<td style="width: 29.81%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Start Import Registry</p>
+</td>
+<td style="width: 42.31%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Consider using Start Registry Import for updating the Folders viewer; support will have the most recent Folders definitions.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 27.88%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Purchase Orders</font></p>
+<p>SQL to set the Purchase Order Currency Factor</p>
+</td>
+<td style="width: 29.81%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>update prchseordr<br />
+set prchseordr_crrncy_fctr = 1<br />
+where prchseordr_crrncy_fctr = 0<br />
+&#160;&#160;and prchseordr_rn &lt;&gt; 0</p>
+</td>
+<td style="width: 42.31%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>If upgrading from 7.0/earlier, AND foreign currency processing is enabled/planned AND EXISTING PO’s were generated from Quotes or Create PM WOs, use sql to reset the currency factor to avoid Tab Mismatch error on PO’s.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 27.88%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Document Management</font></p>
+</td>
+<td style="width: 29.81%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Start Document Archive Maintenance</p>
+<p>Note: this function will take some time to run. Verify that adequate disk space is available before running.</p>
+</td>
+<td style="width: 42.31%; border-top: 1.00pt solid #000000; border-bottom: 1.00pt solid #000000; border-left: 1.00pt solid #000000; border-right: 1.00pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>1. Archives any source documents (and their children) not already archived.</p>
+<p>2. Updates the Archive File Location and File Type fields in the document record needed by the Create PDF button to work properly.</p>
+<p>3. Results to sampro_DocumentLog.txt.</p>
+</td>
+</tr>
+</table>
+<h2>Recent Critical Report Updates</h2>
+<p>It is advisable to install all updated reports from the .rar files for that version. <span style="font-weight: bold; font-style: italic;"><i>T</i></span><font style="font-weight: bold; font-style: italic;">he following table only lists reports updated during that last two years: additional reports may need to be updated on your system.</font></p>
+<table style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;" cellspacing="0" width="658">
+<tr style="vertical-align: top;">
+<td style="width: 33.55%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Report Name / Id</font></p>
+</td>
+<td style="width: 25.11%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Report Date for Version/Build</font></p>
+</td>
+<td style="width: 41.35%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Notes</font></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 33.55%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Report Bank Reconciliation</p>
+<p>RBNKRECN.RPT</p>
+</td>
+<td style="width: 25.11%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>8/6/2015</p>
+<p>8.2.545.073+</p>
+</td>
+<td style="width: 41.35%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Supports Bank Deposit enhancement in v8.2 545.073 where edited Bank Deposit transactions are saved with a tack number appended to the Transaction Id.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 33.55%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Progress Invoice Template 3</p>
+<p>RININV3.rpt</p>
+</td>
+<td style="width: 25.11%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>4/24/2015</p>
+<p>7.3+</p>
+</td>
+<td style="width: 41.35%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Supports multiple-page text box printing; uses Arial font. Since the header of this report more closely resembles the Service Invoice use your Service Invoice bitmap for this report (may require revising the sys-report-rininv3 registry setting).</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 33.55%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Service Invoice</p>
+<p>SERVICEINVOICEv80b017.rpt</p>
+</td>
+<td style="width: 25.11%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>09/19/2014</p>
+<p>8.0.510.017+</p>
+</td>
+<td style="width: 41.35%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Supports override enhancement to base bitmap on one of the following records in the Client Site: account manager, branch, service manager or dispatcher (also requires registry.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 33.55%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Report Quote Form (Standard)</p>
+<p>RQTEFRM.rpt</p>
+</td>
+<td style="width: 25.11%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>09/15/2014</p>
+<p>RQTEFRMv73b102.rpt</p>
+</td>
+<td style="width: 41.35%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Supports override enhancement to base bitmap on one of the following records in the Client Site: account manager, branch, service manager or dispatcher (also requires registry.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="width: 33.55%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Report W2 Electronic File RW2EFv72b105.rpt</p>
+<p class="MsoNormal" style="margin-left: .5in; font-size: 9.0pt; font-family: Arial, sans-serif;">&#160;&#160;</p>
+</td>
+<td style="width: 25.11%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>12/23/2014</p>
+</td>
+<td style="width: 41.35%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Supports FICA MCAD Tax Table for high wage earners and internal changes for 2014.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 33.55%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><span style="text-autospace: none;"><span style="font-size: 9.0pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">Report PR Federal Tax (RPRTAXF.rpt)</font></span></span></p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 25.11%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">&#160;1/20/2014</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 41.35%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Supports Medicare Additional Tax for high wage workers.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 33.55%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Report PR 941 Quarterly Summary (RPR941S.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 25.11%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">&#160;10/18/2013</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 41.35%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Supports Medicare Additional Tax for high wage workers.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 33.55%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Report Check Detail (RPRCHCKDTL.rpt)</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 25.11%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">06/23/2015</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 41.35%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Employer based taxes are no longer included on this report.</p>
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;"><span id="BugEvents3521"><font size="1" style="font-size:9pt;">Provide stub information to employees who receive their pay via EFT, and who do not have access to the stubs via TimeAnywhere.</font></span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 33.55%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Schedule Report</p>
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">RSCHDLERPRT.rpt</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 25.11%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">4/17/2014</p>
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;"><span style="font-size: 9.0pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">8.2.545.043 +</font></span></p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 41.35%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Supports expanded Technician Id field. &#160;T<span style="font-size: 9.0pt; font-family: Arial, sans-serif;"><font size="1" style="font-size:9pt;">he report continues to display only the first 10 characters of the Tech Id.</font></span></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 33.55%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Report PR Worksheet</p>
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">RPRWRKSv73b041.rpt</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 25.11%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">5/06/2015</p>
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">&#160;</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 41.35%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Includes Branch Id filter and supports Hard Block logic (BranchFilterWithHardBlock global settings registry option). &#160;Filter does not display the User's branch filters but the Hard Block is handled by the report. &#160;</p>
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">FICA MC Wage Threshold field warns if the Employee's wages exceed threshold. See Customer Note 11.2.7 for details/registry. &#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 33.55%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Report Payroll Verification</p>
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">RPRVERI.rpt</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 25.11%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">05/01/2015</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 41.35%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Includes Branch Id filter and supports Hard Block logic (BranchFilterWithHardBlock global settings registry option). &#160;Filter does not display the User's branch filters but the Hard Block is handled by the report. &#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 33.55%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Report Payroll Verification 2</p>
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">RPRVERI2.rpt</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 25.11%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">05/01/2015</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 41.35%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Includes Branch Id filter and supports Hard Block logic (BranchFilterWithHardBlock global settings registry option). &#160;Filter does not display the User's branch filters but the Hard Block is handled by the report. &#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 33.55%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Report Inventory Count</p>
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">RINVNTRYCNT.rpt</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 25.11%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">06/03/2014</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 41.35%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Correctly processes End Date field when computing Quantity on Hand as of that Date.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 33.55%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Report GL History by Account<br />
+DGLHSTRY.rpt &#160;</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 25.11%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">05/14/2014</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 41.35%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Corrects query issue. &#160;</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 33.55%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p class="MsoNormal" style="margin-left: 8px;">Report Inventory Cost On-Hand</p>
+<p class="MsoNormal" style="margin-left: 8px;">RINVCST.rpt</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 25.11%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">12/02/2014</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 41.35%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Improves printing of the Inventory Total lines. &#160;Use this report to display cost per location for the method specified in the report.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 33.55%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="margin-left: 8px;">Report Inventory Audit RINVNTRYADT.rpt</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 25.11%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">05/22/2015</p>
+</td>
+<td style="border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; border-bottom: solid 0.50pt #000000; width: 41.35%; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p style="font-size: 9.0pt; font-family: Arial, sans-serif;">Modified to remove detail lines which have zero quantity and zero cost.</p>
+</td>
+</tr>
+</table>
+<h2>Record Notes</h2>
+<table style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;" cellspacing="0" width="658">
+<col style="width: 17.213%;" />
+<col />
+<col style="width: 68.273%;" />
+<tr style="vertical-align: top;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Screens Impacted</font></p>
+</td>
+<td style="width: 15.43%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Build / Case</font></p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p><font style="font-weight: bold;">Notes</font></p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Location Record</p>
+<p>&#160;</p>
+</td>
+<td style="width: 15.43%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>8.0.510.017</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Before 8.0, the GLH Credit never included a GL Entity.&#160;&#160;In 8.0+, the system uses the GL Entity from the WO-INV line's Location record. Setting the GL Entity in the Location record ensures that the Credit GL Entity defaults properly when items are entered on the WO Inventory tab. Note that this field is required if Intercompany Processing is enabled.</p>
+</td>
+</tr>
+<tr style="vertical-align: top;">
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Pay Type</p>
+<p>PTO Accrual Exclusion</p>
+<p>(primarily for Province of Alberta, CA)</p>
+</td>
+<td style="width: 15.43%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>8.0.509.010</p>
+</td>
+<td style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;">
+<p>Fields are only applicable if Pay Type=PTO and PTO Accrual Method = Percent. Previously, only vacation wages were excluded from the vacation accrual wage base.&#160;The PTO Accrual Exclusions fields were added so the types of wages to exclude could be selected.</p>
+<p><font style="font-weight: bold;">Important Upgrade Note:</font> you must flag the applicable boxes in PTO records for these wages to be excluded from the accrual wage base. After upgrading to version 8.2 from 7.3 or before, carefully review your Pay Type records to see if any changes should be made.</p>
+</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="vendor"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Inventory Item Purchases Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="inventory,vendor"/><meta name="brsnext" value="Inventory_Items_Serialized__SRL_Tab_.htm"/><meta name="brsprev" value="Inventory_Items_Location__LOC_Tab_.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Inventory Item Purchases Tab">
+        <span>Inventory Item Purchases Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Inventory Item Purchases Tab</h1>
+<h2>Purpose:</h2>
+<p>Specifies the Vendor(s) from which this item was purchased. The most 
+ recent purchase appears at the top of the list. All fields are maintained 
+ by the system as PO&#39;s are released, changed and cancelled, and as items 
+ are received in the Inventory Receipt Journal. To view the inventory history 
+ for a particular line, simply double-click on that line.</p>
+<p>If an item was received to a location other than the PO default, the 
+ Job On Hand will still display as 0 – however, if you double click on 
+ the line, the Purchasing and Inventory Receipts detail will be displayed.</p>
+<p>If the Inventory Item Miscellaneous box is checked, purchase history 
+ of this item is limited to only Open purchases (items on order.).</p>
+<h2>Important Fields: Initial Screen</h2>
+<p><font style="font-weight: bold;">Vendor Id -  Name -  Order# 
+ - Promised - Ordered Location - On Hand - InTest -  Due - 
+ Cost</font> -<br/>
+<span style="font-weight: bold;">User - Entry Date</span> - <span style="font-weight: bold;">DropShip 
+ -</span> <font style="font-weight: bold;">OnHandJob - 
+ ObsoleteLocation</font><br/>
+These display only fields are maintained by the system. Note that the Cost 
+ represents the highest cost recorded in Inventory History for this Item 
+ for the specified PO. The User field defaults from the Ordered By field 
+ in the Purchase Order.  </p>
+<p>The Obsolete Location column allows 
+ for easy filtering of active locations. </p>
+<p>Double-click on a line to drill down to inventory detail.</p>
+<h2>Important Fields: Detail Screen</h2>
+<p><font style="font-weight: bold;">Source Jrnl Effective Date Location Ordered  On 
+ Hand </font><font style="font-weight: bold;"> On Hand-Job</font><font style="font-weight: bold;"><br/>
+In Test  Rejected Status </font><font style="font-weight: bold;">Serial/Lot# </font><font style="font-weight: bold;"> </font><font style="font-weight: bold;">Vendor 
+ Serial #</font></p>
+<p>This view displays the purchasing and receipt detail for this PO. Note 
+ that you must click another tab and then the Purchases tab again to return 
+ from the PO Detail view.</p>
+
+</body></html>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.13.3.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="generate purchase order"/>
+<meta name="MS-HKWD" content="starter"/>
+<meta name="MS-HKWD" content="start"/>
+<meta name="MS-HKWD" content="purchase order"/>
+<meta name="MS-HKWD" content="po"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Generate Purchase Order</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<style type="text/css">/*<![CDATA[*/
+body {
+	background-image: url("image/dbwatermark.gif");
+	background-repeat: repeat;
+	background-attachment: scroll;
+}
+/*]]>*/</style>
+<meta name="rh-index-keywords" content="start generate purchase order,generate purchase order,starter,start,purchase order,po"/><meta name="brsnext" value="Purchase_Order_Viewer.htm"/></head>
+
+<body bgproperties="fixed">
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Generate Purchase Order">
+        <span>Generate Purchase Order</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+<h1>Generate Purchase Order</h1>
+<h2>Purpose:</h2>
+<p>This starter function reviews the inventory data and determines what 
+ items need to be ordered and their required order quantities. Inventory 
+ Items that are flagged as Inactive or Obsolete, or have been Superceded 
+ are excluded from this function.</p>
+<p>This function checks to see if any 
+ PO&#39;s are for Vendors that are Blocked Purchase as of today. If they are, 
+ the user is alerted and the system displays a workspace with the 
+ list of blocked purchase Vendors. The function will continue to process 
+ Vendors that are not &#39;Blocked Purchase&#39; as of today.</p>
+<h2>Usage:</h2>
+<p>All items are ordered from the Vendor indicated in an item’s Inventory 
+ Item record . All items being purchased from the same Vendor and going 
+ to the same Location will be combined on one purchase order. <a data-target="POPUP596407090" data-rhwidget="DropSpot" href="#" class="dropspot"><span data-open-text="true" data-skip-index="true">Click 
+ to see detailed information</span><span data-close-text="true">Click 
+ to see detailed information</span></a> on how this function determines 
+ the quantity needed.</p>
+<div data-targetname="POPUP596407090">
+	<p style="text-indent: 18.00pt;">- Quantity on hand (from imhstry)</p>
+	<p style="text-indent: 18.00pt;"><span style="text-indent: 18.00pt;">- 
+	 Quantity already on order (from imhstry).</span></p>
+	<p style="text-indent: 18.00pt;">- Reorder level (from invntryitmlctn)</p>
+	<p style="text-indent: 18.00pt;">- Order up to (from invntryitmlctn)</p>
+	<p>The following validations are implemented in this function:</p>
+	<p style="margin-left: 36.00pt;">1. User is warned when a line&#39;s Unit 
+	 Cost is set to zero during data entry.</p>
+	<p style="margin-left: 36.00pt;">2. When the Go button is pushed on 
+	 the list screen, the system displays a warning that indicates the 
+	 number of lines that have zero for Unit Cost, and that lines with 
+	 a Unit Cost of zero will be skipped. The User has the option to continue 
+	 or return to the list data entry form.</p>
+	<p style="margin-left: 36.00pt;">3. Lines that still have zero Unit 
+	 Cost when processing is initiated are excluded from PO generation.</p>
+	<p style="margin-left: 36.00pt;">4. The Accounting Period defaults 
+	 to the default period.</p></div>
+<h3>Inactive Vendors</h3>
+<p>This function does not allow you to 
+ create POs for Inactive Vendors. In this release, a list of ineligible 
+ Vendors and a message will be displayed when the Checklist appears:</p>
+<p style="margin-left: 48px;">The following 
+ vendors are inactive,therefore ineligible for Purchase Order creation.</p>
+<p style="margin-left: 48px;">Vendor 1</p>
+<p style="margin-left: 48px;">Vendor 2 
+ ....</p>
+<p>In order to complete the Generate Purchase 
+ Orders  function, all Inactive Vendors must be removed as Primary 
+ Vendors on any of the Inventory Items listed in the Checklist. If a Vendor 
+ was marked Inactive in error, switching them back to Active will allow 
+ the function to be run. </p>
+<h2>Registry:</h2>
+<p><a href="Registry_Start_Generate_Purchase_Orders.htm">Registry to Set 
+ Shipping Address</a> of generated PO&#39;s.</p>
+<h2>Important Fields: Initial Screen</h2>
+<p><font style="font-weight: bold;">Last Time Bought by Location: Use as 
+ Default?</font><font style="font-weight: bold;">:<br/>
+</font> If this field is flagged, the function will choose the most recent 
+ Vendor/Unit Cost Bought for each Location, rather than the Vendor specified 
+ on the Inventory Item’s Purchasing tab.</p>
+<p><font style="font-weight: bold;">Period Id:<br/>
+</font>The default Accounting Period for the PO. This field is required.</p>
+<p><font style="font-weight: bold;">Inventory Item Id:<br/>
+</font>If  you leave this field blank, PO&#39;s will be generated for 
+ all applicable items. To limit PO&#39;s to a specific Inventory Item, enter 
+ its Id. A range of Items is specified by the first and last Id&#39;s separated 
+ by an underscore (00123_00505). Several Id&#39;s can be specified by separating 
+ their Id&#39;s with a comma.</p>
+<p><font style="font-weight: bold;">Location Id:<br/>
+</font>If you leave this field blank, PO&#39;s will be generated for all applicable 
+ locations. To limit PO&#39;s to items required for a specific Location, enter 
+ its Id. Several Id&#39;s can be specified by separating their Id&#39;s with a 
+ comma.</p>
+<p><font style="font-weight: bold;">Vendor Id:<br/>
+</font>If you leave this field blank, PO&#39;s will be generated for all applicable 
+ Vendors. To limit PO&#39;s to a specific Vendor, enter its Id. Several Id&#39;s 
+ can be specified by separating their Id&#39;s with a comma.</p>
+<p><span style="font-weight: bold;">Stocked:</span><br/>
+To limit this function to Items flagged as Stocked, enter a Y in this range. 
+  If this range is blank, the Stocked flag will be ignored when this 
+ function is run.</p>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Click the Go button when the ranges 
+ fields are completed correctly.</p>
+<h2>Important Fields: List Screen</h2>
+<p>When the list screen appears, the user may review the information and 
+ adjust the needed quantities as appropriate. Note that the Magnifier may 
+ be used to access a Full View of the selected line.</p>
+<p><font style="font-weight: bold;">Vendor:<br/>
+</font>The Vendor specified in the Inventory Item Purchasing Tab will default. 
+ This field may be changed by the user.</p>
+<p><font style="font-weight: bold;">Need:<br/>
+</font>The quantity needed is calculated based on the Order Up to field 
+ in the Inventory Item record (for a specified location) and how many items 
+ (if any) are already on order. Items will not be included on this list 
+ unless (On Hand + On Order) &lt; Reorder Level.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Example<br/>
+</font>Suppose widget001 has a Reorder Level of 20, an Order Up To of 25, 
+ and that 9 are On Hand and 7 are on order. In this case, the Need field 
+ would be calculated as follows:</p>
+<p style="margin-left: 36.00pt;">Need=Order Up To - (On Hand + On Order) 
+ = 25 - (9 + 7) = 9</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Note:</font> if 
+ the Order Up To field is not completed in the Inventory record, the Restock 
+ Level will be used to calculate the Quantity Needed instead.</p>
+<p><font style="font-weight: bold;">Unit Cost:<br/>
+</font>This field defaults from the Vendor tab of the Inventory Item record, 
+ but may be adjusted by the user.</p>
+<p><font style="font-weight: bold;">Requested:<br/>
+</font>The Date Requested defaults to Today, but may be adjusted by the 
+ user.</p>
+<p><font style="font-weight: bold;">Promise Date:</font> <font style="font-weight: bold;"><br/>
+</font>The user may complete this field; it will be written to the Purchase 
+ Order.</p>
+<p><font style="font-weight: bold;">Lcnt Id: Supply Qty:<br/>
+On Order: Reorder Level:  Order Up To:<br/>
+</font>These display-only fields are maintained by the system. The Supply 
+ Qty = OnHand – Allocated at the specified Location.</p>
+
+
+
+<p><font style="font-weight: bold;">LTB Vendor Id: LTB Date:<br/>
+Last Time Bought Vendor Name:<br/>
+</font>These fields display the Last Time Bought information for this Location/Item.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><img src="assets/images/image/SKIN1_Go.gif" alt="image\SKIN1_Go.gif" title="image\SKIN1_Go.gif" width="94" height="28" align="left" border="0"/> When you click Go to generate the Purchase 
+ Orders, the system will display a message box confirming the number of 
+ Purchase Orders generated, and ask “Print PO Forms?”</p>
+<p>Click ‘Yes’ to launch the PO report pre-filtered to the POs generated, 
+ or ‘No’ to simply acknowledged the message.</p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1', 'POPUP596407090');
+//]]></script>
+
+</body></html>

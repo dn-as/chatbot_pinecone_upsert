@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.4.3.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="work order invoice"/>
+<meta name="MS-HKWD" content="work order"/>
+<meta name="MS-HKWD" content="workorder"/>
+<meta name="MS-HKWD" content="revenue adjustment"/>
+<meta name="MS-HKWD" content="adjustments"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Revenue Adjustment Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="work order invoice,work order,workorder,revenue adjustment,adjustments"/><meta name="brsnext" value="Consolidated_Invoice_Viewer.htm"/><meta name="brsprev" value="Gross_Margin_Table.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Revenue Adjustment Viewer">
+        <span>Revenue Adjustment Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Revenue Adjustment Viewer</h1>
+<h2>Purpose:</h2>
+<p>Revenue adjustments enable you to discount or mark up labor, material and other charges on Work Order invoices (for service compute jobs), and to add management fees to the total. This functionality is also supported by Quote Master / Quote Manager.</p>
+<h2>Usage:</h2>
+<p><span style="font-weight: bold;">Service Work Orders:</span> The Revenue Adjustment defaults from the Job record when the Work Order is created in New Call. <span style="font-weight: bold;">The Adjust Revenue button on the Gross Margin tab of the Work Order must be clicked to implement new Revenue Adjustments on a Work Order.</span> The Adjust Revenue button should be clicked <font style="font-weight: bold;">after</font> the Ok To Invoice button (on the invoicing tab) has been clicked, all costs have been imported to the work order (so that revenues can be adjusted correctly).</p>
+<p><span style="font-weight: bold;">Quotes:</span> The Revenue Adjustment Id referenced on the Quote Scope is used to generate Revenue Adjustments when the Quote Scope is saved. These Revenue Adjustments will be written to the Work Order when the Quote Approval Wizard is run.</p>
+<h2>Screen Organization:</h2>
+<p>The upper section of this screen displays the primary Revenue Adjustment information and default discounts (or mark ups) for Labor, Material, Other and Subcontractor charges.</p>
+<p>The tabs on the lower section of this screen display the Revenue Adjustment &#39;child&#39; tables. These are used to specify the management fee structure and to specify exceptions to the default discounts or mark ups listed in the upper section. Click on the following buttons to see additional information:</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Revenue Adjustment Id:<br/></font>Uniquely defines this record. This field is required.</p>
+<p><font style="font-weight: bold;">Revenue Adjustment Description:<br/></font>Briefly describes this record.</p>
+<p><font style="font-weight: bold;">Labor: Material: Other: Subcontract:<br/></font>If you wish to implement discounts or mark ups by category, the fields in this section should be completed. Specify the following fields for each type of discount (Labor, Material, Other and Subcontract). .You may not mix invoice total adjustments with adjustments by category; if the Total fields are completed, none of the category fields may be filled in, and vice versa.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Account Id:<br/></font> This field sets the default adjustment account for the entries on the RevAdjust Work Order and Quote Scope tabs, and is typically an income type account. For a discount, it will be debited (as an offset to the credits for this type of income) when the work order invoice is posted.</p>
+<p><font style="font-weight: bold;">Invoice Description:<br/></font>Enter the description to be printed on the invoice for this type of discount. If this field is blank, no discount will be taken.</p>
+<p><font style="font-weight: bold;">Rate%</font><br/>
+The default discount or markup percentage to apply to this type of income. Exceptions to this rule should be specified on the Exceptions tabs in the lower section of this record.</p>
+<p><font style="font-weight: bold;">Rate Type: Add Deduct<br/></font>Deduct will apply the Rate% as a discount. Add to applies the Rate% as a markup.</p>
+<p><font style="font-weight: bold;">Total:</font><br/>
+These fields support adjustments at the invoice total level.  You may not mix invoice total adjusting with adjusting by category; if the Total fields are completed, none of the category fields may be filled in, and vice versa. Exceptions noted on the lower tabs will be applied as applicable.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Account Id:<br/></font> This field sets the default adjustment account for the entry on the RevAdjust Work Order tab or Quote viewer, and is typically an income type account. For discounts, it will be debited (as an offset to the credits for this type of income) when the work order invoice is posted.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Invoice Description:<br/></font>Enter the description to be printed on the invoice for this type of discount. If this field is blank, no discount will be taken.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Rate%</font><br/>
+The default discount or markup percentage to apply to this type of revenue. Exceptions to this rule should be specified on the Exceptions tabs in the lower section of this record.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Rate Type: Add Deduct<br/></font>Select Deduct to apply the Rate% as a discount. Select Add to apply the Rate% as a markup.</p>
+<p class="RNH2"> Important Fields: Lower Section</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Management Fees Tab</p>
+<p>This tab is used to specify the management fee structure (if any) that should be added to the invoice after any applicable discounts have been taken.</p>
+<p><font style="font-weight: bold;">Cost Category Id:<br/></font>The default Cost Category for this fee. The GL Account specified in this Cost Category record will be credited when the work order invoice is posted.</p>
+<p><font style="font-weight: bold;">Invoice Amount:<br/></font>The highest Invoice Amount (after discounts) to which this management fee applies.</p>
+<p><font style="font-weight: bold;">Invoice Description:<br/></font>Enter the description to be printed on the invoice for this management fee.</p>
+<p><font style="font-weight: bold;">Mgmt Fee: Fee Type - Flat Rate?<br/></font>These fields define the management fee to be assigned to invoices in this Invoice Amount bracket. If the Flat Rate Box is checked (by pressing the Spacebar, or double-clicking on the field), the system considers the Management Fee to be entered in dollars. If the Flat Rate Box is blank, the Management Fee is assumed to be a percentage of the invoice after discounts.</p>
+<p style="margin-left: 36.00pt;"><font style="font-style: italic;" color="#FF0000">Example<br/></font>Suppose that you wanted to assign a management fee of $50 to invoices totaling (after discounts) $500.00, a 10% fee for invoices totaling between $500.00 and $10,000.00, and a flat fee of $1000 for invoices over $10,000. To do so, you would set up the Invoice Amount, Management Fee, and Flat Rate fields as follows:<br/>
+<br/>
+<font style="font-weight: bold;"> Invoice Amt: MgmtFee:  Fee Type: Flat Rate Box<br/></font> 500.00    50.00   <font style="font-size: 13pt;" size="4">√</font></p>
+<p style="margin-left: 36.00pt;">10000.00     10.00  </p>
+<p style="margin-left: 36.00pt;">999999.99  1000.00   <font style="font-size: 13pt;" size="4">√</font></p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Labor Exceptions Tab</p>
+<p>The tab enables you to override the default labor or total discount in the upper portion of this viewer.</p>
+<p><font style="font-weight: bold;">Labor Rate Id:<br/></font>Enter a valid Labor Rate Id (or double click to select from a list). Time entered for this Labor Rate will be discounted according to the Discount % on this line. The discount amount will be debited to the Labor GL Account Id: located in the upper section of this viewer.</p>
+<p><font style="font-weight: bold;">Invoice Description:<br/></font>Enter the description to be printed on the invoice for this type of labor.</p>
+<p><font style="font-weight: bold;">Rate%</font><br/>
+The default discount or markup percentage to apply to this type of labor revenue. If this field is blank, no discount or markup will be taken.</p>
+<p><font style="font-weight: bold;">Rate Type:</font> <font style="font-weight: bold;">Add Deduct<br/></font>Select Deduct to apply the Rate% as a discount. Select Add to apply the Rate% as a markup.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Inventory Exceptions Tab</p>
+<p>The tab enables you to override the default material or total discount in the upper portion of this viewer for Inventory Items belonging to the specified Inventory Groups.</p>
+<p><font style="font-weight: bold;">Inv Grp Id:<br/></font>Enter a valid Inventory Group Id (or double click to select from a list). Inventory Items entered belonging to this Group will be discounted according to the Discount % on this line. The discount amount will be debited to the Material GL Account Id: located in the upper section of this viewer.</p>
+<p><font style="font-weight: bold;">Invoice Description:<br/></font>Enter the description to be printed on the invoice for this type of inventory materials.</p>
+<p><font style="font-weight: bold;">Rate%</font><br/>
+The default discount or markup percentage to apply to this type of inventory revenue. If this field is blank, no discount or markup will be taken.</p>
+<p><font style="font-weight: bold;">Rate Type:</font> <font style="font-weight: bold;">Add Deduct<br/></font>Select Deduct to apply the Rate% as a discount. Select Add to apply the Rate% as a markup.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Other Exceptions Tab</p>
+<p>The tab enables you to override the default Other and Subcontractor or Total discounts in the upper portion of this viewer for other charges Items belonging to the Other Rates.</p>
+<p><font style="font-weight: bold;">Other Rate Id:<br/></font>Enter a valid Other Rate Id (or double click to select from a list). Charges entered at this Rate will be discounted according to the Discount % on this line. The discount amount will be debited to the Other or Subcontractor GL Account Id: located in the upper section of this viewer. The Cost Category specified in the Other rate will determine which GL Account is debited.</p>
+<p><font style="font-weight: bold;">Invoice Description:<br/></font>Enter the description to be printed on the invoice for this type of discounts.</p>
+<p><font style="font-weight: bold;">Rate%</font><br/>
+The default discount or markup percentage to apply to this type of other revenue. If this field is blank, no discount or markup will be taken.</p>
+<p><font style="font-weight: bold;">Rate Type:</font> <font style="font-weight: bold;">Add Deduct<br/></font>Select Deduct to apply the Rate% as a discount. Select Add to apply the Rate% as a markup.</p>
+
+</body></html>

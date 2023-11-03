@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.24.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Custom EDI Purchasing</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="electronic Purchase Order,EDI,Electronic Data Interface,Purchasing EDI"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Custom EDI Purchasing">
+        <span>Registry Custom EDI Purchasing</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Custom EDI Purchasing</h1>
+<h2>Purpose:</h2>
+<p>This registry provides the configurations required to run the <a href="Purchasing_EDI.htm">Custom 
+ EDI</a> functionality for Purchasing.</p>
+<h3>Important Fields:</h3>
+<p><span style="font-weight: bold;">Id:</span> sys-edi-haller</p>
+<h3>Enable EDI</h3>
+<p><span style="font-weight: bold;">Setting Key:</span> Enabled    <span style="font-weight: bold;">Setting Value:</span> yes</p>
+<h3>Paths to Inbound and Outbound Folders</h3>
+<p style="margin-left: 8px;">The folders identified in these registries 
+ entry provide the  Inbound and Outbound interfaces with RKL. RKL 
+ must be informed of the locations of these folders and have access to 
+ them.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> InboundFolder   <span style="font-weight: bold;"> Setting Value:</span> <span style="font-style: italic;">path 
+ to inbound folder</span></p>
+<p><span style="font-weight: bold;">Setting Key:</span> InboundAcceptedFolder 
+   <span style="font-weight: bold;"> Setting Value:</span> 
+ <span style="font-style: italic;">path to inbound accepted folder</span></p>
+<p><span style="font-weight: bold;">Setting Key:</span> InboundRejectedFolder 
+   <span style="font-weight: bold;"> Setting Value:</span> 
+ <span style="font-style: italic;">path to inbound rejected folder</span></p>
+<p><span style="font-weight: bold;">Setting Key:</span> OutboundFolder 
+   <span style="font-weight: bold;"> Setting Value:</span> 
+ <span style="font-style: italic;">path to outbound folder</span></p>
+<p><span style="font-weight: bold;">Setting Key:</span> OutboundAcceptedFolder 
+   <span style="font-weight: bold;"> Setting Value:</span> 
+ <span style="font-style: italic;">path to outbound accepted folder</span></p>
+<p><span style="font-weight: bold;">Setting Key:</span> OutboundRejectedFolder 
+   <span style="font-weight: bold;"> Setting Value:</span> 
+ <span style="font-style: italic;">path to outbound rejected folder</span></p>
+<h3>Logging</h3>
+<p><span style="font-weight: bold;">Setting Key:</span> LogMode    <span style="font-weight: bold;">Setting Value:</span> on</p>
+<p>Setting Key: LogPath   Setting Value: <span style="font-style: italic;">path\</span>EDILog.txt</p>
+<p>If logging is enabled (strongly recommended), this registry specifies 
+ the path and filename to be used for logging.</p>
+<h3>Email Alerts</h3>
+<p>The email addresses are used to send emails whenever errors are encountered 
+ when processing Inbound folder messages.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ EmailFrom    <span style="font-weight: bold;">Setting Value:</span> 
+ <span style="font-style: italic;">validemailaddress</span></p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ EmailTo   <span style="font-weight: bold;">Setting Value:</span> 
+ <span style="font-style: italic;">validemailaddress</span></p>
+<h3><span style="font-style: italic;">R</span>egistry 
+ to Add Line Item Promise Date</h3>
+<p style="margin-left: 8px;">This release 
+ includes a registry that will add the LineItemPromiseDate tag to the items 
+ section the Marketplace PO.xml output file; it will be populated with 
+ the SAMPro prchseordrlst_dte_prmsd. </p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Id:</span> 
+ sys-edi</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting 
+ Key:</span> 855POIncludeLineDatePromised  <span style="font-weight: bold;">Setting 
+ Value:</span> Y  or  N (default is N)</p>
+<h3>Add Ship Via Line to PO XML Export</h3>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> ExportShipVia  <span style="font-weight: bold;">Setting 
+ Value:</span> Y </p>
+<p>To turn on the export, the Setting 
+ key must be present, and the Setting Value must begin with ‘Y’, ‘y’, ‘T’, 
+ or ‘t’.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">NOTE:</span> 
+ An installation using this EDI functionality should have either the registry<b style="font-family: &#39;Segoe UI VSS &#39;, , &#39;Segoe UI&#39;, -apple-system, BlinkMacSystemFont, Roboto, &#39;Helvetica Neue&#39;, Helvetica, Ubuntu, Arial, sans-serif, &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;; 
+	 font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 text-align: start; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 text-decoration-style: initial; text-decoration-color: initial;"> </b>sys-edi-haller  OR sys-edi 
+ implemented. If for some reason both are implemented, sys-edi-haller will 
+ take precedence.  </p>
+<p> </p>
+
+</body></html>

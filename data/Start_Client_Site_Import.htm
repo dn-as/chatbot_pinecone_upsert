@@ -1,0 +1,1402 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.5.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="start client site import"/>
+<meta name="MS-HKWD" content="csv"/>
+<meta name="MS-HKWD" content="clone job"/>
+<meta name="MS-HKWD" content="client site"/>
+<meta name="MS-HKWD" content="sit import"/>
+<meta name="MS-HKWD" content="client site import"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Client Site Import</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="start client site import,csv,clone job,client site,sit import,client site import"/><meta name="brsnext" value="Registry_New_Call_Service_Category.htm"/><meta name="brsprev" value="Quote_Status.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Client Site Import">
+        <span>Start Client Site Import</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Client Site Import</h1>
+<h2>Purpose:</h2>
+<p>This function allows a user to import a pre-defined, comma separated 
+ ASCII file containing information needed to create new records and relationships 
+ between Clients, Client Sites, Client Site Equipment, Jobs, Cost Codes 
+ and Billing Items in the database. When the import function is run, the 
+ system will create a new Client Site along with one or more Client Site 
+ Equipment records referencing a newly created Job/Cost Code/Billing Item 
+ and Client combination based on the specified Client Id and Job Id used 
+ for cloning an existing relationship.</p>
+<p>If any errors occur during the import (i.e. invalid Client, Job or other 
+ referenced table values) the entire import process will abort and an error 
+ report will be generated specifying what problems were experienced during 
+ the import. The user can then re-attempt the import after the errors are 
+ corrected.</p>
+<h2>Registry:</h2>
+<p>See <a href="Registry_Start_Client_Site_Import.htm">Registry Start Client 
+ Site Import</a> for various options.  <span>These include using the 
+ Zip Code Table to set the Service Zone and Branch, use Avalara to set 
+ the Tax Group, and allow existing Sites to be specified. </span></p>
+<h2>Usage:</h2>
+<p>The first row of the .csv file <font style="font-weight: bold;">MUST</font> 
+ be a header row, and contain the pertinent title information, as shown 
+ in the following table. A ‘starter’ spreadsheet may be obtained from your 
+ support rep that has the correct header row data.</p>
+<p>The .csv file must contain a valid Client Id and Job Id (per row of 
+ data) that the system can use as a model for cloning. Any other fields 
+ from the Client Site record (parent only) may be specified in the file 
+ layout. Any specified field values that reference a table other than the 
+ Client Site must be valid values in the database. For example, if the 
+ Account Manager Id “Tim” is specified in the file layout then “Tim” must 
+ exist in the Account Manager table prior to importing the file.</p>
+<p>Any fields that are required by the system, in your customization file, 
+ or via required field registry setting must be specified in the template 
+ or in the spreadsheet.</p>
+<p><font style="font-weight: bold;">See</font> <a href="Excel_for_Imports.htm"><font style="font-weight: bold;">Excel for Imports</font></a> <font style="font-weight: bold;">for 
+ suggestions on dealing with Excel formatting issues.</font></p>
+<p>Imported data must be formatted as follows (<font style="font-weight: bold; 
+													 font-style: italic;">you 
+ may need to scroll down to view the table</font>):</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">NOTE 
+ on Phone Numbers (Version 8.0 and above)</font></p>
+<p style="margin-left: 36.00pt;">In previous releases, phone numbers had 
+ to conform to the SAM Pro (###)###-#### format to import correctly. In 
+ this release, if the .CSV phone fields contain any of the following formats 
+ they will be saved to SAM Pro correctly: ###-###-#### OR (###)###-#### 
+ OR ##########</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<table style="border-spacing:0px;width:583;border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+		 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+		 border-collapse: separate;">
+	<tbody><tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p> Column 
+		 Title</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Column 
+		 # (in Excel)</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Notes 
+		 and Formatting</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Orig 
+		 Client Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>A</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Client 
+		 Id must exist in database</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Orig 
+		 Job Template Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>B</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Job 
+		 Id must exist in database</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>New 
+		 Job Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>C</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Id 
+		 must NOT exist in database; 15 character maximum</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Job 
+		 Name</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>D</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>40 
+		 character maximum; <font style="font-weight: bold;">required</font></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>New 
+		 Site Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>E</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Id 
+		 must NOT exist in database; 15 character maximum</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Site 
+		 Name</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>F</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>40 
+		 character maximum; <font style="font-weight: bold;">required</font></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Site 
+		 Alpha Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>G</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>20 
+		 character maximum</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Date 
+		 Opened</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>H</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>YYYY-MM-DD; 
+		 defaults to today if blank</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Date 
+		 Closed</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>I</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>YYYY-MM-DD; 
+		 defaults to blank</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Template</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>J</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Y 
+		 or N (default is N, not a template)</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Ship 
+		 Address 1 </p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>K</p></td>
+		<td rowspan="4" style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; 
+			 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+			 border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; 
+			 padding-right: 1px; padding-bottom: 1px;"><p>Site Shipping 
+		 Address –</p>
+		<p>50 character maximum per field</p>
+		<p><font style="font-weight: bold;">Ship Address 1 is required</font></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Ship 
+		 Address 2 </p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>L</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Ship 
+		 Address 3</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>M</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Ship 
+		 Address 4</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>N</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>City</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>O</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>30 
+		 character maximum; <font style="font-weight: bold;">required</font></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>State</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>P</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid, 
+		 2-cha State or Province abbreviation; <font style="font-weight: bold;">required</font></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Zip</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Q</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>5 
+		 digit zip, or zip plus 4 (44024-0001); <font style="font-weight: bold;">required</font></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Voice 
+		 Phone</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>R</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>(###)###-#### 
+		 ;<font style="font-weight: bold;">required</font></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Fax 
+		 Phone</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>S</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>(###)###-####</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Acct 
+		 Manager Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>T</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 Id must exist in database if entered</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Sales 
+		 Rep Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>U</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 Id must exist in database if entered</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Service 
+		 Manager</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>V</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 Id must exist in database ; required</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Dispatcher</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>W</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 Id must exist in database if entered</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Branch 
+		 Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>X</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 Id must exist in database if entered</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Service 
+		 Zone</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Y</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 Id must exist in database; <font style="font-weight: bold;">required</font></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AR 
+		 Terms Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Z</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 Id must exist in database if entered</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Store 
+		 #</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AA</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>10 
+		 character maximum</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Call 
+		 Script Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AB</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 Id must exist in database if entered</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Latitude</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AC</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>#####.######</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Longitude</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AD</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>#####.######</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Status</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AE</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Active, 
+		 Inactive, Mail List or Credit Hold (default Active)</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Email 
+		 Address</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AF</p></td>
+		<td rowspan="3" style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; 
+			 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+			 border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; 
+			 padding-right: 1px; padding-bottom: 1px;"><p>Valid email; 
+		 128 character maximum per field.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Email 
+		 Fax</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AG</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Email 
+		 Pager</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AH</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Email 
+		 Invoices</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AI</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>This 
+		 field is obsolete</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Market 
+		 Source Id </p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AJ</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 Id must exist in database; <font style="font-weight: bold;">required</font></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Price 
+		 Code</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AK</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 Id must exist in database if entered</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Time 
+		 Zone ID</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AL</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Time 
+		 Zone Id must exist in database if entered</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Mat 
+		 Price Level</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AM</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Single 
+		 digit, 0-9</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Technician 
+		 Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AN</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Tech 
+		 Id must exist in database if entered</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC1 
+		 First Name</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AO</p></td>
+		<td rowspan="4" style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; 
+			 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+			 border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; 
+			 padding-right: 1px; padding-bottom: 1px;"><p>Site Contact 
+		 1 fields – all are 20 character maximum</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC1 
+		 Last Name</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AP</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC1 
+		 Title</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AQ</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC1 
+		 Salutation</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AR</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC1 
+		 Phone</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AS</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>(###)###-####</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC1 
+		 Ext.</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AT</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>4 
+		 character maximum</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC1 
+		 Cell Phone</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AU</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>(###)###-####</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC1 
+		 Fax Phone</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AV</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>(###)###-####</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC1 
+		 Email</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AW</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 email; 128 character maximum</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC2 
+		 First Name</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AX</p></td>
+		<td rowspan="4" style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; 
+			 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+			 border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; 
+			 padding-right: 1px; padding-bottom: 1px;"><p>Client Site Contact 
+		 2 fields – all are 20 character maximum</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC2 
+		 Last Name</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AY</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC2 
+		 Title</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>AZ</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC2 
+		 Salutation</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BA</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC2 
+		 Phone</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BB</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>(###)###-####</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC2 
+		 Ext.</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BC</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>4 
+		 character maximum</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC2 
+		 Cell Phone</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BD</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>(###)###-####</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC2 
+		 Fax Phone</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BE</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>(###)###-####</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>SC2 
+		 Email</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BF</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 email; 128 character maximum</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Dispatch 
+		 Note</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BG</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>40 
+		 character maximum.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Agreement 
+		 No</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BH</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>15 
+		 character maximum.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Agreement 
+		 PO</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BI</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>20 
+		 character maximum.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Service 
+		 Hours</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BJ</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>10 
+		 character maximum.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Sub 
+		 Not to Exceed</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BK</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Decimal; 
+		 cannot exceed ######.##</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>PO 
+		 Required</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BL</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Defaults 
+		 to N; other valid option Y</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Client 
+		 Not to Exceed</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BK</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Decimal; 
+		 cannot exceed ######.##</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Gross 
+		 Margin Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BN</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 Id must exist in database if entered</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Workorder 
+		 Comments</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BO</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>400 
+		 character maximum.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Billing 
+		 Comments</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BP</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>1000 
+		 character maximum.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Shipping 
+		 Instructions</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BQ</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>For 
+		 COP; 240 character maximum</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Bill 
+		 of Ladding Instructions</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BR</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>For 
+		 COP; 180 character maximum</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Location 
+		 Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BS</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>For 
+		 COP; valid Id must exist in database if entered.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>GL 
+		 Entity Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BT</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>For 
+		 COP; valid Id must exist in database if entered.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Tax 
+		 Group Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BU</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Valid 
+		 Id must exist in database; used by COP and Quotes (if Job / WO 
+		 not specified).</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Min. 
+		 Ship Value</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BV</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>###### 
+		 (6 numeric characters, no decimal point); COP</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Ship 
+		 Via Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BW</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>For 
+		 COP; valid Id must exist in database if entered.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Proforma 
+		 Table Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BX</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>For 
+		 COP; valid Id must exist in database if entered.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Freight </p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BY</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Prepaid 
+		 is default, only other allowable values are Prepay&amp;Add and 
+		 Collect. For COP.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>C 
+		 of A Reg.</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>BZ</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Defaults 
+		 to None; other valid options are W/Shpmnt and W/Shpmnt + Fax. 
+		 For COP.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Report 
+		 Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CA</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Default 
+		 Quote Report (RQTEFRM)</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Quote 
+		 Notes</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CB</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>320 
+		 character maximum.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Quote 
+		 Small Print</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CC</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>2000 
+		 character maximum.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Web 
+		 Profile Id</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CD</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>FMAnywhere 
+		 / Client Web Interface a valid Id must exist in database if this 
+		 field is completed.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Custom 
+		 Value 1</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CE</p></td>
+		<td rowspan="5" style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; 
+			 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+			 border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; 
+			 padding-right: 1px; padding-bottom: 1px;"><p>For the Web Profile. 
+		 If you selected a Web Profile Id, these must be completed as specified 
+		 in the Profile.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Custom 
+		 Value 2</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CF</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Custom 
+		 Value 3</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CG</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Custom 
+		 Value 4</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CH</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Custom 
+		 Value 5</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CI</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>User 
+		 Field 1</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CJ</p></td>
+		<td rowspan="5" style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; 
+			 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+			 border-right: 0.50pt solid #000000; padding-left: 1px; padding-top: 1px; 
+			 padding-right: 1px; padding-bottom: 1px;"><p>Client Site User 
+		 Fields; maximum 30 characters per field.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>User 
+		 Field 2</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CK</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>User 
+		 Field 3</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CL</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>User 
+		 Field 4</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CM</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>User 
+		 Field 5</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CN</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;width: 27.78%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>Directions 
+		 to Site</p></td>
+		<td style="border-spacing:0px;width: 16.46%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>CO</p></td>
+		<td style="border-spacing:0px;width: 55.76%; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+			 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000; 
+			 padding-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>160 
+		 character maximum.</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 27.78%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>Security 
+		 Id</span></p></td>
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 16.46%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>CP</span></p></td>
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 55.76%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p>If 
+		 completed, this optional column is used to set the Security Id 
+		 of the Site, Job, Job Billing Item, Job Cost Code and Site Equipment 
+		 records. </p>
+		<p style="margin-left: 8px;"><span style="font-weight: bold;">WARNING:</span><span> 
+		 The Security Id column should NOT be used with Intercompany Security 
+		 unless the combined model is implements:</span><span style="font-weight: bold;"> 
+		 </span><span>Client Sites are generally not company-specific so 
+		 it makes no sense for intercompany users to put something in the 
+		 new column. In addition, Companies that use the older (non-Intercompany) 
+		 Security that supports Site and Equipment as global records should 
+		 NOT specify Security in the 94th column.</span></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 27.78%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p class="reference-line"><span>User Field 6</span></p></td>
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 16.46%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>CQ</span></p></td>
+		<td rowspan="5" style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 55.76%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>Client 
+		 Site User Fields - 30 character maximum. Note that if column CQ 
+		 is present, the other 4 columns must also be present. These columns 
+		 must also be present if Columns CV and/or CW are present.</span></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 27.78%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p class="reference-line"><span>User Field 7</span></p></td>
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 16.46%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>CR</span></p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 27.78%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p class="reference-line"><span>User Field 8</span></p></td>
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 16.46%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>CS</span></p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 27.78%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p class="reference-line"><span>User Field 9</span></p></td>
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 16.46%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>CT</span></p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 27.78%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p class="reference-line"><span>User Field 10</span></p></td>
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 16.46%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>CU</span></p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 27.78%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p class="reference-line"><span>Rate Schedule Id</span></p></td>
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 16.46%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>CV</span></p></td>
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 55.76%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>This 
+		 column is not required but must be valid when specified.</span></p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 27.78%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>Job 
+		 Billing Address</span></p></td>
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 16.46%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>CW</span></p></td>
+		<td style="border-spacing:0px;border-left: solid 0.50pt #000000; border-right: solid 0.50pt #000000; 
+			 border-bottom: solid 0.50pt #000000; width: 55.76%; padding-left: 1px; 
+			 padding-top: 1px; padding-right: 1px; padding-bottom: 1px;"><p><span>This 
+		 column is not required but must be valid when specified. The values 
+		 of ‘Site’ and ‘Client’ are currently support. The Job billing 
+		 address fields will be based on either the Site or Client as specified. 
+		 </span></p></td>
+	</tr>
+</tbody></table>
+<p> </p>
+
+</body></html>

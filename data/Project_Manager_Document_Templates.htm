@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.8.0_17";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="RFI"/>
+<meta name="MS-HKWD" content="project manager workbench"/>
+<meta name="MS-HKWD" content="template"/>
+<meta name="MS-HKWD" content="workbench"/>
+<meta name="MS-HKWD" content="transmittal"/>
+<meta name="MS-HKWD" content="RFQ"/>
+<meta name="MS-HKWD" content="submittal"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Project Manager Document Templates</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="RFI,project manager workbench,template,workbench,transmittal,RFQ,submittal"/><meta name="brsnext" value="Quote_Scope_Copy_From_Button.htm"/><meta name="brsprev" value="Registry_Start_Job_Invoice_Reverse.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Project Manager Document Templates">
+        <span>Project Manager Document Templates</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Project Manager Document Templates</h1>
+<h2>Word Documents for use as RFI, Transmittals, Submittals, and RFQ Templates</h2>
+<p>Clicking the RFI, Submittal, Transmittal, or RFQ button in the <a href="Project_Manager_Workbench.htm">Project Manager Workbench</a> enables the user to launch a Word Document where certain fields been preset with information from your SAM Pro database. ‘Token replacement’ (a form of search and replace) will be used to populate your document with the pertinent information from your SAM Pro database. Standard Microsoft Word features (such as the use of the Date field to generate today’s date) are also supported.</p>
+<p>Registry settings specifying the name and location of these templates must be enabled: see <a href="Registry_Project_Manager_Workbench.htm">Registry Project Manager Workbench</a> for details.</p>
+<p>All fields using their database field name from the following tables can be used preceded by a &#39;&lt;&#39; and suffixed by a &#39;&gt;&#39;:</p>
+<p>Job (jb)</p>
+<p>Client (clnt)</p>
+<p>Client Site (clntste)</p>
+<p>Project Manager (prjctmngr)</p>
+<p>Project Manager Contact (pm_cntct)</p>
+<p>Job Contact (jb_cntct)</p>
+<p>Vendor (vndr)</p>
+<p>Vendor Contacts (vndrcntct)</p>
+<p>Job Log (jbclg)</p>
+<h3>Examples:</h3>
+<p>The standard RFI document (RFI.doc) provided by support contains the following text and tokens:</p>
+<p>Request for Information #&lt;jbclg_nmbr&gt; Date</p>
+<p><font style="font-weight: bold;">Fax #:</font> &lt;jb_cntct_cntct_phne_fx&gt; <font style="font-weight: bold;">Job #:</font> &lt;jb_id&gt;</p>
+<p><font style="font-weight: bold;">Phone:</font> &lt;jb_cntct_cntct_phne&gt; <font style="font-weight: bold;">Project:</font>&lt;jb_nme&gt;  </p>
+<p><font style="font-weight: bold;">Reply To:</font> &lt;pm_cntct_cntct_nme&gt;</p>
+<p><font style="font-weight: bold;">Attn:</font> &lt;jb_cntct_cntct_nme&gt; <font style="font-weight: bold;">Requested Reply Date:</font> &lt;jbclg_dte_rqstd&gt;</p>
+<p>Request:</p>
+<p>&lt;jbclg_dscrptn&gt; </p>
+<p>When the user clicks the RFI button and completes the data entry fields, a copy of the RFI document will open, with the tokens replaced with the values from the data entry fields as well as the tables associated with the Job you have selected in the Project Manager Workbench. For example, if was the first RFI for this job, and if the user clicked the RFI button on August 30, 2010, the following document will be launched in MS Word:</p>
+<p>Request for Information #1 August 30, 2010</p>
+<p><font style="font-weight: bold;">Fax #:</font> 216-555-1242 <font style="font-weight: bold;">Job #:</font> C15342</p>
+<p><font style="font-weight: bold;">Phone:</font> 216-555-1423 <font style="font-weight: bold;">Project:</font> Cranbrook Mall Renovation</p>
+<p><font style="font-weight: bold;">Reply To:</font> Gerry Hanson</p>
+<p><font style="font-weight: bold;">Attn:</font> Tom Barry <font style="font-weight: bold;">Requested Reply Date:</font> September 15, 2010</p>
+<p>Request:</p>
+<p>Mall HVAC specifications. </p>
+<p>In this example, the Requested Reply Date and Description would be entered by the user in the RFI data-entry form. At this point, the user would simply edit the document as needed, and send it to the customer. SAM Pro will automatically save an archive copy of the document when it is closed.</p>
+<h3>List of Tokens:</h3>
+<p>The following is a list of the more popular tokens:</p>
+<p>Job Id=&lt;jb_id&gt;</p>
+<p>Job Name=&lt;jb_nme&gt;</p>
+<p>Job Alpha=&lt;jb_alpha&gt;</p>
+<p>Job Invoice Name=&lt;jb_invce_nme&gt;</p>
+<p>Job Invoice Attention Line=&lt;jb_invce_attntn_lne&gt;</p>
+<p>Job Invoice Street 1=&lt;jb_invce_strt&gt;</p>
+<p>Job Invoice Street 2=&lt;jb_invce_cty&gt;</p>
+<p>Job Invoice State=&lt;jb_invce_stte&gt;</p>
+<p>Job Invoice Zip=&lt;jb_invce_zp&gt;</p>
+<p>Job Invoice Description=&lt;jb_invce_dscrptn&gt;</p>
+<p>Client Id=&lt;clnt_id&gt;</p>
+<p>Client Name=&lt;clnt_nme&gt;</p>
+<p>Client Alpha Name=&lt;clnt_alpha&gt;</p>
+<p>Client Street Address 1=&lt;clnt_addrss_ml_addrss_strt&gt;</p>
+<p>Client Street Address 2=&lt;clnt_addrss_ml_addrss_strt2&gt;</p>
+<p>Client City=&lt;clnt_addrss_ml_addrss_cty&gt;</p>
+<p>Client State=&lt;clnt_addrss_ml_addrss_stte&gt;</p>
+<p>Client Zip=&lt;clnt_addrss_ml_addrss_zp&gt;</p>
+<p>Client Site Id=&lt;clntste_id&gt;</p>
+<p>Client Site Name=&lt;clntste_nme&gt;</p>
+<p>Client Site Alpha Name=&lt;clntste_alpha&gt;</p>
+<p>Client Site Street Address 1=&lt;clntste_addrss_shp_addrss_strt&gt;</p>
+<p>Client Site Street Address 2=&lt;clntste_addrss_shp_addrss_strt2&gt;</p>
+<p>Client Site City=&lt;clntste_addrss_shp_addrss_cty&gt;</p>
+<p>Client Site State=&lt;clntste_addrss_shp_addrss_stte&gt;</p>
+<p>Client Site Zip=&lt;clntste_addrss_shp_addrss_zp&gt;</p>
+<p>Project Manager Id=&lt;prjctmngr_id&gt;</p>
+<p>Project Manager Name=&lt;prjctmngr_nme&gt;</p>
+<p>PM Contact Name=&lt;pm_cntct_cntct_nme&gt;</p>
+<p>PM Contact Firm=&lt;pm_cntct_cntct_frm&gt;</p>
+<p>PM Contact Phone=&lt;pm_cntct_cntct_phne&gt;</p>
+<p>PM Contact Fax=&lt;pm_cntct_cntct_phne_fx&gt;</p>
+<p>PM Contact Email=&lt;pm_cntct_cntct_eml&gt;</p>
+<p>PM Contact Email Fax=&lt;pm_cntct_cntct_eml_fx&gt;</p>
+<p>PM Contact Email Pager=&lt;pm_cntct_cntct_eml_pgr&gt;</p>
+<p>PM Contact Street 1=&lt;pm_cntct_cntct_addrss_ml_addrss_strt&gt;</p>
+<p>PM Contact Street 2=&lt;pm_cntct_cntct_addrss_ml_addrss_strt&gt;</p>
+<p>PM Contact City=&lt;pm_cntct_cntct_addrss_ml_addrss_cty&gt;</p>
+<p>PM Contact State=&lt;pm_cntct_cntct_addrss_ml_addrss_stte&gt;</p>
+<p>PM Contact Zip=&lt;pm_cntct_cntct_addrss_ml_addrss_zp&gt;</p>
+<p>Job Contact Name=&lt;jb_cntct_cntct_nme&gt;</p>
+<p>Job Contact Firm=&lt;jb_cntct_cntct_frm&gt;</p>
+<p>Job Contact Phone=&lt;jb_cntct_cntct_phne&gt;</p>
+<p>Job Contact Fax=&lt;jb_cntct_cntct_phne_fx&gt;</p>
+<p>Job Contact Email=&lt;jb_cntct_cntct_eml&gt;</p>
+<p>Job Contact Email Fax=&lt;jb_cntct_cntct_eml_fx&gt;</p>
+<p>Job Contact Email Pager=&lt;jb_cntct_cntct_eml_pgr&gt;</p>
+<p>Job Contact Street 1=&lt;jb_cntct_cntct_addrss_ml_addrss_strt&gt;</p>
+<p>Job Contact Street 2=&lt;jb_cntct_cntct_addrss_ml_addrss_strt&gt;</p>
+<p>Job Contact City=&lt;jb_cntct_cntct_addrss_ml_addrss_cty&gt;</p>
+<p>Job Contact State=&lt;jb_cntct_cntct_addrss_ml_addrss_stte&gt;</p>
+<p>Job Contact Zip=&lt;jb_cntct_cntct_addrss_ml_addrss_zp&gt;</p>
+<p>Vendor Id=&lt;vndr_id&gt;</p>
+<p>Vendor Name=&lt;vndr_nme&gt;</p>
+<p>Vendor Name Alpha=&lt;vndr_alpha&gt;</p>
+<p>Vendor Phone=&lt;vndr_phne_vce&gt;</p>
+<p>Vendor Fax=&lt;vndr_phne_fx&gt;</p>
+<p>Vendor Mail Address Street 1=&lt;vndr_addrss_ml_addrss_strt&gt;</p>
+<p>Vendor Mail Address Street 2=&lt;vndr_addrss_ml_addrss_strt2&gt;</p>
+<p>Vendor Mail Address City=&lt;vndr_addrss_ml_addrss_cty&gt;</p>
+<p>Vendor Mail Address State=&lt;vndr_addrss_ml_addrss_stte&gt;</p>
+<p>Vendor Mail Address Zip=&lt;vndr_addrss_ml_addrss_zp&gt;</p>
+<p>Vendor Remit Address Street 1=&lt;vndr_addrss_rmt_addrss_strt&gt;</p>
+<p>Vendor Remit Address Street 2=&lt;vndr_addrss_rmt_addrss_strt2&gt;</p>
+<p>Vendor Remit Address City=&lt;vndr_addrss_rmt_addrss_cty&gt;</p>
+<p>Vendor Remit Address State=&lt;vndr_addrss_rmt_addrss_stte&gt;</p>
+<p>Vendor Remit Address Zip=&lt;vndr_addrss_rmt_addrss_zp&gt;</p>
+<p>The following fields can be used for Vendor Contacts in the RFQ document:</p>
+<p>Vendor Contact First Name = &lt;vndrcntct_cntct_nme_frst&gt;</p>
+<p>Vendor Contact Last Name =&lt;vndrcntct_cntct_nme_lst&gt;</p>
+<p>Vendor Contact Title =&lt;vndrcntct_cntct_ttle&gt;</p>
+<p>Vendor Contact Salutation =&lt;vndrcntct_cntct_slttn&gt;</p>
+<p>Vendor Contact Phone =&lt;vndrcntct_cntct_phne&gt;</p>
+<p>Vendor Contact Phone Extension =&lt;vndrcntct_cntct_extnsn&gt;</p>
+<p>Vendor Contact Cell Phone=&lt;vndrcntct_cntct_phne_cll&gt;</p>
+<p>Vendor Contact Fax = &lt;vndrcntct_cntct_phne_fx&gt;</p>
+<p>Vendor Contact Email=&lt;vndrcntct_cntct_eml&gt;</p>
+
+</body></html>

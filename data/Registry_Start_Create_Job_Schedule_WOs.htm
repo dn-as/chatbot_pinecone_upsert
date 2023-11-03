@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.22.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Start Create Job Schedule WOs</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="job scheduler,wo creator,sys-start-scrtjbschdlrwo"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Start Create Job Schedule WOs">
+        <span>Registry Start Create Job Schedule WOs</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Start Create Job Scheduler WOs</h1>
+<h2>Purpose:</h2>
+<p style="font-weight: normal;">This registry entry configures the Start Create Job Scheduler WOs function. See Job Scheduler Overview for additional details.</p>
+<h2>Related Registries:</h2>
+<p><span style="font-weight: bold;">S</span>ee the <a href="Registry_Entry_Job_and_Job_Cloning.htm#Registry_WO_Creator_Tab_for_Job_Scheduling">Job Registry</a> for the entries needed to Enable the WO Creator Tab and to Limit the Techs allowed on the WO Creator Tab.</p>
+<h2>Important Fields:</h2>
+<p><span style="font-weight: bold;">Registry Id:</span> sys-start-scrtjbschdlrwo</p>
+<h3>Specify Default Tech Status</h3>
+<p>To set the WO Tech status to something other than the default &#39;Pending&#39; for these Work Orders set this registry item.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> JobSchedulerWOTechStatus  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">tech</span> <span style="font-style: italic;">status</span></p>
+<p>Where <span style="font-style: italic;">tech status</span> is replaced by the technician status to be used when the Work Order is created.</p>
+<h3><span style="font-weight: bold;">Default Work Order Name from Job Id - Cost Code Id</span></h3>
+<p><span style="font-weight: bold;">Setting Key:</span>  JobIdCostIdforWOName  <span style="font-weight: bold;">Setting Value:</span> true  (default is false)</p>
+<p>When Work Orders are created, this option generates the Work Order Name from the Job Id and Job Cost Code Id separated by a hyphen. For example,  for Job Id 1643453 and Job Cost Code Id HVAC the Work Order Name would be generated as <span style="font-weight: bold;">1643453-HVAC.</span> If this registry is not set, the Work Order Name will be blank. <span style="font-weight: bold;"></span></p>
+<h3>Disable the Default Call Script</h3>
+<p><span style="font-weight: bold;">Setting Key:</span> DisableDefaultCallScript  <span style="font-weight: bold;">Setting Value:</span> true (default is false)</p>
+<p>When set to true, the Work Order&#39;s Closing Call Script (on the Other Info tab) be blank; it will NOT be set from the Site&#39;s WO Closing Call Script field.</p>
+<h3>Set the Default WO PO from the Job record</h3>
+<p><span style="font-weight: bold;">Setting Key:</span>  DefaultPO  <span style="font-weight: bold;">Setting Value:</span> true  (default is false)</p>
+<p>This setting causes the new WO&#39;s PO Number to default from the Job&#39;s PO Number.</p>
+
+</body></html>
