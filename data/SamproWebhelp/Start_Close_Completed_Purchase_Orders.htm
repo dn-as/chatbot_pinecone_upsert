@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.13.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="close purchase order"/>
+<meta name="MS-HKWD" content="purchase order"/>
+<meta name="MS-HKWD" content="po"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Close Completed Purchase Orders</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="close purchase order,purchase order,po"/><meta name="brsnext" value="Set_Average_and_Last_Costs.htm"/><meta name="brsprev" value="Currency_Conversion_Notes.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Close Completed Purchase Orders">
+        <span>Start Close Completed Purchase Orders</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Close Completed Purchase Orders</h1>
+<h2>Purpose:</h2>
+<p>This Starter function allows users to &#39;mass close&#39; PO&#39;s.</p>
+<p>The updating process sets the PO&#39;s Received-in-Full flag, changes the PO Status to Closed and sets the Date Closed field if it has not been completed.  The function also determines which POs have been vouchered-in-full. The PO Vouchered-in-Full flag is also set during the update process if applicable.</p>
+<p>See <a href="Start_Close_Open_POs.htm">Start Close Open POs</a> for information on this related function.</p>
+<h2>Usage:</h2>
+<p>Eligibility is determined as follows:</p>
+<p>1. Credit-type POs are eligible, however the criteria for closing a credit-type PO is based on vouchered-in-full instead of received-in-full.  A PO Type Range been added to the so that the user can elect to include only Purchase or Credit type Purchase Orders.</p>
+<p>2. Since a PO must be fully received prior to becoming fully vouchered, it can be closed before reaching the fully vouchered state.  For this reason, previously closed POs that haven&#39;t been fully vouchered are now included in the check list so that they can be flagged as fully vouchered. If the Data Closed was previously set, it will not be changed by this function. If it was previously blank, it will be set to today’s date.</p>
+<p>3. The PO has to have one or more child lines.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Released Date:<br/>
+Purchase Order Id:<br/>
+Vendor Id:<br/>
+Ordered By:<br/>
+Branch Id:<br/></font>By filling in one or more of these range fields, you can control which eligible purchase orders will be selected to be marked closed. We recommend that you complete at least the Release Date range.</p>
+<p><font style="font-weight: bold; text-decoration: underline;">Examples:</font> <font style="text-decoration: underline;"><br/></font>To mark eligible purchase orders released in 2009 closed, you would fill in the Release Date range field as follows:</p>
+<p>2009-01-01_2009-12-31</p>
+<p>To mark only those work orders for Vendor ACME that were released in 2009 closed, you would fill in the Released Date and Vendor Id fields as follows:</p>
+<p> Released Date: 2007-01-01_2007-12-31<br/>
+ Vendor Id: ACME</p>
+<p><font style="font-weight: bold;">Job Id:<br/>
+Work Order Id:</font><br/>
+The Job or Work Order Id in the Purchase Order header may also be used to control which eligible purchase orders will be selected to be marked closed. Only one of these ranges should be completed at a time.</p>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> When you click the Go button, a list of purchase orders eligible for closure will appear.</p>
+<h2>Important Fields: List Screen</h2>
+<p><font style="font-weight: bold;">Do</font><br/>
+This field enables you to select which purchase orders will be closed. By default, all purchase orders are selected. Double-click on the Do field to select or deselect an item (alternately, press the spacebar when the caret appears on this field); an &quot;x&quot; appears in the Do field when that work order is selected.</p>
+<p>PO Id: PO Description: Released: Vendor Id: Vendor Id Alpha:</p>
+<p>Closed (Date): PO Type: Vouchered in Full</p>
+<p>These fields are displayed for informational purposes so that you can verify which purchase orders should be closed.</p>
+<h2>Important Buttons:</h2>
+<p><img src="assets/images/image/check.gif" alt="image\check.gif" title="image\check.gif" width="48" height="28" border="0"/> Click the Check button to check (select) every item on the list.</p>
+<p><img src="assets/images/image/checkoff.gif" alt="image\checkoff.gif" title="image\checkoff.gif" width="48" height="28" border="0"/> Click to de-select every item on the list.</p>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> When you click the Go button, the system enters the system date for the Date Closed on all selected purchase orders.</p>
+
+</body></html>

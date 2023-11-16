@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.1.0_15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sys-startup"/>
+<meta name="MS-HKWD" content="engine"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="datasource"/>
+<meta name="MS-HKWD" content="database"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Startup Defaults (sys-startup)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="sys-startup,engine,registry,datasource,database"/><meta name="brsnext" value="Registry_Entry_Security_Exceptions_by_Table.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Startup Defaults (sys-startup)">
+        <span>Registry Startup Defaults (sys-startup)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Startup Defaults (sys-startup)</h1>
+<h2>Purpose:</h2>
+<p>This feature enables you to default in the Database Engine and/or Name (Sybase 5.5) or Datasource Name (Sybase 7.02 and above) on the Log In screen so that your users do not have to enter these fields. Note that if your firm runs multiple databases on the same engine you would probably specify only the Database Engine. When this registry entry is saved, the system will automatically create a file (vStart.cus) in the same directory as the image; this file will actually implement this feature. If the registry entry is changed, this file will be overwritten.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline;">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font><br/>
+The Id of the Registry Entry must conform to the following format:</p>
+<p><font style="font-weight: bold;">sys-startup</font></p>
+<p><font style="font-weight: bold;">Name:</font><br/>
+Optional but recommended for describing what this entry is used for.</p>
+<h2>Sybase 7.02 and above and SQL Server</h2>
+<p>The following format is used to default in the Sybase 7.02 datasource name to the log in screen:</p>
+<p><font style="font-weight: bold;">S</font><font style="font-weight: bold;">etting Key:</font> dbn <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">datasourcename</font></p>
+<p>where <font style="font-style: italic;">datasourcename</font> is replaced by the Datasource that you set up in your ODBC Connections. This Datasource should reference the default database your users should access.</p>
+<h2>Sybase 5.5</h2>
+<p>The following format is used to default in the Sybase 5.5 engine name to the log in screen:</p>
+<p><font style="font-weight: bold;">Setting Key:</font> eng <font style="font-weight: bold;">Setting Value:</font> enginename</p>
+<p>where enginename is replaced by the value that you normally enter when logging on to the system (e.g., dbasics).</p>
+<p><font style="font-weight: bold;">Setting Key:</font> dbn <font style="font-weight: bold;">Setting Value:</font> databasename</p>
+<p>where <font style="font-style: italic;">databasename</font> is replaced by the value that you normally enter when logging on to the system. Do not include the .db extension in the databasename (mydata rather than mydata.db).</p>
+
+</body></html>

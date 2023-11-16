@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.3.0_16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="insurance"/>
+<meta name="MS-HKWD" content="labor"/>
+<meta name="MS-HKWD" content="state"/>
+<meta name="MS-HKWD" content="workers comp"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Workers Comp State Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="insurance,labor,state,workers comp"/><meta name="brsnext" value="Payroll_Tax_Authority_Viewer.htm"/><meta name="brsprev" value="Pay_Type_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Workers Comp State Viewer">
+        <span>Workers Comp State Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Worker&#39;s Comp State Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain the Worker&#39;s Compensation State records for each 
+ state in which your firm is insured for Worker&#39;s Compensation.</p>
+<h2>Example:</h2>
+<p>Ohio, New York, etc.</p>
+<h2>Usage:</h2>
+<p>Required for Payroll.</p>
+<p>Referenced in Record: Workers Compensation Category.</p>
+<h2>Registry:</h2>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Use_Control_Records_GL_Entities_for_PR">Use 
+ Control Records&#39; GL Entities for PR Deductions, Earnings, Taxes, etc,.Instead 
+ of Employees&#39;</a>.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields that may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the order or status (required, optional, 
+ default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">State Id:</font> (10 character)<br/>
+Typically, the two-character postal code of the state (e.g., OH, NY, KY, 
+ etc.) plus an operating company/division identification if needed. This 
+ field is required.</p>
+<p><font style="font-weight: bold;">Description:</font> (40 character)<br/>
+The name of the insurance provider (e.g., Ohio Bureau of Worker&#39;s Compensation).</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field displays the Security Id of the local 
+ user that created this record. If multiple location security is not implemented 
+ on your system, or if this record was created by a global user, this field 
+ will be blank.</p>
+<p><font style="font-weight: bold;">Rate Type:</font><br/>
+Select Per $100 (by double-clicking on its radio button or pressing the 
+ Spacebar) if premiums are based on each $100 dollars of pay. Select Per 
+ Hour if premiums are based on hours worked.</p>
+<p><font style="font-weight: bold;">Experience Modifier:</font>(numeric 
+ format 00.0000)<br/>
+Enter the experience modifier specified for your policy. This is used to 
+ modify your insurance rate based on your firm&#39;s previous track record. 
+ The Experience Modifier is multiplied by the Rate (in the Worker&#39;s Compensation 
+ Category record) to determine the premium for each employee.</p>
+<p><font style="font-weight: bold;">Discount %:</font> (numeric format 
+ 00.00)<br/>
+Enter the discount percent (if any) your firm is entitled to because of 
+ its size. For example, if your firm is entitled to a 3% discount, you 
+ would enter 3.00 in this field.</p>
+<h3>GL Debit</h3>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Account 
+ Id:</font><br/>
+The default Worker&#39;s Comp expense account.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Entity 
+ Id:</font><br/>
+In general, this field would be left blank even if you departmentalize 
+ since the GL Entity information is generally taken from the Labor Journal 
+ transactions. However, if a GL Entity Id has been entered in the Employee 
+ record, the debit entries will be applied to this Entity when Compute 
+ Payroll is run. If the GL Entity Id field is blank in the Employee record, 
+ the system will look to the Workers Comp State record for the GL Entity. 
+ If the GL Entity is blank in both the Employee and Workers Comp records, 
+ a GL Entity will not be debited or credited.</p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">This behavior may be overridden via</span> 
+ <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Use_Control_Records_GL_Entities_for_PR">Use 
+ Control Records&#39; GL Entities for PR Deductions, Earnings, Taxes, etc,.Instead 
+ of Employees&#39;</a>.</p>
+<h3>GL Credit</h3>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Account 
+ Id:</font><br/>
+The default Worker&#39;s Comp liability account.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Entity 
+ Id:</font><br/>
+In general, this field would remain blank. However, if a GL Entity Id has 
+ been entered in the Employee record, the credit entries will be applied 
+ to this Entity during Compute Payroll. If the GL Entity Id field is blank 
+ in the Employee record, the system will look to the Workers Comp State 
+ record for the GL Entity. If the GL Entity is blank in both the Employee 
+ and Workers Comp records, a GL Entity will not be credited.</p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">This behavior may be overridden via</span> 
+ <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Use_Control_Records_GL_Entities_for_PR">Use 
+ Control Records&#39; GL Entities for PR Deductions, Earnings, Taxes, etc,.Instead 
+ of Employees&#39;</a>.</p>
+<p class="Body_Text_2"><font style="font-weight: bold;">Job Cost?<br/>
+</font> If this field is checked, the system will make the actual job cost 
+ entry from the Worker’s Comp post when the Payroll Check Post is run. </p>
+<p class="Body_Text_2"><font style="font-weight: bold;">Cost Category:<br/>
+</font>By filling in this Cost Category field a specific category for &quot;Direct 
+ Taxes&quot; may be selected, if desired. If this field is left blank the 
+ cost posts to the category of the &quot;cost line&quot; that the worker&#39;s 
+ comp applies to.</p>
+<p class="Body_Text_2"><font style="font-weight: bold;">WC Gross from Prevailing 
+ Wages: Exclude Fringes<br/>
+</font>Workers comp &#39;wages&#39; typically should not include any amounts related 
+ to prevailing wage fringes (entered in the Fringe Rate field of the Job’s 
+ Prevailing Wages tab).  Flagging this field excludes prevailing 
+ wage fringe rates from worker’s compensation calculations.</p>
+
+</body></html>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.7.0_23";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="magnetic media reporting"/>
+<meta name="MS-HKWD" content="unemployment"/>
+<meta name="MS-HKWD" content="state"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Magnetic Media State Unemployment Reporting</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="magnetic media reporting,unemployment,state"/><meta name="brsnext" value="Report_PR_Certified_Payroll.htm"/><meta name="brsprev" value="Registry_Entry_Magnetic_Media_State_Unemployment_Report.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Magnetic Media State Unemployment Reporting">
+        <span>Magnetic Media State Unemployment Reporting</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report State Unemployment Electronic</h1>
+<h2>Purpose:</h2>
+<p>The report RSTTEUE.rpt is available to satisfy state unemployment electronic 
+ reporting. Special reporting for the states of Pennsylvania, Colorado, 
+ Kansas, DC and Texas are currently supported.</p>
+<h2>Usage:</h2>
+<p>In all applicable SUTA Tax Authority Records:</p>
+<p>- The Employer Id field must be set to your State EIN</p>
+<p>- The Tax Type Id must be set to ‘SUTA’</p>
+<p>- The State field must be set to the SUTA state</p>
+<p>Be sure that the Registry Entries referenced below are correctly configured.</p>
+<h2>Registry Entries:</h2>
+<p>The following registry entries must be completed before running this 
+ report:</p>
+<p><a href="Registry_Entry_Magnetic_Media_State_Unemployment_Report.htm">Registry 
+ Entry Report State Unemployment - Magnetic Media</a></p>
+<p><a href="Registry_Entry_State_Unemployment_Electronic_Report.htm">Registry 
+ Entry State Unemployment Electronic Report</a></p>
+<h2>Procedure:</h2>
+<p>1.Verify that an up-to-date version of RSTTEUE.rpt has been installed 
+ in your database.</p>
+<p>2. This report must be run for the specified year, state and quarter. 
+ Unless you are only running this for a specific employee, the Employee 
+ range should remain blank.</p>
+<p>2. When the report appears in the report viewer, Click Save to Disk.</p>
+<p>3. A Windows save file box will appear: You must select Save As Text 
+ File, and provide a name as per your state’s specifications (do not specify 
+ an extension, this will be done for you). Remember where you saved the 
+ file!</p>
+<p>4. Upload your file as specified by the state. Our file uses the MMREF-1 
+ format.</p>
+
+</body></html>

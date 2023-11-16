@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.1.0_18";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="billing item"/>
+<meta name="MS-HKWD" content="job"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job Billing Item Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="billing item,job"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Billing Item Viewer">
+        <span>Job Billing Item Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+<h1>Job Billing Item Viewer</h1>
+<h2>Purpose:</h2>
+<p>The system supports a distinction between Billing Items that are Change Orders and those that are not.  Note that these different viewers do NOT change the basic functionality associated with Billing Items. Depending on how your system is set up (see the Registry Entries section) you may:</p>
+<p>- Use the Job Billing Item viewer for Billing Items and Change Orders (on the Change Order Tab).</p>
+<p>- Use the <a href="Job_Billing_Item_Change_Order_Viewer.htm">Job Billing Item Change Order Viewer</a> for Change Orders, and the Job Billing Item Viewer exclusively for items that are not Change Orders.</p>
+<p style="font-weight: bold;">Upgrade Notes:  <a data-target="POPUP658089958" data-rhwidget="DropSpot" href="#" class="dropspot"><span data-open-text="true" data-skip-index="true">Version 7.1 and Below</span><span data-close-text="true">Version 7.1 and Below</span></a></p>
+<div data-targetname="POPUP658089958">
+<p>During the data conversion, a Job Billing Item will be flagged as Change Order if any of the following fields have been set: Contract Changes, C.O. Date Requested, and C.O. Date Approved. However, a Billing Item will not be flagged as a Change Order if the Original Contract Amount field is completed, regardless of how the above fields are set.</p>
+</div>
+<h3><span style="font-weight: bold;">Usage:</span></h3>
+<p>Referenced in Records: Work Order, Client Site, Purchase Order, Shop Order, Job Cost Code.<br/>
+Referenced in Journals: Job, AP, Inventory/PO Receipt, Labor, AR Sales, and Cash Receipts.</p>
+<p>Job Billing Items attached to Job Template records may only be edited by users with access to Job Templates via their User Groups.</p>
+<p>PM (Project Manager) filtering has been applied to these records; only those Billing Items corresponding to the user’s PM Filter may be selected.</p>
+<h2>Registry Entries:</h2>
+<p>A related registry entry may be enabled to limit the Job Billing Item Viewer to ONLY those records that are not Change Orders: see <a href="Registry_Entry_Job_Billing_Item.htm">Registry Entry Job Billing Item</a> for details.</p>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Completed_JC">Registry to Prevent Selection of Completed Cost Codes / Billing Items</a></p>
+<h2>Important Fields: Upper Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Main Tab</p>
+<p><font style="font-weight: bold;">Bill Item Id:</font><br/>
+This required alphanumeric field must uniquely identify this Billing Item for Job it is associated with. For example, Job 100 and Job 200 could each have a Job Billing Item with the Id &quot;Main&quot;.</p>
+<p><font style="font-weight: bold;">Bill Item Description:</font><br/>
+Briefly describes this Billing Item. Recommended but not required.</p>
+<p><font style="font-weight: bold;">Job Id:</font> <font style="font-weight: bold;"><br/></font>The Job this Billing Item is associated with. Enter a valid Job Id or press Alt+F7 (or double-click) to select from a list of jobs. In previous releases, the user was prevented from changing the Job Id if references to the Billing Item were found in Job History. Unfortunately, this validation also prevented the user from being able to ‘clone’ billing items by accessing a billing item, and then changing the Job Id (to a job that did not have a corresponding billing item). This implementation has been changed so that, if the user does so, the viewer will change to ‘add’ mode to allow the new record to be created.</p>
+<p><font style="font-weight: bold;">OK to Bill?</font><br/>
+Check this box (by double-clicking or pressing the Spacebar) if it is OK to bill for this Billing Item.</p>
+
+<p><font style="font-weight: bold;">PO#</font><br/>
+The Client&#39;s Purchase Order number for this Billing Item.</p>
+<p><font style="font-weight: bold;">Retainage %</font><br/>
+The default retainage (or holdback) percent for this item. Be sure that the GL Retainage Account field on the Job Record’s Financial tab is completed if the Retainage % is filled in. The GL Retainage Account in the Job record will be debited when the Job Invoice is posted.</p>
+<p><font style="font-weight: bold;">Date Started:</font><br/>
+When creating a new Billing Item, the Date Started will default to today’s date.</p>
+<p><font style="font-weight: bold;">Date Completed:</font><br/>
+The Date Completed field enables you to indicate that a Billing Item has been finished. This field is referenced when entering labor, material or other charges. If the Effective Date of the entry exceeds the Date Completed, the system will warn you of the problem but will not prevent the transaction from being saved unless the <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Completed_JC">Prevent Use of Completed Job Cost Codes and Billing Items</a> registry option is implemented.</p>
+<p>A registry setting may be enabled to allow the user to set the Date Completed in the Job&#39;s Cost Codes and Billing Items when the user sets the Date Closed in the Job record (see <a href="Registry_Entry_Job_and_Job_Cloning.htm">Job Registry</a>).</p>
+<p><font style="font-weight: bold;">Fixed Fee Billings?</font><br/>
+Check this box (by double-clicking or pressing the Spacebar) if this record is used for fixed-fee billings.</p>
+
+<p><span style="font-weight: bold;">Include in GMP?</span><br/>
+This field must be checked if this Billing Item should be included in GMP Revenue Adjustment calculations. If this field is checked, the Fixed Fee box MUST be blank.</p>
+
+<p><font style="font-weight: bold;">Allow Extras?</font><br/>
+Check this box (by double-clicking or pressing the Spacebar) if Extras are allowed on this billing item.</p>
+<p><font style="font-weight: bold;">Fee Taxable?</font><br/>
+If this is a Fixed Fee Billing Item and it is taxable, flag this field by double-clicking or pressing the Spacebar. This enables the Record Billing Adjustments Journal to populate the TAX tab’s Tax Authorities when the Compute Tax button is pressed.</p>
+<p><font style="font-weight: bold;">Original</font> <font style="font-weight: bold;">Contract:</font><br/>
+The contract amount of this Billing Item.</p>
+<p>For GMP type Jobs, changes to this field are validated against the Job&#39;s GMP Contract Total field. The sum of the C.O. Amount (in Change Orders) and Contract Amount (in Billing Items) may not exceed the GMP Contract Total. <span style="font-weight: bold;"></span></p>
+<p><font style="font-weight: bold;">Currency Id:</font> <font style="font-weight: bold;"><br/></font>If this is a foreign client the display-only Currency Id will appear. If so, the Original Contract fields must be entered in terms of the foreign revenue the Client will be billed in.</p>
+<p><font style="font-weight: bold;">Invoice Description</font><br/>
+If supported on the Invoice Format, this description will appear on the Client&#39;s invoice.</p>
+
+<p><span style="font-weight: bold;">Job Contract Type:</span><br/>
+ This display field defaults from the Job record. See the <a href="Job_Viewer.htm#Job_Contract_Type">Job Record</a> documentation for additional details.</p>
+
+<p><font style="font-weight: bold;">Obsolete?<br/></font>If this field is checked, the record is considered Obsolete, and it may not be directly specified during data-entry (either by entering the Id or selecting it from a list). Obsoleted records can be edited and the Obsolete option can be cleared when necessary.</p>
+
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Invoicing Tab</p>
+<p><font style="font-weight: bold;">Report Sequence:</font><br/>
+This field enables you to define the order that the Billing Items will appear on the invoice.</p>
+
+<p><span style="font-weight: bold;">Bill Item Group:</span><br/>
+This field allows Billing Items to be grouped for reporting purposes. This field is currently supported for a custom AIA-style invoice.</p>
+
+<p><font style="font-weight: bold;">Invoice Report Id:</font>  <font style="font-weight: bold;">Billing Worksheet Report Id:</font><br/>
+The default Invoice and Billing Worksheet reports and queries to use with this Billing Item. These fields are required for invoicing.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">User Fields Tab</p>
+<p style="font-weight: bold;">Job Billing Item User1-5:<br/>
+<span style="font-weight: normal;">These optional fields may be used to record additional information required by your company or for reporting purposes.</span></p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Change Order Tab</p>
+<p>If your system is configured such that the Job Billing Item viewer is used exclusively for Billing Items that are NOT change orders, this tab may be absent or display only. In this case, Change Orders must be edited from the <a href="Job_Billing_Item_Change_Order_Viewer.htm">Job Billing Item Change Order Viewer</a> .</p>
+<p><font style="font-weight: bold;">Original Contract:</font><br/>
+This display only field defaults from the Main screen. If it is completed, the Contract Changes field should remain blank.</p>
+<p><font style="font-weight: bold;">Contract Changes:</font><br/>
+The Contract Change amounts for this Billing Item.</p>
+<p><font style="font-weight: bold;">Foreign Currency Processing:</font> <font style="font-weight: bold;"><br/></font>If this is a foreign customer, these fields must be entered in terms of the foreign revenue the customer will be billed in.</p>
+<p><font style="font-weight: bold;">CO Date Requested CO Date Approved</font><br/>
+These fields are designed to assist in AIA Billing Change Orders for reporting and informational purposes (please contact Data-Basics support for additional information on these formats).</p>
+<p>When a Change Order is requested, a new fixed fee Billing Item would be created for the applicable job. The CO Date Requested field would be filled in, but the Billing Item would not be marked as Ok to Bill. When the Change Order was approved, the CO Date Approved field would be completed. Depending upon the circumstances, it might or might not be flagged as OK to Bill at this time.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p style="margin-top: 0; margin-bottom: 0;"><font style="font-weight: bold;">Status Id:<br/></font>This optional field references the Job Billing Item Status record. Although this field has NO meaning in SAMPro, it is designed for use on reports designed by the users, often in conjunction with tracking change order type billing items.</p>
+<h2>Important Fields: Lower Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Revenues</p>
+<p>This Query-View tab displays the revenues associated with this billing item.</p>
+<p>The title of the Total Revenue Column now includes the Currency Id specified in the Job&#39;s Client record.  When the Client uses a foreign currency, the title now contains &#39;TotalRev (currency abbreviation)&#39;.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Invoices</p>
+<p style="font-weight: bold;">Amount Billed - Amount Paid - Discount Taken - Balance -  Last Payment Date</p>
+<p>This Query-View tab displays the invoices associated with this change order. Reversed invoices will <font style="text-decoration: underline;">not</font> appear on this tab.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Purchases</p>
+<p>This Query-View tab displays the purchases associated with this billing item.</p>
+<p>Purchases Orders with a status of Unreleased, PendingCancel and Cancelled POs will not appear on this tab.</p>
+<p> </p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+        TextPopupInit('a1', 'POPUP658089958');
+//]]>
+</script>
+
+</body></html>

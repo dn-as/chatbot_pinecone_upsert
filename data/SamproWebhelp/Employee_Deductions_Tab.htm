@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.2.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="deductions"/>
+<meta name="MS-HKWD" content="garnishment"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Employee Deductions Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="deductions,garnishment,payroll,employee"/><meta name="brsnext" value="Employee_Earnings_Tab.htm"/><meta name="brsprev" value="Employee_Tax_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Employee Deductions Tab">
+        <span>Employee Deductions Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+<h1>Employee Viewer Deductions Tab</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain an employee&#39;s individualized Deductions information 
+ that is used by the system when computing payroll. If the Deductions Group 
+ Id is filled out in the main Employee record, the system will include 
+ both the Group Deductions and those specified on this tab.</p>
+<h2>Example:</h2>
+<p>401(k), Vacation, Dues, garnishments, etc.</p>
+<h2>Usage:</h2>
+<p>This tab should be completed for each employee on your payroll, <font style="font-weight: bold; font-style: italic;">unless</font> they 
+ are part of the Deductions Group specified in the main Employee record. 
+ In this case, additional deductions not included in the Deduction Group 
+ should be included on this tab.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Worker’s 
+ Comp Employee Portion:</font> If you are implementing 
+ support for the employee portion of the Worker’s Comp 
+ Expense in the Worker’s Comp Category record, 
+ change the ending date to so that this deduction for Worker’s Comp will not be included as of the Payroll that includes 
+ the addition of the Deduction Id to the Worker’s Comp category.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Deduction Id:</font><br/>
+Enter a valid Deduction Id (or double-click to select from your firm&#39;s 
+ list of Deduction records).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;" color="#0000FF">Tip:</font> 
+ <font style="font-weight: bold;">Don&#39;t Overlap Dates with Same Deduction 
+ Id</font><br/>
+A specific Deduction Id should be used no more than once for the date range 
+ defined by the Start and End Dates. <a data-target="POPUP530042842" data-rhwidget="DropSpot" href="#" class="dropspot"><span data-open-text="true" data-skip-index="true">Click 
+ for Details.</span><span data-close-text="true">Click 
+ for Details.</span></a></p>
+<div data-targetname="POPUP530042842">
+	<p style="margin-left: 8px;">For example, suppose that your firm is 
+	 deducting $100 per pay period to cover an advance. Starting in July, 
+	 assume that he wishes to deduct an additional $100 to pay back the 
+	 advance. The following examples show the correct and incorrect ways 
+	 of entering this. The system now validates that no overlap occurs.</p>
+	<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Correct</font><br/>
+	 ADV  $100  01/01/2010  06/30/2010<br/>
+	 ADV  $200  07/01/2010  12/31/2010</p>
+	<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Wrong</font><br/>
+	 ADV  $100  01/01/2010  12/31/2010<br/>
+	 ADV  $100  07/01/2010  12/31/2010</p></div>
+<p style="font-weight: bold;">Amount Type:<br/>
+<span style="font-weight: normal;">This field specifies what the Amount 
+ field represents. Double-click on this field to select from a list.</span> 
+ </p>
+<p style="margin-left: 48px; font-weight: normal;">fixed (fixed amount 
+ in dollars)<br/>
+hourly (hourly by hours worked in dollars)<br/>
+hours paid (hourly by hours paid in dollars)<br/>
+percent (percent of wages)<br/>
+percent plus (percent of wages plus additional fringes)<br/>
+standard <span style="font-weight: bold;">(do NOT select: reserved for 
+ future use only)</span></p>
+<p style="margin-left: 48px; font-weight: normal; font-style: normal;"><span style="font-weight: bold;">Important Notes on Garnishments:</span> 
+ <br/>
+Deductions for garnishments are typically entered as a percent of wages.</p>
+<p style="margin-left: 48px;">Disposable 
+ pay calculations for US and Canadian Payroll users where the garnishment 
+ is a percentage of disposable pay are based on the settings of the Disposable 
+ Income fields in the <a href="Deductions_Viewer.htm">Deductions</a> records. 
+ </p>
+<p><font style="font-weight: bold;">Amount:</font><br/>
+The amount (per Amount Type): For example, 5.00 percent, $40 fixed, etc. 
+ If this field is left blank, the amount (if any) will default from the 
+ BASE Deduction record when the Compute Payroll process is run.  The 
+ BASE Deduction Amount (if used) will trump any amounts entered here on 
+ the employee.</p>
+<p><font style="font-weight: bold;">Ded Limit Type:</font><br/>
+If deductions of this type have no dollar limit, enter n/a (or double-click 
+ on this field to select from a list). If deductions are capped by law 
+ or company policy, select the appropriate time period for the Limit (amount, 
+ pay period, monthly, annual, or quarterly). Please also see the Important 
+ Note in the Limit field below.</p>
+<p>The Limit Type of ‘amount’ should be used to handle loan repayments 
+ and other miscellaneous deductions whose payback time frames span calendar 
+ years (the previous Limit Types of pay period, monthly, annual, and quarterly 
+ did not support this functionality). Typically, the Deduction Limit Type 
+ of ‘amount’ would be used with an Amount Type of ‘percent’ with the Limit 
+ set to the total amount of the loan.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline; ">Example:</font></p>
+<p style="margin-left: 36.00pt;">In this example, a loan of 5000 is to 
+ be repaid at the rate of 5% per pay period. The following deduction could 
+ be set up:</p>
+<p style="margin-left: 88px;">Deduction Id: Loan<br/>
+Ded Amount Type: percent<br/>
+Amount: 5<br/>
+Deduction Limit Type: amount<br/>
+Limit: 5000</p>
+<p style="margin-left: 36.00pt;">In this example, care must be taken to 
+ set the End Date far enough into the future that the loan can be repaid. 
+ When the Limit is reached (or the End Date is past), this Deduction will 
+ no longer be taken.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Disposable 
+ Limit: (click Magnify button to see field)<br/>
+</font>The maximum percentage of disposable income that may be garnished. 
+ This limit varies according to the type of garnishment being applied. 
+ <span style="font-weight: bold;">Note: if this field is blank for a garnishment 
+ deduction, payroll taxes will NOT be deducted before the garnishment is 
+ assessed. We recommend setting this field to 99 unless a specific percentage 
+ is required.</span> Click <a href="#Disposable_Limit:">Disposable Limit 
+ Details</a> for additional information.</p>
+<p><font style="font-weight: bold;">Limit:</font><br/>
+The dollar limit (if any) for deductions of this type. The system validates 
+ &amp; enforces that the Limit Value must be 0 when the Ded. Limit Type 
+ = &quot;n/a&quot;.  </p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">IMPORTANT 
+ NOTE:</font> If the Employee&#39;s Deduction limit is 0, compute payroll uses 
+ the Deduction Limit and Deduction Limit Type from the BASE Deduction record. 
+  This being the case, then when setting the Deduction Limit Types 
+ (n/a, annual, pay period, etc) in the BASE Deduction, the BASE Deduction 
+ should contain the UNIVERSAL RULE that apply to ALL employees,  if 
+ the deduction limit type varies by employee, then set the Deduction Limit 
+ Type to &quot;N/A&quot; in the BASE Deduction.</p>
+<p><font style="font-weight: bold;">Start Date: End Date:</font> (date 
+ format mmddyyyy)<br/>
+The time period (pertaining to the Effective Dates of labor hours entered, 
+ not the Payroll Check date) this amount is valid (e.g., fiscal year, contract 
+ period, etc.) A Deductions Id may appear more than once in a table if 
+ the date ranges do not overlap. Use the End Date to stop a deduction or 
+ use an S in Cycle to skip the deduction(s).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;" color="#0000FF">Tip:</font> 
+ <font style="font-weight: bold;">Handling Deduction Changes</font><br/>
+If this employee&#39;s deductions change, you would add a new Deduction line 
+ (or lines) with a Start Date corresponding to the first working day at 
+ the new deduction amount. The End Date of the old Deduction line (at the 
+ previous rate or amount) should be the last day worked at that rate and 
+ should correspond to the end of a Payroll Period.</p>
+<p><font style="font-weight: bold;">C:</font> (1 character)<br/>
+Describes the deduction Cycle: m (monthly) p (pay period) a (annual) q 
+ (quarterly) etc. The deduction Cycle(s) are entered when running the Compute 
+ Payroll process to know when a deduction should be taken or skipped.  To 
+ skip a deduction cycle, the Compute Payroll is run without that cycle 
+ code.  For example, a cycle code of S can be used to skip the 
+ deduction by NEVER entering it in Compute Payroll. <span style="font-size: 11.0pt; 
+															 font-family: Calibri, sans-serif; 
+															 mso-fareast-font-family: &#39;MS PGothic&#39;; 
+															 mso-bidi-font-family: &#39;MS PGothic&#39;; 
+															 mso-ansi-language: EN-US; 
+															 mso-fareast-language: JA; 
+															 mso-bidi-language: AR-SA;">      </span></p>
+<p><font style="font-weight: bold;">Description</font><br/>
+This display-only field defaults from the Deduction record.</p>
+<h3><a name="Employee_Miscellaneous_Deductions_Checks" id="Employee_Miscellaneous_Deductions_Checks"></a>Employee 
+ Miscellaneous Deductions Checks</h3>
+<p>The following fields enable check printing/processing capabilities for 
+ Employee PR Miscellaneous Deductions. This functionality is particularly 
+ useful for various types of garnishments (for child support payments, 
+ for example), as well as for deductions such as United Way.</p>
+<p>Checks for Employee PR Deductions are printed using the Report PR Miscellaneous 
+ Deductions Check / Report PR Miscellaneous Deductions Check Detail functions. 
+ Note that these reports must be run <font style="font-weight: bold;">after</font> 
+ your regular payroll checks have been printed and posted. EFT / AFT processing 
+ is <span style="font-weight: bold;">NOT</span> supported for Vendors paid 
+ by <span style="font-weight: bold;">PRMD</span> (Payroll Miscellaneous 
+ Deduction) Checks. </p>
+<p><img src="assets/images/image/magnifybutton.gif" alt="image\magnifybutton.gif" title="image\magnifybutton.gif" width="16" height="16" border="0"/> Click the Magnify button 
+ to see the pertinent fields.</p>
+<p><font style="font-weight: bold;">Vendor Id:<br/>
+</font>Enter the Vendor that the check generated from this deduction should 
+ be sent to. For example, in the case of a garnishment the Vendor might 
+ be a court. </p>
+<p><font style="font-weight: bold;">Remit Description:<br/>
+</font>The Description that should appear on the check that is generated 
+ when the Report PR Miscellaneous Deductions Check / Report PR Miscellaneous 
+ Deductions Check Detail functions are run. For a garnishment, this might 
+ reference the court order number.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Remit 
+ Type:<br/>
+</font>This field determines whether or not multiple deductions will be 
+ will be combined then the checks are generated.</p>
+<p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;"><font style="font-weight: bold;">By Deduction:</font> one check per deduction</p>
+<p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;"><font style="font-weight: bold;">By Employee:</font> if multiple deductions 
+ exist for the same Employee / Vendor combination, one check for this Employee 
+ will be generated for the Vendor.</p>
+<p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;"><font style="font-weight: bold;">By Vendor:</font> this option might be 
+ selected it the case of a charitable deduction. In this case, deductions 
+ for multiple employees would be combined on the same check.</p>
+<p><font style="font-weight: bold;">Amount Type: and Amount<br/>
+</font>Deductions for garnishments are entered as a percent of wages (Amount 
+ Type = percent) but are calculated based on disposable income (less taxes).</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Important 
+ Note:</font> the Deduction Amount Type of ‘Standard’ is reserved for future 
+ use, and should NOT be selected.</p>
+<p><font style="font-weight: bold;"><a name="Disposable_Limit:" id="Disposable_Limit:">Disposable 
+ Limit:</a><br/>
+</font>The maximum percentage of disposable income that may be garnished. 
+ This limit varies according to the type of garnishment being applied. 
+ <span style="font-weight: bold;">Note: if this field is blank for a garnishment 
+ deduction, payroll taxes will NOT be deducted before the garnishment is 
+ assessed. We recommend setting this field to 99 unless a specific percentage 
+ is required. </span>Thus, if three garnishments of 10% each are applied, 
+ and the maximum percentage that may be garnished in this case is 25%, 
+ one of the deductions will be ‘clipped’ to 5%. Note that both the Disposable 
+ Limit and the Limit (see above) will be observed.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline; ">Example:<br/>
+</font>Assume a judgment is issued that says 10% of disposable income should 
+ be garnished from each pay with an annual limit of $2,500. This case, 
+ Limit would be set to $2,500, Deduction Limit Type to percent, Amount 
+ to 10.0, and Disposable Limit to 10. If an employee has $1,000 of disposable 
+ income per week would generate a $100 deduction per week.  After 
+ 25 weeks, the full annual amount of $2,500 has been deducted. Since 
+ the system looks at both the Limit and the Disposable Limit when Compute 
+ is run, the garnishment would not be taken in the 26<font style="vertical-align: super;">th</font> 
+ week.</p>
+<p>In addition, the system now validates &amp; enforces that the Limit 
+ Value must be 0, when Limit Amount Type = &quot;n/a&quot;.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Priority:<br/>
+</font>This field determines the order in which deductions will be processed 
+ if the Disposable Limit is reached. Suppose that three garnishments of 
+ 10% each are in effect: one which a priority of 1, the next 2, and the 
+ third 3. If the maximum percentage that may be garnished in this case 
+ is 25%, the deduction with priority 3 will be ‘clipped’ to 5%.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#008000">Also 
+ See...</font> <font color="#008000"><br/>
+</font> <a href="Employee_Viewer.htm">Employee Viewer</a>  <a href="Deductions_Viewer.htm">Deduction Viewer</a>  <a href="Deductions_Group_Viewer.htm">Deduction 
+ Group Viewer</a><br/>
+ <a href="Labor_Journal_Viewer.htm">Labor Journal</a></p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1', 'POPUP530042842');
+//]]></script>
+
+</body></html>

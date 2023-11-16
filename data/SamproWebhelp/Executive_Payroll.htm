@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.6.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="executive payroll"/>
+<meta name="MS-HKWD" content="user"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Executive Payroll</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="executive payroll,user,payroll,employee"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Executive Payroll">
+        <span>Executive Payroll</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Executive Payroll</h1>
+<p>This enhancement enables you to limit access to sensitive executive salary information to a specific user or users. A new field labeled &#39;Executive P/R?&#39; has been added to both the User and Employee records.  By definition:</p>
+<p style="margin-left: 23.75pt;">An Executive P/R User has full access to ALL employees.</p>
+<p style="margin-left: 23.75pt;">An Executive P/R Employee is only accessible by an Executive P/R User.</p>
+<p style="margin-left: 36.00pt;">- The Executive Payroll check box in an Employee record may only be set or cleared by a user with the Executive Payroll box checked in their user record</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">Executive Payroll enter/edit restrictions are also applied to the following viewers so that users without the Executive Payroll flag will not be able to access entries for Executive Payroll Employees:</p>
+<p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">Labor Journal</p>
+<p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">PR Journal</p>
+<p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">Job Journal</p>
+<p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">PR History</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">In addition, access restrictions will also apply to these functions: users that are not flagged as Executive Payroll will only be able to run these functions for Employees that are also not flagged as Executive Payroll:</p>
+<p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">Compute Payroll</p>
+<p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">Print PR Checks</p>
+<p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">Generation of EFT files</p>
+<p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">Print W-2s</p>
+<p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">Void PR Checks</p>
+<p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">Clear PR Checks</p>
+<p class="Reference_Line" style="margin-left: 23.75pt; margin-bottom: 0.00pt;">Bank Reconciliation Journal</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">Tip: in addition to the user who will be normally be running compute payroll and generating checks for your Executive Payroll employee, you may wish to designate another user with this permission. In this way, your firm is covered if the person who normally runs these functions is ill or on vacation.</p>
+<h3>Job History Postings</h3>
+<p><font style="font-weight: bold;">Labor Journal, WO Labor, and Job Journal:</font> Beginning with the 7.0.436.110 build, if an employee is marked as (Y) Executive Payroll, the Job History Reference ID and Reference Description will be blank for new lines posted from these viewers. </p>
+<p><font style="font-weight: bold;">Compute Payroll/PR Checks:</font> Earnings marked as Job Cost P/R Check now posts to Job History with the Reference ID and Reference Description blank if the Employee is flagged for Executive Payroll.</p>
+<h3>Executive Payroll Filtering</h3>
+<p>Where appropriate, &#39;Executive P/R:&#39; has been added to the filters/ranges for viewers and reports.  This field defaults to &#39;N&#39; or &#39;Y&#39; according to the value in the User&#39;s account.  This is done for the convenience of the Executive P/R User so that initial lists and reports show only Executive P/R employees.  The Executive P/R User can change the default on an as-needed basis.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Executive Payroll List Views:</font> In previous releases of 7.0, users that have the Executive Payroll option selected in the user record only saw employees marked as Executive PR because the filter is preset to Executive PR=Y. This has been changed so that they can see all employees on the list by default. This impacts the Employee, Labor Journal, and Payroll Journal list views.</p>
+<p>Users not marked for Executive P/R also have access to the Executive P/R range field.  However, under no circumstances will they be allowed to view Executive P/R Employees, regardless of how they attempt to use the field.</p>
+<h3>Payroll Reports</h3>
+<p>Many of Data-Basics payroll related user-defined reports have been revised in order to accommodate this enhancement. Be sure to obtain these reports from your support representative and install them in your database.</p>
+
+</body></html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.13.1.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="po"/>
+<meta name="MS-HKWD" content="purchase order"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Cancelling A PO</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="po,purchase order"/><meta name="brsnext" value="Changing_A_PO.htm"/><meta name="brsprev" value="Credit_PO_Details.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Cancelling A PO">
+        <span>Cancelling A PO</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Cancelling a Purchase Order</h1>
+<h2>Purpose:</h2>
+<p>A PO should be cancelled when none of the items on it are required from the Vendor <font style="font-weight: bold;">and none of the items on</font> <font style="font-weight: bold;">it have been</font> <font style="font-weight: bold;">received from the Vendor</font><font style="font-weight: bold;">, or have been marked as received and then un-received.</font></p>
+<p><font style="font-weight: bold;">Canceling a Single Line:</font> To cancel a single line on a PO, mark only that line as Cancelled. <font style="font-weight: bold;">Note:</font> You cannot cancel a line if it has been received. Verification has been tightened so that once a PO line has been checked &quot;Cancelled&quot;, the system disallows changes to all fields except the &#39;Cancel?&#39; option.</p>
+<p>The status of the PO determines the steps required to mark it cancelled.</p>
+<h2>Canceling a PO with a Status of Unreleased or Released</h2>
+<p><font style="font-weight: bold;">1.</font> Change the Status of the PO to Cancelled.</p>
+<p><font style="font-weight: bold;">2.</font> Click the Save Record button.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important Note:</font> If items have been received and then un-received on this Purchase Order, it must printed first. At this point, use the following procedure to cancel the PO.</p>
+<h2>Canceling a PO with a Status of Printed or Changed</h2>
+<p><font style="font-weight: bold;">1.</font> Change the Status of the PO to Pending Cancel.</p>
+<p><font style="font-weight: bold;">2.</font> Click the Save Record button.</p>
+<p><font style="font-weight: bold;">3.</font> Print the Pending Cancel Order from the Report PO Form function. After you acknowledge that the PO has successfully printed, the system will automatically change its status to Cancelled.</p>
+
+</body></html>

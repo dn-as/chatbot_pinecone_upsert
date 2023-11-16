@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.1.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Start Move Generic Doument</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="document,generic document (move),start move generic document,text printer,sys-start-smvegnrcdcmnts"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Start Move Generic Doument">
+        <span>Registry Start Move Generic Doument</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Start Move Generic Document for Generic Text Printer Files</h1>
+<h2>Purpose:</h2>
+<p>Some users &#39;print&#39; to a generic text printer; this may generate a file with NO FILENNAME EXTENSION instead of paper. In some cases, the file is written to the directory containing the SAMPro executable which clutters up the folder.<span style="font-weight: bold;"> In this function, &#39;generic document&#39; refers to these files, not SAMPro Document records.</span></p>
+<p>If this registry entry exists, this function will move all files with no filename extension from the SAMPro base directory to the DestinationDirectory specified in the registry. If this registry does not exist, running the function will have no impact on your files. This function designed to be run &#39;headless&#39; so that it can be scheduled to run as a scheduled event.</p>
+<p>If there is an exception list of files in the registry these files will not be moved. If the file already exists in the DestinationDirectory then a count will be added to the file name before it is stored. Special Characters in File names will be replaced by UnderScore before file is moved.</p>
+<p><span style="font-weight: bold;">Id:</span> sys-start-smvegnrcdcmnts</p>
+<h5><span style="font-weight: bold;">Specify the Destination Directory</span></h5>
+<p><span style="font-weight: bold;">Setting Key:</span> DestinationDirectory   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">PathToDestinationDirectory</span></p>
+<p><span style="font-style: italic;">The Setting Value should provide the full path an existing directory.</span> Start Move Generic Documents will move files with no Filename Extention from the base SAMPro directory to the folder define in this option.</p>
+<h5><span style="font-weight: bold;">Specify Files to Excluded from the Move (required)</span></h5>
+<p><span style="font-weight: bold;">Setting Key:</span> <span style="font-style: italic;"></span>FileExceptions   Setting Value: <span style="font-style: italic;">ListOfFilesToIgnore</span></p>
+<p>Some files with no filename extension are used by SAMPro and should be excluded from the move. At this point, LabelRemap and inetlog should be excluded. It is possible that other should also be excluded.</p>
+<p style="margin-left: 48px;">Example:</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> <span style="font-style: italic;"></span>FileExceptions   <span style="font-weight: bold;">Setting Value:</span> LabelRemap,inetlog</p>
+
+</body></html>

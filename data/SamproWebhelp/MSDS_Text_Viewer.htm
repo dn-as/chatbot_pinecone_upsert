@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.2.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="cover sheet"/>
+<meta name="MS-HKWD" content="manufacturers safety data sheet"/>
+<meta name="MS-HKWD" content="msds"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>MSDS Text Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="cover sheet,manufacturers safety data sheet,msds"/><meta name="brsnext" value="Repack_Table_Viewer.htm"/><meta name="brsprev" value="Lab_Test_Description_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="MSDS Text Viewer">
+        <span>MSDS Text Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>MSDS (Manufacturers Safety Data Sheet) Text Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain the cover sheet text that prints with your Manufacturers Safety Data Sheets. This viewer may also be used to create tag text that will print when a tag is encountered in the MSDS Master record for an item, located in the Inventory Item record&#39;s MSDS tag.</p>
+<h2>Usage:</h2>
+<p>The coversheet MSDS Text record is referenced during the printing of MSDS&#39;s. The <font style="font-weight: bold;">coversheet</font> Id is reserved for this purpose only, and should not be changed. Other MSDS Text records may be created and referenced as tags as needed: refer to the <a href="Inventory_Item_Manufacturers_Safety_Data_Sheet__MSDS_Tab_.htm">Inventory Item MSDS Tab</a> for details.</p>
+<p>If you are creating a new MSDS Text record, be sure to click the Add Record button before clicking the Note button. Notes can only be associated with an existing (saved) record.</p>
+<p>If TSCA validation checking is enabled, MSDS sheets will be sent with every order if an item is not registered; click <a href="Registry_Entry_for_TSCA_Registration.htm">Registry Entry for TSCA Registration</a> for details.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of all fields that may be included in this record. If you are using a customized system, the fields displayed on your screen may not exactly match the order or status (required, optional, default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">MSDS Text Id:</font> (15 character, only . and - special characters)<br/>
+A unique Id. This field is required. Note that the Id coversheet is reserved for use as discussed above.</p>
+<p><font style="font-weight: bold;">MSDS Text Description:</font> (40 character)<br/>
+A brief description; this field is optional.</p>
+<p><font style="font-weight: bold;">Notes</font><br/>
+The text contents of this record are stored in its free-form notes field. Click the Note button on the side button bar to enter/edit the text. The appearance of the Note button will vary depending on whether text has been added:</p>
+<p><img src="assets/images/image/NOTES.gif" alt="image\NOTES.gif" title="image\NOTES.gif" width="48" height="28" border="0"/> The Note field has never been accessed.  <img src="assets/images/image/NOTESON.gif" alt="image\NOTESON.gif" title="image\NOTESON.gif" width="48" height="28" border="0"/> The Note field contains text.</p>
+<p>By using Windows&#39; clipboard facilities, you can easily copy and paste between the Notes for a particular record and your other Windows applications (such as word processing).</p>
+<p><font style="font-weight: bold;">1.</font> Verify that the MSDS Text record you wished to enter/edit text to has been saved (the Add Record button should be disabled).</p>
+<p><font style="font-weight: bold;">2.</font> Click the button entitled Note on the side button bar.</p>
+<p><font style="font-weight: bold;">3.</font> The Notes viewer for this record will automatically open.</p>
+<p><font style="font-weight: bold;">4.</font> If you have copied Windows text to the clipboard for this Note, choose the Edit menu (in the Notes viewer) and select Paste. The text that you copied to the clipboard will be inserted in the Notes viewer.</p>
+<p><font style="font-weight: bold;">5.</font> To save the notes for this record, simply close the Notes viewer (the system automatically saves the current contents for you).</p>
+<p><font style="font-weight: bold;">6.</font> Click the Change Record button on the MSDS Text viewer.</p>
+
+</body></html>

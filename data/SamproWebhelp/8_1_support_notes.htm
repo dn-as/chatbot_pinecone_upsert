@@ -1,0 +1,738 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>8.1 Support Notes</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support/Advanced Topics\nSupport /Upgrade Notes\n8.1 Support Notes");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_2" >8.1 Support Notes</P>
+ <P class="support" >2013-03-15 (jt)-version 8.1.517.011</P>
+ <P class="support" >* [4321] KPI Export</P>
+ <P class="support" >* [5091] Intercompany Reporting</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5124</FONT>  &nbsp;Quote viewer – Import Diagnostic Costs  - *** need to document</P>
+ <P class="support" >5145  &nbsp;Quote viewer - Corrects Tab Mismatch Revenue Adjustment error when Flat Rate imported. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5169</FONT>  &nbsp;New Call – New COD Site</P>
+ <P class="support" style="margin-left:36.00pt;">Improved error message if a new COD Site is not created. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5184</FONT> &nbsp;TechAnywhere – Time Review – discuss with Derek</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">  * [5194] Start Work Order Daily Edit (performance monitor)&nbsp;</P>
+ <P class="support" >5199  &nbsp;Client Order Processing – corrects Shipping Address, Pricing Defaulting</P>
+ <P class="support" >5217  &nbsp;Viewers general - Delete Record process needs to roll back before presenting error messages</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5223</FONT>  &nbsp;Performance Monitors</P>
+ <P class="support" style="margin-left:36.00pt;">Miscellaneous performance monitoring enhancements to be documented as discovered and implemented.</P>
+ <P class="support" >5230  &nbsp;Quote Approval Wizard – again supports locationid registry option</P>
+ <P class="support" ><FONT style="font-weight:bold; " >2013-03-06 (jt)-version 8.1.517.010</FONT></P>
+ <P class="support" style="margin-top:0;margin-bottom:0">  * [5194] Start Work Order Daily Edit&nbsp;</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">  * [5205] Purchase Order, AP Journal viewers&nbsp;</P>
+ <P class="support" ><FONT style="font-weight:bold; " >2013-03-05 (jt)-version 8.1.517.009</FONT></P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4777</FONT>  &nbsp;New Call (Intercompany)</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4777</FONT>  &nbsp;Compute PR (Intercompany)</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4777</FONT>  &nbsp;Bank Transfer Journal viewer (Intercompany)</P>
+ <P class="support" >5041  &nbsp;Canadian PR AFT Processing - corrects the output format of date fields in the &quot;A&quot; and &quot;C&quot; lines:</P>
+ <P class="support" >5085  &nbsp;Work Order viewer – Serialized item handling</P>
+ <P class="support" >* [5091] Intercompany Reporting</P>
+ <P class="support" >5117 &nbsp;TechAnywhere – don’t create PO for closed WO</P>
+ <P class="support" >5119 &nbsp;Quote viewer – tab mismatch support rounding of costs</P>
+ <P class="support" >5121 &nbsp;Canadian T4 – alignment for 2012 form</P>
+ <P class="support" >5136  &nbsp;Remote Tech mod - Add invntryitm filter to RTD Managed List Exporter (Kappus only)</P>
+ <P class="support" >5177  &nbsp;Client Order – allows invoiced order to be closed if you remove all Allocated/BO’d items</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5181</FONT> &nbsp;Default PO Sales Tax Group from Job &nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;">By default, the PO Tax Group defaults from the Vendor record if the Vendor record has a Tax Group. In this does not produce the desired result in all cases, this release implements a new setting that sets the PO parent Tax Group based on the Job's Tax Group.&nbsp; The job can be entered directly in the PO parent or it can be determined from the WO entered directly in the PO.</P>
+ <P class="support" style="margin-left:36.00pt;">This setting causes the PO parent Sales Tax Group to be set from the Job record.&nbsp; This can be either the Job entered directly in the PO parent record or it can be the Job from Work Order entered directly in the PO parent record.</P>
+ <P class="support" style="margin-left:72.00pt;">Registry Id: sys-viewer-vprchseordrlst  &nbsp;</P>
+ <P class="support" style="margin-left:72.00pt;">Setting Key: DefaultPOTaxGroupFromJob  &nbsp;Setting Value: true  (default is false)</P>
+ <P class="support" style="margin-left:36.00pt;">Additional Fixes supporting this functionality:</P>
+ <P class="support" style="margin-left:72.00pt;">The PO viewer was changed to allow Inventory and Job quantities to be different when the PO parent has a Tax Group as long as the INV line has the same Tax Group.</P>
+ <P class="support" style="margin-left:72.00pt;">Work Order viewer – supports use tax liability problem for WO-INV and WO-OTH.</P>
+ <P class="support" style="margin-left:72.00pt;">The AP Journal parent was always adopting its security from the PO parent record.&nbsp; With the newly revised code, when Intercompany Processing is on, the parent security determination is based on the APJ parent GL Entity.</P>
+ <P class="support" style="margin-left:72.00pt;">The posting of Use Tax Liability was using the company-based security from the INV line instead of the AP parent record's security.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5187</FONT> &nbsp;Quote List View</P>
+ <P class="support" style="margin-left:36.00pt;">A new List View order has been added, QuoteByIdByWorkorderByScope.  This view displays an individual line for each Scope Option and Status in the Quote. </P>
+ <P class="support" > <FONT style="text-decoration:underline;" >5192</FONT>  &nbsp;User-defined Reporting</P>
+ <P class="support" style="margin-left:36.00pt;">Internal fix for token fields ^today^,^currentdate^,^currenttime^ &amp; ^userid^ used by Jeff Boyd in his reports. </P>
+ <P class="support" >5195  &nbsp;TechAnywhere – PO’s generated by TechAnywhere now reference the correct Equipment ID</P>
+ <P class="support" >5200  &nbsp;TechAnywhere - generated POs are created with Job Quantity Ordered/Received set to zero.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >2013-02-24 (jt)-version 8.1.517.008</FONT></P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5184</FONT>  &nbsp;Time Review (Conserv mod) - *** need to know how this works</P>
+ <P class="support" ><FONT style="font-weight:bold; " >2013-02-24 (jt)-version 8.1.517.007</FONT></P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4777 </FONT> &nbsp;AP Journal viewer – supports Intercompany Processing</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5181</FONT>  &nbsp;AP Journal viewer – in process</P>
+ <P class="support" ><FONT style="font-weight:bold; " >2013-02-23 (jt)-version 8.1.517.006</FONT></P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4777</FONT>  &nbsp;Intercompany – in process</P>
+ <P class="support" >5041  &nbsp;Canadian PR AFT – in process</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5059</FONT>  &nbsp;Dispatch Board Work Order List (lower section)</P>
+ <P class="support" style="margin-left:36.00pt;">The Begin Date column has been relabeled as Scheduled to better reflect its meaning as the Technician’s Date Scheduled. After the data-conversion, the Scheduled column will end up in the same place at the Begin Date did before in the user’s Dispatch Boards. </P>
+ <P class="support" >5121  &nbsp;T4 Report – in process</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5148</FONT>  &nbsp;AP Journal viewer – in process</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5148 </FONT> &nbsp;Work Order viewer</P>
+ <P class="support" style="margin-left:36.00pt;">The COD Payments child on the work order now defaults the GL Entity from the Job in the Work Order header.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5163</FONT>  &nbsp;TechAnywhere Quote Creation</P>
+ <P class="support" style="margin-left:36.00pt;">Previously, when a Quote was created from TechAnywhere, if a note was attached to the client site, a popup displayed, pausing the TechAnywhere Event Manager from running. In this release, the message is not displayed if the quote is created from the TechAnywhere Post. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5181</FONT> &nbsp;AP Journal viewer – in process</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5182</FONT>  &nbsp;'Parts Pickup' work order status</P>
+ <P class="support" style="margin-left:36.00pt;">A new work order log type status, Parts Pickup, has been added. It follows Return Trip in the Escalation hierarchy, as shown below. </P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <TABLE width="520" cellspacing="0" cellpadding="1" style="margin-left:0.35pt;border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; " border="1">
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >TechStatus</FONT></P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >WO EscalationStatus</FONT></P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P><FONT style="font-weight:bold; " >WOStatusCategory  </FONT></P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Archived</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Archived</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Archived</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Credit Hold</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Credit Hold</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Unacknowledged</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Unacknowledged</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Work Declined</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Work Declined</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Cancelled</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>WaitCustApprvl</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>WaitCustApprvl</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Pending Ok to Start</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>WaitDispApprvl</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>WaitDispApprvl</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>InvoiceApproved</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>InvoiceApproved</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Completed</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>InvoiceDisputed</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>InvoiceDisputed</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Pending Ok to Invoice</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Onsite</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Active</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Travel</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Active</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>On Break</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Active</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Return Trip</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Return Trip </P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Parts Pickup (Version 8.1+)</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Parts Pickup</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Waiting Parts</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Waiting Parts</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Parts Ordered</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Parts Ordered</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Parts Received</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Parts Received</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Pending</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Pending</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Checked Out</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Checked Out</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Scheduled</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Scheduled</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Rescheduled</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Rescheduled</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Waiting Service</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Waiting Service</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Quote Approved</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Quote Approved</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Waiting Quote</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Waiting Quote</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Quote Received</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Quote Received</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Hold</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Hold</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Invoice Ready</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Invoice Ready</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Pending Ok to Invoice</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Invoice Review</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Invoice Review</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Completed</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Wait Paperwork</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Wait Paperwork</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Completed</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Completed</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Completed</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Completed</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Billed</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Billed</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Billed</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>No Bill (Version 7.3+)</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>No Bill</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Billed</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Cancelled</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Cancelled</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Cancelled</P></TD></TR>
+  <TR valign=top>
+  <TD width="37.40%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Tech Declined</P></TD>
+  <TD width="31.66%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Tech Declined</P></TD>
+  <TD width="30.94%" style="border-top:0.50pt solid black; border-bottom:0.50pt solid black; border-left:0.50pt solid black; border-right:0.50pt solid black; ">
+  <P>Open</P></TD></TR>
+ </TABLE>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" >5183  &nbsp;AP Journal Viewer</P>
+ <P class="support" style="margin-left:36.00pt;">Purchase History Tab:<BR>The User Id associated to the transaction line is now displayed in the last column of this tab (user who created the PO, user who did the receipt, etc).</P>
+ <P class="support" style="margin-left:36.00pt;">Conserv Customization Only: <BR>The GL Entity in the AP header is a default/sticky field. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5183</FONT>  &nbsp;Cash Receipts Journal viewer – CURRENT</P>
+ <P class="support" style="margin-left:36.00pt;">Changed Field: GL Entity<BR>The GL Entity Description now displays next to the GL Entity Id on the Cash Receipts<BR>Journal header<BR><BR>In the ConServ customization only, this field will be ‘sticky’. </P>
+ <P class="support" style="margin-left:36.00pt;"><BR>A/R (middle section). <BR>The only editable fields are the Invoice Amount and Discount Taken, and the Description (click the Magnify button to access). </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >518</FONT><FONT style="text-decoration:underline;" >3</FONT>  &nbsp;Work Order viewer Purchases Tab</P>
+ <P class="support" >&nbsp;The Date Promised for each purchase line is now shown on this tab in the Promised column. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >2013-02-17 (jt)-version 8.1.517.005</FONT></P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4777</FONT>  &nbsp;Dispatch Board – support for intercompany processing</P>
+ <P class="support" >5018  &nbsp;Purchase Order - PO Ordered By field should only default from user id if blank</P>
+ <P class="support" >5101  &nbsp;Work Order viewer - System Primitive Error adding changing WO Equipment</P>
+ <P class="support" >5119  &nbsp;Quote viewer - Quote Tab Mismatch needs to support rounding of costs</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5124</FONT>  &nbsp;Quote viewer – import diagnostic costs, in process</P>
+ <P class="support" >5127  &nbsp;Notes viewer – remove pipe on copy and paste</P>
+ <P class="support" >5145  &nbsp;Quote viewer - Spurious TabMismatch when Revenue Adjustment is added on save</P>
+ <P class="support" >5147&nbsp;Inventory Receipts Journal - Corrects error when a single quote in Description loaded from PO.</P>
+ <P class="support" >5151  &nbsp;401k Report - Deduct Cafeteria&nbsp;Plan Deductions From Gross Wages (registry enabled)</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5155</FONT>  &nbsp;Work Order Revenue Tab – Conserv</P>
+ <P class="support" style="margin-left:36.00pt;">Double-clicking on a WO Revenue Tab line will now open the applicable Labor Journal, AP Journal, Job Journal, Purchase Order, Inventory Receipts Journal, or Inventory Adjustments Journal entry if access to the viewer is enabled for the user.</P>
+ <P class="support" >5157  &nbsp;ADP Export - Other Rate User1 field can be used to classify reimbursables for ADP </P>
+ <P class="support" >5160  &nbsp;Work Order Import Wizard allows import of lines with billable but no actual hours.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5168</FONT><FONT style="text-decoration:underline;" > </FONT>&nbsp;Vendor User Fields</P>
+ <P class="support" style="margin-left:36.00pt;">The five Vendor User fields have been added as range fields for the following functions: </P>
+ <P class="support" style="margin-left:72.00pt;">AP Journal viewer<BR>Select Invoices for Payment (Date-to-Pay List)<BR>AP Cash Requirements List<BR>Print AP Checks<BR>Print AP Manual Checks (Single-write Check Printing)<BR>View Vendor Invoices viewer<BR>Start AP Payment Approved List<BR>Start AP Payment Approved List PM</P>
+ <P class="support" style="margin-left:36.00pt;">Report AP Check Register</P>
+ <P class="support" style="margin-left:36.00pt;">The five Vendor User fields have been added as range fields to this report (RAPCHEKv72b001.rpt) dated 02/15/2013.  This report is suitable for version 7.2 and above.  </P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" ><FONT style="font-weight:bold; " >2013-02-08 (jt)-version 8.1.517.004</FONT></P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4777</FONT>  &nbsp;TechAnywhere – support for intercompany processing</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5106</FONT>  &nbsp;TechAnywhere - TechAnywhere Quoting - server-side posting</P>
+ <P class="support" >5113  &nbsp;Dispatch Board - Make Estimated Hours editable in lower section of Classic D-Board</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5124</FONT>  &nbsp;Quote viewer – import diagnostic cost – in process</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5126</FONT>  &nbsp;Quote</P>
+ <P class="support" >&nbsp;Quote List View:</P>
+ <P class="support" style="margin-left:36.00pt;">The Estimator Id has been added to the following orders of the Quote List View: </P>
+ <P class="support" style="margin-left:36.00pt;">QuoteByIdByWorkorder</P>
+ <P class="support" style="margin-left:36.00pt;">Quote Filter View:</P>
+ <P class="support" style="margin-left:36.00pt;">New Range: Estimator Id:</P>
+ <P class="support" style="margin-left:36.00pt;">Quote Main Tab:</P>
+ <P class="support" style="margin-left:36.00pt;">Changed Field: Estimator Id:<BR>The Estimator Id now defaults from the Quote's Job anytime the Job is changed/added.&nbsp; This includes both direct edits of the Quote's Job Id as well as any indirect methods for changing the Job Id ... for example, changing the Work Order Id.</P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" >5139  &nbsp;Copy Colors – allows members of user group 'all' to copy a selected user's colors to all users</P>
+ <P class="support" >5147  &nbsp;Inventory Receipts Journal - Corrects error when a single quote in Description loaded from PO.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >2013-01-31 (jt)-version 8.1.511.003</FONT></P>
+ <P class="support" >4606  &nbsp;Performance Issues - Performance boost whenever data is being retrieved.</P>
+ <P class="support" >5107 &nbsp;Work Order viewer – Rev Adjust Tab Mismatch</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5128</FONT>  &nbsp;Master Contract viewer</P>
+ <P class="support" style="margin-left:36.00pt;">Master Contract Filter Tab:</P>
+ <P class="support" style="margin-left:36.00pt;">New Range: Site Name <BR>The Client Site Name has been added to the Filter tab. The Filter tab enables you to auto-populate the sites included in this contract by filling in one or more of the following ranges, and then clicking the Auto Populate button. </P>
+ <P class="support" > 5129  &nbsp;DB Copyright – DB Copyright on login changed to 2013</P>
+ <P class="support" > 5133  &nbsp;Logon History viewer – temp table now handles a 50 character id field to support registry/book id’s.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >2013-01-25 (jt)-version 8.1.511.002</FONT></P>
+ <P class="support" >5104  &nbsp;TechAnywhere – Equipment Edits.</P>
+ <P class="support" >5122  &nbsp;Dispatch Board – registry option to show full Site Name on Dispatch Board</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5126</FONT>  &nbsp;Quote viewer – Estimator filtering, in progress</P>
+ <P class="support" ><FONT style="font-weight:bold; " >2013-01-24 (jt)-version 8.1.511.001</FONT></P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5106</FONT>  &nbsp;TechAnywhere – server side quoting, in process</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5123 </FONT> &nbsp;TechAnywhere - Quoting</P>
+ <P class="support" style="margin-left:36.00pt;">Quotes posted from TechAnywhere can be either Fixed Price or T&amp;M.&nbsp; This work applies to T&amp;M quotes ONLY.&nbsp; Fixed Price quotes aren't affected.</P>
+ <P class="support" style="margin-left:36.00pt;">When a quote detail line does NOT include pricing info (Unit Price, Price = zero), perform the standard revenue rate calculations appropriate for the line.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >2013-01-24 (jt)-version 8.1.511.000</FONT></P>
+ <P class="support" ><FONT style="text-decoration:underline;" >3405</FONT>  &nbsp;Client Site Billing Schedules (table changes only)</P>
+ <P class="support" style="margin-left:36.00pt;">The Extended PM Invoice Description (on the Client Site PM Billing tab) has been expanded from 400 to 3000 characters to match the WO's Work Performed field.&nbsp; When this field contains a value, it is written to the Invoice Description of Work Performed (wrkordr_wrk_prfrmd) during the creation of PM Invoice-type work orders. Note that the older Invoice Description on the PM line is still written to the Revenue Adjustment line as in previous releases. Note that the extended invoice description functionality is not supported by Master Contract. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4329 </FONT> &nbsp;Master Contracts</P>
+ <P class="support" style="margin-left:36.00pt;">New Field: Revenue Values as %</P>
+ <P class="support" style="margin-left:36.00pt;">This enhancement enables the user to designate the Revenue specified on the PM Schedule line of a master contract as a percentage instead of a dollar amount for Time Of Service Bill invoices. If TimeOfService Bill is not specified, the Amount Billed on the Adv. Bill tab will be calculated as a percentage.  If Amortization is enabled, the Amount Earned is also calculated as a percentage. </P>
+ <P class="support" style="margin-left:36.00pt;">When generating Time of Service PM Work Orders or PM Billings, the system will calculate the billable amount for as a percentage of the annual contract amount specified on the Client Site list. Amortized amounts will similarly be generated using the Amount Earned percentage in the Adv. Bill tab.  </P>
+ <P class="support" style="margin-left:36.00pt;">When the user saves the record, the system will verify that the sum of the Revenue percentages totals 100.00.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4571</FONT>&nbsp;Work Codes (table changes only) - Hutchinson</P>
+ <P class="support" style="margin-left:36.00pt;">Added Work Code User1-5 fields. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4605</FONT>  &nbsp;IRJ viewer  - table changes were not made in this version</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4606</FONT>  &nbsp;Performance Issues - Performance boost would happen whenever data is being retrieved.&nbsp; </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4742</FONT>  &nbsp;Inventory Items – Superseding Parts – Ingersoll Rand</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4639 </FONT>   &nbsp;Log Forms (table changes only)</P>
+ <P class="support" style="margin-left:36.00pt;">Log Form Id expanded from 5 to 15 characters.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4705 </FONT> &nbsp;Client Site (table change only) </P>
+ <P class="support" style="margin-left:36.00pt;">The Client Site Work Order Comments field has been expanded to a 1200 character text box. It may be updated by TechAnywhere users in the field.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4777</FONT>  &nbsp;Intercompany Processing</P>
+ <P class="support" >Intercompany Processing</P>
+ <P class="support" style="margin-left:36.00pt;">Overview</P>
+ <P class="support" style="margin-left:36.00pt;">This enhancement supports Intercompany Processing at the GL level via automated ‘Due To’ and ‘Due From’ transactions any time costs or revenue is incurred/earned by one company on behalf of another company. Anytime the system sees a difference between the company that a balance sheet G/L Entity belongs to and the company that the Income Statement G/L Entity belongs to, the automated 'Due To' and 'Due From' transactions will be made. </P>
+ <P class="support" style="margin-left:36.00pt;">For example, if monies are received in the AR Cash Receipts by Company A for work billed by Company B, the system would make the usual debit to the AR account and credit to the bank account. In addition, the Due From account in Company A would be debited, and the Due To account in Company B would be credited: this processing keeps the balance sheet accounts in balance. </P>
+ <P class="support" style="margin-left:36.00pt;">Alternately if monies are received in the AR Cash Receipts by Company A for work billed by Company A, the system would only make the usual debit to the AR account and credit to the bank account: the automated intercompany transactions would not be needed.</P>
+ <P class="support" style="margin-left:36.00pt;">Currently, Intercompany Processing does NOT support one company’s ‘profiting’ from work performed for another company. All restitutions are made via the Bank Transfer function.</P>
+ <P class="support" style="margin-left:36.00pt;">Registry:</P>
+ <P class="support" style="margin-left:36.00pt;">Id: sys-ffv-global-settings</P>
+ <P class="support" style="margin-left:36.00pt;">Setting Key: IntercompanyEnabled&nbsp; Setting Value: true</P>
+ <P class="support" style="margin-left:36.00pt;">This registry entry enables the Intercompany Processing to be generated when needed in AP and Cash Receipts entries. The necessary records (as discussed under Setup) must also be in place. When this registry is enabled, GL Entities will be required for most transactions.</P>
+ <P class="support" style="margin-left:36.00pt;">Setup:</P>
+ <P class="support" style="margin-left:36.00pt;">Ideally, Intercompany Processing would be implemented when first starting to use SAM Pro. If there is any possibility of a new company being acquired in the future, new ‘one company’ firms can be set up for Intercompany Processing; if and when a new company is acquired, it can be more easily integrated into the database. </P>
+ <P class="support" style="margin-left:36.00pt;">Firms currently running SAM Pro without Intercompany Processing should consult their support representative if they are thinking about implementing this functionality: a significant amount of work will be required to convert an existing system. </P>
+ <P class="support" style="margin-left:36.00pt;">The existing GL Entity and Security records and the new Company record are at the heart of Intercompany Processing. </P>
+ <P class="support" style="margin-left:72.00pt;">GL Entity: Each GL Entity must specify a specific Company.&nbsp; In addition to the GL Entities designated for the various profit centers within a company, a ‘balance sheet’ Entity will be created for use with Intercompany postings.</P>
+ <P class="support" style="margin-left:72.00pt;">GL Account: A ‘Due To’ asset account and a ‘Due From’ Liability account should be created for each company. A good technique for the Due to and Due From GL accounts is to create a root account with the company extension (i.e. DUE TO 1200-A for company A and 1200-B for company B …)</P>
+ <P class="support" style="margin-left:72.00pt;">Security: A Security record must be created for each Company</P>
+ <P class="support" style="margin-left:72.00pt;">Company: The Company record defines the Security Id, GL Entity (for balance sheet transactions), and ‘Due To’ and ‘Due’ From GL Accounts. </P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;">New Record: Company</P>
+ <P class="support" style="margin-left:36.00pt;">Purpose:</P>
+ <P class="support" style="margin-left:72.00pt;">This record is required for Intercompany Processing. The Company record defines the Security Id, GL Entity (for balance sheet transactions), and ‘Due To’ and ‘Due’ From GL Accounts. </P>
+ <P class="support" style="margin-left:36.00pt;">Important Fields: Upper Section</P>
+ <P class="support" style="margin-left:36.00pt;">Main Tab:</P>
+ <P class="support" style="margin-left:72.00pt;">Company Id:<BR>Uniquely identifies this company. It is recommended that the Company Id and Security Id match. </P>
+ <P class="support" style="margin-left:72.00pt;">Company Name: <BR>The Name of the Company (for reporting purposes).</P>
+ <P class="support" style="margin-left:72.00pt;">Security Id:<BR>This required field specifies the Security applied to transactions for this company.</P>
+ <P class="support" style="margin-left:72.00pt;">Federal EIN:<BR>The Federal EIN for this Company.<BR></P>
+ <P class="support" style="margin-left:36.00pt;">GL Tab:</P>
+ <P class="support" style="margin-left:72.00pt;">Balance Sheet Default: GL Entity Id:<BR>The GL Entity to be applied only to Intercompany transactions. This GL Entity should NOT represent a profit center. </P>
+ <P class="support" style="margin-left:72.00pt;">Intercompany DUE FROM this Company: GL Account Id:<BR>The Asset account to be debited in Intercompany transactions.</P>
+ <P class="support" style="margin-left:72.00pt;">Intercompany DUE TO this Company: GL Account Id:<BR>The Liability account to be credited in Intercompany transactions.</P>
+ <P class="support" style="margin-left:36.00pt;">Address Tab:</P>
+ <P class="support" style="margin-left:72.00pt;">Mailing Address:<BR>Street Address:<BR>City:  State:  Zip:</P>
+ <P class="support" style="margin-left:72.00pt;">The address of this Company for reporting purpose (*** examples). </P>
+ <P class="support" style="margin-left:36.00pt;">User Fields Tab:</P>
+ <P class="support" style="margin-left:72.00pt;">Company User 1-5:<BR>These optional fields enable you to retain additional information about this Company.</P>
+ <P class="support" style="margin-left:36.00pt;">Important Fields: Lower Section</P>
+ <P class="support" style="margin-left:36.00pt;">Registry Tab:</P>
+ <P class="support" style="margin-left:72.00pt;">Key:</P>
+ <P class="support" style="margin-left:72.00pt;">Value:</P>
+ <P class="support" style="margin-left:72.00pt;">Description:</P>
+ <P class="support" style="margin-left:72.00pt;">These fields are reserved for future use. </P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >States Tab:</FONT></P>
+ <P class="support" style="margin-left:72.00pt;">ST: State EIN: </P>
+ <P class="support" style="margin-left:72.00pt;">This tab should be used to define the State/States associated with this Company.</P>
+ <P class="support" style="margin-left:72.00pt;">State EIN:</P>
+ <P class="support" style="margin-left:72.00pt;">The State EIN to be used for reporting purposes.</P>
+ <P class="support" style="margin-left:72.00pt;">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Entities Tab:</FONT></P>
+ <P class="support" style="margin-left:36.00pt;">This tab displays the Balance Sheet and Profit Center Entities that point at this Company record. </P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Changed Records:</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >GL Entity:</FONT></P>
+ <P class="support" style="margin-left:36.00pt;">In addition to the GL Entities defined for profit centers, if Intercompany Processing is implemented, a GL Entity should be defined for use in Due To’Due From transactions. This type of Entity will be reference on the Company record’s GL Tab in the Balance Sheet Default GL Entity field. </P>
+ <P class="support" style="margin-left:72.00pt;">New Field: Company Id<BR>This field must be completed if Intercompany Processing is implemented (the sys-ffv-global-settings registry’s IntercompanyEnabled option is set to true). </P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >GL Account:</FONT></P>
+ <P class="support" style="margin-left:72.00pt;">If Intercompany Processing is implemented (the sys-ffv-global-settings registry’s IntercompanyEnabled option is set to true). A ‘Due To’ Asset account and a ‘Due From’ Liability account should be created for each company. </P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >AP Journal Main Tab:</FONT></P>
+ <P class="support" style="margin-left:72.00pt;">Changed Field:  GL Entity:<BR>If Intercompany Processing is implemented (the sys-ffv-global-settings registry’s IntercompanyEnabled option is set to true) and if this Entity does not match the GL Entities referenced in the child tabs, the appropriate Intercompany postings to GL History will be made when this transaction is saved.</P>
+ <P class="support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >AR Cash Receipts</FONT><FONT style="font-weight:bold; " > Main Tab</FONT><FONT style="font-weight:bold; " >:</FONT></P>
+ <P class="support" style="margin-left:72.00pt;">Changed Field:  GL Entity:<BR>If Intercompany Processing is implemented (the sys-ffv-global-settings registry’s IntercompanyEnabled option is set to true) and if this Entity does not match the GL Entities referenced in the child tabs, the appropriate Intercompany postings to GL History will be made when this transaction is saved.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4841</FONT>  &nbsp;PCR (Problem,Cause,Remedy) {Conserv Mod}</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Overview</FONT></P>
+ <P class="support" style="margin-left:36.00pt;">The purpose of the new Problem, Cause, Remedy functionality is to enforce consistency between the Problem reported (the Work Code), the Cause of the problem (the new Cause Code), and the Remedy (the Resolution Code). This consistency is enabled via the new PCR Table which defines which Causes may be selected for each Work Code (Problem), as well as which Remedy (Resolution) Code may be selected for each Cause Code. </P>
+ <P class="support" style="margin-left:36.00pt;">If a PCR Table is specified in the Client Site it will be used for the validation of for all Equipment whose PCR Table Id is blank.  </P>
+ <P class="support" style="margin-left:36.00pt;">If a PCR Table is specified in the Client Site Equipment record, it overrides the PCR Table in the Client Site record. </P>
+ <P class="support" style="margin-left:36.00pt;">If a PCR table is referenced, Work Codes are validated in: <BR>1. New Call<BR>2. Work Order<BR>3. Dispatch Board<BR>4. Client Site Equipment (PM Schedule tab)<BR>5. Quote – Main Tab (if a lead work order is used, the Work Code defaults from it. If a lead work order is not specified, and a PCR Table is specified in the Site, the Work Code list will be limited to those referenced in the Site.<BR><BR>Validate Cause Codes ...<BR>1. PCR Table<BR>2. Work Order<BR><BR>Validate Resolution Codes ...<BR>1. Work Order</P>
+ <P class="support" ><FONT style="font-weight:bold; " >New Record</FONT><FONT style="font-weight:bold; " >: </FONT><FONT style="font-weight:bold; " >Cause Code</FONT></P>
+ <P class="support" ><FONT style="font-weight:bold; " >Purpose:</FONT></P>
+ <P class="support" >This record may be used to identify the cause of a problem identified by a Work Code. For example, a typical Work Code for an air conditioning unit might be NoCool. A variety of causes (defined by the Cause Code) could have led to this problem: Belt, Filter, Blower, Compressor, and so on.  </P>
+ <P class="support" >Cause Codes do not have to be specific to a particular work code.  In this example, they could also be applicable to a Work Code of NoHeat. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >Usage:</FONT></P>
+ <P class="support" >PCR Table.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Important Fields:</FONT></P>
+ <P class="support" ><FONT style="font-weight:bold; " >Cause Code Id:<BR></FONT>This required field uniquely Identifies this cause (e.g., Belt, Filter, CondCoil, Compressor, etc.).. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >Cause Code Name:<BR></FONT>This recommended field may be used provide greater detail on the cause (e.g., if the Id is EVAPCOIL the Name could be Evaporator Coil).  This field may also be used for reporting purposes.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Cause Code User 1-5:<BR></FONT>These optional fields may be used for entering any information your company wishes to retain.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Obsolete</FONT><FONT style="font-weight:bold; " >?</FONT><FONT style="font-weight:bold; " ><BR></FONT>If this field is checked, the record is considered Obsolete, and it may not be directly specified during data-entry (either by entering the Id or selecting it from a list). Obsoleted records can be edited and the Obsolete option can be un-done when necessary.  When you check the Obsolete field, the following message box will be displayed: </P>
+ <P class="support" >“You have elected to obsolete this record.  Would you like to see existing references to this record?”</P>
+ <P class="support" >If you click Yes, the system will display a viewer that provides click-through access to all tables referencing this record. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >New Record: PCR Table</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Purpose:</FONT></P>
+ <P class="support" style="margin-left:36.00pt;">The purpose of the new PCR Table is to enforce consistency between the Problem reported (the Work Code), the Cause of the problem (the Cause Code), and the Remedy (the Resolution Code). This consistency is enabled via the PCR Table’s Problems tab which defines which Causes may be selected for each Work Code (Problem), and by the Remedies tab which defined which Remedy (Resolution) Code may be selected for each Cause Code. </P>
+ <P class="support" style="margin-left:36.00pt;">If a PCR Table is specified in the Client Site it will be used for the validation of for all Equipment whose PCR Table Id is blank.  If a PCR Table is specified in the Client Site Equipment record, it overrides the PCR Table in the Client Site record.</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Important Fields: Upper Section</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >PCR Table </FONT><FONT style="font-weight:bold; " >Id:<BR></FONT>This required field uniquely Identifies this table.  . </P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >PCR Table </FONT><FONT style="font-weight:bold; " >Name:<BR></FONT>This recommended field may be used provide greater detail on this table.</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >PCR </FONT><FONT style="font-weight:bold; " >User 1-5:<BR></FONT>These optional fields may be used for entering any information your company wishes to retain.</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Obsolete</FONT><FONT style="font-weight:bold; " >?</FONT><FONT style="font-weight:bold; " ><BR></FONT>If this field is checked, the record is considered Obsolete, and it may not be directly specified during data-entry (either by entering the Id or selecting it from a list). Obsoleted records can be edited and the Obsolete option can be un-done when necessary.  When you check the Obsolete field, the following message box will be displayed: </P>
+ <P class="support" style="margin-left:36.00pt;">“You have elected to obsolete this record.  Would you like to see existing references to this record?”</P>
+ <P class="support" style="margin-left:36.00pt;">If you click Yes, the system will display a viewer that provides click-through access to all tables referencing this record. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >Changed Records:</FONT></P>
+ <P class="support" ><FONT style="font-weight:bold; " >Client Site</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Main Tab - New Field: PCR Table Id:<BR></FONT>If a PCR Table is specified in the Client Site it will be used for the validation of for all Equipment whose PCR Table Id is blank.  If a PCR table is referenced, Work Codes are validated in: </P>
+ <P class="support" style="margin-left:72.00pt;">New Call<BR>Work Order<BR>Dispatch Board<BR>Quote – Main Tab (if a lead work order is used, the Work Code defaults from it. If a lead work order is not specified, and a PCR Table is specified in the Site, the Work Code list will be limited to those referenced in the Site.)</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Client Site Equipment</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Main Tab - New Field: PCR Table Id<BR></FONT>If a PCR Table is specified in the Client Site Equipment record, it overrides the PCR Table in the Client Site record.</P>
+ <P class="support" style="margin-left:36.00pt;">If a PCR table is referenced, Work Codes are validated in: <BR>1. New Call<BR>2. Work Order<BR>3. Dispatch Board<BR>4. Client Site Equipment (PM Schedule tab)<BR>5. Quote – Main Tab (if a lead work order is used, the Work Code defaults from it. If a lead work order is not specified, and a PCR Table is specified in the Site, the Work Code list will be limited to those referenced in the Site.<BR><BR>Validate Cause Codes ...<BR>1. PCR Table<BR>2. Work Order<BR><BR>Validate Resolution Codes ...<BR>1. Work Order</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Work Order</FONT><FONT style="font-weight:bold; " >:</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Work Order Equipment Tab:</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Changed Field:  Work Code Id:  <BR></FONT>If PCR functionality is enabled, the system will validate the Work Code is specified in the PCR Table (in the Client Site / Client Site Equipment) when a Work Code is entered or changed. If a PCR Table is specified in the Client Site Equipment record, it overrides the PCR Table in the Client Site record.</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >New Field: Cause Code Id:<BR></FONT>This field may be used to specify the cause of the problem defined by the Work Code. If PCR functionality is enabled, the system will validate the Work Code / Cause Code pair is specified in the PCR Table when a Cause Code is entered or changed. If a PCR Table is specified in the Client Site Equipment record, it overrides the PCR Table in the Client Site record.</P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Changed Field:  Resolution Code Id:  <BR></FONT>This field may be used to specify the resolution of the problem defined by the Work Code/Cause Code. If PCR functionality is enabled, the system will validate that the Cause Code/Resolution Code pair is specified in the PCR Table when a Resolution Code is entered or changed. If a PCR Table is specified in the Client Site Equipment record, it overrides the PCR Table in the Client Site record.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Quote:</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Changed Field:  Work Code Id:  <BR></FONT>This field defaults from the lead work order if one is specified. </P>
+ <P class="support" style="margin-left:36.00pt;">If PCR functionality is enabled, the system will validate the Work Code is specified in the PCR Table (in the Client Site) when a Work Code is entered or changed. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >New Call:</FONT></P>
+ <P class="support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Changed Field:  Work Code Id:  <BR></FONT>If PCR functionality is enabled, the system will validate the Work Code is specified in the PCR Table (in the Client Site / Client Site Equipment) when a Work Code is entered or changed. If a PCR Table is specified in the Client Site Equipment record, it overrides the PCR Table in the Client Site record.</P>
+ <P class="support" >Dispatch:</P>
+ <P class="support" >*** looks at Site PCR ****</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >4842</FONT>  &nbsp;Refrigerant Tracking {Conserv Mod} – need notes</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5090</FONT>  &nbsp;Intercompany GL Entity Validations</P>
+ <P class="support" style="margin-left:36.00pt;">Job Record</P>
+ <P class="support" style="margin-left:36.00pt;">Changed Field: Job GL Entity Id<BR>When Intercompany Processing is enabled, the GL Entities specified in the Job record MUST reference the same Company as the GL Entities specified in its Cost Codes. Validation will not allow the GL Entity to be changed to one referencing a different Company.</P>
+ <P class="support" style="margin-left:36.00pt;">Job Cost Code Record:</P>
+ <P class="support" style="margin-left:36.00pt;">Changed Field: GL Entity Id<BR>When Intercompany Processing is enabled, the GL Entities specified in the Job record MUST reference the same Company as the GL Entities specified in its Cost Codes. Validation will not allow the GL Entity to be changed to one referencing a different Company.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5091</FONT>  &nbsp;Intercompany Reporting</P>
+ <P class="support" style="margin-left:36.00pt;">Discuss with Joe</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5099</FONT>  &nbsp;Viewer GLH parent tabs (multiple journals)</P>
+ <P class="support" style="margin-left:36.00pt;">This release Implements a new GLH parent tab in journals that post to GL History:</P>
+ <P class="support" style="margin-left:72.00pt;">AR Cash Receipts Journal</P>
+ <P class="support" style="margin-left:72.00pt;">AR Sales Journal</P>
+ <P class="support" style="margin-left:72.00pt;">GL Journal</P>
+ <P class="support" style="margin-left:72.00pt;">Job Journals</P>
+ <P class="support" style="margin-left:72.00pt;">Labor Journal </P>
+ <P class="support" style="margin-left:72.00pt;">Work Order</P>
+ <P class="support" style="margin-left:36.00pt;">This new Query-View tab displays the GL History postings associated with this record. The following columns appear on this tab: </P>
+ <P class="support" style="margin-left:72.00pt;">Account</P>
+ <P class="support" style="margin-left:72.00pt;">Account Name:</P>
+ <P class="support" style="margin-left:72.00pt;">Entity</P>
+ <P class="support" style="margin-left:72.00pt;">Period</P>
+ <P class="support" style="margin-left:72.00pt;">Company</P>
+ <P class="support" style="margin-left:72.00pt;">Security</P>
+ <P class="support" style="margin-left:72.00pt;">I/C (Yes if this post was generated by Intercompany Processing, No if not)</P>
+ <P class="support" style="margin-left:72.00pt;">Journal</P>
+ <P class="support" style="margin-left:72.00pt;">Trx Id</P>
+ <P class="support" style="margin-left:72.00pt;">Date</P>
+ <P class="support" style="margin-left:72.00pt;">Trx Count</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5106</FONT>  &nbsp;TechAnywhere – Quotes</P>
+ <P class="support" style="margin-left:36.00pt;">This enhancement enables TechAnywhere technicians to submit Open or Declined Quotes and their options to create quotes in SAMPro QuoteMaster.  Quote collateral will be attached to the lead Work Order as well as the Quote and Site. All 'web viewable' flags for the collateral will be set to No. The CollateralDirectory defined in sys-techanywhere will be used for the collateral upload. </P>
+ <P class="support" style="margin-left:36.00pt;">TechAnywhere client ...<BR>On the Scope of Service screen in TA, add a check box &quot;Unit Down&quot;.&nbsp; NOTE: Robert will take care of this part.<BR><BR>Additional Functionality on the TechAnywhere server-side post ...<BR>a. When the new 'Unit Down' field is checked ('y'), set the new Quote's header Description equal to 'Unit Down.<BR>b. If Unit Down not checked and the work order is a Service work order, write 'Found on Service Call' in the Quote Description field.<BR>c. If Unit Down not checked and the work order is a PM work order, write 'Found on PM Visit' in the Quote Description field.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5108</FONT> &nbsp;Work Order viewer</P>
+ <P class="support" style="margin-left:36.00pt;">In previous releases, if accessed a work order with tech lines previously set to ‘completed’ and then marked the work order Invoice Ready, the spurious message “Warning: not all Technician Lines are set to completed, invoice ready, or invoice review. Are you sure you want to set to invoice ready?</P>
+ <P class="support" style="margin-left:36.00pt;">This has been corrected in this image see that the message not longer appears when it should not. </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >5116</FONT>  TechAnywhere</P>
+ <P class="support" style="margin-left:36.00pt;">Corrects Key is missing error when posting purchase orders from TechAnywhere (missing jb group).</P>
+ <P class="support" >2681&nbsp;Time Slotting enabled – see 8.0 notes for details. </P>
+ <P class="support" >3597  &nbsp;Quote viewer – Print Change Order button; requires RCO report</P>
+ <P class="support" >3743  &nbsp;Time-of-Service PM Earnings enabled – see version 8.0 notes</P>
+ <P class="support" >3836  &nbsp;Color Selections – obsolete entries removed from Colors button </P>
+ <P class="support" >3852  &nbsp;Required Resources – CHANGE TO DEFAULT BEHAVIOR </P>
+ <P class="support" style="margin-left:36.00pt;">Change to .csv file format for import – see version 8.0 notes</P>
+ <P class="support" >3874   &nbsp;Purchase Order viewer corrects bug with single quote in Description field on load</P>
+ <P class="support" >3969  &nbsp;Compute PR – GL Interface for Accrued Pay (Canadian)</P>
+ <P class="support" >4086  &nbsp;Book Viewer - prevents documents with no Client Site from being listed via the Autopopulate </P>
+ <P class="support" >4112  &nbsp;Job, WO: Revenues Tab Billed Column uses JCH Revenue if Next Invoice Total is blank.</P>
+ <P class="support" >4204  &nbsp;Employee viewer – Add / Edit Tech buttons</P>
+ <P class="support" >4255  &nbsp;AP Date To Pay List (Select Invoices for Payment) – fixes CM discounts</P>
+ <P class="support" >4321  &nbsp;Start KPI Definitions Export – supports auto-archiving of KPIs exported with this function. </P>
+ <P class="support" >4373  &nbsp;BusinessObject - Data rows inserted using BusinessObject methodology scrty_rn set properly.</P>
+ <P class="support" >4404  &nbsp;Record Billing Adjustments Retainage - new Release All option </P>
+ <P class="support" >4421  &nbsp;Remote Tech APT Fixes to custom program to correct out of memory and labor posting errors. </P>
+ <P class="support" >4607  &nbsp;FMAnywhere – in process</P>
+ <P class="support" >4621  &nbsp;Viewers-  if ListPaneHorizontalGridIsDisabled= the graybar/numbers end with the last record.  </P>
+ <P class="support" >4650  &nbsp;TechAnywhere - Signature collateral is no longer flagged as web viewable.  </P>
+ <P class="support" >4727  &nbsp;Quote Viewer - Make all Scope Option fields required + validations</P>
+ <P class="support" >4730 &nbsp;Tech Anywhere – employee reimbursables with Other Rate PRS Reimb code</P>
+ <P class="support" >4741  &nbsp;Document Management – corrects OS Error and Runtime Errors</P>
+ <P class="support" >4748  &nbsp;Start TimeAnywhere Post (Internal)</P>
+ <P class="support" >4769  &nbsp;TechAnywhere generated Pos </P>
+ <P class="support" >4787  &nbsp;Service Channel FMMS - Corrects a bug with warning </P>
+ <P class="support" >4778  &nbsp;Work Order Escalation / Date Work Completed set if initially blank</P>
+ <P class="support" >4787  &nbsp;Service Channel – updates to Tech during SAM Pro warning</P>
+ <P class="support" >4788  &nbsp;Quick Attach- supports the use of either ^time^ or ^mtime^ in Quick Attach.  </P>
+ <P class="support" >4802  &nbsp;Required Resources / PM Work Orders – CHANGE TO DEFAULT BEHAVIOR for tech status</P>
+ <P class="support" >4810  &nbsp;Client Site Import – Fixed problem with client site names 40 chars with embedded single quote </P>
+ <P class="support" >4816  &nbsp;AP Journal viewer  - calculates revenue on Sub tab</P>
+ <P class="support" >4817  &nbsp;Service Invoicing</P>
+ <P class="support" >4819  &nbsp;Start Document Archive Maintenance- max document to process set to 10,000 if blank</P>
+ <P class="support" >4820  &nbsp;Viewers (general) – Required Field validation smarter so that all child lines are checked</P>
+ <P class="support" >4823  &nbsp;Service Channel - improves the stability of the ServiceChannel service </P>
+ <P class="support" >4824  &nbsp;Client Site Import – addition phone # formats import successfully</P>
+ <P class="support" >4835  &nbsp;Quote viewer - Job Cost Category now defaults from the Inventory Group </P>
+ <P class="support" >4839  &nbsp;New Call, New Call 2 and New Call Create (flashlight) – Override Tech Status Field added</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" >4850  &nbsp;Service Worksheet – Total Revenue Plus Tax field added below the Total Tax. </P>
+ <P class="support" >4851  &nbsp;Work Order Escalation Tab New Columns: Scheduled: and Created </P>
+ <P class="support" >4853  &nbsp;Initial Values Registry Setting – supports clearing a check box that would default to flagged</P>
+ <P class="support" >4855  &nbsp;Service Channel - UTF-8 encoded unicode conversions on Service Channel data for weblogs </P>
+ <P class="support" >4862  &nbsp;Pick Ticket viewer – Print Packing Slip button </P>
+ <P class="support" >4864 &nbsp;Messages - import/export functions place them in the appropriate folder based on Message Type</P>
+ <P class="support" >4867  &nbsp;Vendor Invoice – Entering / changing AP Journal writes record change log to Vendor Invoice </P>
+ <P class="support" >4871    &nbsp;Document viewer - Resource Locking issues when attaching documents </P>
+ <P class="support" >4873  &nbsp;New Batch File Logon Option – parameter to automatically kills existing sessions </P>
+ <P class="support" >4875  &nbsp;TechAnywhere Event Manager - if the Tech Id is invalid, writes to tech error log (sends email).</P>
+ <P class="support" >4882  &nbsp;AP &amp; AR Receipts Journal – correct sidebar after add</P>
+ <P class="support" >4883  &nbsp;Job History Viewer - Corrects a problem where the user had to save changes on tab changed </P>
+ <P class="support" >4884  &nbsp;Fill BOs –  Pick List Entry longer displays zero lines for orders with Allow Partial Ship flag cleared. </P>
+ <P class="support" >4887  &nbsp;Taylor Universal Work Orders enabled – see 8.0 notes</P>
+ <P class="support" >4890  &nbsp;Inventory Item viewer - Corrects problem double-clicking on the Miscellaneous box </P>
+ <P class="support" >4891   &nbsp;New Call - Original Caller no longer blanked when a Site with Notes was auto-selected </P>
+ <P class="support" >4892  &nbsp;New Call (CLS mod) – customization file, see case for details</P>
+ <P class="support" >4893  &nbsp;Purchase Order Created/Update from Quotemaster now validated </P>
+ <P class="support" >4898  &nbsp;COP Invoice – Portrait invoice</P>
+ <P class="support" >4900  &nbsp;Quick Attach - registry option allows user to enter a description during the Quit Attach process.  </P>
+ <P class="support" >4901  &nbsp;IM Stock Status Report  - registry entry to show / accumulate negative costs to all total levels </P>
+ <P class="support" >4902  &nbsp;Create PM WOs - corrects an error if flagged service parts written to the Required Resources tab </P>
+ <P class="support" >4906  &nbsp;Taylor EPOs  - CreateEPO button added to the PO Main tab for Taylor customizations only. </P>
+ <P class="support" >4907  &nbsp;Sybase Resource Governors - MAX_CURSOR and MAX_STATEMENT to 0 (unlimited)</P>
+ <P class="support" >4909  &nbsp;Quote viewer (corrects a problem clearing the Fixed Price field)</P>
+ <P class="support" >4913  &nbsp;CRMAnywhere (Ratner mod) – registry to block password change</P>
+ <P class="support" >4915  &nbsp;Service Billing – option to skip archived work orders</P>
+ <P class="support" >4918  &nbsp;Client viewer custom top toolbar (Kappus toolbar for handicapped worker)</P>
+ <P class="support" >4928&nbsp;Tech Anywhere: New wo’s set Workorder Credit Hold Flag when credit limit has been exceeded.</P>
+ <P class="support" >4929   &nbsp;Reverse Posted Invoice: Corrects “Runtime Error”  reverse construction invoice with Printed status </P>
+ <P class="support" >4930  &nbsp;Project Manager Workbench – Material PO’s Tab: recognizes receipts to change orders</P>
+ <P class="support" >4933  &nbsp;CRM Anywhere (old) now handles %decoding of special characters in passwords.</P>
+ <P class="support" >4934  &nbsp;New Call - Corrects a problem where the Client Id was not set the 2nd time a Site was searched for.</P>
+ <P class="support" >4936 &nbsp;BuildingAir cus file</P>
+ <P class="support" >4938  &nbsp;New Call – new option to default current system time via registry</P>
+ <P class="support" >4939  &nbsp;Switch Database Option added to menu</P>
+ <P class="support" >4949&nbsp;GUI – SKIN1 NotesOn button more obvious </P>
+ <P class="support" >4950  &nbsp;Client Collections Generate PDF Book button added</P>
+ <P class="support" >4970    &nbsp;Service Channel - StoreId and CustomerId registry enhancement</P>
+ <P class="support" >4974  &nbsp;Work Order viewer – WO Status Date and Status Time set on Invoice Ready</P>
+ <P class="support" >4975  &nbsp;Start Create EOM Unvouchered AP  - 'InitialValueFor' registry settings preserved </P>
+ <P class="support" >4976  &nbsp;Master Contract viewer – correct ‘ghost’ line after deleting line</P>
+ <P class="support" >4978  &nbsp;Record Billing Adjustments transaction Description written to AR Sales for Invoice Register</P>
+ <P class="support" >4979  &nbsp;PO Reorder Advice Report - This system report now supports Security at the Location level.</P>
+ <P class="support" >4980  &nbsp;Dispatch Board – Classic board loads properly after switching tech list. </P>
+ <P class="support" >4981    &nbsp;TechAnywhere – Work to support future TA functionality – see case for details. </P>
+ <P class="support" >4982  &nbsp;Generate Recurring Labor – supports user’s security </P>
+ <P class="support" >4984  &nbsp;Work Order Invoices tab – Invoice Description, Balance and Last Payment Date added </P>
+ <P class="support" >4988  &nbsp;TechAnywhere Post - all status changes with or without GPS coordinates write to WO Log Tab. </P>
+ <P class="support" >4991  &nbsp;New Call - Call Script button added to the New Site (Flashlight) screen. </P>
+ <P class="support" >4993  &nbsp;Client Order - GL Entity doesn't default from Site if Location change</P>
+ <P class="support" >4994  &nbsp;TechAnywhere Registry entry to Disregard Old Status when updating new status.</P>
+ <P class="support" >4998  &nbsp;Quote Master: PO’s from Quotes reference the Equipment Id's from the Scope tab </P>
+ <P class="support" >5013  &nbsp;Start Work Order Daily Edit Performance (SageQuest users only) </P>
+ <P class="support" >5016  &nbsp;New Call: registry to set the Priority from Equipment or Work Code </P>
+ <P class="support" >5017  &nbsp;User, Web User  – Export, Import Profile buttons added</P>
+ <P class="support" >5019  &nbsp;Work Order viewer (Escalation Manager): Date Work Completed set correctly</P>
+ <P class="support" >5021  &nbsp;W2s: Box 12 Code P (moving expenses) supported</P>
+ <P class="support" >5023  &nbsp;Client Site - Description column added to WO Open and WO Other lists - Work Order Name. </P>
+ <P class="support" >5024 &nbsp;DBAnalytics - internal</P>
+ <P class="support" >5027  &nbsp;TechFinder - Corrects ‘trimtrailingblanks error’ when double-clicking on the Tech </P>
+ <P class="support" >5029  &nbsp;Viewers - eliminates ‘Receiver is not a boolean’ errors on attempting to leave without saving record. </P>
+ <P class="support" >5030  &nbsp;Viewers (general) – system primitive failed error trapped</P>
+ <P class="support" >5031  &nbsp;Print COP Invoices – adds External Note support to portrait format </P>
+ <P class="support" >5033  &nbsp;SQL Server 2012 - internal</P>
+ <P class="support" >5037  &nbsp;Technician Time Slot tab – Clone Lines button added</P>
+ <P class="support" >5040  &nbsp;New Call – New Site (flashlight) – SQL Server - corrects a Truncation error writing to Job Alpha </P>
+ <P class="support" >5041  &nbsp;Canadian PR AFT Processing – in process</P>
+ <P class="support" >5044  &nbsp;Sales Tax Computations for COP Invoices (exempt sites now produce tax exempt invoices)</P>
+ <P class="support" >5049  &nbsp;CRMAnywhere (old) – supports multi-page text printing on quotes </P>
+ <P class="support" >5050  &nbsp;Positive Pay (Peoples United Bank) – see 8.0 notes</P>
+ <P class="support" >5052  &nbsp;Job Budget Import – supports inventory cost from import spreadsheet</P>
+ <P class="support" >5053  &nbsp;Job Cloning - Data Conversion Tools for Support</P>
+ <P class="support" >5057  &nbsp;Book viewer: now security-aware based on invcemstr.scrty_rn</P>
+ <P class="support" >5060  &nbsp;Work Order – CHANGE TO DEFAULT BEHAVIOR – compute invoice for construction jobs</P>
+ <P class="support" style="margin-left:36.00pt;">In this release, the default behavior now eliminates the 'Compute the Invoice? question, since the billing for these construction jobs will be done from Record Billing Adjustments. Registry setting is available to restore the old behavior – see version 8.0 notes. </P>
+ <P class="support" >5061  &nbsp;Project Manager Workbench – cost codes list enhanced</P>
+ <P class="support" >5062  &nbsp;Quote Approval Wizard - Corrects a sporadic 'key is missing' error</P>
+ <P class="support" >5070  &nbsp;New Call New COD Site: - Time Slot Wizard and Job fields added to WinII and derivative </P>
+ <P class="support" >5071 &nbsp;New Call – selection of Client after site</P>
+ <P class="support" >5073 &nbsp;Dispatching – Unavailable Tech Processing enhancements</P>
+ <P class="support" >5077  &nbsp;TechAnywhere – enhanced flat rate  handling</P>
+ <P class="support" >5080  &nbsp;TechAnywhere – Site update messages- site email</P>
+ <P class="support" >5088  &nbsp;Quote viewer – uppercase scope id validation</P>
+ <P class="support" >5092  &nbsp;New Call – Override Tech Status Handling – blank handled like default</P>
+ <P class="support" >5096 &nbsp;TechAnywhere’s new call now fills in the Account Manager from the Client Site.</P>
+ <P class="support" >5102  &nbsp;TechAnywhere – enables serialized inventory posting</P>
+ <P class="support" >5113  &nbsp;Dispatch Board - Make Estimated Hours editable in lower section of Classic D-Board</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

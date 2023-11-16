@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="T4"/>
+<meta name="MS-HKWD" content="Canadian"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report T4 (Canada)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="T4,Canadian,payroll"/><meta name="brsnext" value="References_List.htm"/><meta name="brsprev" value="Sales_Summary_By_Sales_Rep.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report T4 (Canada)">
+        <span>Report T4 (Canada)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report T4 (Canada)</h1>
+<p>This report generates the Canadian T4 forms. This is a system report, 
+ and does not need to be imported to your database.</p>
+<p>The Executive Payroll status of the 
+ Payroll Period is not considered when printing T4&#39;s.  Employees flagged 
+ as Executive Payroll will only appear on the report if the User running 
+ the report is flagged as Executive P/R. </p>
+<h2>Usage:</h2>
+<p>The registry options discussed in <a href="Registry_T4_Print_sys_printer_T4_.htm">Registry 
+ T4 Print (sys-printer-T4)</a> and <a href="Registry_T4_Report_Defaults.htm">Registry 
+ T4 Report Defaults</a> must be in place for this report to print properly.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important: 
+ Deduction Record Setup:<br/>
+</font>In order for Union Dues and Charitable Deductions to correctly print 
+ on the T4, the user must populate the field ‘Deduction User 1’ with Dues 
+ or Charitable, respectively, and ensure that the Deduction Type is Other 
+ Pre-Tax.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Earnings 
+ and Deduction Records – Other Information<br/>
+</font>Canadian T4&#39;s use the W2 Category fields in the Deductions &amp; 
+ Earnings records to populate the Other Information boxes on the T4. The 
+ W2 category must be filled in as OI:(Code # for T4). The Employee User 
+ 7 field is used to print the registration number in box 50 on the T4.</p>
+<p style="margin-left: 48px;">This release 
+ supports an enhancement to allow Earnings records to be set up with a W2 Category 
+ of OI:40 and an Earnings Type of Wage for use in T4 processing.</p>
+<p style="margin-left: 8px;">Box 14: Supports the processing of exempt 
+ earnings for the calculation of Employment Income.</p>
+<p style="margin-left: 8px;">Box 20: Enter RPP Contribution amounts using 
+ an Earnings Id with the W2 Category set to 20.</p>
+<p>Box 24: will be blank if it is the same as Box 14.</p>
+<p>Box 26: will be forced to blank.</p>
+<p style="margin-left: 8px;">Box 52: Enter Pension Adjustments using Earning 
+ Id&#39;s with the W2 Category set to 52.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Copy to Print:<br/>
+</font>Select either Employer or Employee version:</p>
+<p style="margin-left: 66.25pt;">Employer version prints two employees 
+ per page; generates the T4 Summary page</p>
+<p style="margin-left: 66.25pt;">Employee version prints same employee 
+ twice on one page; does not generate the T4 Summary page</p>
+<p><font style="font-weight: bold;">Province:<br/>
+</font>Select the Province (required).</p>
+<p><font style="font-weight: bold;">Year:<br/>
+</font> Select the Year: the Start Date &amp; End Date range will default 
+ to Jan 1 – Dec 31.</p>
+<p><font style="font-weight: bold;">Plain Paper copy?</font></p>
+<p>The first print should be to plain paper to check the numbers.</p>
+<p> <font style="font-weight: bold; text-decoration: underline; ">Plain 
+ Paper Selected</font></p>
+<p> Will display on screen; select printer to print hard copy</p>
+<p> <font style="font-weight: bold; text-decoration: underline; ">Plain 
+ Paper NOT Selected</font></p>
+<p> Will print directly to the selected printer</p>
+<p> Will prompt for T4 Summary page on Employer print</p>
+<p><font style="font-weight: bold;">Enter T4 Summary Remittance</font><font style="font-weight: bold;">:<br/>
+</font>This amount will balance to the amounts on the T4 Summary. It is 
+ not necessary to enter this amount when running Employee version as only 
+ the Employer version generates the T4 Summary Page</p>
+<p><font style="font-weight: bold;">Employee Id:<br/>
+</font>Enter Selected Employees or leave Blank for all employees.</p>
+<p><font style="font-weight: bold;">Executive Payroll<br/>
+</font>Enter Y if this is an executive payroll or clear for all payroll 
+ types. Note that only Executive Payroll users will be able to print forms 
+ for Executive Payroll employees. The 
+ Executive P/R status of the Payroll Period used to record entries is not 
+ considered. </p>
+
+</body></html>

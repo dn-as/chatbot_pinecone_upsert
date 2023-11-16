@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.8.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="pm invoice"/>
+<meta name="MS-HKWD" content="master contract"/>
+<meta name="MS-HKWD" content="create pm invoice"/>
+<meta name="MS-HKWD" content="pm"/>
+<meta name="MS-HKWD" content="create pm billing"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report PM Billing List</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="pm invoice,master contract,create pm invoice,pm,create pm billing"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report PM Billing List">
+        <span>Report PM Billing List</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report PM Billing List</h1>
+<p>In previous releases, it was very difficult to understand what PM Billing Schedule would be created from Master Contract until after the fact. This report is a &#39;predictor&#39;: it evaluate the Master Contract data and the data residing in the Client Site Billing Schedule, and lists what Billings will be created when Start Create PM Billings is run.</p>
+<h3>Range Screen:</h3>
+<p><font style="font-weight: bold;">Beginning Date: Ending Date:</font><br/>
+These fields define the range of Billing Dates that you wish to report on.</p>
+<p><font style="font-weight: bold;">Client Id:  Client Site Id: Branch Id: Project Id:<br/></font> These ranges enable you to filter the report, just as you would the actual Create PM Billings function. If you leave these fields blank, Billing information the Inspection Date(s) for all applicable clients will be within your security level will appear on your report.</p>
+<p><font style="font-weight: bold;">Master Contract Id:</font><br/>
+If you wish to only report on billings for equipment assigned to a specific Master Contract enter the desired Id.</p>
+<p><font style="font-weight: bold;">Invoice</font> <font style="font-weight: bold;">Id:<br/></font>By default, this field is set to = so that only billings that do not yet have an invoice generated will appear on the report. To report on predicted billings as well as those that have already been created, clear this field.</p>
+<h3>Report Format:</h3>
+<p>The report format mirrors the ‘checklist’ screen of the Start Create PM Billings Function, displaying the following fields for each billing:</p>
+<p>Billing Date:  Bill Amount:  Site Name:  Site Id: <br/>
+  Amount Earned: Invoice Description: Invoice Id:  </p>
+<h3>Report Order:</h3>
+<p>Predicted Master Contract Billings (yet to be generated) will appear first in the report, followed by predicted PM Billings not associated with a Master Contract. If the Invoice Id was cleared so that actual PM Billings would be included, Predicted Billings will appear first, and actual PM Billings will appear second.</p>
+
+</body></html>

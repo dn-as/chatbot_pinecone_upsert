@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.11.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Electronic Payment Credit Card Processing</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="Payment Processor,Credit Card Processing,Electronic Payments Credit Card Processing,alias (credit card processing)"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Electronic Payment Credit Card Processing">
+        <span>Registry Electronic Payment Credit Card Processing</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Electronic Payment Credit Card Processing</h1>
+<h3>Electronic Payments Setup</h3>
+<p>SAMPro supports Electronic Payments credit card processing as well as 
+ OpenEdge. Data-Basics works with USAePay as the middleman to Electronic 
+ Payment (the company that SAMPro users would sign up with).</p>
+<p><span id="BugEvents4">1. To enable this functionality in SAMPro, you 
+ must first set up an account with Electronic Payments. Once you have done 
+ an API Key and PIN number must be generated for when you set up your SAMPro 
+ registries.</span></p>
+<p>Instructions for generating an API PIN/Key:</p>
+<p style="margin-left: 48px;">Log into EP&#39;s customer merchant console (Vault 
+ Gateway).<br/>
+Under Settings, click API Keys (If API Keys option is missing, contact 
+ EPI support).<br/>
+Click Add API Key on upper right.<br/>
+Name = Databasics<br/>
+PIN = any random 4 digit key you feel like typing (remember this for registry)<br/>
+Click Save on lower right. After saving, it will auto-generate an API Key. 
+ Use this for the registry.</p>
+<p><span>2.  SamproSecureCommunication.war must be installed in Glassfish 
+ to enable this functionality. If your firm does not already have a Glassfish 
+ server installed (for DBAnalytics or TechAnywhere) contact your support 
+ representative to set this up.</span></p>
+<p><span>3. I</span>t is recommended that you create a new Payment Type 
+ record with the Id set to EPCreditCard and the GL Bank Account set to 
+ the appropriate bank or sweep account for Electronic Payments. This will 
+ be used for recurring payment processing.</p>
+<p><span>4. Complete the registry entries listed below.</span></p>
+<p>5. We recommend testing this functionality in your sandbox first. When 
+ you go life with this functionality, test with a company credit card before 
+ using for customers.</p>
+<h3>Related Registry:</h3>
+<p>See Registry to <a href="Registry_Create_PM_Billing_Work_Order_Invoice.htm#Disable_Automatic_Use_of_Payment_Alias_in_Create_PM_Billings">Disable 
+ Automatic Use of Alias in Create PM Billings by AR Terms Code</a>.</p>
+<h3>Registry to Specify Electronic Payments as the Payment Processor</h3>
+<p><span style="font-weight: bold;">Registry ID:</span> sys-ffv-global-settings</p>
+<p><span style="font-weight: bold;">Setting Key:</span> DefaultPaymentProcessor 
+  Setting Value: EP </p>
+<p>This registry is required to specify Electronic Payments as the payment 
+ processor, If this registry is absent, Open Edge (OE) is assumed to be 
+ the default processor.</p>
+<h3>Registry to Configure Electronic Payments Processing</h3>
+<p><span style="font-weight: bold;">Registry Id:</span> sys-payment-processor-ep</p>
+<h5>Registry Id to Enable Intercompany support Electronic Payments Credit 
+ Card Processing</h5>
+<p>This release supports Company-specific functionality for Electronic 
+ Payments processing. A new  Interco v.cus file must be installed 
+ and Company-specific registry settings must be created if Company Specific 
+ settings are needed. If all Companies will be using the same settings 
+ only the base registry (see above) is needed. </p>
+<p>These Company-specific registries are identified by a special suffix 
+ on the Registry Id to define that the Company Id is being referenced.  The 
+ general form of the suffix is: </p>
+<p><span style="font-weight: bold;">Id:</span> sys-payment-processor-EP-company:<span style="font-style: italic;">CompanyId</span>  </p>
+<p style="margin-left: 48px;">For example, the EP payment processor registry 
+ for Company 01 is:  sys-payment-processor-EP-company:01</p>
+<p style="margin-left: 48px;">To set up for Company-Specific processing, 
+ the Company-specific registries could contain either</p>
+<p style="margin-left: 48px;">All required options for sys-payment-processor-EP</p>
+<p style="margin-left: 48px;">Or</p>
+<p style="margin-left: 48px;">Only the options that distinguish the companies, 
+ with the remaining settings in the basic directories (sys-payment-processor-EP). 
+  </p>
+<p style="margin-left: 48px;">For Electronic Payments, the following options 
+ would be different per company:</p>
+<p style="margin-left: 48px;">APIPin<br/>
+APIKey<br/>
+PMBillingPaymentCode  </p>
+<p style="margin-left: 48px;">Optionally, the directory option may be used 
+ to keep the Electronic Payment logs separated by company. Remember that 
+ these subdirectories MUST EXIST on the main SAMPro directory containing 
+ the SAMPro executable. </p>
+<h5>Glassfish Settings</h5>
+<p><span style="font-weight: bold;">Setting Key:</span> Server  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">FILL 
+ IN SERVER NAME HERE</span></p>
+<p>This registry specifies your Glassfish server.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> Port  <span style="font-weight: bold;">Setting Value: </span><span style="font-style: italic;">FILL 
+ IN GLASSFISH PORT</span></p>
+<h5>Address for Sandbox or Live Electronic Payments URL (only enable one)</h5>
+<p style="font-weight: bold;">Sandbox:</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting 
+ Key:</span> URL  <span style="font-weight: bold;">Setting Value:</span> 
+ <span style="font-weight: bold;">https://sandbox.usaepay.com/api/v2/transactions</span> 
+ </p>
+<p style="font-weight: bold;">Live:</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting 
+ Key:</span> URL  <span style="font-weight: bold;">Setting Value:</span> 
+ <span style="font-weight: bold;">https://usaepay.com/api/v2/transactions</span> 
+ </p>
+<h5>Additional Required Settings</h5>
+<p><span style="font-weight: bold;">Setting Key:</span> APIPin  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">enter</span> 
+ <span style="font-style: italic;">pin provided by EP</span></p>
+<p>Enter the API Pin provided specified for your firm in Electronic Payments 
+ (see Electronic Payments Setup above).</p>
+<p><span style="font-weight: bold;">Setting Key:</span> APIKey   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">enter</span> 
+ <span style="font-style: italic;">key provided by EP</span></p>
+<p>Enter the API Key provided for your firm by Electronic Payments .</p>
+<p><span style="font-weight: bold;">Setting Key:</span> content-type  <span style="font-weight: bold;">Setting Value:</span> application/json</p>
+<p>This entry is required and must be entered as shown above. </p>
+<p><span style="font-weight: bold;">Setting Key:</span> PaymentProcessor 
+  <span style="font-weight: bold;">Setting Value:</span> SamproSecureCommunication/SSL</p>
+<p>This entry is required and must be entered as shown above. </p>
+<p><span style="font-weight: bold;">Setting Key:</span> Directory  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">paymentProcessingEP</span></p>
+<p>This entry specifies a subdirectory the base SAMPro directory that is 
+ used to for Electronic Payment logs. <span style="font-style: italic; 
+											 font-weight: bold;">Note that 
+ this subdirectory MUST EXIST on the main SAMPro directory containing the 
+ SAMPro executable.</span><span style="font-style: italic;"> </span></p>
+<p class="MsoNormal"><span style="font-weight: bold;">Setting Key:</span> 
+ PMBillingPaymentCode <span style="font-weight: bold;">Setting Value:</span> 
+ <span style="font-style: italic;">enter a</span> <span style="font-style: italic;">valid 
+ payment type id</span></p>
+<p class="MsoNormal">This registry defines the Payment Type to use with 
+ EP credit card processing. This Payment Type <span style="text-decoration: underline; ">must</span> 
+ specify the G/L Bank Account to use for auto pay PM Billings (e.g, EPCreditCard).</p>
+
+</body></html>

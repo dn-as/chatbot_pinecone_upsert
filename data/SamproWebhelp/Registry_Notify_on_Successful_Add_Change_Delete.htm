@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.3.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="sys-viewer- general options"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Notify on Successful Add, Change, Delete</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="registry,sys-viewer- general options"/><meta name="brsnext" value="Registry_Control_Initial_Window_Size_and_Position.htm"/><meta name="brsprev" value="Send_Support_Data.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Notify on Successful Add, Change, Delete">
+        <span>Registry Notify on Successful Add, Change, Delete</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Notify on Successful Add, Change, Delete</h1>
+<h2>Purpose:</h2>
+<p>The software disables keyboard and mouse-driven actions in SAM Pro while record viewers are saving data. The following optional registry entries may be used to display a message when a record has been successfully added, saved or deleted (note that the default is not to display the message).</p>
+<h2>Usage:</h2>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline;">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font> sys-viewer-<font style="font-style: italic;">afunctionid</font></p>
+<p><font style="font-weight: bold;">Key Setting:</font> NotifySuccessfulRecordChange <font style="font-weight: bold;">Key Value:</font> true</p>
+<p><font style="font-weight: bold;">Key Setting:</font> NotifySuccessfulRecordAdd  <font style="font-weight: bold;">Key Value:</font> true</p>
+<p><font style="font-weight: bold;">Key Setting:</font> NotifySuccessfulRecordDelete <font style="font-weight: bold;">Key Value:</font> true</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline;">Example: Notify User when Work Order Save is Complete</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Id:</font> sys-viewer-vwrkordr</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Key Setting:</font> NotifySuccessfulRecordChange <font style="font-weight: bold;">Key Value:</font> true</p>
+
+</body></html>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.1.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="cross reference"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="vendor"/>
+<meta name="MS-HKWD" content="parts"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Inventory Item Vendor Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="cross reference,inventory,vendor,parts"/><meta name="brsnext" value="Inventory_Items_Bill_of_Material__BOM_Tab_.htm"/><meta name="brsprev" value="Inventory_Items_Serialized__SRL_Tab_.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Inventory Item Vendor Tab">
+        <span>Inventory Item Vendor Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Inventory Item Vendor (Cross Reference) Tab</h1>
+<h2>Purpose:</h2>
+<p>Cross-references your part number with each of your vendors&#39; part numbers. This tab also enables you to maintain vendor pricing, container size, and lead time information.</p>
+<h2>Example:</h2>
+<p>Your part number for an item is ZZ5; Vendor A&#39;s number is 264354 and Vendor B&#39;s number is 5555323. When a Purchase Order for this item is created for Vendor A, his part number 264354 will be referenced on it. When a Purchase Order for this item is created for Vendor B, his part number 5555323 will be referenced on it.</p>
+<h2>Usage:</h2>
+<p>This table provides the default Vendor Part Number, Description, Price (your cost), Container size, and Lead Time on the Purchase Order detail. <span style="font-weight: bold;">By default, these entries can be directly edited by the user, but are automatically generated/updated from Purchase Orders whenever the Vendor&#39;s part number, description, price, container or lead time information is added or changed.</span></p>
+
+<p>A <a href="Registry_Inventory_Item_sys_viewer_vinvntryitm_.htm#Registry_to_Limit_Writing_to_Inventory_Vendor_Tab_to_Purchasing_Agents">Registry to Limit Writing to Inventory Vendor Tab to Purchasing Agents</a> may be enabled to restrict manual changes to this tab and disable updates from Purchases Orders and AP Journal entries.</p>
+
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Vendor Id:</font><br/>
+A valid Vendor Id. Press Alt+F7 or double-click on this field to display a list of vendors from which to select. The Vendor Name will be displayed when the Id field is filled in.</p>
+<p><font style="font-weight: bold;">Vendor Part Number: Vendor Part Description</font> (2 x 30 character)<br/>
+The number and description used by the vendor to identify this part.</p>
+<p><font style="font-weight: bold;">Lead</font> (3 numeric)<br/>
+The lead time (in days) required to obtain this part from this Vendor.</p>
+<p><font style="font-weight: bold;">Price:</font><br/>
+The Vendor&#39;s price (your cost) for this item. By default, buying an Item from a Vendor for the first time will generate a new line on the Inventory Item Vendor tab, including the Price field. The Purchase Order will also update the Price on existing Inventory Item Vendor Tab lines. The AP Journal also updates this field. A <a href="Registry_Inventory_Item_sys_viewer_vinvntryitm_.htm#Registry_to_Limit_Writing_to_Inventory_Vendor_Tab_to_Purchasing_Agents">Registry to Limit Writing to Inventory Vendor Tab to Purchasing Agents</a> may be enabled to restrict manual changes to this tab and disable updates from Purchases Orders and AP Journal entries. </p>
+<p><font style="font-weight: bold;">Cont</font> (4 character)<br/>
+The standard container or container size this Vendor uses for this item.</p>
+
+</body></html>

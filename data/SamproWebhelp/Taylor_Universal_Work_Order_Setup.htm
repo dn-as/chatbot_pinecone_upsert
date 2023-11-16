@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.16.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Universal Work Order"/>
+<meta name="MS-HKWD" content="work order"/>
+<meta name="MS-HKWD" content="Tayor"/>
+<meta name="MS-HKWD" content="UWO Taylor Universal Work Order"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Taylor Universal Work Order Setup</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Universal Work Order,work order,Tayor,UWO Taylor Universal Work Order"/><meta name="brsnext" value="Registry_ADP_Export.htm"/><meta name="brsprev" value="Registry_Start_Taylor_Universal_Work_Order_Generation.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Taylor Universal Work Order Setup">
+        <span>Taylor Universal Work Order Setup</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Taylor Universal Work Order Setup</h1>
+<h2>Purpose:</h2>
+<p>Taylor Distributors must transmit a complex file to Taylor Corporate 
+ for each invoiced Work Order that they wish to report. This is known as 
+ the “Universal Work Order” or “UWO” field. In addition to the generation 
+ of this “UWO” file, Sampro keeps track of the work orders already processed 
+ in a “Transmissions” database table.</p>
+<p>Certain database fields must be set up correctly for this functionality 
+ to be operational: these fields are discussed in this topic.</p>
+<h2>Related Topics:</h2>
+<p>See <a href="Taylor_Universal_Work_Order_Checklist.htm">Taylor Universal 
+ Work Order Checklist</a> for a handy checklist for users to consult when 
+ running this function.</p>
+<p>See <a href="Start_Taylor_Universal_Work_Order_Generation.htm">Start 
+ Taylor Universal Work Order Generation</a> for information on running 
+ the generate function itself.</p>
+<p>See <a href="Registry_Start_Taylor_Universal_Work_Order_Generation.htm">Registry 
+ Start Taylor Universal Work Order Generation</a> for the registry options 
+ required for this functionality.</p>
+<p class="No_Spacing" style="text-align: center;"> </p>
+<p class="No_Spacing" style="text-align: center;"><font style="font-size: 16pt; 
+														 font-weight: bold;" size="5">Taylor 
+ UWO Installation Guidelines</font></p>
+<p class="No_Spacing" style="text-align: center;"><font style="font-size: 12pt; 
+														 font-weight: bold;" size="4">December 
+ 5, 2012</font></p>
+<p class="No_Spacing" style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="No_Spacing"><font style="font-weight: bold;">Introduction</font></p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">The Taylor Universal 
+ Work Order (UWO) Sampro feature allows the user to select a group of completed 
+ Work Orders and to export the contents of these Work Orders into a file 
+ formatted according to the Taylor UWO specifications. The user is responsible 
+ for transmitting this file to Taylor.</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;"> </p>
+<p class="No_Spacing"><font style="font-weight: bold;">How Work Orders 
+ are selected for processing</font></p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">The ‘Start Taylor Universal 
+ Work Order Generation’ function allows the user to enter a date range. 
+ The database is then queried for Work Orders matching the following criteria:</p>
+<ul class="p-No_Spacing">
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 42.00pt;">The 
+	 Work Order’s Close Date must fall between the indicated date range.</p></li>
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 42.00pt;">The 
+	 Work Order must have a jchstry record having a non-blank jchstry_rfrnce_ar_invce_id 
+	 value</p></li>
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 42.00pt;">The 
+	 Work Order must not already been included in a UWO file. This is determined 
+	 by querying the ‘tylruwotrnsmssns’ table. See below.</p></li>
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 42.00pt;">The 
+	 Work Order must not be ‘Private’. Currently, only Work Orders having 
+	 a priority of 7 are considered Private.<br/>
+	</p></li>
+</ul>
+<p class="No_Spacing" style="margin-left: 36.00pt;">The user may add additional 
+ Work Orders to the list once it is displayed on the list screen. The number 
+ of blank lines on the screen is controlled by an entry in the Sampro Registry.</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;"> </p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">The user may remove 
+ a Work Order from the list by blanking out the Work Order Id on the list 
+ screen.</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;"> </p>
+<p class="No_Spacing"><font style="font-weight: bold;">The Transmissions 
+ table (tylruwotrnsmssns</font><font style="font-weight: bold;">)</font></p>
+<ul class="p-No_Spacing">
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 6.00pt;">The 
+	 Transmissions table is used to record the Work Orders written to the 
+	 UWO files.</p></li>
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 6.00pt;">The 
+	 Transmissions table is created automatically when it is needed. Therefore, 
+	 the Taylor UWO feature can be added to any version of Sampro without 
+	 requiring a database update.</p></li>
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 6.00pt;">Currently, 
+	 there are no Sampro Viewers for the Transmissions table.</p></li>
+</ul>
+<p class="No_Spacing" style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="No_Spacing"><font style="font-weight: bold;">The Taylor UWO record 
+ types</font></p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">The Tayor specs call 
+ for 4 types of records that can be generated for each Work Order:</p>
+<ul class="p-No_Spacing">
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 44.25pt;">Type 
+	 1 (‘Open’) records  One per Work Order</p></li>
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 44.25pt;">Type 
+	 2 (‘Parts’) records   Zero or more per Work Order</p></li>
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 44.25pt;">Type 
+	 3 (‘Charge’) records  Zero or more per work Order. Charges may 
+	 be either<br/>
+	    Labor Charges or Other Charges</p></li>
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 44.25pt;">Type 
+	 4 (‘Close’) records  One per Work Order</p></li>
+</ul>
+<p class="No_Spacing" style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="No_Spacing"><font style="font-weight: bold;">Sources of data 
+ within the UWO records (Type 1 Open Records). Fields not listed are left 
+ empty.</font></p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Distributor # Sampro 
+ Registry (key = DistributorNo)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Distributor Branch 
+ # Sampro Registry (key = DistributorBranch)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Transaction Id ‘1’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">System W.O.# wrkordr_Id</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Taylor Technician # tchncn_id</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Secondary W.O. wrkordr_po</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Tertiary W.O. invce_id</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Open Date wrkordr_dte_opnd</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Open Time wrkordr_tme_opnd</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Customer Name clntste_nme</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Address 1 clntste_addrss_shp_addrss_strt</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Address 2 clntste_addrss_shp_addrss_strt_2</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">City clntste_addrss_shp_addrss_cty</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">State clntste_addrss_shp_addrss_stte</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Zip Code clntste_addrss_shp_addrss_zp</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Phone 1 clntste_phne_vce</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">W.O. Type wrkordr_usr1 
+ (first character only)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Model Family clntsteeqpmnt_mnfctrr_mdl 
+ (first 4 characters only)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Serial # clntsteeqpmnt_srl_nmbr</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Phase Type clntsteeqpmnt_usr19 
+ (first character only) Must be ‘1’ or ‘3’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Cooling Type clntsteeqpmnt_usr20 
+ (first character only) Must be ‘A’ or ‘W’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Unit Install Date clntsteeqpmnt_dte_instlld</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Dispatcher Problem 
+ Text wrkordr_wrk_rqstd (first 180 characters only)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Date Format Version 
+ Level ‘1A’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;"> </p>
+<p class="No_Spacing"><font style="font-weight: bold;">Sources of data 
+ within the UWO records (Type 2 Parts Records). Fields not listed are left 
+ empty</font></p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Distributor # Sampro 
+ Registry (key = DistributorNo)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Distributor Branch 
+ # Sampro Registry (key = DistributorBranch)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Transaction Id ‘2’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">System W.O.# wrkordr_Id</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Part number 1 invntryitmbyvndr_vndr_prt_nmbr</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Part Removed/Installed 
+ Flag1 ‘I’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Who Pays Flag jb_ 
+ usr10 (first character only) Must be ‘M’, ‘D’ or ‘C’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Part Description 1 invntryitm_nme</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Quantity 1 wrkordrinvntry_unt_actl</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;"> </p>
+<p class="No_Spacing"><font style="font-weight: bold;">Sources of data 
+ within the UWO records (Type 3 Charges Records for Labor Charges). Fields 
+ not listed are left empty</font></p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Distributor # Sampro 
+ Registry (key = DistributorNo)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Distributor Branch 
+ # Sampro Registry (key = DistributorBranch)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Transaction Id ‘3’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">System W.O.# wrkordr_Id</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Category Field lbrrte_unt_msre 
+ (first character only) Must be ‘L’, ‘T’, ‘M’, or ‘X’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Charge Description 
+ 1 lbrrte_nme</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Unit Quantity 1 wrkordrlbr_unt_bllble</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Unit Rate 1 wrkordrlbr_rvne_rte</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Who Pays Flag: #1 jb_ 
+ usr10 (first character only) Must be ‘M’, ‘D’ or ‘C’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;"> </p>
+<p class="No_Spacing"><font style="font-weight: bold;">Sources of data 
+ within the UWO records (Type 3 Charges Records for Other Charges). Fields 
+ not listed are left empty</font></p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Distributor # Sampro 
+ Registry (key = DistributorNo)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Distributor Branch 
+ # Sampro Registry (key = DistributorBranch)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Transaction Id ‘3’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">System W.O.# wrkordr_Id</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Category Field ‘M’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Charge Description 
+ 1 wrkordrothr_nme</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Unit Quantity 1 wrkordrothr_unt_bllble</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Unit Rate 1 wrkordrothr_rvne_rte</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Who Pays Flag: #1 jb_ 
+ usr10 (first character only) Must be ‘M’, ‘D’ or ‘C’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;"> </p>
+<p class="No_Spacing" style="margin-left: 36.00pt;"> </p>
+<p class="No_Spacing"><font style="font-weight: bold;">Sources of data 
+ within the UWO records (Type 4 Close Records). Fields not listed are left 
+ empty</font></p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Distributor # Sampro 
+ Registry (key = DistributorNo)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Distributor Branch 
+ # Sampro Registry (key = DistributorBranch)</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Transaction Id ‘4’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">System W.O.# wrkordr_Id</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Service Begin Date dte_erlst_strt</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Service Begin Time tme_erlst_strt</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Service Completion 
+ Date dte_mst_cmplte</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Service Completion 
+ Time tme_mst_cmplte</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Tech Failure Code wrkcde_id</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Tech Resolution Code rsltncde_id</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Service Performed Text wrkordr 
+ wrk_prfrmd</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Recall? ‘Y’ if 
+ wrkordr_type is &#39;Call Back&#39;; otherwise ‘N’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">ReWrite? ‘Y’ if 
+ wrkordr_orgnl_wo_id is not empty; otherwise ‘N’</p>
+<p class="No_Spacing" style="margin-left: 36.00pt;">Approval Name Taken 
+ from the Work Order’s PO Id (see below)</p>
+<p class="No_Spacing" style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="No_Spacing"><font style="font-weight: bold;">Approval Name Logic</font></p>
+<ul class="p-No_Spacing">
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 6.00pt;">If 
+	 the Work Order’s PO Id begins with “AUTH”, the Approval Name is taken 
+	 from the PO Id with the first 6 characters removed. Note that it is 
+	 assumed (but not verified) that the “AUTH” prefix will be immediately 
+	 followed by a “#” and a space.</p></li>
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 6.00pt;">If 
+	 the Work Order’s PO Id does not begin with “AUTH”, the Approval name 
+	 will be blank.</p></li>
+</ul>
+<p class="No_Spacing" style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="No_Spacing"><font style="font-weight: bold;">Inventory, Labor, 
+ and Other Record Exclusions</font></p>
+<ul class="p-No_Spacing">
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 6.00pt;">The 
+	 lines’ Job Cost Category will be examined to determine whether or 
+	 not to include the line on the invoice.</p></li>
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 6.00pt;">The 
+	 line will be excluded from the invoice if the first character of the 
+	 jbcstctgry_usr2 field is set to “Y”.</p></li>
+</ul>
+<p class="No_Spacing" style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="No_Spacing"><font style="font-weight: bold;">Inventory Item Exclusions</font></p>
+<ul class="p-No_Spacing">
+	<li class="p-No_Spacing" style="font-size: 11pt;"><p class="No_Spacing" style="margin-left: 6.00pt;">Inventory 
+	 Items will be excluded from the invoice if the first character of 
+	 the item’s invntryitm_usr2 field is set to “Y”.</p></li>
+</ul>
+<p class="No_Spacing" style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>Programming Background Notes:</h2>
+<p class="No_Spacing" style="margin-top: 0; margin-bottom: 0;"> </p>
+<h3>“Regular” conventions</h3>
+<ol class="p">
+	<li class="p" style="font-size: 9pt;"><p>Computed UWO Field Sources:</p>
+	<ol class="p">
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">Distributor 
+		 #:   Sampro Registry</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">Distributor 
+		 Branch #:  Sampro Registry</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">Private 
+		 Flag:  A Work Order will not be reported to Taylor if 
+		 its priority is 7</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">W.O. 
+		 Type:  wrkordr_usr1 (First Character Only)</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">Phase 
+		 Type:  clntsteeqpmnt_usr19 (First Character Only)</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">Cooling 
+		 Type:  clntsteeqpmn_usr20 (First Character Only)</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">Taylor 
+		 Technician #: Sampro Technician Id</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">Who 
+		 Pays Flag:  jb_usr10 (First Character Only)</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">Category 
+		 Field (Labor): lbrrte_unt_msre (First Character Only)</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">Category 
+		 Field (Other):  “M”</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">Ground 
+		 Check (Y/N): “Y”</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">Approval 
+		 Name: Taken from the Work Order’s PO Id (see below)</p></li>
+	</ol></li>
+	<li class="p" style="font-size: 9pt;"><p>Approval Name Logic:</p>
+	<ol class="p">
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">If 
+		 the Work Order’s PO Id begins with “AUTH”, the Approval Name is 
+		 taken from the PO Id with the first 6 characters removed. Note 
+		 that it is assumed (but not verified) that the “AUTH” prefix will 
+		 be immediately followed by a “#” and a space.</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">If 
+		 the Work Order’s PO Id does not begin with “AUTH”, the Approval 
+		 name will be blank.</p></li>
+	</ol></li>
+	<li class="p" style="font-size: 9pt;"><p>Inventory, Labor, and Other 
+	 Record Exclusions:</p>
+	<ol class="p">
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">The 
+		 lines’ Job Cost Category will be examined to determine whether 
+		 or not to include the line on the invoice.</p></li>
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">The 
+		 line will be excluded from the invoice if the first character 
+		 of the jbcstctgry_usr2 field is set to “Y”.</p></li>
+	</ol></li>
+</ol>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<ol start="20" class="p">
+	<li class="p" style="font-size: 9pt;"><p>Inventory Item Exclusions:</p>
+	<ol class="p">
+		<li class="p" style="font-size: 9pt;"><p style="margin-left: 47.75pt;">Inventory 
+		 Items will be excluded from the invoice if the first character 
+		 of the item’s invntryitm_usr2 field is set to “Y”.</p></li>
+	</ol></li>
+</ol>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>About the Transmissions Table</h2>
+<p>The name of the Transmissions Table is “TylrUwoTrnsmssns”. This table 
+ is automatically created when Sampro identifies that it is needed. There 
+ is currently no Sampro Viewer for this table.</p>
+<p>The columns in this table are:</p>
+<p style="margin-left: 36.00pt;">tylruwotrnsmssns_rn    numeric(10,0) 
+ NOT NULL UNIQUE, </p>
+<p style="margin-left: 36.00pt;">tylruwotrnsmssns_id    char(10) 
+ NOT NULL UNIQUE, </p>
+<p style="margin-left: 36.00pt;">wrkordr_rn      numeric(10,0) 
+ NOT NULL, </p>
+<p style="margin-left: 36.00pt;">tylruwotrnsmssns_invce_nmbr  char(10) 
+ NOT NULL, </p>
+<p style="margin-left: 36.00pt;">tylruwotrnsmssns_dte_snt   char(10) 
+ NOT NULL </p>
+<h3>Normal Mode vs. Kappus Mode</h3>
+<p>Fields in the UWO file are computed based on certain ‘conventions’ employed 
+ by the installer when setting up the Sampro Database. While the base package 
+ has one set of conventions, Kappus has its own set. To account for this, 
+ UWO generation can run in ‘regular’ or ‘Kappus’ mode. This is controlled 
+ by entries in the Sampro Registry as described below.</p>
+<p>In the base package, this function now the Work Code Id to report as 
+ the fail code and the Resolution Code Id to report as the resolution code.</p>
+
+</body></html>

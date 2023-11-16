@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="account manager"/>
+<meta name="MS-HKWD" content="manager"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Account Managers Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="account manager,manager"/><meta name="brsnext" value="Payment_Type_Viewer.htm"/><meta name="brsprev" value="Market_Sources_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Account Managers Viewer">
+        <span>Account Managers Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Account Manager Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create, maintain and select from the list of managers for your various 
+ categories of accounts.</p>
+<h2>Example:</h2>
+<p>Identify which account manager or sales person is responsible for a 
+ client or site.</p>
+<h2>Usage:</h2>
+<p>Referenced in records: Client, Client Site, and Client Order.</p>
+<h2>Registry:</h2>
+<p>Registries to <a href="Interest_Registry_Entry_Set_Disabled_Fields.htm">Set 
+ Disabled Fields</a> and <a href="Internal_Registry_Set_Required_Fields.htm">Set 
+ Required Fields</a>. </p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields which may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the order or status (required, optional, 
+ default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">Account Manager Id:</font> (10 character, 
+ only . and - special characters)<br/>
+This required field represents a unique Id for each of your account managers.</p>
+<p><font style="font-weight: bold;">Acct. Manager Name:</font> (40 character)<br/>
+The full name of the account manager. This field is optional but recommended 
+ since it provides an alternative look-up.</p>
+<p><font style="font-weight: bold;">Employee Id:</font><br/>
+Enter the Employee Id or double-click on this field (or press Alt+F7) to 
+ select from a list. This field is optional.</p>
+<p><font style="font-weight: bold;">Contact Id:<br/>
+</font>This field specifies the record that supplies the e-mail, phone 
+ and address contact information for this Account Manager.</p>
+<p><font style="font-weight: bold;">Contact Type Id: Firm:<br/>
+Email Address: Email Fax:</font> <font style="font-weight: bold;">Email 
+ Address 2:</font> (formerly Email Pager)<font style="font-weight: bold;"><br/>
+Notes: Mailing Address:<br/>
+</font>These display-only fields default from the Contact record. To update 
+ them, right-click on the Contact Id and edit the Contact record directly.</p>
+<p><font style="font-weight: bold;">Account Manager User 1:  Account 
+ Manager User 2:</font> (30 characters each)<br/>
+These optional fields may be used to record additional information.</p>
+<p><font style="font-weight: bold;">Obsolete</font><font style="font-weight: bold;">?</font><font style="font-weight: bold;"><br/>
+</font>If this field is checked, the record is considered Obsolete, and 
+ it may not be directly used for data-entry (either by entering the Id 
+ or selecting it from a list). Obsoleted records can be edited and the 
+ Obsolete option can be un-done when necessary. When you check the Obsolete 
+ field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. 
+ Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through 
+ access to all tables referencing this record: see <a href="References_List.htm">References 
+ List</a> for details.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field generally displays the Security Id of 
+ the local user that created this record. If multiple location security 
+ is not implemented on your system, or if this record was created by a 
+ global user, this field will be blank.</p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">Also 
+ See...</font> <font color="#FF0000"><br/>
+</font> <a href="Client_Viewer.htm">Clients</a>  <a href="Client_Site_Viewer.htm">Client 
+ Site Viewer</a>  <a href="Contact_Viewer.htm">Contact Viewer</a></p>
+
+</body></html>

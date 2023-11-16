@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.9.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="accounts payable"/>
+<meta name="MS-HKWD" content="ap"/>
+<meta name="MS-HKWD" content="date to pay"/>
+<meta name="MS-HKWD" content="payables"/>
+<meta name="MS-HKWD" content="vendor"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>AP Date To Pay</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="accounts payable,ap,date to pay,payables,vendor"/><meta name="brsnext" value="AP_Payment_Approval.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AP Date To Pay">
+        <span>AP Date To Pay</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>AP Date to Pay List (Vendor Date to Pay / Select Invoices for Payment)</h1>
+<h2>Purpose:</h2>
+<p>Verifies and enables the user to modify the information that will be 
+ used to generate AP checks. The system restricts this list to vendors 
+ with outstanding balances greater than zero.</p>
+<h2>Registry:</h2>
+<p>Enable <a href="Registry_AP_Date_to_Pay.htm">Pay All Invoices</a> button.</p>
+<h2>Usage:</h2>
+<p>This function should be run after recording AP transactions but before 
+ printing AP checks. It provides a final verification of the payment date, 
+ amount and discount (if any) of any eligible AP vouchers on the system. 
+ <font style="font-weight: bold;">This function is required if a partial 
+ payment is to be made.</font> It may also be used to release retainage 
+ payments.</p>
+<p>The Select Invoices for Payment function skips the update if the Vendor 
+ Invoice &#39;original&#39; Invoice Amount / Id has changed (by editing the AP 
+ Journal entry) while it is executing. AP Journal transactions must be 
+ saved <span style="text-decoration: underline; ">before</span> running 
+ this function.</p>
+<p><font style="font-weight: bold;">Vendor Insurance (Subcontractors)<br/>
+</font>This function is sensitive to blocking payments from the insurance 
+ record referenced in the Vendor (typically implemented for Subcontractors); 
+ a warning will display when insurance is expired. However, the expired 
+ box will only fill in if expired insurance is combined with a &quot;block 
+ payment&quot; insurance type. Only Date To Pay invoices that show a checked 
+ expired box will be denied payment.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Vendor 
+ Insurance and Blocked Payments</font></p>
+<p style="margin-left: 36.00pt;">If the Vendor’s insurance is expired, 
+ and the Insurance Required flag is set in the Vendor record AND the Block 
+ Payments flag is set in the Insurance record, you will not be able to 
+ pay the vendor. To override the Block Payment and cut a check for the 
+ vendor:</p>
+<p style="margin-left: 72.00pt;">Go into the vendor viewer and uncheck 
+ the Insurance Required box for this vendor and save. This will release 
+ the lock placed on the vendor during the Select Invoices for Payment processing 
+ and allow you to enter a pay date and pay the invoice.</p>
+<p style="margin-left: 72.00pt;">After finishing the payment you should 
+ go back into the vendor viewer and recheck the Insurance Required box 
+ and save.</p>
+<h2>Important Fields: Initial Range Screen</h2>
+<p><font style="font-weight: bold;">Take Discounts Do On or After This 
+ Date</font><br/>
+The date discounts will be taken as of. Press the spacebar to enter today&#39;s 
+ date, or double-click to select from a calendar.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Tips:<br/>
+</span>To ALWAYS take the discount enter 01011900 into the Date &#39;Take Discounts 
+ Due on or After this date&#39;.<span style="font-weight: bold;"><br/>
+<br/>
+</span>The user must hit GO in &#39;Select Invoices for Payment&#39; to update 
+ Vendor Invoice data.  The Vendor Invoice table is used to print 
+ checks.  The Check Date does not determine if a discount is 
+ &#39;taken&#39; or &#39;lost&#39;.</p>
+<p><font style="font-weight: bold;">Vendor Id:</font><br/>
+Enter a Vendor Id to limit this list to a specific vendor. Multiple vendors 
+ can be specified by separating their Id&#39;s with a comma (ACME,JONES,BRILLIANT).</p>
+<p><font style="font-weight: bold;">Invoice Id:</font><br/>
+The vendor invoice number recorded in the AP Journal. If you leave this 
+ range blank, all eligible entries will be selected.</p>
+<p><font style="font-weight: bold;">Next Pay Date:</font><br/>
+Enter a date in yyyy-mm-dd format (or double-click to select from a list) 
+ to limit the list to a specific day (or range of days: 2014-01-01_2014-01-08).</p>
+<p><font style="font-weight: bold;">Due Date:</font><br/>
+Enter a date in yyyy-mm-dd format (or double-click to select from a list) 
+ to limit the list to a specific day (or range of days that your payments 
+ are due: 2017-01-01_2017-01-08).</p>
+<p><font style="font-weight: bold;">Branch Id</font>:<br/>
+Enter a Branch Id to limit this list to a specific branch.</p>
+<p><font style="font-weight: bold;">Pay-When-Paid</font>:<br/>
+If you leave this field blank, both pay-when-paid and regular vendors will 
+ be included. To list only pay-when-paid vendors, enter a <font style="font-weight: bold;">Y</font> 
+ in this field. To exclude pay-when-paid vendors, enter a <font style="font-weight: bold;">N</font> 
+ in this field.</p>
+<p><font style="font-weight: bold;">Vendor Type Id:</font><br/>
+This field enables you to run this function according to the Type of Vendor 
+ (e.g., subs, distributors, etc.). Enter a Vendor Type or double-click 
+ to select from a list.</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> 
+  Click the Go button; the system will generate a list of items to 
+ be paid. These may be adjusted as described below.</p>
+<h2>Important Fields: List Screen</h2>
+<p>The list is sorted as follows: Vendor Alpha Id, Vendor Id, and Vendor 
+ Invoice Number.</p>
+<p><font style="font-weight: bold;">Vendor Id: Invoice Number:</font><br/>
+The Vendor&#39;s id and invoice numbers (defaults from the AP Journal).</p>
+<p><font style="font-weight: bold;">Pay Date:</font><br/>
+The date to appear on the AP check. This field defaults from the Date to 
+ Pay field in the AP Journal, but may be changed by the user (e.g., if 
+ a discount is to be taken).</p>
+<p><font style="font-weight: bold;">Gross Payment</font><br/>
+The gross amount of the next payment. This field defaults from the AP Journal, 
+ but may be changed by the user if a partial payment will be made.</p>
+<p><font style="font-weight: bold;">Discount To Take:</font><br/>
+If a discount is to be deducted from the gross, enter the amount of the 
+ discount. Generally, this will be the Discount Available.</p>
+<p>Vendor Invoices that run through this process will have their Discount 
+ Available and Next Discount to Take values corrected.  The positive 
+ values will become negative for Credit Memos. Validation ensures that 
+ the sign on a manually entered Discount Amount is consistent with the 
+ Gross Amount.  In other words, a Credit Memo can&#39;t have a positive 
+ Discount to Take value, and a Purchase can&#39;t have a negative value.</p>
+<p><font style="font-weight: bold;">Net Payment</font><br/>
+The net amount of the next payment (gross - discount). This field is maintained 
+ by the system and shows the actual dollar amount of the next check to 
+ be issued to this vendor when you run Report AP Checks.</p>
+<p><font style="font-weight: bold;">A/P</font> <font style="font-weight: bold;">Invoiced: 
+ Amt Unpaid:<br/>
+</font> These display-only fields are maintained by the system.</p>
+<p><font style="font-weight: bold;">Retainage to Pay:</font><br/>
+The amount of retainage to pay (included in the Gross Amount). The Retainage 
+ to Pay cannot exceed the Gross Amount or Retainage Unpaid fields.</p>
+<p><font style="font-weight: bold;">Retainage Unpaid:</font><br/>
+This display-only field is maintained by the system based on your AP/PO 
+ entries. Note that the actual amount of retainage that you choose to pay 
+ cannot exceed the dollar amount of this field.</p>
+<p><font style="font-weight: bold;">Discount Avail Discount Due</font> 
+ <font style="font-weight: bold;"><br/>
+</font><font style="font-weight: bold;">Vendor Name: Pay-When-Paid:</font> 
+ <font style="font-weight: bold;">Hold for Approval:<br/>
+</font>These display-only fields are maintained by the system.</p>
+<p><font style="font-weight: bold;">GL Discount Account:<br/>
+</font>This field may be edited. Changes will be written to history and 
+ the vendor invoice master record.</p>
+<p><font style="font-weight: bold;">Insurance Required? Insurance Expired?<br/>
+</font>These display-only fields are maintained by the system.</p>
+<p><font style="font-weight: bold;">Check Description</font><br/>
+A brief description of this invoice. This will print on the check stubs.</p>
+<p><font style="font-weight: bold;">AP Invoice No: Vendor Alpha Id:</font><br/>
+Note that the Vendor Alpha Id provides the initial sorting criteria for 
+ this list.</p>
+<p><img src="assets/images/SKIN1_PayAllInvoices.bmp" alt="" style="border: none;" border="0"/> 
+  This button is particularly useful for resetting the Gross Payment 
+ and Discount to Take if it was previously cleared by voiding a check or 
+ clearing the values in a previous run. When this button (enabled via registry) 
+ is clicked, a window prompts the user to enter the Date to Pay and Discounts 
+ Date. When the user enters the dates and clicks OK, the Gross Amount, 
+ Discount and Retainage fields will be completed based on the dates entered; 
+ the user may adjust these values as needed.  </p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> 
+  After making any needed adjustments, click the Go button. The information 
+ on the Date to Pay list will be used by the system when you generate AP 
+ checks with the Report AP Checks function. Once an AP Check has been successfully 
+ printed, the amount due will no longer be included on the AP Date to Pay 
+ List.</p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">Also 
+ See...</font><br/>
+To view additional information on Accounts Payable, click on one of the 
+ following topics:<br/>
+<br/>
+ <a href="AP_Check_Report.htm">Report AP Check</a>  <a href="Accounts_Payable_Journal_Viewer.htm">AP 
+ Journal</a>  <a href="Accounts_Payable_Overview.htm">AP Overview</a> 
+  <a href="Pay_When_Paid_Overview.htm">Pay-When-Paid Overview</a></p>
+
+</body></html>

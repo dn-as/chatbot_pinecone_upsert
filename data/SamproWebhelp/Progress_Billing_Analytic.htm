@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.2.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Progress Billing Analytic</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="project manager workbench,invoice,Anywhere Suite,billing,DBAnalytics,Analytics Technical Documentation,pm,workbench,project manager,job progress"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Progress Billing Analytic">
+        <span>Progress Billing Analytic</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Progress Billing Analytic</h1>
+<h2>Overview</h2>
+<p><span style="font-weight: normal;">This Analytic allows the Project Manager (PM) to participate in the billing preparation process without using SAMPro. An IIS web server is required for this Analytic.</span></p>
+<p class="Support" style="margin-left: 8px;"><img src="assets/images/Progress Billing Invoices Editor.png" alt="" style="border: none;" width="644" height="164" border="0"/></p>
+<p>PMs may review and &#39;approve&#39; a Job for billing and then pass it on to the Billing Department in the back office for completion.  The Billing Department then uses the Record Billing Adjustments function to finish the invoice preparation, printing and posting.  This process is summarized in the following diagram.</p>
+<p class="Support" style="margin-left: 48px; font-weight: normal;"> </p>
+<p class="Support" style="margin-left: 8px;"><img src="assets/images/BillingAnalyticFC.jpg" alt="" style="border-left-style: Solid; border-top-style: Solid; border-right-style: Solid; border-bottom-style: Solid; border-left-width: 1px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px;" border="1"/></p>
+<p>Special database fields record the PM&#39;s initial approval and any adjustments that should be made Validation controls who may update a Job (the PM using the analytic or the back office billing department).<br/>
+<br/>
+1. The analytic does not allow the PM to make ANY billing changes when the Job&#39;s Invoice Status has a value of &quot;Ready&quot; or &quot;Printed&quot;.  When the Job reaches this state, the PM should communicate any additional billing changes to back-office personnel who can make the appropriate adjustments.  A message to that effect should be given to the PM once additional changes have been disabled.<br/>
+<br/>
+2.  If the Job passes the previous test, the new PM Next Invoice Status must be checked before allowing billing changes.  If its value is set to &quot;Imported&quot;, advise the PM with an appropriate warning message.  A value of &quot;Imported&quot; means back-office personnel have already started processing the job&#39;s next invoice.</p>
+<p>3.  When the previous tests are passed, the PM can use the new analytic to its full potential. These changes will be made to the new Job Billing Item fields noted below.</p>
+<p>4. Back-office processing in Record Billing Adjustments will not accept any values in the new Billing Item fields until the Job&#39;s PM Next Invoice Status has a value of &quot;Submitted&quot;.  That means the PM can make (and save) preliminary billing changes that don&#39;t go into effect until the PM indicates (via the analytic) that all changes have been made and the job is ready for invoicing. At that point, the analytic should set the value to &quot;Submitted&quot;.</p>
+<h3><span style="font-weight: bold;">Job Billing Item</span></h3>
+<p>Several fields in the Job Billing Item which may be set by PM&#39;s from the Billing Analytic. They will then be used by Record Billing Adjustments to pass values these values to the Job Billing Item fields used for progress invoicing in SAMPro.</p>
+<p class="Support" style="margin-left: 48px;"> </p>
+<table class="AlternateBlueWithHeader" style="border-spacing:0px;width:611;left: 0px; top: 3674px; margin-left: 40px;">
+<colgroup><col style="width: 33.333%;"/>
+<col style="width: 33.333%;"/>
+<col style="width: 33.333%;"/>
+</colgroup><tbody><tr class="t1st" style="height: 21px;">
+<td style="border-spacing:0px;width: 33.333%;">
+<p class="reference-line" style="margin-left: 0px;">New Field Set In Billing Analytic</p>
+</td>
+<td style="border-spacing:0px;width: 33.333%;">
+<p class="reference-line" style="margin-left: 0px;">Writes to Existing Field in When Processed in SAMPro</p>
+</td>
+<td style="border-spacing:0px;width: 33.333%;">
+<p class="List_Paragraph">Notes</p>
+</td>
+</tr>
+<tr class="t2Row" style="height: 22px;">
+<td style="border-spacing:0px;width: 33.333%;">
+<p class="reference-line">pm_nxt_invc_ernd_prcnt</p>
+</td>
+<td style="border-spacing:0px;width: 33.333%;">
+<p class="reference-line">jbbllngitm_cntrct_prcnt_ernd</p>
+</td>
+<td style="border-spacing:0px;width: 33.333%;">
+<p class="reference-line">RBA</p>
+</td>
+</tr>
+<tr class="t1Row" style="height: 22px;">
+<td style="border-spacing:0px;width: 33.333%;">
+<p class="reference-line">pm_nxt_invce_amnt</p>
+</td>
+<td style="border-spacing:0px;width: 33.333%;">
+<p class="reference-line">jbbllngitm_nxt_invce_tm</p>
+</td>
+<td style="border-spacing:0px;width: 33.333%;">
+<p class="reference-line">GMP Jobs</p>
+</td>
+</tr>
+<tr class="t2Row" style="height: 22px;">
+<td style="border-spacing:0px;width: 33.333%;">
+<p class="reference-line">pm_nxt_invce_amnt</p>
+</td>
+<td style="border-spacing:0px;width: 33.333%;">
+<p class="reference-line">jbbllngitm_nxt_invce_cntrct</p>
+</td>
+<td style="border-spacing:0px;width: 33.333%;">
+<p class="reference-line">Non-GMP Fixed Fee</p>
+</td>
+</tr>
+</tbody></table>
+<p class="Support" style="margin-left: 48px; font-weight: bold;"> </p>
+<h3>Job Invoicing Tab</h3>
+<p><span style="font-weight: bold;">PM Next Invoice Status</span><br/>
+This display field is with certain Progress Billing Invoice / Project Manager Workbench DBAnalytics. This new field is used in conjunction with the Job&#39;s pre-existing Invoice Status field that already controls the back-office invoicing process.</p>
+<p>This field has four potential values:</p>
+<p style="margin-left: 48px;">The default value is &#39;Unknown&#39;.  This is the value assigned to a new Job. When a Progress Billed Job is posted, the PM Next Invoice Status will be set back to Unknown so that it will be eligible for additional updates in the Billing Analytic.  </p>
+<p style="margin-left: 48px;">&#39;PM Review&#39; indicates the PM has started making changes using the Billing Invoices analytic.  In this state, the changes have not been submitted for use by the back office billing processes.</p>
+<p style="margin-left: 48px;">&#39;Submitted&#39; indicates the PM has finished preparing for the next invoice and the back office billing processes can begin.  Setting the status to &#39;Submitted&#39; can only be achieved by the PM using the Billing Invoices analytic. The Status will be changed to Submitted when PM indicates he/she is finished with all necessary. The PM is not allowed to make changes the Status has the value of either Submitted or Imported.</p>
+<p style="margin-left: 48px;">&#39;Imported&#39; indicates the back office processing has begun.  Specifically, the PM&#39;s designated billing values have been imported into the Billing Items via the Record Billing Adjustments function.  This takes the place of having back office personnel manually enter the PM&#39;s billing values.</p>
+<h3>Record Billing Adjustments - Initial Screen</h3>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Job Id:</span><br/>
+Validation prevents Jobs with the PM Next Invoice Status set to &#39;PM Review&#39; from being selected in Record Billing Adjustments. Jobs with the PM Next Invoice Statuses of &#39;Submitted&#39;, &#39;Unknown&#39; and &#39;Imported&#39; (if the Job&#39;s Invoice Status is correctly set) are allowed.</p>
+<p style="margin-left: 8px;">The Next PM Invoice Status will be changed from Submitted to Imported when the PM&#39;s designated billing values have been imported and the changes saved in Record Billing Adjustments.  </p>
+<h3>Job Invoice Post</h3>
+<p style="margin-left: 8px;">When a Progress Billed Job is posted, the PM Next Invoice Status will be set back to Unknown so that it will be eligible for additional updates in the Billing Analytic.  </p>
+
+</body></html>

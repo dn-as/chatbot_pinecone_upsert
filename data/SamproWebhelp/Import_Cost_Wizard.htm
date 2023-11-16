@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.16.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="requisitioning"/>
+<meta name="MS-HKWD" content="import"/>
+<meta name="MS-HKWD" content="material requisitioning"/>
+<meta name="MS-HKWD" content="wizard"/>
+<meta name="MS-HKWD" content="required resource"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Import Cost Wizard</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="requisitioning,import,material requisitioning,wizard,required resource"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Import Cost Wizard">
+        <span>Import Cost Wizard</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Import Cost Wizard</h1>
+<h2>Purpose:</h2>
+<p>The Import Costs Wizard enables you to select the requisitioned items 
+ that should be included on the work order, as well as to import costs 
+ entered on PO’s, Labor Journal and Job Journal entries.</p>
+<h2>Registry:</h2>
+<p>The registry setting to implement this feature is included in the work 
+ order viewer registry option <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#Registry_WO_Import_Costs_Wizard">WO 
+ Import Costs Option.</a></p>
+<h2>Usage:</h2>
+<p>When the Import Costs button is clicked (or the work order is set to 
+ Invoice Ready and saved), a Wizard is invoked when the user clicks ‘Yes’ 
+ on the import Costs button. The user will be lead through a series of 
+ screens to select which items to import.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline; ">For 
+ Requisitioned Inventory Items:</font></p>
+<p style="margin-left: 36.00pt;">When processing Required Resource Inventory, 
+ the Import Cost Wizard skips truck stock that has already been entered 
+ on the Work Order Inventory tab.</p>
+<p style="margin-left: 36.00pt;">By default, the Wizard lists all quantities 
+ that were requisitioned, flagged as ‘Do’. The user may uncheck the ‘Do’ 
+ box, or change the quantity used or billed. Note that in the Wizard, the 
+ Quantity Billed needs to be adjusted separately. The selected items will 
+ be added to the Inventory tab.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline; ">Inventory 
+ Lines imported from PO’s:</font></p>
+<p style="margin-left: 36.00pt;">The Do box should be flagged for all PO 
+ Inventory lines that should be imported. Note that the billing information 
+ may be adjusted. Note that the Wizard will not allow you to change the 
+ actual quantity of Inventory imported from a PO.</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Qty Used<br/>
+</font> This field is now display-only; it defaults from the quantity allocated 
+ to this Work Order from the Purchase Order or Required Resource transfer.</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Actual 
+ Used</font><br/>
+This field defaults from the Qty Used field, and should be used to specify 
+ the number of this item that were actually used on this work order. If 
+ the user sets the Actual Used to less than the Qty Used, the system will 
+ handle the process of returning the unused product to the truck or other 
+ location. For example, if 50 items were allocated (Qty Used = 50) on the 
+ purchase order, and only 8 were actually used on this work order, two 
+ lines would be written to the Work Order Inventory Tab: +8 (those actually 
+ used) and -42 (returned to stock – to correct Inventory History which 
+ shows all 50 going to the Work Orders).</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline; ">Labor 
+ Lines:</font></p>
+<p style="margin-left: 36.00pt;">The Do box should be flagged for all labor 
+ that should be imported. Note that the billing information may be adjusted.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline; ">Other 
+ Lines:</font></p>
+<p style="margin-left: 36.00pt;">The Do box should be flagged for all Other 
+ that should be imported. Note that the billing information may be adjusted.</p>
+
+</body></html>

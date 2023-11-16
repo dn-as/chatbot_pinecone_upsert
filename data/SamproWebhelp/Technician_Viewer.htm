@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.7.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="mechanic"/>
+<meta name="MS-HKWD" content="technician"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Technician Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="vendor,mechanic,technician"/><meta name="brsnext" value="Technician_Certification_Viewer.htm"/><meta name="brsprev" value="Service_Zone_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Technician Viewer">
+        <span>Technician Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Technician Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create/maintain the list of technicians. This record may be used for 
+ employee technicians, subcontractors, sales reps. The <a href="Technician_Certification_Viewer.htm">Technician 
+ Certification</a> tab may be used to attach equipment certifications to 
+ your technician record.</p>
+<h2>Usage:</h2>
+<p>Required for Dispatching and TechAnywhere.</p>
+<h2>Registry Entries:</h2>
+<p>See <a href="Registry_Entry_Technician_Viewer.htm">Registry Entry Technician 
+ Viewer</a> for details on specifying a custom Technician Evaluation Report.</p>
+<p>See <a href="Registry_Entry_Dispatch_Board_Saved_by_User_by_Board.htm">Registry 
+ Dispatch Board (sys-viewer-vdsptchbrd)</a> for the option to enable Unavailable 
+ Techs to be identified on the Dispatch Board, TechFinder, New Call and 
+ on the Work Order Tech tab.</p>
+<h2>Screen Organization:</h2>
+<p>The tabs in the upper section of this screen organize the primary Technician 
+ information. These fields are listed below under their respective tabs. 
+ Click on one of the following buttons to jump to the description.</p>
+<p><a href="Technician_Viewer.htm#Tech_Main"><img src="assets/images/image/btn_Main.gif" alt="image\btn_Main.gif" title="image\btn_Main.gif" width="42" height="24" border="0"/></a> 
+ <a href="Technician_Viewer.htm#Tech_Defaults"><img src="assets/images/image/btn_Defaults.gif" alt="image\btn_Defaults.gif" title="image\btn_Defaults.gif" width="64" height="24" border="0"/></a> 
+ <a href="Technician_Viewer.htm#Tech_RemoteAccess"><img src="assets/images/image/btn_RemoteAccess.gif" alt="image\btn_RemoteAccess.gif" title="image\btn_RemoteAccess.gif" width="112" height="24" border="0"/></a> 
+ <a href="Technician_Viewer.htm#Tech_Contacts"><img src="assets/images/image/btn_Contacts.gif" alt="image\btn_Contacts.gif" title="image\btn_Contacts.gif" width="69" height="24" border="0"/></a> 
+ <a href="Technician_Viewer.htm#Tech_Other"><img src="assets/images/image/btn_Other.gif" alt="image\btn_Other.gif" title="image\btn_Other.gif" width="47" height="24" border="0"/></a> <a href="Technician_Viewer.htm#Technician_Evaluation_Tab"><img src="assets/images/image/btn_Evaluation.gif" alt="image\btn_Evaluation.gif" title="image\btn_Evaluation.gif" width="78" height="24" border="0"/></a> <a href="Technician_Viewer.htm#Technician_Open_WorkOrders_Tab"><img src="assets/images/image/btn_Open_WorkOrders32.gif" alt="image\btn_Open_WorkOrders32.gif" title="image\btn_Open_WorkOrders32.gif" width="131" height="24" border="0"/></a> 
+ <a href="Technician_Viewer.htm#Technician_Other_WorkOrders_Tab"><img src="assets/images/image/btn_Other_WorkOrders32.gif" alt="image\btn_Other_WorkOrders32.gif" title="image\btn_Other_WorkOrders32.gif" width="132" height="24" border="0"/></a></p>
+<p>The tabs on the lower section of this screen display the Technician 
+ &#39;child&#39; tables. Click on the following links to see additional information:</p>
+<p><a href="Technician_Certification_Viewer.htm">Certifications</a> <a href="Technician_Unavailable_Tab.htm">Unavailable</a>  <a href="Technician_Time_Slot_Tab.htm">Time 
+ Slot</a>   <a href="Technician_Service_Zone_Tab.htm">Service 
+ Zone</a>   <a href="Technican_Dispatch_Board_Tab.htm">Dispatch 
+ Boards</a>   <a href="Technician_Evaluation_Summary_Tab.htm">Evaluation 
+ Summary</a></p>
+<h2>Important Fields: Upper Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Tech_Main" id="Tech_Main"></a>Main 
+ Tab</p>
+<p><font style="font-weight: bold;">Technician Id:</font><br/>
+An Id that clearly identifies this technician, subcontractor, or sales 
+ rep.</p>
+<p>For technicians, this Id will appear on the Dispatch Board. For example, 
+ the Id could consist of the technician&#39;s initials, last name and first 
+ initial, etc. Since this Id must be unique, you could add a number to 
+ the Id if two of your technicians had the same initials (jmk and jmk-1). 
+ In the case of a subcontractor technician, you might use the business 
+ name of the subcontracting firm. This field is required.</p>
+<p><font style="font-weight: bold;">Technician Name:</font><br/>
+The full name of the technician, subcontracting firm, sales rep or client; 
+ this field is optional but highly recommended.</p>
+<p><font style="font-weight: bold;">Primary Phone #  Cellular Phone#: 
+  Pager:</font><br/>
+The primary and cellular phone, and pager numbers for this technician. 
+  The Primary Phone and Pager will be displayed on the Power Board&#39;s 
+ Tech Summary.  By default, the Pager will appear on the Column Header 
+ of the Classic Board (although this may be changed <a href="Internal_Registry_Classic_Board_sys_viewer_vdsptchbrd_classic_.htm">via 
+ registry</a>).</p>
+<p><font style="font-weight: bold;">Employee Id:</font><br/>
+Required for Payroll, Job Costing and Centralized Invoicing. The employee 
+ Id for this technician. Press Alt+F7 or double click on this field to 
+ select from a list. <font style="font-weight: bold; font-style: italic;">This 
+ field should remain blank if this technician is a subcontractor client 
+ and not an employee.</font></p>
+<p><font style="font-weight: bold;">Vendor Id:<br/>
+</font>If this Technician record is for a subcontractor, enter the appropriate 
+ Vendor Id. When a work order is generated for this technician, a purchase 
+ order will automatically be generated for the vendor <font style="font-weight: bold; 
+															 font-style: italic;">if 
+ the web access for this technician</font> <font style="font-weight: bold; 
+												 font-style: italic;">(on 
+ the Remote</font> <font style="font-weight: bold; font-style: italic;">Access 
+ tab) is</font> <font style="font-weight: bold; font-style: italic;">also</font> 
+ <font style="font-weight: bold; font-style: italic;">set to Subcontractor</font><font style="font-weight: bold; font-style: italic;">.</font></p>
+<p><font style="font-weight: bold;">Technician Start Time:</font>  <font style="font-weight: bold;">Technician Quit Time:</font><br/>
+The regular starting and quitting times for this technician. Enter the 
+ times in a 24 hour (military) format. For example, it the technician normally 
+ starts at 8:00pm and quits at 5:00pm, you would enter the starting and 
+ quitting times as 0800 and 1700 respectively. Alternately, press Alt+F7 
+ to access the Clock viewer to do so. These fields are optional.</p>
+<p><font style="font-weight: bold;">Insurance</font><br/>
+If this technician holds a certificate of insurance, check this box by 
+ double-clicking on it or pressing the Spacebar. This field is primarily 
+ applicable to technician/subcontractors.</p>
+<p><font style="font-weight: bold;">Special Skills</font><br/>
+Check this box (by double-clicking or pressing the Spacebar) if this a 
+ Special Skills technician.</p>
+<p><font style="font-weight: bold;">Email Address:<br/>
+</font>Enter the email address for this technician. This field is will 
+ be used by the scheduled event manager to email alarms and notifications 
+ to this technician.</p>
+<p><span style="font-weight: bold;">Email to Text:  </span>(was Email 
+ Fax:)<span style="font-weight: bold;"><br/>
+</span>The label for the above field has been changed to reference its 
+ ability to send Texts through the Web Dispatch board.  If the user 
+ sets up the technicians phone number in these fields to follow the formatting 
+ for their phone service provider, they will be able to launch an email 
+ that will be sent as a text to the technician from the Web Board.</p>
+<p style="font-weight: bold; text-decoration: underline; ">Examples:</p>
+<p style="margin-left: 48px;">Verizon: &lt;phone number&gt;@vtext.com</p>
+<p style="margin-left: 48px;">Sprint: &lt;phone number&gt;@messaging.sprintpcs.com</p>
+<p style="margin-left: 48px;">ATT: &lt;phone number&gt;@txt.att.net</p>
+<p style="margin-left: 48px;">On the Web Board, the field will display 
+ as a clickable link, to open in your email client. The message will be 
+ processed and sent directly to the technician&#39;s cell phone.</p>
+<p style="font-weight: bold;">Email2 to Text: <span style="font-weight: normal;">(was 
+ Email Address 2:)</span><br/>
+<span style="font-weight: normal;">This field may also be used to send 
+ text to the Tech&#39;s cell phone from the Web Board as discussed above.  In 
+ addition, when the Email button on the SAMPro Dispatch Board is clicked, 
+ the “To” field in the Email form will default from this field.</span> 
+ </p>
+<p><font style="font-weight: bold;">Notes</font><br/>
+Special information concerning this employee, subcontractor or client.</p>
+<p><font style="font-weight: bold;">Technician Street Address<br/>
+City  State  ZIP</font><br/>
+If this technician is an employee, enter his home address. If this technician 
+ is a subcontractor, enter the business address.</p>
+<p><span style="font-weight: bold;">RAQ Group:</span><br/>
+This field is reserved for TechAnywhere use.</p>
+<p><font style="font-weight: bold;">Technician User</font> <font style="font-weight: bold;"><span>1-10:</span><br/>
+</font>You may use these optional fields to record addition information 
+ for TechAnywhere or reporting purposes.</p>
+<p><font style="font-weight: bold;">Active Inactive<br/>
+</font>If the Active option is selected, this record will be considered 
+ Active for purposes of active filtering, the Dispatch Board display, and 
+ the Client, Remote Tech, and Service Provider (subcontractor) web interfaces. 
+ Select the Inactive option if the corresponding Technician or Subcontractor 
+ is no longer employed by your firm, or this customer is no longer allowed 
+ to access the Client Web interface.</p>
+<p><span style="font-weight: bold;">Vendor Name: <br/>
+</span>If the Vendor field is completed on this subcontractor technician 
+ record, the Vendor&#39;s Name will be displayed, and the following fields 
+ will be completed if applicable. </p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Insurance 
+ Required: Insurance Expired:</font><br/>
+The insurance required field defaults from the Insurance Required field 
+ in the Vendor record. If this field is checked, the system will check 
+ the INS tab in the Vendor record to determine if all insurance is still 
+ valid. If not, the Insurance Expired field will also be checked.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Payments 
+ Blocked:</span><br/>
+If this display field is checked, the Vendor’s Insurance is flagged as 
+ &#39;Block Payments&#39; and it is currently expired. A &#39;Payments Blocked&#39; subcontractor 
+ may be selected in New Call, from the Dispatch Board or on a Work Order 
+ in Version 9.1. </p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Purchases 
+ Blocked:</font><br/>
+If this display field is checked, the Vendor’s Insurance is flagged as 
+ &#39;Block Purchases&#39; and it is currently expired. In Version 9.1, Purchases 
+ Blocked Techs may NOT be selected in New Call, from the Dispatch Board 
+ or on Work Order. </p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Tech_Defaults" id="Tech_Defaults"></a>Defaults 
+ Tab</p>
+<p><font style="font-weight: bold;">Labor Rate Id:</font><br/>
+This field will default in when the Employee Id is selected on the Main 
+ tab.</p>
+<p>It is used to provide the default Labor Rate category for this technician 
+ to use when entering hours in TechAnywhere,  the Work Order Labor 
+ tab and WO Time Entry (regular time) for Field hours (as determined by 
+ the Employee record or Job Cost Code). The Labor Rate will default from 
+ the Employee record (Labor Rate Id field) for Office type hours entered 
+ on the Work Order Labor tab and the Work Order Entry function.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note: 
+ Prevailing Wages Jobs – Employee Overrides</font><br/>
+If you are entering time for a Prevailing Wages Job, the values found in 
+ the Employee Overrides tab of the Job record will override the default 
+ employee Labor Rate and Pay Type. These overrides will only be implemented 
+ when the cost code type is set to field for the journal entry.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Registry 
+ Setting: Office/Field Determined by Job Cost Code<br/>
+</font>An option of the sys-ffv-global-settings registry entry (<a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm">Registry 
+ Entry Global Settings</a> ) enables the system to determine whether hours 
+ should be considered &#39;office&#39; or &#39;field&#39; depending on the Job Cost Code&#39;s 
+ Work Type setting. If this option is implemented, hours charged to a &#39;Field&#39; 
+ Job Cost Code will be considered field hours, regardless of whether the 
+ employee is Office or Field.</p>
+<p><font style="font-weight: bold;">Pay Type Id:</font><font style="font-weight: bold;"><br/>
+</font>The default Pay Type for this technician to use when entering hours 
+ in the Work Order Labor tab for Job Cost Codes flagged as Field. If the 
+ Cost Code is flagged as Office, the Pay Type will default from the Employee 
+ record for hours entered on the Work Order Labor tab. The Work Order Entry 
+ function always uses the Employee pay type default.</p>
+<p><font style="font-weight: bold;">Employee Type Id:</font><br/>
+Enter a valid employee type or double-click to select from a list. This 
+ field can be used to differentiate between employees and sub-contracting 
+ technicians.</p>
+<p><font style="font-weight: bold;">Location Id:</font><br/>
+Optional for use with advanced inventory. This Technician&#39;s truck or default 
+ stocking location. Press Alt+F7 or double click on this field to select 
+ from a list.</p>
+<p><font style="font-weight: bold;">No Escalation?</font><font style="font-weight: bold;"><br/>
+</font>Flagging this field stops future &quot;Tech Based&quot; escalation 
+ events from being generated when this Technician is added to a work order. 
+ Typically, this field would be flagged for a &quot;non-tech&quot; (such 
+ as a billing agent).</p>
+<p>If this field is not flagged, &quot;Tech Based&quot; events (any event 
+ where to Notify Id points to the Technician radio button) from the Escalation 
+ Profile will continue to be duplicated when a new or additional tech is 
+ assigned to a work order.</p>
+<p><font style="font-weight: bold;">Overtime:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Pay Type 
+ Id: Labor Rate Id:<br/>
+</font>Enter the default Pay Type and Labor Rate to be used when entering 
+ Overtime hours in the Work Order Entry viewer.</p>
+<p><font style="font-weight: bold;">Doubletime:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Pay Type 
+ Id: Labor Rate Id:<br/>
+</font>Enter the default Pay Type and Labor Rate to be used when entering 
+ Double-time hours in the Work Order Entry viewer.</p>
+<p><font style="font-weight: bold;">Charge #1</font> <font style="font-weight: bold;">- 
+ #9</font><font style="font-weight: bold;"> </font><br/>
+Any special (e.g., trip) charges associated with this technician. These 
+ fields are designed to be used for informational purposes such as to note 
+ subcontractor charges. They could then be displayed on a customized version 
+ of the Classic Board, TechFinder, or on custom reports. They are NOT designed 
+ as defaults for invoicing or purchase orders.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Tech_RemoteAccess" id="Tech_RemoteAccess"></a>Remote 
+ Access Tab</p>
+<p><font style="font-weight: bold;">Web Access: None Technician Subcontractor 
+ Client CSR<br/>
+</font>This field controls which type (if any) of web access is enabled 
+ for this record. <font style="font-weight: bold;">This field is also used 
+ to control the initial setting of work orders created for this technician.</font> 
+ If it is set to None, the new work orders will be set to Waiting Service 
+ by default. If set to Technician, new work orders will be set to Unacknowledged. 
+ These defaults may be overridden by a registry setting; see <a href="Internal_Registry_Entry_Web_Access.htm">Registry 
+ Entry Web Access</a> for details.</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Note 
+ -</font> <font style="font-weight: bold;">WO Materials Requisitioning</font> 
+ <font style="font-weight: bold;">Override</font> <font style="font-weight: bold;"><br/>
+</font>If a Work Order is created with Required Resources by one of the 
+ following means:</p>
+<p style="margin-left: 108.00pt;">Specifying/checking PM Parts on the Client 
+ Site Equipment PM Schedule (DisableReqPMParts is not set to true in sys-start-scrtepmwo)</p>
+<p style="margin-left: 108.00pt;">Specifying PM Parts in Master Contract 
+ (DisableReqPMParts is not set to true in sys-start-scrtepmwo)</p>
+<p style="margin-left: 108.00pt;">Attaching Required Resources in New Call </p>
+<p style="margin-left: 72.00pt;">the Technician status will <font style="text-decoration: underline; ">always</font> 
+ be is set to Waiting Parts instead of the default status for the type 
+ of technician, or the presence of the registry entry referenced above.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">None<br/>
+</font>Select None if remote access is not implemented on your system, 
+ or if this technician should not have web access. The default status for 
+ these techs in Waiting Service unless overridden via registry.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Subcontractor<br/>
+</font>If this Technician record is for a subcontractor and you want a 
+ purchase order to be automatically generated when a work order is generated, 
+ select this option AND set complete the Vendor Id field on the Main tab. 
+ This option should also be selected if the this technician will be accessing 
+ the software via SubAnywhere. If a PO is linked to a work order for this 
+ Subcontractor, the Purchase Order Shipping address can be set to the Technician 
+ Address (on the Main tab of the Technician record) by clicking the Service 
+ Provider option.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Technician<br/>
+</font>Select Technician if this technician will be accessing the software 
+ via TechAnywhere. The default status for these techs is Unacknowledged 
+ unless overridden by registry.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Client<br/>
+</font>In previous releases<font style="font-weight: bold;">,</font> Client 
+ was used to identify a customer accessing the software via the Client 
+ Web interface. Although this usage is still supported, its use is deprecated 
+ in favor of using a <a href="Web_Users_Viewer.htm">Web User Record</a> 
+ to enable client access. Note that technicians identified with Client 
+ web access will not be displayed when you double-click to select a technician 
+ in the New Call, Dispatch Board, or Work Order viewers.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">CSR<br/>
+</font>Select CSR if this individual will be accessing the software via 
+ the CSRAnywhere interface. <span style="font-weight: bold;">This option 
+ is obsolete in Version 9.0 and above.</span></p>
+<p style="font-weight: bold;">Remote Device Type</p>
+<p style="font-weight: bold; margin-left: 48px;">None: <span style="font-weight: normal;">Select 
+ None Remote Access is set to None. If SubAnywhere is NOT enabled, set 
+ the Remote Device Type to None for a SubContractor Tech.</span> </p>
+<p style="font-weight: bold; margin-left: 48px;">Windows - Android:<br/>
+<span style="font-weight: normal;">If the Tech is using TechAnywhere, select 
+ the type of device he or she is using (Windows or Android).</span></p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">CE - Web:</span> 
+ Custom implementations only. Note that the Remote Pin field must be completed 
+ for IVR installations.</p>
+
+<p style="margin-left: 48px;"><span style="font-weight: bold;">SubAnywhere 
+ (Version 9.1):</span> If SubAnywhere IS enabled and Web Access is set 
+ to Subcontractor, set the Remote Device Type to SubAnywhere. This field 
+ controls whether PO’s are created as Released (None) or Unreleased (SubAnywhere). 
+ An additional test is used to determine if Subcontractor PO&#39;s are set 
+ to released based on the presence or absence of the New Password field 
+ below. If the tech is flagged as Web Access - Subcontractor and Remote 
+ Device - none. If the New Password is set, the PO will be set to 
+ Unreleased. If the New Password is blank, the PO will be set to Released. 
+ SubAnywhere PO&#39;s generated in New Call, by selecting a Subcontractor in 
+ TechFinders, and from the Work Order will be set to Unreleased if the 
+ Password is completed.</p>
+<p style="font-weight: bold; margin-left: 48px;">DBFleet: The DBFleet option 
+ supports a new mode built into the TechAnywhere app that only allows the 
+ user to use the DBFleet portion for GPS tracking and reporting to DBFleet. 
+ It disables all other TechAnywhere functionality. This allows a company 
+ that does not use TechAnywhere or has employees who would not need to 
+ use TechAnywhere, to have the ability to track these employees through 
+ DBFleet. </p>
+<p style="margin-left: 88px;"><span style="font-weight: bold;">Important 
+ Implementation Note:</span> If a client does not have/use TechAnywhere 
+ and wants to do this for DBFleet, a full TechAnywhere install will need 
+ to take place first. Licensing for this mode is handled in DBFleet - SAMPro 
+ does not track count. In order to log into TechAnywhere in this mode, 
+ the Technician record will need to be configured as follows:</p>
+<p style="margin-left: 88px;">Web Access = Technician<br/>
+Remote Device Type = DBFleet<br/>
+Set and confirm a password</p>
+<p><font style="font-weight: bold;">New Password: Confirm Password:<br/>
+</font>This field is required if this is a TechAnywhere Technician or Web-Enabled 
+ Client (if using the old-style web access). The password must be entered 
+ and re-entered (in the Confirm Password box) to be valid. <font style="font-weight: bold;">The 
+ password is restricted to letters and numbers only. </font></p>
+<p><font style="font-weight: bold;">Web Security Id:<br/>
+</font>This field is typically completed for a Client record, to limit 
+ the equipment he or she has access to on the Client Web Interface. If 
+ web access is enabled for this Technician, enter the appropriate Web Security 
+ if you want to control which work orders this technician will have access 
+ to.</p>
+<p><font style="font-weight: bold;">TechAnywhere Prefix<br/>
+</font>This field is required to facilitate a unique numbering scheme for 
+ Purchase Orders created in TechAnywhere.  PO numbers will be generated 
+ using a 5-digit counter, prefixed by the Tech Prefix ... i.e. JT10001.</p>
+<p><font style="font-weight: bold;">Remote Pin:<br/>
+</font>If Voice Response (IVR) is implemented on your system, enter the 
+ 4-digit access code for this user.</p>
+<p><font style="font-weight: bold;">Last TA Activity Date: Last TA Activity 
+ Time: Last TA Version:<br/>
+</font>This display-only field shows the most recent TechAnywhere activity 
+ and version number used by the selected Technician. This field is updated 
+ every time the tech performs a sync.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Tech_Contacts" id="Tech_Contacts"></a>Contacts 
+ Tab</p>
+<p><font style="font-weight: bold;">Contact 1  Contact 2</font><br/>
+If this record is for a subcontractor, enter the First Name, Last Name, 
+ Salutation, Title, Phone, Cell Phone, Fax and Email address of your primary 
+ and secondary contacts at this firm.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Tech_Other" id="Tech_Other"></a>Other 
+ Tab</p>
+<p><font style="font-weight: bold;">Miscellaneous Info1 Miscellaneous Info 
+ 2<br/>
+</font>You may use these optional fields to record additional information.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Technician_Evaluation_Tab" id="Technician_Evaluation_Tab"></a>Evaluation</p>
+<p>This tab displays the Technician’s current Evaluation Grade earned on 
+ work orders for which he/she was the primary technician. It may also be 
+ used to launch the Compute Technician Evaluation function.</p>
+<p><font style="font-weight: bold;">Evaluation Grade:</font><br/>
+The Evaluation field is computed by the system (when <a href="Start_Compute_Technician_Evaluation.htm">Start 
+ Compute Technician Evaluation</a> is run) based on the number of points 
+ that were earned divided by the number of points available during the 
+ specified time period. The higher the score (out of 100), the better the 
+ evaluation. This field may be manually set if the computed evaluation 
+ does not actually reflect the technician’s performance, or if your firm 
+ employs a different method to establish technician grades.</p>
+<p><font style="font-weight: bold;">Evaluation Date:<br/>
+</font> This field is set by the system when the Compute Technician Evaluation 
+ is run for this Technician.</p>
+<p><font style="font-weight: bold;">Start Date: End Date:<br/>
+</font>These fields are set by the system when the Compute Technician Evaluation 
+ is run for this Technician. Work Orders that were created within this 
+ date range were evaluated to determine the Evaluation Grade.</p>
+<p><font style="font-weight: bold;">Comments:<br/>
+</font>This field is set by the system when the Compute Technician Evaluation 
+ is run for this Technician.</p>
+<p><img src="assets/images/image/compute_evaluation_grade.gif" alt="image\compute_evaluation_grade.gif" title="image\compute_evaluation_grade.gif" width="116" height="17" border="0"/> Click this button to launch the Compute Technician 
+ Evaluation function for this Technician.</p>
+<p><img src="assets/images/image/print_evaluation_report.gif" alt="image\print_evaluation_report.gif" title="image\print_evaluation_report.gif" width="116" height="17" border="0"/> Click this button to print the evaluation report 
+ that your firm uses. This report is specified via a registry entry.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Technician_Open_WorkOrders_Tab" id="Technician_Open_WorkOrders_Tab"></a>Open 
+ WorkOrders Tab</p>
+<p class="Body_Text_2">This Query View tab lists all work orders assigned 
+ to this Technician that have a Work Order Status Category of Open. The 
+ most recent work orders appear at the top of the list. Double-click on 
+ a line to view the Work Order itself.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Technician_Other_WorkOrders_Tab" id="Technician_Other_WorkOrders_Tab"></a>Other 
+ WorkOrders Tab</p>
+<p class="Body_Text_2">This Query View tab lists all work orders assigned 
+ to this Technician that have a Work Order Status Category that is <font style="text-decoration: underline; ">not</font> set to Open (e.g., 
+ Completed, Billed, Ok to Invoice, etc.). The most recent work orders appear 
+ at the top of the list. Double-click on a line to view the Work Order 
+ itself.</p>
+
+</body></html>

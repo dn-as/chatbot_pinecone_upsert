@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.20.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="service invoice"/>
+  <meta name="MS-HKWD" content="compute service invoice"/>
+  <meta name="MS-HKWD" content="starter"/>
+  <meta name="MS-HKWD" content="registry"/>
+  <meta name="MS-HKWD" content="service billing compute"/>
+  <meta name="MS-HKWD" content="sys-start-ssrvcebllngcmpte"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry Start Compute Service Billing / Invoices (sys-start-ssrvcebllngcmpte)</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="terms and conditions - service invoice,start compute service invoice,service invoice,compute service invoice,starter,registry,service billing compute,sys-start-ssrvcebllngcmpte"/>
+<meta name="brsnext" value="Registry_Entry_Project_Manager.htm"/><meta name="brsprev" value="Registry_Entry_Start_Compute_Service_Worksheets.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Start Compute Service Billing / Invoices (sys-start-ssrvcebllngcmpte)">
+        <span>Registry Start Compute Service Billing / Invoices (sys-start-ssrvcebllngcmpte)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry Start Compute Service Billing / Invoices</h1>
+  <h1>(sys-start-ssrvcebllngcmpte)</h1>
+  <h2>Purpose:</h2>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">This entry sets the defaults associated with this function used for billing Work Orders associated with Service Compute type jobs.</p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold;">Testing Your Registry Entries</font><br/>
+    <font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.
+  </p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Setting</font>
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Values are Uppercase-Lowercase Sensitive:</font><br/>
+    The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.
+  </p>
+  <h2>Usage:</h2>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP638365127" href="#"><span data-open-text="true" data-skip-index="true">Data Conversion Notes from 7.0.</span><span data-close-text="true">Data Conversion Notes from 7.0.</span></a></p>
+  <div data-targetname="POPUP638365127">
+    <p>The Service Invoice and Worksheet reports use the Job&#39;s Email Invoice
+      to field instead of the Job Contact 1 Email field for the Auto-emailing
+      / printing functionality. Note that during database conversion, this
+      field will be initialized from the Job Contact 1 email field, which
+      was previously used to support the auto-emailing functionality.</p>
+  </div>
+  <p>
+    <font style="font-weight: bold;">Work Order Override:</font><br/>
+    If a Billing Address Id is specified in the Work Order, that record will override both the Job Billing Address Id and the Invoice Address/Invoice Email Address in the Job record.
+  </p>
+  <h2>Related Registry Entries:</h2>
+  <p>
+    <font style="font-weight: bold;">Invoice Email Address in the Job Record:</font><br/>
+    If the auto-emailing of service invoices is enabled, the system will email invoices to this address unless this field is overridden by the Billing Address Id in the Job or Work Order record.
+  </p>
+  <p><a href="Registry_Entry_Report_Service_Invoice.htm">Registry Entry Report Service Invoice</a></p>
+  <p>See <a href="Registry_Entry_Report_Service_Invoice.htm#Specify_Bitmap_by_Sites_AccountManager__ServiceManager__Dispatcher_or_Branch">Specify Override Bitmap by Site&#39;s Account Manager, Service Manager, Dispatcher or Branch</a> for details on implementing this functionality.</p>
+  <p><a href="Registry_Entry_to_Autosave_Report.htm">Registry Entry for Report Graphics, Max Lines Per Page and Autosave</a></p>
+  <h2>Important Fields</h2>
+  <p>
+    <font style="font-weight: bold;">Id:</font>
+    <font style="font-weight: bold;">sys-start-ssrvcebllngcmpte</font>
+  </p>
+  <p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> for additional Registry Id formats to allow entries for specific Users, Branches, Security, or User Groups to override the main entry.</p>
+  <h3>Performance Enhancement</h3>
+  <p>The following registry entry may be enabled to provide a possible performance enhancement for the Start Service Billing Compute function:</p>
+  <p><span style="font-weight: bold;">Setting Key:</span>  CostOrRevenueFilter    <span style="font-weight: bold;">Setting Value:</span> true  (default is false)</p>
+  <p>Note: this registry eliminates JOB EOM transactions from the calculation; this may or may not impact the performance of Start Service Billing Compute.</p>
+  <h3>Skip Archived Work Orders in Service Billing</h3>
+  <p>When Start Compute Service Invoice run ‘wide open’, old work orders that will never be billed may be included in the process, negatively impacting performance. In this enhancement, it is easy to exclude archived work orders from the Service Worksheet / Service Invoice starter functions in order to improve performance. Note that Work Orders may be set to Archived by manually adding a Technician line with status Archived, or by using the Start Archive Work Orders or Start Autoarchive Work Orders.</p>
+  <p>The Work Order Status Category in the Start Compute Service Billing and Start Computer Service Worksheets should be set to exclude archived work orders (!=archived) using the following settings:</p>
+  <p>Setting Key: InitialValueFor~wrkordr.stts-ctgry Setting Value: !=archived</p>
+  <p style="margin-top: 0; margin-bottom: 0;">Note that a similar entry should also be made for Start Service Billing Worksheet:  </p>
+  <p>Id: sys-start-ssrvcebllngwrksht</p>
+  <p>Setting Key: InitialValueFor~wrkordr.stts-ctgry Setting Value: !=archived</p>
+  <h3>Show Invoice Detail by Equipment</h3>
+  <p>An option to show Service Invoice detail info by Equipment is available. If the Work Order lines are not associated with an Equipment record, charges will be grouped under the heading Equipment: none specified. The following registry entry must be created to use this mod:</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ShowDetailByEquipment <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>Note that this functionality is only exhibited if the Equipment Detail option is set to Yes in the Service Invoice. It is suggested that the following option be set via the initial values functionality so that the Equipment Detail option is set to Yes by default:</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Id: sys-start-ssrvcebllngcmpte </font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> initialValueFor~srvceinvce.eqpmnt-dtl  <font style="font-weight: bold;">Setting Value:</font>On
+  </p>
+  <h3>Release Approval Required Vouchers</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> AutoReleaseHeldVouchers <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>This registry option is related to ’Approval Required’ vendor invoices that are associated with service invoices. If this registry entry is not implemented, it is necessary to run the <a href="AP_Payment_Approval.htm">Start AP Payment Approved List</a> function to approve AP transactions for payment that were created referencing an AP Term with the Requires Approval box checked. However, by implementing this registry option, running the Service Billing Compute function will automatically approve the ‘Requires Approval’ vendor invoices associated with the Service Invoices that you post.</p>
+  <h3>Specify Custom Service Invoice / Posting Reports</h3>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> ReportIdInvoice <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">serviceinvoice_customreport</font>
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">This option sets the report id of the service invoicing report called by the function (normally, this report is specified in the job and job billing item records). If your firm has switched to a custom service invoice report, replace <font style="font-style: italic;">serviceinvoice</font>
+    <font style="font-style: italic;">_customreport</font> with the custom report Id; this way it is not necessary to change all the report id’s in all your jobs and billing items. Note, however, that the Report Query Id in the Job / Job Billing Item records will still be used. Therefore, if this field has been changed in your custom report, the Job / Job Billing Item records must be changed to reflect this.
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> PostReportId <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">serviceinvoicepost</font>
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">This option sets the posting report id of the service invoicing report called by the function. If your firm uses a custom service invoice posting report, replace <font style="font-style: italic;">serviceinvoicepost</font> with the custom report Id.</p>
+  <h3>Service Compute Checklist</h3>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> DefaultDo <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <p>Implementing this registry option defaults all the Do fields in the Service Compute Checklist to checked (selected). If this option is not implemented, no work orders will be selected when the checklist screen appears.</p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">Setting Key:</font> orderby <font style="font-weight: bold;">Setting Value:</font>
+    <font style="font-style: italic;">sql</font>
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">this option, if present, configures the Service Compute Check List. It requires a custom sql string; contact your support representative for additional information.</p>
+  
+  
+  
+  <h3>COD Posting (Post Only to AR Sales)</h3>
+  <p>By default, COD Invoices are posted to both the AR Sales Journal AND the AR Cash Receipts Journal. The following registry setting may be used to restore the old behavior (just post to AR Sales): however, this also doubles the WO&#39;s COD child tab (the parent may still be used).</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> UseSJForCOD  <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <h3>Clear OK to Bill Flag after post – DO NOT USE IF QUOTING IS ENABLED</h3>
+  <p>WARNING: This registry option should NEVER be set if Quotemaster is used or if a user might EVER flag a work order line as quoted. This registry entry sets the WO Ready-to-Invoice flag set to false (unchecked) during the Service Invoice Post for each invoiced WO having Date Closed &lt;&gt; &#39;1900-01-01&#39;:</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> ClearInvoiceReadyForClosedWOs <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <h3>Attach TechAnywhere Receipts and Other Documents to Emailed Invoices</h3>
+  <h3>Skip Print Emailed Invoices</h3>
+  <p>This release adds the ability to append TechAnywhere receipts or other documents to the PDF&#39;d version of Service Invoices. This allows an Invoice Package to be automatically emailed to customers configured to receive Service Invoices via email. Supported document attachment file types include: .bmp, .jpg, .gif, .png,  and .pdf. This functionality is suitable for scenarios where a Work Order is only invoiced once.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Important:  Only the PDF&#39;d Invoice Includes the Attachments</span><br/>
+    The .dbr version of the Service Invoice will not display the attached documents; it will however include a list of attached files. Only the PDF&#39;d version of this document will include the &#39;package&#39; of document attachments.</p>
+  <p>To enable this functionality:</p>
+  <p style="margin-left: 48px;">1. The revised Service Invoice serviceinvoicev90b028.rpt dated 2016/02/16 or later must be installed in your database.</p>
+  <p style="margin-left: 48px;">2. The Client Site Email Invoices field (a-clntste: clntste.eml-invce) must contain a list of the Document Categories which should be included in the Invoice Package. The included documents must be attached to the Work Order being invoiced prior to the generation of the invoice. Any documents attached to the Work Order after an invoice is generated will not be included in this package.</p>
+  <p style="margin-left: 48px;">For example, to include TechAnywhere Receipts in the Invoice Package for a particular Site, you would enter <span style="font-weight: bold;">Receipt</span> in its Email Invoices field.</p>
+  <p style="margin-left: 48px;">3. Verify that the xmlToPdf.jar file (located in the same directory as your SAMPro executable) is dated 2015/07/08 or later.</p>
+  <p style="margin-left: 48px;">4. Implement the following registry entries:</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> sys-start-ssrvcebllngcmpte:</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> IncludeInvoiceDocuments   <span style="font-weight: bold;">Setting Value:</span> true    (default false)</p>
+  <p style="margin-left: 48px;">This option is required to implement the new &#39;package&#39; functionality; it must be implemented in the base registry.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> SkipPrintEmailedInvoices   <span style="font-weight: bold;">Setting Value:</span> true</p>
+  <p style="margin-left: 48px;">Implementing this registry allows emailed invoices to be &#39;skipped&#39; in the print run.  Processing will proceed as usual: the Invoices will be displayed and sent to the printer; the user must then confirm that the invoices have printed and post them. However, only those invoices that were not emailed will actually be printed; this registry option must also be included in the base registry.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> sys-report-serviceinvoice:</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> sectionbackerbitmap   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">Pathname</span>\whitesquare.bmp</p>
+  <p style="margin-left: 48px;">This registry is recommended to prevent the invoice bitmap from &#39;stepping on&#39; the attached documents. The bitmap may be obtained from support.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span> ShowDocumentDescription  <span style="font-weight: bold;">Setting Value:</span> Y</p>
+  <p style="margin-left: 48px;">This option should be enabled to display the Document Description of the attached graphic document on the upper left-hand corner of the page. Note that the attachments themselves (along with the Description) are only shown when the invoice is PDF&#39;d.</p>
+  <h3>Skip Printing of Zero Dollar Invoices</h3>
+  <p>The following registry option enables the users to skip the physical printing of zero dollar service invoices. If this registry is enabled:</p>
+  <p style="margin-left: 48px;">Zero dollar invoices will still be processed and &#39;posted&#39; along with the batch.<br/>
+    No paper forms should be printed.<br/>
+    Auto-saving should still happen.</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">IMPORTANT:</span> This functionality also requires the revised Service Invoice serviceinvoicev90b028.rpt dated 2016/02/16 or later.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Id:</span> sys-start-ssrvcebllngcmpte</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Setting Key:</span>  SkipPrintZeroInvoices   <span style="font-weight: bold;">Setting Value:</span> true  (default is false)</p>
+  <h3>Registry to Skip Print and or Email of Negative Invoices</h3>
+  <p class="MsoNormal" style="margin-top: 0in; 
+									 margin-right: 1.9pt; margin-bottom: 7.95pt; 
+									 margin-left: 6.5pt;">The revised Service Invoice Report (SERVICEINVOICEv90b028) dated 2016-11-11 and this release support registries to skip printing and/or emailing service invoices with a negative total.</p>
+  <h5>Registry to Skip Emailing Negative Invoices</h5>
+  <p class="MsoNormal" style="margin-top: 0in; 
+									 margin-right: 1.9pt; margin-bottom: 7.95pt; 
+									 margin-left: 0in; text-indent: 5.75pt;"><b style="mso-bidi-font-weight: normal;">Id:</b> sys-report-serviceinvoice</p>
+  <p class="MsoNormal" style="margin-top: 0in; 
+									 margin-right: 1.9pt; margin-bottom: 7.95pt; 
+									 margin-left: 0in; text-indent: 5.75pt;"><b style="mso-bidi-font-weight: normal;">Setting Key:</b><span style="mso-spacerun: yes;"> </span> SkipEmailNegativeInvoice<span style="mso-spacerun: yes;"> </span> <b style="mso-bidi-font-weight: normal;">Setting Value:</b><span style="mso-spacerun: yes;"> </span> Y (default is N)<span style="mso-spacerun: yes;"> </span></p>
+  <h5>Registry to Skip Printing Negative Invoices</h5>
+  <p class="MsoNormal" style="margin-top: 0in; 
+									 margin-right: 1.9pt; margin-bottom: 7.95pt; 
+									 margin-left: 0in; text-indent: 5.75pt;"><b style="mso-bidi-font-weight: normal;">Id:</b><span style="mso-spacerun: yes;"> </span> sys-start-ssrvcebllngcmpte</p>
+  <p class="MsoNormal" style="margin-top: 0in; 
+									 margin-right: 1.9pt; margin-bottom: 7.95pt; 
+									 margin-left: 0in; text-indent: 5.0pt;"><b style="mso-bidi-font-weight: normal;">Setting Key:</b><span style="mso-spacerun: yes;"> </span> SkipPrintNegativeInvoices<span style="mso-spacerun: yes;">  </span> <b style="mso-bidi-font-weight: normal;">Setting Value:</b><span style="mso-spacerun: yes;"> </span> true (default is false)</p>
+  <h3 class="MsoNormal">Registry to Clear Billing Agent User Id</h3>
+  <p>Registry entries may be used to clear the default initial values when running Compute Service Invoice. This allows the Billing Agent User Id range to be automatically cleared when running this function. Previously, the User Id of the user running the function would always be written to the Service Invoice report range screen.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-start-ssrvcebllngcmpte</p>
+  <p><span style="font-weight: bold;">Setting Key:</span>  initialValueFor~usr.id <span style="font-weight: bold;">Setting Value:</span></p>
+  <p>Note that the Setting Value is blank in this case.</p>
+  <h3>Retail Delivery Fee (RDF) for Colorado</h3>
+  <p>Effective July 1st, 2022, Colorado is instituting a new Retail Delivery Fee (RDF) of $0.27 for all Colorado deliveries involving a motor vehicle component and where at least one item in the delivery is subject to state sales or use tax. This registry allows Colorado users to edit their data to create a new job cost category and to correspond other rate ID to add this RDF to an invoice.</p>
+  <p><strong>Id:</strong> sys-start-ssrvcebllngcmpte</p>
+  <p><strong>Setting Key:</strong> TaxSummaryWithFeeDetails  <strong>  Setting Value:</strong> true (default false)</p>
+  <p><strong>WARNING: User must include a non-zero Billable Quantity when entering the special Retail Delivery Fee line.</strong></p>
+  <h3><a id="Invoice_Backer_Terms_and_Conditions_Page"></a>Invoice Backer / Terms and Conditions Page</h3>
+  <p>In previous release a customized variant of the &#39;sectionbackerbitmap&#39; was enabled to allow service invoices to include attached documents when pdf&#39;d and emailed. Unfortunately, this prevents the standard &#39;sectionbackerbitmap&#39; functionality from working in the report.  This release supports the addition of an invoice backer (typically for Terms and Conditions). The backer will appear at the end of the pdf&#39;d invoice package.</p>
+  <p>Note that the sectionbackerbitmap registry must be included in the sys-report-serviceinvoice registry (ies) to ensure that the header bitmap does not step on the new backer and other invoice package documents.</p>
+  <p>1. Create a invoice backer file that can be pdf&#39;d by SAMPro.  The following file types may be used for the backer:  .bmp, .jpg, .gif, .png, and .pdf.</p>
+  <p>2. Go to the sys-start-ssrvcebllngcmpte registry.</p>
+  <p>3. Attach the backer file to the Registry and set the Document Category to InvoiceBacker. Save the Document file. Note that the backer file should only be attached to a single registry record.</p>
+  <p>4. Add the registry option:</p>
+  <p><span style="font-weight: bold;">Registry Id: </span>sys-start-ssrvcebllngcmpte</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> AutoIncludeDocs  <span style="font-weight: bold;">Setting Value:</span> comma separated list of strings for document categories</p>
+  <p>In our example, the Setting Value would be set to InvoiceBacker.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> IncludeInvoiceDocuments   <span style="font-weight: bold;">Setting Value:</span> true</p>
+  <p>This existing option is also required to implement the &#39;invoice package&#39;.</p>
+  <p>5. When the PDF&#39;d service invoice is generated, the backer will appear at the end of the invoice package, after any documents include via the IncludeInvoiceDocuments option (these document categories are noted in the Site&#39;s Email Invoice field).  </p>
+  <p style="font-weight: bold;">Important Implementation Notes:</p>
+  <p style="font-weight: bold;">If Custom Fields has been used to specify allowed Categories, you may need to add InvoiceBacker on a  temporary basis, and remove it after the document has been created. If other documents are inadvertently added with this category they will also be included in the Service Invoice package!</p>
+  <p>There are 2 scenarios to include documents for the new logic:</p>
+  <p style="margin-left: 48px;">If the document has the category in the registry and the document has References and NONE of those References include the Work Order being invoiced, it will be included</p>
+  <p style="margin-left: 48px;">If the document has the category in the registry and the document has NO References.</p>
+  <p style="margin-left: 48px;">Strictly speaking, the Document record does not need to be attached to ANY record, but if this is the case the Document Record and ONLY be accessed by entering the Document Id in the Document viewer. Since this makes it too easy to &#39;lose&#39; the file, we are recommending attaching it to the registry record, with a new document category.</p>
+  <script type="text/javascript" language="JavaScript1.2">
+    //<![CDATA[
+    if (typeof(TextPopupInit) != 'function') TextPopupInit = new Function();
+    TextPopupInit('a1', 'POPUP638365127');
+    //]]>
+  </script>
+
+</body></html>

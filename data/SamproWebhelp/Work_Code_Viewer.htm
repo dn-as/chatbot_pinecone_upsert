@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.6.0_17";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="CC Cycle Code Metrics"/>
+<meta name="MS-HKWD" content="work code"/>
+<meta name="MS-HKWD" content="metrics"/>
+<meta name="MS-HKWD" content="Log Form Viewer"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Work Code Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="CC Cycle Code Metrics,work code,metrics,Log Form Viewer"/><meta name="brsprev" value="Time_Zone_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Work Code Viewer">
+        <span>Work Code Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Work Code Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create, maintain and select from your list of Work Codes. Work Codes 
+ concisely identify the service call or PM that is being handled on the 
+ Work Order.</p>
+<h2>Example:</h2>
+<p>Depending upon the needs of your company, your Work Codes can be very 
+ simple (e.g., noheat, nocool, pm, etc.). Alternately, a more comprehensive 
+ set of Work Codes can refer to origin of the problem.</p>
+<h2>Usage:</h2>
+<p>Recommended for Dispatching and Work Orders.</p>
+<p>Referenced in Records: Work Order, Client Site Equipment PM Schedule.</p>
+<p>Supports Cycle Code Filtering of Work Order Metrics (Log Form) lines. 
+ See <a href="Log_Form_Viewer.htm">Log Form Viewer</a> for additional details.</p>
+<h2>Related Registry:</h2>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Work_Code_Certifications_for_Techfinder">Registry 
+ to add Work Code Certifications to TechFinder</a></p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields that may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the order or status (required, optional, 
+ default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">Work Code Id:</font> (15 character, 
+ only . and - special characters)<br/>
+Uniquely identifies this Work Code. This field is required.</p>
+<p><font style="font-weight: bold;">Work Code Name:</font> (40 character)<br/>
+The optional field may be used to enter a brief description of the problem. 
+ The system now sets the Work Order Name from the Work Code Name when generating 
+ PM Work Orders. In New Call, the Work Code Name will be used for the Work 
+ Order Name if this field is not completed by the user.</p>
+<p><font style="font-weight: bold;">Estimated Hours:</font> (numeric format 
+ 000.00)<br/>
+This optional field enables you to enter the estimated number of hours 
+ required to resolve this problem. The estimated hours on a Service Work 
+ Order default from this field (the Service Task record provides the default 
+ estimated hours for a PM Work Order).</p>
+<p><font style="font-weight: bold;">Priority:</font> (numeric 0-9)<br/>
+This field is used to set the default priority of a Work Order when it 
+ is first created. By definition, a priority of 0 is the highest (most 
+ critical) priority.</p>
+<p><font style="font-weight: bold;">Web Access: Allowed?<br/>
+</font>Check this box (by double clicking on it) if you want it to appear 
+ on the FMAnywhere / Client Web New Call page. This box should remain blank 
+ if you do not want your client to be able to select this work code.</p>
+<p><font style="font-weight: bold;">Work Code Description:</font><br/>
+A more complete description of this problem or additional information you 
+ wish to include. In New Call, this field will be use to provide the Work 
+ Requested.</p>
+<p><font style="font-weight: bold;">Call Script Id:<br/>
+</font>This field enables you to assign a Call Script to a specific work 
+ code (as well as to Equipment) for use in conjunction with New Call and 
+ FMAnywhere / Client Web Portal .</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">When you select 
+ a Work Code with an assigned Call Script in New Call, the system will 
+ immediately prompt you to respond to the Call Script questions. If you 
+ select a Client Site Equipment record (in New Call) that also references 
+ a Call Script, you will be prompted to answer those questions as well. 
+ In this case, both sets of Call Script questions and replies will be recorded 
+ in the Call Script tab of the Work Order.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">If this Work Code 
+ flagged for Web Access (see the Web Access: Allowed? field), the questions 
+ included in this Call Script will be displayed in when a customer selects 
+ this Work Code.</p>
+<p><font style="font-weight: bold;">Service Category<br/>
+</font>This field promotes ease of use in the New Call viewer and Client 
+ Web interface. It categorizes the types of equipment that your firm works 
+ on in way that is easy and obvious for your customers to understand. If 
+ you enter a Service Category in New Call, the pop-up work code list will 
+ be filtered to only those referencing the corresponding Service Category. 
+ It is also used in the Client Web Interface to filter the types of service 
+ that a customer may request.</p>
+<p><font style="font-weight: bold;">Cycle Code Filter:</font><font style="font-weight: bold;"><br/>
+</font>This filter is used by Sam Pro and TechAnywhere to filter the Work 
+ Order Log Form Metrics written to the Work Order. Note that Log Form Id 
+ field in the Client Site Equipment record determines which Log Form (list 
+ of metrics) is used. Multiple cycle codes may be entered as a comma-delimited 
+ alphanumeric list. In the case of letters, this field is not case sensitive 
+ (a=A).</p>
+<p>If this field is blank, all metrics from the Log Form will be written 
+ to the Metrics tab.</p>
+<p>If one or more Cycle Codes are listed, only those Log Form (metrics) 
+ lines whose CC: field corresponds to the filter or is blank will be written 
+ to the Work Order (for Techs without remote access) or uploaded to the 
+ Technician’s device.</p>
+<p>The Work Code in the Work Order header is used for metrics filtering 
+ purposes for Service Work Orders.</p>
+<p>For PM Work Orders, the Cycle Code Filter (if completed) in the PM Schedule 
+ Tab of the Client Site Equipment, or the Schedule Tab of the Master Contract 
+ will override the Work Code’s Cycle Code Filter.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline; ">Example:</font> 
+ Cycle Code Filter: 1,3</p>
+<p style="margin-left: 36.00pt;">Only those lines from the Log Form whose 
+ CC field is set to 1, to 3 or is blank would be written to the Work Order 
+ or uploaded to the Technician’s device.</p>
+<p><font style="font-weight: bold;">Work Code User1-5</font><br/>
+These fields may be used to record additional information required by your 
+ company.</p>
+<p><span><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Work_Code_Certifications_for_Techfinder">Registry 
+ to add Work Code Certifications to TechFinder</a> </span><span>allows 
+ the use of the Work Code User1 field to specify additional Certifications.</span></p>
+<p><font style="font-weight: bold;">Obsolete</font><font style="font-weight: bold;">?</font><font style="font-weight: bold;"><br/>
+</font>If this field is checked, the record is considered Obsolete, and 
+ it may not be directly specified during data-entry (either by entering 
+ the Id or selecting it from a list). Obsoleted records can be edited and 
+ the Obsolete option can be un-done when necessary. When you check the 
+ Obsolete field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. 
+ Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through 
+ access to all tables referencing this record: see <a href="References_List.htm">References 
+ List</a> for details.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field displays the Security Id of the local 
+ user that created this record. If multiple location security is not implemented 
+ on your system, or if this record was created by a global user, this field 
+ will be blank.</p>
+
+</body></html>

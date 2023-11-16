@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.9.5.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report AP 1099 Electronic Files</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="1099,ap 1099 electronic files,electronic files 1099,Vendor 1099 electronic files"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report AP 1099 Electronic Files">
+        <span>Report AP 1099 Electronic Files</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report AP 1099 Electronic Files</h1>
+<h2>Purpose:</h2>
+<p>This report function creates the files that is used to submit 1099 files 
+ electronically. The report RAP 1099EF.rpt (dated at least 2021-01-29) 
+ must be imported into your data and assigned to the appropriate User Groups 
+ and the required registry entries (listed below) implemented. <span style="mso-bidi-font-family: Arial;">Unlike 
+ the separate 1099 MISC and 1099 NEC paper forms, the electronic file will 
+ both 1099 NEC and 1099 MISC. </span></p>
+<p class="MsoNormal" style="margin-left: 48px;"><b style="mso-bidi-font-weight: normal;"><span style="mso-bidi-font-family: Arial;">Intercompany Users:</span></b> 
+ <br/>
+<span style="mso-bidi-font-family: Arial;">This report </span><span style="mso-bidi-font-family: Arial;">supports 
+ the use of the Company record / Company Registry tab to specify the Federal 
+ EIN, Company Name and Address and other registry settings required for 
+ these reports. This will reduce the need for multiple registries entries 
+ by Company Security. The new Company Record overload logic supersedes 
+ Registry values when/if present.</span></p>
+<p class="MsoNormal" style="margin-left: .5in;"><b style="mso-bidi-font-weight: normal;"><span style="mso-bidi-font-family: Arial;">Company Record Name and Address 
+ Fields:</span></b> <span style="mso-bidi-font-family: Arial;">The Company 
+ Name &amp; Company Address are populated from the Company Header info 
+ if available. Registry entries for raCompanyName and raCompanyAddress 
+ will be superseded by the Company Registry information if present.</span></p>
+<p class="MsoNormal" style="margin-left: .5in;"><span style="mso-bidi-font-family: Arial;">Company 
+ Registry Tab Fields: Fields not defined in the Company Record header may 
+ be added to the Company record&#39;s Registry Tab.</span></p>
+<h2>Registries:</h2>
+<p>The following registries are BOTH required for this report:</p>
+<p><a href="1099_Electronic_Filing.htm">Registry 1099 Electronic File</a></p>
+<p><a href="Registry_AP_1099_Electronic_Files.htm">Registry AP 1099 Electronic 
+ File</a>  </p>
+<h2>Report Range Screen:</h2>
+<p><span style="font-weight: bold;">1099 Year:</span><br/>
+ Defines the year of the effective (check) dates of payments to include 
+ on this report.</p>
+<p><span style="font-weight: bold;">Prior Year:</span><br/>
+ Check this box if this report is for the Prior Year.   </p>
+<p><span style="font-weight: bold;">Test File:</span><br/>
+ Check this box if this is a Test file.</p>
+<p><font style="font-weight: bold;">1099 Limit:</font><br/>
+ Enter a dollar value to limit the 1099’s to only those Vendors you have 
+ paid at least in the time period specified by 1099 Year. This field is 
+ also used for prior year reporting.</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> 
+ When you click Go, the system will display a raw dump of the report  Leave 
+ the report viewer open.</p>
+<p><span><img src="assets/images/image/SKIN1_SaveToDisk.gif" alt="" style="border: none;" border="0"/>  If all is in order, click the Save 
+ button and save the report as a Text file. When you do so, the electronic 
+ file to be submitted will be written to the directory defined by the dbreportfiles 
+ registry&#39;s directory option. </span></p>
+
+</body></html>

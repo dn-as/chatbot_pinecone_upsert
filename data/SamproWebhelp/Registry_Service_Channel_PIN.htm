@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.30.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Service Channel"/>
+<meta name="MS-HKWD" content="FMMS"/>
+<meta name="MS-HKWD" content="sys-fmms-vendor-servicechannel-pin"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Service Channel PIN</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Service Channel,FMMS,sys-fmms-vendor-servicechannel-pin"/><meta name="brsnext" value="Registry_PR_401_k_.htm"/><meta name="brsprev" value="Service_Channel_Background_and_Setup.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Service Channel PIN">
+        <span>Registry Service Channel PIN</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Service Channel PIN (sys-fmms-vendor-servicechannel-pin)</h1>
+<h3>Purpose:</h3>
+<p>This registry entry supports multi-company certificates for uploaded invoices.</p>
+<h3>Related Registry Options:</h3>
+<p>In add to the multi-company entries discussed in this topic, the base <a href="Registry_Service_Channel_sys_FMMS_.htm">Registry Service Channel</a> entry must also be implemented.</p>
+<h3>Usage:</h3>
+<p>Invoices are uploaded to ServiceChannel by sending them an email with an attached spreadsheet. For each work order, the spreadsheet includes a userId and a password. Previously, the userId and password are derived from the Sampro Registry sys-fmms-vendor-servicechannel, supporting only a single userId and password contained in the registry entry. This results in the sending of the same userId/password pair for every work order regardless of the Sampro &#39;company&#39;.</p>
+<p><br/>
+This procedure has been enhanced so that userId/password used is dependent on the corresponding work order. This release provides a mechanism for implementing multiple userId/Password pairs when uploading invoices to ServiceChannel. The technique used is to provide for PIN based overrides in the Sampro ‘sys-fmms-vendor-servicechannel’ registry entry.<br/>
+<br/>
+It work likes this:<br/>
+•    The entire registry entry is retrieved from the Sampro Registry for the ‘sys-fmms-vendor-servicechannel’ key as usual.<br/>
+•    The entire registry entry is retrieved from the Sampro Registry for the ‘sys-fmms-vendor-servicechannel-pin-XXXX’ key (where ‘XXXX’ is the pin identified by the work order).<br/>
+•    The two entries are merged. Where there are duplicate entries, the second pin based registry takes precedence.<br/>
+<br/>
+To implement the correct userId/password uploading for multi-company users, you must create a ‘sys-fmms-vendor-servicechannel-pin-XXXX’ for each company’s pin. The only lines required are the InvoiceUID and InvoicePWD lines. For single company users, the invoiceUID and InvoicePWD lines can remain in the normal &#39;sys-fmms-vendor-servicechannel&#39; registry entry.</p>
+<h3>Important Fields:</h3>
+<p><font style="font-weight: bold;">Id:</font> sys-fmms-vendor-servicechannel-pin-<font style="font-style: italic;">XXXX</font></p>
+<p>Where <font style="font-style: italic;">XXXX</font> is replaced by the PIN provided by Service Channel. Note that individual registry entries must be created for all applicable PIN’s.</p>
+<h3>Required Settings for Multi-Company Use:</h3>
+<p><font style="font-weight: bold;">Setting Key</font>: InvoiceUID  <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">User Id provided by Service Channel</font></p>
+
+<p><span id="BugEvents161" style="font-weight: bold;">Setting Key:</span> <span>InvoicePIN  Setting Value:</span> <span style="font-style: italic;">IVRPINNumber</span></p>
+<p><span>The value of this setting should the IVR PIN Number used by your company.</span></p>
+<h3>Customer and Store Id Overrides</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> StoreId  <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">provided by Service Channel</font></p>
+<p><font style="font-weight: bold;">Setting Key:</font> CustomerId  <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">provided by Service Channel</font></p>
+<p>StoreId and CustomerId values are needed when sending messages to ServiceChannel. These entries may be used to override the corresponding values in the sys-fmms-vendor-servicechannel registry.</p>
+<p> </p>
+
+</body></html>

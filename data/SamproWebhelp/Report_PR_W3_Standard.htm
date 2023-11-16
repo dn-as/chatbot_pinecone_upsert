@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.7.0_15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report PR W3 Standard</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="Payroll W-3,W-3,Report PR W-3,W3"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report PR W3 Standard">
+        <span>Report PR W3 Standard</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report PR W3 Standard</h1>
+<h2>Purpose:</h2>
+<p>This function is used to print W3 Forms. W3 forms may be printed separately 
+ via Report PR W3s (Standard) from the report menu or, optionally, directly 
+ after Copy A of the W2. Note that this report does not require native 
+ PCL printing.</p>
+<h2>Usage:</h2>
+<p>Successful W2 reporting depends on properly formatted registry entries 
+ and tax-related records. Click <a href="W2_Records_and_Setup.htm">W2 Records 
+ and Setup</a> to review your records as discussed before running your 
+ W2&#39;s.</p>
+<p><span style="font-weight: bold;">Company Record: </span>In Version 9.1.611.045 
+ and Above, if Intercompany processing is enabled then the following 
+ the Employer Info will now come from the appropriate Company records, 
+ NOT the registries: Company Name, Company Address and Company Federal 
+ EIN.</p>
+<h2>Registry Entries:</h2>
+<p>Make any adjustments needed to the horizontal or vertical positions 
+ via the <a href="Registry_W2_Entry.htm">sys-printer-W2</a> and/or <a href="Registry_W3_Printing.htm">sys-printer-W3</a> 
+ registries and check for alignment as needed.</p>
+<p><a href="Registry_Entry_W2_and_W3_Printing.htm">Registry W2 Printing 
+ (sys-report-rw2)</a> . This registry also supports the additional fields 
+ required for W3 printing.</p>
+<p>The <a href="Registry_Entry_Federal_EIN.htm">Registry Entry Federal 
+ and State EIN</a> and <a href="Registry_Company_Name_Entry.htm">Registry 
+ Company Name Entry</a> must be also be set correctly.</p>
+<h2>Printing Notes:</h2>
+<p><b style="mso-bidi-font-weight: normal;">Unless your support representative 
+ updated your Folders view or made the appropriate Function Substitution, 
+ you will need to run the new report from the Report Menu.</b><span style="mso-spacerun: yes;"> </span> Run 
+ Report PR W-2 (Standard) and print a test alignment of your tax forms 
+ for one or two employees before running all copies. You will be prompted 
+ to run the Report PR W-3 (Standard) (although Report PR W-3s (Std) may 
+ be also be run stand-alone).</p>
+<p>W2&#39;s are printed in 1-part laser format. The 2 forms per page formats 
+ are recommended. You will perform several print runs to produce your W2&#39;s 
+ for the federal, state and local governments, your own records, and for 
+ your employees. You must remember to change your forms as needed between 
+ runs so that you do not waste forms.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">TIP: 
+ Aligning your Forms:</font> we suggest printing a W2 for two employees 
+ (by entering their  Id&#39;s in the Employee range) to check alignment. 
+ DO NOT use the Plain Paper copy option. Make any adjustments needed to 
+ the horizontal or vertical positions via the <a href="Registry_W2_Entry.htm">sys-printer-W2</a> 
+ and/or sys-printer-W3 registries.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">W3 Support</font><br/>
+The Copy A option of Report PR W-2s (Standard) allows the printing of a 
+ W3 form at the end of the report. The system will print the Copy A’s and 
+ summary page as usual, and then pause. The following message box will 
+ appear:</p>
+<p style="margin-left: 88px;"> Print W3 Form? Insert W3 Form Now.</p>
+<p style="margin-left: 8px;">If you want to print the W3, DO <font style="font-weight: bold;">NOT</font> 
+ RESPOND TO THIS MESSAGE IMMEDIATELY. To print the W3 form, the user should 
+ verify that all Copy A’s plus the summary page have been printed, and 
+ then load the W3 form in the printer.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">After</font> 
+ the W3 form has been loaded, the user should then click Yes in the message 
+ box to print the W3 form. Note that if taxes for more than one state have 
+ been assessed, an X will be printed in the State portion of Box 15, and 
+ the Employer’s state ID number will be blank.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Year:</font><br/>
+Enter the year the W-3 is being produced for (e.g., 2017). This field must 
+ be completed in order for your W-3 to print.</p>
+<p><font style="font-weight: bold;">Start Date End Date<br/>
+</font>The system sets the Start Date and the End Date based on the Year 
+ field. These dates may not be edited by the user.</p>
+<p><font style="font-weight: bold;">Tax Authority Id:</font><br/>
+This field enables you to only print W2&#39;s for a single tax authority or 
+ series of authorities. It is not recommended for Copy to Print options 
+ A,B,C or D.</p>
+<p><font style="font-weight: bold;">State Id:</font><br/>
+This field enables you to only print W2&#39;s for a single state or series 
+ of states. It is not recommended for Copy to Print options A,B,C or D.</p>
+<p><font style="font-weight: bold;">Type:</font><br/>
+This field enables you to only print W2&#39;s for a single type of authority 
+ (e.g., state, local, federal, other). It is not recommended for Copy to 
+ Print options A,B,C or D.</p>
+<p><font style="font-weight: bold;">Employee Id:</font><br/>
+This field enables you to only print W2&#39;s for a single employee or series 
+ of employees. It is recommended for reprinting W2&#39;s and for aligning your 
+ forms.</p>
+<p><font style="font-weight: bold;">Executive Payroll</font>:<br/>
+If you are an Executive Payroll user, this field will default to Y; to 
+ print checks for all employees (Executive or not) clear this range. If 
+ your user record is not flagged as Executive Payroll, you will only be 
+ able to print forms for other non-Executive users.  The 
+ Executive Payroll status of the Payroll Period used to record time is 
+ not considered when printing W-3&#39;s.</p>
+
+</body></html>

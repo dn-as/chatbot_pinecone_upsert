@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.1.0_14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job WO Creator Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="job scheduler,wo creator,work order,installation work order"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job WO Creator Tab">
+        <span>Job WO Creator Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Job WO Creator Tab</h1>
+<h2>Purpose:</h2>
+<p>This tab provides a basis for scheduling personnel for construction/installation type jobs. The information in this tab will be used by Start Create Job Scheduler WOs to generate Work Orders for this Job; these Work Orders will be linked to this tab when they have been created. This Starter function is only available if this module has be implemented in your database.   </p>
+<h2>Usage:</h2>
+<p>When a Job is cloned, the contents of the WO Creator tab is also cloned (minus the Work Order link).</p>
+<p>When the Insert/Copy button is clicked for a lines which has the WO already assigned the WO Id will not be copied.</p>
+<p><img src="assets/images/SKIN1_CreateJobWOs.bmp" alt="" style="border: none;" border="0"/> The Job&#39;s WO Creator tab includes a button, Create Job Work Orders. Clicking this button launches the  Start Create Job Scheduler WOs function with the selected Job Id loading into the range field.</p>
+<p>One Installation Work Order will be created for each group of lines with the same Work Start date, Job Cost Code, Job Billing Item, Equipment Id and Work Code. <span style="font-size: 10.0pt; mso-bidi-font-size: 11.0pt; line-height: 109%; font-family: Arial, sans-serif; mso-fareast-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">The certification field will act as default filter for the Job Scheduler analytic.</span> Since the resource (Technician) scheduling will be manage via the Analytic, only a single Technician line will be included on the Work Order when it is initially generated. <span style="font-size: 10.0pt; mso-bidi-font-size: 11.0pt; line-height: 109%; font-family: Arial, sans-serif; mso-fareast-font-family: Arial; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">The Technician Id in the line will default the Work Order’s technician or the default will be set (Unassigned) if left blank.</span> The Site Equipment&#39;s Escalation Profile to set the new WO&#39;s Escalation Profile.</p>
+<h2>Important Fields:</h2>
+<p><span style="font-weight: bold;">Equipment Id:</span><br/>
+The Equipment to be used when the Work Order is generated.</p>
+<p><span style="font-weight: bold;">WO Id:</span><br/>
+This display-only field will be completed when a Work Order has been generated from this line.</p>
+<p><span style="font-weight: bold;">Cost Code:  Billing Item:</span><br/>
+Provides the default Cost Codes and Billing Items for the Work Order. Typically, the Cost Code would represent a phase of the job.</p>
+<p><span style="font-weight: bold;">Work Code Id:</span><br/>
+Provides the default Work Code when the Work Order is generated.</p>
+<p><span style="font-weight: bold;">Certification Id:</span><br/>
+When the custom analytic is enabled, this field will act as the default filter for Analytics Certification filtering. Certifications are used in this manner might include Plumber Lead, Plumber Helper, Electrician Lead, Electrician Helper, etc.</p>
+<p><span style="font-weight: bold;">Bud Hours:</span><br/>
+This display-only field displays the number of hours budgeted in Job History for the Billing Item / Cost Code values specified on this line.</p>
+<p><span style="font-weight: bold;">Est Hours:</span><br/>
+The Estimated Hours required to complete this line.  When the starter function is run to generate Work Orders, this field will be used to set the Estimated Hours field on the Work Order Equipment tab.</p>
+<p><span style="font-weight: bold;">Work Start:</span><br/>
+The date this work is scheduled to start. All lines with the same Work Start Date Job Cost Code, Job Billing Item, Equipment Id and Work Code will be combined into one Work Order when Start Create Job Scheduler WOs is run.</p>
+<p><span style="font-weight: bold;">Tech Id:</span><br/>
+If completed, this Technician will be assigned to the Work Order generated for this line. Typically, this would be used to specify a placeholder (unassigned) for the Company or Branch the Job belongs to.</p>
+<p><span style="font-weight: bold;">Work Requested:</span><br/>
+This required field will be used to set the Work Order and Work Order Equipment Work Requested fields when the Work Order is generated.</p>
+
+</body></html>

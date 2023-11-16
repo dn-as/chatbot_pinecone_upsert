@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.31.1.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sys-viewer-vdsptchbrd-classic"/>
+<meta name="MS-HKWD" content="classic board"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="dispatch board"/>
+<meta name="MS-HKWD" content="support document"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Internal Registry Dispatch Classic Board (sys-viewer-vdsptchbrd-classic)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="classic board limit,max calls classic board,call limit classic board,sys-viewer-vdsptchbrd-classic,classic board,registry,dispatch board,support document"/><meta name="brsnext" value="CRMAnywhere_Guest_Login_for_Confirm_Appointment.htm"/><meta name="brsprev" value="Registry_COP_Invoice_sys_printer_rcopinvce_.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Internal Registry Dispatch Classic Board (sys-viewer-vdsptchbrd-classic)">
+        <span>Internal Registry Dispatch Classic Board (sys-viewer-vdsptchbrd-classic)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Dispatch Classic Board (sys-viewer-vdsptchbrd-classic)</h1>
+<h2>Purpose:</h2>
+<p>If this registry entry is not created, standard system defaults (and 
+ the various sys-dispatchboard-colors registry entries) will be used to 
+ display the Classic Board. The entries made in this registry override 
+ those used by default.</p>
+<h2>Usage:</h2>
+<p>The default classic board configuration used in the absence of this 
+ registry entry is described in <a href="Default_Classic_Board_Configuration.htm">Default 
+ Classic Board Configuration</a> .</p>
+<p>A Powerpoint presentation on setting dispatch board registry entries 
+ is available. Contact your support representative to obtain this step-by-step 
+ presentation.</p>
+<h5>Error Handling of Bad or Incomplete Registries</h5>
+<p>In releases prior to 9.1.611.043, it was possible to completely disable 
+ the Classic and./or Day boards by making an incorrect or missing infof# 
+ registry entries: a Runtime error: Key is missing would be displayed and 
+ the board could not be accessed.  In version 9.1.611.043 and above, 
+ a missing infof# setting will be replaced by the default WorkOrder,10,0@0 
+ setting instead so that the user will at least be able to access the board. 
+ This also corrects a second &#39;Key is missing&#39; error when the #infoFields 
+ registry key used by the Day and/or Classic board registries is missing. 
+ </p>
+<h2>Important Fields:</h2>
+<p>Id:</p>
+<p> sys-viewer-vdsptchbrd-classic</p>
+<h3>Maximum Calls</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> maxcalls <font style="font-weight: bold;">Setting Value:</font> #</p>
+<p>This line controls the maximum number of calls (information cells) that 
+ will appear on the classic board per technician. The default value is 
+ set to 50. Since the Classic Board only displays one day at a time, you 
+ would typically set this field based on the number of techs on the board 
+ (plus ‘unassigned’) and the maximum number of work orders per day that 
+ might be assigned to a tech. A large number of calls may impact performance.</p>
+<h3>Default Font</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> font <font style="font-weight: bold;">Setting 
+ Value:</font> facename:pointsize:bold</p>
+<p>This option sets the default font and point size for the Classic board 
+ infocells. Note that the :bold specification is optional. This default 
+ may be overridden for individual fields.</p>
+<p> Examples:</p>
+<p> Setting Key: font Setting Value: arial:7:bold</p>
+<p> Setting Key: font Setting ValueL: tahoma:8</p>
+<h3>Default Foreground (text) Color</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> foreground <font style="font-weight: bold;">Setting Value:</font> 0:ClrDefault or foreground=<font style="font-style: italic;">color:Custom</font></p>
+<p>This option sets the default text color for the Classic board. The default 
+ option sets the text to black. To set a custom color, do the following.</p>
+<p style="margin-left: 36.00pt;">A. To enter the index number, enter all 
+ information up to the word Custom. In this example, you would type foreground=color:</p>
+<p style="margin-left: 36.00pt;">B. After entering the colon : double-click 
+ on the line to display the Windows color selector palette, click on the 
+ desired color and then click OK.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Warning:</font> 
+ Do Not Choose Dithered Colors on standard Citrix Systems)<br/>
+On systems with color limitations (e.g., standard Citrix desktops), dithered 
+ colors should not be selected. Doing so may result in the text being indistinguishable 
+ from the background. Dithered colors can be identified by their spotty 
+ appearance on the color palette.</p>
+<p style="margin-left: 36.00pt;">C. The system will replace the color text 
+ that you typed with the system color you selected in the palette.</p>
+<h3>Background Color – Empty Cells</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> background <font style="font-weight: bold;">Setting Value:</font> color:Custom</p>
+<p>This option sets the default background color for the Classic board 
+ for cells that are not occupied by a work order. See the Foreground option 
+ above for details on setting the custom color.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important 
+ Note:</font> all registry options that use the color functionality must 
+ be correctly configured or a system primitive error will appear when the 
+ Dispatch Board is opened. These entries will NOT be ignored if an ‘x’ 
+ is placed in from of them to temporarily disable them.</p>
+<h3>Background Colors – Occupied Cells</h3>
+<p>By default, the colors specified in sys-dispatchboard-colors-status 
+ registry will be used to set the background colors of occupied cells. 
+ This registry sets the infocell background color based on a specific field: 
+ pr for priority, workcode or zone (for service zone) or to a specific 
+ color. This registry should not be set if you intend to use special background 
+ coloring by individual field (see <font style="font-weight: bold;">Setting 
+ Key:</font> infof<font style="font-style: italic;"># below).</font></p>
+<p><font style="font-weight: bold;">Setting Key:</font> infobackground 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">field</font> 
+ <font style="font-style: italic;">or</font></p>
+<p><font style="font-weight: bold;">Setting Value:</font> infobackground 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">color:Custom</font></p>
+<p>The field option sets the color by keying it to the dispatch board field 
+ that is referenced in one of the following settings:</p>
+<p style="margin-left: 36.00pt;">sys-dispatchboard-colors (to set by Priority)</p>
+<p style="margin-left: 36.00pt;">sys-dispatchboard-colors-status (to set 
+ by Status)</p>
+<p style="margin-left: 36.00pt;">sys-dispatchboard-colors-workcode (to 
+ set by Work Code)</p>
+<p style="margin-left: 36.00pt;">sys-dispatchboard-colors-zone (to set 
+ by Service Zone)</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Tip:</font> 
+ This colors the entire cell background, and may make the text difficult 
+ to read. You may prefer to set the foreground text (or background behind 
+ the text) of one or more of your info fields to your color-coding scheme 
+ as discussed in the infof# entry discussed below. Note that this registry 
+ will override the infof# entry color scheme. </p>
+<h3>Column Header Settings</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> colforeground <font style="font-weight: bold;">Setting Value:</font> 0:ClrDefault or c<font style="font-style: italic;">olor:Custom</font></p>
+<p>This option sets the column header text color for the Classic board. 
+ The default option sets the text to black.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> colbackground <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">color:Custom</font></p>
+<p>This option sets the column header background color for the Classic 
+ board.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> <font style="font-weight: bold;">colheight</font> 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-weight: bold; 
+	 font-style: italic;">#pixels</font></p>
+<p>This option sets the column header height in pixels. It should match 
+ (or be larger which allows for scrolling) the gp-col-height-classic setting 
+ in the sys-viewer-dsptchbrd registy. If it is larger, however, lines will 
+ appear in the column header. (Note that the column <font style="font-style: italic;">width</font> 
+ is effectively set by the infocellsize entry described below.)</p>
+<p><font style="font-weight: bold;">Setting Key</font> colfont <font style="font-weight: bold;">Setting 
+ Value:</font> facename:pointsize<font style="font-style: italic;">:bold</font></p>
+<p>This entry sets the default font and point size for the Classic board 
+ column headers. Note that the <font style="font-style: italic;">:bold</font> 
+ specification is optional. This default may be overridden for individual 
+ fields in the column header.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> colfields <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">#</font></p>
+<p>This entry specifies the number of fields that will appear in the column 
+ headers of the Classic board. You must create a conf# entry (described 
+ below) for the number of colfields that you specify.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> colf#</p>
+<p><font style="font-weight: bold;">Setting Value:</font> fieldname,#char,x@y,facename:pointsize:bold</p>
+<p>These entries define how the fields will be displayed in the column 
+ headers.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">F</font><font style="font-weight: bold;">ieldname</font></p>
+<p style="margin-left: 36.00pt;">The following fieldnames pertain to corresponding 
+ fields in the Technician record – <font style="font-weight: bold;">except</font> 
+ for Hours. If you create an Hours entry, the total Hours selected for 
+ that Technician/Day will be displayed.</p>
+<p style="margin-left: 36.00pt;">ID, Name, User1, User2, Skills (Special 
+ Skills? – displays as Y or N)<br/>
+Insurance (Insurance? – displays as Y or N), Zip, Addrs1, Addrs2, State, 
+ City<br/>
+Phone, Pager, Cell, Email, EmailFax, EmailPager<br/>
+Hours (Estimated Hours for All calls for this tech – always <font style="font-weight: bold;">set 
+ to 7 characters</font>)</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">#characters</font></p>
+<p style="margin-left: 36.00pt;">The number of characters that will be 
+ displayed for this fieldname.</p>
+<p style="margin-top: 0.00pt; margin-left: 48px;"><font style="font-weight: bold; 
+														 text-decoration: underline; ">x@y</font></p>
+<p style="margin-top: 0.00pt; margin-left: 48px;">The position of the text 
+ in pixels as defined by the upper left-hand corner of the first character.</p>
+<p style="margin-top: 0.00pt; margin-left: 48px;"><font style="font-weight: bold;">facename:pointsize:bold</font></p>
+<p style="margin-top: 0.00pt; margin-left: 48px;">This font information 
+ is optional: it will default from the colfont= entry if not specified 
+ here.</p>
+<h3>Row Header Configurations</h3>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting 
+ Key:</font> <font style="font-weight: bold;">rowforeground</font>=<font style="font-weight: bold;">0:ClrDefault</font> or <font style="font-weight: bold;">rowforeground=</font><font style="font-weight: bold; font-style: italic;">color:Custom</font></p>
+<p style="margin-left: 36.00pt;">This option sets the row header text color 
+ for the Classic board. The default option sets the text to black.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting 
+ Key:</font> <font style="font-weight: bold;">rowbackground=</font><font style="font-weight: bold; font-style: italic;">color:Custom</font></p>
+<p style="margin-left: 36.00pt;">This option sets the row header background 
+ color for the Classic board.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting 
+ Key:</font> <font style="font-weight: bold;">rowwidth</font><font style="font-weight: bold; 
+	 font-style: italic;">=#pixels</font></p>
+<p style="margin-left: 36.00pt;">This option sets the row header width 
+ in pixels. It should correspond to the gp-row-width-classic setting in 
+ the sys-viewer-dsptchbrd register setting. (Note that the header row height 
+ is effectively set by the infocellsize entry described below.)</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">rowfont=</font><font style="font-weight: bold; font-style: italic;">facename:pointsize</font><font style="font-style: italic;">:bold</font></p>
+<p style="margin-left: 36.00pt;">This entry sets the default font and point 
+ size for the Classic board row headers. Note that the <font style="font-style: italic;">:bold</font> 
+ specification is optional. This default may be overridden for individual 
+ fields in the row header.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting 
+ Key:</font> <font style="font-weight: bold;">rowfields</font><font style="font-weight: bold; 
+	 font-style: italic;">=1</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting 
+ Key:</font> <font style="font-weight: bold;">rowf1</font><font style="font-weight: bold; 
+	 font-style: italic;">=</font><font style="font-weight: bold;">Index</font><font style="font-weight: bold; font-style: italic;">,#character,x@y</font></p>
+<p style="margin-left: 36.00pt;">By default, the system displays an index 
+ number for each row. We do not recommend overriding the default settings.</p>
+<h3>Infocell Settings</h3>
+<p style="margin-top: 0.00pt;"><font style="font-weight: bold;">Setting 
+ Key:</font> <font style="font-weight: bold;">infocellsize</font> <font style="font-weight: bold;">Setting Value:</font> <font style="font-weight: bold;">x@y</font></p>
+<p>This option specifies the size, in pixels, of the information cells 
+ in the Classic board. This also effectively sets the column width and 
+ the row height of the headers.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> infofields <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">#</font></p>
+<p>This entry specifies the number of fields that will appear in the information 
+ cells of the Classic board. You must create a infof# entry (described 
+ below) for each field you add or change.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> infof<font style="font-style: italic;">#</font></p>
+<p><font style="font-weight: bold; font-style: italic;">Setting Value:</font> 
+ <font style="font-weight: bold; font-style: italic;">fieldname,#char,x@y,facename:pointsize:bold,x@y,background,foreground</font></p>
+<p>Create one entry for each of the infofields you want to add or change 
+ from the default. These entries define how the fields will be displayed 
+ in the information cells of the Classic Board.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Fieldname</font><br/>
+Valid fieldnames correspond to the fields labels displayed in the dispatch 
+ board’s work order list (for example, Site Alpha, Work Order, Workcode, 
+ Pr, Zone, etc.).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">#char<br/>
+</font>The number of characters that will be displayed for this field.</p>
+<p style="margin-top: 0.00pt; margin-left: 48px;"><font style="font-weight: bold; 
+														 font-style: italic;">x@y</font></p>
+<p style="margin-top: 0.00pt; margin-left: 48px;">The pixel position within 
+ the cell of the text as defined by the upper left-hand corner of the first 
+ character (e.g, 0@20).</p>
+<p style="margin-top: 0.00pt; margin-left: 48px;"><font style="font-weight: bold;">facename:pointsize:bold</font></p>
+<p style="margin-top: 0.00pt; margin-left: 48px;">This font information 
+ is optional: it will default from the font entry if not specified here.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold; font-style: italic;">The 
+ following additional settings are required if you wish to set the colors 
+ of field separately from the rest of this cell.</span> </p>
+<p style="margin-top: 0.00pt; margin-left: 48px; font-weight: bold;">x@y</p>
+<p style="margin-top: 0.00pt; margin-left: 48px;">This setting is optional 
+ and only needs to be included if you are specifying the background or 
+ foreground colors of this field.</p>
+<p style="margin-top: 0.00pt; margin-left: 48px;"><font style="font-weight: bold;">fieldnameforcolor</font><br/>
+The field that should be used to set the color - this may or may not be 
+ the field you specified above. Valid fieldnames correspond to the fields 
+ labels displayed in the dispatch board’s work order list (for example, 
+ Site Alpha, Work Order, Workcode, Pr, Zone, etc.).</p>
+<p style="margin-top: 0.00pt; margin-left: 48px;"> </p>
+<p style="margin-top: 0.00pt; margin-left: 48px; font-weight: bold;">background,foreground</p>
+<p style="margin-top: 0.00pt; margin-left: 48px;">These optional settings 
+ enable you to control the foreground and background colors of this field. 
+ You may specify a custom color, or the field used to set the color-coding 
+ scheme.</p>
+<p style="margin-top: 0.00pt; margin-left: 48px;"> </p>
+<p style="margin-top: 0.00pt; margin-left: 88px;"><span style="font-weight: bold;">Example:</span> 
+ </p>
+<p style="margin-top: 0.00pt; margin-left: 88px;"><font style="text-decoration: underline; ">T</font>his 
+ setting uses the priority color scheme set in the sys-dispatchboard-colors-priority 
+ to set the background of the Priority field in field 7 of the infocell. 
+  In this case, the displayed field&#39;s background corresponds to it&#39;s 
+ background match. </p>
+<p style="margin-left: 128px;"><font style="text-decoration: underline; ">Setting 
+ Key: i</font>nfof7<br/>
+Setting Value: Pr,2,140@48,Arial:10:bold,140@48,Pr,0:ClrDefault</p>
+<p style="margin-top: 0.00pt; margin-left: 128px;"> </p>
+
+</body></html>

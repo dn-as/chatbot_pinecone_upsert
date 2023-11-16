@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.3.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="MS-HKWD" content="user"/>
+<meta name="MS-HKWD" content="function"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>User Defined Function Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="report,user,function"/><meta name="brsnext" value="Security_Viewer.htm"/><meta name="brsprev" value="User_Group_Functions_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="User Defined Function Viewer">
+        <span>User Defined Function Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>User Defined Function Viewer</h1>
+<h2>Purpose:</h2>
+<p>This record enables you place your custom, user-defined and GL reports on Data-Basics report menu. A user-defined function may also be created in order for an SQL script to be run.</p>
+<h2>Usage:</h2>
+<p>Each User Defined function that you create will run one of the following:</p>
+<p style="text-indent: 18.00pt;">A Data-Basics Defined Report</p>
+<p style="text-indent: 18.00pt;">A User Defined Report</p>
+<p style="text-indent: 18.00pt;">A GL Report</p>
+<p style="text-indent: 18.00pt;">Data Import Scripts (available in a future release)</p>
+<p style="text-indent: 18.00pt;">Custom command-line operations</p>
+<p>Once you have created a user-defined function, remember to enable it for all User Groups that should have access to it.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Function Id:<br/></font>A unique Id to identify this function. This field is required. If you are creating this record for a report, we recommend that the Function Id match the Report Id.</p>
+<p><font style="font-weight: bold;">Function Name:<br/></font>This field will default from the Report Name when a Report Id is entered. This field defines how your report or script will appear on Data-Basics Report, Starter or Viewer list. It should clearly define the report or function.</p>
+<p><font style="font-weight: bold;">Report Id:<br/></font>If you are creating a record for a report created for you by Data-Basics, double-click on this field to select from a list of reports. Remember that the report must be imported into your database to appear on the report list.</p>
+<p><font style="font-weight: bold;">User Report Id:<br/></font>If you are creating a record for a report that you created with the User Defined Report function, double-click on this field to select from a list of User Reports.</p>
+<p><font style="font-weight: bold;">GL Report Id:<br/></font>If you are creating a record for a report that you (or a support representative) created with the GL Report function, double-click on this field to select from a list of GL Reports. Remember that if the report was created externally, it must first be imported into your database to appear on this list.</p>
+<p><font style="font-weight: bold;">Import Script Id:<br/></font>This field is reserved for future use.</p>
+<p><font style="font-weight: bold;">Application: Application Parameters:<br/></font>These fields would be completed if you wish to start an application from within Data-Basics software. Typically, this option is used to launch Access with a specific reporting database. The Application field references a registry key of the same name...i.e. &quot;Access&quot; that key would store static path info such as what the *.exe is and what access mdb file to open. The parameter field would hold variable runtime switches to be added to the command line.</p>
+<p>Example</p>
+<p>Assuming you have a registry entry Access with contents msaccess.exe c:\report.mdb:</p>
+<p>Application: <font style="font-weight: bold;">Access</font> Parameters = <font style="font-weight: bold;">/x myreport</font></p>
+<p>would build a command line...</p>
+<p style="margin-top: 0; margin-bottom: 0;"> msaccess.exe c:\report.mdb /x myreport  </p>
+<p><font style="font-weight: bold;">Menu Category: Report Start Viewer<br/></font>Select the appropriate menu category under which this item should be listed.</p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">See Also<br/></font><a href="Start_Import_Report.htm">Start Import Report</a>  <a href="User_Group_Functions_Viewer.htm">User Group Functions Viewer</a></p>
+
+</body></html>

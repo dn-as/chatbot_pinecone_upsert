@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.6.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Compute Overtime</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="overtime,payroll,payroll adjustment,compute overtime"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Compute Overtime">
+        <span>Start Compute Overtime</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Compute Overtime</h1>
+<h2>Purpose:</h2>
+<p>The basic premise of this enhancement is that hourly time is entered 
+ as regular time, and this function is run to generate and Overtime Premium 
+ for &#39;excess&#39; hours over a regular work week <span>(or work day, if enabled 
+ via registry)</span> BEFORE running Compute Payroll. <span style="font-weight: bold;">This 
+ function should ONLY be run for WEEKLY pay periods.</span> The Overtime 
+ Premium is assessed to an overhead Job.</p>
+<p>Start Compute Overtime&#39;s purpose is to compute each employee&#39;s Excess 
+ Regular Hours and make a new Labor Journal to reclassify the excess regular 
+ hours as Overtime Hours. By definition &#39;Regular Hours&#39; is the number of 
+ hours an employee has WORKED in the weekly Pay Period in excess of a &#39;normal&#39; 
+ work week.  However, an additional option is available to <a href="Registry_Start_Compute_Overtime.htm#Calculate_Overtime_by_Day_or_Payroll_Period">Calculate 
+ Overtime Pay by Day / Pay Period via Registry.</a> </p>
+<p>The process that accumulates this number has the following requirements:</p>
+<p style="margin-left: 48px;">Pay Type&#39;s Hours Type = Worked  </p>
+<p style="margin-left: 48px;">Pay Type&#39;s Category = Regular  <span>(this 
+ may be controlled via <a href="Registry_Start_Compute_Overtime.htm#Calculate_Overtime_by_Day_or_Payroll_Period">Calculate 
+ Overtime Pay by Day / Pay Period via Registry</a> for the Haller2 methodology. 
+ </span></p>
+<p style="margin-left: 48px;">Hours are NOT part of the Employee&#39;s salary</p>
+<p style="margin-left: 48px;">Employee must have Total Direct Hours &gt; 
+ zero for the period</p>
+<p style="margin-left: 48px;">The Earnings ID in the Employee&#39;s Earnings 
+ Tab <span style="font-weight: bold;">must</span> have appropriate wage 
+ lines flagged as &quot;Add Pay Rate Factor?&quot; in order for this functionality 
+ to work</p>
+<p style="margin-left: 8px;">Each employee&#39;s Excess Regular Hours are reclassified 
+ as overtime in a new Labor Journal entry; the Labor Journal Description 
+ will be set to *** Overtime Adjustment ***.  It is assumed that checks 
+ will be printed and posted.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">NOTE:</span><span> 
+ See <a href="Compute_Overtime_(No_Check_Printing_or_Posting).htm">Compute 
+ Overtime - No Checks Printed or Posted</a> </span><span>for details/additional 
+ registries for computing overtime when checks will not be generated.</span></p>
+<h2>Usage:</h2>
+<p style="font-weight: bold;">This function should ONLY be run for WEEKLY 
+ pay periods.</p>
+<p>In Version 9.0 and above, Branches are not required for this function. 
+ However, if Branches are enabled and you wish to specify the Overhead 
+ Job by Branch, the corresponding sys-start-scmpteovrtme-<span style="font-style: italic;">branchid</span> 
+ registry entries must be generated in order for this function to be run. 
+ The employee&#39;s branch is used to determine which job / costcode / costcategory 
+ gets the OT Premium charge, regardless of which direct jobs were charged 
+ originally.  </p>
+<p style="margin-left: 8px;">During the second phase, the compute payroll 
+ process allocates the OT Premium back to those same direct jobs. The system 
+ matches up the Accounting Period and Effective Date when posting Allocated 
+ OT Premium.</p>
+<p style="margin-left: 8px;"><span>GL transaction activity (generated by 
+ Compute Payroll) which is related to the Compute Overtime function has 
+ been refined so that transaction effective dates match work dates. This 
+ solves timing issues that exist when a Pay Period straddles multiple Accounting 
+ Periods. </span></p>
+<p style="margin-left: 8px;">This function does not currently support Prevailing 
+ Wage jobs.</p>
+<h2>Registry Entries:</h2>
+<p>See <a href="Registry_Start_Compute_Overtime.htm">Registry Start Compute 
+ Overtime</a> for the registry entries required for this function.</p>
+<h2>Important Fields: Range Screen</h2>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Payroll Period 
+ Id:<br/>
+</span>Enter the Payroll Period you wish to compute overtime for. </p>
+<p style="margin-left: 8px; font-weight: bold;">Branch Id:<br/>
+<span style="font-weight: normal;">Enter a Branch Id to limit this function 
+ to Employees associated with this Branch.</span></p>
+<p style="margin-left: 8px; font-weight: bold;">Employee Id:<br/>
+<span style="font-weight: normal;">To compute overtime for a specific employee, 
+ enter their Id.</span>  </p>
+<h2>Important Fields: List Screen</h2>
+<p class="Support"> 
+ </p>
+<p style="margin-left: 8px; font-weight: bold;">Do:<br/>
+<span style="font-weight: normal;">This field enables you to select which 
+ Employees will have their Overtime generated. A check appears in the Do 
+ field if an Employee is selected. Double-click on the Do field to select 
+ or deselect an Employee (or press the Spacebar when the caret appears 
+ on this field).</span></p>
+<p style="margin-left: 8px; font-weight: normal;">Employees with prevailing 
+ wages should NOT be selected for processing. </p>
+<p style="margin-left: 8px; font-weight: bold;">Employee Name:  Regular: 
+ OT:  DT:  Holiday:  Sick:  Vac:  Other: <span style="font-style: italic;"><br/>
+</span><span style="font-weight: normal;">These display-only fields list 
+ the total hours of each type that have been recorded for this Employee 
+ for the selected Pay Period.</span></p>
+<p style="margin-left: 8px; font-weight: bold;">Total:<br/>
+<span style="font-weight: normal;">This column lists the total hours of 
+ all types recorded for the specified Payroll Period.</span></p>
+<p style="margin-left: 8px; font-weight: bold;">Excess:<br/>
+<span style="font-weight: normal;">The Excess hours worked for this Payroll 
+ Period. By definition &#39;Regular Hours&#39; is the number of hours an employee 
+ has WORKED in the Pay Period in excess of a &#39;normal&#39; work week (e.g., 
+ 40 hours for weekly pay, or 8 hours daily if the Haller2 methodology is 
+ invoked).</span></p>
+<p style="margin-left: 8px; font-weight: normal;">Click the Go button to 
+ generate the Overhead Adjustment Labor Journal entry.</p>
+<p style="margin-left: 8px; font-weight: normal;"> </p>
+<p style="margin-left: 8px; font-weight: normal;"> </p>
+
+</body></html>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.7.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="payroll (certified)"/>
+<meta name="MS-HKWD" content="certified payroll"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report PR Certified Payroll</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="payroll (certified),certified payroll"/><meta name="brsnext" value="Registry_Entry_Inventory_Receipts_Journal.htm"/><meta name="brsprev" value="Magnetic_Media_State_Unemployment_Reporting.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report PR Certified Payroll">
+        <span>Report PR Certified Payroll</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report PR Certified Payroll</h1>
+<h2>Purpose:</h2>
+<p>This report is typically used if your firm has government jobs.</p>
+<h2>Setup Considerations:</h2>
+<h3>Certified Payroll Report – Fringe column</h3>
+<p><font style="text-decoration: underline;">If this column is to include other company paid fringe dollars, for example Health Insurance:</font></p>
+<p style="margin-left: 36.00pt;">The employee “burden” can NOT include these estimated dollars AND a new burden amount would need to be established/setup.</p>
+<p style="margin-left: 36.00pt;">To setup:  Add at least 1 new EarningsID for the fringe(s).   Type is  Fringe  and Check box:  JOB COST PR CHECK</p>
+<p style="margin-left: 36.00pt;">Do not check Taxable, do not check Fringe on Check, do not check Accrue – set the GL Debit to be same GL Expense Acct from the JOB COST CATEGORY &amp; set the GL Credit to be the same as the GL Debit account so it has no impact on GL</p>
+<p style="margin-left: 36.00pt;">Add new JOB COST CATEGORY for FRINGE-XXX (XXX=type of fringe if you want to break out) and set the Cost Type as Labor,  Income account is left blank, GL Expense Account = COS-FRINGE-XXX(Direct) and assign the new Cost Cat to the Earnings Id.   </p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Note:</font> when new labor is entered &amp; the PR Check is posted, the system will create new JOB COST records for FRINGES (by Job/GLEntity), which are referenced as source ‘PR CHECK’. </p>
+<p style="margin-left: 72.00pt;">The JOB COST PR CHECK feature is only available on Earnings Type = Fringe.</p>
+<p style="margin-left: 36.00pt;"> </p>
+<p><font style="text-decoration: underline;">If the column is to include:  Taxes where the ACTUAL Employer Tax Amounts are based on hours worked on the Job</font></p>
+<p style="margin-left: 36.00pt;">The employee “burden” can NOT include estimated tax dollars AND a new burden amount must be established/setup without the estimated taxes.</p>
+<p style="margin-left: 36.00pt;">To setup:  On Tax Authority Id’s for FUTA, FICA, SUTA – go to GL Tab and review GL Expense Accounts – see if this is going to 1 GL Expense account for “Indirect Payroll Taxes/Employer Paid” or to multiple GL Expense accounts by tax type.  If customer breaking out by type of tax, multiple JOB COST CATEGORIES will be needed for each tax type.   e.g. TAXES-FED (futa,fica), TAXES-STATE  (suta-va, sdi-nj,suta-md).</p>
+<p style="margin-left: 36.00pt;">To turn on, on the GL Tab of the employer based Tax Authorities, check box:  JOB COST &amp; add Job Cost Category for TAXES (For Job Cost Categories, set the Cost Types as Labor, Income account is left blank, GL Expense Account = COS-PAYROLL TAXES-(Direct/EMPLOYER PAID))</p>
+<p style="margin-left: 66.25pt;"><font style="font-weight: bold;">Note:</font> when new is labor entered &amp; the check is posted, the system will create new JOB COST history records for actual TAXES, which are referenced as source ‘PR CHECK’. </p>
+<p style="margin-left: 36.00pt;"> </p>
+<p><font style="text-decoration: underline;">If this fringe column is to include Workers Comp dollars:</font></p>
+<p style="margin-left: 36.00pt;">The employee “burden” can NOT include estimated workers comp dollars AND a new burden amount must be established/setup.</p>
+<p style="margin-left: 36.00pt;">To setup:  On each Worker Comp State Id’s, check box:  JOB COST &amp; add JOB COST CATEGORY for WORKERS COMP and check the GL Debit account on the WC State to make sure this GL Expense account is for capturing ALL ‘indirect’ dollars, as direct comes from the new Cost Cat. (Note: admin vs. service is determined by using the GL Entity on Overhead Job’s Cost Code).  Re:  Job Cost Category set cost types as Labor,  Income account is left blank, GL Expense Account = COS-WORKERSCOMP(Direct).       </p>
+<p style="margin-left: 66.25pt;"><font style="font-weight: bold;">Note:</font> when new labor entered &amp; check is posted, the system will create new JOB COST history for actual WORKERS COMP costs by Job, which are referenced as source ‘PR CHECK’. </p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>Registry to Import PR Check Cost to the Work Order</h2>
+<p>All these new ‘PR CHECK’ costs can optionally be imported into the Workorder using a registry setting.</p>
+<p>Registry Id:       sys-viewer-vwrkordr</p>
+<p>Setting Key:      ImportPRCheckFromJCH</p>
+<p>Setting Value:            true</p>
+<p>These settings should be implemented in a TEST database, and labor entries posted to confirm the results are as desired.  Confirm the G/L is posting properly &amp; nothing is double costing (can use REPORT PR GL REPORT to review G/L impact after test run of a check) &amp; confirm the Certified PR report is now reporting fringes.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>Additional Information:</h2>
+<p>Also read the following help sections regarding these features in Earnings, Tax Authority/GL tab &amp; Workers Comp:</p>
+<p><a href="Earnings_Viewer.htm">Earnings Viewer</a></p>
+<p><a href="Payroll_Tax_Authority_Viewer.htm">Tax Authority Viewer</a></p>
+<p><a href="Worker_s_Comp_Category_Viewer.htm">Worker&#39;s Comp Category Viewer</a></p>
+
+</body></html>

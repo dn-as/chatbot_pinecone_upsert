@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.1.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report PR Canadian Electronic T4s</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="payroll,Canadian,T4,electronic T4 - Canadian"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report PR Canadian Electronic T4s">
+        <span>Report PR Canadian Electronic T4s</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report PR Canadian Electronic T4s</h1>
+<h2>Purpose:</h2>
+<p>This release adds support for electronic T4s for Canada. This report 
+ may be run to satisfy electronic reporting of T4’s for firms with 50 or 
+ more employees.</p>
+<p>SAMPro Version 9.1.611.054d<span style="font-weight: bold;"> 
+ </span>extends Covid19 reporting for 2020 to the electronic format. This 
+ is implemented with special, year-specific earnings processing. The Other 
+ Information fields in the electronic file will be completed as follows 
+ based on the Check&#39;s Effective Date:</p>
+<p style="margin-left: 48px;">Field - 
+ Check Date Range</p>
+<p style="margin-left: 48px;">empt_inc_amt_covid_prd1 
+ -  2020-03-15 through 2020-05-09</p>
+<p style="margin-left: 48px;">empt_inc_amt_covid_prd2 
+ - 2020-05-10 through 2020-07-04</p>
+<p style="margin-left: 48px;">empt_inc_amt_covid_prd3 
+ - 2020-07-05 through 2020-08-29</p>
+<p style="margin-left: 48px;">empt_inc_amt_covid_prd4 
+ - 2020-08-30 through &#39;2020-09-26</p>
+<h3>Usage:</h3>
+<p>When you click the Print button, an audit report will appear in the 
+ report viewer; this may be printed for your records.  To create the 
+ actual Electronic Report, click Save to Disk from the Report Viewer.  A 
+ Windows save file box will appear: the report will be named T4E.xml.  Remember 
+ where you saved the file!  This file may then be uploaded to the 
+ CRA (Canada Revenue Agency).</p>
+<h2>Registry:</h2>
+<p>See <a href="Registry_Canadian_Electronic_T4s.htm">Registry Canadian 
+ Electronic T4s</a> for the Registry Entry required to run this report 
+ successfully.</p>
+<h2>Important Fields:</h2>
+<p style="font-weight: bold;"><span style="font-weight: bold;">Province:<br/>
+<span style="font-weight: normal;">To generate the report for a single 
+ province, enter a valid 2 character Province code.  The system will 
+ validate that a valid abbreviation has been entered.</span>  </span></p>
+<p style="font-weight: normal;">Multiple provinces will be combined in 
+ one file if the Province is blank.</p>
+<p class="MsoNormal">When running the Report PR Canadian Electronic TA 
+ the Provincial field should NOT be completed. It is not necessary to specify 
+ partial year processing if an employee has moved during the year; the 
+ electronic file will contain the appropriate information for provincial 
+ tax for each employee.</p>
+<p style="font-weight: bold;">Year:<br/>
+<span style="font-weight: normal;">Complete this field for the specified 
+ T4 Year.</span></p>
+<p style="font-weight: bold;">Report Type Code:<br/>
+<span style="font-weight: normal;">Valid Report Type Codes are O - Original 
+ and A - Amended.</span></p>
+<p style="font-weight: bold;">Submission Reference Id:<br/>
+<span style="font-weight: normal;">Enter a unique code (created by the 
+ transmitter) to identify each submission filed with the Canada Revenue 
+ Agency (CRA).</span></p>
+<p style="font-weight: bold;">Start Date:   End Date:<br/>
+<span style="font-weight: normal;">The Start and End Date automatically 
+ default to Jan 1 &amp; Dec 31 after the &#39;Year&#39; field is completed.  After 
+ the year field is completed and the Start &amp; End Dates load in, they 
+ cannot be changed. A message appears that &quot;Partial Year Reporting 
+ is not Supported&quot;.</span></p>
+<p style="font-weight: bold;">Employee:<br/>
+<span style="font-weight: normal;">Unless you are only running this for 
+ a specific employee, the Employee range should remain blank.</span></p>
+<p style="font-weight: bold;"> </p>
+<p style="font-weight: bold;"><img src="assets/images/image/SKIN1_Printer.gif" alt="" style="border: none;" border="0"/></p>
+<p>When you click the Print button, an audit report will appear in the 
+ report viewer; this may be printed for your records.  </p>
+<p><img src="assets/images/image/SKIN1_SaveToDisk.gif" alt="" style="border: none;" border="0"/> 
+ To create the actual Electronic Report, click the Save to Disk Button 
+ in the report viewer.  A Windows save file box will appear: the report 
+ will be named T4E.xml.  </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Tip:</span> 
+ Remember where you saved the file!  This file may then be uploaded 
+ to the CRA (Canada Revenue Agency).</p>
+
+</body></html>

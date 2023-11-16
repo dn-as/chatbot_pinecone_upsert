@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.11.1.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="client order"/>
+  <meta name="MS-HKWD" content="cop"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Client Order Viewer</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="client order,cop"/>
+<meta name="brsnext" value="Client_Order_Items_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Order Viewer">
+        <span>Client Order Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Client Order Viewer</h1>
+  <h2>Purpose:</h2>
+  <p>Create, complete, change, and post client orders, quotes, sample orders, transfers and ProForma invoices (for international orders).</p>
+  <h2>Usage:</h2>
+  <p>This viewer may also be used to complete quotes or orders that were started in the QTE tab(s) of the Inventory Item viewer. (Note that the Quotes Tab enables you to enter a Client Site, Quantity, Price, and Date Promised for each item being quoted or ordered: click on <a href="Inventory_Items_Quote__QTE_Tab_.htm">Quotes Tab</a> to see additional information). When you enter the Client Site Id and P.O. Number in the Client Order viewer, the system will automatically pull the Inventory Item Id&#39;s, Quantities, and Prices that you specified in the Inventory Item record(s). At this point you can modify the detail items or add new ones as needed.</p>
+  <p>
+    <font style="font-weight: bold;">Closing a Client Order</font><br/>
+    During invoicing, when all lines on the client order have zero in the Qnty Allocated and Qnty Backordered the order is set with the closed date. Closed Client Orders will not appear on the active Client Order list; they may be viewed by clicking the Inactive or All filter button on the side button bar.
+  </p>
+  <p>If you remove all backordered/allocated items from an invoiced COP Client Order, the system will display the following when you save the Order:</p>
+  <p style="margin-left: 36.00pt;">This Order Does not Allocate or Back Order Any Stock.</p>
+  <p style="margin-left: 36.00pt;">Do You Wish To Close This Order At This Time?</p>
+  <p>If you click Yes, the Date Closed will be set. If you click No, the Order will remain open.</p>
+  <p>The Date Closed field is enabled for input to allow the user to close Quote and Hold type Client Orders. The validation this field will not allow a date to be entered if it would be invalid to close the order (i.e. if the order includes any open allocations or back orders) for Order, Sample, and Transfer type orders.</p>
+  <p>
+    <font style="font-weight: bold;">Reversing A Client Order</font><br/>
+    COP does not include a reversal function as Job invoices do. The following steps should be taken if a COP invoice needs to be ‘reversed’:
+  </p>
+  <p style="margin-left: 18.00pt;">In the AR Sales Journal, Create a Credit Memo to the client for the amount of the invoice or invoices.</p>
+  <p style="margin-left: 18.00pt;">On the costs tab, put in the inventory items that were on the COP Order (that will put them back in stock)<font face="Courier New" style="font-family: &#39;Courier New&#39;;">.</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Deleting Lines on a</font>
+    <font style="font-weight: bold;">Client Order</font><br/>
+    The user is not allowed to delete lines for which: a pick ticket has been printed, drop-shipped or vouchered.
+  </p>
+  <p>Lines attached to &#39;live&#39; Dropship PO lines may not be deleted: lines set to the &#39;Pending Cancel&#39; or ‘Cancelled’ status are non-live and may be deleted. In addition, validation considers any PO line to be non-live if the corresponding PO has a status of &#39;Cancelled&#39; or &#39;Pending Cancel&#39;.</p>
+  <p><span style="font-weight: bold;">Cancelling a Client Order:</span><br/>
+    Cancelling an order will automatically reverse its backorders/allocations from IM history. Client Orders may be cancelled (by completing the Date Cancelled field) unless one of the following is true:</p>
+  <p style="margin-left: 36.00pt;">The order has one or more Unbilled lines which are marked Pick Done and which have a non-zero Quantity Shipped.</p>
+  <p style="margin-left: 36.00pt;">The order has one or more Drop Ship lines pointing to &#39;live&#39; (not &#39;cancelled&#39; or ‘pending cancel’) PO lines.</p>
+  <p>
+    <font style="font-weight: bold;">COP Processing is disabled for Cancelled Orders as follows:</font>
+  </p>
+  <p style="margin-left: 36.00pt;">Pick Tickets cannot be printed for Cancelled Orders.<br/>
+    View Client Pick List Entry is disabled for Cancelled Orders.<br/>
+    View Client Order To Ship is disabled for Cancelled Orders.</p>
+  <p style="font-weight: bold; margin-left: 8px;">Intercompany Processing</p>
+  <p style="margin-left: 48px;">When using Intercompany processing, the GL Entity and Company are defaulted when the Print Invoice button is pressed from View Client Order.</p>
+  <p style="margin-left: 48px;">In order to support Intercompany Processing, Client Orders &amp; COP Invoices post with the proper Security and Company Security information. This ensures that the COP Orders carry the correct security/company information when the COP Invoices are posted to the AR Sales Journal and carried over into the various history tables (arhstry, glhstry, txhstry, imhstry, invcemstr, etc).  </p>
+  <p style="margin-left: 48px;">If the COP module is set up to default the information from the Client Site’s COP tab instead of the Location (where sys-viewer-vclntordr GLEntityScheme=clntste registry option exists), the system will now use the Client Site’s COP tab&#39;s GL Entity for posting the invoices Freight, Dropship Freight and make sure that the COGS posting for dropships uses the same GL Entity for both the debit &amp; credit side of the AR Sales GL journal entry.</p>
+  <h2>Registry Entries:</h2>
+  <p>
+    <font color="#008000" style="text-decoration: underline; ">Receive Dropshipped COP&#39;s in Inventory Receipts and Allow Billing</font>
+  </p>
+  <p>Require Cost in Dropship Wizard: <a href="Registry_COP_Dropship_Wizard.htm">Registry COP Dropship Wizard</a></p>
+  <p><a href="Registry_Entry_Client_Order_Viewer.htm">Registry Client Order Viewer (sys-viewer-vclntordr)</a> – setting of GL Entities, Allow Partial Bill</p>
+  <p><a href="Registry_COP_Invoice_sys_printer_rcopinvce_.htm">Print the COP Invoice in Portrait Format</a></p>
+  <p><a href="Registry_Entry_to_Adjust_the_Lines_on_Client_Order_Invoice_.htm">Registry Entry to Adjust the Lines on Client Order Invoice</a></p>
+  <p><a href="Registry_Entry_to_Autosave_Report.htm">Registry Entry for Report Graphics and Autosave</a></p>
+  <p><a href="Registry_Entry_for_TSCA_Registration.htm">Registry Entry for TSCA Registration</a> for details.</p>
+  <p><a href="Registry_Entry_Auto_Create_Equipment_on_COP_Sles.htm">Registry Entry Auto-Create Equipment on COP Sales</a></p>
+  <p><a href="Registry_Entry_MSDS_Printing.htm">Registry Entry MSDS Printing</a></p>
+  <p><a href="Registry_Entry_Adobe_Reader.htm">Registry Entry Adobe Reader</a> for printing PDF MSDS’s.</p>
+  <p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#globel_settings_price_code">Price Code Handling (in sys-ffv-global-settings)</a></p>
+  <p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_COP_Freight_Tax_by_State">COP Freight Sales Tax by State</a></p>
+  <p style="margin-top: 0; margin-bottom: 0;"> </p>
+  <h2>Screen Organization:</h2>
+  <p>The tabs on the upper section of this screen contain the primary client order information and is discussed in detail in this topic. Click on a button to jump to the appropriate section.</p>
+  <p><a href="Client_Order_Viewer.htm#Client_Order_Main_Tab"><img alt="image\btn_Main.gif" border="0" height="24" src="assets/images/image/btn_Main.gif" title="image\btn_Main.gif" width="42"/></a> <a href="Client_Order_Viewer.htm#Client_Order_AR_Tab"><img alt="image\btn_A_R47.gif" border="0" height="24" src="assets/images/image/btn_A_R47.gif" title="image\btn_A_R47.gif" width="35"/></a> <a href="Client_Order_Viewer.htm#Client_Order_Instructions_Tab"><img alt="image\btn_Instructions.gif" border="0" height="24" src="assets/images/image/btn_Instructions.gif" title="image\btn_Instructions.gif" width="85"/></a> <a href="Client_Order_Viewer.htm#Client_Order_Shipping_Tab"><img alt="image\btn_Shipping_Address32.gif" border="0" height="24" src="assets/images/image/btn_Shipping_Address32.gif" title="image\btn_Shipping_Address32.gif" width="125"/></a> <a href="Client_Order_Viewer.htm#Client_Order_Last_Time_Sold_Tab"><img alt="image\btn_Last_Time_Sold64.gif" border="0" height="24" src="assets/images/image/btn_Last_Time_Sold64.gif" title="image\btn_Last_Time_Sold64.gif" width="108"/></a></p>
+  <p>The tabs on the lower section of this screen display the client order detail. Click one the following buttons to see additional information:</p>
+  <p><a href="Client_Order_Items_Tab.htm"><img alt="image\btn_Items.gif" border="0" height="24" src="assets/images/image/btn_Items.gif" title="image\btn_Items.gif" width="46"/></a> <a href="Client_Order_IM_History_Tab.htm"><img alt="image\btn_IM_History32.gif" border="0" height="24" src="assets/images/image/btn_IM_History32.gif" title="image\btn_IM_History32.gif" width="77"/></a> <a href="Client_Order_Pick_Tickets_Tab.htm"><img alt="image\btn_Pick_Tickets32.gif" border="0" height="24" src="assets/images/image/btn_Pick_Tickets32.gif" title="image\btn_Pick_Tickets32.gif" width="91"/></a> <a href="Client_Order_Invoices_Tab.htm"><img alt="image\btn_Invoices.gif" border="0" height="24" src="assets/images/image/btn_Invoices.gif" title="image\btn_Invoices.gif" width="64"/></a> <a href="Client_Order_Freight_Charges_Tab.htm"><img alt="image\btn_Freight_Charges32.gif" border="0" height="24" src="assets/images/image/btn_Freight_Charges32.gif" title="image\btn_Freight_Charges32.gif" width="115"/></a> <a href="Client_Order_Drop_Shipments_Tab.htm"><img alt="image\btn_Drop_Shipments32.gif" border="0" height="24" src="assets/images/image/btn_Drop_Shipments32.gif" title="image\btn_Drop_Shipments32.gif" width="116"/></a></p>
+  <h2>Special Buttons:</h2>
+  <p><img alt="" border="0" src="assets/images/image/SKIN1_NotesOn.gif" style="border: none;"/>  The Note button on the side button bar may be used to enter External notes (to be printed on the Client Orders, Acknowledgements and Pick Tickets), Internal notes (to be printed on the Pick Ticket only), and Private notes (which are not printed but may be viewed by clicking the Note button).</p>
+  <p style="margin-left: 36.00pt;">To create a note, click the Note button, enter the Summary information (optional) and set the Access to Public.</p>
+  <p style="margin-left: 36.00pt;">To create an Internal note, position the caret in the text area, enter the characters <font style="font-weight: bold;">&lt;I&gt;</font> and then type the text of your note.</p>
+  <p style="margin-left: 36.00pt;">To create an External note, position the caret in the text area, enter the characters <font style="font-weight: bold;">&lt;E&gt;</font> and then type the text of your note.</p>
+  <p style="margin-left: 36.00pt;">To create a Private note, position the caret in the text area, enter the characters <font style="font-weight: bold;">&lt;P&gt;</font> and then type the text of your note.</p>
+  <p style="margin-left: 36.00pt;">You may enter all three types of notes on a Client Order as shown in the following example:</p>
+  <p style="margin-left: 36.00pt;">&lt;I&gt; This internal note prints on Pick Tickets only.<br/>
+    &lt;E&gt; This external note will appear on the COP Invoice and Pick Tickets.<br/>
+    &lt;P&gt; This is a strictly private note that will not print on Invoices or Pick Tickets.</p>
+  <p>After you have finished entering the note(s), click the Close (x) button on the Note window (or select File-Exit from the Note&#39;s Menu Bar).</p>
+  <h2>Important Fields: Upper Section</h2>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Client_Order_Main_Tab" id="Client_Order_Main_Tab"></a>Main Tab</p>
+  <p>
+    <font style="font-weight: bold;">Order Id:</font><br/>
+    If you are creating a new client order, this Id will be generated for you when you save the record. If you wish to change a client order, enter its Id.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Client Site ID:</font><br/>
+    The Client Site the order is to ship to; this is a required field except for Transfer orders. Double-click on this field (or press Alt+F7) to selected from a list of Client Site Id&#39;s. The system checks the status of the Client Site as well as the Client (specified in the COP Tab of the Site record). Orders are permitted only if both the Site and Client have a status of ‘Active.’
+  </p>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt; 
+	 border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font style="font-weight: bold;">Receivables Warning</font><br/>
+    A warning will appear if you select a Site whose Client (via the COP tab) has any receivables exceeding the number of Credit Hold Days specified on the Client. If you are not a Credit Manager and wish to continue, clear the Site Id, change the Order Type to ‘Order’ or ‘Quote’, and then re-enter the Site Id. This procedure should also be followed if the Client Status has been set to Credit Hold.<br/>
+    <br/>
+    To release the order from Credit Hold, a credit manager should check the Credit Approved box (on the AR tab) by double-clicking on it, and then click the Save button. Once the Client Order has been released, the Order Type may be changed to Order and it may be processed as usual.
+  </p>
+  <p>
+    <font style="font-weight: bold;">P.O. Number</font><br/>
+    Enter the client&#39;s PO number (or your internal quote number) exactly as it appears on the purchase order. You will be warned if this PO number has already been used.
+  </p>
+  <p><strong>Require PO?</strong></p>
+  <p>When the Site used in the Client Order viewer has the &quot;PO Required?&quot; checkbox checked, then the PO Number field on the Client Order viewer must be filled in.</p>
+  <p>
+    <font style="font-weight: bold;">Location Id:</font><br/>
+    Identifies the location in your firm where stock is relieved from.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Tip: Changing the Site or Location Id</font><br/>
+    After entering line item data, the user cannot change the Site Id or the Location Id.  This is necessary because the COP line is constructed using info from both the site and location records as the user enters the order&#39;s items. If you are creating a new order, all item lines must be deleted before changing the Site or Location.
+  </p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Ship Date:</span><br/>
+    This field is used to default the Date to Ship on the Items tab. It controls which items are eligible to appear on the COP Pick List report, Only items with Ship Dates of today&#39;s date or earlier are eligible for inclusion on this report.</p>
+  <p>
+    <font style="font-weight: bold;">Ship Via Id:</font><br/>
+    Identifies the shipping method; this field defaults from the Client Site record. Enter the Id or press Alt+F7 (or double-click on this field) to select from a list of Ship Via Id&#39;s.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Branch Id</font><br/>
+    The Branch Id will default from the Client Site or the Location (as defined by the sys-viewer-vclntordr BranchDefault registry option) but may be changed by the user.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Sales Rep Id:</font><br/>
+    The primary Sales Rep for this Client Order. This field will default from the Client Site record; if it is not completed in the Site record it will default from the Client.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Price Level:</font><br/>
+    The price level (1-9) for inventory items flagged as using unit price. This field defaults from the Client Site Record but may be adjusted for this order.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Allow Partial Ship?</font><br/>
+    Initially, this field is flagged, enabling partial shipment of this order (as long as the Minimum Value is met). If the Client does not wish to accept a partial shipment, double-click on this field (or press the spacebar) to blank this field.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Allow Partial Bill?</font><br/>
+    This field allows the user to control when a client order is eligible for billing. If this field is flagged, the Client Order may be invoiced as its lines are completed. To only bill an order when it is complete, this field should be cleared. Lines that can be completed as part of the accelerated Print Invoice button processing are also counted as completed. Drop-shipped orders must be fully received (via IRJ) to be considered Complete.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Blanket Order?</font><br/>
+    Initially, this field is blank. Flag this field if this is a blanket order by double-clicking (or pressing the spacebar). When an order is tagged blanket order...ALL items ordered will automatically result in a &quot;back order&quot; situation...regardless of whether or not stock really is available to fill that order.  This is essentially imposing that a Back Order &quot;fill&quot; operation will be required in order to create a &quot;release&quot; of items against a &quot;blanket order&quot; before a Pick Ticket will ever be produced.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Freight:</font> Prepaid Collect PrePay&amp;Add<br/>
+    Specifies whether the freight charge is prepaid or collect. Double-click on this field (or press the spacebar) to select/deselect an option.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Important Note:</font> In previous versions, the code that prepares the COP Invoice looked to the APJ-GEN tab for the Freight Charge associated to a drop-ship order.  Everything from the GEN tab was treated as freight.  However, some customers may have a situation where they wish to record Sales Tax on the GEN tab which caused it to appear as freight on the COP invoice.
+  </p>
+  <p style="margin-left: 36.00pt;">In this build, the existing code has been adjusted so that the APJ-GEN tab is included as freight on the COP Invoice <font style="text-decoration: underline; ">when the freight choice is Prepay&amp;Add</font>.</p>
+  <p>
+    <font style="font-weight: bold;">Order Type:</font><br/>
+    Specifies whether a client order, quote, sample order (no charge), transfer order, or ProForma (international) order is being prepared. Double-click on the adjacent radio button (or press the Spacebar when the focus is located on the category) to select an option. Note that quotes and proforma&#39;s cannot be posted. A quote may be converted into an order by selecting the Quote option and then clicking the Change Record button.
+  </p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">ProForma Orders</font><br/>
+    1. An international order requiring a ProForma Commercial invoice are started as a Client Order flagged as ProForma.
+  </p>
+  <p style="margin-left: 48px;">2. Next, use the Print Quotes option to print the ProForma invoice using the conversion tables specified in the ProForma Table Id field. Send this to the Client for acknowledgement.</p>
+  <p style="margin-left: 48px;">3. Once the Client has confirmed the order, change the Order Type from ProForma to Order.</p>
+  <p style="margin-left: 48px;">4. A regular invoice would then be printed and given to the individual in charge of international shipments.</p>
+  <p style="margin-left: 48px;">5. Finally, a commercial invoice would be produced for inclusion with the order for customs. This document includes a signature line for customs.</p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Transfer To:</font><br/>
+    This field should only be completed if this is a transfer order. Enter the location the items on this order are to be transferred to (or double-click to select from a list). On Transfer orders, the Transfer To Location’s address will be copied to the order’s Ship Address.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Pro Forma Table Id:</font><br/>
+    This field defaults from the Site&#39;s COP tab. This field is required for international orders requiring a ProForma Commercial invoice. The Pro Forma Advice lines will also print as Comments on the COP Invoice itself, and may be used as additional text on regular invoices.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Ordered By:</font><br/>
+    This display-only optional field briefly identifies the person placing the order. It defaults from the Contact 1 fields in the Client Site record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Account Manager Id:</font><br/>
+    This optional field defaults from the Client Site record; if it is not completed in the Site record it will default from the Client.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Date Ordered:</font><br/>
+    The official order date for this record. This display-only field defaults to today when an order is started.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Date Closed</font>
+    <font style="font-weight: bold;">:</font><br/>
+    This field allows the user to close Quote and Hold type Client Orders. The validation for this field will not allow a date to be entered if it would be invalid to close the order (i.e. if the order includes any open allocations or back orders) for Order, Sample, and Transfer type orders.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Date Cancelled</font>
+    <font style="font-weight: bold;">: Cancelled By:</font><br/>
+    This Client Order may be cancelled by completing these fields unless one of the following is true:
+  </p>
+  <p style="margin-left: 36.00pt;">The order has one or more Unbilled lines which are marked Pick Done and which have a non-zero Quantity Shipped.</p>
+  <p style="margin-left: 36.00pt;">The order has one or more Drop Ship lines pointing to &#39;live&#39; (not &#39;cancelled&#39; or ‘pending cancel’) PO lines.</p>
+  <p style="margin-left: 36.00pt;">The corresponding PO has a status of &#39;Cancelled&#39; or &#39;Pending Cancel&#39;.</p>
+  <p>
+    <font style="font-weight: bold;">Date Entered: Time Entered: Entered By: Market Source Id:<br/>
+      Order Total: Credit Limit:</font>
+    <font style="font-weight: bold;"> </font><br/>
+    These display-only fields are maintained by the system.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Tax Group Id:</font>
+  </p>
+  <p>This display-only field defaults from the Site’s COP tab.</p>
+  <p>This field defaults from the Client Site COP tab but may be changed by the user if needed.</p>
+  <p>
+    <font style="font-weight: bold;">Tax Exempt:</font><br/>
+    This field defaults from the Client Site COP tab. A Site flagged as Tax Exempt on is always TAX EXEMPT for COP processing regardless of whether the item is marked as Taxable or Non-taxable.  Sites not marked as Tax Exempt will adhere to rules of the item marked TAXABLE or NONTAXABLE, <font style="text-decoration: underline; ">unless there is a default cost category associated to the Inventory Group</font>.  Tax rules will follow the cost category rules for the tax authority (Tax Material, Tax Other, No Tax Sub, No Tax Labor).
+  </p>
+  <p><img alt="image\printpickticket.gif" border="0" height="28" src="assets/images/image/printpickticket.gif" title="image\printpickticket.gif" width="94"/><br/>
+    This button launches the Report Pick Ticket function for this Client Order.</p>
+  <p><img alt="image\RecordPickTicket.gif" border="0" height="28" src="assets/images/image/RecordPickTicket.gif" title="image\RecordPickTicket.gif" width="94"/><br/>
+    This button launches the Record Pick with the Client Order Id completed.</p>
+  <p><img alt="image\PrintInvoice.gif" border="0" height="28" src="assets/images/image/PrintInvoice.gif" title="image\PrintInvoice.gif" width="94"/><br/>
+     This button allows the user to enter an order for available inventory and immediately fill and invoice it. This button simulates theprinting and filling of the Pick Ticket for the currently displayed order (if this has not already been done), and then invokes the Report COP Invoice function properly defaulting the required settings and filter fields to allow the Invoice to be printed and posted. Serialized Items are excluded from this processing: they must have the Pick Ticket printed and recorded so that the serial number is properly recorded.</p>
+  <p>The Print Invoice button on the Client Order supports Branch processing. It will also print the Invoice for an order that has had its Pick Ticket printed and recorded.</p>
+  <p><img alt="image\PrintAck.gif" border="0" height="28" src="assets/images/image/PrintAck.gif" title="image\PrintAck.gif" width="125"/></p>
+  <p>When clicked, the Print Acknowledgement button launches the Order Acknowledgement report if the Order Type is set to Order, Sample or Hold.</p>
+  <p><img alt="image\PrintQuote_quote.gif" border="0" height="28" src="assets/images/image/PrintQuote_quote.gif" title="image\PrintQuote_quote.gif" width="88"/></p>
+  <p>If this Client Order is set to type Quote, the Print Quote button launches the COP Quotation report, filtered to the selected Client Order.</p>
+  <p style="margin-top: 0; margin-bottom: 0;"><strong></strong></p>
+  <p style="margin-top: 0; margin-bottom: 0;"><strong>Billing Comments:</strong></p>
+  <p style="margin-top: 0; margin-bottom: 0;">The billing comments automatically populate from information on the Site Record.</p>
+  <p style="margin-top: 0; margin-bottom: 0;"> </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Client_Order_AR_Tab" id="Client_Order_AR_Tab"></a>A/R Tab</p>
+  <p>
+    <font style="font-weight: bold;">AR Terms Id:</font><br/>
+    This field defaults from the Client Site record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Credit Approved?</font><br/>
+    If this order is over the credit limit, a user with Credit Manager authority must check this box and save the record. The Credit Approved By field will then default to this user.
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Deposit Account</font><br/>
+    The account to be debited/credited for deposits the client makes on this order. This field must be completed if any deposits are entered on the deposit screen.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Foreign Currency Processing</font><br/>
+    If foreign currency processing is implemented on your system (and this Client Order is for a foreign customer), this account should be maintained in the customer’s foreign currency.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Order Billed: Credit Limit: AR Amnt Unpaid:<br/>
+      Order Total: Sales Tax: Total Estimated Order:</font><br/>
+    These display-only fields are maintained by the system.
+  </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Client_Order_Instructions_Tab" id="Client_Order_Instructions_Tab"></a>Instructions Tab</p>
+  <p>
+    <font style="font-weight: bold;">Shipping Instructions:</font><br/>
+    Optional shipping instructions that should appear on COP Quotes, COP Order Acknowledgements, and COP Pick Tickets. This field defaults from the Client Site&#39;s COP tab.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Bill of Lading Instructions:</font><br/>
+    Optional text to be printed on the Bill of Lading.
+  </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Client_Order_Shipping_Tab" id="Client_Order_Shipping_Tab"></a>Shipping Address Tab</p>
+  <p>
+    <font style="font-weight: bold;">Client Order Shipping Address</font><br/>
+    The address the order should actually be shipped to. Except in the case of Transfer orders, this field defaults from the Client Site Shipping Address, but may be changed for this order if needed. On Transfer orders, the Transfer To Location’s address will be copied to the order’s Ship Address.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Client Mailing Address</font><br/>
+    This display-only field lists the bill-to address of the client.
+  </p>
+  <p style="margin-top: 0; margin-bottom: 0;"> </p>
+  <p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Client_Order_Last_Time_Sold_Tab" id="Client_Order_Last_Time_Sold_Tab"></a>Last Time Sold Tab</p>
+  <p>The Last Time Sold tab displays a list of the items sold to this client site and their most recent costs that may be used for data-entry on a new order.</p>
+  <p>If a previous order is being repeated (or is similar to the new order the client wishes to place), double-click on the line in the Last Time Sold (upper) section to copy the information to the selected line on the Items tab. These lines may now be be adjusted as needed by the user.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Tip: Adding a Line</font><br/>
+    To add another line to Items tab, click the Add Line button first so that you add – instead of replace – the Item number.
+  </p>
+  <p>The user will be alerted if the line has been drop-shipped or picked, and will not be allowed to change the Inventory Item Id.</p>
+  <h3>Important Updates: </h3>
+  <p>In version 9.1.611.062 and up, the Client Order parts history site-specific, rather than client. This update adds the Client Site ID as a new column to the data present on the tab, filtering to the site that has been selected. A user may remove this filter if they choose to view it filtered by Client.</p>
+
+</body></html>

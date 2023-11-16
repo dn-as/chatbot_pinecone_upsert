@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.2.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="time slot"/>
+<meta name="MS-HKWD" content="slot time"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Time Slot Wizard</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="time slot,slot time"/><meta name="brsnext" value="Job_Billing_Item_Change_Order_Viewer.htm"/><meta name="brsprev" value="Setting_up_COD_Jobs_for_New_Call_2.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Time Slot Wizard">
+        <span>Time Slot Wizard</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Time Slot Wizard</h1>
+<h2>Purpose:</h2>
+<p><img src="assets/images/image/TimeSlotWizard.gif" alt="image\TimeSlotWizard.gif" title="image\TimeSlotWizard.gif" width="88" height="28" border="0"/><br/>
+This Wizard is launched from New Call 2 or the Classic Dispatch Board’s Dispatch Summary by clicking this button.</p>
+<p><img src="assets/images/TimeSlotWiz.gif" alt="" style="border: none;" border="0"/> The Wizard may also be run from the Work Order Technician Tab by clicking this button to select or change the Time Slot on that line.</p>
+<p>The Wizard will display the next available Time Slots for the applicable Branch, Service Category and (optionally) Work Code. Since the Wizard is aware of the current system time, only Time Slots that have not yet expired and have not been fully allocated will be displayed. When the user clicks on a Time Slot to select it, the Work Order Technician Date Scheduled/Time will be also be set from the Slot the user selected. Note that the Estimated Hours will continue to default from the Work Code.</p>
+<p>See <a href="Time_Slot_Viewer.htm">Time Slot Viewer</a> for additional details.</p>
+<p><font style="font-weight: bold;">This functionality requires that GL Reporting Periods are implemented to generate the calendar data required.</font> See <a href="GL_Reporting_Period.htm">GL Reporting Period</a> for details.</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Branch: Service Ctgry Id:<br/></font>These display-only fields list the Branch and Service Category of all Open Slots for this work order.</p>
+<p><font style="font-weight: bold;">Next Available: Date: Time Slot Name<br/>
+Time Slot Id: Start Time: End Time:<br/></font> These display-only fields will be base on the selected Open Slot. When the Wizard is launched, the first Open Slot will be selected. If the user selects a different slot by clicking on it, these fields will display the selected Time Slot Line.</p>
+<p><font style="font-weight: bold;">Advanced Search:<br/></font>These fields allow you to limit or extend the Time Slot search based on the information the customer provides.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Limit Search To:<br/>
+Monday? Tuesday? Wednesday? Thursday? Friday? Saturday? Sunday?</font></p>
+<p style="margin-left: 36.00pt;">To only look for Time Slots on particular days, check one or more fields by double-clicking on it and then clicking the Apply Settings button. For example, if the customer will only be available on the weekend, simply check the Saturday and Sunday boxes and then click the Apply Settings button.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">On or After: Date<br/></font>By default, this date is set to today’s date when the Wizard is launched. If the customer would like an appointment next week, select a different On or After Date entering it from the keyboard (in mmddyyyy format) or by double-clicking to access a calendar to help you do so. Click the Apply Settings button to update the Open Slots list.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">On or Before: Date<br/></font>By default, this date is set to 14 days from today when the Wizard is launched to limit the number of open slots to two weeks ahead. If the customer would like an appointment further out than two weeks, enter an appropriate date from the keyboard (in mmddyyyy format) or double-click to access a calendar to help you do so. Click the Apply Settings button to update the Open Slots list.</p>
+<p><font style="font-weight: bold;">Important Fields Lower Section</font></p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Time Slot Tab</p>
+<p>This tab lists the Time Slots that are currently available based on the parameters selected above. To select a Time Slot for the work order, click on a Time Slot to highlight it, and then click the Select Time Slot button to return the selection to the Work Order Summary or to New Call 2.</p>
+<p>Note that double-clicking on a Time Slot line displays the Time Slot record (if user security allows).</p>
+<p><font style="font-weight: bold;">Date - Day Slot Id – Description – Start – End – Capacity – Allocated – Available</font></p>
+
+</body></html>

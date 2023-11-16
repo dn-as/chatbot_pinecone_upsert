@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.9.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="cash receipts journal"/>
+  <meta name="MS-HKWD" content="registry"/>
+  <meta name="MS-HKWD" content="sys-viewer-varrcptslst"/>
+  <meta name="MS-HKWD" content="ar cash receipts"/>
+  <meta name="MS-HKWD" content="ar journal"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry AR Cash Receipts</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="cash receipts journal,registry,sys-viewer-varrcptslst,ar cash receipts,ar journal"/>
+<meta name="brsprev" value="Registry_Parent_Tab_Label_Font.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry AR Cash Receipts">
+        <span>Registry AR Cash Receipts</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry AR Cash Receipts</h1>
+  <h2>Purpose:</h2>
+  <p>AR Cash Receipts Journal options.</p>
+  <h2>Related Registries:</h2>
+  <p style="margin-left: 8px;"><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Disable_Warning_Journal_Entry_Has_Been_Replaced">
+      <font color="#000000">D</font>isable Warning when Journal Entry has been Replaced
+    </a></p>
+  <h2>Important Fields:</h2>
+  <p>
+    <font color="#000000" style="font-weight: bold;">Id:</font>
+    <font color="#000000">sys-viewer-varrcptslst</font>
+  </p>
+  <h3>Option to remove the Other tab</h3>
+  <p>Most users will never need to use the Other tab in AR Cash Receipts. Implementing this option restricts the child tabs to those on the list.</p>
+  <p>
+    <font color="#000000" style="font-weight: bold;">Setting Key:</font>
+    <font color="#000000">ChildTabs</font>
+    <font color="#000000" style="font-weight: bold;">Setting Value:</font>
+    <font color="#000000">ar</font>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Warning:</font> If you upgrade to a newer version of SAM Pro and a new tab has been added, it MUST added to any registries that specify child or parent tab overrides or the new tab will NOT appear in the viewers.
+  </p>
+  <p style="margin-left: 36.00pt;">See <a href="Viewer_Ratios_and_Tabs.htm">Viewer Ratios and Tabs</a> for additional information.</p>
+  <h3><a id="Force_GL_Bank_Account_to_be_Set_from_Payment_Type"></a> Force GL Bank Account to be Set from Payment Type</h3>
+  <p>The following registries may be enabled to force the GL Bank Account to be set from the corresponding field in the Payment Type record. When the following registries are set:</p>
+  <p style="margin-left: 48px;">1. Do not allow user to manually enter a GL Bank Account Id.</p>
+  <p style="margin-left: 48px;">2. Do not allow transaction to save without a Payment Type Id.</p>
+  <p style="margin-left: 48px;">3. Always default GL Bank from selected Payment Type.</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Id:</span> sys-viewer-varrcptslst</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> BankGLFromPaymentType   <span style="font-weight: bold;">Setting Value:</span> true (default false)</p>
+  <p style="margin-left: 8px;">Always set the Bank GL Account from the Payment Type.</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> RequiredFieldsParent    <span style="font-weight: bold;">Setting Value:</span> pymnttype.id</p>
+  <p style="margin-left: 8px;">Require that the Payment Type is set.</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> DisabledFieldsParent   <span style="font-weight: bold;">Setting Value:</span> gl-bnk: glaccnt.id</p>
+  <p style="margin-left: 8px;">Disable manual entry to the GL Bank Account field to prevent the user from attempting to do so and getting an error.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Important:</span> If credit card processing is enabled the specified Payment Type must have the Bank GL Account field set. Preferably, all active Payment Type records should have the Bank GL Account field set.</p>
+  <h3><a name="Applying_Overpayments_to_Original_Invoice" id="Applying_Overpayments_to_Original_Invoice"></a>Applying Overpayments to Original Invoice</h3>
+  <p>If a customer pays the same invoice twice, the following registry entry may be implemented to enable the clone function in the AR Cash Receipts Journal. This allows the user to &#39;clone&#39; the original Cash Receipt to create the overpayment entry.  </p>
+  <h5>Registry to Implement</h5>
+  <p><span style="font-weight: bold;">Id:</span> sys-viewer-varrcptslst</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> isOkToCloneRecord  <span style="font-weight: bold;">Setting Value:</span> true  (default is false)</p>
+  <p>Note that Cloning is NOT allowed if NewReversing is enabled in the AR Cash Receipts Journal.</p>
+  <h5>Procedure to &#39;Clone&#39; the Cash Receipt</h5>
+  <p>1. Access the original AR Cash Receipt you wish to copy.</p>
+  <p>2. On the menu at the top of the viewer, select Record &gt; Clone Record.</p>
+  <p>3. The system will copy the original receipt, clearing the Check Number and Credit Card fields.</p>
+  <p>4. Edit the Check Number,  Accounting Period, Effective Date and other fields as needed and Add the new record. AR History will show the additional payment to the specified invoice.</p>
+  <h3>Allow Limited Edits to Cash Receipts Journal</h3>
+  <p>This registry gives users permission to make field changes and delete child lines for saved records with processed payments. With the enabled registry, this allows the user to zero out the A/R child rows for &quot;incorrect&quot; invoices and insert the new rows with the &quot;correct&quot; invoices, so long as the total against the processed payment matches. <br/>
+    <strong>Note: If the wrong amount was processed, the users must refund the CC transaction and reprocess it.</strong>
+  </p>
+  <p><strong>Id:</strong> sys-viewer-varrcptslst<br/>
+    <strong>Setting Key: </strong>AllowChangeToProcessedReceipt    <strong>Setting Value:</strong> true
+  </p>
+  <h3>Default Balance Sheet GL Entity (Intercompany Installations)</h3>
+  <p>See <a href="Registry_Intercompany_Processing.htm#Default_Balance_Sheet_Entity_Intercompany">Default Balance Sheet Entity for Journals</a>  for details on implementing the Setting Keys DefaultBalanceSheetEntity and UseDefaultBalanceSheetEntity.</p>
+
+</body></html>

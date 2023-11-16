@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.8.0_14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="T5018"/>
+<meta name="MS-HKWD" content="Canadian"/>
+<meta name="MS-HKWD" content="sys-printer-T5018"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Canadian T5018 Report</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="registry,T5018,Canadian,sys-printer-T5018"/><meta name="brsnext" value="Report_Vendor_1099.htm"/><meta name="brsprev" value="Registry_Entry_Vendor_1099_Report.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Canadian T5018 Report">
+        <span>Registry Canadian T5018 Report</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Canadian T5018 Report</h1>
+<h2>Purpose:</h2>
+<p>This registry record is required to enable the printing of the T5018 
+ Report. It specifies your T5018 printer, as well as any margin adjustments 
+ needed for alignment.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Important Note: Printer Requirements</h2>
+<p><font style="font-weight: bold;">Your</font> <font style="font-weight: bold;">T5018</font> 
+ <font style="font-weight: bold;">printer must support native PCL printing: 
+ host based or driver-based PCL is not acceptable due to the need to print 
+ exact output to the</font> <font style="font-weight: bold;">T5018</font> 
+ <font style="font-weight: bold;">forms.</font></p>
+<h2>Related Registry Entries:</h2>
+<p><a href="Registry_Entry_Federal_EIN.htm">Federal EIN</a> : This registry 
+ entry will be used for the payer number. If the registry entry does not 
+ exist, the report will use the Tax Authority Employer Id from a Tax Authority 
+ entry with Tax Authority Type =&#39;Federal&#39;</p>
+<p><a href="Registry_Company_Address_Entry.htm">companyname</a> : This 
+ registry entry will be used for the payer name.</p>
+<p>When Intercompany is enabled, the Canadian 
+ T5018 report uses the Company record / Company Registry tab to specify 
+ the Company Name and Address and other registry settings required for 
+ these reports. This will reduce the need for multiple registries entries 
+ by Company Security. The Company Record overload logic supersedes Registry 
+ values when/if present.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font> sys-printer-T5018</p>
+<p><font style="font-weight: bold;">Name:</font><br/>
+Briefly describes this entry (e.g., HP 4000/T5018).</p>
+<h3>Specifying the Printer</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> printer <font style="font-weight: bold;"> Setting 
+ Value:</font> <font style="font-style: italic;">printername</font></p>
+<p>where <font style="font-style: italic;">printername</font> is the name 
+ of the printer <font style="font-weight: bold; font-style: italic;">exactly</font> 
+ as it is displayed in the printer dialog box that appears when you select 
+ a printer in SAM Pro. Please note that this field is upper/lower case 
+ sensitive. Also, if network pathing is included on the printer name, make 
+ sure that the backslashes are correctly entered.</p>
+<h3>Margin Configuration</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> marginx <font style="font-weight: bold;"> Setting 
+ Value:</font> <font style="font-style: italic;">n.n</font></p>
+<p><font style="font-weight: bold;">Setting Key:</font> marginy <font style="font-weight: bold;"> Setting 
+ Value:</font> <font style="font-style: italic;">n.n</font></p>
+<p>The optional formats <font style="font-style: italic;">marginx=n.n and 
+ marginy=n.n</font> are used for horizontal (marginx) and vertical (marginy) 
+ alignment purposes. Note that <font style="font-style: italic;">n.n</font> 
+ is entered in centimeters, and is used to specify the offset from the 
+ &quot;home&quot; position (the upper left-hand corner of the page). Contact 
+ your Data-Basics support representative for further assistance.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> marginybottomform 
+ <font style="font-weight: bold;">Setting Value:</font> 14.0</p>
+<p>This option is recommended for specifying the bottom margin edge of 
+ the page.</p>
+<p style="text-indent: 30.25pt;"><font style="font-weight: bold; text-decoration: underline; ">Example</font> 
+ <font style="font-weight: bold; text-decoration: underline; ">with Network 
+ Pathing</font><font style="font-weight: bold; text-decoration: underline; ">:</font></p>
+<p style="text-indent: 30.25pt;">Setting Key: printer Setting Value: \\myownserver\Samsung 
+ ML-3050 Series</p>
+<p style="text-indent: 30.25pt;">Setting Key: marginx Setting Value:0.3</p>
+<p style="text-indent: 30.25pt;">Setting Key: margin Setting Value.1</p>
+<p style="text-indent: 30.25pt;">Setting Key: marginybottomform Setting 
+ Value: 14.0</p>
+<p style="text-indent: 30.25pt;"><font style="font-weight: bold; text-decoration: underline; ">Example 
+ without Network Pathing:</font></p>
+<p style="text-indent: 30.25pt;">Setting Key: printer Setting Value: Samsung 
+ ML-3050 Series</p>
+<p style="text-indent: 30.25pt;">Setting Key: marginx Setting Value:0.3</p>
+<p style="text-indent: 30.25pt;">Setting Key: margin Setting Value.1</p>
+<p style="text-indent: 30.25pt;">Setting Key: marginybottomform Setting 
+ Value: 14.0</p>
+
+</body></html>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.2.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="new call"/>
+  <meta name="MS-HKWD" content="COD"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>New Call 2</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="new call,COD"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="New Call 2">
+        <span>New Call 2</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>New Call 2</h1>
+  <p> <img alt="image\SKIN1_NewCall2.gif" border="0" height="28" src="assets/images/image/SKIN1_NewCall2.gif" title="image\SKIN1_NewCall2.gif" width="94"/> The New Call 2 Screen will appear when New Call is launched if a registry setting is enabled.</p>
+  <p> <img alt="image\SKIN1_NewCall.gif" border="0" height="35" src="assets/images/image/SKIN1_NewCall.gif" title="image\SKIN1_NewCall.gif" width="63"/> Click this button to toggle back to the original New Call screen.</p>
+  <p>See <a href="Setting_up_COD_Jobs_for_New_Call_2.htm">Setting up COD Jobs for New Call 2</a> for tips on setting up records for this function.</p>
+  <p>In 9.1.611.060 and up, </p>
+  <h3>Search Fields:</h3>
+  <p>
+    <font style="font-weight: bold;">Street Address:</font> (searches street address lines 1-4 in Site record)<br/>
+    <font style="font-weight: bold;">Site Name:</font><br/>
+    <font style="font-weight: bold;">First Name: Last Name:</font> (of Contact 1 in the Site record)<br/>
+    <font style="font-weight: bold;">Phone:</font> (Voice Phone from Client Site)<br/>
+    To search for a particular Site, enter your search text in one or more of these fields.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Tip:</font> Less is More in Searching
+  </p>
+  <p style="margin-left: 36.00pt;">The search looks for the exact string of characters that you enter anywhere in the search fields. Our support department has found that one of the most effective search methods is to enter the street address number, a space, and then first character or character of the street name. For example:</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">123 Gor</font>
+  </p>
+  <p style="margin-left: 36.00pt;">Would find 123 Gordon Drive, 123 Gordon Dr. and 123 Gorden Dr.</p>
+  <p style="margin-left: 36.00pt;">However, if you entered 123 Gordon Dr. and the Site already had been entered as 123 Gordon Drive, the system would NOT consider it a match, and you might end up entering a duplicate.</p>
+  <p style="margin-left: 36.00pt;">If you cannot locate the site by its address, you may wish to click the New button to clear your fields, and then try a secondary search by entering the Last Name and the Zipcode.</p>
+  <p>If the <font style="font-weight: bold;">Auto-Find</font> functionality is implemented, changing any of the fields specified via registry will simulate a push of the Find Site button when you tab out of the field.</p>
+  <p><img alt="" border="0" src="assets/images/SKIN1_FindSite.bmp" style="border: none;"/>  If Auto-Find is not implemented, click the Find Site button to display all sites that match any of the search criteria entered in the above fields.</p>
+  <p>
+    <font style="font-weight: bold;">Equipment Id<br/>
+      Serial No.</font><br/>
+    These fields allow the user to search for Sites whose equipment has a matching Equipment Id or Serial Number.
+  </p>
+  <p><span style="font-weight: bold;">Store #</span><br/>
+    This field enables searching by the Site&#39;s Store # field.</p>
+  <p>
+    <font style="font-weight: bold;">Zip Code:</font><br/>
+    If you enter a zip code, and click Find Site, the search will be limited to those sites where the zip code matches the one you entered.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Example:</font>
+    <font style="font-weight: bold;">Multiple Criteria</font>
+  </p>
+  <p style="margin-left: 36.00pt;">If you enter the word Main in the Street Address 1 field, and the word Bank in the Site Name field. When you then click Find Site the system will display all Sites whose address includes the word Main (123 Main St., 24 South Main, etc) AND whose Name also includes the word Bank (Bank One Branch 101, Bank of Boston, etc.).</p>
+  <p style="margin-left: 36.00pt;">If you also enter the zip code (say, 44125), the search results will be limited to only those sites with a zip code of 44125 and also include the other criteria you entered.</p>
+  <p>
+    <font style="font-weight: bold;">Branch Services:</font><br/>
+    Once the Branch Id has been determined (from the Site / Job record), the system will display the list of service categories listed on the Service Category tab of the Branch record. This is informational only, and is not used to filter the Service Category Id field below.
+  </p>
+  <p>If the Site cannot be found, you have options:</p>
+  <h3 style="margin-left: 36.00pt;">To Create a new COD (or other ‘one time’) Site</h3>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;"><img alt="" border="0" src="assets/images/SKIN1_NewSite.bmp" style="border: none;"/> Click the New COD Site to create a client site record and work order that will be linked to a generic COD or warranty job. This button should <font style="text-decoration: underline; ">not</font> be used for commercial jobs or residential jobs that require the full power of SAMPro’s job costing capabilities. Click <a href="New_Call_New_COD_Site.htm">New Call - New COD Site</a> for details on using the COD Site view.</p>
+  <h3 style="margin-left: 36.00pt;">To Create a Site with Full Job Costing Capabilities</h3>
+  <p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;"><img alt="" border="0" src="assets/images/SKIN1_NewCallOriginal.bmp" style="border: none;"/> <img alt="" border="0" src="assets/images/image/SKIN1_NewClientSite.gif" style="border: none;"/>To access the New Call screen that will enable you to create a site, job and work order, click the New Call button and then the Site (Flashlight) button.</p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">
+    <font color="#FF0000" style="font-weight: bold;">If the Site has been located:</font>
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">Once a Site has been selected (in the center portion of the screen), the search fields will display the actual contents of the site record. Select the applicable Equipment record (in the lower left-hand section) and complete the Work Order Fields discussed below.</p>
+  <h3>Work Order Fields:</h3>
+  <p><span style="font-weight: bold;">
+      <font style="font-weight: bold;">E</font>mail Address:
+    </span><br/>
+    When a Site is selected, the Client Site&#39;s Email field is defaulted to the Work Order Email Address field. The user may manually update this field if desired before adding the Work Order. Escalations for the new Notification Source &#39;Work Order&#39; will be sent to this address. The Email address for the Scheduled Events is set when the WO is generated. Changing it in the Work Order after creation will not propagate the change to the Events themselves.</p>
+  <p>
+    <font style="font-weight: bold;">Dispatch Note: Branch Name:</font><br/>
+    These display-only fields default from the Client Site.
+  </p>
+  <p><span style="font-weight: bold;">Original Caller</span><br/>
+    This field lists the person who called in this Work Order. It defaults from the Contact 1 First and Last Name fields in the Client Site record (if completed); if these fields are not completed it will default from the Client Site Contact 2 information. This field may be changed by the user; it will be written to the Work Order&#39;s Original Caller field.</p>
+  <p>
+    <font style="font-weight: bold;">Work Code:</font><br/>
+    Enter a Work Code Id or double click to select from a list. If you select a Work Code with an assigned Call Script, the system will immediately prompt you to respond to the Call Script questions. The Work Code Name and Estimated Hours fields are set from the Work Code record. This field is optional.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Work Requested:</font><br/>
+    Briefly describes the work requested by the customer. This field will default to the Work Requested field on the Equipment tab, and to the Work Requested field in the Work Order header, which will be printed on most invoice formats.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Tech Finder Button</font><br/>
+    <img alt="" border="0" src="assets/images/image/SKIN1_TechFinder.gif" style="border: none;"/>  When you click this button, the TechFinder screen will appear to help you to quickly assign the call to the optimal technician and best date and time. If the Equipment selected includes a Certification Id, only those technicians with a matching valid Certification will be listed when the TechFinder viewer appears. If Time Slotting is implemented on your system, the Time Slot Wizard button discussed below should instead be used to set the date and time.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Date Scheduled:</font>
+    <font style="font-weight: bold;">Time Scheduled:</font><br/>
+    If you did not use TechFinder (or the Time Slot Wizard) to do so, you may enter the date and time the work is scheduled for in these fields.
+  </p>
+  <p style="margin-left: 29.50pt;">Enter the date in <font style="font-style: italic;">MMDDYYYY</font> format, double-click on the Date field to open SAMPro&#39;s calendar, or press the Spacebar to enter the current date.</p>
+  <p style="margin-left: 29.50pt;">Enter the scheduled time in 24-hour or military format or double-click on this field to access the Clock Viewer to do so. Press the Spacebar to enter the current time.</p>
+  <p>Note that the Date and Time fields are optional, and that the Date can be set from the Dispatch Board. If you do not enter a date, it will automatically default to January 1, 1900 unless a different default date is specified via a registry entry.</p>
+  <p>
+    <font style="font-weight: bold;">Technician Id:</font><br/>
+    This field defaults from the Site Equipment/Site record (unless disabled via <a href="Registry_Entry_for_New_Call_Options.htm#Clear_Default_Tech_When_Selecting_Equipment">Registry</a>). It is used to assign a technician to this work order. Enter a valid Technician Id or double-click on this field to select from a list of active technicians. This field is optional; the technician may be assigned from the dispatch board.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Estimated Hours</font><br/>
+    This field defaults from the Work Code but may be modified by the user.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Priority:</font><br/>
+    The priority level for this call. Zero (0) is the highest priority (most critical), and 9 the lowest (least critical). This field defaults from the Work Code but may be changed by the user.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Escalation Profile:</font><br/>
+    The Escalation Profile that will be attached to this work order. This field defaults from the Equipment record but may be changed if needed.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Original WO:</font><br/>
+    If this Work Order is being created as a Call Back, enter the original WO Id in this field or right-click on it in the lower right-hand (Work Order list) pane with the caret <font style="font-weight: bold;">not</font> on this field. When you do so, the system will ask you to confirm that this work order is being created as a Call Back for the Work Order that you select. If you click &#39;Yes&#39;, the system will insert the appropriate Work Order Id, and set the Work Order Type to Call Back.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Job Id:  Job Cost Code Id:  Job Billing Item Id:</font><br/>
+    These fields default from the selected Equipment’s Default Service Job but may be changed by the user if needed. The Job should refer to the Site selected in New Call unless special processing for certain Utility or Warranty Jobs is in effect. See <a href="Registry_Entry_for_New_Call_Options.htm#Specify_Default_Service_Job_Selection_Filter_Override">Registry to Specify Default Service Job Selection Filter Override</a> for details.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Client Id: Client Name:</font><br/>
+    The Client Id and Name from the Default Service Job. The following logic will be used to derive the Default Service Job (and hence the Client):
+  </p>
+  <p style="margin-left: 36.00pt;">When the Site is selected, look at the first Equipment created for a Default Service Job; if one exists, display its Client.</p>
+  <p style="margin-left: 36.00pt;">When the Equipment is selected, check that Equipment’s Default Service Job and display its Client.</p>
+  <p style="margin-left: 36.00pt;">If the selected Equipment has no Default Service Job, display the Client from the Job that the user selects.</p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Type:</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Service:</font> By default, Work Orders created in New Call are set to Service.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">PreventiveMaint:</font>
+    <font style="text-decoration: underline; ">Do not</font> select this Type for work orders created in New Call. Work orders generated by Create PM WorkOrders are assigned this Type.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">CSR:</font> Obsolete.
+  </p>
+  
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Installation, Estimate, Other, Call Back:</font> one of these Types may be selected for informational purposes to better identify the work order.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">PM Invoice:</font>
+    <font style="text-decoration: underline; ">Do not</font> select this Type for work orders created in New Call. Work orders generated by Create PM Billing that are designed for PM Billing only are assigned this Type.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Material Direct:</font> Use only to record the ‘sale’ of a purchased item to a client and the client&#39;s invoice will come directly from the vendor from whom the item was purchased (instead of generating the invoice in SAMPro). In this case, the WO Status Category will be set to ‘Archived’ instead of ‘Completed’ when the Escalation Status is set to ‘Completed’.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Quote:</font> no longer has any special meaning, and is used for informational purposes only.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Market Source Id:</font><br/>
+    Enter the Market Source (if any) that generated this request for service.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Service Category Id:</font><br/>
+    If this field is completed, it will filter the Work Code list to those associated with this service category. The system will filter the Site Equipment list to show Equipment for the selected Category, plus Site Equipment that hasn&#39;t been classified into a Service Category. This field may be set by entering a Service Category Id or by selecting a piece of Equipment associated with this Service Category. The filtering of Equipment by selecting the Service Category may be disabled by the <a href="Registry_Entry_for_New_Call_Options.htm">Registry Entry for New Call Options</a> .
+  </p>
+  <p><img alt="image\TimeSlotWizard.gif" border="0" height="28" src="assets/images/image/TimeSlotWizard.gif" title="image\TimeSlotWizard.gif" width="88"/><br/>
+    Clicking this button will launch the wizard to select an available Time Slot for the new work order. Note that it is not necessary to assign a Technician to select a Time Slot.</p>
+  <p>
+    <font style="font-weight: bold;">Time Slot Id:</font><br/>
+    This display-only field will be set when the Time Slot wizard is run.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Override Tech Status:</font><br/>
+    By default, this field will be set to the value ‘ default’: the technician status will be set to the appropriate value for that type of technician (referring to the sys-web-access and other registry entries, if present). The ‘ ‘ blank Override Tech Status is processed in the same way as ‘ default’ if the user accidentally cleared the field.
+  </p>
+  <p>If the user needs to select a special status (e.g., Return Trip), double-clicking in this field (or clicking the Magnify button) displays a quick pick list of valid statuses for the user to select from. By default, all statuses will be display, but a registry entry may made to control the contents of the list: <a href="Registry_Entry_for_New_Call_Options.htm">Registry New Call (sys-newcall)</a> .</p>
+  <p>
+    <font style="font-weight: bold;">Web Log Id:</font><br/>
+    Web Logs are requests for service that may be created by a Client, a Technician (from TechAnywhere), or a Service Provider. To create a work order from a web log, enter its Id (or double-click to select from a list) and tab out of the field.
+  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Web Logs from TechAnywhere</span><br/>
+    When a Weblog from TechAnywhere is entered, a wizard displaying the Weblog information will appear. The following buttons allow you to process the Weblog as follows:</p>
+  <p style="margin-left: 88px;"><span style="font-weight: bold;">Proceed:</span>  Clicking this button will use this Weblog to create a new Work Order. The contents will load into NewCall to allow the dispatcher to finish creating the new Work Order.</p>
+  <p style="margin-left: 88px;"><span style="font-weight: bold;">Decline:</span>  Gives the user the opportunity to change a Weblog to the status of ‘Cancelled’ to remove it from the list of New/Unacknowledged Weblogs.</p>
+  <p style="margin-left: 88px;"><span style="font-weight: bold;">AssignToWO:</span> Click this button to select an existing Work Order to assign this Weblog to. The Weblog’s Equipment and Work Requested contents will be added to the Work Order&#39;s Equipment Tab. The Weblog will also be changed to Acknowledged and reference the selected Work Order.</p>
+  <p style="margin-left: 88px;"><span style="font-weight: bold;">Cancel:</span> Returns you to the New Call with the weblog field cleared. It only cancels the operation of selecting the Weblog; it does NOT set the Weblog&#39;s status to Cancelled. Note: Pressing the X works the same as the Cancel button.</p>
+  <p>The Client Site, service category, work code and work requested fields will default from the web log.Select the appropriate Equipment Id and complete any remaining fields as needed. When a Web Log with the Equipment Id set from TechAnywhere is processed, it does not automatically select the Equipment.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Important Note on</font>
+    <font style="font-weight: bold;">Multiple</font>
+    <font style="font-weight: bold;">Web Logs:</font><br/>
+    If you are processing multiple Web Logs, always click the New Record button before you select another Web Log. Doing so clears any completed Call Scripts cached for the previous Web Log.
+  </p>
+
+</body></html>

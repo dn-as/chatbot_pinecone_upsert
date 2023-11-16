@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.11.1.2.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="client order"/>
+<meta name="MS-HKWD" content="cop"/>
+<meta name="MS-HKWD" content="proforma"/>
+<meta name="MS-HKWD" content="quote"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report COP Quote</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="client order,cop,proforma,quote,report"/><meta name="brsnext" value="Drum_Label_Warning_Viewer.htm"/><meta name="brsprev" value="ProForma_Table_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report COP Quote">
+        <span>Report COP Quote</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+<h1>Report COP Quote</h1>
+<h2>Purpose:</h2>
+<p>This report prints COP Orders flagged as Quote or ProForma.</p>
+<h2>Usage:</h2>
+<p>COP Orders flagged as ProForma will be printed using the ProForma Table (quantity and currency conversion table) specified in the Client Site/Client Order record. This produces a document designed for international shipping.</p>
+<h2>Registry Entries:</h2>
+<p><font style="text-decoration: underline;" color="#008000">Report_Graphics</font>Report_Graphics_and_Copy_Stamp</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Report Options:</font><br/>
+The Report Options selector pane controls how the report will be output. Click <a href="Report_Options.htm">Report Options</a> to learn more.</p>
+<p><font style="font-weight: bold;">Report Ranges:</font><br/>
+The Report Ranges selector pane enables you to select a customized range for the report. When you click on a range, the criteria defining it will appear in the ID field(s). Creating a customized report range is discussed below. Notice that you must name a custom range in order to save it.</p>
+<p><font style="font-weight: bold;">Range:</font><br/>
+Enter a unique, alphanumeric name to save and identify your customized report Range. Ranges are defined by the contents of the ID field(s).</p>
+<p><font style="font-weight: bold;">Order Id:</font><br/>
+Enter the Id of the Quote or ProForma order you wish to print (or double-click to select from a list). Several Orders can be specified by using a comma to separate the individual ID&#39;s. A range of Orders is defined by the first and last Id&#39;s of the range separated by an underscore.</p>
+<p><font style="font-weight: bold;">Client Id:</font><br/>
+To print orders flagged as Quote or ProForma for a specific Client, enter the Client Id (or double-click to select from a list). Several Clients can be specified by using a comma to separate the individual ID&#39;s. A range of Clients is defined by the first and last Id&#39;s of the range separated by an underscore.</p>
+<p><font style="font-weight: bold;">Date Ordered:</font><br/>
+Enter the Date Order (in yyyy-mm-dd format) of the Quote or ProForma Order you wish to print (or double-click to select from the Calendar viewer). A range of Dates is defined by the first and last Date of the range separated by an underscore.</p>
+<p><font style="font-weight: bold;">Entered By:</font><br/>
+Enter the User Id of the person that created the Quote or ProForma order.</p>
+<p><font style="font-weight: bold;">Lines:</font><br/>
+This informational field displays the number of lines per page for this report under the current font setting.</p>
+<p><font style="font-weight: bold;">Multiple Fields</font><br/>
+You can optionally enter Id&#39;s in more than one field. Items will appear on the report only if they fit <font style="font-weight: bold;">all</font> the criteria set in the Id fields.</p>
+<p class="See_Also" style="margin-left: 5.75pt; text-indent: 5.75pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">Power-User Reporting Tip:<br/>
+<font style="font-weight: normal; font-style: normal;">You may also use the comparison operators &gt;,&lt;, = and ! in your report ranges to control the information output to your report. Click</font> <a href="Comparison_Operators.htm" ehlpsource="robohelp classic" data-rhwidget="HyperlinkPopover"><font style="font-weight: normal; font-style: normal;">Comparison Operators</font></a> <font style="font-weight: normal; font-style: normal;">for details.</font></p>
+<h2>Important Buttons<font style="font-size: 9pt;" size="2" color="#000000">:</font></h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/>Report_Range_Viewer_Go_Button<font style="text-decoration: underline;" color="#008000">Go run the report</font>Report_Range_Viewer_Go_Button</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+
+//]]>
+</script><script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a119');
+//]]>
+</script>
+
+</body></html>

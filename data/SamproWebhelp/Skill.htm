@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.2.0_16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Skill</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="job,job cost category,skill,discipline,WBS,Work Breakdown Structure,job cost code"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Skill">
+        <span>Skill</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Skill Viewer</h1>
+<h2>Purpose:</h2>
+<p>Skill records are not job-specific. They may be referenced in the Job Cost Code record to allow for more detailed Job Cost coding in Reports and KPI&#39;s. Note that the Skill table is referenced in the Job Cost Code record only; it is not NOT written to Job History (or other History records).</p>
+<h2>Usage:</h2>
+
+<p>The Skill record is also referenced in the Standard Schedule of Values for use with the WBS Budget Import functionality in the Job record. When used in this fashion, the Skill would typically indicate a further breakout of detail applied to the Discipline. For example, if a Discipline was Pipe Fitting Field Install, the Skill would indicate the material of the pipe (e.g., Carbon Steel, Copper, etc.).</p>
+
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Skill Id:</font><br/>
+Uniquely identifies this record.</p>
+<p><font style="font-weight: bold;">Skill Name:</font><br/>
+Briefly describes this record. Recommended but not required.</p>
+
+<p><span style="font-weight: bold;">Work Type: n/a - Office - Field</span><br/>
+This field supports the WBS Budget Import&#39;s creation of new Job Cost Codes using the Standard Schedule of Values.  When the Import creates a new Cost Code, the defaulting of its Work Type is as follows: Set the Cost Code&#39;s Work Type to Field only if both the Skill and Discipline (in the Schedule of Values) both have Work Types of Field. Otherwise, the Cost Codes has its Work Type set to Office.</p>
+
+<p><font style="font-weight: bold;">Skill User1-5:</font><br/>
+These optional fields may be used to record additional information required by your company.</p>
+<p><font style="font-weight: bold;">Obsolete?<br/></font>If this field is checked, the record is considered Obsolete, and it may not be directly specified during data-entry (either by entering the Id or selecting it from a list). Obsoleted records can be edited and the Obsolete option can be cleared when necessary.</p>
+
+</body></html>

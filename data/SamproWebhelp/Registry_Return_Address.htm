@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.5.0_15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sys-printer-return-address"/>
+<meta name="MS-HKWD" content="reorder"/>
+<meta name="MS-HKWD" content="address"/>
+<meta name="MS-HKWD" content="return address"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Return Address (sys-printer-return-address)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="sys-printer-return-address,reorder,address,return address,registry"/><meta name="brsnext" value="Registry_Entry_System_Email.htm"/><meta name="brsprev" value="Registry_Company_Address_Entry.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Return Address (sys-printer-return-address)">
+        <span>Registry Return Address (sys-printer-return-address)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Return Address (sys-printer-return-address)</h1>
+<h2>Purpose:</h2>
+<p class="Body_Text">This registry Id that is used to set up the return address by Branch, Security or  User Id  for certain system reports.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline;">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Important Fields:</h2>
+<p class="Body_Text_Indent" style="text-indent: 5.75pt;"><font style="font-weight: bold;">Id:</font></p>
+<p class="Body_Text" style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-printer-return-address-</font><font style="font-weight: bold; font-style: italic;">securityid<br/></font><font style="font-weight: bold;">sys-printer-return-address-</font><font style="font-weight: bold; font-style: italic;">branchid-</font><font style="font-style: italic;">userid<br/></font> <font style="font-weight: bold;">sys-printer-return-address</font></p>
+<p>where <font style="font-style: italic;">branchid</font> is replaced by the Branch Id this return address is for. If this entry is specific to a user, the branch must be specified if a user belongs to a branch. If branches are not implemented, two dashes (not separated by a space) must precede the user id.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting Key:</font> line1 <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">address1</font><font style="font-weight: bold; font-style: italic;"><br/></font><font style="font-weight: bold;">Setting Key:</font>line2 <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">address2</font><font style="font-weight: bold; font-style: italic;"><br/></font><font style="font-weight: bold;">Setting Key:</font>line3 <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">address3</font><br/>
+<font style="font-weight: bold;">Setting Key:</font>line4 <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">address4</font></p>
+<p class="Body_Text_Indent" style="margin-left: 36.00pt;">where <font style="font-style: italic;">address1-4</font> are replaced by the address lines as you wish them to be printed on the reports.</p>
+
+</body></html>

@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Registry Entry Comments</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("SAM Pro Help\nRegistry Entries\n__ Registry Entry Comments **Support**");
+addAvenueInfo("Registry01","internal_registry_entry_custom_folder_pages.htm","");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Registry Entry Comments</P>
+ <P class="Support_Heading_2" >All Registry Entries – Comment Functionality for Version 7.1 and earlier</P>
+ <P class="support" >Contents / Additional Contents:</P>
+ <P class="support" >Starting with release 6.1.358.031,<FONT style="font-family:'Tahoma'; " > </FONT>comments may be included in the Contents/Additional Contents fields of Registry records. This new feature allows the user to attach comments to entry values without interfering with SAM Pro's use of the values.&nbsp; The double exclamation point (!!) is used to indicate the beginning of a comment.&nbsp; SAM Pro terminates the registry value when it encounters the comment marker.&nbsp; </P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; text-decoration:underline;" >Example:<BR></FONT><BR> COPDropShipReceipts=manual&nbsp; !!options are manual, serialized or automatic (default)<BR><BR>To SAMPRO, this is equivalent to... &nbsp; COPDropShipReceipts=manual</P>
+ <P class="support" >You may wish to use your demo database as a storage vehicle for registry entries that you've created and/or used.&nbsp; It makes a good reference source when searching for vaguely remembered registry options.</P>
+ <P class="Support_Heading_2" >Comments in Version 7.2 + Up:</P>
+ <P class="support" >Comments now have their on field that is accessed by clicking the Magnify button of the Registry child lines.  During data conversion, existing comments will be written to this line.</P>
+ <P class="support" >Disabling Options:</P>
+ <P class="support" >Starter Databases (7.1 and Earlier):</P>
+ <P class="support" >If you wish to include possible registry settings or options in your starter databases, they may be included as disabled (preceded by an ‘x’, but not as blank options:</P>
+ <P class="support" >&nbsp;Disabled Entry: Correct (note initial x)</P>
+ <P class="support" >&nbsp;X COPDropShipReceipts=manual&nbsp; !!options are manual, serialized or automatic (default)<BR></P>
+ <P class="support" >&nbsp;Disabled Entry: Wrong (may lead to unexpected and undesirable results!)</P>
+ <P class="support" >&nbsp;COPDropShipReceipts=</P>
+ <P class="support" >Starter Databases: 7.2 and Up</P>
+ <P class="support" >A new field, disabled, has been added to the registry child table. It is recommended that entrys be disabled by checking this box. <BR></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

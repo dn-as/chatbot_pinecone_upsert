@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="logging on"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Logging On</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="logging on"/><meta name="brsnext" value="About_this_Product.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Logging On">
+        <span>Logging On</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Logging On the Software</h1>
+<h2>Purpose:</h2>
+<p>Select a data source (database) and start Data-Basics&#39; Windows&#39; software.</p>
+<h2>Usage:</h2>
+<p>Required to start the application.</p>
+<h2>Important Fields:</h2>
+<p>To move the cursor from one field to the next, press the Tab or Enter 
+ key or click on the field you wish to select. The Backspace key deletes 
+ typing errors.</p>
+<p><font style="font-weight: bold;">Data Source:</font><br/>
+Enter the name of the data source of your database. Typically, this will 
+ be the same as the name of your database.</p>
+<p><font style="font-weight: bold;">User Id:</font><br/>
+To access your company&#39;s database, enter your personal user Id. </p>
+<p><font style="font-weight: bold;">Password:</font><br/>
+To access your company&#39;s database, enter your personal password. Your keyboard 
+ entry in the Password field does not display on the screen for security 
+ reasons. If you think you have made an error entering your password, press 
+ Ctrl+Delete to delete the entire contents of the Password field.</p>
+<h2>Important Buttons:</h2>
+<p>After entering completing the above fields, click on the Log In button 
+ to start the application (or press Spacebar when the caret is located 
+ on this button).</p>
+<p>Data-related issues can occur if an Intercompany installation runs with 
+ a non-Interco v.cus and vice versa. The system will display a warning 
+ on login if the v.cus file and global registry intercompanyenabled=true 
+ don&#39;t match.  &#39;Special&#39; users will not see the warning to avoid issues 
+ with agent type users started via batch file.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">WARNING:</span><span> 
+ The Inter Company settings on your v.cus and global registry do not match. 
+ Please contact your support representative for assistance.</span></p>
+<p>To exit without starting the application, click on the Cancel button 
+ (or position the cursor on the Cancel button with the Tab or Enter key, 
+ and then press the Spacebar).</p>
+<p style="font-weight: bold;"> <span>Login 
+ Errors:</span></p>
+<p>The system will alert you if there is a problem logging on as follows: 
+ </p>
+<p style="margin-left: 48px;">WHEN the Id is valid AND the Password is 
+ valid AND the user&#39;s Failed Login Limit is exceeded</p>
+<p style="margin-left: 88px;">THEN the &#39;User Account has too many Failed 
+ Logins&#39; error is issued.</p>
+<p style="margin-left: 48px;">WHEN the Id is valid AND but Password is 
+ invalid AND the user&#39;s Failed Login Limit is exceeded</p>
+<p style="margin-left: 88px;">THEN also, the &#39;User Account has too many 
+ Failed Logins&#39; error is issued instead of the &#39;Invalid User Id and/or 
+ Password&#39; error. </p>
+<p style="margin-left: 48px;">WHEN the Id is valid AND the Password is 
+ valid AND the Logon process has been successfully completed</p>
+<p style="margin-left: 88px;"><span>THEN the user&#39;s Failed Logon Count 
+ is reset to zero. Otherwise, the Failed Logon Count will remain in effect 
+ for all future logon attempts. </span></p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">TIP: 
+ Default Database / DataSource</font> <font style="font-size: 9pt;" size="2"><br/>
+</font>The Data-Basics&#39; Registry may be used to default in the Datasource 
+ for you. For details on doing so, click on <a href="Registry_Entry_for_Defaulting_DB_Engine__Name_or_Datasource_on_Log_In.htm">Default 
+ Database Registry Entry</a><font color="#008000">.</font></p>
+
+</body></html>

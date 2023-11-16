@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.23.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Report AFT Payroll Register</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="ACH,Canadian,payroll (Canadian),AFT - Canadian PR"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Report AFT Payroll Register">
+        <span>Registry Report AFT Payroll Register</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Report AFT Payroll Register</h1>
+<p>This registry sets the default GL Account / GL Entity when the printed 
+ AFT register is run. </p>
+<p>A separate registry (<a href="Registry_AFT_Candian_PR_Direct_Deposit.htm">sys-aftpr-glaccountid</a>) 
+ is required for the output of the ACH file itself.</p>
+<h3>Options to Set the Default GL Account And/Or GL Entity</h3>
+<p><span style="font-weight: bold;">Id:</span> sys-report-raft</p>
+<p><span style="font-weight: bold;">Options to Set the Default GL Bank 
+ Account</span> (use one or the other)<br style="color: #000000; font-family: Verdana, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; 
+											 font-size: 14px; font-style: normal; 
+											 font-variant-ligatures: normal; 
+											 font-variant-caps: normal; 
+											 font-weight: 400; letter-spacing: normal; 
+											 orphans: 2; text-align: start; 
+											 text-indent: 0px; text-transform: none; 
+											 white-space: normal; widows: 2; 
+											 word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+											 text-decoration-style: initial; 
+											 text-decoration-color: initial;"/>
+<br style="color: #000000; font-family: Verdana, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; 
+	 font-size: 14px; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-style: initial; text-decoration-color: initial;"/>
+<span style="font-weight: bold;">Setting Key:</span> DefaultGLBankAccount 
+   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">GLAccountId</span>  <span style="font-weight: bold; 
+	 text-decoration: underline; ">or</span><br style="color: #000000; 
+												 font-family: Verdana, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; 
+												 font-size: 14px; font-style: normal; 
+												 font-variant-ligatures: normal; 
+												 font-variant-caps: normal; 
+												 font-weight: 400; letter-spacing: normal; 
+												 orphans: 2; text-align: start; 
+												 text-indent: 0px; text-transform: none; 
+												 white-space: normal; widows: 2; 
+												 word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+												 text-decoration-style: initial; 
+												 text-decoration-color: initial;"/>
+<span style="font-weight: bold;">Setting Key:</span> GLBankAccount   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">GLAccountId</span></p>
+<p>The GLBankAccount and DefaultGLBankAccount options provide a means of 
+ defaulting the bank account when these reports are run. Use of GLBankAccount 
+ and DefaultGLBankAccount should be thought of as mutually exclusive even 
+ though the Registry viewer won&#39;t prevent it. <span style="font-weight: bold;">Do 
+ not use both!</span></p>
+<p style="margin-left: 48px;">I<span style="font-weight: bold;">ntercompany 
+ Processing Note:</span> If the DefaultGLBankAccount option is set, the 
+ GL Bank Account specified in the registry (e.g, sys-report-raft-securityid) 
+ defaults when the user selects the Company (or it defaults if only one 
+ Company has been specified in the database). The Account will be cleared 
+ if the user selects a different Company for which the registry is not 
+ set.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Options to 
+ Set the Default GL Entity  </span>(use one or the other)</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> 
+ DefaultGLBankEntity   <span style="font-weight: bold;">Setting 
+ Value:</span> <span style="font-style: italic;">GLEntityId</span>  <span style="font-weight: bold; text-decoration: underline; ">or</span><br style="color: #000000; font-family: Verdana, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; 
+	 font-size: 14px; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-style: initial; text-decoration-color: initial;"/>
+<span style="font-weight: bold;">Setting Key:</span> GLBankEntity   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">GLEntityId</span></p>
+<p style="margin-left: 8px;">The rules for Entity defaulting and validation 
+ are similar to the above description for GL Accounts. </p>
+
+</body></html>

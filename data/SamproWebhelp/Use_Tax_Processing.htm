@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="use tax"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Use Tax Processing</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="use tax"/><meta name="brsprev" value="Accounts_Payable_Overview.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Use Tax Processing">
+        <span>Use Tax Processing</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Use Tax Processing</h1>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">Use tax may come into play on Fixed-Fee jobs. If your firm is assessed with Use Tax, it increases the cost of the job. Accounting for these increased costs enable you to more accurately assess the profitability of a job. More specifically, if a Job is identified as Use Taxable, and items are purchased to it, the cost will be comprised of the use/sales tax plus the cost of the item itself. To avoid paying excess use tax, items purchased for Use Tax Job should always be purchased as tax exempt.</p>
+<p>In the majority of states, construction firms do not have to collect sales taxes on the services they provide however they must pay sales or use tax at the time of purchase. </p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">AZ, NM, WA, HI, and MS<br/></font>These states let firms buy materials &amp; supplies for a construction job tax free, however when they finish the construction project they owe the state a check for sales or use tax based on gross sales.  </p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">FL (and some other states)</font><br/>
+In some states (like FL) the type of contract (lump sum or TM) may effect the timing of when you will have to pay sales or use tax on purchases.  If you itemize the materials, the state may treat you as a reseller - which means you will not pay sales/use tax when you purchase, instead you must charge sales tax to your customer.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">When vouchering a PO to a WO/Job that has use tax, the Debit to the tax liability account (defined by the tax group on the job) had an entity that was associated with the job cost category. This should not have an entity: in Version 6.3 the code has been changed so that only the GL account and not the entity posts.</p>
+
+</body></html>

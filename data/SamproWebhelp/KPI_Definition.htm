@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.2.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="KPI"/>
+<meta name="MS-HKWD" content="DBAnalytics"/>
+<meta name="MS-HKWD" content="Key Performance Indicator"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>KPI Definition</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="KPI,DBAnalytics,Key Performance Indicator"/><meta name="brsnext" value="Start_KPI_Definition_Export.htm"/><meta name="brsprev" value="Registry_GUI_Bitmaps.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="KPI Definition">
+        <span>KPI Definition</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>KPI Definition</h1>
+<h2>Purpose:</h2>
+<p>KPI (Key Performance Indicator) records are used to define the individual Analytics in the DB Analytics Dashboard. See <a href="DB_Analytics_Overview.htm">DB Analytics Overview</a> for additional information.</p>
+<p>KPI records will be provided by Data-Basics; contact your support representative for additional information. In most cases, users should NEVER change KPI Definition records.</p>
+<h2>Usage:</h2>
+<p>The successful evaluation of KPI’s for the DB Analytics Dashboard depends upon the correct setting of the Category field your GL Account Type records. See <a href="GL_Account_Type_Viewer.htm">GL Account Type Viewer</a> for details.</p>
+<p>GL Reporting Periods (see <a href="GL_Reporting_Period.htm">GL Reporting Period</a> ) should be created through the end of the current and following year.</p>
+<p>The <a href="Start_KPI_Definition_Import.htm">Start KPI Definition Import function</a> should be used to import the KPIs (stored as .obj files) into your database. During the import, each true analytic (Generic Charts/Tables) will have a User Defined Function created for it so that they can be assigned to the appropriate User Groups and Functions record. <font style="font-weight: bold;">When KPI’s are initially imported, they will only be available to User Group All; access rights to other User Groups should be made as needed.</font></p>
+<p>See KPI Definition Documentation for technical details on authoring KPI&#39;s.</p>
+
+</body></html>

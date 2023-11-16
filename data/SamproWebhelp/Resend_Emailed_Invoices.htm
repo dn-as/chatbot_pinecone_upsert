@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.4.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Resend Emailed Invoices</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="service invoice,email invoice,autoemail,invoice - autoemail,resend emailed invoice,start resened emailed invoice,pdf failure of invoice"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Resend Emailed Invoices">
+        <span>Resend Emailed Invoices</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Resend Emailed Invoices</h1>
+<h2>Purpose:</h2>
+<p>This new starter function may be used to resend one or more auto-emailed 
+ invoices to the individual they were originally sent to.  This function 
+ is currently limited to Service Invoices saved as DBR (DBReport) files.</p>
+<p>This function is useful for resending multiple invoices if emailing 
+ was not working correctly when the invoices were originally generated. 
+ It may also be used by the Collections department to resend specified 
+ invoices to a particular client.</p>
+<h2>Usage:</h2>
+<p><span style="font-weight: bold;">IMPORTANT:</span> Be sure to complete 
+ AT LEAST one of the ranges listed below to prevent ALL invoices from being 
+ evaluated.</p>
+<p><span>The user is warned if both of the date ranges are blank.</span></p>
+<h3>Range Screen - Important Fields</h3>
+<p><span style="font-weight: bold;">Message:</span><br/>
+The message that you enter will be displayed in the body of the email the 
+ invoice is attached to.</p>
+<p><span style="font-weight: bold;">Skip Paid Invoices</span><br/>
+When this box is checked, only invoices with unpaid balances will appear 
+ on the checklist.<span style="font-weight: bold;">  </span></p>
+<p><span style="font-weight: bold;">AR Invoice Id:</span><br/>
+This range may used to limit the resend to a specific AR Invoice Id or 
+ Id&#39;s.</p>
+<p><span style="font-weight: bold;">Invoice Date:</span><br/>
+This range limits the resend by the Invoice Date (not the date the invoice 
+ was generated).</p>
+<p><span style="font-weight: bold;">Work Order Id:</span><br/>
+This range limits the resend by the Work Order associated with the Service 
+ Invoice.</p>
+<p><span style="font-weight: bold;">Client Id:</span><br/>
+This range limits the resend by the Client specified in the Service Invoice&#39;s 
+ Job.</p>
+<p><span style="font-weight: bold;">Job Id:</span><br/>
+This range limits the resend by the Service Invoice&#39;s Job.  </p>
+<p><span style="font-weight: bold;">Date Logged:</span><br/>
+This range limits the resend by the date the invoice was actually generated, 
+ not the Invoice Date.</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> 
+ Click the Go button to display a list of Invoices to resend.</p>
+<h3>Important Fields - Checklist Screen</h3>
+<p><span style="font-weight: bold;">Do:</span><br/>
+Check this field if you want to resend the invoice to the email address 
+ indicated in the To field. <span>The Email To field on the list screen 
+ has been opened, allowing the email address to be changed if needed.</span></p>
+<p>The following display-only fields allow the user to correctly select 
+ the eligible invoices to resend:</p>
+<p style="font-weight: bold;">AR Inv: - Inv Date: - WO Id: - Client Id: 
+ - Job Id: <br/>
+Doc Id: - Date Logged: - File Name:</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> 
+ Click the Go button to resend the selected invoices.</p>
+
+</body></html>

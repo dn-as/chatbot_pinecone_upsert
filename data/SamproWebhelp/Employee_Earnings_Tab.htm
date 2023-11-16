@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.2.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="earnings"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Employee Earnings Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="earnings,employee,payroll"/><meta name="brsnext" value="Employee_Direct_Deposit_Tab.htm"/><meta name="brsprev" value="Employee_Deductions_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Employee Earnings Tab">
+        <span>Employee Earnings Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Employee Viewer Earnings Tab</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain an employee&#39;s individualized Earnings information 
+ that is used by the system for Labor Journal entries. This tab can include 
+ wages, fringes, and job costing entries.</p>
+<h2>Example:</h2>
+<p>Office Wages, Job Costing Overhead, etc.</p>
+<h2>Usage:</h2>
+<p>This Tab must be completed for each employee on your payroll, <font style="font-weight: bold; font-style: italic;">unless</font> they 
+ are part of the Earnings Group specified in the main Employee record. 
+ In this case, the Earnings Group would be used as the default for time 
+ card entries. Typically, Earnings Groups are used in Union Payroll applications.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Premium 
+ Earnings:</font> It is possible to accommodate the situation where an 
+ employee could have a base rate and the earnings group could be used to 
+ add a premium ON TOP of that base employee rate. Refer to <a href="Registry_Entry_for_Taxable_Fringe_Benefits.htm">Registry 
+ Entry - Compute Payroll</a> for the appropriate registry entry.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Earnings Id:</font><br/>
+Enter a valid Earnings Id (or double-click to select from your firm&#39;s list 
+ of Earnings records).</p>
+
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Imp</font><font style="font-weight: bold;">ortant Note for Multiple Wage Entries</font><font style="font-weight: bold;">:</font></p>
+<p style="margin-left: 36.00pt;">We support multiple HOURLY amounts to 
+ multiple Earnings ID’s.</p>
+<p style="margin-left: 36.00pt;">We do NOT support mixing HOURLY and SALARY</p>
+<p style="margin-left: 36.00pt;">We do NOT support multiple SALARY amounts</p>
+
+
+<p><font style="font-weight: bold;">Amount:</font> (numeric format 00000000.00)<br/>
+The dollar amount (per Amount Type). For example, $12.50 hourly, $43,000 
+ annual salary, etc.</p>
+<p><font style="font-weight: bold;">Amount Type:</font><br/>
+This field specifies what the Amount field represents: hourly, salary (annual), 
+ or percent.</p>
+<p>The Amount Type of Fixed (per Payroll Period) is available for Fringes. 
+ This could be used to record taxable, company-owned vehicle usage. Validation 
+ ensures that the Amount Type of Fixed may only be selected if all of the 
+ following are true:</p>
+<p style="margin-left: 48px;">The Earnings Type is set to Fringe<br/>
+The Fringe is not Accrued<br/>
+The Fringe is not Job Costed</p>
+<p><font style="font-weight: bold;">Start Date:</font> (date format mmddyyyy) 
+  <font style="font-weight: bold;">End Date:</font> (date format mmddyyyy)<br/>
+Enter starting and ending <font style="font-weight: bold;">working</font> 
+ dates to define the time period that this Earning Id and Amount is valid 
+ for. These fields are compared with the Effective Date of labor hours 
+ recorded in the Labor Journal or the LAB tab of Work Orders. Enter the 
+ dates in <font style="font-style: italic;">mmddyyyy</font> format or press 
+ Alt+F7 (or double-click on the field)to access the Calendar to do so.</p>
+<p>If more than one line is entered for the same earnings id/pay type combination, 
+ the dates must <font style="font-weight: bold;">NOT</font> overlap. The 
+ system now validates that no overlap occurs.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;" color="#0000FF">Tip:</font> 
+ <font style="font-weight: bold;">Handling Salary and Hourly Wage Increases</font><br/>
+If this employee receives a earnings increase, you would add a new Earnings 
+ line (or lines) with a Start Date corresponding to the first working day 
+ (the Effective Date of the labor hours entered) at the new salary or hourly 
+ wage BEFORE POSTING LABOR HOURS. The End Date of the old Earnings line 
+ should be the last Effective Date worked at that rate (or the day preceding 
+ the new Start Date). Hourly Employee&#39;s wages may be increased on any date 
+ within a pay period BEFORE POSTING LABOR HOURS. <font style="font-weight: bold;">Note: 
+ For Salary Employees, the Start Date in the Earning tab must always correspond 
+ to the Start Date of the Payroll Period the increase will occur in.</font> 
+ Hourly Employees may get an increase in the middle of a Pay Period BEFORE 
+ POSTING LABOR HOURS, but Salaried Employees may not. If an Hourly employee 
+ gets an increase in the middle of a pay period, the user should set up 
+ the increase BEFORE posting hours to the LABOR JOURNAL/WORKORDER.</p>
+<p><font style="font-weight: bold;">Add Pay Rate Factor?</font><br/>
+If this box is checked (by double-clicking or pressing the Spacebar), the 
+ Rate Factor (in the Pay Type record) will be used to calculate the Pay 
+ Rate when making time card entries in the Labor Journal. In most cases, 
+ this field should be flagged for Wage type Earnings. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">NOTE:</span> 
+ If the Start Compute Overtime functionality is being used, this field 
+ <span style="font-weight: bold;">must</span> be flagged for wage lines 
+ that may be subject to overtime computations. </p>
+<p><font style="font-weight: bold;">Wage -  Fringe <span>- Burden 
+ - Standard Cost</span></font><br/>
+<font style="font-weight: bold;">Taxable?  Job Cost?  Accrue?</font><br/>
+These display-only fields default from the Earnings record.</p>
+<p><font style="font-weight: bold;">Click the Magnify Button to Access</font></p>
+<p><font style="font-weight: bold;">Pay Type:<br/>
+</font>This field should only be completed to enable an alternative way 
+ of determining overtime or double-time pay. This would be done if overtime 
+ isn&#39;t at a 1.5 multiplier.  In this setup, you would create 
+ two earnings lines for base wages for the same Earnings Id:</p>
+<p style="margin-left: 36.00pt;">The first earnings line for base wages 
+ would be your regular one; the Pay Type would NOT be filled in.</p>
+<p style="margin-left: 36.00pt;">The second earnings line for base wages 
+ line would be for the same Earnings Id, but with the Pay Type Id completed. 
+ Typically, it would point to an OT Pay Type with its Rate Factor set to 
+ 1.0; . In addition, you would specify the actual OT pay rate in the earnings 
+ line. This line would be used instead of the first ONLY IF the Pay Type 
+ matched on the Labor lines entered.</p>
+<p style="margin-left: 36.00pt;">Example:</p>
+<p style="margin-left: 36.00pt;">Earnings Id: Amount: Pay Type 
+ Id: <br/>
+base  27 (blank)<br/>
+base  43 OT (rate factor = 1.0. Hours Type=Worked, Category=Overtime)</p>
+<p style="margin-left: 36.00pt;">In this example, when time was entered 
+ using a Pay Type of ‘OT’, the base earnings would be calculated as $43.00 
+ instead of $40.50 per hour (27.00x1.5). In the traditional SAMPRO setup, 
+ the line 2 entry would not exist and the Pay Type would have a Rate Factor 
+ of 1.5.  In that scenario the employee&#39;s OT pay rate would be 
+ $40.50 per hour (27.00x1.5).</p>
+
+</body></html>

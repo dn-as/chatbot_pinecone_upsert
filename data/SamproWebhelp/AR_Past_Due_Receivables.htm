@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.1.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="accounts receivable"/>
+<meta name="MS-HKWD" content="ar"/>
+<meta name="MS-HKWD" content="past due receivables"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>AR Past Due Receivables</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="accounts receivable,ar,past due receivables,report"/><meta name="brsnext" value="AR_Customer_Statement.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AR Past Due Receivables">
+        <span>AR Past Due Receivables</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+<h1>AR Past Due Receivables</h1>
+<h2>Purpose:</h2>
+<p>This report lists your past due receivables by Client Id. Aging is determined by the Aging Date that you enter and the Due Date of the receivable.</p>
+<h2>Report Description:</h2>
+<p>Receivables are grouped by Client: the following information is listed for each past due receivable:</p>
+<p> Invoice Id  Invoice Date  Date Due<br/>
+ Aging Intervals: 0-30  31-60  61-90  Over 90  Retainage  Description</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Report Options:</font><br/>
+The Report Options selector pane controls how the report will be output. Click <a href="Report_Options.htm">Report Options</a> to learn more.</p>
+<p><font style="font-weight: bold;">Range:</font><br/>
+Enter a unique, alphanumeric name to save and identify your customized report Range. Ranges are defined by the contents of the ID field(s).</p>
+<p class="Body_Text_Indent"><font style="font-weight: bold;" color="#0000FF">Hint:</font> You can create user-defined report ranges that are available to all users with access to that report. To do so, the first character of the named range should be an asterisk. Named ranges beginning with an asterisk will appear on all users&#39; report ranges options so that they can be selected (but not altered) by any user with access to that report. Only the user that created the report range is allowed to alter it.</p>
+<p><font style="font-weight: bold;">Aging Date</font><br/>
+Enter the aging date for the receivables: press the Spacebar to enter today&#39;s date, or double-click on this field to access the Calendar viewer to enter the date.</p>
+<p><font style="font-weight: bold;">Client Id:</font><br/>
+If you only wish to list receivables for a specific Client, enter the Client Id. Several Clients may be listed by entering their Id&#39;s separated by commas (Acme,Megahome,Zorro). A range of Clients can be defined by the first and last items of the range separated by an underscore (Megahome_Zorro).</p>
+<p><font style="font-weight: bold;">Job Id:</font><br/>
+You can list the receivables for a specific Job by entering its Id. Several Jobs can be specified by entering their Id&#39;s separated by commas (1005,1007,1020). A range of Jobs can be defined by the first and last items of the range separated by an underscore (1010_1015).</p>
+<p><font style="font-weight: bold;">Invoice Id:</font><br/>
+You can list the receivables for a specific Invoice by entering its Id. Several Invoices can be specified by entering their Id&#39;s separated by commas (1005,1007,1020). A range of Invoices can be defined by the first and last items of the range separated by an underscore (1010_1015).</p>
+<p><font style="font-weight: bold;">Lines:</font><br/>
+This informational field displays the number of lines per page for this report under the current font setting.</p>
+<p><font style="font-weight: bold;">Multiple Fields</font><br/>
+You can optionally enter Id&#39;s in more than one field so that you can include items on a report only if they fit all the criteria set in the ID fields.</p>
+<p>Example: Assume the first ID field is for Clients, and the second is for Invoices. Let&#39;s suppose you set these fields as follows:</p>
+<p>databasics0001_databasics9999</p>
+<p>1004_1020</p>
+<p>A receivable will appear in the report only if its Client ID is within the range databasics0001 to databasics9999 <font style="font-weight: bold;">and</font> if the invoice number is between 1004 and 1020.</p>
+<p class="See_Also" style="margin-left: 5.75pt; text-indent: 5.75pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">Power-User Reporting Tip:<br/>
+<font style="font-weight: normal; font-style: normal;">You may also use the comparison operators &gt;,&lt;, = and ! in your report ranges to control the information output to your report. Click</font> <a href="Comparison_Operators.htm" ehlpsource="robohelp classic" data-rhwidget="HyperlinkPopover"><font style="font-weight: normal; font-style: normal;">Comparison Operators</font></a> <font style="font-weight: normal; font-style: normal;">for details.</font></p>
+<h2>Important Buttons<font style="font-size: 9pt;" size="2" color="#000000">:</font></h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Click Go to run the report.</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+
+//]]>
+</script><script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a125');
+//]]>
+</script>
+
+</body></html>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.6.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="CC Cycle Code Metrics"/>
+<meta name="MS-HKWD" content="Metrics"/>
+<meta name="MS-HKWD" content="System Metrics"/>
+<meta name="MS-HKWD" content="Log Form Viewer"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Log Form Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="CC Cycle Code Metrics,Metrics,System Metrics,Log Form Viewer"/><meta name="brsnext" value="Resolution_Code_Viewer.htm"/><meta name="brsprev" value="Flat_Rate_Inventory_Materials_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Log Form Viewer">
+        <span>Log Form Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Log Form Viewer (for work order metrics)</h1>
+<h2>Purpose:</h2>
+<p>The Log Form Viewer is used to establish a list of system metrics to 
+ be captured by the technician when working on a piece of equipment.</p>
+<p>When a PM Work Order is created, the Log Form referenced in the Site 
+ Equipment record will be written to the WO&#39;s Equipment tab, and is used 
+ to generate the lines on the Work Order Metrics tab.</p>
+<p>When a Work Order is created in New Call, the user may override the 
+ Log Form Id from the Equipment record. The Log Form Id selected in New 
+ Call will be written to the new WO&#39;s Equipment tab, and will control the 
+ WO&#39;s metrics.</p>
+<h2>Usage:</h2>
+<p>When a service or PM work order referencing a log form is created in 
+ SAM Pro, metrics (log form lines) will only be written to the Work Order 
+ Metrics tab if the Technician is not a TechAnywhere tech (e.g., Remote 
+ Access is set to None) or if no Tech is specified. If it is initially 
+ assigned to a technician with remote access, metrics will be uploaded 
+ to the technician’s device, and then posted to the work order in SAM Pro 
+ when they have been completed in the field.</p>
+<p>A Log Form line may not be deleted from this viewer if it is already 
+ referenced on a Work Order Metrics tab.</p>
+<p>The user is warned if he or she changes the Line, Header or UM (Unit 
+ of Measure) of a line that exists in work order system metrics:</p>
+<p style="margin-left: 36.00pt;">&quot;This field has been referenced in 
+ the work order metrics tab *** times. Any changes to this field should 
+ only be to correct typos or to clarify the test parameters - NOT to change 
+ the purpose of this metric.&quot;</p>
+<p><font style="font-weight: bold;">C</font><font style="font-weight: bold;">ycle 
+ Code Filtering:<br/>
+</font>The Log Form specified on the Client Site Equipment record may include 
+ lines metrics that should be recorded at every service or maintenance 
+ call, as well as some that need only be recorded on (for example) system 
+ startup or installation. In this release, both Sam Pro and TechAnywhere 
+ have been enhanced to filter (via the specified &quot;Cycle Code Filter&quot; 
+ associated with PM schedules and service Work Codes) the lines written 
+ to the Work Order Metrics tab. This enhancement allows the filtering of 
+ the metrics lines by CC (Cycle Code).</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Log Form Id:<br/>
+</font>Uniquely identifies this record; this field is required.</p>
+<p><font style="font-weight: bold;">Log Form Name:<br/>
+</font>Briefly describes this Log Form.</p>
+<p><font style="font-weight: bold;">Obsolete</font><font style="font-weight: bold;">?</font><font style="font-weight: bold;"><br/>
+</font>If this field is checked, the record is considered Obsolete, and 
+ it may not be directly specified during data-entry (either by entering 
+ the Id or selecting it from a list). Obsoleted records can be edited and 
+ the Obsolete option can be un-done when necessary. When you check the 
+ Obsolete field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. 
+ Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through 
+ access to all tables referencing this record: see <a href="References_List.htm">References 
+ List</a> for details.</p>
+<h2>Important Fields: Lower Section</h2>
+<p><font style="font-weight: bold;">Log Form Header:<br/>
+Log Form Line:<br/>
+</font>These fields will be displayed on the Work Order Metrics tab and 
+ should clearly define the reading that should be taken.</p>
+<p>Two rows in the same Log Form record may not contain identical Heading 
+ and Line contents. The following error appears if you attempt to save 
+ the record with this situation: “LogFormLinesByDescriptionByParentRn for 
+ table ‘lgfrmlne’ would not be unique.” The user must edit the one of the 
+ offending row entries to insure its uniqueness before the record can be 
+ saved.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><font style="text-decoration: underline; ">Example:</font></p>
+<p style="margin-left: 36.00pt;">Not Allowed:</p>
+<p style="margin-left: 36.00pt;">Row 1: Heading: Pressure Line: Test 1</p>
+<p style="margin-left: 36.00pt;">Row 2: Heading: Pressure Line: Test 1</p>
+<p style="margin-left: 36.00pt;">Allowed:</p>
+<p style="margin-left: 36.00pt;">Row 1: Heading: Pressure Line: Test 1</p>
+<p style="margin-left: 36.00pt;">Row 2: Heading: Pressure Line: Test 2</p>
+<p><font style="font-weight: bold;">UM:<br/>
+</font>The unit of measure this reading should be taken in (psi, volts, 
+ etc.).</p>
+<p><font style="font-weight: bold;">CC:</font><br/>
+The Cycle Code field may be used to control which metrics are written to 
+ the Work Order Metrics tab when Service or PM Work Orders are generated. 
+ Note that Log Form field in the Client Site Equipment record determines 
+ which list of metrics is used.</p>
+<p>When a Service Work Order is created in SAM Pro’s New Call, the system 
+ will check the Cycle Code Filter in the Work Code; if this field is completed, 
+ only those log form line metrics whose CC: field corresponds to the filter 
+ or is blank will be written to the Work Order (for Techs without remote 
+ access) or uploaded to the Technician’s device.</p>
+<p>When a PM Work Order is created, the system will check the Cycle Code 
+ Filter in the Client Site Equipment PM Schedule (or the Master Contract 
+ Schedule). If the Cycle Code Filter in the schedule is blank, the system 
+ will use the Cycle Code Filter in the Work Code instead. Only those metrics 
+ whose CC: field corresponds to the filter or is blank will be written 
+ to the Work Order (for Techs without remote access) or uploaded to the 
+ Technician’s device.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Tip:</font> 
+ If a log form metric should ALWAYS be recorded, leave the CC field blank.</p>
+
+</body></html>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.4.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="security"/>
+<meta name="MS-HKWD" content="CRMAnywhere"/>
+<meta name="MS-HKWD" content="CSRAnywhere"/>
+<meta name="MS-HKWD" content="web"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Web Users Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="security,CRMAnywhere,CSRAnywhere,web"/><meta name="brsnext" value="Client_Web_Interface_Installation.htm"/><meta name="brsprev" value="Web_Profile_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Web Users Viewer">
+        <span>Web Users Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Web Users Viewer</h1>
+<h2>Purpose:</h2>
+<p class="Reference_Line">Create accounts that will enable to enable web 
+ access logons to FMAnywhere and the Client Web interface.</p>
+<h2>Usage:</h2>
+<p class="Reference_Line">This viewer supports FMAnywhere – the Facility 
+ Manager interface.</p>
+<h2>Registry:</h2>
+<p><a href="Registry_FMAnywhere.htm">Registry FMAnywhere</a></p>
+<p><a href="Registry_Entry_Client_Web_Interface.htm">Registry CRMAnywhere 
+ (web-settings)</a></p>
+<h3>Reporting on Customer Logons</h3>
+<p>When a Web User logs on an entry will be added to the User Logon Table. 
+ This table may then be queried for reporting purposes such as marketing 
+ analyses of which customers are using web access and so on. Information 
+ in this table includes: user id, date and time of logon, date and time 
+ of logoff, user access type, virtual machine and user name, logon status, 
+ and sampro version number.</p>
+<h2>Important ant Fields: Upper Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Main Tab</p>
+<p><font style="font-weight: bold;">Web User Name:<br/>
+</font>This will be the name the user logs in as, and must uniquely identify 
+ this record.</p>
+<p><font style="font-weight: bold;">Web User Email:<br/>
+</font>A valid e-mail address for this user.</p>
+<p><font style="font-weight: bold;">New Password:  Confirm Password:</font> 
+ (10 character)<br/>
+Use these fields to enter and confirm a new/changed password for this Web 
+ User. The password does not display in either of these fields for security 
+ purposes. The password may contain letters and numbers, but should NOT 
+ include special characters such as the ampersand &amp;, pound sign #, 
+ and blank spaces.</p>
+<p><font style="font-weight: bold;">Expiration Date:<br/>
+</font>The expiration date for this web user account.</p>
+<p><font style="font-weight: bold;">Disabled?</font><br/>
+If this field is flagged with an X, the user will be unable to access the 
+ Data-Basics&#39; software. Double-click on this field (or press the Spacebar) 
+ to flag/clear it.</p>
+<p>Scroll Down to see the following fields:</p>
+<p><img src="assets/images/image/CloneProfile.gif" alt="image\CloneProfile.gif" title="image\CloneProfile.gif" width="72" height="28" border="0"/></p>
+<p>If several users will be employing the same or similar FMAnywhere dashboard, 
+ the Clone Profile button may be used to clone the settings from a selected 
+ Web User who already has them set up.</p>
+<p><img src="assets/images/image/ResetProfile.gif" alt="image\ResetProfile.gif" title="image\ResetProfile.gif" width="72" height="28" border="0"/></p>
+<p>The Reset Profile button should only be used to clear a web user’s FMAnywhere 
+ configuration if there is a problem accessing it.</p>
+<p><img src="assets/images/image/ExportProfile.gif" alt="image\ExportProfile.gif" title="image\ExportProfile.gif" width="72" height="28" border="0"/>:<br/>
+’Scroll down the parent screen to access this button; it is designed to 
+ be used with FMAnywhere. This button enables you to export the User Profile 
+ (KPIs, Tab Groups and Tabs), for this user as an object (.obj) file. This 
+ object file may then be imported to provide a preset profile for other 
+ users. For example, a support person could use this file to expedite user 
+ setups for a new installation.</p>
+<p style="margin-left: 8px;"><span>Clicking this button exports the User&#39;s 
+ Profile to the DashboardProfiles folder in the main SAMPro directory. 
+  This folder will be created if it does not exist.  </span></p>
+<p>The file will use the naming convention exported_DBAnalyticsFrom_databasename_For_userid.obj.</p>
+<p><img src="assets/images/image/ImportProfile.gif" alt="image\ImportProfile.gif" title="image\ImportProfile.gif" width="72" height="28" border="0"/><br/>
+Scroll down the parent screen to access this button; it is designed to 
+ be used with FMAnywhere. This button enables you to import a Profile (KPI’s, 
+ Tab Groups and Tabs) from an object (.obj) file. For example, a support 
+ person could use this file to expedite web user setups for a new installation.</p>
+<p>When you click this button, a selection box will appear allowing you 
+ to choose from the appropriate objects located in the main SAM Pro directory. 
+ Click on a file to select it, and then click Select to import the profile, 
+ or Cancel to cancel the operation. When the web user next logs into FMAnywhere, 
+ the imported profile will be installed.<br/>
+</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Web Profile Tab</p>
+<p>This tab should be completed if this is Web User record is for a customer 
+ who will be accessing FMAnywhere or the Client Web Interface.</p>
+<p class="Body_Text_3">Web Profile Id:<br/>
+<font style="font-weight: normal;">Enter a valid Web Profile Id or double-click 
+ to select from a list. This field is required for FMAnywhere or /Client 
+ Web Interface  users.</font></p>
+<p><font style="font-weight: bold;">Service Category:<br/>
+</font>This range enables you to filter the Service Categories that will 
+ be available to this Web User on FMAnywhere or the Client Web Interface. 
+ If this range is empty, all Service Categories will be listed. The Client 
+ Web Interface applies the Web User&#39;s Service Category filtering (if set) 
+ to the Equipment and Open and Completed WO lists.</p>
+<p class="Body_Text_2" style="margin-left: 5.75pt;"><font style="font-weight: bold;">Store 
+ #<br/>
+</font>If this range is empty, the web user will be able to ‘see’ all sites 
+ linked to the Web Profile subject to the restrictions in the custom ranges 
+ below.<br/>
+</p>
+<p class="Body_Text_2" style="margin-left: 5.75pt;"><font style="font-weight: bold;">Custom</font> 
+ <font style="font-weight: bold;">Range</font> <font style="font-weight: bold;">1, 
+ 2, 3, 4, 5<br/>
+</font>The ranges below the Store # range will be labeled according to 
+ the scheme defined in the Web Profile (if implemented). If this range 
+ is empty, the web user will be able to ‘see’ all sites linked to the Web 
+ Profile subject to any restrictions in the Store # range above.</p>
+<p class="Body_Text_2" style="margin-left: 5.75pt;">To restrict the sites 
+ available, enter an appropriate custom value (or list of comma-separated 
+ values) in one or more of the custom ranges.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Site SQL Tab</p>
+<p class="Body_Text_2"><font style="font-weight: bold;">Site Where Clause:<br/>
+</font>This field will be generated by the system using the information 
+ entered on the Web Profile tab, and should not be modified by the user.</p>
+<p class="Body_Text_2"><font style="font-weight: bold;">Manual Entry?<br/>
+</font>Reserved for future use.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Service Category SQL Tab</p>
+<p class="Body_Text_2"><font style="font-weight: bold;">Service Category 
+ Where Clause:<br/>
+</font>This field will be generated by the system using the information 
+ entered on the Web Profile tab, and should not be modified by the user.</p>
+<p class="Body_Text_2"><font style="font-weight: bold;">Manual Entry?<br/>
+</font>Reserved for future use.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Technician SQL Tab</p>
+<p class="Body_Text_2"><font style="font-weight: bold;">Technician Where 
+ Clause:<br/>
+</font>This field will be generated by the system using the information 
+ entered on the CSR Profile tab, and should not be modified by the user.</p>
+<p class="Body_Text_2"><font style="font-weight: bold;">Manual Entry?<br/>
+</font>Reserved for future use.</p>
+<h2>Important Fields: Lower Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;">Registry Tab</p>
+<p class="Body_Text_3">Registry Value:<br/>
+<font style="font-weight: normal;">The registry options entered on this 
+ tab will override those specified in the Web Profile record (for CRMAnywhere 
+ users) and web-settings registry entry, and are typically used for custom 
+ branding (e.g., displaying Big Bank graphics when your Big Bank customers 
+ log in). You may also enter registry options on this tab to customize 
+ work order and invoice formatting, reporting, and e-mail settings for 
+ CRMAnywhere. Click</font> <a href="Registry_Entry_Client_Web_Interface.htm"><font style="font-weight: normal;">Registry Entry Client Web Interface</font></a> 
+ <font style="font-weight: normal;">; the Contents/Additional Contents 
+ options described for the web-settings registry entry can also be entered 
+ on the lines in this tab.</font></p>
+
+</body></html>

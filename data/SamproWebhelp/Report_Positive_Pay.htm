@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.7.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="ACH"/>
+<meta name="MS-HKWD" content="check"/>
+<meta name="MS-HKWD" content="issued report"/>
+<meta name="MS-HKWD" content="positive pay"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report Positive Pay</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="HSBC,Citi-ARP,BBT,AnchorBank,DollarBank,PeoplesUnited,WilmingtonTrust,BankOne,JPMorgan,SunTrust,PNCBank,Harris Bank,FrostNational,RBC,Bank Of America,FifthThird,Well Fargo,ACH,check,issued report,positive pay,report"/><meta name="brsnext" value="Report_EFT.htm"/><meta name="brsprev" value="Cash_Requirements_Report.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report Positive Pay">
+        <span>Report Positive Pay</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report Positive Pay</h1>
+<h2>Purpose:</h2>
+<p>This report is designed to provide a verification for the financial 
+ institution your printed (live) checks are drawn on that these checks 
+ are in fact valid. Your bank may refer to this as an &#39;Issued&#39; report. 
+ Both a printed report and a file (to be electronically transmitted to 
+ the bank) are generated when you run the report. </p>
+<h2>Usage:</h2>
+<p>We currently support Fleet Maine, Mellon, WellsFargo, NationalCity, 
+ Bank of America, Harris, and Frost.</p>
+<p>BBT, Citi-ARP and HSBC are supported 
+ in Version 9.1 and above.</p>
+<p>This report must be run after you have computed and printed your checks.</p>
+<p>In order for this report to run correctly, a <a href="Registry_Positive_Pay_Entry.htm">sys-positive-pay</a> 
+ entry must be made for each GL Account/GL Entity combination for which 
+ you will issue checks. The electronic file that you will forward to you 
+ bank will be given the name specified in registry entry and stored in 
+ your working directory.</p>
+<p>PR checks that were paid via EFT are excluded from the positive pay 
+ report.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Report Options:</font><br/>
+The Report Options selector pane controls how the report will be output. 
+ Click <a href="Report_Options.htm">Report Options</a> to learn more.</p>
+<p><font style="font-weight: bold;">Range:</font><br/>
+Enter a unique, alphanumeric name to save and identify your customized 
+ report Range. Your default Id fields will not be saved unless you name 
+ your range.</p>
+<p><font style="font-weight: bold;" color="#0000FF">Hint:</font> You can 
+ create user-defined report ranges that are available to all users with 
+ access to that report. To do so, the first character of the named range 
+ should be an asterisk. Named ranges beginning with an asterisk will appear 
+ on all users&#39; report ranges options so that they can be selected (but 
+ not altered) by any user with access to that report. Only the user that 
+ created the report range is allowed to alter it.</p>
+<p><font style="font-weight: bold;">GL Account Id:</font><br/>
+(Required.) The bank (cash) account these checks are drawn on. Double-click 
+ on this field to select from a list of Id&#39;s.</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font><br/>
+If a GL Entity was specified in the Print Payroll Check function, a GL 
+ Entity Id must also be specified here.</p>
+<p><font style="font-weight: bold;">Start Date: End Date:</font><br/>
+Defines the range of check dates to be included on this report. To include 
+ only one day&#39;s checks on the report, the Start Date and End Date should 
+ be the same.</p>
+<p><font style="font-weight: bold;">Reference Id:</font><br/>
+If you need to limit the range of this report, enter the Employee Id (Payroll) 
+ or Vendor Id (AP) that you wish to include on the report.</p>
+<p><font style="font-weight: bold;">Payee Name:</font><br/>
+If you need to limit the range of this report, enter the Payee Name that 
+ you wish to include on the report.</p>
+<p><font style="font-weight: bold;">Reference Type</font><br/>
+If you need to limit the range of this report, enter E (for Employee Payroll) 
+ or V (for Vendor AP) checks that you wish to include on the report.</p>
+<p><font style="font-weight: bold;">Check Number<br/>
+</font>The user may filter the printed and electronic versions of the report 
+ by the Check Id by entered the number (or a list or range of numbers).</p>
+<h2>Important Buttons<font style="font-size: 9pt;" color="#000000" size="2">:</font></h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/>Go run the report and create the electronic 
+ Positive Pay File<br/>
+</p>
+
+</body></html>

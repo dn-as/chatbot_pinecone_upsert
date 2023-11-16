@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.2.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="create new work order"/>
+<meta name="MS-HKWD" content="new call"/>
+<meta name="MS-HKWD" content="work order"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>New Call Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="create new work order,new call,work order"/><meta name="brsnext" value="New_Call_Create_New_Client_Site_Equipment_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="New Call Viewer">
+        <span>New Call Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>New Call Viewer</h1>
+<h2>Purpose:</h2>
+<p>Enables the user to quickly create a new work order.</p>
+<h2>Example:</h2>
+<p>When a customer calls in with a service request, the dispatcher selects 
+ the site and equipment, records the new call information and then saves 
+ the call with the Add Record button to create a work order. The new call 
+ is automatically added to the Dispatch Board, and the dispatcher is given 
+ the option of printing the work order.</p>
+<h2>Registry Entries:</h2>
+<p><a href="Registry_Entry_for_New_Call_Options.htm">Registry Entry for 
+ New Call Options</a> including entries to write service tasks/parts list 
+ to the work order, automate the display of the Master Contract pane, <span>clear 
+ the default Tech</span> and many more.</p>
+<p>The <a href="Registry_New_Call_Service_Category.htm">Registry New Call 
+ Service Category</a> may be implemented to warn the user of excessive 
+ activity for the selected site by Service Category.</p>
+<p>Specify fields as Required or Disabled in the <a href="Registry_New_Call_Required_Disable.htm">Registry 
+ Entry sys-start-snwcll</a>.</p>
+<p>This registry entry may override the default status of work orders by 
+ Technician Web Access: <a href="Internal_Registry_Entry_Web_Access.htm">Registry 
+ Entry Web Access</a> .</p>
+<p>See <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_auto_gen_weblogs_to_WOs">Auto-Generate 
+ Work Orders from Web Logs</a> for details on implementing this functionality.</p>
+<h2>Usage:</h2>
+<p>When Intercompany Processing is enabled, the Job GL Entity specified 
+ in the selected Job will determine the Work Order’s Company/Security.</p>
+<p><img src="assets/images/image/SKIN1_NewCall2.gif" alt="image\SKIN1_NewCall2.gif" title="image\SKIN1_NewCall2.gif" width="94" height="28" border="0"/> The New Call 2 Screen will 
+ appear when New Call is launched if a registry setting is enabled. For 
+ detailed Help on New Call 2, click <a href="New_Call_2.htm">New Call 2</a> 
+ .</p>
+<p><img src="assets/images/image/SKIN1_NewCall.gif" alt="image\SKIN1_NewCall.gif" title="image\SKIN1_NewCall.gif" width="63" height="35" border="0"/> Click this button to toggle 
+ back to the original New Call screen. If the call is for an established 
+ client site, select the appropriate Client Site and Equipment from the 
+ lists in the lower section of the screen (as discussed below).</p>
+<p><img src="assets/images/image/SKIN1_NewClientSite.gif" alt="" style="border: none;" border="0"/>  If no record exists for Equipment at this 
+ Site, select the Client Site and then click the Flashlight button to access 
+ the create mode: <a href="New_Call_Create_New_Client_Site_Equipment_Viewer.htm">New 
+ Call (New Client Site)</a>.  Although the create mode may also be 
+ used to create Client and Client Site records, the <a href="Clone_Job_Wizard.htm">Clone 
+ Job Wizard</a> is highly recommended for the initial creation of commercial 
+ client, site, equipment and job records.</p>
+<p><img src="assets/images/SKIN1_RR.bmp" alt="" style="border: none;" border="0"/>  <font style="font-family: Tahoma;" face="Tahoma">If</font> <font style="font-family: Tahoma;" face="Tahoma">WO Materials Requisitioning is implemented</font> <font style="font-family: Tahoma;" face="Tahoma">this button will be en</font>abled 
+ to enable the addition of required resources (inventory items and flat 
+ rates). See <a href="New_Call_Required_Resources.htm">New Call Required 
+ Resources</a> .</p>
+<p>Call sequencing is disabled when no tech has been assigned to a work 
+ order created in New Call.</p>
+<h2>Screen Organization:</h2>
+<h3>Upper Portion of New Call – Data Entry</h3>
+<p>The <font style="font-weight: bold;">upper portion of the screen</font> 
+ contains data-entry fields for the Work Order. The lower portion of the 
+ screen is divided into three scrollable lists.</p>
+<h3>Middle Portion of New Call – Site List</h3>
+<p>The list in the middle portion of the screen displays Client Sites; 
+ click on a Site to select it.</p>
+<p><img src="assets/images/image/SKIN1_showMCP.gif" alt="image\SKIN1_showMCP.gif" title="image\SKIN1_showMCP.gif" width="94" height="28" border="0"/>  This sidebar button 
+ toggles the display between the Client Site (middle) pane and the Master 
+ Contract pane. A Client Site must be selected before clicking the button. 
+ The Master Contract pane displays all Contracts associate with the selected 
+ Site. Contracts are listed in descending order of the Master Contract 
+ Date End. Doubling-clicking on a Contract opens the Master Contract record. 
+ A registry entry may be used to automate the Master Contract display.</p>
+<p>If Notes exist for the selected Client Site, the system will ask if 
+ you wish to view the Notes. Select Yes to view the notes.</p>
+<p>When a Site is selected, the system attempts to determine which Client 
+ it is associated with in order to check the AR Balance and Aging either 
+ of the client or of a specific site associated with the client (if the 
+ registry option EnableNewCallClientSiteARAnalysis is enabled).</p>
+
+
+
+
+
+<p>The system checks the AR status by comparing the New Call AR Warning 
+ Days field (in the Client record) against the actual age of the Client&#39;s 
+ receivables. If the age of the receivables exceeds the value of the New 
+ Call AR Warning Days field, the system will automatically display the 
+ aging summary for this Client. <font style="font-weight: bold;">Note that 
+ this warning is only displayed once per Client each time you start up 
+ New Call</font>.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Credit 
+ Hold Sites:</font> If the Site’s status is set to Credit Hold, the system 
+ will alert the user and the WO will be marked as on Credit Hold – see 
+ ‘Credit Hold Warning’ (below) for details on handling Credit Hold Work 
+ Orders.</p>
+<p>Trip and other additional charges will be automatically defaulted into 
+ the Other tab of the work order if they are specified on the WO Other 
+ tab of the selected Client Site. The charges will automatically be posted 
+ to job history.</p>
+<h3>Lower Right-hand Section - Work Order History</h3>
+<p>The <font style="font-weight: bold;">lower right-hand list displays 
+ Work Order History</font> for that site (this will be filtered to Equipment 
+ when you select an Equipment record). Open Work Orders (with the Date 
+ Closed blank) will appear at the top of the Work Order History list when 
+ you select a Site or Equipment record. Work Orders are sorted by Date 
+ Closed (with &lt;&lt;Open&gt;&gt; work orders listed first), and then 
+ by Equipment Id, and WO Id - all in descending order. Note that one line 
+ will be shown for each technician / equipment line associated with the 
+ Work Order. The Work Code displayed in this pane represents the Work Code 
+ on the WO&#39;s Equipment tab.</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-layout-grid-align: none; text-autospace: none; font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;">Note that the Closed date in this 
+ pane is from the Work Order Date Closed which may have be set when the 
+ WO was completed or billed. The Scheduled date is from the Tech line itself. 
+  </p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-layout-grid-align: none; text-autospace: none; font-size: 10.0pt; 
+	 font-family: Arial, sans-serif;">Archived Work Orders (with a Work 
+ Order Status Category of Archived) are now excluded from the New Call 
+ WO list in SAMPro. This was done to improve the performance of New 
+ Call, especially when displaying Sites with significant history.  </p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-layout-grid-align: none; text-autospace: none; font-size: 10.0pt; 
+	 font-family: Arial, sans-serif; margin-left: 48px;"><span style="font-weight: bold;">Reminder 
+ on Archiving:</span><span><br/>
+The Start Archive Work or Start Autoarchive Work Order functions may be 
+ used to Archive Work Orders. A Work Order may also be set to a Work Order 
+ Status Category of Archived by adding a Technician Line with a status 
+ of Archived; when the Work Order is saved the Status Category will be 
+ reset to Archived. A Work Order is &#39;unarchived&#39; by deleting the Tech line 
+ set to Archived and saving the Work Order. </span></p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">Double-click on 
+ a line to view that work order.</p>
+<h3>Lower Left-hand Section: Equipment List</h3>
+<p>The <font style="font-weight: bold;">lower left-hand list displays the 
+ active Equipment for that site</font>; click on an Equipment Id to select 
+ it. When you do so the system may display a call script or credit hold 
+ warning, as discussed below.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Credit 
+ Hold Warning<br/>
+</font>When you select a piece of Equipment for a Site, the system will 
+ check the Job referenced in the Equipment. If any receivables for the 
+ Client associated with this Job exceed the Credit Hold Days (in the Client 
+ record), the system will display the number of days overdue, and warn 
+ you that the work order will be placed on Credit Hold. If a work order 
+ is placed on credit hold:</p>
+<p style="margin-left: 66.25pt;">It will not be visible on the dispatch 
+ board AT ALL (like archived)</p>
+<p style="margin-left: 66.25pt;">The WO cannot not be changed AT ALL except 
+ by credit managers</p>
+<p style="margin-left: 66.25pt;">The credit manager will be able to filter 
+ the view work order list for only WO&#39;s on credit hold</p>
+<p style="margin-left: 66.25pt;">The credit manager can remove the Credit 
+ Hold status by clearing the Credit Hold box</p>
+<p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">If 
+ Escalation Management is implemented on your system, you may want to create 
+ an escalation event that would notify the credit manager that there is 
+ a work order on credit hold to review.</p>
+<p><font style="font-weight: bold;">Call Scripting<br/>
+</font>When you select a piece of Equipment or a Work Code in New Call 
+ that has a Call Script associated with it, the Call Script Wizard screen 
+ will appear. The Questions in the Call Script will appear on the left 
+ and lines for Response will appear on the right. After you have completed 
+ the Responses, tab once more or click the CS Wizard button on the side 
+ button bar to return to the New Call screen. The Questions and Responses 
+ will be included on the Work Order when you save it.</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Search Text:</font><br/>
+Enter a text string in the Search Text field and then press [Enter]. SAM 
+ Pro will compare this text with the Alphanumeric Id of the Client Site. 
+ If the Search Text matches the text in a Client Site record, SAM Pro will 
+ include that client site in the revised listing.</p>
+<p>If you decide that your site/equipment selections were not correct and 
+ enter a different search string, all fields except the (Service Category) 
+ that were previously completed will be automatically cleared in preparation 
+ for selecting a new Site and Equipment record.</p>
+<p><font style="font-weight: bold;">Use Wild Card Search</font><br/>
+If this field is blank, SAM Pro will only search the first characters starting 
+ at the extreme left-hand side of the field. If checked, the system will 
+ search for the text string you enter globally within the search field.</p>
+<p><font style="font-weight: bold;">Alpha  Phone  Street  Name 
+  Id</font> <font style="font-weight: bold;">Any<br/>
+</font>By default, SAM Pro compares the Search Text you entered with the 
+ data in the Client Site Alpha field. However, by selecting one of the 
+ other radio buttons (by double-clicking or pressing the Spacebar), you 
+ have the option of searching for Client Sites based on their Name, ID, 
+ phone number, or street.</p>
+<p>The Any option causes the system to check <font style="text-decoration: underline; ">all</font> 
+ of the following Client Site fields (unless specific SearchColumns are 
+ specified in a registry entry) for the specified search text:</p>
+<p style="margin-left: 36.00pt;">Client Site Id, Alpha, Name, Street Shipping 
+ Address<br/>
+Client Site Voice Phone, Contact 1 Phone, Contact 2 Phone</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Example</font> 
+ <font style="text-decoration: underline; "><br/>
+</font>Assume that the Alpha search option is selected. If you search for 
+ the text <font style="font-weight: bold;">st</font> when the Use Wild 
+ Card Search is not checked, the system would locate a record with the 
+ Alpha field Stevens; however, an Alpha field of Faust would not be considered 
+ a match. However, if you check the Use Wild Card Search box, the system 
+ would consider both Stevens and Faust to be matches.</p>
+<p><font style="font-weight: bold;">Original Caller:</font><br/>
+This field lists the person who called in this Work Order. It defaults 
+ from the Contact 1 First and Last Name fields in the Client Site record 
+ (if completed); if these field are not completed it will default from 
+ the Client Site Contact 2 information. This field may be changed by the 
+ user; it will be written to the Work Order&#39;s Original Caller field.</p>
+<p><font style="font-weight: bold;">Market Source:</font><br/>
+Defaults from the Client referenced in the Job, or the Client Site (if 
+ blank in the Job’s Client record) but may be changed by the user to track 
+ the success of marketing campaigns that generated specific work orders. 
+ For example, the Site may have been generated by a customer reference, 
+ but this particular work order was generated by the spring coupon mailing.</p>
+<p><font style="font-weight: bold;">Service Category:<br/>
+</font>If this field is completed, it will filter the Work Code list to 
+ those associated with this service category. The system will filter the 
+ Site Equipment list to show Equipment for the selected Category, plus 
+ Site Equipment that hasn&#39;t been classified into a Service Category.</p>
+<p>This field may be set by entering a Service Category Id or by selecting 
+ a piece of Equipment associated with this Service Category. The filtering 
+ of Equipment by selecting the Service Category may be disabled by the 
+ <a href="Registry_Entry_for_New_Call_Options.htm">Registry Entry for New 
+ Call Options</a> .</p>
+<p><font style="font-weight: bold;">Work Code:</font><br/>
+The Work Code Name and Estimated Hours fields are set from the Work Code 
+ record. This field is optional. If you select a Work Code with an assigned 
+ Call Script, the system will immediately prompt you to respond to the 
+ Call Script questions.</p>
+<p>If PCR functionality is enabled, the system will validate the Work Code 
+ is specified in the PCR Table (in the Client Site / Client Site Equipment) 
+ when a Work Code is entered or changed. If a PCR Table is specified in 
+ the Client Site Equipment record, it overrides the PCR Table in the Client 
+ Site record.</p>
+<p><font style="font-weight: bold;">Tech Finder Button<br/>
+</font><img src="assets/images/image/SKIN1_TechFinder.gif" alt="" style="border: none;" border="0"/>  This button launches the TechFinder screen 
+ to help you assign the call to the optimal technician and best date. This 
+ button should be clicked after the Site and Equipment have been selected. 
+ This feature works in conjunction with Certifications: if the Equipment 
+ selected includes a Certification Id, only those technicians with a matching 
+ Certification will be listed when the TechFinder viewer appears. Click 
+ <a href="TechFinder_Viewer.htm">TechFinder Viewer</a> for details.</p>
+<p><font style="font-weight: bold;">Estimated Hours</font><br/>
+This field defaults from the Work Code but may be modified by the user.</p>
+<p><font style="font-weight: bold;">Priority:</font><br/>
+The priority level for this call. Zero (0) is the highest priority (most 
+ critical), and 9 the lowest (least critical)</p>
+<p><font style="font-weight: bold;">Date Scheduled:</font><br/>
+Enter the date in <font style="font-style: italic;">MMDDYYYY</font> format; 
+ double-click to open the calendar; or press the Spacebar to enter the 
+ current date.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Tech 
+ Unavailability</font><font style="font-weight: bold;">:</font> If this 
+ feature is enabled and the Tech is Unavailable for this day, a Warning 
+ will appear saying the Tech is Unavailable when the New Call is saved.</p>
+<p><font style="font-weight: bold;">Time Scheduled:</font><br/>
+Enter the scheduled time for this call in 24-hour or military format or 
+ double-click on this field to access the Clock Viewer to do so. Alternately, 
+ press the Spacebar to enter the current time.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">NOTE:</font> 
+ The Date and Time fields are optional; the date also be set from the Dispatch 
+ Board or TechFinder. If you do not enter a date, it will automatically 
+ default to January 1, 1900 (unless the default date is specified in the 
+ <a href="Registry_Entry_for_New_Call_Options.htm">Registry Entry for New 
+ Call Options</a> ).</p>
+<p><font style="font-weight: bold;">PO Required</font><br/>
+An &#39;x&#39; will appear in this information only field if a PO is required for 
+ this Client Site.</p>
+<p><font style="font-weight: bold;">PO Number:</font><br/>
+If the PO Required field is flagged (contains an &#39;x&#39;), enter the Client&#39;s 
+ PO number in this optional field. A <a href="Registry_Entry_for_New_Call_Options.htm#Registry_Newcall_Set_PO_from_Default_Service_Job">Registry 
+ Setting</a> may be enabled to default this field from the selected Equipment&#39;s 
+ Default Service Job.</p>
+<p><font style="font-weight: bold;">Technician Id:</font><br/>
+This field defaults from the Client Site Equipment record <span>(unless 
+ disabled via <a href="Registry_Entry_for_New_Call_Options.htm#Clear_Default_Tech_When_Selecting_Equipment">Registry</a>)</span>, 
+ and is used to assign a technician to this work order. Unless this field 
+ is required by customization/registry setting, the technician may be assigned 
+ from the dispatch board.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Subcontractor 
+ Technicians:<br/>
+</font>If the Technician you selected references a Vendor Id AND has the 
+ Web Access set to Subcontractor on the Remote Access tab, a Purchase Order 
+ will also be generated.</p>
+<p style="margin-left: 36.00pt;"><span>You will not be allowed to select 
+ a Sub Tech whose required insurance is out of date and Block Purchases 
+ is flagged in their Vendor / Tech record. </span></p>
+<p style="margin-left: 48px;"><span>For SubAnywhere techs, the PO will 
+ be set to Unreleased to conform to SubAnywhere requirements. To be considered 
+ a SubAnywhere tech, the Technician record must also have the Remote Device 
+ Type set to the option of SubAnywhere.</span></p>
+<p><font style="font-weight: bold;">Call Sequence:<br/>
+</font>The sequence number for the new work order (used by the Classic 
+ board to determine the order in which the Technician should attend to 
+ his work orders on a given day). If you do not set the call sequence, 
+ the system will attempt to derive an appropriate call sequence number 
+ based on the Time Scheduled and the Technician assigned to the Work Order. 
+ In the case of ties, the original work order will retain its original 
+ sequence number. See <a href="Registry_Entry_for_New_Call_Options.htm">Registry 
+ Entry for New Call Options</a> for a registry entry to alter this behavior.</p>
+<p><font style="font-weight: bold;">Original WO:<br/>
+</font>If this Work Order is being created as a Call Back, enter the original 
+ WO Id in this field or right-click on it in the lower right-hand (Work 
+ Order list) pane with the caret <font style="font-weight: bold;">not</font> 
+ on this field. When you do so, the system will ask you to confirm that 
+ this work order is being created as a Call Back for the Work Order that 
+ you select. If you click &#39;Yes&#39;, the system will insert the appropriate 
+ Work Order Id, and set the Work Order Type to Call Back.</p>
+<p><font style="font-weight: bold;">Branch Id</font>:<br/>
+The Branch this work order is assigned to. See <a href="Branch_Processing_in_New_Call.htm">Branch 
+ Processing in New Call</a> for details.</p>
+<p><font style="font-weight: bold;">Work Order Name:</font><br/>
+This optional field may be used to describe the Work Order or add other 
+ pertinent information. If this field is left blank, it defaults from the 
+ Work Code Name when the work order is created. This field well be listed 
+ on the Power Board.</p>
+<p><font style="font-weight: bold;">Web Log Id:</font><br/>
+Web Logs are requests for service that may be created by a Client, a Technician 
+ (from TechAnywhere), or a Service Provider.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">FMMS Web 
+ Logs:</span><br/>
+Web Logs may also be generated by FMMS companies such as ServiceChannel.<span> 
+ In this case, the NTE amount from the selected Service Request now defaults 
+ to the NTE Client field which will populate the corresponding field in the 
+ newly created Work Order.</span></p>
+<p style="margin-left: 48px;">A special pick list option will be offered 
+ FMMS users when selecting a web log from NewCall. If FMMS is enabled, 
+ the user is prompted to &quot;Show Special FMMS Only List?&quot;. Clicking 
+ No will pull up the usual list (with FMMS and other weblogs). Clicking 
+ Yes will pull up the new list, which is tailored for clients using FMMS. 
+ It displays the following information:</p>
+<p style="margin-left: 88px;">Web Log ID - Web Log Date - FMMS Vendor - 
+ Site ID if known - FMMS Site/Location - FMMS Request </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Web Logs 
+ from TechAnywhere</span><br/>
+When a Weblog from TechAnywhere is entered, a wizard displaying the Weblog 
+ information will appear. The following buttons allow you to process the 
+ Weblog as follows:</p>
+<p style="margin-left: 88px;"><span style="font-weight: bold;">Proceed:</span>  Clicking 
+ this button will use this Weblog to create a new Work Order. The contents 
+ will load into NewCall to allow the dispatcher to finish creating the 
+ new Work Order.</p>
+<p style="margin-left: 88px;"><span style="font-weight: bold;">Decline:</span> 
+  Gives the user the opportunity to change a Weblog to the status 
+ of ‘Cancelled’ to remove it from the list of New/Unacknowledged Weblogs.</p>
+<p style="margin-left: 88px;"><span style="font-weight: bold;">AssignToWO:</span> 
+ Click this button to select an existing Work Order to assign this Weblog 
+ to. The Weblog’s Equipment and Work Requested contents will be added to 
+ the Work Order&#39;s Equipment Tab. The Weblog will also be changed to Acknowledged 
+ and reference the selected Work Order.</p>
+<p style="margin-left: 88px;"><span style="font-weight: bold;">Cancel:</span><span> 
+ Returns you to the New Call with the weblog field cleared. It only cancels 
+ the operation of selecting the Weblog; it does NOT set the Weblog&#39;s status 
+ to Cancelled. Note: Pressing the X works the same as the Cancel button.</span></p>
+<p>To create a work order from a web log, enter its Id (or double-click 
+ to select from a list) and tab out of the field.</p>
+<p>The Client Site, service category, work code and work requested fields 
+ will default from the web log. Select the appropriate Equipment Id and 
+ complete any remaining fields as needed. When a Web Log with the Equipment 
+ Id set from TechAnywhere is processed, it does not automatically select 
+ the Equipment.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important 
+ Note on</font> <font style="font-weight: bold;">Multiple</font> <font style="font-weight: bold;">Web Logs:</font><br/>
+If you are processing multiple Web Logs, always click the New Record button 
+ before you select another Web Log. Doing so clears any completed Call 
+ Scripts cached for the previous Web Log.</p>
+<p><font style="font-weight: bold;">Escalation Profile:<br/>
+</font>The Escalation Profile that will be attached to this work order. 
+ This field defaults from the Equipment record but may be changed if needed.</p>
+<p><font style="font-weight: bold;">Work Requested:</font><br/>
+Briefly describes the work requested by the customer. This field defaults 
+ to the Work Order Equipment and Main tab (which is printed for many invoice 
+ formats).</p>
+<p><font style="font-weight: bold;">Store Number:</font><br/>
+The Store Number associated with this Client Site.</p>
+<p><font style="font-weight: bold;">Zone Id:<br/>
+<span style="font-weight: normal;">The Service Zone</span></font> defaults 
+ from the Site record. It appears on the Dispatch Board, and is used by 
+ TechFinder.</p>
+<p><font style="font-weight: bold;">Account Manager Id:</font><br/>
+This optional field identifies the Account Manager for this Work Order. 
+ T<font style="font-family: Tahoma;" face="Tahoma">he system defaults this 
+ field from the Equipment record or, if blank, from the Site record.</font></p>
+<p><font style="font-weight: bold;">Dispatcher Id:<br/>
+</font>This optional field identifies the Dispatcher assigned to this work 
+ order. T<font style="font-family: Tahoma;" face="Tahoma">he system defaults 
+ this field from the  Equipment record or, if blank, from the Site 
+ record.</font></p>
+<p><font style="font-weight: bold;">Sales Rep Id:<br/>
+</font>This optional field identifies the Sales Rep assigned to this work 
+ order. T<font style="font-family: Tahoma;" face="Tahoma">he system will 
+ default this field from the Client Site Equipment record or, if blank, 
+ from the Site record.</font></p>
+<p style="font-weight: bold;">Service Manager:<br/>
+<span style="font-weight: normal;"><font style="font-family: Tahoma; font-weight: normal;" face="Tahoma">The Service Manager 
+ will be defaulted as follows from the </font>Client Site Equipment - Client 
+ Site - Client - User.</span> <span style="font-weight: normal;">The Service 
+ Manager selected when the Work Order is added will be written to the new 
+ Work Order.</span> </p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Type:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Service:</font> 
+ By default, Work Orders created in New Call are set to Service.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">PreventiveMaint:</font> 
+ Normally, you would not select this Type for work orders created in New 
+ Call. Work orders generated by Create PM WorkOrders are assigned this 
+ Type. If select this type, the Service Tasks and Parts lists specified 
+ on the Equipment Service Tab will added to the Work Order Equipment tab.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">CSR:</font> 
+ Obsolete.</p>
+
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Installation, 
+ Estimate, Other, Call Back:</font> one of these Types may be selected 
+ for informational purposes to better identify the work order.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">PM Invoice:</font> 
+ Do not select this Type for work orders created in New Call; it is reserved 
+ for PM Billings only.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Material 
+ Direct:</font> The Type would be selected to record the ‘sale’ of a purchased 
+ item to a client and the client&#39;s invoice will come directly from the 
+ vendor from whom the item was purchased (instead of generating the invoice 
+ in SAMPro). In this case, the WO Status Category will be set to ‘Archived’ 
+ instead of ‘Completed’ when the Escalation Status is set to ‘Completed’.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Quote:</font> 
+ no longer has any special meaning, and is used for informational purposes 
+ only.</p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">Requisition:</span> 
+ &quot;Requisition&quot; should be used ONLY for the purpose of requisitioning 
+ materials for installation / construction jobs and should not be used 
+ for service or PM work orders. When the Work Order is specified as Requisition, 
+ running Start Tech (Work Order) Material Pickup creates a Loc-to-Job transfer 
+ instead of transferring the materials to a location (typically, the Tech&#39;s 
+ truck).</p>
+<p><font style="font-weight: bold;">Override Tech Status:</font><font style="font-weight: bold;"><br/>
+</font>By default, this field is set to the value ‘ default’: the technician 
+ status will be set to the appropriate value for that type of technician 
+ (referring to the sys-web-access and other registry entries, if present). 
+ The ‘ ‘ blank Override Tech Status is processed the same way as ‘ default’ 
+ if the field is accidentally cleared.</p>
+<p>To select a special status (e.g., Return Trip), double-click this field 
+ (or click the Magnify button) to display a list of valid statuses to select 
+ from. By default, all statuses will be displayed, but a registry entry 
+ may made to control the contents of the list: <a href="Registry_Entry_for_New_Call_Options.htm">Registry 
+ New Call (sys-newcall)</a> .</p>
+<p><font style="font-weight: bold;">Show Records for: Active All Inactive</font><br/>
+This field enables you to select whether to display Active, All or Inactive 
+ Client Sites on the New Call viewer. By default, Active is selected so 
+ only active Sites (and their active equipment will appear on the list). 
+ To display All or only Inactive Sites, double-click on the appropriate 
+ radio button. <font style="font-weight: bold;">Note that work orders cannot 
+ be created for Inactive sites.</font></p>
+<p><font style="font-weight: bold;">NTE Client: NTE Sub:<br/>
+</font>These fields default from the Client Site (unless they are superceded 
+ by the values from the Client Site Equipment record) but may be changed 
+ by the user if necessary. The NTE Sub field is used in conjunction to 
+ limit autogenerated PO&#39;s to this dollar value.</p>
+<p><font style="font-weight: bold;">Log Form Id:</font><br/>
+This field defaults from the Equipment record, but may be changed by the 
+ user to select which log form id (for work order metrics) will be specified 
+ on the new work order&#39;s Equipment tab, and be used to which metrics will 
+ appear on the Metrics tab.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important:</font> 
+ when a work order referencing a log form is created in SAMPro, metrics 
+ are only written to the  metrics tab if the Technician is not a TechAnywhere 
+ Tech or no Tech is specified. If the work order initially assigned to 
+ a technician with remote access, metrics will be uploaded to the technician’s 
+ device, and then posted to the work order when they have been completed 
+ in the field.</p>
+<p><font style="font-weight: bold;">Payment Type:<br/>
+</font>Typically used to record how the client says they will pay (Cash, 
+ Check, Account, CreditCard, etc.).</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Default</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Job Id: 
+  Job Cost Code Id:  Job Billing Item Id:</font><br/>
+These fields will be filled in from the Equipment record&#39;s Default Job 
+ fields, but may be changed if needed. When you blank the Job Id or select 
+ a different Job Id, the Job Cost Code and Billing Items will be blanked 
+ so that they can be easily re-entered. The Job should refer to the Site 
+ selected in New Call unless special processing for certain Utility or 
+ Warranty Jobs is in effect. <span>See <a href="Registry_Entry_for_New_Call_Options.htm#Specify_Default_Service_Job_Selection_Filter_Override">Registry 
+ to Specify Default Service Job Selection Filter Override</a> for details.</span></p>
+<p style="margin-left: 8px; font-weight: bold;"><span>Master Contract Id: 
+ </span><span style="font-weight: normal; font-style: italic;">(requires 
+ special v.cus file)<br/>
+</span><span style="font-weight: normal;">If the selected Equipment is 
+ associated with a Master Contract that is currently open or will be open 
+ in the future, the Master Contract Id is added to the Work Order 
+ header to support custom reporting/analysis of full service contracts. 
+ </span></p>
+<p><span style="font-weight: bold;">Email Address:</span><br/>
+When a Site is selected, the Client Site&#39;s Email field is defaulted to 
+ the Work Order Email Address field. The user may manually update this 
+ field if desired before adding the Work Order. Escalations for the new Notification 
+ Source &#39;Work Order&#39; will be sent to this address. The Email address for 
+ the Scheduled Events is set when the WO is generated. Changing it in the 
+ Work Order after creation will not propagate the change to the Events 
+ themselves.</p>
+
+
+<p><font style="font-weight: bold;">Client Id: Client Name:</font> <font style="font-weight: bold;"><br/>
+</font>The Client Id and Name from the Default Service Job. The following 
+ logic derive the Default Service Job / Client:</p>
+<p style="margin-left: 36.00pt;">When the Site is selected, look at the 
+ Equipment records: if their Service Jobs all point to the same Client, 
+ display that Client.</p>
+<p style="margin-left: 36.00pt;">When the Equipment is selected, check 
+ that Equipment’s Default Service Job and display its Client.</p>
+<p style="margin-left: 36.00pt;">If the selected Equipment has no Default 
+ Service Job, display the Client from the Job that the user selects.</p>
+<p><font style="font-weight: bold;">Client Site Id:  Client Site Name: 
+ Equipment Id:  Equipment Name:<br/>
+Contact:  Site Address:</font><br/>
+These informational fields are filled in from the Client Site and Equipment 
+ records.</p>
+<h2>Important Buttons:</h2>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><img src="assets/images/SKIN1_CreateWorkOrder.bmp" alt="" style="border: none;" border="0"/>  Add the new Work 
+ Order (and PO if a subcontractor tech was selected)</p>
+<p><img src="assets/images/image/SKIN1_Record.gif" alt="image\SKIN1_Record.gif" title="image\SKIN1_Record.gif" width="94" height="28" border="0"/>  Clicking the New WO 
+ button clears all cached fields. The New button should be clicked before 
+ entering and tabbing out of the Search Text field if you wish to search 
+ again for the same text (for example, when switching from New Call to 
+ New Call 2). The New button should also be clicked to clear all fields 
+ if you select a Web Log but do not use it to create a new work order.</p>
+<p><img src="assets/images/image/SKIN1_FindClientSite.gif" alt="image\SKIN1_FindClientSite.gif" title="image\SKIN1_FindClientSite.gif" width="94" height="28" border="0"/> / <img src="assets/images/image/SKIN1_NewClientSite.gif" alt="image\SKIN1_NewClientSite.gif" title="image\SKIN1_NewClientSite.gif" width="94" height="28" border="0"/> Search 
+ For Site On/Off</p>
+<p><img src="assets/images/image/SKIN1_ARAging.gif" alt="image\SKIN1_ARAging.gif" title="image\SKIN1_ARAging.gif" width="94" height="28" border="0"/> View an Aged Accounts Receivable 
+ summary for this customer</p>
+<p><img src="assets/images/image/SKIN1_NewCallCollection.gif" alt="image\SKIN1_NewCallCollection.gif" title="image\SKIN1_NewCallCollection.gif" width="94" height="28" border="0"/>  <a href="Client_Collections_Screen.htm">Access 
+ the detailed Client Collections Screen</a></p>
+<p><img src="assets/images/image/SKIN1_Printer.gif" alt="image\SKIN1_Printer.gif" title="image\SKIN1_Printer.gif" width="94" height="28" border="0"/> Select a site and click this 
+ button to launch the service report specified in the <a href="Registry_Entry_for_New_Call_Options.htm">Registry 
+ Entry for New Call Options</a>.</p>
+<p><img src="assets/images/image/SKIN1_AttachmentsOn.gif" alt="image\SKIN1_AttachmentsOn.gif" title="image\SKIN1_AttachmentsOn.gif" width="94" height="28" border="0"/> 
+ The Attachments button lets you attach documents to one or more of the 
+ scheduled events generated by this work order and to the work order itself.  A 
+ checklist of files will appear in the upper portion of the screen – click 
+ in the Attach column to select /deselect a file. In the Attachments screen, 
+ the AttachmentsOn button takes you back to New Call.</p>
+<p>If no Attachments are available, the grayed-out Attachments button is 
+ displayed.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Attachment</font><font style="font-weight: bold;">s<br/>
+</font>Only those documents belonging the categories specified in the <a href="Registry_Entry_for_New_Call_Options.htm">Registry Entry for 
+ New Call Options</a> will be available for selection in New Call. When 
+ Escalation Manager runs, it will look at each scheduled e-mail event and 
+ determine if its Attach Document flag is set in the <a href="Escalation_Profile_Viewer.htm">Escalation 
+ Profile</a> . If so, the documents you selected will be included as an 
+ e-mail attachment.</p>
+<p><img src="assets/images/image/SKIN1_NotesOn.gif" alt="image\SKIN1_NotesOn.gif" title="image\SKIN1_NotesOn.gif" width="94" height="28" border="0"/>  If the selected site 
+ has notes, the Notes On (notes with text) button appears so that you can 
+ view or add to them.</p>
+<p><img src="assets/images/image/SKIN1_Notes.gif" alt="image\SKIN1_Notes.gif" title="image\SKIN1_Notes.gif" width="94" height="28" border="0"/>  If the selected site 
+ has no existing notes, the Notes button appears (active notes with no 
+ text) so you can add notes to the site.</p>
+<p><img src="assets/images/image/SKIN1_Notes-.gif" alt="image\SKIN1_Notes-.gif" title="image\SKIN1_Notes-.gif" width="94" height="28" border="0"/>  Finally, if no Site 
+ is selected, the grayed out Notes button appears.</p>
+<h2>Multiple Date/Technician Work Orders:</h2>
+<p>A Work Order can be scheduled for multiple days and/or assigned additional 
+ technicians.</p>
+<p>1. Schedule the Work Order for the first day, and save it by clicking 
+ the Add Record button.</p>
+<p>2. To add additional days and/or technicians, access the Work Order 
+ (from the Dispatch Board or Folders viewer), and click the Technicians 
+ tab. Add the technicians and their days and hours as desired.</p>
+
+</body></html>

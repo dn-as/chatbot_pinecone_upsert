@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.20.0_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sys-viewer-vcnsldtdinvce"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="invoice"/>
+<meta name="MS-HKWD" content="consolidated"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Consolidated Invoice (sys-viewer-vcnsldtdinvce)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="sys-viewer-vcnsldtdinvce,registry,invoice,consolidated"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Consolidated Invoice (sys-viewer-vcnsldtdinvce)">
+        <span>Registry Consolidated Invoice (sys-viewer-vcnsldtdinvce)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Consolidated Invoice (sys-viewer-vcnsldtdinvce)</h1>
+<h3>Purpose:</h3>
+<p>This new feature allows for auto-sequencing of Consolidated Invoice Ids.  This registry entry may be used to specify the prefix.</p>
+<p>To avoid invoice Id duplication issues, auto-generated Consolidated Invoice Numbers are comprised of an alphabetic prefix and a numeric counter. We strongly recommend that you carefully evaluate your existing Consolidated Invoice numbers when selecting a prefix so that your auto-generated numbers will not conflict with the existing ones that were manually entered.</p>
+<h3>Usage:</h3>
+<p>User can key in their own Ids in the Consolidated Invoice viewer if they&#39;d prefer to operate the old way.  An Id is assigned on Add Record if the user hasn&#39;t supplied one.</p>
+<h3>Important Fields:</h3>
+<p class="Normal_Indent" style="margin-left: 5.75pt;"><font style="font-weight: bold;">Id: sys-viewer-vcnsldtdinvce<br/></font>See the Standard Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> for additional Registry Id formats to allow entries for specific Users, Branches, Security, or User Groups to override the main entry.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> <font style="font-weight: bold;">InvoiceIdPrefix</font> <font style="font-weight: bold;">Setting Value:</font> <font style="font-weight: bold; font-style: italic;">ABC</font></p>
+<p>Where <font style="font-style: italic;">ABC</font> is replaced by the characters that you wish to specify as your invoice prefix. The default prefix is &#39;C&#39; if this registry option is not implemented (e.g., the first auto-sequenced invoice Id is C10001, the second C10002, etc.). If you change the prefix, the counter will continue in its sequence and will not be set back to its original value (of 10001).</p>
+
+</body></html>

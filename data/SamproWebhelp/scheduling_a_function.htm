@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Scheduling a Function</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nSupport Functions\nScheduling a Function");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Scheduling a Function to Run as a Repeating Event</P>
+ <P class="Support_Heading_2" >Purpose:</P>
+ <P class="support" >SAM Pro Starter functions, such as Start Purge Record Change Log and Start TechAnywhere Post may be scheduled to run automatically by creating a repeating event for the Scheduled Event Manager to run. When the function is run, it will use the registry entry (if any) you have set up for the function. </P>
+ <P class="support" >To set up a Scheduled Event to run a function:</P>
+ <P class="support" >1. Scheduled Event Manager needs to be running.</P>
+ <P class="support" >2. Go to the Scheduled Event Viewer, and select New Record.</P>
+ <P class="support" >3. You will need to complete the following fields and save the event - then the manager will run it at the intervals that you specify:</P>
+ <P class="support" >Profile Time Base Id: scheduled</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Function Id:</FONT> the starter function you need to run</P>
+ <P class="support" >Repeat Options:</P>
+ <P class="support" >Repeating Event?: flag this box</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Date <BR></FONT>The day or days the function is scheduled to run. </P>
+ <P class="support" >To specify a day of the week: </P>
+ <P class="support" >&nbsp;m &nbsp;tu&nbsp;w&nbsp;th&nbsp;f&nbsp;sa&nbsp;su</P>
+ <P class="support" >To run the function more than once a week, separate the days with a comma. For example, to run the function on Mondays, Wednesdays and Fridays:</P>
+ <P class="support" >&nbsp;m,w,f</P>
+ <P class="support" >To specify a day of the month:</P>
+ <P class="support" >&nbsp;1&nbsp;2&nbsp;3&nbsp;4&nbsp;5(etc.)</P>
+ <P class="support" >&nbsp;first&nbsp;last</P>
+ <P class="support" >&nbsp;Note that<FONT style="font-weight:bold; " > last </FONT>would be 28 (or 29) for February, 30 for April, etc.  </P>
+ <P class="support" >Time </P>
+ <P class="support" >Enter the time (in 24 hour/military format) the function is scheduled to run.  </P>
+ <P class="Style_Support_+_Left___0_5_" >For example, to run the function at 3:00am you would enter <FONT style="font-weight:bold; " >0300</FONT>.  To run the function at 8:30pm, you would enter <FONT style="font-weight:bold; " >2030</FONT>. </P>
+ <P class="support" >To run the function more than once a day, enter the times separated by <BR>commas:   <FONT style="font-weight:bold; " >0100,0900</FONT></P>
+ <P class="support" >To run the function multiple times a day, enter the first and last time to run as a range, followed by the @ sign and the increment in minutes.</P>
+ <P class="Style_Support_+_Left___0_5_" >For example, to run the function every half hour from 9:00 am to 5:00pm, enter the following: <FONT style="font-weight:bold; " >0900_1700@30</FONT></P>
+ <P class="Style_Support_+_Left___0_5_" >To run the function every hour from 8:00 to 6:00, and then again at 11:00pm you would enter:  <FONT style="font-weight:bold; " >0800_1800@60,2300</FONT></P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

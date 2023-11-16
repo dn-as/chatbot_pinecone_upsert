@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>GL Income Statement Report</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT><script type="text/javascript" language=JavaScript1.2>
+<!--
+if( typeof( kadovInitEffects ) != 'function' ) kadovInitEffects = new Function();if( typeof( kadovInitTrigger ) != 'function' ) kadovInitTrigger = new Function();if( typeof( kadovFilePopupInit ) != 'function' ) kadovFilePopupInit = new Function();if( typeof( kadovTextPopupInit ) != 'function' ) kadovTextPopupInit = new Function();
+ //-->
+</script>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("SAM Pro Help\nAccounting/Back Office\nGeneral Ledger\nGL Reporting\nGL Income Statement Report");
+addAvenueInfo("System GL Reports","gl_history_report.htm","gl_trial_balance_report.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P><FONT style="font-size:12pt; color:blue; font-weight:bold; " >Income Statement Report (List GL Profit/Loss) </FONT></P>
+ <H2>Purpose:</H2>
+ <P>This Income Statement report is currently obsolete for most users.  Contact your Data-Basics  representative for an updated Income Statement report if one is not already included on your system.  </P>
+ <P>This viewer lets you control the range of data and dates on the GL Income Statement report.  </P>
+ <P>This report provides a profit and loss statement for the period defined by the Start and End dates.  Fiscal YTD information is also included: this is defined by the Fiscal Period Start Date and the End Date. This report lists Income and then Expense accounts.  The following information is listed for each account: GL Id, Description, GL Entity, This Period ($) and Fiscal YTD ($).  Totals are lists for the Income and Expense Accounts, and the Profit/Loss is calculated.  </P>
+ <H2>Usage:</H2>
+ <P>After completing the fields and clicking the go button, the system will ask you to select a printer. After you do so, the Report viewer will appear so that you can select the pages and number of copies to print. Note that if a printer registry entry has been created for the report you are printing, the report may automatically print to a specific printer: see <A href="registry_viewer.htm">Printer Registry</A> for details). </P>
+ <H2>Important Fields: </H2>
+ <P><FONT style="font-weight:bold; " >Report Options:</FONT> <BR>The Report Options selector pane controls how the report will be output. Click <A href="report_options.htm">Report Options</A> to learn more. </P>
+ <P><FONT style="font-weight:bold; " >Report Ranges:</FONT> <BR>The Report Ranges selector pane enables you to select a customized range for the report.  When you click on a range, the criteria defining it will appear in the ID field(s). Creating a customized report range is discussed below. Notice that you must name a custom range in order to save it. Enter a unique, alphanumeric name to save and identify your customized report Range. </P>
+ <P><FONT style="color:blue; font-weight:bold; " >Hint:</FONT> You can create user-defined report ranges that are available to all users with access to that report. To do so, the first character of the named range should be an asterisk.  Named ranges beginning with an asterisk will appear on all users' report ranges options so that they can be selected (but not altered) by any user with access to that report.  Only the user that created the report range is allowed to alter it. </P>
+ <P><FONT style="font-weight:bold; " >Fiscal Start Date   Start Date    End Date</FONT> <BR>These required fields define the range of effective dates on the report.  Note that the Fiscal Start Date and End Date define the YTD figures, while the Start Date and End Date define this period.  Enter the dates in <FONT style="font-style:italic; " >mmddyyyy</FONT> format or double-click on the field to access the Calendar viewer to do so. </P>
+ <P><FONT style="font-weight:bold; " >Consolidated Report?</FONT> <BR>If this box is blank and your firm uses GL Entities, separate lines will be generated for each applicable entity per entry per income or expense account.  If you check this box, entity information will be consolidated into one line.  </P>
+ <P><FONT style="font-weight:bold; " >GL Entity Group Id:</FONT> <BR>Limits the report to entries pertaining to this GL Entity Group. </P>
+ <P><FONT style="font-weight:bold; " >GL Entity</FONT> <BR>To create an income statement for a single GL Entity, enter its Id.  Multiple GL Entities may be specified by separating their Id's with a comma (11,12). A range of GL Entities may be defined by the first and last items of the range separated by an underscore (11_67). </P>
+ <P class="See_Also" style="margin-left:5.75pt;text-indent:5.75pt;border-top:0.50pt solid black;border-bottom:0.50pt solid black;border-left:0.50pt solid black;border-right:0.50pt solid black;">Power-User Reporting Tip: <BR><FONT style="font-weight:normal; font-style:normal; " >You may also use the comparison operators &gt;,&lt;, = and ! in your report ranges to control the information output to your report. Click </FONT><FONT style="font-weight:normal; font-style:normal; " ><A href="javascript:void(0);" ehlpsource="robohelp classic" id="a132" onMouseOver="if (parseInt(navigator.appVersion) >= 4 && typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('comparison_operators.htm');return false;">Comparison Operators</A></FONT><FONT style="font-weight:normal; font-style:normal; " >  for details. </FONT></P>
+ <H2>Important Buttons<FONT style="font-size:9pt; color:black; " >:</FONT></H2>
+ <P><IMG src="images/go.gif" border=0 height=28 width=48 alt="images\go.gif">  Go run the report.</P><script  type="text/javascript" language="JavaScript1.2"><!--
+ kadovFilePopupInit('a132');
+//--></script>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

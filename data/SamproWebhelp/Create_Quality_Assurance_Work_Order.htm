@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.4.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Create Quality Assurance Work Order</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="Quality Assurance,QA,Create QA Work Orders,Generate QA Work Orders,Start Create QA Work Orders"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Create Quality Assurance Work Order">
+        <span>Create Quality Assurance Work Order</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+<h1>Create Quality Assurance Work Order</h1>
+<h3>Purpose:</h3>
+<p>This starter function allows users to create new Quality Assurance (Q/A) Work Orders for internal use by &quot;cloning&quot; completed Work Orders.</p>
+<p>The new Q/A Work Order will include information specified from the input screen as well as fields imported from the Work Order being cloned. The Work Order Type will be set to Q/A.  The  Job Id, Job Cost Code Id and Job Billing Item Id will not be cloned.</p>
+<p><a data-target="POPUP722062568" data-rhwidget="DropSpot" href="#" class="dropspot"><span data-open-text="true" data-skip-index="true">Click to view detailed information on the Q/A Work Order.</span><span data-close-text="true">Click to view detailed information on the Q/A Work Order.</span></a></p>
+<div data-targetname="POPUP722062568">
+<p>The following fields will be set when the Q/A Work Order is generated:</p>
+<p style="text-decoration: underline;">Work Order Header (Main and Invoicing Tabs):</p>
+<p style="margin-left: 8px;">The following fields will be &quot;cloned&quot; from the WO used to create it:</p>
+<p style="margin-left: 48px;">Work Order Name - Site Id - Original Caller - Branch Id<br/>
+Service Manager - Work Order NTE -  Work Performed<br/>
+Dispatcher - Sales Rep - Service Zone</p>
+<p>The Work Code will default from the function&#39;s input field.</p>
+<p>If the user specified an Escalation Profile when running the function, it will be written to the Q/A Work Order. If the user did not specify the Escalation Profile, it will be &quot;cloned&quot; from the Work Order used to create it.<br/>
+The Original WO Id will be set to the Work Order used to generate this Q/A Work Order.</p>
+<p style="text-decoration: underline;">Equipment Tab:</p>
+<p>These fields will be &quot;cloned&quot; from the WO used to create it:</p>
+<p style="margin-left: 48px;">Equipment Id - Work Code - Resolution Code - Cause Code<br/>
+Service Parts Id -  Service Tasks Id<br/>
+Work Requested - Work Performed</p>
+<p style="text-decoration: underline;">Technician Tab:</p>
+<p style="text-decoration: none;">These fields will default from the function&#39;s input fields</p>
+<p style="margin-left: 48px;">Tech Id - Status - Date Scheduled</p>
+<p style="margin-left: 8px;">The Time Scheduled will be set to 8:00, and the Status will be set to the default for the selected Technician.  </p>
+<p style="margin-left: 8px; text-decoration: underline;">Log Tab:</p>
+<p style="margin-left: 8px;">This tab will be set in the same fashion as the Tech Tab. <span style="font-size: 10.0pt; line-height: 107%; font-family: &#39;Times New Roman&#39;, serif;"><span style="mso-tab-count: 1;">       </span></span></p>
+</div>
+<h3>Important Fields Initial Range Screen:</h3>
+<p><strong><u>New Value Fields: <span style="font-weight: normal; text-decoration: none;">(will be used to generate the new Q/A Work Orders)</span></u></strong></p>
+<p style="font-size: 10.0pt;"><span style="font-weight: bold;">Tech Id:</span><br/>
+Select the Technician the Q/A Work Order should be assigned to.  </p>
+<p style="font-size: 10.0pt;"><span style="font-weight: bold;">Date Scheduled:</span><br/>
+Specify the Date Scheduled for the Q/A Work Order.</p>
+<p><span style="font-size: 10.0pt; font-weight: bold;">Work Code Id:</span><br/>
+Select an appropriate Work Code for the Q/A Work Order.</p>
+<p><span style="font-weight: bold;">Escalation Profile Id:</span><br/>
+Select an Escalation Profile suitable for Quality Assurance Work Orders. If this field is left blank, the original Work Order&#39;s Escalation Profile will be cloned to the Q/A Work Order.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Important Note:</span><br/>
+If the Escalation Profile is cloned from a &#39;real&#39; Work Order, Scheduled Events could be generated for Site-based Notifications with could cause confusion for the customer, as well as Dispatcher/Service Manager Notifications not always appropriate for Q/A Work Orders.</p>
+<p><span style="font-weight: bold; text-decoration: underline;">Filter Fields</span> (will be used to select the Work Orders to create Q/A Work Orders for)</p>
+<p style="font-size: 10.0pt;"><span style="font-weight: bold;">Technician Id:<br/>
+Site Id:<br/>
+Work Order Id:<br/>
+Work Code Id:<br/>
+Work Order Date Completed:<br/></span>One or more of these ranges should be completed to limit the Work Orders eligible for Quality Assurance Processing. In the case of the Technician and Work Code ranges, the Id on the Work Order&#39;s Main tab will be evaluated. <span style="font-weight: bold;"><br/>
+<br/>
+Escalation Status:<br/></span>By default, this range is set to Completed,Invoice Ready,Billed so that only work orders that have been finished will be eligible for Q/A processing. This range may be adjusted by the user if needed.</p>
+<p><span style="font-size: 10.0pt; font-weight: bold;">WO Type:</span><span style="font-weight: normal; font-size: 10.0pt;"><br/>
+By default, this range is set to ~PM Invoice, Rental Invoice so that PM and Rental Invoice Work Orders used only for billing will be excluded from this function. Q/A Type Work Orders are skipped automatically.</span></p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/>  Click the Go button, to display a list of work orders eligible Q/A processing.</p>
+<h3>Important Fields - Checklist Screen:</h3>
+<p style="font-size: 10.0pt;"><span style="font-weight: bold;">Do<br/></span>This field enables you to select which Work Orders will be used to generate Q/A Work Orders. By default, all Work Orders are selected. Double-click on the Do field to select (check) or deselect an item.</p>
+<p style="font-size: 10.0pt;"><span style="font-weight: bold;">Site Id: Site Name: WO Id: Tech Id: Date Work Completed: Work Code Id: Service Manager: Work Order Name:<br/></span> These fields are displayed for informational purposes so that you can verify which Work Orders should be used to general Q/A Work Orders.</p>
+<p><span style="font-size: 10.0pt; font-weight: bold;">Important Buttons:</span></p>
+<p><img src="assets/images/image/SKIN1_Check.gif" alt="" style="border: none;" border="0"/> Click the Check button to check (select) every item on the list.</p>
+<p><img src="assets/images/image/SKIN1_CheckOff.gif" alt="" style="border: none;" border="0"/> Click to de-select every item on the list.</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/>  When you click the Go button, the system will create your Q/A Work Orders.</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+        TextPopupInit('a1', 'POPUP722062568');
+//]]>
+</script>
+
+</body></html>

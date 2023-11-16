@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.3.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sys-folders"/>
+<meta name="MS-HKWD" content="custom folders"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="folder"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Custom Folders Entry (sys-folders)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="sys-folders,custom folders,registry,folder"/><meta name="brsnext" value="Registry_Entry_to_Start_Viewer_at_Filter_Instead_of_List_Screen.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Custom Folders Entry (sys-folders)">
+        <span>Registry Custom Folders Entry (sys-folders)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Custom Folders Entry (sys-folders)</h1>
+<h2>Purpose:</h2>
+<p>This registry entry enables you to customize the Topics that appear on the Workflow Folders viewer, as well as which Tabs appear on which Topics. This registry entry may apply to all users, or multiple registry entries may be created to apply to specific user groups or users.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline;">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Usage:</h2>
+<p class="Body_Text_Indent">Note that the registry entries for an updated, standard folders setup may be imported using the Start Registry Import function. Contact your support representative for details.</p>
+
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font><br/>
+A registry entry may now be created to customize the Topics that appear on the Folders viewer, as well as which Tabs appear on which Topics. This registry entry may apply to all users, or multiple registry entries may be created to apply to specific user groups, branches, security settings, or users.</p>
+<p>The Id of the Registry Entry must conform to one of the following formats:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-folders-usergroupid-branchid-userid<br/>
+sys-folders-usergroupid-securityid<br/>
+sys-folders-branchid-userid<br/>
+sys-folders-securityid<br/>
+sys-folders</font></p>
+<p>In the first format, -usergroupid is replaced by the User Group Id you wish to create the folders. Note that if you also wish to customize the folders for a particular branch, the optional -branchid is replaced by the Branch Id for which you wish to create the folders. If this entry is for an individual user, the -userid option would be replaced by the User Id for which you wish to create the folders.</p>
+<p>In the second format, -usergroupid is replaced by the User Group Id you wish to create the folders. Note that if you also wish to customize the folders for a particular security level, the optional -securityid is replaced by the Security Id for which you wish to create the folders.</p>
+<p>The third format enables you to specify folders by security id and (optionally) user. Note that -branchid is replaced by the Branch Id for which you wish to create the folders. If this entry is for an individual user, the -userid option would be replaced by the User Id for which you wish to create the folders. If branches are not implemented, two dashes (not separated by a space) must precede the user id.</p>
+<p>The fourth format enables you to specify folders by security. Note that -securityid is replaced by the Security Id for which you wish to create the folders.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">The fifth format would apply to all users unless another registry entry was created for their group, security id or branch id.</p>
+<p>During program execution, the software attempts to find a match for the user that logged on and a sys-folders registry entry in the following order:</p>
+<p>User Group, Branch and User<br/>
+User Group and Branch<br/>
+User Group and Security<br/>
+User Group Only<br/>
+Branch and User<br/>
+Branch Only<br/>
+Security Id Only<br/>
+sys-folders entry with no options</p>
+<p><font style="font-weight: bold;">Name:</font><br/>
+Optional but recommended for describing what this entry is used for.</p>
+<h3>Define Folder Contents</h3>
+<p>This option is used to defined the names of the topics that will appear on the Folders. These names are user definable and use the following format:</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Setting Key: <font style="font-weight: normal;">topics</font> Setting Value: <font style="font-weight: normal;">topicname1,topicname2,topicname3,..,topictopicnamez</font></p>
+<p>This entry is required. Replace the topicname fields following the = sign with the topic name as you wish it to appear on the folders viewer. Note that topic names must be separated by a comma. For example, the following entry would be used to include 4 topics in the Folders viewer:</p>
+<p class="Tip_Note_Heading" style="margin-left: 36.00pt; margin-top: 4.00pt;"><font style="font-weight: normal;">Setting Key:</font> <font style="font-weight: normal;">topics</font> <font style="font-weight: normal;">Setting Value:</font> <font style="font-weight: normal;">Accounting,Service,Job Costing,Other</font></p>
+<h3>Define Folder Tabs</h3>
+<p>The Additional Contents lines of this registry entry are used to defined which folder tabs appear on a topic. One Additional Content line should be entered for each topicname you defined. Note that a tab may appear on more than one topic.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> topicname <font style="font-weight: bold;">Setting Value:</font> tabname1,tabname2,...,tabnamez</p>
+<p>In this format, topicname must be replaced by a topic name that you defined in the Contents section. The tabnames, however, must conform to the standard Data-Basics naming conventions as specified on the following list (note that Sales pertains to the Client Order Processing modules, and Special includes maintenance features for ODBC, function list updates, and empty record updates):</p>
+<p style="margin-left: 36.00pt;"> AccountsPayable   AccountsReceivable<br/>
+ ClientSites   GeneralLedger<br/>
+ JobCosting  Inventory<br/>
+ Invoicing   Lab/H&amp;S<br/>
+ Payroll    Purchasing<br/>
+ Reporting   Sales<br/>
+ Security    ServiceSetup<br/>
+ Special    WorkOrders</p>
+<p style="margin-left: 36.00pt;">For example, to include the Payables, Receivables and General Ledger tabs on your Accounting topic, you would create an Additional Contents line as follows:</p>
+<p> <span style="font-weight: bold;">Setting Key:</span> Accounting    <span style="font-weight: bold;">Setting Value:</span> AccountsPayable,AccountsReceivable,GeneralLedger</p>
+<h3><a name="Workflow_Folder_Fonts" id="Workflow_Folder_Fonts"></a>Specify Font and Font Size</h3>
+<p>The topicfont option controls the font and size of the topics list and tab labels.  The buttonfont option controls the font and size of the button labels.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> topicfont  <span style="font-weight: bold;">Setting Value:</span> aF<span style="font-style: italic;">acename,points</span></p>
+<p><span style="font-weight: bold;">Setting Key:</span> buttonfont  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">aFacename,points</span></p>
+<p><span style="font-style: italic;">w</span>here <font style="font-style: italic;">aFaceName</font> is replaced by a valid font name (e.g., Arial, Tahoma). This font must be installed on the users’ computer or it will not be used.</p>
+<p><span style="font-style: italic;">points</span> should be replaced by the desired point size (typically 8, 9 or 10).</p>
+<p><span style="font-weight: bold; text-decoration: underline;">Example:</span> To make the Workflow Folder labels a little bigger than the standard settings:</p>
+<p><span style="font-weight: bold;">Setting Key:</span> topicfont  <span style="font-weight: bold;">Setting Value:</span> Arial,9</p>
+<p><span style="font-weight: bold;">Setting Key:</span> buttonfont  <span style="font-weight: bold;">Setting Value:</span> Arial,9</p>
+<h3>Specify Menu Ratio</h3>
+<p><span style="font-weight: bold;">Setting Key:</span> listratiopercent  <span style="font-weight: bold;">Setting Value:</span> ##</p>
+<p>This option defines the percentage of the WorkFlow window that the left-hand menu uses. Typically, the Setting Value: 20 produces a good proportion.</p>
+<h3>Specify Tree or List on Left-Hand Menu</h3>
+<p><span style="font-weight: bold;">Id:</span> sys-folders</p>
+<p><span style="font-weight: bold;">Setting Key:</span> listtype  <span style="font-weight: bold;">Setting Value:</span> tree or list</p>
+<p>This option controls when a list of topics is shown on the left-hand menu or an expandable &#39;tree&#39; what allows the user to expand each topic to show and access its component tab.</p>
+<h3>Folders Layout and Style</h3>
+<p><span style="font-weight: bold;">Setting Key:</span> layout   <span style="font-weight: bold;">Setting Value:</span> sidebyside</p>
+<p><span style="font-weight: bold;">Setting Value:</span> folderstyle  <span style="font-weight: bold;">Setting Value:</span> web</p>
+<p>These settings are required to display the workflow folders correctly for current versions of SAMPro.</p>
+<p> </p>
+<p> </p>
+
+</body></html>

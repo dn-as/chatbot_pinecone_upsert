@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Client Order Overview</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("SAM Pro Help\nAccounting/Back Office\nClient Order Processing\nClient Order Overview");
+addAvenueInfo("Client Order Processing","","client_order_viewer.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<H1>Client Order Overview </H1>
+ <P>The following list briefly describes how to handle client order processing. </P>
+ <P>Notice that links to additional information are included in each step. </P>
+ <P><FONT style="font-weight:bold; " >1.</FONT> Create a <A href="client_order_viewer.htm">Client Order</A>. </P>
+ <P><FONT style="font-weight:bold; " >2.</FONT> Optional. If this Client requires a printed Quote, flag the Order as such and use  <A href="report_cop_quote.htm">Report COP Quotations</A> to produce the document, and then set the Type back to Order. </P>
+ <P style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >ProForma Orders</FONT> <BR>A. An international order requiring a ProForma Commercial invoice would be started as a Client Order flagged as ProForma. </P>
+ <P style="margin-left:36.00pt;">B. Next, the Print Quotes option would be used to print the ProForma invoice using the conversion tables specified in the ProForma Table Id field, and sent to the Client for acknowledgement. </P>
+ <P style="margin-left:36.00pt;">C. Once the Client has confirmed the order, the user would change the Order Type from ProForma to Order. </P>
+ <P style="margin-left:36.00pt;">D. A regular invoice would then be printed and given to the individual in charge of international shipments. </P>
+ <P style="margin-left:36.00pt;">E. Finally, a commercial invoice would be produced for inclusion with the order for customs.  This document includes a signature line for customs. </P>
+ <P><FONT style="font-weight:bold; " >3.</FONT> If one or more of the items is available, a <A href="cop_pick_ticket.htm">Pick Ticket</A> will be printed for this order when the Report Client Order Pick Ticket function is run. </P>
+ <P><FONT style="font-weight:bold; " >4.</FONT> Using the Pick Ticket, items are picked and shipped. This information (what was physically picked and shipped) is then entered into the system via the <A href="client_order_to_ship_pick_entry.htm">Client Order Pick List Entry</A> function. </P>
+ <P><FONT style="font-weight:bold; " >5.</FONT> If one or more items are not available, this information will appear in the <A href="po_reorder_advice_report.htm">PO Reorder Advice Report</A>. This report should be run on a regular basis (e.g., every morning). </P>
+ <P><FONT style="font-weight:bold; " >6.</FONT> Based on the information in the PO Reorder Advice report, a designated employee(s) will <BR>&nbsp;a. Issue a <A href="purchase_order_viewer.htm">PO</A> to obtain a backordered stock item or <BR>&nbsp;b. Create a <A href="shop_order_viewer.htm">Shop Order</A> to make a manufactured item </P>
+ <P style="margin-left:36.00pt;">c. The<FONT style="font-weight:bold; " > </FONT>Start Fill Backorders should be used to fill backorders for the Client Order: see <A href="start_backorder_filling.htm">Start Backorder Filling</A>  for details.  </P>
+ <P><FONT style="font-weight:bold; " >7.</FONT> Once the Shop Order has been completed, the Cost and Date Closed fields should be completed: if the Omit Transfer option was set in the Shop Order, doing so will cause the system to transfer the manufactured items to the &quot;from&quot; location so that they can be picked off the shelf. </P>
+ <P><FONT style="font-weight:bold; " >8.</FONT> If Omit Transfer was not checked in the Shop Order, complete the Print Shop Transfer Ticket and Record Shop Transfer Ticket functions for the item. </P>
+ <P><FONT style="font-weight:bold; " >9.</FONT> Once the order has been shipped, print the COP Invoice to complete the process and relieve stock and inventory dollars from &quot;On Hand&quot;. During invoicing, when all lines on the client order have zero in the Qnty Allocated and Qnty Backordered the order is set with the closed date.  Closed Client Orders will not appear on the active Client Order list; they may be viewed by clicking the Inactive or All filter button on the side button bar. </P>
+ <P style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Tip: COP Invoices are printed/posted and a problem is found with the invoice<BR></FONT>To ‘reverse’ the invoice: </P>
+ <P style="margin-left:72.00pt;">1) Create an AR Credit Memo, putting the inventory items from the COP Order on the Costs tab. </P>
+ <P style="margin-left:72.00pt;">2) Then create a new COP Order.</P>
+ <P style="margin-left:72.00pt;">3) Print and Record the Pick Ticket.</P>
+ <P style="margin-left:72.00pt;">4) Then print a new invoice.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

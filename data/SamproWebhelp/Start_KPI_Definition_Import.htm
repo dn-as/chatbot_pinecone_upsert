@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.2.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="KPI"/>
+<meta name="MS-HKWD" content="import KPI"/>
+<meta name="MS-HKWD" content="DBAnalytics"/>
+<meta name="MS-HKWD" content="Key Performance Indicator"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start KPI Definition Import</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="KPI,import KPI,DBAnalytics,Key Performance Indicator"/><meta name="brsnext" value="Unvouchered_Payables_in_Accounting_Period.htm"/><meta name="brsprev" value="Registry_DB_Analytics_Dashboard.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start KPI Definition Import">
+        <span>Start KPI Definition Import</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start KPI Definition Import</h1>
+<h2>Purpose:</h2>
+<p>This function is used to import the KPIs (stored as .obj files) into your database. These files should be located in a subdirectory named KPIs located within the directory containing your SAM Pro executable.</p>
+<h2>Usage:</h2>
+<p>Make sure that the KPI’s that you important are the correct, up-to-date ones provided by Data-Basics. This function will update existing KPI’s within your database. The <a href="Start_KPI_Definition_Export.htm">Start KPI Definition Export</a> function may be used to export existing KPI’s before importing new ones.</p>
+<h2>Important Fields:</h2>
+<h2>Range Screen:</h2>
+<p><font style="font-weight: bold;">Directory:<br/></font>By default, this field will be set to a directory named KPIs located within the directory containing your SAM Pro executable. If your files are located in a different location it should be specified before clicking the Go button.</p>
+<h2>Checklist Screen:</h2>
+<p>Check the Do box to select the KPI’s you wish to import. Click the Go button to import the selected KPI definitions.<br/></p>
+
+</body></html>

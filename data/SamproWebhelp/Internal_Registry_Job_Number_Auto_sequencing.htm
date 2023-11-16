@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Internal Registry Job Number Auto-sequencing (sys-ffv-global-settings)</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("SAM Pro Help\nRegistry Entries\nJob and JC Related Registry Entries\nJob Number Auto-sequencing **Support**");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Internal Registry Job Number Auto-sequencing (sys-ffv-global-settings)</P>
+ <P class="Support_Heading_2" >Purpose:</P>
+ <P class="Support" >Auto-number jobs created from the Job viewer and the Clone Job button in the Job viewer.</P>
+ <P class="Support_Heading_2" >Usage:</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Important Implementation Notes:</FONT> During data conversion, the system will create a new database table named nextjb to that enables the implementation of the auto-sequencing for job cloning.&nbsp; By default, this counter will be Initialized to100000.  Before implementing this registry setting, PLEASE REVIEW YOUR CLIENT’S JOB NUMBERING SCHEME FOR ALL JOBS.  </P>
+ <P class="Support" >As of the 2/7/2007 image, the software is smart enough to iterate to the next Id when a collision with an existing would occur.  Nevertheless, the auto-sequence id’s should be started at an appropriate number for the client. </P>
+ <P class="Support" >Please see <A href="auto_sequencing_issues_in_job_clone_and_new_call_backscreen.htm"><FONT style="color:black; " >Auto-sequencing Issues in Job Clone and New Call Backscreen</FONT></A>  for important details on this topic.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Important Fields:</FONT></P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Id: </FONT></P>
+ <P class="Support" style="text-indent:30.25pt;"><FONT style="font-weight:bold; " >sys-ffv-global-settings<BR>Contents: </FONT></P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >AutoSequenceJobId=true<BR></FONT>If this option is set to true and the user doesn't provide a Job Id (in the Job Viewer or during the cloning process in the Job viewer), then the auto-sequencing should be used to provide the Job Id. Note that this registry setting does <FONT style="text-decoration:underline;" >not</FONT> impact the auto-numbering scheme used on the back-screen of New Call. </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

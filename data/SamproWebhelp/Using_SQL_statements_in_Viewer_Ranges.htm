@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.1.1.2.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="viewer"/>
+<meta name="MS-HKWD" content="sql="/>
+<meta name="MS-HKWD" content="range"/>
+<meta name="MS-HKWD" content="search"/>
+<meta name="MS-HKWD" content="filter"/>
+<meta name="MS-HKWD" content="SQL"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Using SQL statements in Viewer Ranges</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="viewer,sql=,range,search,filter,SQL"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Using SQL statements in Viewer Ranges">
+        <span>Using SQL statements in Viewer Ranges</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Using SQL statements in Viewer Filter Ranges</h1>
+<p>SQL’s can be run from the SAM Pro range filter screens to effectively filter on columns that do not have separate range fields. If you are not comfortable using SQL statements, contact your support representative for help.</p>
+<p style="font-weight: bold; text-decoration: underline;">Technician Viewer Example:</p>
+<p>In the Technician record, the Technician Email address does not have a Range filter, nor is it displayed on any of the list screens. To provide an easy look-up by the Tech&#39;s email:</p>
+<p>1. Add the following statement to one of the range options (you can use any range field in the viewer – doesn’t matter which one!):</p>
+<p style="margin-left: 48px;">sql= tchncn_eml in (select tchncn_eml from tchncn where tchncn_eml like &#39;%&#39;)</p>
+<p>2. Create a &quot;SAVED RANGE&quot; called *Find Tech by Email Address (* allows all users to run)</p>
+<p>3. To use, the % could be replaced by the entire email address (tech@mycompany.com), the first few characters followed by the percent sign (tec%) or the percent sign followed by the domain (%mycompany.com). The last example would be useful for subcontractor technicians.</p>
+<p><font style="font-weight: bold; text-decoration: underline;">Job Viewer Example:</font></p>
+<p>For example, on the Job Viewer, we have no filters on Tax Group and/or Tax status but support personnel and advanced users can:</p>
+<p>1. Add these statements to the range options (you can use any range field in the viewer – doesn’t matter which one!)</p>
+<p>sql=jb.slstxgrp_rn in (select slstxgrp_rn from slstxgrp where slstxgrp_id like &#39;CLEVELAND%&#39;)</p>
+<p>sql=jb_tx_stts=&#39;use&#39;</p>
+<p>2. Create a &quot;SAVED RANGE&quot; called *Find tax group by tax status (* allows all users to run)</p>
+<p>3. Then.... run the Saved Range and SAVE AS: .CSV (simply click on filename to see data in Excel, if registry setup is implemented). Using the list views, these are great/simple ways to export data (Inventory, Clients, Invoices, etc) off into Excel (without having to use ODBC).</p>
+<p><font style="font-weight: bold; text-decoration: underline;">Employee Viewer Example:</font></p>
+<p>The Employee viewer does not include a Type range. To ‘create’ one:</p>
+<p>1. Create a &quot;SAVED RANGE&quot; called *Find employee by employee type (* allows all users to run)</p>
+<p>2. Add one of the following statements to the range options (you can use any range field in the viewer – doesn’t matter which one!)</p>
+<p>sql=emplye.emplyetype_rn in (select emplyetype_rn from emplyetype where emplyetype_id in (&#39;id1&#39;,&#39;id2&#39;,&#39;id3&#39;,&#39;etc&#39;))</p>
+<p>sql=emplye.emplyetype_rn in (select emplyetype_rn from emplyetype where emplyetype_id = &#39;theId&#39;)</p>
+<p>sql=emplye.emplyetype_rn in (select emplyetype_rn from emplyetype where emplyetype_id like &#39;whatever%&#39;)</p>
+<p> </p>
+<p><font style="font-weight: bold; text-decoration: underline;">Client Site Equipment / Component Serial Numbers Example</font></p>
+<p>The following allows the user to search for a serial number in the Client Site Equipment’s Component tab.</p>
+<p>sql=clntsteeqpmnt.clntsteeqpmnt_rn in (select distinct clntsteeqpmntcmpnnt.clntsteeqpmnt_rn from clntsteeqpmntcmpnnt where clntsteeqpmntcmpnnt_srl_nmbr like &#39;xyz%&#39;)</p>
+<p> </p>
+<p style="font-weight: bold; text-decoration: underline;">Work Order Service Zone Filter</p>
+<p>The following allows the user to search for work orders by Service Zone.</p>
+<p>1. Create a &quot;SAVED RANGE&quot; called *Filter Work Orders by Service Zone (* allows all users to run)</p>
+<p>2. Add the following statement to one of the range options (you can use any range field in the viewer – doesn’t matter which one!)</p>
+<p>sql=wrkordr.srvcezne_rn in (select srvcezne_rn from srvcezne where srvcezne_id like &#39;EnterZoneId&#39;)</p>
+<p>3. When the user selects the saved range, replace EnterZoneId with the actual Service Zone Id they wish to filter on, and then click the list button.</p>
+
+</body></html>

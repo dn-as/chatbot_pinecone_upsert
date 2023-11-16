@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.3.0_15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="work order"/>
+<meta name="MS-HKWD" content="service evaluation"/>
+<meta name="MS-HKWD" content="workorder"/>
+<meta name="MS-HKWD" content="evaluation grading"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Work Order Evaluation Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="work order,service evaluation,workorder,evaluation grading"/><meta name="brsnext" value="Work_Order_Sales_Tax_Tab.htm"/><meta name="brsprev" value="Work_Order_Revenue_Adjustment_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Work Order Evaluation Tab">
+        <span>Work Order Evaluation Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Work Order Evaluation Tab</h1>
+<h2>Purpose:</h2>
+<p>If the <a href="Service_Evaluation_Table_Viewer.htm">Evaluation Id</a> field is completed (on the Main tab of this Work Order), the system will generate/complete lines on this tab when the Service Evaluation Wizard is run. The Service Evaluation Wizard is invoked when a work order is completed or invoiced (depending upon the category of the questions being asked). The responses are written to this tab, and can be used to generate a numerical grade for the primary technician by running <a href="Start_Compute_Technician_Evaluation.htm">Start Compute Technician Evaluations</a>.</p>
+<p style="margin-left: 8px;"><span id="BugEvents20">Technician Evaluation questions are added to the work order based on the Equipment and Tech selected during New Call. Often, the Tech Id changes after the WO is created, but in previous releases the system didn&#39;t update the Evaluation lines on the WO so that they were associated with the new Tech.</span> <span style="font-weight: bold;"></span></p>
+<p style="margin-left: 8px;">If the primary Tech changes, the system re-evaluates entries on the Evaluation tab:</p>
+<p style="margin-left: 48px;">Existing lines for the selected Evaluation Table with responses for the previous Primary Tech are retained.</p>
+<p style="margin-left: 48px;">Existing lines with  &#39;unknown&#39; response are deleted for the previous Primary Tech are deleted.  </p>
+<p style="margin-left: 48px;">A complete set of lines for the new primary Tech (as applicable for a Vendor/Employee tech) is added.</p>
+<h2>Important Fields:</h2>
+<p class="Reference_Line"><span style="font-weight: bold;">Tech Id:</span><br/>
+This field will default to the primary work order technician (on the Main tab) when the Service Evaluation Wizard is run.</p>
+<p class="Reference_Line"><span style="font-weight: bold;">Evaluation Id: Evaluation Question: Goal:</span><br/>
+Evaluation questions from the Evaluation Table Id specified on the Main tab will be recorded when the Service Evaluation Wizard is run. These fields are sensitive to whether the primary Tech is an Employee or Subcontractor (Vendor).</p>
+<p class="Reference_Line"><span style="font-weight: bold;">Response:</span><br/>
+The response that was recorded when the Service Evaluation Wizard was run.</p>
+
+</body></html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.5.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="adjustment (payroll)"/>
+<meta name="MS-HKWD" content="general ledger"/>
+<meta name="MS-HKWD" content="gl"/>
+<meta name="MS-HKWD" content="journal"/>
+<meta name="MS-HKWD" content="labor"/>
+<meta name="MS-HKWD" content="payroll adjustment"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Payroll Adjustment Journal GL Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="adjustment (payroll),general ledger,gl,journal,labor,payroll adjustment"/><meta name="brsnext" value="Payroll_Adjustment_Journal_Earnings_Tab.htm"/><meta name="brsprev" value="Payroll_Adjustment_Journal_Hours_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Payroll Adjustment Journal GL Tab">
+        <span>Payroll Adjustment Journal GL Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Payroll Adjustment Journal GL (General Ledger) Tab</h1>
+<h2>Purpose:</h2>
+<p>Specifies the GL Accounts to be affected by the adjustment or manual paycheck entry.</p>
+<h2>Usage:</h2>
+<p>Required for GL posting. Note that GL Debits must equal GL Credits in order for the transaction to be saved. Totals of each column will be shown as read-only on the main Payroll Adjustment screen.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">GL Account Id:</font><br/>
+Enter a valid GL Account Id or double-click to select from a list. This field is required for posting.</p>
+<p><font style="font-weight: bold;">Entity:</font><br/>
+If your firm specifies entities for a payroll transaction of this type, enter a valid Entity Id (or double-click to select from a list).</p>
+<p><font style="font-weight: bold;">DB Amount:</font><br/>
+If this GL Account is being debited, enter the Debit Amount.</p>
+<p><font style="font-weight: bold;">CR Amount:</font><br/>
+If this GL Account is being credited, enter the Credit Amount.</p>
+<p><font style="font-weight: bold;">Description:</font><br/>
+Optional. A brief description of this entry.</p>
+
+</body></html>

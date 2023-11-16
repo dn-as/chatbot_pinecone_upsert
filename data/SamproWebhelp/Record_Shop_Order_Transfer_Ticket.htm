@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.11.2.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="shop order"/>
+<meta name="MS-HKWD" content="transfer"/>
+<meta name="MS-HKWD" content="record shop order entry"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Shop Order to Transfer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="shop order,transfer,record shop order entry"/><meta name="brsprev" value="Shop_Transfer_Ticket_Report.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Shop Order to Transfer">
+        <span>Shop Order to Transfer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Shop Order to Transfer (Pick List)</h1>
+<h2>Purpose:</h2>
+<p>Enter the data that was manually entered on a Shop Order Transfer Ticket.</p>
+<h2>Usage:</h2>
+<p>Required for Shop Order processing and inventory control if the Omit Transfer flag (in the Shop Order record) is set to N.</p>
+<h2>Important Fields:</h2>
+<p>This viewer is divided into two sections. The upper portion displays the Shop Order header information. The lower section lists the inventory items themselves. Note that when the Order Id and Ticket number are filled in the upper portion of the screen, the detailed information will be displayed in the lower section of the screen.</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Order Id:</font><br/>
+Enter the Shop Order number printed on the Transfer Ticket.</p>
+<p><font style="font-weight: bold;">Transfer Ticket Number:</font><br/>
+Enter the Ticket Number (e.g., 1,2, etc.) from the Transfer Ticket.</p>
+<p><font style="font-weight: bold;">Date Transferred:</font><br/>
+Enter the date the item(s) were actually transferred from the Date field of the Transfer Ticket. To enter today&#39;s date, press the Spacebar. To access the Calendar to enter any date, double-click on this field display the Calendar viewer.</p>
+<p><font style="font-weight: bold;">Period Id:</font><br/>
+Enter the Id of an active Accounting Period (batch) that this transfer journal entry should be assigned to. Note the Date Transferred must fall within the Period Start Date and Period End Date of the Period.</p>
+<p><font style="font-weight: bold;">Job Id: Order Description:  Date Required  Date Entered  Time Entered:  Entered By:<br/>
+Project Id  Job Cost Code Id:  Job Cost Category Id:<br/>
+Quantity:  Inv Item Id:  Location Id:  Trans. From Location: Inv Group Id:<br/>
+GL WIP Account  GL Entity Id:  Transferred Cost  Extended Description</font><br/>
+These informational, display-only fields are maintained by the system.</p>
+<h2>Important Fields: Lower Section</h2>
+<p><font style="font-weight: bold;">Transfer Done?<br/>
+Clicking this field defaults the Transferred field from the To Transfer quantity.</font></p>
+<p><font style="font-weight: bold;">Transferred:<br/></font> Enter the number of this component or item indicated on the transfer Ticket. Alternately, you may click on the Transfer Done field to default to AutoFill the number transferred. Entering a non-zero value in the Qty Transferred field forces the Transfer Done field to True: this field must be flagged for correct processing.</p>
+<p><font style="font-weight: bold;">Print Status:<br/></font> Double-click on Transfer Done to auto-fill the number transferred.</p>
+<p><font style="font-weight: bold;">Serial Number:</font><br/>
+For serialized inventory, enter the serial number for this item.</p>
+<p><font style="font-weight: bold;">GL Account:</font><br/>
+Enter the GL Account Id to be relieved by the transfer. This field will be automatically filled in if you flag the Transfer Done box.</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font><br/>
+Optional. Enter the GL Entity (profit center) affected by this transferred.</p>
+<p><font style="font-weight: bold;">Ticket  Qty to Transfer  Inventory Item Id:  Unit Cost  Extended Cost<br/>
+Inv Item Name:  Manufactured? Accounting Period Id:<br/></font> This information is maintained by the system.</p>
+
+</body></html>

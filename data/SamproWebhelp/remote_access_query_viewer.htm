@@ -1,0 +1,119 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Remote Access Query Viewer</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nTechAnywhere\nTechAnywhere Remote Access Queries\nRemote Access Query Viewer");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Remote Access Query Viewer</P>
+ <P class="Support_Heading_2" >Purpose:</P>
+ <P class="support" >The Remote Access Query table is currently used to define and configure the information that will be uploaded to the TechAnywhere web server and ultimately to the wireless tech devices themselves.  When the TechAnywhere java script software requests information during synchronize, the Remove Access Queries define what will be retrieved. This information includes the static lists of inventory parts, labor types, active pay periods, and so on.</P>
+ <P class="Support_Heading_2" >Important Fields:</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Application:  TechAnywhere   TimeAnywhere</FONT><BR>Select the appropriate application for use with this record.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Dataset Name:<BR></FONT>This required field must be unique, and should not contain blanks between characters.  It must match exactly the dataset name being requested by Techanywhere for a particular purpose. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >Version:<BR></FONT>This field identifies the application's version to which a dataset (RAQ) applies.&nbsp; The VW code will only execute RAQs that match the calling JS codes version number.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Date:<BR></FONT>This display-only field gets updated whenever a record is added or changed.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Protected: <BR></FONT>The 'Protected' Boolean allows an installation to protect an RAQ from being overwritten during an import.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Test Query Button:</FONT><BR>The Test Query button should be clicked to execute a Query against the SAM Pro database; the results will be displayed so that you can verify that it is operating correctly. </P>
+ <P class="support" ><FONT style="font-weight:bold; " >Query Id:<BR></FONT>This field is assigned by the system when the record is saved. </P>
+ <P class="support" >Query Format:  SQL   Frame   Token</P>
+ <P class="support" >SQL:</P>
+ <P class="Style_Support_+_Left___0_5_" >Queries define the information that will be returned when PHP/TechAnywhere requests this dataset.  SQL’s are handled in the following manner:</P>
+ <P class="support" >1. TA middleware asks SAM Pro server for dataset name.</P>
+ <P class="support" >2. If the server finds the dataset, it sends back a query to middleware.</P>
+ <P class="support" >3. Middleware asks server to execute the query.</P>
+ <P class="support" >4. The SAM Pro server sends the results of the query to the middleware.</P>
+ <P class="support" >5. Middleware delivers the results in the correct code to the Java script code in the TechAnywhere wireless devices.</P>
+ <P class="Style_Support_+_Left___0_5_" >SQL type Remote Access Queries may be customized to limit the amount of information being sent to the server. </P>
+ <P class="support" >Frame:</P>
+ <P class="Style_Support_+_Left___0_5_" >Frames are typically used to screen labels and static lists such as the labor hours list that lets TechAnywhere users select there time from. When PHP sees a Frame type dataset, it doesn’t have to do the secondary retrieval because the necessary information is already contained in the Dataset Query box. </P>
+ <P class="support" >Token:</P>
+ <P class="Style_Support_+_Left___0_5_" >Reserved for future use.</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Dataset Query:<BR></FONT>This field provides the query itself (for SQL’s) or the contents and structure (for a frame).  Consistency must be maintained in this field or TechAnywhere’s ability to function properly (or at all) will be severely compromised. </P>
+ <P class="support" >For Frames:</P>
+ <P class="Style_Support_+_Left___0_5_" >If the Query Format is set to Frame, the Dataset Query must be of the form of an array with the elements separated by commas: [<FONT style="font-style:italic; " >element1</FONT>,<FONT style="font-style:italic; " >element2</FONT>,<FONT style="font-style:italic; " >element3</FONT>] where elements 1, 2, and 3 are replaced by the actual text or headings.  Note that literals must enclosed in double quotes. So long as the brackets, elements and commas are correctly entered in the right order, carriage returns and spacing may be used to enhance readability as shown in the example below. </P>
+ <P class="support" >&nbsp;Example:</P>
+ <P class="support" >This example, for static_labor_hour_list, specifies the hours worked that will appear on the drop-down list that technician may select from when adding time to a work order.  Since these are literal values, they are quoted. </P>
+ <P class="support" >&nbsp;[</P>
+ <P class="support" >&quot;0.5&quot;,   <BR>&quot;1.0&quot;,<BR>&quot;1.5&quot;,   <BR>&quot;2.0&quot;,<BR>&quot;2.5&quot;,   <BR>&quot;3.0&quot;,<BR>&quot;3.5&quot;, <BR>&quot;4.0&quot;, <BR>&quot;4.5&quot;, <BR>&quot;5.0&quot;,  <BR>&quot;5.5&quot;, <BR>&quot;6.0&quot;,  <BR>&quot;6.5&quot;,   <BR>&quot;7.0&quot;,   <BR>&quot;7.5&quot;,  <BR> &quot;8.0&quot;    </P>
+ <P class="support" >]      </P>
+ <P class="Style1" >&nbsp;For SQL’s</P>
+ <P class="Style_Support_+_Left___0_5_" >Dataset queries for SQL’s contain an SQL statement or statements that will be executed against the SAM Pro database when requested by the middleware. The results of this query will be picked up on the secondary retrieval. </P>
+ <P class="Style_Support_+_Left___0_5_" >The <FONT style="font-weight:bold; " >Test Query</FONT> button should be clicked to execute the Query against the SAM Pro database; the results will be displayed so that you can verify that it is operating correctly. </P>
+ <P class="Style_Support_+_Left___0_5_" >&nbsp;Example:</P>
+ <P class="support" >The static_work_code_list controls which work codes the will be available to choose from when creating an on-call work order in TechAnywhere:</P>
+ <P class="support" >select wrkcde_id</P>
+ <P class="support" >from wrkcde</P>
+ <P class="support" >where wrkcde_rn&lt;&gt;0</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">  and wrkcde_wb_accss_allwd='Y'&nbsp;</P>
+ <P class="support" >order by wrkcde_id</P>
+ <P class="support" >In this case, only those work codes whose Web Access Allowed box is checked will be returned. </P>
+ <P class="support" >Notes On Use:</P>
+ <P class="support" >It is strongly recommended that a brief description of each RAQ be included, including any modification notes. A change that seems self-evident now may not be so clear a year from now. </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

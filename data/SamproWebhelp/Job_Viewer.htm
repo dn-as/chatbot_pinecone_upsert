@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="job"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="job"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Viewer">
+        <span>Job Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+<h1>Job Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain the job records that your company uses to track 
+ costing information. Basically, a job is a collection point for costs 
+ incurred at a client site (or as overhead for your company). Refer to 
+ the <a href="Job_Overview.htm">Job Overview</a> for information on related 
+ records and procedures.</p>
+<p><font style="font-weight: bold;">Note: Jobs and Budgets</font><br/>
+If you enter Budgets with your Jobs, the Job Progress viewer and Project 
+ Manager&#39;s Workbench will allow you to directly adjust the Percent or Cost 
+ to Complete as the Job progresses.</p>
+<h2>Usage:</h2>
+<p>See <a href="Payroll_Tax_Reciprocity.htm">Payroll Tax Reciprocity</a> 
+ for details on setting up jobs where the field employees do not reside 
+ in the Job’s Taxing Authority.</p>
+<p>You must create at least one Job Cost Code and Billing Item for each 
+ job.</p>
+<p style="font-weight: bold;">AIA Billing: <span style="font-weight: normal;">click 
+ to</span> <span style="font-weight: normal;">see <a data-target="POPUP651368439" data-rhwidget="DropSpot" href="#" class="dropspot"><span data-open-text="true" data-skip-index="true">fields 
+ required for AIA Billing</span><span data-close-text="true">fields 
+ required for AIA Billing</span></a>.</span></p>
+<div data-targetname="POPUP651368439">
+	<p>In addition to the fields calculated by SAM Pro, the following fields 
+	 are used to complete the informational sections of the standard construction 
+	 (AIA-style) invoices:</p>
+	<p style="margin-left: 36.00pt;">To Owner:  Job Invoice Name, 
+	  Job Invoice Street, Job Invoice City, State Zip</p>
+	<p style="margin-left: 36.00pt;">From Contractor: Company Name 
+	 (from Registry), Company Address (from Registry)</p>
+	<p style="margin-left: 36.00pt;">Contractor for Purchase Order: Job 
+	 PO</p>
+	<p style="margin-left: 36.00pt;">Project: Job Invoice Description OR 
+	  Job Name, Job Id, Client Site Name, Client Site Shipping Address</p>
+	<p style="margin-left: 36.00pt;">Date of Contract:  Job Date Contract 
+	 Signed</p>
+	<p style="margin-left: 36.00pt;">Period To: Invoice Date</p>
+	<p style="margin-left: 36.00pt;">Contractor By: Job User 3 Date: 
+	 Invoice Date</p></div>
+<h2>Registry Entries:</h2>
+<p><a href="Registry_Entry_Job_and_Job_Cloning.htm">Registry for Job Viewer 
+ / Job Cloning (sys-viewer-vjb)</a> </p>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Global_Settings_Alternate_Prevailing_Wages">Global 
+ Setting for Alternate Prevailing Wage Calculations (NY)</a></p>
+<p><span>See the <a href="Registry_Start_Create_Job_Schedule_WOs.htm">Start 
+ Create Job Scheduler WOs Registry</a> for the options needed to configure 
+ this function</span><span>.</span></p>
+<h2>Examples:</h2>
+<p><font style="font-weight: bold;"><a data-target="POPUP651653488" data-rhwidget="DropSpot" href="#" class="dropspot"><span data-open-text="true" data-skip-index="true">Clients 
+ and Sites Linked by Jobs</span><span data-close-text="true">Clients 
+ and Sites Linked by Jobs</span></a></font></p>
+<div data-targetname="POPUP651653488">
+	<p>Jobs for a specific site may be billed to a variety of clients since 
+	 the Site and the Client are independently specified in the Job record.</p>
+	<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Residential 
+	 Example:</font></p>
+	<p style="margin-left: 72.00pt;">A new owner purchases a home you have 
+	 been servicing. It this case, you would create a new Client record, 
+	 and point any applicable, existing Jobs would to the new Client. A 
+	 complete record of work performed at this site would be retained.</p>
+	<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Warranty 
+	 Example:</font></p>
+	<p style="margin-left: 72.00pt;">Suppose that some of the equipment 
+	 at a Site is under manufacturer warranty. Warranty Jobs for this equipment 
+	 can be pointed at (and billed to) the manufacturer of the equipment 
+	 rather than the owner of the Site. Warranty jobs are usually setup 
+	 without a client site reference. This allows these jobs to be used 
+	 for multiple sites. <font style="font-weight: bold;">However, in the 
+	 case of Payroll a warranty job per Payroll Taxing Authority must be 
+	 setup to properly withhold tax for employees working on these jobs.</font> 
+	 Example (Warranty jobs: TRANE-OH, TRANE-PA, …)</p>
+	<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Construction 
+	 Example:</font></p>
+	<p style="margin-left: 72.00pt;">Consider a construction job for a 
+	 school. Jobs at this site might be pointed at client records for: 
+	 the school district, the contractor of record, and the manufacturer 
+	 of the equipment being installed.</p></div>
+<h2>Screen Organization:</h2>
+<p>If you are using a customized system, the fields displayed on your screen 
+ may not exactly match the order or status of the fields described in this 
+ Topic.</p>
+<p><span style="font-weight: bold;">Upper Section:</span> These tabs organize 
+ the primary Job header information as well as display information on records 
+ associated with this Job. These tabs are listed below; click on a link 
+ for details on that tab.</p>
+<p><a href="#Job_Main_Tab">Main Tab</a>  <a href="#Job_Invoicing_Tab">Invoicing 
+ Tab</a>  <a href="#Job_Financial_Tab">Financial Tab</a>  <a href="#Job_User_Fields">User Fields Tab</a>  <a href="#Job_JC_Summary_Tab">JC 
+ Summary Tab</a>  <a href="#Job_Revenues_Tab">Revenues Tab</a>  <a href="#Job_Invoices_Tab">Invoices Tab</a>  <a href="#Job_Purchases_Tab">Purchases 
+ Tab</a>  <a href="#Job_Billing_Items_Tab">Billing Items Tab</a></p>
+<p><span style="font-weight: bold;">Lower Section:</span> These tabs display 
+ the Job&#39;s &#39;child&#39; tables and are used for data-entry. Click on a link 
+ to see additional information:</p>
+<p><a href="Job_COM__Sales_Rep_Commissions__Tab.htm">Commissions Tab</a> 
+  <a href="Job_Employee_Overrides.htm">Employee Overrides Tab</a> 
+  <a href="Job_CON_Contact_Tab.htm">Contacts Tab</a>  <a href="Job_Milestone_Tab.htm">Milestones 
+ Tab</a>  <a href="Job_Employee_Prevailing_Wage_Tab_7_1_.htm">Prevailing 
+ Wages Tab</a>  <a href="Job_Budget_Tab.htm">Budget Entry Tab</a> 
+  <a href="Job_Rebates_Tab.htm">Rebates Tab</a>   <span><a href="Job_CCLevel1_Tab.htm">CCLevel1 Names Tab</a>  <a href="Job_CCLevel2_Tab.htm">CCLevel2 
+ Names Tab</a>  <a href="Job_Tax_Certificates_Tab.htm">Tax Certificates 
+ Tab</a> <a href="Job_WO_Creator_Tab.htm">WO Creator</a>  <a href="Job_Open_WO_Tab.htm">Open 
+ WO Tab</a> </span>  <a href="Job_Other_WO_Tab.htm">Other WO 
+ Tab</a>  </p>
+<p><img src="assets/images/image/SKIN1_CreatePO.gif" alt="" style="border: none;" align="left" border="0"/> Click this button to launch the Purchase Order viewer 
+ and auto-fill the Job id into the PO header. If the system date (today) 
+ exceeds the Job’s Date Closed, the message ‘Cannot Create Job PO for closed 
+ Job’ will be displayed; the Purchase Order viewer will not be launched. 
+    </p>
+<h2>Important Fields: Upper Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Job_Main_Tab" id="Job_Main_Tab"></a>Main 
+ Tab</p>
+<p><font style="font-weight: bold;">Job ID</font> (15 character, only . 
+ and - special characters)<br/>
+This alphanumeric field must uniquely identify this job.</p>
+<p><font style="font-weight: bold;">Job Name:</font> (40 character)<br/>
+Briefly describes the job; this field is recommended but not required.</p>
+<p><font style="font-weight: bold;">Job Alpha Id:</font> (40 character)<br/>
+This field provides an alternate Id lookup key. It defaults from the Job 
+ Name field but may be changed by the user.</p>
+<p><font style="font-weight: bold;">Client Id: Site Id:<br/>
+</font>The Client and Site Id&#39;s are specified independently. The <font style="font-weight: bold;">Site specifies the</font> <font style="font-weight: bold;">location</font> 
+ at which the work will take place. The <font style="font-weight: bold;">Client 
+ defines to whom the</font> <font style="font-weight: bold;">AR will be 
+ assigned</font>.</p>
+<p><font style="font-weight: bold;">Job Type Id:</font><br/>
+This optional field enables you to categorize this job for reporting purposes. 
+ Double-click on this field (or press Alt+F7) to select from your firm&#39;s 
+ list of Job Type Id&#39;s.</p>
+<p style="font-weight: bold;">Date Opened:<br/>
+<span style="font-weight: normal;">The date this Job was opened; this field 
+ will default to today when creating a new Job</span></p>
+<p><font style="font-weight: bold;">Date Closed:</font><br/>
+Filling in the Date Closed will cause a warning message to be displayed 
+ on all subsequent journal entries pertaining to this Job. A registry setting 
+ may be enabled to allow the user to set the Date Completed in the Job&#39;s 
+ Cost Codes and Billing Items when the user sets the Date Closed (see <a href="Registry_Entry_Job_and_Job_Cloning.htm">Job Registry</a>).</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Create PM 
+ WorkOrders:</span> if the specified Job has a Date Closed that precedes 
+ the Inspection Date, the system will not create a PM Work Order for it.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Create PM 
+ Billing:</span> if the specified Job has a Job Date Closed that precedes 
+ the Billing Date, the system will not create an invoice for it.</p>
+<p><font style="font-weight: bold;">Contract Signed:<br/>
+</font>The signature date on the contract.</p>
+<p><font style="font-weight: bold;">PO#:</font><br/>
+The Client&#39;s PO number for this job.  A <a href="Registry_Entry_for_New_Call_Options.htm#Registry_Newcall_Set_PO_from_Default_Service_Job">Registry 
+ Setting</a> may be enabled to default this field from the selected Equipment&#39;s 
+ Default Service Job in New Call.  This field be also be used by Create 
+ PM Work Orders with the proper <a href="Registry_Entry_Create_PM_WO.htm">Registry 
+ Settings</a>.  </p>
+<p><font style="font-weight: bold;">Tax Group Id</font><br/>
+This field specifies which Sales Tax Group will be due taxes for this Job 
+ (if it is not exempt) when the Job Invoice is computed. Double-click on 
+ this field (or press Alt+F7) to select from your firm&#39;s list of Tax Group 
+ Id&#39;s.</p>
+<p style="font-weight: bold;"><span style="font-weight: normal;">If this 
+ Tax Group was created in SAMPro (not imported from Avalara), SAMPro&#39;s 
+ internal sales tax processing will be used to generate sales or use tax 
+ on invoices for this job. If the Avalara Web Integration is enabled and 
+ this field is completed with an Avalara Tax Group, the Avalara Web Service 
+ will be used to compute sales tax. If this field is blank, it will be 
+ completed when the Job is invoiced for the first time using the Avalara 
+ Web Integration if it is implemented via registry.</span><span> </span></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> 
+ If the Tax Group Tax field is changed on an existing record, when the 
+ Save button is pressed the system now reviews Job History lines and set 
+ all lines for this job that do NOT have an AR Invoice ID or are of Tax 
+ Type Use to &#39; n/a&#39; (space n/a) so that they will be successfully re-evaluated 
+ at invoice time.</p>
+<p style="margin-left: 8px;"><span><img src="assets/images/SetTaxGroup.bmp" alt="" style="border: none;" border="0"/>  If the Avalara 
+ Web Integration (AvaTax) is enabled, clicking this button will make a 
+ call to Avalara to set the correct Sale Tax Group for invoicing this Job. 
+ </span></p>
+<p><font style="font-weight: bold;">Tax Status:</font> Unknown Use Sales 
+ Exempt<br/>
+Click on the radio-button adjacent to set the desired tax status for this 
+ Job. If the tax status cannot be determined (e.g., sales or exempt) the 
+ status of Unknown should be selected. Click  for more information 
+ on <a data-target="POPUP542292731" data-rhwidget="DropSpot" href="#" class="dropspot"><span data-open-text="true" data-skip-index="true">Tax Type Selection 
+ and Validation</span><span data-close-text="true">Tax Type Selection 
+ and Validation</span></a>.</p>
+<div data-targetname="POPUP542292731">
+	<p style="margin-left: 36.00pt;">The Tax Type Id will be set to unknown 
+	 (&#39; n/a&#39;) for jobs with an unknown tax status. Once the status of the 
+	 Job has been changed from Unknown to Sales or Exempt, Job and Service 
+	 Invoicing can be run, and will successfully evaluate the tax (or exempt 
+	 amounts) for the invoice.</p>
+	<p style="margin-left: 36.00pt;">If the Job Tax Status fields is changed 
+	 on an existing record, when the Save button is pressed the system 
+	 now reviews Job History lines and set all lines for this job that 
+	 do NOT have an AR Invoice ID or are of Tax Type Use to &#39; n/a&#39; (space 
+	 n/a) so that they will be successfully re-evaluated at invoice time.</p>
+	<p style="margin-left: 36.00pt;">Validation logic regarding manual 
+	 edits of line-item Tax Type Ids so that changes at the line-item level 
+	 are not permitted for jobs with an Unknown tax status.</p>
+	<p style="margin-left: 72.00pt;">When job tax is &#39;sales&#39;, valid types 
+	 are &#39;sales&#39; &#39;n/a&#39; &#39;prepaid&#39;<br/>
+	When job tax is &#39;exempt&#39;, valid types are &#39;exempt&#39; &#39;n/a&#39; &#39;prepaid&#39;<br/>
+	When job tax is &#39;use&#39;, valid types are &#39;use&#39; &#39;n/a&#39; &#39;prepaid&#39;</p>
+	<p style="margin-left: 36.00pt;">Note that the system may default in 
+	 a tax type of ‘mixed’ but the user is not allowed to select this type. 
+	 Note that the system would generate the ‘mixed’ type if, for example, 
+	 a sales tax group was comprised of two authorities, one of whom taxed 
+	 Other item, and one of whom did not.</p></div>
+<p><span style="font-weight: bold;">Date Completed: (Small Jobs Customization 
+ Only)</span><br/>
+For Jobs with a Contract Type of Small, Costs and Revenues are not recognized 
+ until the Date Completed is set. The Job&#39;s Date Completed field is implemented 
+ via the v.cus file as a special, non-database field that is used to update 
+ a Job User field (specified via registry), ensuring that the Job User 
+ field is set to the correct date format.  Note that a revised v.cus 
+ file is required to support this functionality.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">City  State/Province 
+ Zip/Postal Code</span><br/>
+This information defaults from the Site record to help with the selection 
+ of the Sales Tax Group. </p>
+<p><font style="font-weight: bold;">Project Manager Id: </font><br/>
+Optional. Enter the Id of the Project Manager this Job is assigned to or 
+ double-click on this field to select from a list.</p>
+<p><font style="font-weight: bold;">Project Principal:<br/>
+</font>Optional. Enter the Id of the Project Principal this Job is assigned 
+ to or double-click on this field to select from a list.</p>
+<p><font style="font-weight: bold;">Estimator Id:<br/>
+</font>Optional. Enter the Id of the Estimator assigned to this Job or 
+ double-click to select from a list.</p>
+<p><font style="font-weight: bold;">Rate Schedule Id:</font><br/>
+The default Rate Schedule for billing this Job. Enter a valid Rate Schedule 
+ Id or double-click on this field to select from a list. This field is 
+ mandatory for invoicing.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Foreign 
+ Currency Processing</font><font style="font-weight: bold;">:<br/>
+</font> If the client will be billed in a foreign currency, this field 
+ must reference the appropriate Rate Schedule for this currency/customer.</p>
+<p><font style="font-weight: bold;">Revenue Adjustment Id:<br/>
+</font>If this field is completed, it will default to Work Orders created 
+ for this Job. It is used to enable discounts and add-ons to be applied 
+ to invoices for labor, material, sub and other items.</p>
+<p><font style="font-weight: bold;">Material Price Level:<br/>
+</font>This field overrides the material price level (for Unit Price Inventory 
+ Items) in the Site record in the following cases:</p>
+<p style="margin-left: 36.00pt;">1. When a Work Order is created in New 
+ Call or via Create PM Work Orders, the Price level defaults from the Job 
+ (if set); if not, it will default from the Client Site record. Note that 
+ the Price Code, if present, always comes from the Site.</p>
+<p style="margin-left: 36.00pt;">2. If you specify a Job on a PO, the field 
+ Material Price level in the Job record overrides the material price level 
+ in the Site record when revenue is calculated. Note that you must click 
+ the Magnify button to view Revenue</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Foreign 
+ Currency Processing</font><font style="font-weight: bold;">:<br/>
+</font> If Unit Prices are implemented in Inventory, this field must reference 
+ the appropriate Price Level for this currency/customer.</p>
+<p><font style="font-weight: bold;">Project Id:</font><br/>
+This optional field enables you to group together related jobs for reporting 
+ purposes (e.g., group jobs by client). Note that jobs assigned to a particular 
+ project need not be for the same client. Press Alt+F7 (or double-click 
+ on this field) to display a list of projects to choose from.</p>
+<p><font style="font-weight: bold;">Branch Id:<br/>
+</font>If Branches are implemented on your system, enter the Id of the 
+ Branch responsible for this Job, or double-click to select from a list. 
+ If this Job was cloned via the Clone Job button it will be set from the 
+ template Job <span>unless a registry is enabled to set if from the selected 
+ Site record; see <a href="Registry_Entry_Job_and_Job_Cloning.htm">Registry 
+ Entry Job and Job Cloning</a>.</span></p>
+<p><font style="font-weight: bold;">Job Source Id:</font><br/>
+This optional field is used for reporting/marketing purposes to track how 
+ this job was obtained (for example, referral, cold call, etc.). Enter 
+ the Id or double-click to select from a list.</p>
+<p><font style="font-weight: bold;">AR Terms Id:</font><br/>
+The terms of payment for this job.</p>
+<p><font style="font-weight: bold;">Bill Cycle</font> (1 character)<br/>
+Enter a letter or number that denotes the billing cycle for this Job (e.g., 
+ m=monthly, b=bi-weekly, q=quarterly, etc.). Alternately, this field may 
+ be used to specify that invoices for this job should be reviewed by a 
+ particular individual or department (j=Jean&#39;s Invoices, s=Service Invoices, 
+ etc.). This field is referenced during the compute and post functions 
+ to enable you to select which invoices to compute or post.</p>
+<p><font style="font-weight: bold;">SIC Id:<br/>
+</font>This optional field is used for reporting purposes to track the 
+ SIC (standard industrial classification code) code for this job. Enter 
+ the Id or double-click to select from a list.</p>
+<p><font style="font-weight: bold;">Workers Comp State Id:<br/>
+</font>This field is used to determine how the system should set the Worker’s 
+ Comp Category for hours entered in the Labor Journal, Work Order, and 
+ Remote Time Entry screens. If this is a Job that is performed in the field, 
+ you would typically select the Workers Comp State Id that corresponds 
+ to the state in which the Job is being done.</p>
+<p>When hours are entered, the system looks at the Employee record’s Work 
+ Type to see how it is marked:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">If the 
+ Employee Work Type is marked as Field:<br/>
+</font> It looks at the Job Cost Category that is selected, and then at 
+ the Job’s Workers Comp State ID. Using this information, it then looks 
+ at the WorkersComp tab of the Job Cost Category and pulls in the Workers 
+ Comp Category that matches the WorkersComp State pulled from the Job.</p>
+<p style="text-indent: 30.25pt;">Note: In the Job Cost Category, you cannot 
+ have more than 1 WorkersComp Category per state.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">If the 
+ Employee Work Type is marked as Office:</font> <font style="font-weight: bold;"><br/>
+</font>It uses the WorkersComp Category in the employee record as the default.</p>
+<p><font style="font-weight: bold;">Overhead?</font><br/>
+This box should be checked to indicate that this is an overhead job. It 
+ is used in conjunction with the Overhead Pay Type field in the Employee 
+ record to default the Pay Type for Labor Journal and Labor Journal Remote 
+ entries correctly.</p>
+<p style="margin-left: 8px;">By default, the user is warned when changing 
+ the Overhead? flag on a Job which has non-zero Job History based on the 
+ JCH Hours, Quantity, Total Cost and Total Revenue fields. A <a href="Registry_Entry_Job_and_Job_Cloning.htm#Registry_Job_Prevent_Overhead_Change">registry 
+ entry</a> may be enabled to prevent the user from changing the Overhead? 
+ flag for Jobs with non-zero history.</p>
+<p><font style="font-weight: bold;">Lien Waiver Req&#39;d?<br/>
+T</font>his field should be checked if Lien Waivers are required for this 
+ Job.  Note that Lien Waiver Processing will only be enabled if both 
+ the Vendor and Job require Lien Waivers. The user will be warned when 
+ creating a PO or AP Journal entry for a Job which requires Lien Waivers. 
+ See <a href="Lien_Waiver_Overview.htm">Lien Waiver Overview</a> for additional 
+ information.</p>
+<p><font style="font-weight: bold;">Template<br/>
+</font>If this field is checked, it indicates that it is a template record 
+ that was created for job cloning purposes.  This field may not be 
+ cleared in the Job viewer: use the Job Templates viewer to edit Template 
+ fields.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">NOTE: 
+ Turning a Job into a Template</font><br/>
+In certain cases, a Job may be turned into a template by a user with access 
+ to the Job Template Viewer. However, Jobs that have Recorded Costs or 
+ Billings may not be turned into a Template. Several fields, including 
+ the Date Opened, Date Closed and PO Number will be cleared in this case. 
+ The system displays a warning when a job is set to a template and client 
+ or sites are not template records.</p>
+<p><font style="font-weight: bold;">Clone Job Wizard Buttons</font><br/>
+<img src="assets/images/image/Clone_Job.gif" alt="image\Clone_Job.gif" title="image\Clone_Job.gif" width="56" height="28" border="0"/></p>
+<p><img src="assets/images/image/openClientSite.gif" alt="image\openClientSite.gif" title="image\openClientSite.gif" width="56" height="28" border="0"/> <img src="assets/images/image/SKIN1_openClient.gif" alt="image\SKIN1_openClient.gif" title="image\SKIN1_openClient.gif" width="56" height="28" border="0"/></p>
+<p><img src="assets/images/image/SKIN1_openJobBillingItem.gif" alt="image\SKIN1_openJobBillingItem.gif" title="image\SKIN1_openJobBillingItem.gif" width="56" height="28" border="0"/> <img src="assets/images/image/EditBillingItemCO.gif" alt="image\EditBillingItemCO.gif" title="image\EditBillingItemCO.gif" width="56" height="28" border="0"/></p>
+<p><img src="assets/images/image/SKIN1_openSiteEquipment.gif" alt="image\SKIN1_openSiteEquipment.gif" title="image\SKIN1_openSiteEquipment.gif" width="56" height="28" border="0"/> <img src="assets/images/image/SKIN1_openJobCostCode.gif" alt="image\SKIN1_openJobCostCode.gif" title="image\SKIN1_openJobCostCode.gif" width="56" height="28" border="0"/></p>
+<p>These buttons enable you to use an existing Job as a model to create 
+ a new Job, Site (optional), Client (optional), Billing Item(s), and Cost 
+ Code(s), and to edit the new records. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Clone Job 
+ Button:</span> <span style="font-size: 10.0pt; font-family: Arial, sans-serif; 
+						 mso-fareast-font-family: &#39;Times New Roman&#39;; mso-fareast-theme-font: minor-fareast; 
+						 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+						 mso-bidi-language: AR-SA;">Job Billing Items and 
+ Job Cost Codes flagged as &#39;Obsolete&#39; will also be cloned if the Job 
+ is a true template (with the Template field flagged).</span>  Obsolete 
+ Billing Items and Cost Code from Template Jobs will be cloned to support 
+ scenarios where users may wish to open up Billing Items and Cost Codes 
+ as a complex job progresses.  As in previous releases, Change Orders 
+ and Change Order Requests are not cloned.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Edit Equipment 
+ Button:</span> This button is filtered to only display active equipment. 
+ Note that inactive equipment can be accessed by clicking the Equipment 
+ list’s Filter Records button, and clearing the Inactive range. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Edit Cost 
+ Code Button:</span> The list displayed when this button is clicked excludes 
+ Job Cost Codes flagged as Obsolete.  To also display Obsolete records, 
+ click the Find Data button and clear the Obsolete range. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Edit Billing 
+ Item Button:</span><span> The list displayed when this button is clicked 
+ now excludes Billing Items flagged as Obsolete.  To also display 
+ Obsolete records, click the Find Data button and clear the Obsolete range. 
+ </span></p>
+<p>The system will warn you if you launch the wizard for a Job that is 
+ not flagged as a template. <span style="font-weight: bold;">For details 
+ on using this feature, click on <a href="Clone_Job_Wizard.htm" style="font-weight: bold;">Using 
+ the Clone Job Wizard</a>.</span></p>
+<p><span style="font-weight: bold;">P.W. Schedule Id:</span><br/>
+If this field is completed AND the Prevailing Wage field is set to Labor 
+ Rate, the P.W. Schedule will be used for prevailing wage calculations. 
+ When completed, this field overrides any entries on the Job&#39;s Prevailing 
+ Wages Tab. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">IMPORTANT:</span> 
+ The sys-ffv-global-settings option LaborRatesAndAccrualMethod  must 
+ be set to 7687 to support this functionality. </p>
+<p><font style="font-weight: bold;">Prevailing Wage:</font> <font style="font-weight: bold;">N/A 
+ -  Labor Rate</font><br/>
+If N/A is selected, either this job does not use Prevailing Wages, or uses 
+ the Employee Overrides tab to implement this functionality. The following 
+ validation rules have been added to the Job Viewer added for this field 
+ and the new &#39;Prevailing Wages&#39; tab:</p>
+<p style="margin-left: 36.00pt;">1. Deny all data entry on the Prevailing 
+ Wages tab when the Job&#39;s Prevailing Wage Type is &#39;N/A&#39;.<br/>
+2. Deny entry changes to the Job&#39;s Prevailing Wage Type field when the 
+ Prevailing Wages child tab is not empty.</p>
+<p style="margin-left: 36.00pt;"><span><font style="font-weight: bold;">Tip:</font> 
+ If this is to be a Labor Rate Prevailing Wage Job, select Labor Rate, 
+ and save the record before attempting to complete the P.W, Schedule Id 
+ or to add any lines to the Prevailing Wage tab.</span></p>
+<p><font style="font-weight: bold;">Contact 1: Contact 2:</font><br/>
+Enter the First Name, Last Name, Salutation, Title, Phone, Cell Phone, 
+ Fax and Email address of your primary and secondary contacts regarding 
+ this particular job. If you wish to specify more than one email address, 
+ you may specify an <a href="Email_Group.htm">Email Group</a> or include 
+ multiple email addresses (comma or semi-colon delimited) in the email 
+ address field. </p>
+<p><span style="font-weight: bold;">Client Site Info:</span><br/>
+These display fields list the Client Site&#39;s Name and Work/Ship Address. 
+ </p>
+<p> </p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Job_Invoicing_Tab" id="Job_Invoicing_Tab"></a>Invoicing</p>
+<p style="font-weight: bold;"><img src="assets/images/SKIN1_CopySite.bmp" alt="" style="border: none;" border="0"/>  <img src="assets/images/SKIN1_CopyClient.bmp" alt="" style="border: none;" border="0"/>  <span style="font-weight: normal;">These 
+ buttons may be used to copy the Invoice Address from the Site or Client 
+ record associated with this Job.</span></p>
+<p style="font-weight: bold;"><span style="font-weight: normal;">If the 
+ Sales Tax Group is set in the Zip Code table, entering the Invoice Address 
+ via one of these buttons will also cause the Sales Tax Group to default 
+ on Job&#39;s Main tab from the Invoice Address&#39;s Zip Code unless disabled 
+ via registry.</span><span>  </span></p>
+<p style="font-weight: bold;">Invoice Address:<br/>
+<span style="font-weight: normal;">Note: these fields will be overridden 
+ by the information in the Billing Address Id. It is highly recommended 
+ that the Billing Address Id be used for the invoice address, especially 
+ in the case where you have Multiple sites/jobs which use the same CLIENT) 
+ just in case the Client moves.</span>   </p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Name 
+ on Invoice:<br/>
+</font>This field should contain the name that should appear on this invoice.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Attention 
+ Line:<br/>
+</font>This field enables you to specify an attention line for invoices 
+ generated for this job.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Street 
+ Address: City: State: Zip:<br/>
+</font>The address that invoices for this job should be sent to.</p>
+<p><font style="font-weight: bold;">Billing Address Id:</font><br/>
+This field enables you to specify the job billing address by selecting 
+ it from the Job Billing Address record. If this field is completed, the 
+ Invoice Address and the Invoice Email (if auto-emailing of invoices is 
+ enabled via registry: <a href="Registry_Entry_Report_Service_Invoice.htm">Registry 
+ Report Service Invoice (sys-report-serviceinvoice)</a> ) for this Job 
+ will come from the Job Billing Address record. If the Billing Address 
+ Id is blank, the Invoice Address will come from the Invoice Address fields 
+ to the left.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Work 
+ Order Override:</font><br/>
+If a Billing Address Id is specified in the Work Order, that record will 
+ override both the Job Billing Address Id and the Invoice Address/Invoice 
+ Email Address in the Job record.</p>
+<p><font style="font-weight: bold;">Service Compute?<br/>
+</font>If this box is checked, the service compute method will be used, 
+ and invoices will be generated from the work orders associated with this 
+ job rather than via Record Billing Adjustments. Jobs may be set to Service 
+ Compute unless the invoice status is Printed. If you do so, be sure to 
+ also modify the Invoice and Worksheet Id’s in the Job and Job Billing 
+ items as needed.</p>
+<p><font style="font-weight: bold;">Email Invoice To:<br/>
+</font>If the auto-emailing of service invoices is enabled, the system 
+ will email invoices to this address unless this field is overridden by 
+ the Billing Address Id in the Job or Work Order record.  If you wish 
+ to specify more than one address, you may specify an <a href="Email_Group.htm">Email 
+ Group</a> or include multiple email addresses (comma or semi-colon delimited) 
+ in the email address field. </p>
+<p><span>Double-clicking this field brings up a list of potential email 
+ addresses from the Site and Client records; the User may select an address 
+ from the list. Note that only email addresses including the @ symbol will 
+ be included on the list.  Email Groups will not appear on the list, 
+ but may be added manually and enclosed by brackets [emailgroupid].  </span></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Data 
+ Conversion Notes from 7.0:</font> The Service Invoice and Worksheet reports 
+ use this field instead of the Job Contact 1 Email field for the Auto-emailing 
+ / printing functionality. Note that during database conversion, this field 
+ will be initialized from the Job Contact 1 email field, which was previously 
+ used to support the auto-emailing functionality.</p>
+<p><font style="font-weight: bold;">Invoice:  Report Id:  Report 
+ Query Id:</font><br/>
+Enter the Id&#39;s for the default Invoice Report and Report Query formats 
+ to be used with this Job. These fields provide default values for the 
+ Job Billing Items that you create for this Job. If necessary, the Job 
+ Billing Items may specify different Report Queries for the Invoice Queries 
+ (e.g., a Job Billing Item for Fixed Fee Contracts would specify a different 
+ Invoice Report Query than one designed for the Time and Materials Billing 
+ Item for the same Job).</p>
+<p><font style="font-weight: bold;">Invoiced Thru</font><br/>
+This field is automatically updated when the Compute Job Billing function 
+ is run.</p>
+<p><font style="font-weight: bold;">Job Invoice Description:</font><br/>
+This field prints on the construction invoice (rininv3 format). It may 
+ be updated from here or from the corresponding field in Record Billing 
+ Adjustments.</p>
+<p style="font-weight: bold;">Invoice Status:</p>
+<p class="MsoNormal" style="margin-left: 48px;"><span style="font-weight: bold;">Hold 
+ -</span> This Job’s current Invoice is not ready to be printed, or an 
+ Invoice is not yet associated with this Job. Record Billing Adjustments 
+ (progress billing) or the Work Order&#39;s Ok to Invoice button can be used 
+ to set the Invoice Status to Ready.</p>
+<p class="MsoNormal" style="margin-left: 48px;"><span style="font-weight: bold;">Ready 
+ -</span> The Invoice associated with this Job has been updated and is 
+ ready to be printed.</p>
+<p class="MsoNormal" style="margin-left: 48px;"><span style="font-weight: bold;">Printed 
+ –</span> The Job’s current Invoice has been printed and is eligible for 
+ posting. Service Invoices are printed and posted via the Start Service 
+ Compute function. Progress Invoices are set to Printed via the Report 
+ Invoice 3 or set to Printed in Record Billing Adjustments.\</p>
+<p class="MsoNormal" style="margin-left: 48px;"><span style="font-weight: bold;">Posted 
+ -</span> The Invoice has been Posted. Progress Invoices are posted via 
+ Start Post Job Invoices. Service Invoices are posted during the posting 
+ phase of Compute Service Invoice.</p>
+<p><span style="font-weight: bold;">PM Next Invoice Status</span><br/>
+This display field is with certain Progress Billing Invoice / Project Manager 
+ Workbench DBAnalytics. This field is used in conjunction with the Job&#39;s 
+ Invoice Status field that already controls the back-office invoicing process. 
+ This field has four potential values:</p>
+<p style="margin-left: 48px;">The default value is &#39;Unknown&#39;.  This 
+ is the value assigned to a new Job. When a Progress Billed Job is posted, 
+ the PM Next Invoice Status will be set back to Unknown so that it will 
+ be eligible for additional updates in the Billing Analytic.  </p>
+<p style="margin-left: 48px;">&#39;PM Review&#39; indicates the PM has started 
+ making changes using the Billing Invoices analytic.  In this state, 
+ the changes have not been submitted for use by the back office billing 
+ processes.</p>
+<p style="margin-left: 48px;">&#39;Submitted&#39; indicates the PM has finished 
+ preparing for the next invoice and the back office billing processes can 
+ begin.  Setting the status to &#39;Submitted&#39; can only be achieved by 
+ the PM using the Billing Invoices analytic. The Status will be changed 
+ to Submitted when PM indicates he/she is finished with all necessary. 
+ The PM is not allowed to make changes the Status has the value of either 
+ Submitted or Imported.</p>
+<p style="margin-left: 48px;">&#39;Imported&#39; indicates the back office processing 
+ has begun.  Specifically, the PM&#39;s designated billing values have 
+ been imported into the Billing Items via the Record Billing Adjustments 
+ function.  This takes the place of having back office personnel manually 
+ enter the PM&#39;s billing values.</p>
+<p style="font-weight: bold;"><span> <a name="Job_Contract_Type" id="Job_Contract_Type"></a></span>Job 
+ Contract Type</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Unknown:</span> 
+ This option is selected by default when data is converted from an earlier 
+ version.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Lump:</span> 
+ This option would be used to identify Fixed Fee jobs.  Note that 
+ the Fixed Fee validation is still performed at the Billing Item level.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">T&amp;M:</span> 
+  This option would be used to identify Time and Material Jobs.  Note 
+ that validation is still performed at the Billing Item level.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">GMP Contract:</span> 
+ When GMP Contract is selected, the maximum price for the Job as a whole 
+ must not exceed the sum of the Contract values in its Billing Items / 
+ Change Orders which are flagged as Include in GMP. If the sum of the Billing 
+ Item / Change Order values was exceeded (and Include in GMP is flagged) 
+ , a Job Journal entry will be generated via when Record Billing Adjustments 
+ saved if the Job is brought back into compliance.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">GMP Sov:</span> 
+ When GMP SoV is selected, the maximum price for each Billing Item / Change 
+ Order flagged as Include in GMP must not be exceeded.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Small:</span> 
+ Costs and Revenues are not recognized on a Small Job until the Job Date 
+ Closed is set.</p>
+<p style="margin-left: 88px;"><span style="font-weight: bold;">Modification 
+ to use Date Completed:</span> See the <a href="Registry_Entry_Job_and_Job_Cloning.htm#Small_Jobs_Processing_Modification_to_use_Job_Date_Completed">Registry 
+ to Use the Job Date Completed</a> instead of the Date Closed as a trigger 
+ in Job EOM for Small Jobs. </p>
+<p style="margin-left: 48px;">By default, if the Job&#39;s Contract Type is 
+ set to Small Job, Start Job EOM will automatically use a special WIP method 
+ that will accrue revenue and costs until the Job Date Closed or Completed 
+ field is manually set by a user. Validation logic prevents a user from 
+ changing the Job Date Closed on Small Jobs if it is not blank and the 
+ Job EOM function has been executed for the job.</p>
+<p style="margin-left: 48px;">If the job is closed in the current EOM period 
+ (Job Date Closed not blank) the Start Job EOM will attempt to recognize 
+ any unbilled revenue for this job (Contract amount from billing items), 
+ reversing this transaction in the 1st day of the next accounting period.  When 
+ the job is billed complete no further Job EOM process takes place.</p>
+<p style="margin-left: 88px;"><span style="font-weight: bold;">Note: DR 
+ Underbilling  - CR Income</span><br style="font-family: Verdana, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; 
+												 font-size: 14px; font-variant-ligatures: normal; 
+												 font-variant-caps: normal; 
+												 orphans: 2; widows: 2; 
+												 -webkit-text-stroke-width: 0px; 
+												 text-decoration-style: initial; 
+												 text-decoration-color: initial;"/>
+The G/L accounts used for the posting are set via the sys-job-eom registry.</p>
+<p style="margin-left: 88px;"><span style="font-weight: bold;">Credit POs:</span> 
+ <br/>
+Credit-type POs are excluded from the unreceived lines tests (GEN and INV). 
+ This protocol is needed specifically for Small Jobs because part of Small 
+ Jobs unique functionality is verifying that all purchases have been received 
+ at the time of closing the job. </p>
+<p style="margin-left: 8px; font-weight: bold;">GMP Contact Total:<br/>
+<span style="font-weight: normal;">This field specifies the Not To Exceed 
+ amount for GMP Contract and SOV type Jobs. When this field is updated, 
+ the system will validate that sum of the C.O. Amount (in Change Orders) 
+ and Contract Amount (in Billing Items) does not exceed the GMP Contract 
+ Total.</span> </p>
+<p><font style="font-weight: bold;">Computed Thru: JTD Retainage: Next 
+ Inv. Retainage: Invoice Status:<br/>
+Next Inv.Total: Next Inv.Taxable Amount: Next Inv.Sales Tax: Next Inv.Deposit 
+ to Apply<br/>
+</font> These display-only fields are maintained by the system.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Job_Financial_Tab" id="Job_Financial_Tab"></a>Financial</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font><br/>
+If departmentalizing, profit centers or Intercompany Processing are implemented 
+ at your firm, double-click on this field to select from your firm&#39;s list 
+ of GL Entity Id&#39;s. Select the GL Entity this job is assigned to for income 
+ and expense purposes. This field is designed to provide default values 
+ for Job Cost Codes created for this job.</p>
+<p>When <a href="Intercompany_Processing_Overview.htm">Intercompany Processing</a> 
+ is enabled, the GL Entities specified in the Job record MUST reference 
+ the same Company as the GL Entities specified in its Cost Codes. Validation 
+ will not allow the GL Entity to be changed to one referencing a different 
+ Company. When the Job record is saved/added, validation ensures that all 
+ three Entities on the Job&#39;s Financial tab belong to the same Company. 
+ Whenever any one of the Entities on the Job&#39;s Financial tab is changed, 
+ the system  uses it as a default to set each of the other two Entities 
+ if they are blank (for InterCompany only).</p>
+<p><font style="font-weight: bold;">State Tax Authority: Local Tax Authority: 
+ Other Tax Authority:</font><br/>
+These fields provide the default payroll tax authority values for labor 
+ journal entries for field employees working on this job. You may enter 
+ an Id or double-click on any of these fields to select from a list. If 
+ these fields are completed and an employee is marked &quot;field&quot; 
+ in the Employee record, these payroll tax authority values will override 
+ those default values stored in the Employee record. See <a href="Payroll_Tax_Reciprocity.htm">Payroll 
+ Tax Reciprocity</a> for details.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Additional 
+ Other Taxes:</span><span> If additional Other taxes are levied at this 
+ job site, a registry-enabled enhancement may be used to designate a Job 
+ User field to serve as container for holding additional Tax Authorities 
+ to be evaluated during Payroll Compute; see <a href="Registry_Entry_for_Taxable_Fringe_Benefits.htm#Additional_Other_Taxes">Additional 
+ Other Taxes Registry</a> </span><span>for details.  </span></p>
+<p><font style="font-weight: bold;">Currency Id</font><font style="font-weight: bold;">:</font><font style="font-weight: bold;"><br/>
+</font>This display-only field defaults from the Client record if foreign 
+ currency processing is implemented on your system and if this job’s client 
+ should be paid in a foreign currency.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">GL AR:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Account</font><br/>
+The default A/R GL Account for this Job; this field is required for Invoicing. 
+ An A/R Control Account should be specified.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Entity</font><br/>
+This field should be completed if you are departmentalizing and wish to 
+ have an entity associated with the receivables balance sheet/asset account. 
+ This field will provide a default value for sales journal entries&#39; header 
+ information, and the Cash Receipts journal.  Whenever any one of 
+ the Entities on the Job&#39;s Financial tab is changed, the system uses it 
+ as a default to set each of the other two Entities if they are blank. 
+ This defaulting is only used to change an Entity from blank to non-blank.</p>
+<p style="margin-left: 48px;">When the Job record is saved/added, validation 
+ ensures that all three Entities on the Job&#39;s Financial tab belong to the 
+ same Company.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">GL Retainage:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Account</font><br/>
+If Retainage is implemented on this Job, this GL Account will be debited 
+ when the Job Invoice is posted.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Entity</font><br/>
+This field should only be completed if you are departmentalizing and Retainage 
+ to be assigned to this Entity. Whenever any one of the Entities on the 
+ Job&#39;s Financial tab is changed, the system uses it as a default to set 
+ each of the other two Entities if they are blank. When the Job record 
+ is saved/added, validation ensures that all three Entities on the Job&#39;s 
+ Financial tab belong to the same Company (if applicable).</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Foreign 
+ Currency Note -</font> <font style="font-weight: bold;">GL AR</font> <font style="font-weight: bold;">and</font> <font style="font-weight: bold;">GL</font> 
+ <font style="font-weight: bold;">Retainage Accounts</font><font style="font-weight: bold;">:<br/>
+</font>If the Currency Id field is completed, these fields must match the 
+ corresponding ones in the Currency Master record.</p>
+<p style="mso-list: l0 level1 lfo1;"><span style="font-weight: bold;"><font style="font-weight: bold;">C</font>IP Discount Percent</span><br/>
+This field supports Owner Controlled Insurance Program (OCIP) and Contractor 
+ Controlled Insurance Program (CCIP) discounted insurance job costing. 
+ OCIP/CCIP Job Cost Rate Discounts are implemented by completing this field. The 
+ system will then apply this discount to the non-wage labor (burden) cost 
+ portion of labor posted to the Job for Job Cost Codes with the CIP Discount? 
+  field checked.</p>
+<p style="mso-list: l0 level1 lfo1;"><font style="font-weight: bold;"><span style="font-weight: normal;">This</span> </font>Discount will be implemented 
+ only if the CIP Discount? field is flagged in the applicable Earnings 
+ record AND Job Cost Code record.</p>
+<p style="mso-list: l0 level1 lfo1; margin-left: 48px;"><span style="font-weight: bold;">NOTE:</span> 
+ use of this feature requires that the global registry option <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Refine_Job_Cost_Calculation_for_Labor_">LaborJobCostRateMethod</a> 
+ is set to New.  </p>
+<p><span style="font-weight: bold;"><font style="font-weight: bold;">P</font>.W. 
+ Schedule Id:</span><br/>
+If this field is completed AND the Prevailing Wage field is set to Labor 
+ Rate, the P.W. Schedule will be used for prevailing wage calculations. 
+ When completed, this field overrides any entries on the Job&#39;s Prevailing 
+ Wages Tab. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">IMPORTANT:</span><span> 
+ The sys-ffv-global-settings option LaborRatesAndAccrualMethod  must 
+ be set to 7687 to support this functionality. </span></p>
+<p><font style="font-weight: bold;">Prevailing Wage:</font> <font style="font-weight: bold;">N/A 
+ -  Labor Rate</font><br/>
+If N/A is selected, either this job does not user Prevailing Wages, or 
+ uses the Employee Overrides tab to implement this functionality. The following 
+ validation rules have been added to the Job Viewer added for this field 
+ and the new &#39;Prevailing Wages&#39; tab:</p>
+<p style="margin-left: 36.00pt;">1. Deny all data entry on the Prevailing 
+ Wages tab when the Job&#39;s Prevailing Wage Type is &#39;N/A&#39;.<br/>
+2. Deny entry changes to the Job&#39;s Prevailing Wage Type field when the 
+ Prevailing Wages child tab is not empty.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Tip:</font> 
+ If this is to be a Labor Rate Prevailing Wage Job, select Labor Rate, 
+ and save the record before attempting to <span>set the P.W. Schedule Id 
+ or to</span> add any lines to the Prevailing Wage tab.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field displays the Security Id of the local 
+ user that created this record. If multiple location security is not implemented 
+ on your system, or if this record was created by a global user, this field 
+ will be blank.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Job_User_Fields" id="Job_User_Fields"></a>User 
+ Fields</p>
+<p><font style="font-weight: bold;">Job User1-10:<br/>
+</font> These optional fields may be used to record additional information 
+ required by your company.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Additional 
+ Other Taxes:</span><span> If additional Other taxes are levied at this 
+ job site, a registry-enabled enhancement may be used to designate a Job 
+ User field to serve as container for holding additional Tax Authorities 
+ to be evaluated during Payroll Compute; see <a href="Registry_Entry_for_Taxable_Fringe_Benefits.htm#Additional_Other_Taxes">Additional 
+ Other Taxes Registry</a> for details. </span></p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Job_JC_Summary_Tab" id="Job_JC_Summary_Tab"></a>JC 
+ Summary</p>
+<p>The JC Summary tab displays a Job Cost summary, as well as Job Progress 
+ information similar to what is available on the Project Manager Summary 
+ Report. This tab also includes Aged AR and Budget information.</p>
+<p><span>The Projected values will be adjusted to match Actual if Actual 
+ &gt; Projected. In previous releases, if the Job went over budget, the 
+ Job&#39;s JC Summary tab showed the Projected Values that exceeded the Actual. 
+ The previous behavior  may be implemented via <a href="Registry_Entry_Job_and_Job_Cloning.htm">registry</a>.</span></p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Job_Revenues_Tab" id="Job_Revenues_Tab"></a>Revenues</p>
+<p>This Query-View tab displays the revenues associated with this job.</p>
+<p>Due to the massive amounts of data that may be included for COD and 
+ Template jobs, the system will not populate this tab if the Job is flagged 
+ as a Template, or if the Job does not reference a Client Site.</p>
+<p>The title of the Total Revenue Column includes the Currency Id if it 
+ is specified in the Job&#39;s Client record.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Job_Invoices_Tab" id="Job_Invoices_Tab"></a>Invoices</p>
+<p style="font-weight: bold;"><span>Amount Billed - Amount Paid - Discount 
+ Taken - Balance -  Last Payment Date</span></p>
+<p>This Query-View tab displays the invoices associated with this job. 
+ Reversed invoices will <font style="text-decoration: underline; ">not</font> 
+ appear on this tab.</p>
+<p>Due to the massive amounts of data that may be included for COD and 
+ Template jobs, the system will not populate this tab if the Job is flagged 
+ as a Template, or if the Job does not reference a Client Site.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Job_Purchases_Tab" id="Job_Purchases_Tab"></a>Purchases</p>
+<p>This Query-View tab displays the purchases associated with this job.</p>
+<p>Due to the massive amounts of data that may be included for COD and 
+ Template jobs, the system will not populate this tab if the Job is flagged 
+ as a Template, or if the Job does not reference a Client Site.</p>
+<p>Purchases Orders with a status of Unreleased, PendingCancel and Cancelled 
+ POs will not appear on this tab.</p>
+<p>In previous releases, a PO only displayed if the Job Id was completed 
+ in the header AND the PO had items. The following enhancements have been 
+ made to the current image:</p>
+<p style="margin-left: 36.00pt;">If the PO has no items, it will display 
+ with “Purchase Not Itemized” in the Description field</p>
+<p style="margin-left: 36.00pt;">PO’s will also be displayed if the header 
+ WO Id references the Job.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Job_Billing_Items_Tab" id="Job_Billing_Items_Tab"></a>Billing 
+ Items</p>
+<p><font style="font-weight: bold;">Id – Name - OkTo Bill - FixedFee – 
+ AllowExtras – Retainage –</font></p>
+<p style="font-weight: bold;">ContractTotal – TotalCosts – UnbilledCosts 
+ – Date Completed - Change Order -  <span>CO Request</span></p>
+<p>This Query-View tab displays all active Billing Items associated with 
+ this Job. <span>Note that the Contract Total field will be displayed as 
+ zero for Change Requests and for unapproved Change Orders.</span></p>
+<p style="font-weight: bold;">PM%Earned -  PM$Earned - &#39;PM$NextInv 
+ - PMStatus</p>
+<p><span>These columns display values submitted from the Web PMWB.</span></p>
+<p>You may double-click on a Billing Item line to launch the Job Billing 
+ Item viewer for that record.</p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1', 'POPUP651368439');
+	TextPopupInit('a2', 'POPUP651653488');
+	TextPopupInit('a3', 'POPUP542292731');
+//]]></script>
+
+</body></html>

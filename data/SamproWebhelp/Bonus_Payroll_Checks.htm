@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.6.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="check"/>
+<meta name="MS-HKWD" content="bonus"/>
+<meta name="MS-HKWD" content="payroll"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Bonus Payroll Checks</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="check,bonus,payroll,employee"/><meta name="brsnext" value="Work_Order_Entry.htm"/><meta name="brsprev" value="Start_Work_Order_Batch_Close.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Bonus Payroll Checks">
+        <span>Bonus Payroll Checks</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Bonus Payroll Checks</h1>
+<p>These procedures are designed for use with large bonus checks, typically issue at year end or the holidays.</p>
+<p>These procedures are NOT recommended for bonus checks that are issued to Techs and other employees who are NOT receiving very large lump sum dollar amounts on a periodic basis. Regular bonus checks may be taxed using the annualized tables in your system and will tax the bonus checks at a slightly higher rate. Regular bonus checks can be combined with hourly and salary pay.</p>
+<h2>Bonus Check Procedures Preferred Method (Version 9.0 and Up):</h2>
+<p>1. Establish a new PAYROLL PERIOD for bonus checks. Example: 2017-Sept-B.</p>
+<p style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;">Note:  </font><span>Unless overridden via registry,</span> <font style="font-weight: bold;">BONUS</font> amounts (entered on the Labor Journal) will <font style="font-weight: bold;">NOT</font> Accrue/post to the GL, regardless of how the Accrue to GL field is checked in the Payroll Period.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;">Note: PTO Accrual and Bonus Pay Periods<br/></font>Typically, PTO Hours would not be accrued on bonus payroll periods. Do NOT check the Accrue PTO or the Remote Technician Applet boxes on you Bonus Payroll Period.</p>
+<p>2. Establish a new PAY TYPE if one doesn&#39;t already exist.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Pay Type Id:</span>  Bonus </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Description:</span>  Bonus</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Check Label:</span>  Bonus </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Rate Factor:</span>  1.000</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Show Rate on CK:</span> optional</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Hours Type:</span>  Other</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">GL Acct Id:</span>  GL for Wages or Bonus Wages</p>
+<p class="Reference_Line" style="margin-left: 48px;"><span style="font-weight: bold;">Earnings Grp Id:</span>  n/a</p>
+<p>3. In the LABOR JOURNAL, enter all bonus amounts using the new bonus Pay Period Id setup in step 1 above (example: 2017-Sept-B).</p>
+<p>After inputting zero hours to an overhead Job and your Bonus Pay Type, double click on the MAGNIFY GLASS of the line. Confirm and edit as follows:</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Hours:</span>   000.00</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Salary?</span>  N (not checked)</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Extra?</span>   N (not checked)</p>
+<p class="Reference_Line" style="margin-left: 48px;"><span style="font-weight: bold;">Pay Type Id:</span>  Bonus</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Bonus Amount:</span>  Enter Bonus Dollars to Pay this Employee</p>
+<p style="font-weight: bold; margin-left: 48px;">Federal Tax Rate:<br/>
+State Tax Rate:<br/>
+<span style="font-weight: normal;">These fields provide a flat rate override to the Federal / State Income Tax rate brackets in the Employee&#39;s Federal (FED-M or FED-S) and State Tax Tables. These fields are intended to be used for Bonus pay only. If these field are blank, the Federal / State Tax Table will be used as before.</span> <span style="font-weight: normal;">Enter the appropriate rate for bonuses prescribed by the tax authority.</span></p>
+<p style="font-weight: bold; margin-left: 88px;">Important Notes On Usage:</p>
+<p style="margin-left: 88px;">1. The overriding federal and/or state tax rates are applied directly to the Bonus Amount with which they are associated.  Taxable wage reductions (125, 401k, etc) are NOT applied to the Bonus Amount before computing FIT/SIT using the special tax rates. Tax is on Total Earnings when using this option. If this is not desired, the old methodology of changing the Employee record&#39;s Tax tab to specify a flat tax FED-bonus entry may be used instead.</p>
+<p style="margin-left: 88px;">2. Taxable wage reductions will eventually reduce the Taxable Wages so payroll reports, including W2s, will have the correct info.</p>
+<p style="margin-left: 88px;">Consider the example where an employee received a $10,000 bonus with 20% special FIT tax rate, 10% special SIT tax rate and 5% 401k deduction.  In the event special tax rates have been specified, the following is the order in which the calculations occur:</p>
+<p style="margin-left: 128px;">Gross Wages = $10,000</p>
+<p style="margin-left: 128px;">FIT = $2,000 (10,000 x .2)</p>
+<p style="margin-left: 128px;">SIT = $1,000 (10,000 x .1)</p>
+<p style="margin-left: 128px;">401k = $500 (10,000 x .05)</p>
+<p style="margin-left: 128px;">Taxable Wage = $9,500 (10,000 - 500)</p>
+<p>4. Run the COMPUTE PAYROLL function for the new bonus Pay Period Id and the print the PAYROLL WORKSHEET before printing your checks to confirm your bonus checks are correct for the new bonus Pay Period Id.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Tip:</span> Use Pay/Deduct Cycle Code XXXX to skip all deductions!</p>
+<h2>Alternate Method: Bonus Payroll Checks Procedures – Federal Flat Tax % Using Tax Table</h2>
+<p>1. Establish a new PAYROLL PERIOD for bonus checks. Example: 2017-Sept-B</p>
+<p style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;">Note: <span style="font-weight: normal;">Unless overridden via registry,</span> BONUS</font> amounts (entered on the Labor Journal) will <font style="font-weight: bold;">NOT</font> Accrue/post to the GL, regardless of how the Accrue to GL field is checked in the Payroll Period.</p>
+<p style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;">Note: PTO Accrual and Bonus Pay Periods<br/></font>Typically, PTO Hours would not be accrued on bonus payroll periods. Do NOT check the Accrue PTO or the Remote Technician Applet boxes on Bonus Payroll Periods.</p>
+<p>2. Establish a new PAYROLL TAX TABLE if it doesn&#39;t already exist.</p>
+<p>Tax Table Id:   FED-Bonus</p>
+<p>Tax Table Name: Bonus-Federal</p>
+<p>Tax Authority Id:  FED</p>
+<p>Standard Deduction: 0</p>
+<p class="Reference_Line">Tax Employee = Y, Employee Limit = 0</p>
+<p>Child Tab:  </p>
+<p style="text-indent: 30.25pt;">Limit 999999999.99</p>
+<p style="text-indent: 30.25pt;">Rate 25.0000 (as of 2017; always check your Circular E for the current value)</p>
+<p style="text-indent: 30.25pt;">Addl Amt 0</p>
+<p>3. Establish a new PAY TYPE for Bonuses if one doesn&#39;t already exist.</p>
+<p>Pay Type Id:  Bonus </p>
+<p>Description:  Bonus</p>
+<p>Check Label:  Bonus </p>
+<p>Rate Factor:  1.000</p>
+<p>Show Rate on CK: optional</p>
+<p>Hours Type:  Other</p>
+<p>GL Acct Id:  GL for Wages or Bonus Wages</p>
+<p class="Reference_Line">Earnings Grp Id:  n/a</p>
+<p class="Reference_Line">4. Run the Report PR Employee Tax Table Report before changing any Employee Records.</p>
+<p>5.For each Employee who will be receiving a bonus, go to the Employee Record Tax tab and</p>
+<p style="margin-left: 48px;">a. On the FED-S or FED-M line, uncheck the Always Withhold box and clear the Addt&#39;l Amount</p>
+<p style="margin-left: 48px;">b. Add a FED Bonus line. Check the Always Withhold box.  The A1 boxes and the Addt&#39;l Amounts fields should be blank.</p>
+<p style="margin-left: 48px;">Tip: Rerun the Report PR Employee Tax Table Report to make sure your new setup is correct.</p>
+<p>6. In the LABOR JOURNAL, enter all bonus amounts using the new bonus Pay Period Id setup in step 1 above (example: 2017-Sept-B). In the HOURS CHILD TAB enter zero (0) hours for each Employee to receive bonus checks using an internal Overhead/Admin Job. Change the PAY TYPE ID to Bonus.</p>
+<p>After inputting zero hours, double click on the MAGNIFY GLASS of the line. Confirm and edit as follows:</p>
+<p>Hours:   000.00</p>
+<p>Salary?  N (not checked)</p>
+<p>Extra?   N (not checked)</p>
+<p class="Reference_Line">Pay Type Id:  Bonus</p>
+<p>Bonus Amount:  Enter Bonus Dollars to Pay this Employee</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p>6. Run the COMPUTE PAYROLL function for the new bonus Pay Period Id and the print the PAYROLL WORKSHEET before printing your checks to confirm your bonus checks are correct for the new bonus Pay Period Id (example: Bonus-Sept)</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Tip:</span> Use Pay/Deduct Cycle Code XXXX to skip all deductions!</p>
+<p>7. After PRINTING CHECKS and before the next pay cycle, <font style="font-weight: bold;">be sure to edit your Employees who had received bonus checks to re-establish the proper Federal Tax setup. Your original copy of the Report PR Employee Tax Table will be helpful in doing so.</font></p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">a</font>. On the FED-S or FED-M line, check the Always Withhold box and re-enter the original Addt&#39;l Amount if applicable.</p>
+<p style="margin-left: 48px;">b. On the FED-Bonus line, uncheck the Always Withhold box.  The A1 boxes and the Addt&#39;l Amounts fields should be blank.</p>
+
+</body></html>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.10.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="purge"/>
+<meta name="MS-HKWD" content="event"/>
+<meta name="MS-HKWD" content="starter"/>
+<meta name="MS-HKWD" content="start"/>
+<meta name="MS-HKWD" content="scheduled event"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Scheduled Event Purge</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="purge,event,starter,start,scheduled event"/><meta name="brsprev" value="Start_Scheduled_Event_Manager.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Scheduled Event Purge">
+        <span>Start Scheduled Event Purge</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Scheduled Event Purge</h1>
+<h2>Purpose:</h2>
+<p>Running this function eliminates unneeded records from your system. This function is intended to be run as a repeating scheduled event: an opportunity for the Scheduled Event Manager to maintain itself.</p>
+<h2>Usage:</h2>
+<p>By default, this function now operates as follows in Versions 6.2 and up:</p>
+<p>1. Determine the Purge Thru date by applying the DaysToSave setting (if this registry setting has DaysToSave=# not been made, 60 days will be used) to the current system date.</p>
+<p>2. Purge ALL cancelled and executed events THAT ARE NOT WORK ORDER RELATED.</p>
+<p>3. For Work Order Related Events: only purge those Scheduled Events belonging to Work Orders whose WO Escalation Status is set to Cancelled or Billed AND whose Date Closed makes it eligible for the purge. This function also purges scheduled events for archived Work Orders.</p>
+<p>Note that this function will also delete the Work Order Escalation Profile from the Work Order Main tab if its events are purged by this function. This is to avoid a situation in which the WO viewer can initiate a new list of tech-based events if a user happens to edit and save the WO. </p>
+<p>This functionality may be altered by the registry setting noted below.</p>
+<h2>Registry:</h2>
+<p><a href="Registry_Entry_for_Purge_Scheduled_Events.htm">Registry Entry for Purge Scheduled Events</a></p>
+
+</body></html>

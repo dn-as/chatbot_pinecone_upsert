@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.9.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Project Work Order Generator Overview</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="Milestones,project,Milestone Group,Start Project Work Order Generator,Project Work Order Generator"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Project Work Order Generator Overview">
+        <span>Project Work Order Generator Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Project Work Order Generator Overview</h1>
+<p>The new Project Manager Work Order Generator is designed to streamline 
+ the process of creating a large number of Work Orders to implement a one-time 
+ project.  For example, suppose that your firm wins a contract from 
+ BigBox to install Gizmos at all of its stores.  This will require 
+ hundreds – or thousands – of Work Orders to get the Project completed. 
+  The Project record is the key to the Project Work Order Generator.</p>
+<p class="Support" style="margin-left: 8px;"><img src="assets/images/WOGenOrg.png" alt="" style="border: none;" border="0"/></p>
+<p>The following records must be configured correctly to run the Start 
+ Project Work Order Generator:</p>
+<p><span style="font-weight: bold;">Project:</span><br/>
+The Project specifies the Equipment and Jobs eligible for use in the Create 
+ Project Work Order Generator.  Typically, a new Project, Jobs and 
+ Equipment would be created for each major Project.  After the Project 
+ was completed and billed, the Jobs would be closed, the Equipment marked 
+ Inactive, and the Project obsoleted. <span style="font-weight: bold;"> </span></p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Job:</span><br/>
+Job records used by the Start Project Work Order must reference the selected 
+ Project.  To be used with this function, Jobs should be flagged as 
+ Service Compute.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Site Equipment:</span><br/>
+The Equipment Id must match the Project Id exactly! Complete the Esc. Profile 
+ Id if you want Scheduled Events generated for the Work Order. The Default 
+ Service Job must point to a Job referencing the Project. The Cost Code 
+ and Billing Item must also be completed.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Milestone 
+ Group:</span><br/>
+Defines the Milestones which will be attached to the Work Order. When the 
+ Work Order is generated, the Days and Minutes Offset will be used to calculate 
+ the End Date and End Time on the Work Order’s Milestone line based on 
+ the Date / Time Must Complete.  </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Call Script:</span><br/>
+A Closing Call Script may be applied to the Work Orders if required. <span style="font-weight: bold;"> </span></p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Work Code:</span><br/>
+The user may select a Work Code to be applied to the generated Work Orders. 
+ The Work Code Id is also used to determine if a matching WO already exists 
+ for a given Job. </p>
+<p>Once the records have been correctly configured, <a href="Start_Project_WO_Generator.htm">Start 
+ Project Work Order Generator</a> should be run to create the Work Orders 
+ needed to implement the Project. </p>
+<p style="font-weight: bold;"><img src="assets/images/WOGenFlow.png" alt="" style="border: none;" border="0"/></p>
+
+</body></html>

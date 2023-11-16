@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="user registry"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="user"/>
+<meta name="MS-HKWD" content="user accounts"/>
+<meta name="MS-HKWD" content="sys-ffv-global-settings"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>User Registry Entries</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="user registry,registry,user,user accounts,sys-ffv-global-settings"/><meta name="brsnext" value="Vendor_Open_Invoices_Tab.htm"/><meta name="brsprev" value="Buttons_Single_View.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="User Registry Entries">
+        <span>User Registry Entries</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>User Registry Tab Entries</h1>
+<h3>Purpose:</h3>
+<p>These fields may be used to add to / override sys-ffv-global-settings 
+ for this User. Since these settings are loaded when the user logs on, 
+ he or she must log on after User Registry changes are made to see them 
+ in effect.</p>
+<p><font style="font-weight: bold;">DBAnalytics:</font> User registry entries 
+ also override entries in the <a href="Registry_DB_Analytics_Dashboard.htm">sys-dashboard</a> 
+ registry setting.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h3>Related Registry Options:</h3>
+<p>See <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm">Registry 
+ Global Settings (sys-ffv-global-settings)</a> for additional options that 
+ may be used on this tab.</p>
+<h3>User Registry Option to Specify Maximum Dollar Amount of Released PO’s</h3>
+<p><font style="font-weight: bold;">Key:</font> maxpoamount <font style="font-weight: bold;">Value:</font> limit in dollars</p>
+<p>If this User Registry entry not implemented (and the User is flagged 
+ as a Purchasing Agent), the user is not limited to the dollar amount of 
+ a PO that he can save as Released.</p>
+<p>If this User Registry is implemented for a User flagged as a Purchasing 
+ agent, the PO cannot be released if the PO amount exceeds this field; 
+ the PO must be saved as Unreleased. A User (who is also a Purchase Agent) 
+ with a higher maxpoamount can edit and release the PO in this situation.</p>
+<p style="margin-left: 36.00pt;">Example: To specify a $600 maximum release 
+ PO limit for this User:</p>
+<p style="margin-left: 36.00pt;">User Registry: Key: maxpoamount Value: 
+ 600</p>
+<p>NOTE: the dollar amount of the released PO may also be limited by the 
+ PO Limit per WO found in the Vendor record.</p>
+<h3>Credit Manager Rights</h3>
+<p>If the Credit Manager? Boolean is checked in the User upper setting, 
+ the User is considered a Credit Manager for ALL order types. In this release, 
+ the User Registry tab settings allows COP or Work Order Credit Manager 
+ rights to be specified as follows:<br/>
+</p>
+<p>If the Credit Manager flag is unchecked but the User Registry Tab has 
+ the following setting, then the user is allowed to approve credit on COP 
+ orders.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Key:</font> 
+ CreditManagerCOP <font style="font-weight: bold;">Value:</font> true</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> 
+ For Client Orders, the user should enter all lines BEFORE flagging the 
+ Credit Approved box on the AR tab since the COP Credit Approval is for 
+ the specific amount entered on the order.</p>
+<p>If the Credit Manager flag is unchecked but the User Registry Tab record 
+ has the following setting, then the user is allowed to approve credit 
+ on work orders</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting 
+ Key:</font> CreditManagerWO <font style="font-weight: bold;">Value:</font> 
+ true</p>
+<h3>CRMAnywhere Gmail Calendar Interface</h3>
+<p style="word-break: normal;"><span style="punctuation-wrap: hanging;">See 
+ Registry CRM Gmail Calendar 
+ for setting up an interface between CRMAnywhere and a Gmail calendar.</span></p>
+<h2>DB Analytics Registry Options</h2>
+<p>Except for StartDashboard, the following options override in those found 
+ in <a href="Registry_DB_Analytics_Dashboard.htm">Registry DB Analytics 
+ Dashboard</a> .</p>
+<h3>Start DB Analytics when Launching SAM Pro</h3>
+<p><font style="font-weight: bold;">Key:</font> StartDashboard <font style="font-weight: bold;">Value:</font> true</p>
+<p>This option launches the user’s DB Analytics Dashboard and logs them 
+ in when they log onto SAM Pro. The user will be automatically logged on 
+ with his/her SAM Pro password. If this option is not implemented, the 
+ user may start DB Analytics from SAM Pro by using the Starter function 
+ Start Dashboard Helper.</p>
+<h3>Specify Web Server Port by User for DB Analytics</h3>
+<p><span style="font-weight: bold;">IMPORTANT</span>: 
+ A sys-dashboard registry option is now available to specify a <a href="Registry_DB_Analytics_Dashboard.htm#WebServer_Port_Range">WebserverPortRange</a> 
+ making individual settings unneeded. </p>
+<p><font style="font-weight: bold;">Key:</font> DashboardWebServerPort <font style="font-weight: bold;">Value:</font> NNNN</p>
+<p>If multiple users running from the same terminal server will be accessing 
+ DB Analytics from an active SAM Pro session, each user on the server must 
+ have a unique web server port value on the server machine.</p>
+<p>Enter a unique four digit port number for this user. It must be different 
+ from the WebServerPort in the sys-dashboard registry entry, as well as 
+ the other DashboardWebServerPort settings in User’s record.</p>
+<p>The setting values for these options will depend on your system’s implementation 
+ – consult with your support rep for detail.</p>
+<p style="margin-left: 36.00pt;">Note: Most registry options defined in 
+ sys-dashboard may be overridden in the User Registry Tab by pre-pending 
+ the Key Value with Dashboard. For example:</p>
+<p style="margin-left: 36.00pt;">In sys-dashboard Setting Key is WebServerPort</p>
+<p style="margin-left: 36.00pt;">In User Registry, Key is DashboardWebServerPort</p>
+<h3>Specify DBAnalytics Browser (Obsolete 
+ in 9.1.611.058 and Above)</h3>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Important:</span> 
+ The following registry option is obsolete in SAMPro Version 9.1.611.058 
+ and above. The user&#39;s default browser will be used instead of the registry 
+ specified option. </p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Setting 
+ Key:</font> DashboardBrowserName <font style="font-weight: bold;">Setting 
+ Value:</font> executable file</p>
+<p style="margin-left: 48px;">This setting overrides the default browser 
+ specified in the sys-dashboard registry. Note that DB Analytics users 
+ must have a current version of the browser specified in this setting.</p>
+<p style="margin-left: 88px;"><font style="font-weight: bold; text-decoration: underline; ">Example: 
+ Chrome</font> <font style="font-weight: bold; text-decoration: underline; ">(preferred 
+ browser for DB Analytics)</font></p>
+<p style="margin-left: 88px;"><font style="font-weight: bold;">Setting 
+ Key:</font> DashboardBrowserName <font style="font-weight: bold;">Setting 
+ Value:</font> chrome.exe</p>
+<p style="margin-left: 88px;"><font style="font-weight: bold; text-decoration: underline; ">Example: 
+ Firefox</font></p>
+<p style="margin-left: 88px;"><font style="font-weight: bold;">Setting 
+ Key:</font> DashBoardBrowserName <font style="font-weight: bold;">Setting 
+ Value:</font> firefox.exe</p>
+<p style="margin-left: 88px;"><font style="font-weight: bold; text-decoration: underline; ">Example: 
+ Internet Explorer</font></p>
+<p style="margin-left: 88px;"><font style="font-weight: bold;">Setting 
+ Key:</font> DashboardBrowserName <font style="font-weight: bold;">Setting 
+ Value:</font> iexplore.exe</p>
+<h3>Enable Post History Processing (for ADP users)</h3>
+<p>The Post History button (in the Payroll Period) should only be enabled 
+ for payroll service users who export data, but do not print and post checks.  If 
+ you use the Post History function, you cannot print a paycheck for employees 
+ impacted by the post for the selected Payroll Period.</p>
+<p>The new process replaces the print/post check functionality to enable 
+ use of certain payroll reports that present valid information such as 
+ workers compensation. When run, it sets the Payroll History Date Effective 
+ to the Last Check Date from the Payroll Period, and the Source Journal 
+ to registry setting described below or ‘ADP Export’ if the registry is 
+ not present.</p>
+<p style="font-weight: bold;"><span style="font-weight: bold;">User Registry 
+ Tab:</span></p>
+<p><span style="font-weight: bold;">Key:</span> OkToPostPRHistory                <span style="font-weight: bold;"> Value:</span> true</p>
+<p>This functionality may be implemented for specific users via the User 
+ record’s Registry tab.</p>
+<p>This functionality may alternately be implemented for all users with 
+ access to the Payroll Period:</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Registry 
+ Id:</span> sys-viewer-vpyrllprd</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting 
+ Key:</span> PostSourceDescription            <span style="font-weight: bold;"> Setting Value:</span> <i>Description</i></p>
+<p style="margin-left: 48px;">This registry option provides a description 
+ for Payroll History entries generated by clicking the Post History button. 
+ If this registry entry is not enabled, the default value of ‘ADP Export’ 
+ will be written to Payroll History.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setting 
+ Key:</span> OkToPostPRHistory                   <span style="font-weight: bold;">Setting Value:</span> true</p>
+<p style="margin-left: 48px;">This functionality may be enabled for all 
+ users with access to the Payroll Period by implementing this registry 
+ entry. The preferred method is to implement it for specific users via 
+ the User record’s Registry tab.</p>
+<h3>User Registry to Filter Which Employees 
+ a Foreman in TimeAnywhere 2.0 Can Manage</h3>
+<p style="language: en-US; direction: ltr; 
+									 unicode-bidi: embed; mso-line-break-override: none;"><span style="word-break: normal; punctuation-wrap: hanging;">On the Registry 
+ tab of the Foreman’s User record, indicate the fields you would like to 
+ use to narrow down the number of Techs a Foreman can view from the field. 
+ Use any of the following fields in the Key column:</span></p>
+<p style="font-weight: bold; direction: ltr; 
+									 unicode-bidi: embed; mso-line-break-override: none; 
+									 word-break: normal;"><span style="punctuation-wrap: hanging; 
+	 language: en-US;">Key:</span></p>
+<p style="margin-left: 48px; language: en-US; 
+									 direction: ltr; unicode-bidi: embed; 
+									 mso-line-break-override: none;"><span style="word-break: normal; punctuation-wrap: hanging;">TimeAnywhereEmployeeType<br/>
+ TimeAnywhereEmployeeBranch<br/>
+ TimeAnywhereEmployeeUser1<br/>
+ TimeAnywhereEmployeeUser2<br/>
+ TimeAnywhereEmployeeUser3<br/>
+ TimeAnywhereEmployeeUser4<br/>
+ TimeAnywhereEmployeeUser5<br/>
+ TimeAnywhereEmployeeUser6<br/>
+ TimeAnywhereEmployeeUser7<br/>
+ TimeAnywhereEmployeeUser8<br/>
+ TimeAnywhereEmployeeUser9<br/>
+ TimeAnywhereEmployeeUser10</span></p>
+<p style="language: en-US; margin-left: 8px; 
+									 direction: ltr; unicode-bidi: embed; 
+									 mso-line-break-override: none;"><span style="word-break: normal; punctuation-wrap: hanging; font-weight: bold;">Value:</span> 
+ <span style="word-break: normal; punctuation-wrap: hanging; font-style: italic;">The 
+ value or list of values in the key field of Employees the Foreman should 
+ be able to see</span></p>
+<p style="margin-left: 48px;">The Value 
+ column should list the field values of the Techs your Foreman will be 
+ able to see. Field values should be separated by commas (i.e. East,Wsest).</p>
+<p style="margin-left: 48px;">If a Foreman, 
+ for example, has a customized field placing him in the East district, 
+ he will be able to enter information for himself even if his User registry 
+ is set to West. For the Foreman to be able to enter information for other 
+ Techs in the East and West districts, his User registry should list both- 
+ East,West. Note that a Foreman will always be able to enter time for himself 
+ even if his value is not included in the User Registry.</p>
+<h3>Default Location/Tax Group for DBSellpoint</h3>
+<p>The Sales Tax Group on the default 
+ Client Site&#39;s COP tab is the one for the brick and mortar DBSellpoint 
+ location the DBSellpoint User is stationed at. <span style="font-weight: bold;">This 
+ Sales Tax Group will be used for ALL DBSellpoint transactions.</span> 
+ The default Site must be specified in the User&#39;s Registry tab for each 
+ DBSellpoint User.</p>
+<p><span style="font-weight: bold;">Key:</span> 
+  defaultSite   <span style="font-weight: bold;">Value:</span> 
+ <span style="font-style: italic;">Site Id</span></p>
+<p> </p>
+
+</body></html>

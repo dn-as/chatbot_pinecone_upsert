@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.1.0_13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="foreign currency"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="currency conversion"/>
+<meta name="MS-HKWD" content="sys-currency-adjust"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Currency Adjustment (sys-currency-adjust)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="vendor,foreign currency,registry,currency conversion,sys-currency-adjust"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Currency Adjustment (sys-currency-adjust)">
+        <span>Registry Currency Adjustment (sys-currency-adjust)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Currency Adjustment (sys-currency-adjust)</h1>
+<h2>Purpose:</h2>
+<p>This registry enables the system to support multi-national currency for both payable and receivable transactions.</p>
+<p>This registry also specifies the default Currency Adjust GL Account in the GL tabs of the AP, AR Sales and AR Cash Receipts Journals. This is the account that rounding errors (which may occur when detail vs. total lines are calculated during currency conversion) will be posted to.</p>
+<p class="Body_Text_Indent" style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline;">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Background and Usage:</h2>
+<p>If the <a href="Currency_Master_Record.htm">Currency Id</a> field is completed in the AP, AR Sales or AR Cash Receipts journals, it indicates to the system that the amounts being entered are in the currency of original origin, rather than the native currency in which your GL is maintained. The Currency Id will default into the AP Journal from the Vendor record. The Currency Id for the AR Sales and Cash Receipts Journal derives from the Client record.</p>
+<p style="margin-left: 8px;">GL History will SOMETIMES be converted:</p>
+<p style="margin-left: 48px;">Transactions written to the GL AP Control, GL AR Control, and Bank Accounts associated with a Currency Master Record in NOT be converted to local currency.</p>
+<p style="margin-left: 48px;">Transactions that record expenses will always be converted to your firm’s local currency.</p>
+<p style="margin-left: 48px;">Differences between the foreign and local currency will be written to the Foreign Exchange Gain/Loss Account</p>
+<h2>Important Fields:</h2>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Id:</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;"> sys-currency-adjust</p>
+<h3>Enable Currency Conversion for GL</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> GLenabled <font style="font-weight: bold;">Setting Value:</font> Yes (or yes)</p>
+<p>If this option is implemented, currency conversion is enabled for GL; otherwise it is disabled. Note that this flag is cached the first time it is referenced during a logon session. </p>
+<h3>Enable / Disable Currency Conversion for JCH</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> JCHenabled <font style="font-weight: bold;">Setting Value:</font> Yes <font style="text-decoration: underline;">or</font> No (default Yes)</p>
+<p>To disable currency conversion to JCH, the value to No or no.</p>
+<p>If <font style="font-weight: bold;">the JCHenabled option is not found or is blank, the default behavior is to enable currency adjustments.</font> Note that this flag is cached the first time it is referenced during a logon session.</p>
+<h3>Specify An Abbreviation for your Local Currency</h3>
+<p style="text-indent: 30.25pt;"><font style="font-weight: bold;">Setting Key:</font> localcurrency <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">abc</font></p>
+<p style="margin-left: 36.00pt;">where <font style="font-style: italic;">abc</font> is replaced by an abbreviation for your local currency (for example, localcurrency=CND if you r local currency is Canadian dollars, or localcurrency=USD if your local currency is in US dollars.</p>
+<p style="margin-left: 36.00pt;">This field will be used to display the local currency for reporting purposes. It is also displayed in the GL Account viewer for GL Accounts that are not references as</p>
+<p><font style="font-weight: bold;">NOTE:</font> the GLAccount= option previously used to set the Currency Adjustment Account is now obsolete. Its function has been replaced by the Foreign Exchange Gain/Loss Account specified in the Currency Master Record.</p>
+
+</body></html>

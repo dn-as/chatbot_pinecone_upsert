@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.6.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Compute Payroll and Compute Overtime</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="overtime,payroll,compute overtime,compute payroll"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Compute Payroll and Compute Overtime">
+        <span>Compute Payroll and Compute Overtime</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Compute Payroll and Compute Overtime</h1>
+<h3>Changes to Compute Payroll to Support Compute Overtime</h3>
+<p style="margin-left: 8px; font-weight: normal;">A result of reclassifying 
+ the excess regular hours, is the creation of a new overhead expense equal 
+ to the amount of each employee&#39;s Overtime Premium Pay.  For 
+ example, assume an employee making $20 per hour had 8 excess regular hours 
+ in the period.  The overtime premium would be computed as follows 
+ ...<br/>
+<br/>
+  ($20 x 8 hours x 1.5) - ($20 x 8 hours) = $80.<br/>
+<br/>
+The modified Compute Payroll process now takes the Overtime Premium Pay 
+ and distributes it across the various non-overhead jobs charged during 
+ the period.  Using the above example, assume the employee worked 
+ 33 hours on Direct Job A, 11 hours on Direct Job B and 4 hours on an Overhead 
+ Job.  Using the 44 (33 + 11) direct hours as a base, the OT 
+ Premium would get allocated as follows ...<br/>
+<br/>
+  Job A: $80 x (33 / 44) = $60<br/>
+  Job B: $80 x (11 / 44) = $20<br/>
+<br/>
+<span style="font-weight: bold;">NOTE:</span> The actual distribution is 
+ made by Job, Cost Code, Billing Item, Cost Category, Labor Rate, Earnings 
+ Group, Pay Type, GL Entity, Work Order and Date Worked.</p>
+<p style="margin-left: 8px; font-weight: normal;"><span style="font-weight: bold;">NOTE:</span> 
+ the Earnings ID in the Employee&#39;s Earnings Tab must have appropriate wage 
+ lines flagged as &quot;Add Pay Rate Factor?&quot; in order for this functionality 
+ to work.</p>
+<p style="margin-left: 8px; font-weight: normal;">See <a href="Start_Compute_Overtime.htm">Start 
+ Compute Overtime</a> , <a href="Registry_Start_Compute_Overtime.htm">Registry 
+ Start Compute Overtime</a> and <a href="Compute_Payroll.htm">Compute Payroll</a> 
+ for additional information.</p>
+<p style="font-weight: bold;"><span style="font-weight: normal;">See <a href="Compute_Overtime_(No_Check_Printing_or_Posting).htm" style="font-weight: normal;">Compute 
+ Overtime - No Checks Printed or Posted</a> for details/additional 
+ registries for computing overtime when checks will not be generated.</span></p>
+
+</body></html>

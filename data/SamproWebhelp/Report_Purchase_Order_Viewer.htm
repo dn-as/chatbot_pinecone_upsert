@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.13.3.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="po"/>
+<meta name="MS-HKWD" content="purchase order"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report Purchase Order Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="po,purchase order,report"/><meta name="brsprev" value="Cost_of_Sales_of_Manufactured_Items_Report.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report Purchase Order Viewer">
+        <span>Report Purchase Order Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report Purchase Order</h1>
+<h2>Purpose:</h2>
+<p>Print purchase and change orders.</p>
+<h2>Usage:</h2>
+<p>Required to run reports manually. When you click the Go button, the system may ask you to select a printer. If you elected to Preview the Report, it will appear on your screen.</p>
+<p>If you confirm that the Purchase Order has printed successfully, its status will be updated (e.g. to Printed or Changed).</p>
+<p>All amounts on the printed PO form will appear in the foreign currency of the Vendor. The Currency Abbreviation (from the Currency Master record) will appear on to the right of the Estimated Total.</p>
+<h2>Registry Entries:</h2>
+<p><a href="Registry_Entry_to_Autosave_Report.htm">Registry Entry for Report Graphics and Autosave</a></p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Report Options:</font><br/>
+The Report Options selector pane controls how the report will be output. Click <a href="Report_Options.htm">Report Options</a> to learn more.</p>
+<p><font style="font-weight: bold;">Report Ranges:</font><br/>
+The Report Ranges selector pane enables you to select a customized range for the report. When you click on a range, the criteria defining it will appear in the ID field(s). Creating a customized report range is discussed below. Notice that you must name a custom range in order to save it.</p>
+<p><font style="font-weight: bold;">Range:</font><br/>
+Enter a unique, alphanumeric name to save and identify your customized report Range. Ranges are defined by the contents of the ID field(s).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;" color="#0000FF">Hint:</font> You can create user-defined report ranges that are available to all users with access to that report. To do so, the first character of the named range should be an asterisk. Named ranges beginning with an asterisk will appear on all users&#39; report ranges options so that they can be selected (but not altered) by any user with access to that report. Only the user that created the report range is allowed to alter it.</p>
+<p><font style="font-weight: bold;">PO Id:</font><br/>
+Enter the Id of the PO (or PO&#39;s) that you wish to print or double-click to select from a list. See the section entitled <font style="font-style: italic;">Additional Rules..</font> below for more details on specifying PO Id&#39;s.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;" color="#0000FF">Hint:</font> Entering PO Fields<br/>
+Since all PO&#39;s in the system will be printed if you leave the fields open, you will either want to specify the PO Id&#39;s to print, or a combination of who ordered the PO and the status of the PO. For example, to only print Released PO&#39;s created by user Jones, you would enter Jones in the Ordered By range, and Released in the Status range.</p>
+<p><font style="font-weight: bold;">Ordered By:</font><br/>
+To limit the PO&#39;s on this report to those ordered by a specific user, enter the User Id</p>
+<p><font style="font-weight: bold;">Status</font><br/>
+To limit the report to those PO&#39;s of a particular status, enter the PO Status in this range. Valid status options include:</p>
+<p style="margin-left: 48px;"> Unreleased  Released  Printed   Changed<br/>
+ PendingCancel  Cancelled  Closed</p>
+<p><font style="font-weight: bold;">Line Status</font><br/>
+To limit the report to those PO&#39;s with lines of a particular status, enter the Line Status in this range. Valid line status options include:  new  printed  changed</p>
+<p><font style="font-weight: bold;">Comparison Operators</font></p>
+<p><a href="Comparison_Operators.htm">Comparison Operators</a> may also be used to filter the report.<br/></p>
+<h2>Important Buttons<font style="font-size: 9pt;" color="#000000" size="2">:</font></h2>
+<p>Click on the following button to see additional information.</p>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Go run the report.  </p>
+
+</body></html>

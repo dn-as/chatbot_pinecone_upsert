@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>List Pane Column Filtering</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="line view,list,filter,column,filter list,filter column,column filter,list pane filter"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="List Pane Column Filtering">
+        <span>List Pane Column Filtering</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>List Pane Column Filtering</h1>
+<p>On list panes, you can right click on column titles to apply filters to the column. This includes both record lists and lists displayed via child and parent tabs. On record lists, this saves you the trouble of going back and forth to the range screen to do your filtering.</p>
+<p>* To filter a column, right click on the column title and enter the filter on the subsequent popup.</p>
+<p class="Support" style="margin-left: 8px;"><img src="assets/images/filterpopup.jpg" alt="" style="border: none;" width="585" height="183" border="0"/></p>
+<p>* The list will be redisplayed with the filter applied. The column title will be displayed with the column title and text colors reverses o indicate that a filter on the column is being applied.</p>
+<p class="Support" style="margin-left: 8px;"> <img src="assets/images/filterstatuspane.jpg" alt="" style="border: none;" width="622" height="323" border="0"/></p>
+<p class="Support" style="margin-left: 48px;"> </p>
+<p>The new list pane filtering functionality is very similar to filtering you are used to in range screens and DBAnalytics. The following documentation provides details and examples on using the list pane filtering.</p>
+<p>* Filters may be applied to multiple columns.</p>
+<p>* To remove a filter, enter a blank filter in the popup.</p>
+<p>* To apply a blank filter, enter a filter value of ‘=’ in the popup.</p>
+<p>* After a filter is applied, the list will always revert to its original sort order.</p>
+<p>* Filters on numeric columns will use numeric comparison operators. Case insensitive String comparison operators will be used on all other columns. This means that for numeric column (but not a String column), a filter of ‘5000’ will match a column value of ‘5,000.00’. A column is deemed numeric if</p>
+<p style="margin-left: 48px;">o All its contents in the list are numeric</p>
+<p style="margin-left: 48px;">o And the entered filter is also numeric.</p>
+<p style="margin-left: 8px;">The filter format is similar to that used by the ‘Find Data’ button  The filter consists of one or more ‘or clauses’ separated by commas.</p>
+<p style="margin-left: 8px;">Each ‘or clause’ can be in one of these two formats:</p>
+<p style="margin-left: 48px;">? &lt;not&gt;&lt;operator&gt;value</p>
+<p style="margin-left: 48px;">* &lt;not&gt; is the optional ‘not operator’ (‘!’)</p>
+<p style="margin-left: 48px;">* Valid &lt;operator&gt;s are</p>
+<p style="margin-left: 48px;"> ‘=’<br/>
+ ‘&lt;&gt;’<br/>
+  ‘&gt;’<br/>
+ ‘&gt;=’<br/>
+ ‘&lt;’<br/>
+ ‘&lt;=’</p>
+<p style="margin-left: 8px;">* If no operator is present, ’=’ is assumed.</p>
+<p style="margin-left: 8px;">* Examples:</p>
+<p style="margin-left: 88px;">50 (and the equivalent ‘=50’)<br/>
+&lt;50<br/>
+!&lt;50 (equivalent to ‘&gt;=50)<br/>
+&gt;=2017-01-01<br/>
+? &lt;not&gt;&lt;firstValue&gt;_&lt;lastValue&gt;<br/>
+* &lt;not&gt; is the optional ‘not operator’ (‘!’)<br/>
+* The values represent an inclusive range<br/>
+* Example: 2017-01-01_2017-12-31<br/></p>
+<p style="margin-left: 48px;">The list of ‘or clauses’ can be proceeded with a ’global not’ operator ( ‘~’). So while</p>
+<p style="margin-left: 48px;">50,60</p>
+<p style="margin-left: 48px;">will include all lines having a value of 50 or 60 in the column,</p>
+<p style="margin-left: 48px;">~50,60</p>
+<p style="margin-left: 48px;">will include all lines NOT having a value of 50 or 60 in the column.</p>
+<p style="margin-left: 8px;">* ‘Wild Card’ filters may be used with the actual or implied ‘=’ operators on non-numeric columns. eiither ‘%’ or ‘*’ may be used as the Wild Card character.</p>
+<p style="margin-left: 8px;">* If you enter a column filter that would result in no lines being displayed:</p>
+<p style="margin-left: 48px;">An Error Message will be displayed.<br/>
+The list will not be updated.<br/>
+The filter will be restored to its previous value.</p>
+<p style="margin-left: 8px;">When you hover the mouse over a title column, the status pane will now display the following:</p>
+<p style="margin-left: 48px;">A reminder that you can left click on a column to sort the list by that column.<br/>
+A reminder that you can right click on a column to apply a filter to that column.<br/>
+In addition, the current value of the filter (if there is one) will be displayed.</p>
+
+</body></html>

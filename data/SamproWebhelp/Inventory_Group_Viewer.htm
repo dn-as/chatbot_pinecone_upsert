@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.2.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="unvouchered payables"/>
+  <meta name="MS-HKWD" content="inventory"/>
+  <meta name="MS-HKWD" content="group"/>
+  <meta name="MS-HKWD" content="EOM"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Inventory Group Viewer</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="unvouchered payables,inventory,group,EOM"/>
+<meta name="brsnext" value="Location_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Inventory Group Viewer">
+        <span>Inventory Group Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Inventory Group Viewer</h1>
+  <h2>Purpose:</h2>
+  <p>Create and maintain the groups into which your inventory items are organized and indicates whether or not these items are taxable. This viewer is also used to specify the GL Accounts affected by the purchase, sale, and transfer of inventory items belonging to this inventory group.</p>
+  <h2>Example:</h2>
+  <p>Depending upon how you choose to organize your parts, you might choose to create groups for copper piping, boilers, air conditioners, etc.</p>
+  <h2>Usage:</h2>
+  <p>Referenced in Records: Inventory Item. A specific inventory item can be associated with only one Inventory Group.</p>
+  <h2>Important Fields:</h2>
+  <p>
+    <font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of all fields that may be included in this record. If you are using a customized system, the fields displayed on your screen may not exactly match the order or status (required, optional, default, display-only, hidden, etc.) of the fields described in this Topic.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Inventory Group Id:</font> (10 character, only . and - special characters)<br/>
+    A unique Id for this Inventory Group. This field is required.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Special Group for Non-Inventory Materials</font><br/>
+    If you create an Inventory Group with the Inventory Group Id <font style="font-weight: bold;">misc</font> the system will use this group to default GL Account information for Purchase Orders of non-inventory materials. The misc group is also used in conjunction with the <a href="Create_EOM_Unvouchered_AP_GL_Entries.htm">Create EOM Unvouchered AP GL Entries</a> function. <span style="font-weight: bold;">WARNING:</span> Typically, you would NOT enter a GL Entity for the misc group. If you do so, the Entity in the Inventory Group will override the Entity in the Job Cost Code (which is typically the one you want) when a line is entered.
+  </p>
+  
+  
+  
+  
+  
+  <p>
+    <font style="font-weight: bold;">Inventory Group Description:</font> (40 character)<br/>
+    A brief description of the group. This field is optional.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Taxable?</font><br/>
+    Reserved for future use.  This field does NOT impact whether or not an inventory item is considered taxable.
+  </p>
+  <p>In SAMPro, if an inventory item is NOT flagged taxable, it should NOT calculate tax.</p>
+  <p>When the integration with Avalara is enabled, the calculation is no longer done by SAMPro. This means that whether or not an item is taxed is determined exclusively by Avalara, as it does not consider whether or not this is selected in SAMPro.</p>
+  <p>This flag will remain available to allow proper record keeping (for historical purposes as well as any other required reason).</p>
+  <p>
+    <font style="font-weight: bold;">GL Entity Id:</font><br/>
+    WARNING: Use of this field is currently NOT recommended for most installations. Typically, you would NOT enter a GL Entity for the misc group. If you do so, the Entity in the Inventory Group will override the Entity in the Job Cost Code (which is typically the one you want) when a line is entered.
+  </p>
+  <p class="Support"></p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Note: on Purchase Orders</font> for items not purchased to a Work Order or Job, the GL Entity will also default from the Location record if it is not specified here. The Entity may be specified in the Location Record or the Inventory Group record, but should NOT be specified in both.
+  </p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Apply Location Burden?</span><br/>
+    If this field is checked, the Burden Rate % in the Location record will be used to calculate the Unit Burden Cost in Job History when an Inventory Adjustment Journal entry is created which involves a Job / WO transfer. Note that if  a Burden Rate % is specified in both the Inventory Item and Location Record, the cumulative Burden Rate total will be applied. A <a href="Registry_Entry_Inventory_Adjustments_Journal.htm#Job_Cost_Burden">registry entry</a> specifies the income account to be credited.</p>
+  <p>
+    <font style="font-weight: bold;">GL Inventory Asset Account</font><br/>
+    This account will be credited (using the extended cost amount) when you enter an Inventory Item on a Work Order and Inventory to GL is turned on in the Accounting Period.
+  </p>
+  <p>This field is used by the <a href="Create_EOM_Unvouchered_AP_GL_Entries.htm">Create EOM Unvouchered AP GL Entries</a> to specify the account to be debited for Inventory Item purchased to stock. The Inventory Item Group with the Id misc will provide the account to be credited for general (on-inventory items) purchased to stock.</p>
+  <p>
+    <font style="font-weight: bold;">GL WIP Account:</font><br/>
+    Enter the GL Account to be debited when you transfer stock to a shop order location. Double-click on this field or press Alt+F7 to select from a list of GL Accounts.
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Income Account:</font><br/>
+    Enter the GL Account to be credited when you sell this stock from this group via COP Invoicing. Double-click on this field or press Alt+F7 to select from a list of GL Accounts.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Note -</font>
+    <font style="font-weight: bold;">Inventory applied to Work Orders and Jobs:</font> the Income account in the Cost Category trumps that in the Job Cost Code; the Income account in the Inventory Group record is not used.
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Expense Account:</font><br/>
+    Enter the GL Account to be debited (using the extended cost amount) when you enter an Inventory Item on a Work Order and Inventory to GL is turned on in the Accounting Period.
+  </p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Note -</font>
+    <font style="font-weight: bold;">Inventory applied to Work Orders and Jobs:</font> the Expense account in the Cost Category trumps that in the Job Cost Code; the Expense account in the Inventory Group record is not used.
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Repack Income Account:</font><br/>
+    Enter the GL Account to be credited for repack COP sales from this group. Double-click on this field or press Alt+F7 to select from a list of GL Accounts.
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Unvouchered AP Account:</font><br/>
+    This field should only be completed if you wish to account for unvouchered payables.
+  </p>
+  <h3>If Unvouchered Payable is Not Flagged in Accounting Period (Preferred)</h3>
+  <p style="margin-left: 36.00pt;">This field is used by the <a href="Create_EOM_Unvouchered_AP_GL_Entries.htm">Create EOM Unvouchered AP GL Entries</a> to specify the account to be credited for Inventory Item purchased to jobs. The Inventory Item Group with the Id misc will provide the account to be credited for general (on-inventory items).</p>
+  <h3>If Unvouchered Payable is Flagged in Accounting Period (Deprecated)</h3>
+  <p style="margin-left: 36.00pt;">This GL Account will be credited and the Asset account debited when inventory items belonging to this group are received in the Inventory/PO Receipts journal if the Unvouchered Payables field is flagged in the Accounting Period specified for the transaction. (If your firm is running with multiple operating company/branch security, this enhancement enables you to control the implementation of Unvouchered Payables by security.)</p>
+  <p>When these items are vouchered, this GL account will be debited and the AP Control Account (as specified in the AP Journal entry) will be credited. double-click or press Alt+F7 to select from a list of GL Accounts.</p>
+  <p>
+    <font style="font-weight: bold;">GL Unvouchered Freight Account:</font><br/>
+    This field should only be completed if you wish to account for unvouchered freight. This GL Account will be credited and the Asset account debited for estimated freight charges specified on the PO lines when inventory items belonging to this group are received in the Inventory/PO Receipts journal. When these items are vouchered, this account will be debited and the AP Control Account (as specified in the AP Journal entry) will be credited.
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Unvouchered Duty Account:</font><br/>
+    This field should only be completed if you wish to account for unvouchered duty. This GL Account will be credited and the Asset account debited for estimated duty charges specified on the PO lines when inventory items belonging to this group are received in the Inventory/PO Receipts journal. When these items are vouchered, this account will be debited and the AP Control Account (as specified in the AP Journal entry) will be credited. double-click or press Alt+F7 to select from a list of GL Accounts.
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Inventory Variance Account</font><br/>
+    Reserved for future use.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Default Cost Category:</font><br/>
+    If this field is completed, the Cost Category will be set from the Inventory Item’s Inventory Group when entering items to the following records:
+  </p>
+  <p style="margin-left: 36.00pt;">PO – Inventory Tab<br/>
+    WO – Inventory, Required Resource Tab<br/>
+    Inventory Adjustments Journal</p>
+  <p>Only Cost Categories with a Selection Cost Type of Material or Equipment may be selected.</p>
+  <p>Note that care should be taken in using this feature if your firm has enabled the Operation Lockdown functionality specifying Direct/Indirect choice to Job Cost Categories. In this case, the Default Cost Category would only be set for Inventory Groups used with direct (non-overhead) Jobs.</p>
+
+</body></html>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.9.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="payables"/>
+  <meta name="MS-HKWD" content="journal"/>
+  <meta name="MS-HKWD" content="credit memo"/>
+  <meta name="MS-HKWD" content="ap"/>
+  <meta name="MS-HKWD" content="accounts payable"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>AP Journal General Tab</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="payables,journal,credit memo,ap,accounts payable"/>
+<meta name="brsnext" value="AP_Journal_CM__Credit_Memo__Tab.htm"/><meta name="brsprev" value="AP_Journal_INV_Tab_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AP Journal General Tab">
+        <span>AP Journal General Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>AP Journal General Tab</h1>
+  <h2>Purpose:</h2>
+  <p>Specifies the detail of general charges being vouchered for, including miscellaneous invoice charges such as freight and handling that are not included on the Inventory tab. This screen may also be used to create or modify a voucher that is not tied to any purchase order, such as a rent expense.</p>
+  <p style="margin-left: 36.00pt;">
+    <font color="#FF0000" style="font-weight: bold;">Note:</font>
+    <font style="font-weight: bold;">Credit Memos for Non-Inventory Items</font><br/>
+    This tab should also be used to enter the detail when creating credit memos for non-inventory purchases. All values should be entered as positive; the software will automatically debit Accounts Payable when the transaction is a Credit Memo.
+  </p>
+  <p>The GL accounts entered on this tab cannot be the same as any of the header accounts on the GL or Main tabs.</p>
+  <p style="font-weight: bold;">Line Defaulting<br/>
+    <span style="font-weight: normal;">When a Purchase Order Id is entered, the system will attempt to determine if the Purchase Order can be used to provide default values for any new General lines the user might enter. If all detail (Inventory, General and Subcontract)  lines on the PO match, the result will be displayed on the New Line JC defaults on the Main tab, and General line defaulting will be as follows:</span>
+  </p>
+  <p style="margin-left: 48px;">If the Job - Cost Code - Cost Category all match - all values default when adding General lines.</p>
+  <p style="margin-left: 48px;">If the Job and Cost Code match but the Cost Category doesn&#39;t, only the Job and Cost Code default when adding new General lines.</p>
+  <p style="margin-left: 48px;">If the Jobs match but the Costs Codes don&#39;t, the Job is not defaulted.</p>
+  <p style="margin-left: 48px;">If only the Cost Categories match, the Cost Category will be used for defaulting General line.</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Reversing Lines - No Discount</span><br/>
+    Reversing General lines are automatically flagged as No Discount to avoid discount calculation issues when the Date Effective is edited.</p>
+  <h2>Important Fields<font color="#000000" size="2" style="font-size: 9pt;">:</font>
+  </h2>
+  <p><img alt="image\magnifybutton.gif" border="0" height="16" src="assets/images/image/magnifybutton.gif" title="image\magnifybutton.gif" width="16"/> Double-click the Magnify button to display all fields for this line.</p>
+  <p><img alt="image\lineview2.gif" border="0" height="38" src="assets/images/image/lineview2.gif" title="image\lineview2.gif" width="36"/> Click the Line View button to re-display the multiple line view.</p>
+  <p>
+    <font style="font-weight: bold;">Qty Used: Qty Billed:</font><br/>
+    The Actual (Used) and Billable Quantities. The Quantity Used will be used for costing, and the Quantity Billed will be used to compute revenue for billing purposes. Note that the Quantity Billed field defaults when you enter the Quantity Used, but may be adjusted by the user if needed.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Unit Cost:</font><br/>
+    The cost per unit. If this line was imported from a Purchase Order, this field defaults from the Purchase Order but may be adjusted by the user by <font style="font-weight: bold;">clicking the Magnify button</font>
+    <font style="font-weight: bold;">go into Full View.</font> The system will prompt you to confirm that you wish to make the edits. Click &#39;Yes&#39; and make any changes needed; they will be written to a <font style="font-style: italic;">copy</font> of the original line. When you save the record, the negative of the original line and your newly edited line will be written to history. Lines that were <font face="Tahoma" style="font-family: Tahoma;">&#39;Copied for Edit&#39; cannot be deleted.</font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Amount:</font><br/>
+    The extended cost for this item. This figure defaults from the Unit Cost times the Qty.
+  </p>
+  <p>
+    <font style="font-weight: bold;">No Discount?</font><br/>
+    Flag this field if no discount is available for early payment. Reversing General lines are flagged as No Discount to avoid discount calculation issues when the Date Effective is edited.
+  </p>
+  <p>
+    <font style="font-weight: bold;">WO Id:</font><br/>
+    The Work Order this was incurred for. The display-only Workorder Name: field defaults from the Workorder record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Equipment Id:</font><br/>
+    If the user enters a Work Order Id, the system will default in the first piece of equipment on the Work Order’s Equipment tab UNLESS this behavior is disabled via registry (see <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_journal_equipment_id">Registry Option - Do Not Default Equipment Id</a>). If the user double clicks on this field, the system will display a list of all equipment associated with the Client Site referenced in the Work Order.
+  </p>
+  <p>If the sys-ffv-global-settings option &#39;DefaultEquipmentFromWorkorder&#39; is set to false, the user is allowed to set the Equipment Id back to blank. If this registry option is not present or set to true, the Equipment Id must be completed if a Work Order Id is referenced.</p>
+  <p>
+    <font style="font-weight: bold;">Job Id:</font><br/>
+    The Job this was incurred for. The display-only Job Name: field defaults from the Job record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Cost Code Id:</font><br/>
+    This field should not be filled in if the WO field is completed. Press Alt+F7 or double-click left on this field to select from a list of Job Cost Code Id&#39;s.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Other Rate Id:</font><br/>
+    Optional. If an Other Rate has been set up to describe this expense, enter its Id for Job Costing purposes. The Bill Type Id and Revenue Rate (if applicable) will default.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Cost Cat Id:</font><br/>
+    The Cost Category for this expense. Job Cost Categories are not needed if a Job/Work Order is not specified. The Job Cost Category will be cleared if a Job is NOT specified.
+  </p>
+  <p>This field supports enhanced filtering provided by the Cost Code&#39;s Job Cost Category Usage Filter. Cost Categories are validated (relative to Cost Codes) during data entry upon leaving the Cost Category Id field.  The full relationship is validated again when leaving the line or saving the record. Cost Categories with Selection Cost Types of Material, Equipment, Other or Subcontract are allowed.</p>
+  <p>
+    <font style="font-weight: bold;"><span>G</span>L Account Id:</font><br/>
+    The expense account to be debited for this item. The display-only GL Account Name field defaults from the GL Account record. Validation prohibits the entry of AR Control, AP Control &amp; Bank accounts on General lines (unless the validation has been disabled via <a href="Registry_Entry_AP_Journal.htm">Registry AP Journal (sys-viewer-vapjrnl)</a> ).
+  </p>
+  <p class="MsoNormal" style="margin-left: 48px;"><span style="font-weight: bold;">GL Account &#39;Trumping&#39; Rules</span><br/>
+    When both a Cost Category and Job Id are used, the GL Account would always come from the Cost Category&#39; GL Expense Account (if blank it would check Vendor record for a GL Expense Account, if it’s blank then it would use GL Acct from registry option: sys-ffv-global-settings, Setting Key: DefaultGLAccountId &amp; Setting Value: GL Account Id). The <u>GL Entity</u> comes from the Job’s Cost Code.</p>
+  <p class="MsoNormal" style="margin-left: 48px;">When costs are imported back into a WorkOrder (either from AP Journal (if no PO) or from the PO (if AP not changed) or from AP Journal if $ adjustments done)…</p>
+  <p class="MsoNormal" style="margin-left: 88px;">When line is Invoiced on the Workorder, the <u>Income account</u> is pulled from the Cost Category&#39;s Income Account unless it is blank – if blank on the Cost Category it will then pull the GL Income from the Job’s Cost Code.</p>
+  <p class="MsoNormal" style="margin-left: 88px;">When invoiced on a Progress billing (RININV3) – and Bill Item is Fixed Fee: see the on-line help for Record Billing Adjustments, GL Tab or how Income GL Account is determined.</p>
+  <p class="MsoNormal" style="margin-left: 88px;"><span style="font-weight: bold;">NOTE: Vendor Expense Account</span><br/>
+    If you wish to use the GL Expense Account# assigned in the Vendor record (normally utility,lease,rent, other overhead type vendors would have this setup) then to use it you must add a new Cost Category called “AP” &amp; in description, enter something like: For AP use only and set the GL Accounts to BLANK. Normally it’s used with no Job or the Overhead Job.</p>
+  <p>
+    <font style="font-weight: bold;">GL Entity Id:</font><br/>
+    The Id of the GL Entity to be affected by this transaction. When Intercompany is enabled and a detail line contains a Job Id, any changes to the line&#39;s GL Entity are validated to ensure that the new GL Entity belongs to the same company as the Job. If Intercompany is not enabled, this field is optional but should be entered if your firm departmentalizes or tracks profit centers and will default from the Job Cost Code. SAMPro validates the consistency of the GL Entities entered in the parent and lines of the AP Journal.  The validation can take the form of either an error or a warning based the following registry: <a href="Registry_Entry_AP_Journal.htm">Registry Entry AP Journal</a>.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Amount Retainage</font><br/>
+    The retainage (as a dollar amount) to be withheld. Note that the Amount field on the INV tab should continue to reflect the full amount being expensed (not Amount - Retainage).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Description:</font><br/>
+    This optional field may be used to briefly describe this entry.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Bill Item Id:</font><br/>
+    If a Job Id is specified, this field must be filled in with the appropriate Billing Item Id.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Extra?</font><br/>
+    Flag this field if this item was ordered as a contract extra that you can bill your customer for.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Bill Type Id:  Revenue Rate:</font><br/>
+    These fields default from the Other Rate record (as specified in the Rate Schedule for the Job these items are being vouchered for), but may be changed if needed. These fields jointly determine how the Unit Price will be calculated:
+  </p>
+  <p style="margin-left: 36.00pt;">If <font style="font-weight: bold;">Markup</font> is selected, the Revenue Rate will default from the Markup table (specified in the Rate Schedule for this Job). For example, a 120% markup applied to an item costing $100 would generate a unit price of $220. A 30% markup applied to an item costing $100 would generate a unit price of $130.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Margin</font> enables the user to set the desired profit margin ((Unit Price - Unit Cost)/Unit Price)for this item in the Revenue Rate field. When a Margin is entered, the system will automatically adjust the price to generate the desired margin.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Multiplier</font> multiplies the figure in Revenue Rate X Unit Cost to obtain the Unit Price. For example, a multiplier of 1.2 applied to an item costing $100 would yield a unit price of $120.
+  </p>
+  <p style="margin-left: 36.00pt;">If the Bill Type Id is set to <font style="font-weight: bold;">Unit Price</font>, and this inventory item is flagged for unit pricing, the system will use the Unit Price in the Inventory Item record that applies to the Price Level specified in this Work Order. In this case, the Revenue Rate will equal the Unit Price.</p>
+  <p style="margin-left: 36.00pt;">Select the Billing Type of <font style="font-weight: bold;">n/a</font> if a special price has been agreed on for this customer. In this case, you will leave the Revenue Rate field blank, and enter the Amnt Revenue fields directly.</p>
+  <p style="margin-left: 36.00pt;"> </p>
+  <p>
+    <font style="font-weight: bold;">Revenue:</font><br/>
+    The amount to be billed to the Job.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Note:</font>
+    <font style="font-weight: bold;">COP Dropship Purchases:</font><br/>
+    In previous releases, if a user added freight on the General tab of the AP Journal for a PO referenced on a COP drop ship order, the COST of that freight was picked up and invoiced on the subsequent COP invoice. With this enhancement, the system will also look at the REVENUE value entered in the AP General tab line, and if not zero, use it for the COP invoice. If the Revenue is zero, the system will continue to use Cost value.
+  </p>
+  <h3><strong>Import .CSV Button</strong></h3>
+  <p style="margin-left: 36.00pt;"><img src="assets/images/image41.png"/>In 9.1.611.060 and up, this update adds an import button that imports a .CSV file directly into an AP journal&#39;s child tab General. The new import .CSV file button is located on the General tab sidebar and can only be utilized when the General child tab is in focus. </p>
+  <p style="margin-left: 36.00pt;"><strong>Overview:</strong><br/>
+    SAMPro users can import data from a spreadsheet into the Accounts Payable General child tab when they are adding new records.  Contact support for a copy of the spreadsheet.  Do not remove any of the columns in the spreadsheet, otherwise the import will fail.  See below on which columns need to be populated when you are importing with a Job Id or without a Job Id.   Imports cannot be performed on existing AP Journals.</p>
+  <p style="margin-left: 36.00pt;"><br/>
+    <span style="font-weight:bold;">Processing the .CSV file: </span><br/>
+    1. Open a new AP journal.  Before keying ANY data in, click on the General child tab.<br/>
+    2. Once your focus is on the General child tab, you’ll see the .CSV button exposed at the bottom on the left tool bar.<br/>
+    3. Click the .CSV button to open a browser and navigate to your saved .CSV file, select it for import.<br/>
+    4. After you’ve imported the child line details, return to the main header and fill in the appropriate information (Vendor Id, Invoice #, Date &amp; Invoice Total, etc.) before adding the new record.
+  </p>
+  <p style="margin-left: 36.00pt;"><strong>CSV File Definition (Non-Job required fields):</strong><br/>
+    The .CSV file contains a header row that serves as the column map.  <br/>
+    <strong>Quantity: </strong>Decimal field, 99999.99 max, no commas. For credit values, enter a minus sign then the Quantity.<br/>
+    <strong>QtyBill: </strong>Decimal field, 99999.99 max, no commas. If left blank, uses Quantity.<br/>
+    <strong>Unit Cost:</strong> Decimal field, 9999999.99 max, no commas, minus signs are ignored.<br/>
+    <strong>Amount: </strong>This amount will be auto-calculated by SAMPro when imported. The values in this column will be ignored if they are present in the upload file.<br/>
+    <strong>GL Accnt:</strong> a valid GL Account Id<br/>
+    <strong>GL Entity:</strong> a valid GL Entity Id<br/>
+    <strong>Description: </strong>Text, no commas, 45 characters max.
+  </p>
+  <p style="margin-left: 36.00pt;"><span style="font-weight:bold;">CSV File Definition (Job Specific required fields):</span><br/>
+    Each .CSV file must contain a header row which serves as a column map.  <br/>
+    <strong>Quantity: </strong>Decimal field, 99999.99 max, no commas. For credit values, enter a minus sign then the Quantity.<br/>
+    <strong>QtyBill:</strong>  Decimal field, 99999.99 max, no commas. If left blank, uses Quantity.<br/>
+    <strong>Unit Cost:</strong> Decimal field, 9999999.99 max, no commas, minus signs are ignored.<br/>
+    <strong>Amount: </strong>This amount will be auto-calculated by SAMPro when imported. This column will be ignored if populated in the upload file.<br/>
+    <strong>Job Id:</strong> a valid Job Id<br/>
+    <strong>Cost Code Id:</strong> a valid Cost Code Id (this will be used to populate the GL Entity Id column)<br/>
+    <strong>Cost Category Id:</strong> a valid Cost Category Id (this will be used to populate the GL Account Id column)<br/>
+    <strong>Description:</strong> Text, no commas, 45 characters max.
+  </p>
+  <p style="margin-left: 36.00pt;"><br/>
+    <strong>Additional spreadsheet processing notes:</strong><br/>
+    •    The following fields on the General tab will be ignored/not populated from the spreadsheet:  
+  </p>
+  <p style="margin-left: 36.00pt;">No Discount?, WO Id, Equipment Id, Other Rate Id, Retainage, Bill Item, Extra?, Bill Type ID, Revenue Rate and Amount Revenue.   Do not remove these columns!<br/>
+     <br/>
+    •    The spreadsheet can include additional columns, but they will be ignored, not imported. <br/>
+    •    Column headers can be in any order.  Spelling counts but the header values are not case-sensitive.  <br/>
+    •    Data values can be wrapped in single- or double-quotes but this is completely optional.  The import process strips them away if it sees them.<br/>
+    •    Commas embedded in any of the values will cause the import to fail. This is true with or without quote wrappers.</p>
+  <p style="margin-left: 36.00pt;">DISCLAIMER: This may suggest or demonstrate procedures that differ from your company&#39;s custom SAMPro database and processes. This import feature does not check current validation rules you may have previously set up for GL &amp; Jobs. Please test your results before implementing anything that differs from your current known-to-work methods. <br/>
+     </p>
+  <p style="margin-left: 36.00pt;"></p>
+  <p style="margin-left: 36.00pt;"> </p>
+
+</body></html>

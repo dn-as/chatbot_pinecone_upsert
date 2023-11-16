@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.4.8.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Avalara Web Services Overview</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="sales tax,Avalara,sys-avalara,web service Avalara"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Avalara Web Services Overview">
+        <span>Avalara Web Services Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Avalara Web Services Overview</h1>
+  <h3><span style="font-weight: bold;">Overview</span></h3>
+  <p>Version 9.1 supports an alternative method of computing sales tax on AR Job Invoices using the Avalara Web Service Integration instead of SAMPro&#39;s internal computations. This functionality is currently supported for Sales Tax and Tax Exempt invoices, but not recommended for Use tax computation. An advantage of using Avalara is that they will provide the tax reporting to supported districts.</p>
+  <p>After obtaining your license and credentials from Avalara, the following registry must be set to enable the Avalara Web Integration. It is required that testing in a &#39;sandbox&#39; test system be conducted before running live.</p>
+  <p>Tax Exemption Certificates may be managed within Avalara by using what Avalara calls the Customer Code. The Client Id is used as the Customer Code for Avalara when invoices are processed to support Avalara&#39;s Tax Exemption handling.</p>
+  <p>Avalara has a field labeled Reference Code that is the functional equivalent of a SAMPro user-defined field. Since it is helpful for SAMPro users to see Job Names when reviewing Invoice Documents at the Avalara website, the Job Name has also be included as part of the Avalara Reference Code in square brackets: WorkOrder Id.Job Id.[Job Name].(SAMProVersion.SendingFunction)</p>
+  <h3>Registries:</h3>
+  <p>See <a href="Registry_Avalara_Web_Services.htm">Registry for Avalara Web Services Integration</a> for the settings required for this functionality.</p>
+  <h3>Reports:</h3>
+  <p style="font-weight: bold;">Report Avalara Invoice Status (RAVALARAINVSTTS)</p>
+  <p>This report (dated 2019-11-16) analyzes a set of SAMPro A/R Invoices and shows the current status of the corresponding documents at Avalara by comparing the SAMPro Invoice Master records with Avalara Transaction DocCodes. This report requires SAMPro Version 9.1.611.051 or above. The Avalara Web Service MUST be enabled via the global registry in order for this report to run properly.</p>
+  <p style="margin-left: 48px;">Report Settings: Beginning Date, Ending Date, Show Discrepancies Only</p>
+  <p style="margin-left: 48px;">Report Ranges: Invoice Id, Client Id, Job Id, Work Order Id, Client Site Id, Client Site Shipping Address State.</p>
+  <p style="margin-left: 48px;">Report Columns: Invoice Id, Invoice Date, SAMPro Invoice Status, Client Id, Job Id, Work Order Id, Site Id, Avalara Document Status</p>
+  <h3>Other Record Configurations for the Avalara Web Service:</h3>
+  <p style="font-weight: bold;">User:</p>
+  <p>A SAMPro Special User must be set up to manage the handshake between SAMPro and the Avalara Web Service Integration.  This User Id and Password must both be set to <span style="font-weight: bold;">taxservice</span>.</p>
+  <p style="font-weight: bold;"><span><span><span style="font-weight: bold;">Job Cost Category Records:</span></span></span></p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Avalara Tax Code:</span>  <br/>
+    Service Invoice Job Cost Categories should have this field completed if the Avalara-defined default value should not be used.</p>
+  <p style="font-weight: bold; margin-left: 48px;">Cost Category Group Id:<br/>
+    <span style="font-weight: normal;">This field should be set to the Avalara Group for Job Cost Categories used with Avalara web.</span>
+  </p>
+  <p style="font-weight: bold; margin-left: 48px;"><span style="font-weight: normal;">For COP, the Inventory Groups must include a Job Cost Category with an Avalara code of <strong>NT</strong> if items in the group are to be non-taxed. By default, if no Job Cost Category exists in the Inventory Group, all items will be taxed.</span></p>
+  <p style="font-weight: bold; margin-left: 8px;">Cost Category Group Record:</p>
+  <p style="margin-left: 48px; font-weight: bold;">Cost Category Group Id:<br/>
+    <span style="font-weight: normal;">A Job Cost Category Group should be created with the Id of Avalara.</span>
+  </p>
+  <p style="margin-left: 8px; font-weight: bold;">Job:</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Client Site Id:</span><br/>
+    A Job that is not Site-specific is NOT eligible for Avalara tax calculations.  This applies to both service and progress billing methodologies. The Tax Group must be specified in the Job when invoicing through Record Billing Adjustment. </p>
+  <p style="font-weight: bold; margin-left: 48px;">Sales Tax Group:<br/>
+    <span style="font-weight: normal;">If this Group was created in SAMPro or via the Import Sales Tax (Avalara) SAMPro&#39;s internal sales tax processing will be used to generate sales or use tax on invoices for this job. If this field is blank, or it contains a Sales Tax Group generated by a call to the Avatax Web Service, the Sales Tax (or Exempt Amount) will computed via the Avalara Web Integration.</span> The Tax Group must be specified in the Job when invoicing through Record Billing Adjustments.
+  </p>
+  <p style="margin-left: 48px;"><img alt="" border="0" src="assets/images/SetTaxGroup.bmp" style="border: none;"/>  If the Avalara Web Integration is enabled, clicking this button will make a call to Avalara to set the correct Sale Tax Group for invoicing this Job.</p>
+  <p style="margin-left: 8px; font-weight: bold;">Client Site:</p>
+  <p style="margin-left: 48px;"><img alt="" border="0" src="assets/images/ValidateAddress.bmp" style="border: none;"/> If the Avalara Web Integration is enabled, clicking this button will make a call to Avalara to validate that Work Site Address is correctly configured so that the correct Sales Tax Authority Group can be determined when invoicing.</p>
+  <h3>Other Files</h3>
+  <p style="margin-left: 48px; font-style: italic;">The following files compatible with the v.exe SAMPro image must reside in the same directory:</p>
+  <p style="margin-left: 48px; font-style: italic;">vdevw.exe.manifest</p>
+  <p style="margin-left: 48px; font-style: italic;">v.exe.manifest</p>
+  <p style="margin-left: 48px; font-style: italic;">SamproNetFramework.dll</p>
+  <p style="margin-left: 48px; font-style: italic;">Newtonsoft.Json.dll</p>
+  <p style="margin-left: 48px; font-style: italic;">Data-Basics.Avalara.Net (Folder and contents)</p>
+  <p style="margin-left: 48px; font-style: italic;">vrgstry.sam and vrgstry.cus</p>
+  <h3>Starter Functions</h3>
+  <p style="margin-left: 8px; font-weight: bold;">Start Validate Avalara Configuration</p>
+  <p style="margin-left: 8px;">This function allows validation without having the UseExternalTaxService setting turned on.  This allows authentication of the configuration (sys-avalara) prior to enabling live integration.<span style="font-weight: bold;"> </span></p>
+  <h5><span style="font-weight: bold;">S</span>tart Compute Service Invoice</h5>
+  <p style="margin-left: 8px;">When using the Avalara Web Service, a new workspace may pop up before the check list is displayed.  It relays to the user any issues reported by Avalara.  WO/Jobs with errors will still show in the check list but can&#39;t be selected for billing.</p>
+
+</body></html>

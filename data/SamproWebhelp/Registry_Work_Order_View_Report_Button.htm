@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.31.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry Work Order View Report Button</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="registry,work order,report,view reports button,work order view reports button,sys-rprt-vwrkordr:report name"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Work Order View Report Button">
+        <span>Registry Work Order View Report Button</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry Work Order View Report Button</h1>
+  <p><img alt="" border="0" src="assets/images/SKIN1_ViewReports.bmp" style="border: none;"/> The View Reports butto hasn been added to the sidebar of the Work Order viewer. When enabled, it will allow users to select from a list of appropriate reports for the viewer. The following registry settings allow you to specify one or more reports to be run from the Work Order. One registry would be made for each report to be accessed from the Work Order.  </p>
+  <p>If only one report is specified, it will be launched when the button is clicked with the selected Work Order Id inserted in the report&#39;s Work Order Id range.  If more than one registry has been generated, a list of reports to select from will be selected.</p>
+  <p><span style="font-weight: bold;">Registry Id:</span> sys-rprt-vwrkordr:<span style="font-style: italic;">report name</span></p>
+  <p>A separate Registry Id must be made for each report.  Note the colon that separates the first part of the Id field from the report name.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> MenuTitle    <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">report name or other text</span></p>
+  <p>This option defines the title displayed on the Menu for this report if multiple reports are specified.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span> FunctionId  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">user-defined function Id of report</span></p>
+  <p>This key specifies the user-define function associated with the report.</p>
+  <p><span style="font-weight: bold;">Setting Key:</span><span style="font-style: italic;"> </span>Range~wrkordr.id  <span style="font-weight: bold;">Setting Value:</span> wrkordr.id</p>
+  <p>The registry specifies that, when the report is launched, the report&#39;s Work Order Id range will set with the selected Work Order Id it was launched from.</p>
+  <p style="margin-left: 48px; text-decoration: underline; ">Example: Entry for Work Order Profitability</p>
+  <p style="margin-left: 48px;">Registry Id: sys-rprt-vwrkordr:Report Work Order Profitability<br/>
+    Setting Key: MenuTitle    Setting Value: WO Profitability<br/>
+    Setting Key: FunctionId  Setting Value: DWOPRFT<br/>
+    Setting Key:<span style="font-style: italic;"> </span>Range~wrkordr.id  Setting Value: wrkordr.id</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Note: Initial Values and Graphics</span><br/>
+    The standard sys-report-<span style="font-style: italic;">functionId</span> registry should be used to set initial report values other than ranges. Initial values and bitmap registries are not supported from the sys-rprt-vwrkordr:<span style="font-style: italic;">report </span>name registry.<span style="font-style: italic;"> </span></p>
+  <p class="Support" style="margin-left: 8px; font-weight: normal;"> </p>
+
+</body></html>

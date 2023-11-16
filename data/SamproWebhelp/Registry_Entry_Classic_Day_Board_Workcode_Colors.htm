@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.31.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="work code"/>
+<meta name="MS-HKWD" content="dispatch board"/>
+<meta name="MS-HKWD" content="sys-dispatchboard-colors-workcode"/>
+<meta name="MS-HKWD" content="color"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Dispatch Classic/Day Board Workcode Colors (sys-dispatchboard-colors-workcode)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="registry,work code,dispatch board,sys-dispatchboard-colors-workcode,color"/><meta name="brsnext" value="Registry_Entry_Classic_Day_Board_Status_Colors.htm"/><meta name="brsprev" value="Registry_Entry_Classic_Day_Board_Zone_Color_Coding.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Dispatch Classic/Day Board Workcode Colors (sys-dispatchboard-colors-workcode)">
+        <span>Registry Dispatch Classic/Day Board Workcode Colors (sys-dispatchboard-colors-workcode)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Dispatch Classic/Day Board Workcode Colors (sys-dispatchboard-colors-workcode)</h1>
+<h3>Purpose:</h3>
+<p class="Body_Text_Indent" style="margin-left: 5.75pt;">This registry 
+ entry controls background color of the Work Code field on default Classic 
+ and Day Board views based on the color you assign it.</p>
+<h3>Usage:</h3>
+<p class="Body_Text_Indent" style="margin-left: 5.75pt;">Work Codes that 
+ are not specified in this entry will retain the background color of the 
+ cell; this may be set by the Technician Status as specified in the sys-dispatchboard-colors-status 
+ entry.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly. You will need to close and reopen the Dispatch Board to see 
+ this registry take effect.</p>
+<h3>Related Registry Entries:</h3>
+<p><a href="Registry_Entry_to_Remove_Statuses_from_Dispatch_Board_s_Status_List.htm">Remove 
+ Statuses from Dispatch Board&#39;s Status List and Control Load of Work Orders</a></p>
+<p><a href="Registry_Entry_Dispatch_Board_Saved_by_User_by_Board.htm">Save 
+ Settings by User by Board, Retain all Filter Ranges, enable Unavailable 
+ Tech (7.3)</a></p>
+<p><a href="Registry_Entry_to_Set_Color_Coding_on_Lower_Section_of_DBoard.htm">Registry 
+ Entry to Set Color Coding on Lower Section of DBoard</a></p>
+<p><a href="Registry_Entry_Classic_Day_Board_Zone_Color_Coding.htm">Registry 
+ Entry to Set Classic/Day Board Service Zone Colors</a></p>
+<p><a href="Registry_Entry_Classic_Day_Board_Status_Colors.htm">Registry 
+ Entry to Set Classic/Day Board Status Colors</a></p>
+<p style="margin-left: 8px;"><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Warn_or_Error_if_WO_Date_Scheduled_Set_to_Past_Date">Warn 
+ or Error if Date Scheduled Set to Past Date</a> </p>
+<h3>Important Fields:</h3>
+<p class="Body_Text_Indent" style="margin-left: 5.75pt;"><font style="font-weight: bold;">Id:</font></p>
+<p class="Body_Text_Indent"><font style="font-weight: bold;"> sys-dispatchboard-colors</font><font style="font-weight: bold;">-workcode</font></p>
+<h3>Specify Work Code Colors</h3>
+<p> <font style="font-weight: bold;">Setting Key:</font> workcodeid 
+ <font style="font-weight: bold;">Setting Value:</font> color:Custom</p>
+<p>where workcodeid is replaced by a valid work code id, and color is replaced 
+ by the Windows color map index.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important 
+ Note:</font> all registry options that use the color functionality must 
+ be correctly configured or a system primitive error will appear when the 
+ Dispatch Board is opened. These entries will NOT be ignored if an ‘x’ 
+ is placed in from of them to temporarily disable them.</p>
+
+<p><font style="font-weight: bold;">A.</font> Verify that the registry 
+ entry has been saved.</p>
+<p><font style="font-weight: bold;">B.</font> To enter the index number, 
+ enter all information up to the word Custom. For example, to set the background 
+ color for HVAC, you would type HVAC=color:</p>
+<p><font style="font-weight: bold;">C.</font> After entering the colon: 
+ double-click on the line to display the Windows color selector palette, 
+ click on the desired color and then click OK.</p>
+
+</body></html>

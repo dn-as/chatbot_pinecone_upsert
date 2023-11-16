@@ -1,4 +1,3 @@
-
 from llama_index import download_loader
 import os
 from dotenv import load_dotenv
@@ -8,26 +7,35 @@ from llama_index.vector_stores import PineconeVectorStore
 from llama_index import GPTVectorStoreIndex, ServiceContext
 from llama_index.embeddings.openai import OpenAIEmbedding
 
-###################################################
-# 
-# This file tests pinecone connection and query.
-# 
-###################################################
+##################################################
+#                                                #
+# This file tests pinecone connection and query. #
+#                                                #
+##################################################
 
 load_dotenv()
 openai.api_key = os.getenv('api_key')
 os.environ['PINECONE_API_KEY'] = os.getenv('pinecone_api_key')
 os.environ['PINECONE_ENVIRONMENT'] = os.getenv('pinecone_env')
 
+# Change this to query different indexes
+# "sampro-webhelp"
+# "policies"
+# "general-info"
+# "sops"
+index_name = "dnas-wiki"
+namespace = "sampro-webhelp"
 
-index_name = 'dnas-sops'
 pinecone.init(
     api_key=os.environ['PINECONE_API_KEY'],
     environment=os.environ['PINECONE_ENVIRONMENT']
 )
 pinecone_index = pinecone.Index(index_name)
 
-vector_store = PineconeVectorStore(pinecone_index=pinecone_index)
+vector_store = PineconeVectorStore(
+    pinecone_index=pinecone_index,
+    namespace=namespace
+)
 embed_model = OpenAIEmbedding(model='text-embedding-ada-002', embed_batch_size=100)
 service_context = ServiceContext.from_defaults(embed_model=embed_model)
 
@@ -37,5 +45,5 @@ index = GPTVectorStoreIndex.from_vector_store(
 )
 
 query_engine = index.as_query_engine()
-res = query_engine.query("How to report positive pay?")
+res = query_engine.query("How do I create a new purchase order?")
 print(res)

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.13.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="sys-viewer-clntste"/>
+  <meta name="MS-HKWD" content="location"/>
+  <meta name="MS-HKWD" content="client site"/>
+  <meta name="MS-HKWD" content="registry"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry Client Site Viewer (sys-viewer-vclntste)</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="sys-viewer-clntste,location,client site,registry"/>
+<meta name="brsnext" value="Registry_Client_Site_Equipment_Viewer.htm"/><meta name="brsprev" value="Registry_GL_Account.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Client Site Viewer (sys-viewer-vclntste)">
+        <span>Registry Client Site Viewer (sys-viewer-vclntste)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry Client Site Viewer (sys-viewer-vclntste)</h1>
+  <h2>Purpose:</h2>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold;">Testing Your Registry Entries</font><br/>
+    <font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.
+  </p>
+  <p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;">
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Setting</font>
+    <font color="#FF0000" style="font-weight: bold; font-style: italic;">Values are Uppercase-Lowercase Sensitive:</font><br/>
+    The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.
+  </p>
+  <h2>Related Registries:</h2>
+  <p>See <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Global_Settings_Default_PM_Billing_GL">Default PM GL Accounts</a> for a Global Settings option which provides default GL Accounts for the system to use if the corresponding fields on the Client Site PM Billing tab are blank when Start Create PM Billing is run.</p>
+  
+  <p>By default, data entry in the State / Province address field is limited to the official abbreviations of the US States and Canadian Provinces. See the <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Global_Settings_State_Id">State / Province Field Validation Registry</a> if you need to add to or change the list of valid State / Province codes.</p>
+  <h2>Important Fields:</h2>
+  <p>
+    <font style="font-weight: bold;">Id: sys-viewer-vclntste</font>
+  </p>
+  <p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> for additional Registry Id formats to allow entries for specific Users, Branches, Security, or User Groups to override the main entry.</p>
+  <h3>Option to Enable Auto-loading of Location / GL Entity From Technician record</h3>
+  <p>By default, the Location and GL Entity fields in the Client Site COP tab are not over ridden when a Technician is entered Contacts tab (note that the Technician record also contains these values). This default behavior is in place to avoid having service-related field (technician) impact COP related fields (Location and GL Entity on the COP tab).</p>
+  <p>To override the default behavior, the following registry entry must be implemented. If you do so, that entering or changing the Technician will overwrite the Location and GL Entity on the COP tab from the Technician record.</p>
+  <p>
+    <font style="font-weight: bold;">Setting Key:</font> LocationFromTechnician <font style="font-weight: bold;">Setting Value:</font> true
+  </p>
+  <h3>Control Display of WO Tabs</h3>
+  <p><span style="font-weight: bold;">Setting Key:</span> WorkOrderWhereClauseOpen  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">valid SQL expression</span></p>
+  <p><span style="font-weight: bold;">Setting Key:</span> WorkOrderWhereClauseOther  <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">valid SQL expression</span></p>
+  <p style="text-decoration: underline; ">Example:</p>
+  <p>Setting Key: WorkOrderWhereClauseOther  Setting Value: wrkordr_stts_ctgry not in (&#39;Open&#39;,&#39;Archived&#39;)</p>
+  <h3>Registry to Inform User if Alias in Client Site is Set and User Changes Site Name</h3>
+  <p>This registry displays a warning or error message when the payment Alias has changed owners so it point at the new owner.</p>
+  <p><strong>Id:</strong> sys-viewer-vclntste</p>
+  <p><strong>Setting Key:</strong> DisableAliasValidation    <strong>Setting Value:</strong> warning/error/disabled   (warning is the default option)</p>
+  <p>If this is set as a warning, a warning will pop up with:<br/>
+    <strong>Warning: Is the Payment Alias specified for (old client site name) in this record still appropriate for (new client site name)?  If ownership of this Site has changed, be sure to clear the Payment Alias in the Client Site record.  Note: a Payment Alias may also be specified in the Master Contract which may need to be changed. </strong>
+  </p>
+  <p><strong></strong>If set as error:</p>
+  <p><img src="assets/images/image74.png"/><br/>
+    If disabled, edits will be allowed to be made with no message.</p>
+
+</body></html>

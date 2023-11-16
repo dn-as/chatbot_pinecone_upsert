@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.17.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry DBSellPoint (sys-point)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="DBSellpoint,POS,Point of Sale"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry DBSellPoint (sys-point)">
+        <span>Registry DBSellPoint (sys-point)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry DBSellPoint (sys-point)</h1>
+<p><span style="font-weight: bold;">Registry Id:</span> sys-point</p>
+<p><span style="font-weight: bold;">Setting Key:</span> ARControlAccount <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">GLAccountId</span></p>
+<p>This required setting defines the AR Control Account to be used when AR Sales Journal entries are generated.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> <font style="font-weight: bold;"><span style="font-weight: normal;">CollateralDirectory</span>   Setting Value:</font> <font style="font-style: italic;">path</font> <span style="font-style: italic;">to uploaded POS collateral files</span></p>
+<p>The CollateralDirectory is required.  It identifies the location where uploaded files can be found.    </p>
+<p><span style="font-weight: bold;">Setting Key:</span> DiscountGLAccount <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">GLAccountId</span></p>
+<p><span style="text-indent: -.25in; mso-list: l0 level1 lfo1;">This registry specifies the GL Account for sales discounts on sales posting. If this registry is absent the Sales GL will be used.</span></p>
+<p><span style="font-weight: bold;">Setting Key:</span> RestockGLAccount <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">GLAccountId</span></p>
+<p><span style="text-indent: -.25in; mso-list: l0 level1 lfo1;">This registry specifies the GL Account for restocking charges on returns posting; if this registry is absent the Sales GL will be used.</span> .</p>
+<h2>Related Registries and Functions</h2>
+<p>For additional information on DBSellPoint:</p>
+<p><a href="DBSellpoint_Overview.htm">DBSellPoint Overview</a></p>
+<p><a href="User_Registry_DBSellPoint.htm">DBSellPoint User Registry</a></p>
+<p><a href="Registry_Start_Point_of_Sale_Event_Manager.htm">Start Point of Sale Event Manager Registry</a></p>
+<p><a href="Start_Point_of_Sale_Event_Manager.htm">Start Point of Sale Event Manager</a></p>
+
+</body></html>

@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Client 1598 Implementation Notes</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nCustom Client Implementations\nClient 1598 Implementation Notes");
+addAvenueInfo("Implementations","client_1571_implementation_notes.htm","client_1630_implementation_notes.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Client 1598 Implementation Notes</P>
+ <P class="support" >2008-03-04 (jb)-version 7.0.436.063</P>
+ <P class="support" >2122&nbsp;Work Order viewer – CLS Customization Only</P>
+ <P class="Style_Support_+_Left___0_5_" >When running under the CLS customization only, service evaluations that would normally be triggered when the work order escalation status is set to Invoice Ready will instead pop when the work order escalation status is set to Invoice Review.</P>
+ <P class="Support_Heading_2" >11/06/2006 – Version 6.3+</P>
+ <P class="support" >1205&nbsp;Quotemaster Custom Mods for Client 1598</P>
+ <P class="Style_Support_+_Left___0_5_" >Add Work Code to the Quote Scope child. <BR>a.&nbsp;&nbsp;&nbsp;&nbsp;Make required via CLS v.cus.<BR>b.&nbsp;&nbsp;&nbsp;&nbsp;If completed, default the Work Code in Scope lines to corresponding WO Equipment lines when QM wizard runs instead of defaulting from Work Code in Quote header (as happens now).&nbsp; <BR>c.&nbsp;&nbsp;&nbsp;&nbsp;Work Code in Work Order header is currently set from the Quote header. A new field should be added to the Wizard enabling the user to select a work code for the work order header from the list of work codes associated with the approved options and the work code in the quote header.</P>
+ <P class="Support_Heading_2" >11/02/2006 – Version 6.3+</P>
+ <P class="support" >1203&nbsp;Quotemaster Scope Tab - Custom Mods for Client 1598</P>
+ <P class="Style_Support_+_Left___0_5_" >New Fields: Original Quoted Cost, Negotiated Quoted Cost<BR>These informational fields will be used to record what their vendor quoted them and if they negotiate with the vendor a better price they want to demonstrate to their customers the good job they are doing on their behalf. They are manually set and informational only. The customization file for client 1598 is needed to view these fields.</P>
+ <P class="Style1" >5/9/2006</P>
+ <P class="support" >715&nbsp;V6.3 - CLS Mod – Vendor Invoice Viewer – Record GL Discount Entity </P>
+ <P class="Style_Support_+_Left___0_5_" >CLS’ A/P Processing includes the initial recording of the vendor's invoice in the Vendor Invoices viewer.&nbsp; The Discount GL Entity is determined at the time they enter the PO Id into this viewer.&nbsp; The query used to determine the Management Fee entity is as follows, where rnPO is the rn value of the PO being entered...<BR><BR>select CASE WHEN vndr.altrnte_aptrms_aptrms_rn=prchseordr.aptrms_rn<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; and jbcstcde_use_altrnte_ap_trms='Y'<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; and vndr.altrnte_aptrms_aptrms_rn&lt;&gt;0<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; THEN jbcstcde.glentty_rn<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ELSE 0<BR>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; END<BR>from prchseordr, vndr, wrkordr, jbcstcde<BR>where prchseordr.prchseordr_rn='rnPO'<BR>&nbsp; and prchseordr.vndr_rn=vndr.vndr_rn<BR>&nbsp; and prchseordr.po_wrkordr_rn=wrkordr.wrkordr_rn<BR>&nbsp; and wrkordr.jbcstcde_rn=jbcstcde.jbcstcde_rn<BR><BR>NOTE:&nbsp; the above query could easily be adapted into an 'update' query if they decide they would like to 'fix' previously recorded Vendor Invoices.&nbsp; Checks produced subsequent to the 'fix' would post the Management Fee (discount) with the GL Entity.</P>
+ <P class="Support_Heading_2" >4/18/2006</P>
+ <P class="support" >Version 6.2 – new customization required – Job Cost Code a required field in the Client Site Equipment record. See case 714.</P>
+ <P class="Support_Heading_2" >3/09/2006</P>
+ <P class="support" >1. Relabel 'Client Site Equipment User 3' to say 'Print Details on Quotes?'.<BR>2. Add validation logic that requires the field's value to start with either a 'y' or an 'n'.<BR>3. Treat existing blank values as 'y' so as to retain the current behavior.<BR>4. Change CLS' custom quote form to process the new field.</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support_Heading_2" >1/23/2006</P>
+ <P class="support" >Add a 'Use Alternate Terms Code' option to the Job Cost Code record.&nbsp; When checked, it causes a PO's AP Terms to default to the vendor's Alternate Terms.</P>
+ <P class="support" >Alternate Terms Code field in Vendor Viewer</P>
+ <P class="Support_Heading_2" >9/30/2005</P>
+ <P class="support" >Where Clause Functionality</P>
+ <P class="support" >This functionality was implemented in response to an issue from client 1598 that wanted the Create PM WOs function to skip Site Equipment <FONT style="text-decoration:underline;" >not</FONT> tagged as 'Under Contract'.<BR><BR>The registry entry they need...<BR><BR>Id:&nbsp; sys-start-scrtepmwo<BR>Contents:&nbsp; wc=clntsteeqpmnt_undr_cntrct='Y'<BR><BR>The 'wc' functionality has been implemented generically and is available for use with any function that sends messages to 'FFV &gt;&gt; rangeWhereClause'.&nbsp; That should include most functions that begin with an input screen that includes a range-type section...reports and starter functions.</P>
+ <P class="Support_Heading_2" >9/13/2005</P>
+ <P class="support" >Warning on Importing Unvouchered Costs to Work Order / AP Journal Registry</P>
+ <P class="support" >Client uses the SAMPRO feature that allows them to record Vendor Invoices directly into the Vendor Invoice viewer prior to recording them as AP Journal entries.&nbsp; Currently, this functionality is only implemented for their customization, which includes a special Vendor Invoice viewer. </P>
+ <P class="support" >sys-viewer-vapjrnl</P>
+ <P class="support" >UseVendorInvoiceViewer=true</P>
+ <P class="support" >PreventMultipleInvoiceNumberUse=true</P>
+ <P class="support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="support" >This case involves adding a check during the WO cost import that warns them when they have Vendor Invoices that haven't yet been recorded in AP.  See <A href="registry_entry_ap_journal.htm">Registry Entry AP Journal</A>  for details.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

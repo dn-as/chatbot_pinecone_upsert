@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.7.0_16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="print"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="MS-HKWD" content="W2"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Print W2 Forms</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="print,report,W2"/><meta name="brsnext" value="AP_Check_Detail.htm"/><meta name="brsprev" value="AP_Check_Report.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Print W2 Forms">
+        <span>Print W2 Forms</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Print W2 Forms (Old Report)</h1>
+<p>This version of the W2 report requires a W2 printer that supports <font style="font-weight: bold;">native PCL 5c or below printing</font>: 
+ driver-based (host based) PCL is <font style="font-weight: bold;">not</font> 
+ acceptable due to the need to print exact output to the W2 forms.</p>
+<p>See <a href="Report_PR_W2s_Standard.htm">Report PR W-2s (Standard)</a> 
+ for the new W2 report which does NOT require native PCL printing. The 
+ new <a href="Report_PR_W3_Standard.htm">Report PR W-3s (Standard)</a> 
+ may be run stand-alone and also does NOT require native PCL printing.</p>
+<h2>Purpose:</h2>
+<p>This function is used to print W2 Forms.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">W3 Support</font></p>
+<p style="margin-left: 36.00pt;">The Copy A option of Report W2 allows 
+ the printing of a W3 form at the end of the report. The system will print 
+ the Copy A’s and summary page as usual, and then pause. The following 
+ message box will appear:</p>
+<p style="margin-left: 36.00pt;"> Print W3 Form? Insert W3 Form Now.</p>
+<p style="margin-left: 36.00pt;">If you want to print the W3, DO <font style="font-weight: bold;">NOT</font> RESPOND TO THIS MESSAGE IMMEDIATELY. 
+ To print the W3 form, the user should verify that all Copy A’s plus the 
+ summary page have been printed, and then load the W3 form in the printer.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">After</font> 
+ the W3 form has been loaded, the user should then click Yes in the message 
+ box to print the W3 form. Note that if taxes for more than one state have 
+ been assessed, an X will be printed in the State portion of Box 15, and 
+ the Employer’s state ID number will be blank.</p>
+<h2>Usage:</h2>
+<p>Successful W2 reporting depends on properly formatted registry entries 
+ and tax-related records.  Click <a href="W2_Records_and_Setup.htm">W2 
+ Records and Setup</a> to review your records as discussed <span style="font-weight: bold;">before</span> 
+ running your W2&#39;s.</p>
+<h2>Printer Requirements:</h2>
+<p>Your W2 printer must support <font style="font-weight: bold;">native 
+ PCL 5c or below printing</font>: driver-based (host based) PCL is <font style="font-weight: bold;">not</font> acceptable due to the need to 
+ print exact output to this report for the W2 forms.</p>
+<p>See Report PR W-2s (Standard) for the new W2 report which does NOT require 
+ native PCL printing. The new Report PR W-3s (Standard) may be run stand-alone 
+ and also does NOT require native PCL printing.</p>
+<h2>Registry Entries:</h2>
+<p><a href="Registry_Entry_W2_and_W3_Printing.htm">Registry W2 Printing 
+ (sys-report-rw2)</a> . This registry also supports the additional fields 
+ required for W3 printing.</p>
+<p>The <a href="Registry_Entry_Federal_EIN.htm">Registry Entry Federal 
+ and State EIN</a> and <a href="Registry_Company_Name_Entry.htm">Registry 
+ Company Name Entry</a> must be also be set correctly.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Report Options:</font><br/>
+The Report Options selector pane controls how the report will be output. 
+ Click <a href="Report_Options.htm">Report Options</a> to learn more.</p>
+<p><font style="font-weight: bold;">Range:</font><br/>
+Enter a unique, alphanumeric name to save and identify your customized 
+ report Range. Your default Id fields will not be saved unless you name 
+ your range.</p>
+<p><font style="font-weight: bold;">Copy to Print: A B C D 1 2</font> <span style="font-weight: bold;"><br/>
+</span>Select the appropriate print option by double-clicking on the radio 
+ button adjacent to it. Remember to verify that the correct paper is loaded 
+ in the printer!</p>
+<p><font style="font-weight: bold;">Option A:</font><br/>
+This option should be used to print the red Copy A for the Social Security 
+ Administration (unless filing electronically). One 2-up W2 form will be 
+ printed for each employee with Federal/FICA wages plus a summary page 
+ at the end of the run. This report will be ordered by the Sort Employees 
+ By option. Note: in general, you would leave the Tax Authority Id, Type 
+ and State fields blank for this run. The Employee Id range enables you 
+ to reprint W2&#39;s for one or more employees or to print an alignment copy.</p>
+<p><font style="font-weight: bold;">Option B:</font><br/>
+This 2 option should be used to print the black Copy B to be filed with 
+ the employee&#39;s Federal Tax Return. One 2-up W2 form will be printed for 
+ each employee with Federal/FICA. This report will be ordered by the Sort 
+ Employees By option. Note: in general, you would leave the Tax Authority 
+ Id, Type and State fields blank for this run. The Employee Id range enables 
+ you to reprint W2&#39;s for one or more employees or to print an alignment 
+ copy.</p>
+<p><font style="font-weight: bold;">Option C:</font><br/>
+Option C should be used to print the black Copy C to be retained by the 
+ employee. One 2-up W2 form will be printed for each employee with Federal/FICA. 
+ This report will be ordered by the Sort Employees By option. Note: in 
+ general, you would leave the Tax Authority Id, Type and State fields blank 
+ for this run. The Employee Id range enables you to reprint W2&#39;s for one 
+ or more employees or to print an alignment copy.</p>
+<p><font style="font-weight: bold;">Option D:</font><br/>
+Option D should be used to print the black Copy D to be retained by the 
+ employer. One 2-up W2 form will be printed for each employee with Federal/FICA 
+ wages plus a summary page at the end of the run. This report will be ordered 
+ by the Sort Employees By option. Note: in general, you would leave the 
+ Tax Authority Id, Type and State fields blank for this run. The Employee 
+ Id range enables you to reprint W2&#39;s for one or more employees or to print 
+ an alignment copy.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Copy 1:</font><br/>
+Copy 1 should be used to print the black Copy 1 to be delivered by the 
+ employer to the State and Local Taxing Authorities. One 2-up W2 form will 
+ be printed for each employee/taxing authority combination where the employee 
+ earned wages. This report will be ordered by the Tax Authority Id first, 
+ and the Sort Employees By option within each Taxing Authority. A summary 
+ totals page will be produced for each taxing authority. In order to produce 
+ separate runs for state and local authorities, you may wish to produce 
+ one print run with the Type range completed as state, and another with 
+ the Type specified as local.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">TIP:</span> 
+ Running with the  Type Range set to: <span style="font-weight: bold;">state,local</span> 
+ will also provide summary totals pages for each Tax Authority. This eliminates 
+ the need to run Copy 1 multiple times. See additional details in the Type 
+ range documentation below. </p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Copy 2:</font><br/>
+Copy 2 should be used to print the black Copy 2 to be filed with the employee&#39;s 
+ State and Local Taxing Authorities. One 2-up W2 form will be printed for 
+ each employee/taxing authority combination where the employee earned wages. 
+ This report will be sorted by employee (in either Id or Last Name order) 
+ so that all W2&#39;s for an employee will be printed together. See the &quot;Type&quot; 
+ range for details on how to run Copy 2.</p>
+<p><font style="font-weight: bold; font-style: italic;">The following are 
+ 4-up Print Options; these options are NOT recommended due to alignment 
+ issues</font></p>
+<p><font style="font-weight: bold;">BC2</font><br/>
+This option prints 1 copy B, 1 copy C, and 2 copies of 2 on one page in 
+ the 4-up Horizontal format. One employee will be listed on each page. 
+ Note that since only 2 copy 2’s are printed, additional copies of this 
+ report will need to be printed if more than one state plus one local authority 
+ (or 2 local authorities or 2 states) would be printed for a single employee’s 
+ W-2.</p>
+<p><font style="font-weight: bold;">Sort Employee By: Last Name Social 
+ Security Number</font><br/>
+This option controls the output order of the W2&#39;s within taxing authority. 
+ Double-click on the radio button adjacent to an option to select it.</p>
+<p><font style="font-weight: bold;">Year:</font><br/>
+Enter the year the W2&#39;s are being produced for (e.g., 2018). This field 
+ must be completed in order for your W2&#39;s to print.</p>
+<p><font style="font-weight: bold;">Start Date End Date<br/>
+</font>The system will now set the Start Date(01/01) and the End Date (12/31) 
+ whenever the Year field gets changed. These dates may not be edited by 
+ the used unless specified by the <a href="Registry_W2_Entry.htm">Registry 
+ Entry for W2&#39;s</a> . These fields would be edited to enable partial year 
+ reporting for your W2’s. This would be desirable if, for example, your 
+ company’s EIN changed mid-year.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Tip: 
+ Setting the EIN<br/>
+</font>If your company’s EIN changed, you must set/reset it via the <a href="Registry_Entry_Federal_EIN.htm">Registry Entry Federal and State 
+ EIN</a> prior to running this report so that the correct EIN for the correct 
+ time of year will print on the W2’s. Be sure to set it to the correct 
+ (current) value when you have finished running your reports.</p>
+<p><font style="font-weight: bold;">Plain Paper Copy?</font><br/>
+If this field is checked, the system will produce an informational report 
+ that includes header information for each field. DO NOT check this box 
+ when aligning or printing live copies of the W2&#39;s.</p>
+<p><font style="font-weight: bold;">Tax Authority Id:</font><br/>
+This field enables you to only print W2&#39;s for a single tax authority or 
+ series of authorities. It is not recommended for Copy Options A,B,C or 
+ D.</p>
+<p><font style="font-weight: bold;">State Id:</font><br/>
+This field enables you to only print W2&#39;s for a single state or series 
+ of states: <span style="font-weight: bold;">be sure to enter the two character 
+ state abbreviation!</span>. It is not recommended for Copy Options A,B,C 
+ or D.</p>
+<p><font style="font-weight: bold;">Type:</font><br/>
+This field enables you to only print W2&#39;s for the specified types of Tax 
+ Authorities (typically state, local, other). It is not recommended for 
+ Copy Options A,B,C or D.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Tip: Avoiding 
+ Unnecessary Printing - Copy 1 and Copy 2<br/>
+Most users would enter</font> <font style="font-weight: bold;">state,local 
+ </font>in the Type range field to print employer W2&#39;s with totals for 
+ each state and local Tax Authority.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">If your 
+ data is configured with Other as being a Local tax</span>, then run Copy 
+ 1 and Copy 2 using Type: <span style="font-weight: bold;">state,local,other</span> 
+ skipping SUTA,SUI,etc. in the Tax Authority Id: range (set to ~SUTA,SUI).</p>
+<p><font style="font-weight: bold;">Employee Id:</font><br/>
+This field enables you to only print W2&#39;s for a single employee or series 
+ of employees. It is recommended for reprinting W2&#39;s and for aligning your 
+ forms. </p>
+<p><font style="font-weight: bold;">Executive Payroll</font>:<br/>
+If you are an Executive Payroll user, this field will default to Y; to 
+ print copies for all employees (Executive or not) clear this range. If 
+ your user record is not flagged as Executive Payroll, you will only be 
+ able to print forms for other non-Executive users. <span>The Executive 
+ Payroll status of the Payroll Period used to record time is not considered 
+ when printing W-2&#39;s.</span></p>
+<h2>Important Buttons:</h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> When you click the Go button, the Windows 
+ printer box will appear as usual. BE SURE TO SELECT THE PRINTER YOU WISH 
+ TO PRINT YOUR W2&#39;S ON. When the correct printer is selected, click OK.</p>
+<p>Next, a blank report screen will appear and your report will be sent 
+ directly to the printer (if the Plain Paper option was not checked). Be 
+ sure to close blank report screen before starting your next print run.</p>
+
+</body></html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.2.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="status"/>
+<meta name="MS-HKWD" content="job"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job Billing Item Status</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<style type="text/css">
+/*<![CDATA[*/
+body {
+        background-image: url("image/dbwatermark.gif");
+        background-repeat: repeat;
+        background-attachment: scroll;
+}
+/*]]>*/
+</style>
+
+
+<meta name="rh-index-keywords" content="change order,status - billing item,billing item status,job billing item status,status,job"/></head>
+
+<body bgproperties="fixed">
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Billing Item Status">
+        <span>Job Billing Item Status</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Job Billing Item Status</h1>
+<h2>Purpose:</h2>
+<p>This record may be used to specify user-definable status codes for Job Billing Items. Typically, this would be used for Change Order type Billing Items for tracking purposes. For example, statuses could include New, Submitted, Review, Approved.</p>
+<h2>Usage:</h2>
+<p>Referenced in: <a href="Job_Billing_Item_Viewer.htm">Job Billing Item Viewer</a></p>
+<p>This record has NO meaning in SAMPRO.  It is strictly for use on custom reports designed by users.</p>
+<h3>Important Fields:</h3>
+<p><font style="font-weight: bold;">Status Id:<br/></font>Uniquely defines this Job Billing Status record.</p>
+<p><font style="font-weight: bold;">Status Description:</font><br/>
+Briefly describes this status.</p>
+
+</body></html>

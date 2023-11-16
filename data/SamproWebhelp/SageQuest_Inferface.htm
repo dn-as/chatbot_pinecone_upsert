@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.14.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="GPS"/>
+<meta name="MS-HKWD" content="Garmin"/>
+<meta name="MS-HKWD" content="SageQuest"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>SageQuest Interface</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Fleetmatics (SageQuest),GPS,Garmin,SageQuest"/><meta name="brsnext" value="Start_Get_Geocodes.htm"/><meta name="brsprev" value="Registry_SageQuest_Mapping.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="SageQuest Interface">
+        <span>SageQuest Interface</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Fleetmatics / SageQuest Interface</h1>
+<h3>Purpose:</h3>
+<p>Data-Basics supports a two-way interface between Fleetmatic/SageQuest’s Mobile Control and SAM Pro to provide to provide tools for SAM Pro Dispatchers and TechAnywhere users.</p>
+<h3>Usage:</h3>
+<p>A Fleetmatics / SageQuest mobile device will be installed in the Technician’s truck, providing real-time GPS mapping and tracking facilities. When enabled, SAM Pro is able to pass work order information to Fleetmatics / SageQuest. This information in turn provides SAM Pro user with tools for the people taking service calls and (e.g., distance and directions from a Tech’s current location to that of a new service call). Similar tools are also available to TechAnywhere users.</p>
+<p>Work Orders for configured drivers that are scheduled for today will be pushed to SageQuest.</p>
+<p>The Timeout has been recently  increased from 30 seconds to 60 seconds. At times Fleetmatics / SageQuest is overloaded and it takes more than 30 seconds to respond with the answer. Sampro was giving up looking for the response just when Fleetmatics / SageQuest overcomes its troubles and give a response. The Fleetmatics / SageQuest integration software gives up at 60 seconds, which is what Sampro was increased to match. Downside is, if there is an actual problem, like the Fleetmatics / SageQuest service is not running, it will now take 60 seconds to respond rather than 30.</p>
+<p>In addition, the TimeOut alarm has been improved to reference &quot;Fleetmatics&quot; instead of just &quot;SageQuest&quot; and helpful guidance as to how to remedy the problem (make sure service is running).</p>
+<h3>Registry:</h3>
+<p>See <a href="Registry_SageQuest_Mapping.htm">Registry Entries for SageQuest</a> for details.</p>
+<h3>Notes on the TechAnywhere Post</h3>
+<p>TechAnywhere records the date and time that a status change was made. So the tech may make a status change of onsite at noon, but if he is out of range that status change may not get updated till he is in range (lets say 1:30).</p>
+<p>Previously, the TechAnywhere Post updated Fleetmatics / SageQuest at the time the post occurred. (in our example the post time would be 1:30). The problem was that SageQuest knows when the vehicle arrives (noon) but the status change time is 1:30. This made the Workorder Variance report incorrect.</p>
+<p>To correct this problem, fields have been added to the Work Order Technician tab with the status change date and time, not the time posted. When TechAnywhere posts it updates these fields with the date and time that a status change was made (noon). The SageQuest integration now uses these fields when they are populated with relevant data to send the correct time up to SageQuest.</p>
+
+</body></html>

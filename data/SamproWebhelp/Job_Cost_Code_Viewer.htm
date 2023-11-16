@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.1.0_17";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="certified payroll"/>
+<meta name="MS-HKWD" content="cost code"/>
+<meta name="MS-HKWD" content="job"/>
+<meta name="MS-HKWD" content="payroll (certified)"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job Cost Code Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="certified payroll,cost code,job,payroll (certified)"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Cost Code Viewer">
+        <span>Job Cost Code Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Job Cost Code Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create and maintain the job-specific cost codes that your company uses 
+ to track costing information. Refer to the <a href="Job_Overview.htm">Job 
+ Overview</a> for information on related records and procedures.</p>
+<h2>Usage:</h2>
+<p>Required for job costing. At least one job-specific cost code must be 
+ created for each job.</p>
+<p>Job Cost Codes attached to Job Template records may only be edited by 
+ users with access to Job Templates via their User Groups.</p>
+<p>PM (Project Manager) filtering has been applied to these records; only 
+ those Job Cost Codes corresponding to the user’s PM Filter may be selected.</p>
+<h3>Registry:</h3>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Completed_JC">Registry 
+ to Prevent Selection of Completed Cost Codes / Billing Items</a></p>
+<p>Allow the user to set the Date Completed in the Job&#39;s Cost Codes and 
+ Billing Items when the user sets the Date Closed in the Job Record (see 
+ <a href="Registry_Entry_Job_and_Job_Cloning.htm">Job Registry</a>).</p>
+
+<h3>Important Fields:</h3>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields that may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the order or status (required, optional, 
+ default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p class="Tab">Main Tab:</p>
+<p><font style="font-weight: bold;">Job Cost Code Id:</font> (30 character, 
+ only . and - special characters)<br/>
+This alphanumeric field must uniquely identify this Cost Code for this 
+ Job Id. For example, Job 100 and Job 200 could each have a Job Cost Code 
+ with the Id &quot;materials&quot;.</p>
+<p><font style="font-weight: bold;">Job Cost Code Name:</font> (40 character)<br/>
+Optional. Briefly describes this Job Cost Code.</p>
+<p><font style="font-weight: bold;">Office Field</font><br/>
+By default, this field is set to Office. If this job code always (or almost 
+ always) pertains to labor completed in the office, retain the Office option. 
+ If this cost code usually pertains to work done at a job site, select 
+ Field (by double-clicking on its radio button).</p>
+<p>The system uses these fields to default the Payroll Tax Authorities 
+ in Payroll Adjustment and Labor journal entries. If this cost code is 
+ marked office, the system looks at the State and Local Tax Authorities 
+ in the Employee record to determine the physical location of the employee 
+ when he was working on a job. If the cost code is marked field <font style="font-weight: bold;">and</font> 
+ the employee is flagged as a field employee, the system looks at the State 
+ and Local Tax Authorities in the Job record to determine the physical 
+ location of the employee when he was working on a job.</p>
+<p><font style="font-weight: bold;">Job Id:</font><br/>
+The Job this Cost Code is being created for. This field is required since 
+ cost codes are job-specific. If the user changes the Job Id in an existing 
+ record, the viewer will change to ‘add’ mode to allow the cost code be 
+ ‘cloned’ for the new job if it does not already exist.</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font><br/>
+If your firm departmentalizes or uses Intercompany processing, enter the 
+ GL Entity Id that expenses and income for this cost code are charged to 
+ (double-click or press Alt+F7 to select from a list of GL Entities). This 
+ field defaults from the GL Entity in the Job record (if one was filled 
+ in) if you are manually creating this record. If this record was created 
+ using a Job Template, it defaulted from the Cost Code associated with 
+ the template Job.</p>
+<p>When <a href="Intercompany_Processing_Overview.htm">Intercompany Processing</a> 
+ is enabled, the GL Entities specified in the Job record MUST reference 
+ the same Company as the GL Entities specified in its Cost Codes. Validation 
+ will not allow the GL Entity to be changed to one referencing a different 
+ Company.</p>
+<p><font style="font-weight: bold;">Billing Item Id:</font><br/>
+Optional. The default Job Billing Item this Cost Code should be associated 
+ with for invoicing purposes. Note that each Job Billing Item may have 
+ multiple Job Cost Codes. If a <a href="Registry_Job_Cost_Code.htm">Job Cost Code Registry</a> 
+ is enabled, the user will be warned if this field is changed when Job 
+ Progress lines referencing it exists. </p>
+<p><font style="font-weight: bold;">Hrly Burden:</font><br/>
+Optional for Cost Codes associated with labor. This field should only be 
+ used if you wish to have a different overhead burden for each Cost Code. 
+ Otherwise, the Burden should be locked into the Employee&#39;s Earnings Tab. 
+ If completed, this rate should include the general and administrative 
+ expenses associated with this category of labor.</p>
+<p><font style="font-weight: bold;">GL Income:</font><br/>
+Required. This income account will be used for posting T&amp;M lines to 
+ the Sales Journal by Automated Invoicing if a GL Income Account is <font style="font-weight: bold;">not</font> specified in the Job Cost Category 
+ selected on that line. If the Job Cost Category specifies an Income Account, 
+ it will be used instead.</p>
+<p><font style="font-weight: bold;">Cost Code Group:</font>  <font style="font-weight: bold;">Cost Code Level2 Id:</font><br/>
+If this level of costing is implemented on your system, enter an appropriate 
+ Id or double-click to select from a list of Id&#39;s.</p>
+<p><font style="font-weight: bold;">Discipline Id:</font><br/>
+If Discipline records are included in your job cost reporting system (typically 
+ for union payroll), enter the Discipline Id this Labor-related Job Cost 
+ Code pertains to.</p>
+<p><span style="font-weight: bold;">Skill 
+ Id</span><br/>
+Skill records allow for more detailed Job Cost coding in Reports and KPIs. 
+ This field is for reporting only: it is not NOT written to Job History 
+ (or other History records) when an entry for this Job Cost Code is posted.</p>
+<p><font style="font-weight: bold;">Estimated Cost:  Estimated 
+ Revenue:<br/>
+</font>The estimated cost and revenue associated with this code, for reporting 
+ purposes.</p>
+<p><font style="font-weight: bold;">Certified PR Report?</font><br/>
+Check this field (by double-clicking or pressing the Spacebar) if labor 
+ charges to this job should be included on the Certified Payroll report.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;" color="#000080">Tip:</font> 
+ <font color="#000080"><br/>
+</font>If a single job will incur labor that requires certified reporting 
+ as well as labor that does not require certified reporting, set up multiple 
+ labor cost codes, some of which have the Certified Payroll box checked, 
+ and some which do not.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">CIP 
+ Discount?</span><span style="mso-list: l0 level1 lfo1;"><br/>
+This field should be flagged if the CIP Discount Percent in the Job record 
+ should be applied to discounts for non-wage labor (burden) costs posted 
+ to this Job Cost Code.</span></p>
+<p style="margin-left: 48px;"><span style="mso-list: l0 level1 lfo1; 
+	 font-weight: bold;">Version 9.1 and Above:</span> <span style="mso-list: l0 level1 lfo1;">This 
+ version refines the handling of this field. If the CIP Discount box is 
+ flagged in the applicable Earnings record and in this Job Cost Code record, 
+ the CIP Discount Percent in the Job record will be applied to discounts 
+ the non-wage labor (burden) cost posted to this Job Cost Code.</span> 
+ In the original implementation, all N/A-type earnings were subject to 
+ CIP Discounting.  </p>
+<p style="margin-left: 48px; mso-list: l0 level1 lfo1;"><span style="font-weight: bold;">NOTE:</span> use of this feature requires 
+ that the global registry option <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Refine_Job_Cost_Calculation_for_Labor_">LaborJobCostRateMethod</a> 
+ is set to New.  </p>
+<p><font style="font-weight: bold;">Default for AR Post?</font><br/>
+Check this field if sales tax and miscellaneous charges should be applied 
+ to this cost code.  In general, only one Cost Code per Job should 
+ be flagged. Record Billing Adjustments (for construction invoices), Service 
+ Invoices, and Recurring PM&#39;s (using the Accelerated Payment Technology 
+ to bill via credit card)  all use the cost code with this <span style="text-indent: 30.25pt;">when 
+ the tax lines for the AR Sales Journal are generated.  If more than 
+ one Cost Code exists for the selected Job, but none are flagged as Default 
+ for AR Post, the system will simply select one.</span></p>
+<p><font style="font-weight: bold;">Date Must Start:  Date Must 
+ Complete:<br/>
+</font>These informational fields are used to indicate when work associated 
+ with this cost code should be started/completed.</p>
+<p><font style="font-weight: bold;">Date Started: Date Completed:</font><br/>
+The Date Completed field is referenced when entering labor, material or 
+ other charges to this Cost Code. If the Effective Date of the entry exceeds 
+ the Date Completed, the system will warn you of the problem (but will 
+ not prevent the transaction from being saved). The Date Started field 
+ provides optional information for planning and scheduling purposes. Enter 
+ the date in <font style="font-style: italic;">mmddyyyy</font> format or 
+ double-click on this field to access the calendar viewer to do so.</p>
+<p>A registry setting may be enabled to allow the user to set the Date 
+ Completed in the Job&#39;s Cost Codes and Billing Items when the user sets 
+ the Date Closed in the Job record (see <a href="Registry_Entry_Job_and_Job_Cloning.htm">Job 
+ Registry</a>).</p>
+
+<p><font style="font-weight: bold;">Job Cost Code User1: Job Cost Code 
+ User2:</font> (30 character x 2)<br/>
+Optional, user-defined fields.</p>
+<p style="font-weight: bold;">Job Cost 
+ Category Usage Filter<span style="font-weight: normal;"><br/>
+ This field allows the user to filter which Cost Categories are eligible 
+ for selection when this Cost Code is entered in certain journals and records. 
+ </span></p>
+<p style="font-weight: bold; margin-left: 48px;">Important:<span style="font-weight: normal;"> We strongly suggest conferring with 
+ your support representative if your firm wishes to begin using this functionality. 
+ The validations imposed by its use are NOT supported by the Quote Manager 
+ Approval Wizard; if improper Cost Categories are selected, the post will 
+ fail.</span> </p>
+<p style="font-weight: bold;"><span style="font-weight: normal;">When 
+ the user specifies this Cost Code in a detail line (i.e, for a Job Journal 
+ entry), the contents of this Usage Filter will automatically be added 
+ to the Cost Cat: range of the Job Cost Category filter preceded by sql=. 
+  This special filtering  is in addition to any Job Cost Category 
+ filtering implemented for that specific journal or record.</span></p>
+<p><img src="assets/images/image12.jpg" alt="" style="border: none;" width="690" height="468" border="0"/></p>
+<p><img src="assets/images/TestFilter.bmp" alt="" style="border: none;" border="0"/> Click the Test Filter 
+ button to preview the results of the Cost Category Usage field. The Cost 
+ Category list will be opened pre-filtered to the contents of the Cost 
+ Category Usage field.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">TechAnywhere 
+ Note:</span> These Cost Code ~ Cost Category Usage Validations are currently 
+ disabled for TechAnywhere Posts.  In the labor Journal, cost category 
+ restrictions have been refined  to tolerate TechAnywhere posts to 
+ the Labor Journal.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Quote 
+ Manager Note:</span> The Quote may not &#39;know&#39; what cost code (or even 
+ what Job) will be selected until the wizard is run; the Approval Wizard 
+ does NOT currently support this validation. If improper Categories are 
+ selected, the post will fail.</p>
+<p style="margin-left: 48px;"><a href="Registry_Entry_Job_Journal.htm">Job 
+ Journal Registry</a> to Change the Cost Code ~ Cost Category Validation 
+ Error into a Warning.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Obsolete?<br/>
+</font>If this field is checked, the record is considered Obsolete, and 
+ it may not be directly specified during data-entry (either by entering 
+ the Id or selecting it from a list). Obsoleted records can be edited and 
+ the Obsolete option can be cleared when necessary.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field displays the Security Id of the local 
+ user that created this record. If multiple location security is not implemented 
+ on your system, or if this record was created by a global user, this field 
+ will be blank.</p>
+<p> </p>
+<p class="Tab">GMP Tab</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">GMP 
+ %:</span><br/>
+ This field is used to calculate the add-on fee for GMP jobs. It should 
+ be completed for Job Cost Codes used for GMP Fees. It should NOT be completed 
+ for Job Cost Codes used for GMP Revenue Adjustments. Fees are calculated 
+ when Start Compute GMP Special Revenue is run as a scheduled event or 
+ when Record Billing Adjustments is run.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Cost 
+ Cat:</span><br/>
+ This field should only be completed if it is for a Job Cost Code which 
+ will be used in GMP Revenue Adjustment/Over Contract JCH entries. The 
+ Cost Category should have a Posting Cost Type &amp; a Selection Cost Type 
+ of Other.</p>
+<p style="font-weight: bold; margin-left: 8px;">Filters: 
+  </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Skills 
+ - Disciplines - Cost Category</span><br/>
+If these filters are blank, the GMP % in this record will always be applied. 
+ If one or more of these filters is completed, they will be used to limit 
+ the GMP % revenue calculations.</p>
+
+</body></html>

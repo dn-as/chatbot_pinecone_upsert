@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.2.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="foreign currency"/>
+<meta name="MS-HKWD" content="international currency"/>
+<meta name="MS-HKWD" content="multi-national currency"/>
+<meta name="MS-HKWD" content="currency conversion"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Currency Master Record</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="foreign currency,international currency,multi-national currency,currency conversion"/><meta name="brsnext" value="Bank_Deposit_Journal.htm"/><meta name="brsprev" value="Scanning_Documents.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Currency Master Record">
+        <span>Currency Master Record</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Currency Master Record</h1>
+<h2>Purpose:</h2>
+<p>This table enables the system to support multi-national currency for both payable and receivable transactions.</p>
+<p>The system will default the Currency Id from the Vendor record (for AP Transactions and Purchases) and the Client record (for AR transactions and Invoices). If the Currency Id is completed in the Purchase Order, AP, AR Sales or AR Cash Receipts journals, it indicates to the system that the amounts being entered are in the original, foreign currency, rather than in your firm’s local currency in which your GL is maintained</p>
+<h2>Usage:</h2>
+<p>This functionality enables your firm to operate in a corporate (base) currency and receive (AR) and/or remit (AP, Purchasing) funds in a currency of original entry. A currency master record should be made for each foreign currency your firm does business in.</p>
+<p>It is assumed that your firm will maintain a separate bank account for each foreign currency. This account is assumed to be maintained in that currency.</p>
+<p>Currency conversions, when implemented, will use the following equations:</p>
+<p>Foreign * Currency Factor = Local</p>
+<p>Local / Currency Factor = Foreign</p>
+<p>The system will determine the Currency Factor based on the Currency Id and the Effective Date of the transaction (which will tell it which line of the of the Currency Master record to read).</p>
+<p>End of Month Considerations</p>
+<p>It is assumed that contra accounts will be set up for A/P, A/R and Bank Foreign Exchange transactions. This will enable the accounting department to manually record end-of-month transactions to balance the foreign exchange account.</p>
+<h3>Posting Rules:</h3>
+<p>When currency conversion is turned on for GL and JCH entries via registry, the following rules apply:</p>
+<p> AR and AP entries are NOT converted to your local currency. This means that</p>
+<p style="margin-left: 48px;">Job invoices will appear in the foreign currency</p>
+<p style="margin-left: 48px;">Cash Receipts will be entered (to the appropriate banks account) in the foreign currency</p>
+<p style="margin-left: 48px;">Purchase Orders will be entered in the foreign currency</p>
+<p style="margin-left: 48px;">AP Entries will be recorded in the foreign currency</p>
+<p style="margin-left: 48px;">AP Checks will be issued in the foreign currency (on the appropriate bank account)</p>
+<p style="margin-left: 48px;">Vendor History will NOT be converted to your local currency.</p>
+<p style="margin-left: 88px;">The amounts will appear as they were entered in the foreign currency.</p>
+<p style="margin-left: 88px;"> The Currency Id and Factor will be recorded in these entries for historical/reporting purposes.</p>
+<p style="margin-left: 48px;">AP and AR Discounts entered for foreign Vendors / Clients (in foreign currency) will be converted to local currency when they are posted to GL.</p>
+<p style="margin-left: 48px;">Job and Inventory History will be converted to your local currency.</p>
+<p style="margin-left: 88px;"> The cost of items purchased from foreign vendors will be converted to your local currency.</p>
+<p style="margin-left: 48px;">GL History will SOMETIMES be converted:</p>
+<p style="margin-left: 88px;">Transactions written to the GL AP Control, GL AR Control, and Bank Accounts associated with a Currency Master Record in NOT be converted to local currency.</p>
+<p style="margin-left: 88px;">Transactions that record expenses will always be converted to your firm’s local currency.</p>
+<p style="margin-left: 88px;">Differences between the foreign and local currency will be written to the Foreign Exchange Gain/Loss Account</p>
+<h2>Registry Entries:</h2>
+<p>The <a href="Registry_Entry_Currency_Adjustment.htm">Registry Entry for Currency Adjustments</a> must be made to specify that postings to GL and JCH are converted from foreign to local currency.</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Currency Id:<br/></font>Specifies the foreign currency that AP/AR entries will be recorded in. This field is required.</p>
+<p><font style="font-weight: bold;">Description:<br/></font>For informational purposes.</p>
+<p><font style="font-weight: bold;">Abbreviation:<br/>
+<span style="font-weight: normal;">For example,</span></font> USD  for United States Dollars or CND for Canadian Dollars.</p>
+<p><font style="font-weight: bold;">GL/AR Control:<br/></font>This is the default control account to be used for receipts from Clients paying with this foreign currency. This account should ONLY be used to record entries in this specific foreign currency, NEVER your local currency.</p>
+<p><font style="font-weight: bold;">GL/AP Control:<br/></font>This is the default control account to be used for AP transactions for Vendors who will be paid in with this foreign currency. This account should ONLY be used to record entries in this specific foreign currency, NEVER your local currency.</p>
+<p><font style="font-weight: bold;">GL Bank Account:<br/></font>This is the default bank account to be used for AP/AR transactions in this foreign currency. This account should ONLY be used to record entries in this specific foreign currency, NEVER your local currency. <span style="font-weight: bold;">Note that a Sweep Account is not supported in Cash Receipts; a Bank Account must used.</span></p>
+<p><font style="font-weight: bold;">Foreign Exchange Gain/Loss:<br/></font>This is the account to which adjustments do to currency conversions should be posted for this foreign currency only. This should be a normal, suspense account, typically of the account category ‘Asset.’</p>
+<p><font style="font-weight: bold;">AR Retainage</font><font style="font-weight: bold;">:<br/></font>This is the default retainage control account to be used for Clients invoiced in this foreign currency. This account should ONLY be used to record retainage in this specific foreign currency, never your local currency.</p>
+<p><font style="font-weight: bold;">AP</font> <font style="font-weight: bold;">Retainage</font><font style="font-weight: bold;">:<br/></font>This is the default retainage account to be used for AP retainage due for Vendors who will be paid in with this foreign currency. This account should ONLY be used to record entries in this specific foreign currency, never your local currency.</p>
+<h2>Important Fields: Lower Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Factors Tab</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">This tab specifies the Currency Conversion Factors FROM the foreign currency TO your local currency for various date ranges according to the following equation:</p>
+<p>Foreign * Currency Factor = Local</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">Always add a new line when you add a new date range.</p>
+<p><font style="font-weight: bold;">Start Date: End Date:<br/></font>Enter the Start and End days that this conversion factor is applicable to in <font style="font-style: italic;">mmddyyyy</font> format (or double-click to access the calendar). <font style="font-weight: bold;">Be sure that your date ranges do not overlap.</font></p>
+<p><font style="font-weight: bold;">Factor:<br/></font>The conversion factor required to convert this currency of original entry to the corporate (base) currency used by your firm for the General Ledger.</p>
+<p><font style="font-weight: bold; text-decoration: underline;">Example:<br/></font> Suppose your local, corporate currency is Canadian Dollars, and you wish to make an entry for your US Dollars Currency Master. If the exchange rate is 1.134 ($1.13CND=$1.00USD) for August 4th, you might make the following entry for that week.</p>
+<p>Aug 04, 2017 Aug 10, 2017 1.134</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Tip: Updating Your Currency Master Tables<br/></font>It is important to update this table on a timely basis. We suggest that the End Date of the newest range always extends past the date on which you expect to update the table. In that way, if you miss updating the table a reasonable conversion factor will be in place. When you update the table, make sure that your date ranges do not overlap.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Clients Tab</p>
+<p>This tab lists the Clients that reference this Currency Id. You may double-click on a line to view the selected Client record.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Vendor Tab</p>
+<p>This tab lists the Vendors that reference this Currency Id. You may double-click on a line to view the selected Vendor record.</p>
+
+</body></html>

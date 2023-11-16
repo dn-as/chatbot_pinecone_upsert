@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.5.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Alias Update</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="Credit Card Processing,OpenEdge,Electronic Payments Credit Card Processing,alias (credit card processing),Global Payments"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Alias Update">
+        <span>Start Alias Update</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Alias Update</h1>
+<h2>Purpose:</h2>
+<p>The purpose of this function is to copy the credit card Alias information 
+ from one Site to other Sites sharing the same Client Id on the Site&#39;s 
+ COP tab. The Alias, Masked Credit Card Number, and Expiration Date will 
+ be copied. Only Sites with an existing Alias AND COP Client are eligible 
+ for selection. </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setup Note:</span> 
+ Start Function List Update must be run to make this function available 
+ from the Starter menu if a data conversion was not triggered with this 
+ update. This function would be assigned to specified User Groups. </p>
+<h2>Initial Range Screen</h2>
+<p><span style="font-weight: bold;">Site Id: Site Name:</span><br/>
+When the Starter is run, the initial screen requires the user to select 
+ the Site that contains the Alias to be copied. If this function was launched 
+ from the Copy Alias to Sites button on the Client Site Main tab, the Site 
+ will be completed for you. </p>
+<p style="font-weight: bold; margin-left: 8px;">Client Id:  Client 
+ Name:<br/>
+<span style="font-weight: normal;">These display fields default from the 
+ Client on the Site&#39;s COP tab.</span> </p>
+<p><span style="font-weight: bold;">Payment Alias - Masked CC Number - 
+ CC Expiration Date</span> <br/>
+These display fields default from the selected Site. This information will 
+ be copied to the sites you select on the next checklist screen.<br/>
+</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> 
+ When the user confirms that the correct Site was selected, they should 
+ click Go.</p>
+<h2>Checklist Screen:</h2>
+<p style="font-weight: bold;">Ok - Site Id - Site Name - Payment Alias 
+ -  Masked CC Number - Expiration<br/>
+<span style="font-weight: normal;">The checklist of eligible Sites with 
+ a matching COP Client displays that Site&#39;s current Alias and CC fields.</span> 
+  </p>
+<p>The Sites to be updated with the selected Alias (from the previous screen) 
+ should have the Ok box(s) checked. Double-click the Ok box to toggle between 
+ checked and cleared. </p>
+<p><img src="assets/images/image/SKIN1_Check.gif" alt="" style="border: none;" border="0"/> 
+ Click the Check button to check (select) every item on the list.</p>
+<p><img src="assets/images/image/SKIN1_CheckOff.gif" alt="" style="border: none;" border="0"/> 
+  Click to de-select every eligible item on the list</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> 
+ When Go is clicked from the Checklist the selected Sites will be updated 
+ with the revised Alias, Masked CC Number and Expiration Date.</p>
+
+</body></html>

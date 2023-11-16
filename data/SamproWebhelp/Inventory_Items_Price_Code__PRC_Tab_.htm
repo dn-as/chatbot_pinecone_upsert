@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.1.0_12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="price code"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Inventory Item Pricing Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="inventory,price code"/><meta name="brsnext" value="Inventory_Item_Sales_Tab.htm"/><meta name="brsprev" value="Inventory_Item_Manufacturers_Safety_Data_Sheet__MSDS_Tab_.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Inventory Item Pricing Tab">
+        <span>Inventory Item Pricing Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Inventory Item Pricing Tab</h1>
+<h2>Purpose:</h2>
+<p>In addition to the five pricing levels in the Price/Costing parent tab, this tab allows additional Price Codes to be assigned that override / customize pricing levels by client site. This functionality is applicable to pricing inventory for Job Invoicing (for Inventory Items marked as Use Unit Pricing), Client Order Processing and Quote Master. Price codes are referenced in the Inventory Item Pricing tab and in the Client Site record. For each price code that you enter in the Pricing tab, you can enter up to 5 prices.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Price Levels / Price Codes</font><font style="font-weight: bold;"><br/></font>The parent Inventory Item allows for 9 levels of Material Pricing, but Price Codes only allow for 5. If price codes are in effect, and the default price level from the Client Site is greater than 5, the system now defaults price level 1 from the Price Code. A registry entry <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#globel_settings_price_code">Price Code Handling (sys-ffv-global-settings)</a> is available to always default the value from the Price Code level 1, regardless of the Material Price Level in the Client Site.</p>
+<h2>Example:</h2>
+<p>The prices to be used for each Price Codes are entered in the Inventory Item Pricing tab. The price code is also entered in the Client Site Record. For COP orders, and for Work Order Inventory items, the system will read the Client Site Record for a Price Code first. The system then looks in the Inventory Item to see if there is an identical Price Code in the Inventory Item Pricing tab. If there is a code, the COP module will insert the pricing level from this code, based on the Price Level (1-5) defaulted in the Client Site ID and use this for pricing on the invoice. For COP Invoices, it will also use the Item Description in the Pricing tab, and use that on the COP Invoice, rather than the inventory name from the Inventory Record. If there is no Price code in either record, it will use the Price Levels in the Inventory Item ID instead, if there are fields to be used for pricing.</p>
+<h2>Usage:</h2>
+<p>Implement as needed for custom pricing at the Client Site or Job level.</p>
+<p><font style="font-weight: bold;">Foreign Currency Note</font><font style="font-weight: bold;">:<br/></font>Prices for Price Codes used by foreign customers must be in terms of the customer’s currency.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important</font><font style="font-weight: bold;">:</font> Be sure to correctly specify the <font style="font-weight: bold; font-style: italic;">Price Code</font> <font style="font-weight: bold; font-style: italic;">in the Client Site record</font>. This field provides the default price codes for Job and COP invoices.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of all fields that may be included in this record.</p>
+<p><font style="font-weight: bold;">Price Code</font><font style="font-weight: bold;">:</font><br/>
+The Price Code with which the Unit Prices in this section are associated.</p>
+<p><font style="font-weight: bold;">Price Code Description</font><font style="font-weight: bold;">:</font><br/>
+This display only field defaults from the Price Code record.</p>
+<p><font style="font-weight: bold;">Unit Price (1-5)</font><font style="font-weight: bold;">:</font><br/>
+The Unit Prices to be used with this price code. These Unit Prices will default on Client and Work Orders if the Client Site requesting this item references this price code.</p>
+<p><font style="font-weight: bold;">Item Description:</font><br/>
+The system sets the work order inventory description using the Price Code (if the description is completed) and the Inventory Price Exceptions tables (shown on the Inventory Item Pricing tab).  The following registry entry enables you to only include the Inventory Description on service compute invoices – it is designed for companies that do not want the internal part name to appear on customer invoices. Note that the Description defaults from the Inventory Name if there is no Price Code or the description in the Price Code is blank.<br/>
+Id:    sys-report-serviceinvoice<br/>
+Contents:    ShowOnlyInvntryDesc=Yes</p>
+<p><font style="font-weight: bold;">Bill Type Id:<br/></font>Should be set to unit price.</p>
+
+</body></html>

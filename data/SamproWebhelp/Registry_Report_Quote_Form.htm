@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.26.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sys-report-rqtefrm"/>
+<meta name="MS-HKWD" content="quote"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Report Quote Form</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="registry,quote scope,quote manager,sys-report-rqtefrm,quote"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Report Quote Form">
+        <span>Registry Report Quote Form</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Report Quote Form (sys-report-rqtefrm)</h1>
+<h3>Purpose:</h3>
+<p class="Block_Text" style="margin-left: 5.75pt;">Set defaults for the 
+ standard quote form.</p>
+<p class="Body_Text_Indent" style="margin-left: 5.75pt; border-top: 0.50pt solid #000000; 
+	 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+	 border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing 
+ Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="margin-left: 5.75pt; border-top: 0.50pt solid #000000; 
+	 border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; 
+	 border-right: 0.50pt solid #000000;"><font style="font-weight: bold; 
+												 font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h3>Related Registry Entries:</h3>
+<p>See <a href="Registry_Entry_to_Autosave_Report.htm#Report_Graphics_and_Copy_Stamp">Report 
+ Graphics</a> for information on specifying custom graphics on your quote 
+ form.</p>
+<h3>Important Fields:</h3>
+<p class="Block_Text" style="margin-left: 5.75pt;"><font style="font-weight: bold;">Id:</font> 
+ sys-report-rqtefrm</p>
+<p>See the <a href="Registry_Viewer.htm">Registry Viewer</a> Standard Hierarchy 
+ section for additional Id formats if specific branches, securities, user 
+ groups or users need to override the main registry entry.</p>
+<h3><a name="Specify_Override_Bitmap_by_Sites_AccountManager__ServiceManager__Dispatcher_or_Branch" id="Specify_Override_Bitmap_by_Sites_AccountManager__ServiceManager__Dispatcher_or_Branch"></a> 
+ Override Bitmap by Site&#39;s Account Manager, Service Manager, Dispatcher 
+ or Branch </h3>
+<p>SAMPro provides special registry setting keys for sys-report-rqtefrm 
+ that provide additional bitmap control over and above that provided by 
+ the report registry hierarchy. When printing Quotes, the system will look 
+ at the Client Site record referenced in the Quote to find the appropriate 
+ record id to check for an override id match. If it is referenced in the 
+ registry, the override bitmap will be used. If an override bitmap is NOT 
+ specified, the system will use the standard bitmap (Setting Key: bitmap) 
+ specified in the registry.  Note that this functionality applies 
+ only to the main bitmap, not the sectionbackerbitmap.</p>
+<p>It your firm has multiple registry entries (e.g., by Security, Branch, 
+ Users, etc.) the additional registry override options must be added to 
+ each registry record.</p>
+<p>The revised version of Report Quote Form (RQTEFRMv73b102.rpt) dated 
+ 9/15/2014 or later AND SAMPro Version 8.2.545.049 or higher are required 
+ to implement this functionality:</p>
+<p><span style="font-weight: bold;">Id:</span> sys-report-rqtefrm</p>
+<p><span style="font-weight: bold;">Setting Key:</span> BitmapOverrideBasedOn 
+    <span style="font-weight: bold;">Setting Value:</span> 
+ <span style="font-style: italic;">FieldInClientSite</span></p>
+<p>This option turns on the override behavior, and defines which record 
+ in the Client Site will be used to define the bitmap override. Valid values 
+ are:</p>
+<p>accountmanager<br/>
+branch<br/>
+servicemanager<br/>
+dispatcher</p>
+<p>Setting Key: <span style="font-style: italic;">FieldInClientSite~RecordId</span> 
+  <span><font style="font-style: normal; font-weight: bold;">Setting 
+ Value:</font></span> <span style="font-style: italic;">sharepath\bitmap.bmp</span></p>
+<p>This entry defines matches the override with the bitmap.  One entry 
+ needs to be created for each override bitmap. The Setting Key defines 
+ the field and individual record Id; the Setting Value defines the bitmap. 
+  </p>
+<p style="margin-left: 48px;"><span style="text-decoration: underline; ">Example: 
+  Use the Client Site&#39;s Account Manager to Specify the Override</span></p>
+<p style="margin-left: 48px;">In this example, assume that Jean,Tim, Joe 
+ and Sarah are account managers. Jean and Tim need special overrides; Joe 
+ and Sarah do not.</p>
+<p style="margin-left: 48px;">Id: sys-report-rqtefrm</p>
+<p style="margin-left: 48px;">Setting Key: BitmapOverrideBasedOn    Setting 
+ Value: accountmanager</p>
+<p style="margin-left: 48px;">Turns on the override.</p>
+<p style="margin-left: 48px;"><span style="font-style: italic;">S</span>etting 
+ Key: AccountManager~Tim  <span><font style="font-style: normal;">Setting 
+ Value:</font></span> <span style="font-style: italic;">sharepath\</span>Tim_invoice.bmp</p>
+<p style="margin-left: 48px;"><span style="font-style: italic;">S</span>etting 
+ Key: AccountManager~Jean  <span><font style="font-style: normal;">Setting 
+ Value:</font></span> <span style="font-style: italic;">sharepath\</span>Jean_invoice.bmp</p>
+<p style="margin-left: 48px;">Specifies the override for Quotes for Client 
+ Sites with Tim or Jean as Account Managers.</p>
+<p style="margin-left: 48px;">Setting Key: bitmap    Setting 
+ Value: <span style="font-style: italic;">sharepath/</span>Company_invoice.bmp</p>
+<p style="margin-left: 48px;">Provides the default bitmap for Account Managers 
+ Joe and Sarah, and for Quotes generated for Client Sites without an Account 
+ Manager specified.</p>
+<h3><a id="Bitmap_Override_by_Job"></a> 
+ Bitmap Override by Job</h3>
+<p>The revised Report Quote Form (RQTEFRMv90b035.rpt) 
+ dated 2018-05-14 supports the new bitmap override by Job functionality; 
+ the Quote must specify a header Job for this functionality. Note that 
+ this functionality only applies to the bitmap, not the sectionbackerbitmap. 
+ </p>
+<p><span style="font-weight: bold;">Registry 
+ Id:</span> sys-report-rqtefrm</p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span>  BitmapOverrideBasedOn   <span style="font-weight: bold;">Setting 
+ Value:</span> job</p>
+<p>This registry entry defines that this 
+ override is based on a user field in the quote&#39;s Job record. </p>
+<p><span style="font-weight: bold;">Setting 
+ Key:</span> BitmapOverrideField  <span style="font-weight: bold;">Setting 
+ Value:</span> <span style="font-style: italic;">job user database field</span></p>
+<p>This registry entry specifies exactly 
+ Job User field will provide the override for the base &#39;Setting Key: bitmap&#39;. 
+  The database field name must be specified. </p>
+<p style="margin-left: 48px;">For example, 
+ the following specifies the Job&#39;s User 3 field:</p>
+<p style="margin-left: 48px;">Setting 
+ Key: BitmapOverrideField  Setting Value: jb_usr3</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting 
+ Key:</span> Job~<span style="font-style: italic;">string</span>   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">path\bitmap.</span>bmp</p>
+<p style="margin-left: 8px;">This entry 
+ provide the override bitmap file that will be used if the Job record&#39;s 
+ User field defined above contains the string specified. Notice that a 
+ tilde (~) separates Job from the string. As many of these entries may 
+ be made as needed to support the various bitmaps.</p>
+<p style="margin-left: 48px;">Example:</p>
+<p style="margin-left: 48px;">Suppose 
+ that we have a bitmap file named 010101_quote.bmp that should be used 
+ on quotes associated with Job&#39;s having the following text string 010101 
+ in Job User 3 fields. </p>
+<p style="margin-left: 48px;">Setting 
+ Key: Job~010101  Setting Value: <span style="font-style: italic;">path\</span>010101_quote.bmp</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Tip:</span> 
+ Include the part of the bitmap name as the text string for clarity. </p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Tip:</span> 
+ Including the appropriate values in your job templates will ensure that 
+ new jobs are created properly. In addition, using the Custom Fields functionality 
+ to specify the allowed values will prevent inappropriate values from being 
+ entered. </p>
+<h3>Set Omit Declined Options to Yes</h3>
+<p class="Block_Text" style="margin-left: 5.75pt;">The Report Quote Form, 
+ RQTEFRM.rpt  includes the checkbox, Omit Declined Options. When flagged, 
+ Declined scope options will not appear in the printed Quoted and quote 
+ total.<br/>
+<br/>
+The following registry may be used to flag the Omit Declined Options box 
+ (default is for the box to be clear to preserve current behavior).<br/>
+<br/>
+<font style="font-weight: bold;">Setting Key:</font> initialValueFor~p_omt_dclnd_optns<br/>
+<font style="font-weight: bold;">Setting Value:</font> true</p>
+<h3>Set Omit Approved Options to Yes</h3>
+<p>The revised Report Quote Form, RQTEFRM.rpt, dated 5/1/2012 includes 
+ a checkbox, Omit Approved Options. When flagged, Approved scope options 
+ will not appear in the printed Quoted and quote total. The following registry 
+ may be used to flag the Omit Approved Options box (default is for the 
+ box to be clear to preserve current behavior).<br/>
+<br/>
+<font style="font-weight: bold;">Setting Key:</font> initialValueFor~p_omt_apprvd_optns<br/>
+<font style="font-weight: bold;">Setting Value:</font> true</p>
+<h3>Prevent Print Confirmation / Record Locking</h3>
+<p>Answering ‘yes’ to the Print confirmation results in the system setting 
+ the status of the Scopes to Printed. The Quote Scope lines are also locked 
+ until the user confirms the print. If this locking causes problems in 
+ your system, this option provides a solution. This entry prevents the 
+ confirmation prompt from appearing.  In other words, and treats 
+ the print as though the user answered NO without actually prompting for 
+ their response. The Quote will not be set to printed, but locking issues 
+ will be avoided.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> PrintConfirmationDisabled 
+ <font style="font-weight: bold;">Setting Value:</font> true</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important 
+ Archiving Note:</font> <font style="font-weight: bold;"><br/>
+</font>If the above registry option is enabled, the autosavewhenprinted 
+ registry option will NOT work because the user never confirms the print. 
+ The autosave option should be used instead if the archiving of this report 
+ is desired.</p>
+<h3>Check Estimated Tax by Authority Box</h3>
+<p>Version 9.1.611.048 plus the revised 
+ Report Quote Form RQTEFRMv91b048.rpt dated 2019-01-08 or later adds a 
+ new input option to Show Estimated Tax By Authority. This option was implemented 
+ to benefit Canadian customers.</p>
+<p><span style="font-weight: bold;">New 
+ Option: Show Estimated Sales Tax By Authority</span><br/>
+If this box is checked, estimated taxes will be listed by Sales Tax Authority 
+ Id (generally implemented for Canadian installations). </p>
+<p>The following registry may be used 
+ for Canadian installations to set the default value of the this box to 
+ checked when this report is run:</p>
+<p><span style="font-weight: bold;">Id:</span> 
+ sys-report-rqtefrm</p>
+<p><span style="font-weight: bold;">Setting 
+ Key</span>: initialValueFor~p_shw_estmtd_tx_by_athrty  <span style="font-weight: bold;">Setting 
+ Value:</span> true</p>
+
+</body></html>

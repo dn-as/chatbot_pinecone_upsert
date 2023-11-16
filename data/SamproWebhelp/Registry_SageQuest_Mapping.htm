@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.31.0_16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="sys-mapping-sagequest"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="Garmin"/>
+<meta name="MS-HKWD" content="SageQuest"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry SageQuest Mapping</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Fleetmatics (SageQuest),sys-mapping-sagequest,registry,Garmin,SageQuest"/><meta name="brsnext" value="SageQuest_Inferface.htm"/><meta name="brsprev" value="Service_Recommendations.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry SageQuest Mapping">
+        <span>Registry SageQuest Mapping</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Fleetmatics (SageQuest)</h1>
+<h2>Purpose:</h2>
+<p>Controls the mapping statuses between SAMPro and Fleetmatics / SageQuest, enables logging, specifies drivers, and more.</p>
+<h2>Related Registries:</h2>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_sagequest_updates">Global Setting Entry: Update Sagequest Entries Regardless of Date Scheduled</a></p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">I</font><font style="font-weight: bold;">d</font>: sys-mapping-sagequest   </p>
+<h3>Enabling</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> enabled <font style="font-weight: bold;">Setting Value:</font> yes or no</p>
+<p>The Fleetmatics / SageQuest Server will be enabled unless the Setting Value is set to no.</p>
+<h3>Map Statuses between SAM Pro and Fleetmatics / SageQuest</h3>
+<p>This purpose of these settings is to provide a complete cross-reference between the SAM Pro log type statuses and the Fleetmatics / SageQuest statuses. A registry export file is available from support for the initial settings of these options; it is strongly recommended that you use the registry import feature to initially set these values.</p>
+<p><font style="font-weight: bold;">Set</font><font style="font-weight: bold;">ting Key:</font> StatusCodeMapping </p>
+<p><font style="font-weight: bold;">Setting Value:</font> LogtypeId : codeForMap : DescForMap : ValidSageQuestStatusType</p>
+<p><font style="font-weight: bold;">Note:</font> Valid SageQuest Status Types<br/>
+Open, InProcess, Complete, Closed, Canceled, Suspended, None</p>
+<p><font style="font-weight: bold; text-decoration: underline;">Examples:</font></p>
+<p><font style="font-weight: bold;">Setting Key:</font> StatusCodeMapping<br/>
+<font style="font-weight: bold;">Setting Value:</font> onsite : On-Site : On Site : InProcess</p>
+<p><font style="font-weight: bold;">Setting Key:</font> StatusCodeMapping<br/>
+<font style="font-weight: bold;">Setting Value:</font> waiting parts : Wait Parts : Waiting Parts : Suspended</p>
+<p><font style="font-weight: bold;">Important:</font> A registry file is available from support to use for the initial settings of these options. It is strongly recommended that you use the registry import feature to initially set these values.</p>
+<h3>Logging</h3>
+<p>The following options implement logging for Fleetmatics/ Sagequest. If enabled, it will log all of the transactions that are sent to Fleetmatics/SageQuest though the SQServer program.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> logmode <font style="font-weight: bold;">Setting Value:</font> on (default is off; no logging)</p>
+<p><font style="font-weight: bold;">Setting Key:</font> logpath <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">path\</font>sqLog.txt</p>
+<p> Example:</p>
+<p> Setting Key: logmode Setting Value: on</p>
+<p> Setting Key: logpath Setting Value: \\myserver\sampro\SQ<font style="font-style: italic;">\</font>sqLog.txt</p>
+<h3>Specifying Technicians as Drivers</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> drivers <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">techid1,techid2, …</font></p>
+<p>Example:</p>
+<p> <font style="font-weight: bold;">Setting Key:</font> drivers <font style="font-weight: bold;">Setting Value:</font> BBragg, CWheel, DGray</p>
+<p>This list can also be retrieved from Fleetmatics / SageQuest via “Start Get Valid Drivers From Sage Quest.</p>
+<h3>Treat Listed Technicians as Unassigned</h3>
+<p>Sometimes users create &quot;fictitious&quot; techs to use as place holders for unassigned work orders. For example, users put a tech called PM on their D-Boards and park the PM Work Orders there for later assignment. Since the tech &quot;PM&quot; isn&#39;t a valid Fleetmatics / SageQuest driver the work order wouldn&#39;t show on the Fleetmatics / SageQuest map. This registry setting will cause any tech listed to be handled just like the work order had no tech assigned to it. Since SageQuest displays unassigned work orders, these work orders would show up with a blank tech id.</p>
+<p>This registry option will allow a user to specify a list of tech id&#39;s that Fleetmatics / SageQuest will treat the same as it treats un-assigned work orders.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> TreatAsUnassignedTech <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">list of techs</font></p>
+<p>Example:</p>
+<p><font style="font-weight: bold;">Setting Key:</font> TreatAsUnassignedTech <font style="font-weight: bold;">Setting Value:</font> PM</p>
+<h3>Fleetmatics / SageQuest – Garmin Support</h3>
+<p>Fleetmatics / SageQuest has functionality on their system which allows interaction with a Garmin GPS device installed into the customer’s vehicles. This registry option is needed to support these SQServer application functions:</p>
+<p>CreateStopForWorkorder(workorderId) – This function identifies the driver from the workorder, the vehicle from the driver, creates a ‘Stop’ based on workorder’s contents, and sends the Stop to the vehicle’s Garmin. Actually, all these steps are performed at SageQuest. SQServer just forwards the workorder Id to them.</p>
+<p>Getstopsforvehicle(clientVehicleId) – This function answers a list of Stops currently assigned to the indicated vehicle.</p>
+<p>Under certain circumstances, SAMPro will need to call CreateStopForWorkorder() to upload the stop to the workorder’s vehicle. This is implemented when the following registry option is enabled.</p>
+<p>Add this registry setting to implement GPS Stops</p>
+<p><font style="font-weight: bold;">Setting Key:</font> GPSStopStatuses <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">list of statuses separated by commas</font><br/>
+<br/>
+ <font style="text-decoration: underline;">Example:</font></p>
+<p> <font style="font-weight: bold;">Setting Key:</font> GPSStopStatuses <font style="font-weight: bold;">Setting Value:</font> onsite,scheduled,quote approved<br/>
+<br/>
+When a work order tech line enters any of these log types, CreateStopForWorkorder() is to be called to generate the stop.</p>
+
+</body></html>

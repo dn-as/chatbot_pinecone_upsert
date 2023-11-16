@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>WebHelp Browser Support and Settings</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="help button,webhelp,help,Internet Explorer,context sensitive help,Windows 10,IE 10"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="WebHelp Browser Support and Settings">
+        <span>WebHelp Browser Support and Settings</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>WebHelp Browser Support and Settings</h1>
+  <p>The WebHelp distributed with SAMPro supports Internet Explorer11 and up. It also supports earlier versions of IE, as well as current versions of Firefox and Chrome (when run from your firm&#39;s network).</p>
+  <h3>WebHelp Does Not Launch</h3>
+  <p>WebHelp must be enabled via global registry - see <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_WebHelp">WebHelp Registry Option</a> for details.</p>
+  <p>If WebHelp is enabled and it still does not launch, a <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#WebHelp_Login_Processing_to_Diagnose_Problems">Registry to Diagnose WebHelp Issues</a> may be enabled.</p>
+  <p>Note: Ensure the default program to open HTML is set to the default browser. This issue is due to the default browser not being set as the default program to open HTML files. When this error happens, an alert message says &quot;Runtime Error: &quot;,&quot; not understood. See error log for more information.&quot; </p>
+  <p><span style="font-size:11.0pt"><span style="font-family:&quot;Bookman Old Style&quot;,serif"><img src="assets/images/image17.png" style="height: 149px; width: 326px;"/></span></span></p>
+  <p>If the DefaultHTML.log is showing this, check the default program to open up HTML file. </p>
+  <p><span style="font-size:11.0pt"><span style="font-family:&quot;Bookman Old Style&quot;,serif"><img height="16" src="assets/images/image5.jpg" style="height: 436px; width: 384px;" width="16"/></span></span></p>
+  <p>This feature can be turned on and off with the following Registry Entry:</p>
+  <p>Registry Id: sys-ffv-global-settings</p>
+  <p>Setting Key: DefaultHTMLLog Setting Value: true (default is false)</p>
+  <p>The log shows the path that SAMPro will use to display the Help files. If the path is valid then WebHelp should display, if the path is nil or invalid then WebHelp will not launch.<br/>
+    if the DefaultHTML.log is showing this, check the default program to open up HTML file.</p>
+  <h3> Context-Specific WebHelp Does Not Show</h3>
+  <p>&#39;Display Intranet Sites in Compatibility View&#39; should NOT be checked. Doing so may interfere with WebHelp&#39;s ability to show context-specific WebHelp resulting in the Welcome to SAMPro topic always being displayed.</p>
+  <p><img alt="" border="0" src="assets/images/image3.jpg" style="border: none;"/></p>
+  <h3>Internet Explorer Note (All Windows OS)</h3>
+  <p>If Internet Explorer is your default browser, the &#39;Allow active content to run on files in My Computer&#39; <span style="text-decoration: underline; ">must</span> be enabled for WebHelp&#39;s Search function to work properly (and without having to &quot;Allow Active Contact&quot; every time you access WebHelp). Active Content is NOT allowed if the Search tab in WebHelp looks like this:</p>
+  <p><img alt="" border="0" src="assets/images/image4.jpg" style="border: none;"/></p>
+  <p>The above Search tab is less than useless, and you need to allow active content to run in files on your computer. To allow active content (without having to confirm the &quot;Allow Active Content&quot; browser message each time you run WebHelp), access the following screen by going to Internet Explorer&#39;s Tools menu and select Internet Options. This field is set on the Advanced tab, under Security.</p>
+  <p><img alt="" border="0" src="assets/images/image2.jpg" style="border: none;"/></p>
+  <p>Close and restart WebHelp; your Search tab should look like the following.  You may Search throughout WebHelp for words, registry ids, setting keys, and so on.  The Search function will return ranked results:</p>
+  <p> </p>
+  <p style="font-weight: bold;"><img alt="" border="0" src="assets/images/image7.jpg" style="border: none;"/></p>
+  <h2> </h2>
+
+</body></html>

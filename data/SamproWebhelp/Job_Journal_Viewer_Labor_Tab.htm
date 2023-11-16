@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.4.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="job"/>
+  <meta name="MS-HKWD" content="journal"/>
+  <meta name="MS-HKWD" content="labor"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Job Journal Labor Tab</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="job,journal,labor"/>
+<meta name="brsnext" value="Job_Journal_Viewer_Other_Tab.htm"/><meta name="brsprev" value="Job_Journal_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Journal Labor Tab">
+        <span>Job Journal Labor Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Job Journal Labor Tab</h1>
+  <h2>Purpose:</h2>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">Enter Labor Budgets and Budget Changes, and adjustments to Job History.</p>
+  <p>
+    <font style="font-weight: bold;">Note that Labor entered as Actual transaction will only be used to adjust Job History, not to record hours worked so that the employee can be paid</font>; the Labor Journal, Remote Time Entry or the Work Order Labor Tab should be used for these purposes. Payroll Adjustments should be made to the Payroll Adjustment Journal.
+  </p>
+  <h2>Usage:</h2>
+  <p>Required for Labor Budgets.</p>
+  <h2>Important Fields:</h2>
+  <p>
+    <font style="font-weight: bold;">Employee Id:</font><br/>
+    The employee these hours are being entered or budgeted for. Double-click (or press Alt+F7) to select from a list. This field is optional.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Accounting Period</font><br/>
+    This field defaults from the Accounting Period in the Main record when you tab out of the Employee field, but may be changed by the user if needed. An Accounting period is not required for Budget or Budget Change entries.
+  </p>
+  <p>For Actual transactions, validation ensures that the posting to GLH for each referenced Accounting Period is in balance. If the user attempts to force different accounting periods (with GL enabled) on the Labor or Expenses tab, the message &quot;WARNING: this transaction is out-of-balance and must be corrected before it can be posted&quot; will be displayed. When the user has acknowledged the message, a workspace will be displayed to show the user what is wrong so that the entry can be saved.</p>
+  <p>
+    <font style="font-weight: bold;">Effective Date:</font><br/>
+    This field initially defaults from the Effective Date in the Main record. If you changed the Period Id on this line, the Effective Date will be changed if it does not fall within the new accounting period. If a prior period is selected, the final day of the period will default. If a future period is selected, the first day of the period will default.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Start</font>
+    <font style="font-weight: bold;">Time :</font>
+    <font style="font-weight: bold;">End Time</font>
+    <font style="font-weight: bold;">: (Custom Fields)</font><br/>
+    If you would like to be able to access these fields for entering and recording employee data, please contact your support representative: a customization file will be needed to display these fields. The following validations will be performed on these fields:
+  </p>
+  <p>1. Start Time can&#39;t exceed End Time unless End Time is empty.<br/>
+    2. End Time can&#39;t precede Start Time.<br/>
+    3. Time must be entered in military (24-hour) format.</p>
+  <p>Changes to either the Start or End times triggers a computation of the Hours. </p>
+  <p>
+    <font style="font-weight: bold;">Hours:  Hrs Billable:</font><br/>
+    Hours (Actual) and Billable Hours may now be specified separately. Hours will be used for costing, while Hours Billable will be used to compute revenue for billing purposes. Note that the Hrs Bill field defaults when you enter Hours, but may be adjusted by the user if needed. This enhancement enables you to enter a single line of labor to account for a situation where an employee spent three hours on a job (for costing purposes), but you only wished to bill the customer for 2 hours.
+  </p>
+  <p>
+    <font style="font-weight: bold;">WO Id:</font><br/>
+    If these hours are to adjust a specific Work Order, enter its Id (or double-click to select from a list). If this is a Service Compute job, the WO Id must be entered.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Equipment Id:</font><br/>
+    If the user enters a Work Order Id, the system will default in the first piece of equipment on the Work Order’s Equipment tab UNLESS this behavior is disabled via registry (see <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_journal_equipment_id">Registry Option - Do Not Default Equipment Id</a>). If the user double clicks on this field, the system will display a list of all equipment associated with the Client Site referenced in the Work Order.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Job Id:</font><br/>
+    The Id of the Job these hours are being entered against; this field will default if a WO Id was entered. If this is a Service Compute job, the WO Id must be also be entered.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Cost Category:</font><br/>
+    This Cost Category should use the Cost Type of Labor. When you double-click on this field, the list will be filtered so that only those Job Cost Categories with a cost type of Labor will be displayed. This field is required.
+  </p>
+  <p>This field also supports enhanced filtering provided by the Cost Code&#39;s Job Cost Category Usage Filter. Cost Categories are validated (relative to Cost Codes) during data entry upon leaving the Cost Category Id field.  The full relationship is validated again when leaving a child line or saving a record. A <a href="Registry_Entry_Job_Journal.htm">registry entry</a> may be implemented to turn the validation error into a warning.</p>
+  <p>
+    <font style="font-weight: bold;">Job Cost Code Id: Job Billing Item Id:</font><br/>
+    Enter the appropriate Id&#39;s for this Job or double-click to select from a list.
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Entity Id:</font><br/>
+    This field defaults from the Job record but may be changed by the user.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Description:</font><br/>
+    This optional field may be used to briefly describe this entry.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Unit Cost:  Amount Cost:</font><br/>
+    The system calculates the Unit by multiplying the total earnings (in the Earnings tab or Earnings Group)flagged as Job Costing by the Rate Factor set by the Pay Type. (Note: the Rate Factor will only be multiplied if the Earning Record is flagged for Rate Factors). The system calculates the Amount Cost as the Cost Rate X Hours. Either of this fields may be changed by the user; the system will recalculate the other.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Revenue Rate:</font><br/>
+    The Bill Type and Revenue Rate fields default from the Rate Schedule for this Job, but may be changed if needed. These fields jointly determine how the Unit Price of billable items will be calculated. For Labor entries, the Bill Type Id is typically set to <font style="font-weight: bold;">Unit Price</font>, and the Revenue Rate will equal the Unit Price.
+  </p>
+  <p>Select the Billing Type of <font style="font-weight: bold;">n/a</font> if a special price has been agreed on for this customer. In this case, you will leave the Revenue Rate field blank, and enter the Amnt Revenue fields directly.</p>
+  <p>
+    <font style="font-weight: bold;">Amount Revenue:</font><br/>
+    The system calculates the Amount Revenue as the Revenue Rate X Hours. Either of this fields may be changed by the user; the system will recalculate the other.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Extra?</font><br/>
+    If these hours are an &quot;extra&quot; (not explicitly included in a contract), check this box (by double-clicking or pressing the Spacebar). Doing so flags these hours as eligible for invoicing as a contract extra.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Discipline Id:</font><br/>
+    This field defaults from the Job Cost Code record, but may be changed by the user. It is typically used in conjunction with union payroll for reporting purposes.
+  </p>
+  <p><span style="font-weight: bold;">Supervisor Id:</span><br/>
+    If completed, this field specifies the Supervisor responsible for work in this entry.  </p>
+  <p><img alt="image\magnifybutton.gif" border="0" height="16" src="assets/images/image/magnifybutton.gif" title="image\magnifybutton.gif" width="16"/> Click the Magnify button to view the following fields.</p>
+  <p>
+    <font style="font-weight: bold;">Labor Rate Id: Pay Type Id: Billing Rate Type Id:</font><br/>
+    These fields default from the Employee record (if one has been specified) but may be changed by the user. For example, if the default Pay Type is &quot;regular&quot;, you might need to change it to &quot;overtime&quot; if overtime hours are being recorded. You may double-click to select from a list of Id&#39;s.
+  </p>
+  <p> </p>
+  <p><strong>Note: In version 9.1.611.062 and up, SAMPro now defaults into the Labor Journal the correct Workers Comp category from the security that matches the employee&#39;s security for the following tabs: Employee Rate Test, Labor Journal, WO Labor Tab, and import from Labor Journal into WO, based on the Job Cost Category &quot;Workers Comp&quot; tab and the Workers Comp&#39;s State from the Job.</strong></p>
+
+</body></html>

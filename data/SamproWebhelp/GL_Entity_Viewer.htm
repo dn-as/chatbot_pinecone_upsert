@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.8.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="department"/>
+<meta name="MS-HKWD" content="entity"/>
+<meta name="MS-HKWD" content="gl entity"/>
+<meta name="MS-HKWD" content="profit center"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>GL Entity Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="department,entity,gl entity,profit center"/><meta name="brsnext" value="Certification_Viewer.htm"/><meta name="brsprev" value="Call_Script_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="GL Entity Viewer">
+        <span>GL Entity Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>GL Entity Viewer (Entity)</h1>
+<h2>Purpose:</h2>
+<p>Identifies a profit/overhead center.</p>
+<h2>Example:</h2>
+<p>Suppose that your company provides both plumbing and air conditioning 
+ service. Creating GL Entities for these profit centers (e.g., ACSERV and 
+ PLUMBSERV) would enable you to track the profitability of each. Another 
+ example could be an engineering firm that provides both civil and structural 
+ engineering. In this case, GL Entities of CIVENG and STRUCENG would enable 
+ your firm to track the profitability of each.</p>
+<p>In addition to the GL Entities defined for profit centers, if Intercompany 
+ Processing is implemented, a GL Entity should be defined for use in Due 
+ To’Due From transactions. This type of Entity will be reference on the 
+ Company record’s GL Tab in the Balance Sheet Default GL Entity field.</p>
+<h2>Usage:</h2>
+<p>Advanced financial reporting.</p>
+<p>See <a href="Intercompany_Processing_Overview.htm">Intercompany Processing 
+ Overview</a> for this record’s use in conjunction with Intercompany Processing.</p>
+<p>Referenced in Records: GL Entity Group, Client Order, Purchase Order, 
+ Sales Tax Authority, Client Site, Deductions, Work Order/Invoice Data, 
+ Job, Earnings, AP Check, Other Rate, Tax Authority, Job Cost Code, Workers 
+ Comp State.</p>
+<p>Referenced in Journals: Job, GL, GL Budget, Labor, AR Sales, AR Cash 
+ Receipts, and Payroll Adjustments.</p>
+<h2>Important Fields:</h2>
+<p class="Tab">Main Tab:</p>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields that may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the order or status (required, optional, 
+ default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font> (10 character, 
+ only . and - special characters)<br/>
+A unique Id for this GL Entity. This field is required.</p>
+<p><font style="font-weight: bold;">GL Entity Description:</font> (40 character)<br/>
+A brief description of this GL entity (optional).</p>
+<p><font style="font-weight: bold;">Company Id</font><br/>
+This field must be completed if Intercompany Processing is implemented 
+ (the sys-ffv-global-settings registry’s IntercompanyEnabled option is 
+ set to true).</p>
+<p style="font-weight: bold;">PRS Entity Code:<br/>
+<span style="font-weight: normal;">Reserved for future use to enable data 
+ exchange with outside Payroll Services.</span></p>
+<p style="font-weight: bold;">GL Entity User 1:  GL Entity User 2:<br/>
+<span style="font-weight: normal;">Reserved for future use.</span></p>
+<p><font style="font-weight: bold;">Obsolete</font><font style="font-weight: bold;">?</font><font style="font-weight: bold;"><br/>
+</font>If this field is checked, the record is considered Obsolete, and 
+ it may not be directly specified during data-entry (either by entering 
+ the Id or selecting it from a list). Obsoleted records can be edited and 
+ the Obsolete option can be un-done when necessary. When you check the 
+ Obsolete field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. 
+ Would you like to see existing references to this record?”</p>
+<p>If you click Yes, the system will display a viewer that provides click-through 
+ access to all tables referencing this record: see <a href="References_List.htm">References 
+ List</a> for details.</p>
+<p><span style="font-weight: bold;">GL 
+ Account Usage Filter (SQL)</span><br/>
+Reserved for future use.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field displays the Security Id of the local 
+ user that created this record. If multiple location security is not implemented 
+ on your system, or if this record was created by a global user, this field 
+ will be blank.</p>
+<p> </p>
+<p class="Tab">Entity Groups Tab</p>
+<p>This display tab lists all GL Entity Groups which include this GL Entity. 
+  Double-clicking on a line opens the selected GL Entity Group.</p>
+<p><font style="font-weight: bold; font-style: italic;" color="#008000">Also 
+ See...</font> <font color="#008000"><br/>
+</font> <a href="GL_Entity_Group_Viewer.htm">GL Entity Group</a>  <a href="Buttons___Top_Bar.htm">Top Bar Buttons</a>  <a href="Buttons___Side_Bar.htm">Side 
+ Bar Buttons</a></p>
+
+</body></html>

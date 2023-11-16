@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.1.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="archive"/>
+<meta name="MS-HKWD" content="document"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Start Document Archive Maintenance</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="archive,document,registry"/><meta name="brsnext" value="Registry_Document_Attachments_to_Additional_Tables.htm"/><meta name="brsprev" value="Start_Autoarchive_Workorders.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Start Document Archive Maintenance">
+        <span>Registry Start Document Archive Maintenance</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Start Document Archive Maintenance</h1>
+<h2>Purpose:</h2>
+<p>This registry entry provides the default values for the manual Start 
+ Document Archive Maintenance function and the Start Document Archive Maintenance 
+ (Automated) function so that it may be run as a Scheduled Event.</p>
+<h2>Related Registry:</h2>
+<p>See the Subfolder Option for Document Archiving in <a href="Registry_Entry_Document_Attachment_Archiving.htm">Registry 
+ Document Archiving (sys-document-archive)</a> for enabling Subfolders 
+ when documents are first archived.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font> sys-start-sdcmntarchvemntnnce</p>
+<h3>Specify Default Days Past to Check PDF Archives</h3>
+<p><span style="font-weight: bold;">Setting Key:</span> NumberOfPastDaysToCheckPDFArchives 
+   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">numberofdays</span> (default is 7)</p>
+<p><span>This registry entry provides the default value for this field 
+ for the manual Start Document Archive Maintenance function and the Start 
+ Document Archive Maintenance (Automated) function.</span></p>
+<h3>Maximum Documents Options</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> MaxDocumentsToProcess 
+ <font style="font-weight: bold;">Setting Value:</font> numbertoprocess</p>
+<p>A reasonable value to start with is 1000. If your system handles this 
+ well, the number may be increased. This field is required if the Document 
+ Archive (Automated) will be run from Scheduled Event Manager</p>
+<p><font style="font-weight: bold;">Setting Key:</font> RequiredFieldsParent 
+  <font style="font-weight: bold;">Setting Value:</font> dcmnt-mx</p>
+<p>This requires a value in the Maximum Number of Documents to Process 
+ field.</p>
+<h3>Move to Subfolders</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> MoveToSubfolders 
+ <font style="font-weight: bold;">Setting Value:</font> true (default false)</p>
+<p>This recommended option moves files to subfolders by the Month/Year 
+ the document was attached.</p>
+<h3>Convert Reports to PDF&#39;s</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> ConvertDBRsToPDFs 
+ <font style="font-weight: bold;">Setting Value:</font> true (default false)</p>
+<p>This setting converts archived documents from the native SAMPro DBR 
+ format to PDF&#39;s for easier distribution.</p>
+<h3>Log Settings</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> ShowDetails <font style="font-weight: bold;">Setting Value:</font> true</p>
+<p>This option controls the level of detail written to the log file generated 
+ when this function is run. It should always be enabled.</p>
+<h3>Force Archive</h3>
+<p style="font-weight: bold;">Setting Key: <span style="font-weight: normal;">ForceArchive</span>  Setting 
+ Value: <span style="font-weight: normal;">true</span></p>
+<p style="font-weight: bold;"><span style="font-weight: normal;">This registry 
+ sets the default value of the Force Archive option to checked for the 
+ manual Start Document Archive Maintenance function and the Start Document 
+ Archive Maintenance (Automated) function. Typically, this would only be 
+ set if there was a problem with the loss or corruption of archived files. 
+ Shouldn&#39;t be used for normal archive maintenance cycles.</span></p>
+
+</body></html>

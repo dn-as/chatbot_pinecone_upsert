@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.1.0_20";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job Billing Item Change Order Request</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="job COR (Change Order Request),billing item,CO Request,Job Billing Item Change Order Request,Change Order Request,COR"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Billing Item Change Order Request">
+        <span>Job Billing Item Change Order Request</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Job Billing Item Change Request</h1>
+<h2>Purpose:</h2>
+<p style="margin-left: 8px;">When changes to a Job are required but not 
+ yet approved, Change Requests (CORs) may be created for budgeting / reporting 
+ purposes prior to their approval. They may also be used to accumulate 
+ costs. When a Change Request is approved, it may be converted to or attached 
+ to a Change Order for billing and costing;  budgets included on the 
+ Change Request will be added to the Job&#39;s Budget tab during this process. 
+ Any accumulated T&amp;M revenue will receive offsetting postings 
+ if it is converted to Fixed Fee. <span style="font-weight: bold;">Note 
+ that it is up to the user to specify an appropriate Contract Amount on 
+ the new/revised Fixed Fee Billing Item.</span>  </p>
+<p>Budgets entered on the Change Request&#39;s BudgetEntry tab will be used 
+ to generate corresponding entries to the Job&#39;s Budget tab at 100% likelihood. 
+ <span style="font-weight: bold;">Once the Change Request has been converted 
+ it is the user&#39;s responsibility to access it from the Job Billing Change 
+ Order viewer in order to complete any necessary fields, including the 
+ CO Amount and CO Cost, Invoicing Tab fields, etc.</span>  </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Alternative 
+ to Converting:</span> Instead of Converting a Change Request, it may be 
+ attached to an existing Change Order (using the Job Billing Change Order 
+ viewer&#39;s Attach CO Requests button). This allows multiple Change Requests 
+ to be combined on the same CO. Any accumulated T&amp;M revenue will receive 
+ offsetting postings. <span style="font-weight: bold;">Note that it is 
+ up to the user to specify an appropriate Contract Amount on the new/revised 
+ Fixed Fee Billing Item.</span>  </p>
+<h2>Usage:</h2>
+<p>The Billing Item can have 3 different forms:</p>
+<p style="margin-left: 48px;">A standard Billing Item (typically created 
+ when Job was set up)<br/>
+A Change Order Billing Item that Changes a Original Job. (CO)<br/>
+A Change Request (COR)</p>
+<p style="margin-left: 8px;">Billing Items marked as Change Requests are 
+ used for budgeting, NOT for actual billing or  costing.  However, 
+ when a Change Request is approved, it may be:</p>
+<p style="margin-left: 48px;">Converted to a Change Order via the Convert 
+ To CO Button in the Job Billing Item Change Request viewer<br/>
+<span style="text-decoration: underline; ">Or</span><br/>
+Attached to an existing Job Billing Item Change Order via the Attach CO 
+ Requests button in the Job Billing Item Change Order viewer</p>
+<p style="margin-left: 8px;">Charge Request Amounts represent the values 
+ requested, not necessarily the values approved.  <span style="font-style: italic; 
+															 font-weight: bold;">It 
+ is the user&#39;s responsibility to manually enter all appropriate values 
+ when converting or attaching to a Change Order!</span></p>
+<p style="margin-left: 8px;">Budgets entered on the Change Request&#39;s BudgetEntry 
+ tab will be used to generate corresponding entries to the Job&#39;s Budget 
+ tab when a Change Request is converted or attached to a Change Order.</p>
+<p>Open Change Requests will be included in Job EOM Processing.  They 
+ are treated as Fixed Fee with the Contract Amount adjusted by Percent 
+ Likelihood. Change Requests will be processed by the EOM function if:</p>
+<p style="margin-left: 48px;">Date Approved &amp; Date Declined = 1900-01-01 
+ <br style="margin-bottom: 0px; color: #000000; font-family: Verdana, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; 
+	 font-size: 14px; font-style: normal; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; font-weight: 400; letter-spacing: normal; 
+	 orphans: 2; text-align: start; text-indent: 0px; text-transform: none; 
+	 white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; 
+	 text-decoration-style: initial; text-decoration-color: initial;"/>
+CO Amount &amp; Percent Likelihood &lt;&gt; 0 </p>
+<h2>Registry:</h2>
+<p><a href="Registry_Job_Change_Request_COR.htm">Registry to Set Change 
+ Order Invoice Report Fields on Converting COR to CO</a></p>
+<h2>Important Fields: Upper Section</h2>
+<p class="Tab">Main Tab</p>
+<p><font style="font-weight: bold;">Bill Item Id:</font><br/>
+This required alphanumeric field must uniquely identify this Change Request 
+ for this Job.</p>
+<p><font style="font-weight: bold;">Bill</font> <font style="font-weight: bold;">Item 
+ Description:</font><br/>
+Briefly describes this Change Request. Recommended but not required.</p>
+<p><font style="font-weight: bold;">Job Id:</font><br/>
+The Job this Change Order Request is associated with.</p>
+<p><font style="font-weight: bold;">CO Amount:  Excepted Cost:</font><br/>
+These display-only fields are based on the total Revenues and Costs entered 
+ on the Budget tab.</p>
+<p><font style="font-weight: bold;">CO Amount:  Expected Cost:</font><br/>
+These field may be completed in two different ways: </p>
+<p style="margin-left: 48px;">They may be maintained by the system based 
+ on the Change Request&#39;s Budget Tab entries.</p>
+<p style="margin-left: 48px;">They may be manually updated if no Budget 
+ lines are present in the Change Request. If Budget lines are added, the 
+ Budget lines will overwrite the manually entered CO Amount and Expected 
+ Cost values on the Change Request&#39;s Main Tab when the record is saved. 
+  </p>
+<p>Note that it may be necessary to save the record and then Refresh the 
+ display to see the changes.</p>
+<p><span style="font-weight: bold;">% Likelihood:</span><br/>
+How likely this Change Order Request is to be approved, entered as a percentage. 
+ This field controls how lines from the Budget Tab are written to Job History. 
+ If the Likelihood is changed as the Job progresses, the appropriate changes 
+ to the Job History budget will be generated.  </p>
+<p style="margin-left: 48px; text-decoration: underline; ">Example:</p>
+<p style="margin-left: 48px;">% Likelihood = 50   CO Amount: 
+ 1000   Expected Cost:550<br/>
+Budget lines written to Job History for this Change Order Request total 
+ a budgeted revenue of $500 and a budgeted cost of $275.</p>
+<p style="font-weight: bold;">CO Date Requested:<br/>
+<span style="font-weight: normal;">The date this Change Order Request was 
+ asked for.</span></p>
+<p><font style="font-weight: bold;">CO Date Approved:</font><br/>
+This display-only field will be completed by the system when this Change 
+ Request is converted to a Change Order or attached to a Change Order.</p>
+<p><span style="font-weight: bold;">CO Date Declined:</span><br/>
+This field should only be completed the customer declines this Change Order 
+ Request. When a Change Order Request is Declined, any Job History entries 
+ generated for this Request will be reversed when this record is saved.</p>
+<p><span style="font-weight: bold;">Change Request Description:</span><br/>
+This field will be used to generate the Change Order&#39;s Invoice Description 
+ if this Change Request is approved and converted to a Change Order.  </p>
+<p style="font-weight: bold;">Change Order:<br/>
+<span style="font-weight: normal;">This display field will be completed 
+ if this Change Request has been attached the displayed Change Order.</span></p>
+<p><img src="assets/images/ConvertToCO.bmp" alt="" style="border: none;" border="0"/> 
+ When a Change Request is approved, clicking this button will convert it 
+ to a Change Order (CO) Billing Item. You will be asked to enter the Date 
+ Approved to be used on the Change Order and then click Yes to continue. 
+ When the Change Request has been converted, it will no longer be displayed 
+ in this viewer; it must be accessed via the Job Billing Item Change Order 
+ viewer.</p>
+<p>Budgets entered on the Change Request&#39;s BudgetEntry tab will be used 
+ to generate corresponding entries to the Job&#39;s Budget tab at 100% likelihood. 
+ <span style="font-weight: bold;">Once the Change Request has been converted 
+ it is the user&#39;s responsibility to access it from the Job Billing Change 
+ Order viewer in order to complete any necessary fields, including the 
+ CO Amount and CO Cost, Invoicing Tab fields, etc.</span>  </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Alternative 
+ to Converting:</span> Instead of Converting a Change Request, it may be 
+ attached to an existing Change Order (using the Job Billing Change Order 
+ viewer&#39;s Attach CO Requests button). This allows multiple Change Requests 
+ to be combined on the same CO.</p>
+<p><img alt="" src="assets/images/PrintCORequest.bmp" style="border: none;" border="0"/> 
+ If Report Change Order Request has been installed, clicking the button 
+ will launch the report, automatically filtered to the selected Job Billing 
+ Item Change Request. This report is designed to provide a document to 
+ be sent to and approved by the customer. This report includes room for 
+ a bitmap on the upper left-hand portion of the report, and displays the 
+ following information:</p>
+<p style="margin-left: 48px;">C.O.R. # - Job Id - Job Name<br/>
+Proposal To (from Job&#39;s Invoice Address) <br/>
+Service Location (from the Site associated with the Job)<br/>
+Scope of Services (defaults from the Change Request Description)<br/>
+Total (defaults from the Charge Request&#39;s C.O. Amount)<br/>
+Accepted By - Date (to be completed by the customer)</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Invoice:<br/>
+Report Id:  Report Query Id:</font><br/>
+Enter the Id&#39;s for the Invoice Report and Report Query formats to be used 
+ if this Change Request is converted to a Change Order with the Convert 
+ to C.O. button.   They are not required if the Change Request 
+ will be attached to an existing Change Order. These field must be completed 
+ before the Change Request can be converted unless the following <a href="Registry_Job_Change_Request_COR.htm">Registry 
+ to Set Change Order Invoice Report Fields on Converting COR to CO</a> 
+ is in place.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;"><span style="font-weight: bold;">Billing 
+ Worksheet</span>:<br/>
+Report Id:  Report Query Id:</font><br/>
+Enter the Id&#39;s for the Billing WorkSheet Report and Report Query formats 
+ to be used if this Change Request is converted to a Change Order with 
+ the Convert to C.O. button.</p>
+<p style="margin-left: 8px;"> </p>
+<p class="Tab">User Fields Tab</p>
+<p><span style="font-weight: bold;">Job Billing Item User1-5:<br/>
+</span>These optional fields may be used to record additional information 
+ required by your company or for reporting purposes.</p>
+<h2>Important Fields: Lower Section</h2>
+<p class="Tab">Budget Entry Tab</p>
+<p>Entries made in this tab will be written to Job History with a source 
+ journal of JBI Budget. Edits and changes to these lines will also be written 
+ to Job History. The Likelihood % field (see above)controls how lines from 
+ the Budget Tab are written to Job History. If the Likelihood is changed 
+ as the Job progresses, the appropriate changes to the Job History budget 
+ will be generated.  </p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Editing 
+ Budget Entries:<br/>
+</font>The BudgetEntry tab functions like the other SAMPro journals. If 
+ it is necessary to change a line, simply change it to the desired value 
+ and save the record.</p>
+<p><font style="font-weight: bold;">Hours:</font> <font style="font-weight: bold;">Quantity:</font><font style="font-weight: bold;"><br/>
+</font>The Hours fields should be used to record labor budgets lines, and 
+ the Quantity field should be used to record material or other items. On 
+ a single line, fill in either the Hours or Quantity field.</p>
+<p><font style="font-weight: bold;">Inventory Item:<br/>
+</font>This option field would be used if you are budgeting for specific 
+ parts. Note that the cost / revenue for this part must be specified by 
+ the user; these values will not default from inventory history.</p>
+<p><font style="font-weight: bold;">Cost Category:<br/>
+</font>Enter (or import) an appropriate Job Cost Category for this line. 
+ For example, a Cost Category of type Labor should be selected for Hours 
+ entries.</p>
+<p><span>This field supports enhanced filtering provided by the Cost Code&#39;s 
+ Job Cost Category Usage Filter. Cost Categories are validated relative 
+ to Cost Codes if this filtering is in place.</span></p>
+<p><font style="font-weight: bold;">Job Cost Code:<br/>
+</font> The Cost Code this budget is assigned to.</p>
+<p><font style="font-weight: bold;">Unit Cost: Extended Cost:</font><br/>
+The Unit Cost must be entered by the user. The system will multiply the 
+ Hours or Quantity by the Unit Cost to calculate the Extended Cost. The 
+ Likelihood % field controls the cost which is written to Job History. 
+ If the Likelihood is changed as the Job progresses, the appropriate changes 
+ to the Job History budget will be generated.  </p>
+<p><font style="font-weight: bold;">Billing Type: Revenue Rate: Extended 
+ Revenue:<br/>
+</font>By default, the billing type is set to n/a so that the user can 
+ enter the Revenue directly. To have the system calculate the Extended 
+ Revenue for you, select a Billing Type and enter a Revenue Rate. The Likelihood 
+ % field controls this revenue which is written to Job History. If the 
+ Likelihood is changed as the Job progresses, the appropriate changes to 
+ the Job History budget will be generated.  </p>
+<p><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/> 
+ Click the Magnify Button to Access the following fields.</p>
+<p><span style="font-weight: bold;">Description:</span><br/>
+If completed, this field will be used to generate the Job History Description.</p>
+<p><span style="font-weight: bold;">Effective Date:</span><br/>
+If completed, this field will provide the Effective Date written to the 
+ JBI Budget entry in Job History.  If this field is blank, the Job 
+ Record&#39;s BudgetEffectiveDate registry will be used to set the Effective 
+ Date in History. If this field is not set the Job registry is not implemented, 
+ the Effective Date in Job History will be set to blank (01011900).</p>
+
+</body></html>

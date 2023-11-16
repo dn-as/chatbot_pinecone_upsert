@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.7.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="service evaluation"/>
+<meta name="MS-HKWD" content="evaluation grading"/>
+<meta name="MS-HKWD" content="technician"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Technician Evaluation Summary Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="service evaluation,evaluation grading,technician"/><meta name="brsnext" value="Time_Zone_Viewer.htm"/><meta name="brsprev" value="Technician_Service_Zone_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Technician Evaluation Summary Tab">
+        <span>Technician Evaluation Summary Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Technician Evaluation Summary Tab</h1>
+<h2>Purpose:</h2>
+<p>This tab displays the results of the most recent evaluation completed for this Technician, and is set by the system when the Compute Technician Evaluation is run. This evaluation is based on the data in the Evaluation tab of Work Orders for which this Technician was the Primary Work Order Technician.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Question: Goal:<br/></font> These fields default from the Service Evaluation records referenced during the evaluation.</p>
+<p><font style="font-weight: bold;">Points Available: Points Earned:<br/></font>These fields indicate how well the Technician did on this evaluation criteria. Points are added to Points Available for answering ‘Yes’ or ‘No’. Points are added to Points Earned for answering ‘Yes’. A response of ‘N/A’ or ‘unknown’ impacts neither Points Available nor Points Earned.</p>
+<p><font style="font-weight: bold;">Yes No Unknown</font><br/>
+These fields display the actual number of responses for this evaluation question. A large number of Unknown’s may indicate the question is difficult to respond to or needs to be reworded. N/A (not applicable) responses are not listed.</p>
+
+</body></html>

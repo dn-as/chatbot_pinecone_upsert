@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="PayChex"/>
+  <meta name="MS-HKWD" content="export payroll"/>
+  <meta name="MS-HKWD" content="payroll"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Report PR Export Canadian ADP</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="PayChex,export payroll,payroll"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report PR Export Canadian ADP">
+        <span>Report PR Export Canadian ADP</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Report PR Export (Canadian ADP)</h1>
+  <h2>Purpose:</h2>
+  <p>Report PR Export creates a text file that Canadian ADP will use to generate paychecks. A report for the user to review/file will also be printed.</p>
+  <h2>Usage:</h2>
+  <p>This functionality requires that a vrgstry.cus file with the necessary permissions be in place. It may be necessary to run Start Update Functions to see this report. Note that this report is part of the image itself and does not have to be imported into the database.</p>
+  <p>The report function Report PR Export must be run AFTER the Compute Payroll function is run for the desired Payroll Period.</p>
+  <p>When fun the function, a formatted version of the report will be printed, AND the text version of the report will be saved in the directory specified in the sys-pr-export registry as <font style="font-style: italic;">client#</font>-ta.txt (for example, if your client number (as specified in the sys-pr-export registry) is 12345, the filename would be 12345-ta.txt. This text file should be used as directed by Canadian ADP when reporting on your company’s payroll.</p>
+  <p>
+    <font style="font-weight: bold;">Important Note on Canadian ADP</font>
+    <font style="font-weight: bold;">PRS Codes:</font><br/>
+    In order for the data in the PR Export Report to be interpreted correctly, the appropriate codes (consult your Canadian ADP documentation) must be present in your data – either in the PRS fields in the Tax Authority, Pay Type, and Other Rate records, or as the Id’s of these records (the record Id will be used if the PRS field is blank). Note that Canadian ADP PRS codes are up to two characters in length.
+  </p>
+  <h2>Report Range:</h2>
+  <p>
+    <font style="font-weight: bold;">Payroll Period:</font><br/>
+    Enter the Payroll Period you wish to run the report for. This field is required.
+  </p>
+  <p><span style="font-weight: bold;">Employee Id:</span><br/>
+    An Employee Id or list of Employee Id’s may be specified if you wish to filter this report to specific employees.</p>
+  <p><span style="font-weight: bold;">Executive PR:</span><br/>
+    If you are an Executive Payroll user, this field will default to Y; to run this function for all employees (Executive or not) clear this range. If your User record is not flagged as Executive Payroll, you will only be able to run this function for other non-Executive users even if you clear the filter.</p>
+  <h2>Printed Report Format:</h2>
+  <p>
+    <font style="font-weight: bold;">Emp #</font><br/>
+    This column is pulled from the Employee Id.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Earnings Code:</font><br/>
+    Depending on the type of line (pay, bonus or reimbursables), this field will be set from either the Pay Type (pay and bonuses) or the Other Rate (reimbursables) records. Consult your Canadian ADP documentation for the correct 2 character codes.
+  </p>
+  <p>If the Earnings Code is set from the Pay Type, the PRS Pay Code field will be used (if completed). If this field is blank, the Pay Type Id will be used to set the Earnings Code.</p>
+  <p>If the Earnings Code is set from the Other Rate, the PRS Reimb Code field will be used (if completed). If this field is blank, the Other Rate Id will be used to set the Earnings Code.</p>
+  <p>
+    <font style="font-weight: bold;">Hours Override Rate</font><br/>
+    Hours entered for this Employee at this pay rate. For Overtime and Doubletime hours, the Override Rate is already marked up by SAM Pro (be sure this is specified to Canadian ADP).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Amount  </font><br/>
+    The Amount column is set for bonuses (Labor Journal entries with Earnings but with NO hours) and for Labor Journal reimbursable entries recorded on the Labor Journal Other tab. For reimbursables, the Earnings Code column is set from the PRS Reimb Code (if completed) in the Other Rate record. For Bonuses, the Pay Type PRS Code: field (if completed) will be used to set the Earnings column; otherwise, the Pay Type Id will be used.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Override State</font><br/>
+    This column specifies the state Tax Authority this line is associated with. If the PRS Tax Code is set in the Tax Authority record, it will be used to complete the Override State column; if the PRS Tax Code field in the Tax Authority Type record is blank, the state Tax Authority Id will be used to set this column.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Override Local</font><br/>
+    This column specifies the local Tax Authority this line is associated with. If the PRS Tax Code is set in the Tax Authority record, it will be used to complete the Override Local column; if the PRS Tax Code field in the Tax Authority Type record is blank, the local Tax Authority Id will be used to set this column.
+  </p>
+
+</body></html>

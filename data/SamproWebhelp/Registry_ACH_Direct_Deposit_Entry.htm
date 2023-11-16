@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.23.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="ACH"/>
+<meta name="MS-HKWD" content="sys-eft"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="direct deposit"/>
+<meta name="MS-HKWD" content="eft"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry ACH/Direct Deposit (sys-eft-glaccountid)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="ACH,sys-eft,registry,direct deposit,eft"/><meta name="brsnext" value="Registry_W2_Entry.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry ACH/Direct Deposit (sys-eft-glaccountid)">
+        <span>Registry ACH/Direct Deposit (sys-eft-glaccountid)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry ACH/Direct Deposit Payroll (sys-eft-glaccountid)</h1>
+<h2>Purpose:</h2>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">An ACH registry 
+ entry must be created for each GL Account and GL Entity combination for 
+ which you will be generating direct deposit paychecks and run Report EFT 
+ Payroll. Your bank will provide details on the necessary account and routing 
+ numbers, as well as sending the electronic file. Note that the registry 
+ entry provides critical file information for the funds transfer, and should 
+ always be pre-noted to verify its correctness.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Usage:</h2>
+<p>See <a href="ACH_Sample_File.htm">ACH Sample File</a> for an example 
+ of the output structure of this file.</p>
+<h2>Related Registry:</h2>
+<p>The <a href="Report_EFT_Payroll.htm">sys-report-reft</a> 
+ registry sets the default GL Account / GL Entity when the printed Report 
+ EFT Payroll register is run.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font><br/>
+For ACH entries, the key information must be formatted as follows:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-eft-</font><font style="font-weight: bold; font-style: italic;">glbankaccountid-glentity-branchid-userid</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-eft-</font><font style="font-weight: bold; font-style: italic;">glbankaccountid-glentity-securityid</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-eft-</font><font style="font-weight: bold; font-style: italic;">glbankaccountid-glentity</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">sys-eft</font><font style="font-weight: bold; font-style: italic;">-glbankaccountid</font>-</p>
+<p style="margin-left: 36.00pt;">where <font style="font-style: italic;">glbankaccountid</font> 
+ is replaced by the GL Account Id of the bank account for payroll. <span style="font-weight: bold;">The GL Entity MUST be specified if you 
+ run paychecks by GL Account and Entity. If you generate paychecks for 
+ multiple GL Accounts/GL Entities, a registry entry should be created for 
+ each.</span></p>
+<p style="margin-left: 36.00pt;">The first format enables you to specify 
+ ACH parameters by branch id and (optionally) user. If this entry is specific 
+ to a user, the branch must be specified if a user belongs to a branch. 
+ If branches are not implemented, two dashes (not separated by a space) 
+ must precede the user id.</p>
+<p style="margin-left: 36.00pt;">The second format enables you to specify 
+ ACH parameters by security id.</p>
+<p style="margin-left: 36.00pt;">The third format would apply to all users 
+ unless another registry entry was created for their security or branch/user 
+ id.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; font-style: italic;">Note 
+ that in the fourth format (for all users if entities are NOT used for 
+ Paychecks) the trailing hyphen must be retained.</font></p>
+<p><font style="font-weight: bold;">Name:</font> A descriptive name for 
+ this ACH entry.</p>
+<h3>Required Entries</h3>
+<p><font style="font-weight: bold; font-style: italic;">All</font> <font style="font-weight: bold; font-style: italic;">entries listed bel</font><font style="font-weight: bold; font-style: italic;">ow are always required.</font> 
+ <font style="font-weight: bold; font-style: italic;">E</font><font style="font-weight: bold; 
+	 font-style: italic;">ntries noted as options</font> <font style="font-weight: bold; 
+	 font-style: italic;">may be required by your bank</font><font style="font-weight: bold; 
+	 font-style: italic;">.</font></p>
+<p><font style="font-weight: bold;">Setting Key:</font> fhDestId <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">nnnnnnnnn</font><br/>
+where <font style="font-style: italic;">nnnnnnnnnn</font> is replaced by 
+ the nine character immediate destination number provided by your bank.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> fhOrigId <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">nnnnnnnnn</font><br/>
+where <font style="font-style: italic;">nnnnnnnnn</font> is replaced your 
+ by the nine character origination number (your bank&#39;s 8 digit routing 
+ number plus a check digit) specified by your bank.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> fhDestName <font style="font-weight: bold;">Setting Value</font>: <font style="font-style: italic;">nnnnnnnnnnnnnnnnnnnnnnn</font><br/>
+where <font style="font-style: italic;">nnnnnnnnnnnnnnnnnnnnnnn</font> 
+ is replaced by the (up to 23 character) destination name provided by your 
+ bank or other originator. It specifies the name of your bank or financial 
+ institution.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> fhOrigName <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">nnnnnnnnnnnnnnnnnnnnnnn</font><br/>
+where <font style="font-style: italic;">nnnnnnnnnnnnnnnnnnnnnnn</font> 
+ is replaced by your firm&#39;s (up to 23 character) name as provided by your 
+ bank or other originator.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> bhDFIOrigId <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">nnnnnnnn</font><br/>
+where <font style="font-style: italic;">nnnnnnnn</font> is replaced by 
+ the eight digit originating bank id as specified by your bank.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> bhCompName <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">nnnnnnnnnnnnnnnn</font><br/>
+where <font style="font-style: italic;">nnnnnnnnnnnnnnnn</font> is replaced 
+ by the (up to 16 character) sending company&#39;s (your firm&#39;s) name.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> bcCompId <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">nnnnnnnnnn</font><br/>
+where <font style="font-style: italic;">nnnnnnnnnn</font> is replaced by 
+ the ten character sending company Id number provided by your bank.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> balBankId <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">nnnnnnnnn</font><br/>
+where nnnnnnnnn is the Bank Id/routing number provided by your bank or 
+ financial institution that specifies the bank/financial institution the 
+ payroll funds are debited from for balancing entries. This option is required 
+ if balAcctType is set to savings or checking.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> balAcctType <font style="font-weight: bold;">Setting Value:</font> savings or checking<br/>
+defines the account type (e.g., checking or saving) for the balancing entries.</p>
+<p style="margin-left: 72.00pt;"><font style="font-weight: bold;">Note:</font> 
+ <font style="font-weight: bold;">Unbalanced Entry Option</font><br/>
+The option<br/>
+<font style="font-weight: bold;">Setting Key:</font> balAcctType <font style="font-weight: bold;">Setting Value:</font> omit<br/>
+would be included (instead of balAcctType=checking or savings) if your 
+ bank/financial institution explicitly instructs you that a balancing entry 
+ is <font style="text-decoration: underline; ">not</font> to be included 
+ in the EFT file.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> balAcctNo <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">nnnnnnnnnnnnnnnnnn</font><br/>
+where <font style="font-style: italic;">nnnnnnnnnnnnnnnnn</font> is your 
+ company&#39;s (up to 17 character) account number provided by your bank or 
+ financial institution for balancing entries. <font style="font-weight: bold;">This 
+ option is required if balAcctType is set to savings or checking.</font></p>
+<h3>End of Line Option</h3>
+<p><font style="font-weight: bold;">Setting</font> <font style="font-weight: bold;">Key</font><font style="font-weight: bold;">:</font> eol <font style="font-weight: bold;">Setting 
+ Value:</font> crlf<br/>
+this option should be only included if your bank/financial institution 
+ requires that a carriage return/line feed code is included at the end 
+ of each line.</p>
+<h3>Filename Option</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> filename <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">nnnnnnnn</font><br/>
+this optional field specifies the name of the electronic file that will 
+ be created when the Generate EFT Register function is run. If this parameter 
+ is not included, the system will create a file with the filename transmitdate-transmittime.eft.</p>
+<h3>Security Code Option</h3>
+<p>If your bank/financial institution requires that the first line of the 
+ eft file consists of the security code that you specify, you must include 
+ this option in the Contents or Additional Contents field as shown below:</p>
+<p><font style="font-weight: bold;">Setting Key:</font> securitycode <font style="font-weight: bold;">Setting Value:</font> security_code_from_bank</p>
+<p>where <font style="font-style: italic;">security_code_from_bank</font> 
+ is replaced with the exact code specified by your bank.</p>
+<h3>All Uppercase Option</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> uppercase <font style="font-weight: bold;">Setting Value:</font> y</p>
+<p>This may be included if your bank/financial institution explicitly instructs 
+ you that all text must be uppercase.</p>
+<h3>Batch Header Option</h3>
+<p>If your bank/financial institution requires that the batch header Company 
+ Entry Description field is included in the EFT file, you must include 
+ this option as shown below:</p>
+<p><font style="font-weight: bold;">Setting Key:</font> <font style="font-weight: bold;">bhDescription</font> 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">dbDescript</font><br/>
+where <font style="font-style: italic;">dbDescript</font> is replaced with 
+ the 10 character description specified by your bank.</p>
+<h3>Entry Detail Description (Employee Social Security Number)</h3>
+<p>These options enable you to adjust the Entry Detail Description sent 
+ to your financial institution and displayed in the Reference column in 
+ the printed EFT register. Do not implement more than one of these options:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting 
+ Key:</font> edDescriptionSourcePR <font style="font-weight: bold;">Setting 
+ Value:</font> socsecno<br/>
+This option forces the replacement of the standard Entry Detail Description 
+ column (CK#, VdCk#, prenote) with the employee&#39;s social security number. 
+ Note that hyphens are not included in the social security number. This 
+ option should only be implemented if specifically required by your financial 
+ institution.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting 
+ Key:</font> edDescriptionSourcePR <font style="font-weight: bold;">Setting 
+ Value:</font> Check#6<br/>
+This option forces the replacement of the standard Entry Detail Description 
+ column (CK#, VdCk#, prenote) with the value &#39;Check#&#39; plus the check number 
+ right-justified to 6 places and zero-filled. <font style="font-family: Tahoma;" face="Tahoma">With 
+ this option turned on, check #1234 would appear in the file as &#39;Check#001234&#39;.</font></p>
+<h3>File Id Modifier</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> fhFileIdModifier 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">s</font></p>
+<p>This option allows you to set the File Header&#39;s FILE ID MODIFIER. <font style="font-style: italic;">s</font> should be replaced by the single 
+ character as dictated by the bank.</p>
+<h3>Option to specify location of EFT file</h3>
+<p>By default, the electronic file generated by Report EFT is automatically 
+ written to the directory containing the Sam Pro executable.  This 
+ new registry option enables the user to specify a directory path to override 
+ the default:</p>
+<p><font style="font-weight: bold;">Setting</font> <font style="font-weight: bold;">Key:</font> 
+ PathName <font style="font-weight: bold;">Setting</font> <font style="font-weight: bold;">Value:</font> 
+ <font style="font-style: italic;">s</font><font style="font-style: italic;">harepath/eftdirectory</font></p>
+<p>Note that <font style="font-style: italic;">sharepath/eftdirectory</font> 
+ must be replaced by a valid directory name.</p>
+<p style="margin-left: 36.00pt;"> </p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+
+</body></html>

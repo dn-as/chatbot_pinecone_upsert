@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report PR Canadian T4s (Standard)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="Canadian,T4,payroll (Canadian),PR Canadian T4"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report PR Canadian T4s (Standard)">
+        <span>Report PR Canadian T4s (Standard)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report PR Canadian T4s (Standard)</h1>
+<p>This report generates the Canadian T4 forms; it does NOT require a printer 
+ with Native PCL 5.</p>
+<h2>Usage:</h2>
+<p>The registry options discussed in <a href="Registry_T4_Print_sys_printer_T4_.htm">Registry 
+ T4 Print (sys-printer-T4)</a> and <a href="Registry_Report_Canadian_T4_(Standard).htm">Registry 
+ Report PR Canadian T4 (Standard)</a> must be in place for this report 
+ to print properly. The <a href="Registry_T4_Summary_Print.htm">Registry 
+ Report PR Canadian T4 Summary (Standard)</a> adjusts the T4 Summary.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important: 
+ Deduction Record Setup:<br/>
+</font>In order for Union Dues and Charitable Deductions to correctly print 
+ on the T4, the user must populate the field ‘Deduction User 1’ with Dues 
+ or Charitable, respectively, and ensure that the Deduction Type is Other 
+ Pre-Tax.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Earnings 
+ and Deduction Records – Other Information<br/>
+</font>Canadian T4&#39;s use the W2 Category fields in the Deductions &amp; 
+ Earnings records to populate the Other Information boxes on the T4. The 
+ W2 category must be filled in as OI:(Code # for T4). The Employee User 
+ 7 field is used to print the registration number in box 50 on the T4.</p>
+<p style="margin-left: 8px;">Box 14: Supports the processing of exempt 
+ earnings for the calculation of Employment Income.</p>
+<p style="margin-left: 8px;">Box 20: Enter RPP Contribution amounts using 
+ an Earnings Id with the W2 Category set to 20.</p>
+<p>Box 24: will be blank if it is the same as Box 14.</p>
+<p>Box 26: will be forced to blank.</p>
+<p style="margin-left: 8px;">Box 52: Enter Pension Adjustments using Earning 
+ Id&#39;s with the W2 Category set to 52.</p>
+<h5>Canadian PR T4 Standard and Summary 
+ - Covid Reporting for 2020</h5>
+<p style="margin-left: 8px;">This release 
+ supports Covid 19 reporting for 2020. This is implemented with special, 
+ year-specific earnings processing. The Other Information boxes will be 
+ used to print totals / codes as follows based on the Check&#39;s Effective 
+ Date:</p>
+<p style="margin-left: 48px;">Code - Check 
+ Date Range</p>
+<p style="margin-left: 48px;">57 -  2020-03-15 
+ through 2020-05-09<br/>
+58 - 2020-05-10 through 2020-07-04<br/>
+59 - 2020-07-05 through 2020-08-29<br/>
+60 - 2020-08-30 through 2020-09-26</p>
+<p class="MsoNormal"><b>Special 
+ Processing for Partial Year Provincial Reporting When an Employee Has 
+ Moved</b></p>
+<p class="MsoNormal">If an employee moves from one province to another 
+ during a calendar year, special processing must be followed in order to 
+ produce the correct printed T4&#39;s for that employee.</p>
+<p class="MsoNormal">1. The registry sys-report-rt4std must include the 
+ following setting to allow the Start and End Dates to be edited when the 
+ T4 is run:   Setting Key: PartialYearReporting  Setting 
+ Value: true</p>
+<p class="MsoNormal">2. Determine when the Provincial Tax in the Employee&#39;s 
+ Tax Tab was changed from Province 1 to Province 2. You will need to determine 
+ the last Payroll Period the employee&#39;s check was printed with their Province 
+ set to Province 1.</p>
+<p class="MsoNormal">3. Run the Employee&#39;s T4 with the End Date set to 
+ the last Check Date earned in Province 1, and the Province field set to 
+ Province 1.</p>
+<p class="MsoNormal">4. Run the Employee&#39;s T4 with the Begin Date set to 
+ the day after the last Check Date earned in Province 1, and the Province 
+ field set to Province 2. The End Date should be set to year-end. </p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Copy to Print:<br/>
+</font>Select either Employer or Employee version:</p>
+<p style="margin-left: 66.25pt;">Employer version prints two employees 
+ per page; generates the T4 Summary page</p>
+<p style="margin-left: 66.25pt;">Employee version prints same employee 
+ twice on one page; does not generate the T4 Summary page</p>
+<p><font style="font-weight: bold;">Province:<br/>
+</font>Select the Province.</p>
+<p><font style="font-weight: bold;">Year:<br/>
+</font> Select the Year: the Start Date &amp; End Date range will default 
+ to Jan 1 – Dec 31. See above for special processing if an employee has 
+ moved from one province to another during the year. </p>
+<p><font style="font-weight: bold;">Plain Paper copy?</font></p>
+<p>The first print should be to plain paper to check the numbers. This 
+ functionality is not needed in this version of the report since the report 
+ will always be displayed.</p>
+<p><font style="font-weight: bold;">Enter T4 Summary Remittance:<br/>
+</font>This amount will balance to the amounts on the T4 Summary. It is 
+ not necessary to enter this amount when running Employee version as only 
+ the Employer version generates the T4 Summary Page</p>
+<p><font style="font-weight: bold;">Employee Id:<br/>
+</font>Enter Selected Employees (or list of Employees)  or leave Blank 
+ for all employees.</p>
+<p><font style="font-weight: bold;">Executive Payroll<br/>
+</font>Enter Y if this is an executive payroll or clear for all payroll 
+ types. Note that only Executive Payroll users will be able to print forms 
+ for Executive Payroll employees. The 
+ Executive P/R status of the Payroll Period used to record entries is not 
+ considered. </p>
+<h3>Running the Report:</h3>
+<p><span style="font-weight: bold;">Step 1.</span> Run Report PR Canadian 
+ T4 (Standard) and print a test alignment of your tax forms for one or 
+ two employees before running all copies. You will be prompted to run the 
+ T4 Summary (although Report PR Canadian T4 Summary (Standard) may be also 
+ be run stand-alone).</p>
+<p>Make any adjustments needed to the horizontal or vertical positions 
+ via the sys-printer-t4 and/or sys-printer-t4summary registries and recheck 
+ for alignment as needed.</p>
+<p><b style="mso-bidi-font-weight: normal;">Step 2.</b> Once you are happy 
+ with your alignment, run the necessary copies of your T4 forms. A message 
+ will be displayed while the forms are still printing:</p>
+<p style="margin-left: 48px;">Print T4 Summary Form? Insert Form Now.</p>
+<p style="margin-left: 48px;">If you want to print the T4 Summary, DO NOT 
+ RESPOND TO THIS MESSAGE IMMEDIATELY. The user should verify that all T4&#39;s 
+ have been printed, and then load the T4 Summary form in the printer.</p>
+<p><span style="font-weight: bold;">Step 3:</span> After the T4 Summary 
+ form has been loaded, the user should then click Yes in the message box 
+ to print the Summary.</p>
+<p> </p>
+
+</body></html>

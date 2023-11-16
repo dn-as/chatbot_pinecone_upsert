@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.6.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job Scheduling Overview</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="job scheduler,wo creator"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Scheduling Overview">
+        <span>Job Scheduling Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Job Scheduling Overview</h1>
+<h2>Purpose:</h2>
+<p class="MsoNormal">Many Sampro Users have a Construction element to their business as well as Service.  Many Users also have technicians that do both Service and Construction work, depending on work load.  This creates a need to schedule technicians for many days on one Job, and also see all work scheduled in one place.</p>
+<p class="MsoNormal">Previously, the only way to accomplish this was to create Work Orders for each Job/Cost Code/Bill Item through New Call, and add several Technician dispatch lines; one for each technician for each scheduled date.  This would then allow traditional dispatching and TechAnywhere use. </p>
+<p class="MsoNormal">The Job Scheduling module allows Installation Work Orders to be generated from the Job&#39;s WO Creator tab (enabled via registry).  A special starter function, Start Create Job Scheduler WOs, will be enabled when this module is purchased.  It will generate the Installation Work Orders using the information provided on the Job&#39;s WO Creator Tab.</p>
+<p class="MsoNormal">In addition, there is now a Job Scheduler tool in DBAnalytics that allows ease of finding the appropriate, available technicians for each Installation Work Order and schedule for several days at once, all while tracking scheduled vs. estimated hours.  The Job Scheduler Dispatch Board also give you a view of all work scheduled with a day, week, or two week view.</p>
+<h2>Registries:</h2>
+<p>See the <a href="Registry_Entry_Job_and_Job_Cloning.htm#Registry_WO_Creator_Tab_for_Job_Scheduling">Job Registry</a> for the entries needed to Enable the WO Creator Tab and to Limit the Techs allowed on the WO Creator Tab.</p>
+<p>See the <a href="Registry_Start_Create_Job_Schedule_WOs.htm">Start Create Job Scheduler WOs Registry</a> for the options needed to configure this function.</p>
+<h2>Job Record - WO Creator Tab</h2>
+<p>This tab provides a basis for scheduling personnel for construction/installation type jobs. The information in this tab will be used by Start Create Job Scheduler WOs to generate Work Orders for this Job; these Work Orders will be linked to this tab when they have been created. See <a href="Job_WO_Creator_Tab.htm">Job WO Creator Tab</a> for additional details.</p>
+<h2>Start Create Job Scheduler WOs</h2>
+<p>The information on the Job&#39;s WO Creator tab is used by this function to generate Work Orders for this Job. This Starter function will only be available in database that needs it. See <a href="Start_Create_Job_Scheduler_WOs.htm">Start Create Job Scheduler WOs</a> for details.</p>
+<p class="Support" style="font-weight: bold;"> </p>
+
+</body></html>

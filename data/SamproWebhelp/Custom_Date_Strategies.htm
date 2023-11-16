@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.15.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="report scheduling"/>
+<meta name="MS-HKWD" content="ReportAnywhere"/>
+<meta name="MS-HKWD" content="date"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Custom Date Strategies</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="report scheduling,ReportAnywhere,date"/><meta name="brsnext" value="Comparison_Operators.htm"/><meta name="brsprev" value="Report_Options.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Custom Date Strategies">
+        <span>Custom Date Strategies</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Custom Date Strategies</h1>
+<p>ReportAnywhere supports relative dates for report scheduling. This enables you to set report dates (such as the Beginning Date, End Date, Statement Date, etc.) <font style="text-decoration: underline;">relative to the run date</font> of the report.</p>
+<p><font style="font-weight: bold;">Note:</font> Relative dates should <font style="text-decoration: underline;">not</font> apply to the &quot;run date&quot;, as &quot;repeat options&quot; handle that.</p>
+<p>To enter a relative date on the report you are scheduling, <font style="font-weight: bold;">right mouse click</font> in the desired date field. When you do so, a date selection box will appear:</p>
+<p><img src="assets/images/image/reportdate031.gif" alt="image\reportdate031.gif" title="image\reportdate031.gif" width="426" height="357" border="0"/></p>
+<p>The custom strategy box enables you to set the report dates based on the date the report is run by the system according to the following rules:</p>
+<p class="Normal_Indent"><font style="font-weight: bold;">d</font>, <font style="font-weight: bold;">m</font> and <font style="font-weight: bold;">y</font> refer to the day, month and year of the current run date.</p>
+<p class="Normal_Indent">Each date component can be controlled separately.</p>
+<p class="Normal_Indent">Adjustments can be either relative (using + or -) or absolute (no sign).</p>
+<p class="Normal_Indent"><font style="font-weight: bold;">d=last</font> is a special case to compensate for the variable # of days in a month.</p>
+<p class="Normal_Indent">Omitting a date component is the equivalent saying &#39;date component=+0&#39;  (i.e. today--&gt;d=+0)</p>
+<p>  A semi-colon must separate date components</p>
+<p>Example:</p>
+<p>Suppose you are scheduling the report to run every Sunday. To set the BEGIN DATE of the report to Monday, you could either select the &quot;Tomorrow&quot; option, or use custom strategy <font style="font-weight: bold;">d=+1</font> (i.e. Monday). To set the end date to Wednesday, use the custom strategy <font style="font-weight: bold;">d=+3</font> (i.e. Wednesday). The custom option enables a greater degree of flexibility</p>
+<p class="Block_Text">The following is a partial list of custom date strategy syntax and conventions.</p>
+<p class="Block_Text"> <font style="font-weight: bold;">Option  Custom   </font></p>
+<p class="Normal_Indent">Yesterday <font style="font-weight: bold;">d=-1</font></p>
+<p class="Normal_Indent">Today  <font style="font-weight: bold;">d=+0</font></p>
+<p class="Normal_Indent">Tomorrow <font style="font-weight: bold;">d=+1</font></p>
+<p class="Normal_Indent">PrevMMFirstDD <font style="font-weight: bold;">m=-1;d=1</font>   (first day of the previous month)</p>
+<p class="Normal_Indent">PrevMMLastDD <font style="font-weight: bold;">m=-1;d=last</font>   (last day of the previous month)</p>
+<p class="Normal_Indent">ThisMMFirstDD <font style="font-weight: bold;">d=1</font>    (first day of this month)</p>
+<p class="Normal_Indent">  <font style="font-weight: bold;">d=15  </font>  (the fifteenth of this month)</p>
+<p class="Normal_Indent">ThisMMLastDD <font style="font-weight: bold;">d=last</font>    (the last day of this month)</p>
+<p class="Normal_Indent">NextMMFirstDD <font style="font-weight: bold;">m=+1;d=1</font>  (first day of next month)</p>
+<p class="Normal_Indent">NextMMLastDD  <font style="font-weight: bold;">m=+1;d=last</font>  (last day of next month)</p>
+<p class="Normal_Indent">PrevYYFirstDD <font style="font-weight: bold;">y=-1;m=1;d=1</font>  (first day of last year)</p>
+<p class="Normal_Indent">PrevYYLastDD <font style="font-weight: bold;">y=-1;m=12;d=last</font> (last day of last year)</p>
+<p class="Normal_Indent">ThisYYFirstDD <font style="font-weight: bold;">m=1;d=1  </font>(first day of this year)</p>
+<p class="Normal_Indent">  <font style="font-weight: bold;">m=3;d=31</font>  (end of first quarter, this year)</p>
+<p class="Normal_Indent">ThisYYLastDD <font style="font-weight: bold;">m=12;d=31  </font>(last day of this year)</p>
+<p class="Normal_Indent">NextYYFirstDD <font style="font-weight: bold;">y=+1;m=1;d=1</font>  (first day of next year)</p>
+<p class="Normal_Indent">NextYYLastDD <font style="font-weight: bold;">y=+1;m=12;d=last</font> (last day of next year)</p>
+
+</body></html>

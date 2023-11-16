@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.11.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>CPP_Expense_Import</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="payroll,payroll import,import,CPP,expense import"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="CPP_Expense_Import">
+        <span>CPP_Expense_Import</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>CPP Expense Import</h1>
+  <p>The Start CPP Expense Import function enables the user to import payroll expenses such as mileage from a spreadsheet (.CSV) provided by Complete Payroll Processing into the Labor Journal&#39;s Other tab. Unlike the <a href="Start_CPP_Time_Import.htm">CPP Time Import</a>, expenses are imported to a Job, not a Work Order.</p>
+  <h2>Usage:</h2>
+  <p>The Starter function allows a user to browse to a CPP populated .csv formatted file, open the file and have its contents imported into a data edit screen for review, possible correction and import into the Labor Journal.  </p>
+  <p>When this function is run, it will attempt to derive the appropriate, Payroll Period based on the Effective Date in the .CVS file.  If an active Payroll Period is found which includes the Effective Date, the system will use it to generate the Labor Journal entries.  If there is not an active Payroll Period that includes the Effective Date, the message Invalid Pay Period will be displayed on the Create CCP Time Expense Entries screen.</p>
+  <p>Once imported, the expense data will be editable via the Labor Journal just like expenses manually entered into the Labor Journal&#39;s Other tab.</p>
+  <h3>IMPORT FILE SPECIFICATION:</h3>
+  <p>The file definition for the .csv (comma separated ASCII) file is as follows. The file should NOT include a header row.</p>
+  <p>Column 1: Quantity - 999.99 (required)<br/>
+    Column 2: Effective Date- dd/mm/yy (required)<br/>
+    Column 3: Amount (Total) Cost<br/>
+    Column 4: Employee Id<br/>
+    Column 5: Job Id<br/>
+    Column 6: Job Cost Category Id<br/>
+    Column 7: Job Cost Code Id<br/>
+    Column 8: Other Rate Id</p>
+  <p>Any field that currently defaults when entering expenses into the Labor Journal but not specified in the file layout will continue to default based on current default rules.</p>
+  <h2>Important Fields: Create CPP  Expense Entries Checklist Screen</h2>
+  <h3><span style="font-weight: bold;">Top Row:</span></h3>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Do Skip</font><br/>
+    Check Do to process this entry; Check Skip to skip this entry.
+  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Emplye Id: - Import Qty: - Import Cost: - Effct. Date: - PayPrd Id:- Import Job Id: - Cost Code: -  Cost Cat: - Import Other Rate:</span><br/>
+    The top row is from the import file, and may not be edited.</p>
+  <h3>Bottom Row:</h3>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Message:</span><br/>
+    If any problems were encountered with the import file, they will be display here, and the Skip box will be flagged. <span style="font-weight: bold;"></span>For example, if the system finds an exact duplicate entry already existing in the Labor Journal, the word “Duplicate” will be displayed on the row and the Do check box will be automatically un-checked.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Emplye Id: - Quantity: - Amount Cost: - Effct. Date: - Pay Period Id:</span><br/>
+    The bottom row list the SAMPro defaults which will be used for the Labor Journal entries.  These fields are display-only and may not be edited. <span style="font-weight: bold;"></span></p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Job Id: - Cost Code: -  Cost Cat: - Other Rate Id:</span><br/>
+    These fields default from the CCP file, but may be edited if needed. <span style="font-weight: bold;"> </span></p>
+  <p style="margin-left: 48px;"><span style="font-weight: normal;">After verifying the import information and making any necessary corrections, click the GO button. The system will create and post all necessary Labor Journal entries in SAMPro. There will be one Labor Journal Transaction Id for each employee/Payroll Period combination. A message “Successfully imported” will be displayed.</span></p>
+
+</body></html>

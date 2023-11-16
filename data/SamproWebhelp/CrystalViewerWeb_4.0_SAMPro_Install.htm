@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="01 17, 2018" />
+<meta name="author" content="Tadd Young" />
+<meta name="creator" content="Microsoft&lt;symbol name=Registered&gt;&lt;!--begin!kadov{{--&gt;®&lt;!--}}end!kadov--&gt; Word 2013" />
+<meta name="keywords" content="" />
+<meta name="producer" content="Microsoft&lt;symbol name=Registered&gt;&lt;!--begin!kadov{{--&gt;®&lt;!--}}end!kadov--&gt; Word 2013" />
+<meta name="subject" content="" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<title>CrystalViewerWeb 4.0 SAMPro Install</title>
+<link rel="StyleSheet" href="s_CrystalViewerWeb_4.0_SAMPro_Install.css" type="text/css" />
+<link rel="StyleSheet" href="sampro.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.replace(strUrl.substring(0, n));
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("SAMPro Help\nRegistry Entries\nGeneral Reporting / Printing Registry Entries\nCrystalViewerWeb 4.0 ");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sampro.htm", "", "&gt;", "Home", "Contents.htm");
+document.write("<a href=\"Logging_On.htm\">SAMPro Help<\/a> &gt; <a href=\"Registry_Viewer.htm\">Registry Entries<\/a> &gt; <a href=\"Registry_Entry_to_Autosave_Report.htm\">General Reporting / Printing Registry Entries<\/a> &gt; CrystalViewerWeb 4.0 <\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('sampro.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<p class="PdfParaStyle01"><img src="CrystalViewerWeb_4.0_SAMPro_Install_1_00.png" alt="" title="" width="352" height="98" border="0" />&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p class="PdfParaStyle01"><span class="PdfCharStyle0">CrystalViewer Web 4.0 Version</span></p>
+<p class="PdfParaStyle02" style="margin-left: 0px;">SAMPro Installation and Configuration</p>
+<p class="PdfParaStyle03"><span class="PdfCharStyle5">Preface</span></p>
+<p class="PdfParaStyle04">CrystalViewer is a program written by Data-Basics Inc. to allow SAMPro users to view Crystal Reports on their workstations. This program is only for viewing existing Crystal Reports and not for any type of report development. CrystalViewer Web 4.0 is the latest version that can run on current versions of Windows. The following information is for administrative users to create the appropriate registry entries in SAMPro.</p>
+<p class="PdfParaStyle05"><span class="PdfCharStyle5">Server Information</span></p>
+<p class="PdfParaStyle04">CrystalViewer Web has been implemented in .Net as ASP.NET website. This allows the reports to be run in a web browser on any workstation as a web page. You will need to contact Data-Basics for help in setting up this server.</p>
+<p class="PdfParaStyle05">Workstation Installation</p>
+<p class="PdfParaStyle04">Unlike previous versions, there is nothing to install on the workstations. The reports are auto-generated web pages with all the functionality of previous versions. The user should always uninstall any previous versions of CrystalViewer.</p>
+<p class="PdfParaStyle05"><span class="PdfCharStyle5">SAMPro Registry Settings for CrystalViewer Web 4.0</span></p>
+<p class="PdfParaStyle04"><span class="PdfCharStyle7">This version requires very little registry settings. The first three are the only “required” settings in</span> <span class="PdfCharStyle8">RED</span><span class="PdfCharStyle7">. The others are for using some dynamic data in the report itself. The ID of this registry is CRVWeb.</span></p>
+<p style="margin-top: 12px; margin-left: 0px; margin-right: 0px; text-indent: 0px;"><img src="CrystalViewerWeb_4.0_SAMPro_Install_1_01.png" alt="" title="" width="724" height="221" border="0" /></p>
+<table style="border-collapse: separate; border-collapse: separate;" width="100%" border="1">
+<col style="width: 22.759%;" />
+<col style="width: 28.62%;" />
+<col style="width: 48.621%;" />
+<tr>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle06"><span class="PdfCharStyle9">Setting Key</span></p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle07">Typical Default</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle08">Setting Information</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle09"><span class="PdfCharStyle10">hosturl</span></p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">https://**web app**</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">This is set to the html path of the web app Please refer to the server setup of CrystalViewer Web</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle11"><span class="PdfCharStyle10">PassInitialValues</span></p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle12">true</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">true or false. This setting allows SAMPro to override functions and launch CrystalViewer instead of SAMPro native reports. For<br />
+example: the WO Print button located on the work order viewer can be over ridden to launch a Crystal work order report and pass the work order ID (parameter would have to be named<br />
+wrkordr_id) from the screen. This functionality requires the sys-function-substitutions registry setting to work properly. See SAMPro help.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle13">registryAsQueryString</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle14">true</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle15">required for CrystalViewer Web</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle16">security</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle16">^securitylike^</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">Will update the parameter “security” in a Crystal Report with the current security filter string of the user running the report in SAMPro *See Report Creation Suggestions section below</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">user</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">^userid^</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle15">Will update the parameter “user” in a Crystal Report with the current user ID running the report in SAMPro</p>
+</td>
+</tr>
+</table>
+<table style="border-collapse: separate; border-collapse: separate;" width="100%" border="1">
+<col style="width: 22.759%;" />
+<col style="width: 28.793%;" />
+<col style="width: 48.448%;" />
+<tr>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 0px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle17"><span class="PdfCharStyle3">companyname</span></p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 0px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle17">^companyname^</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 0px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle17">Will update the parameter “companyname” in a Crystal Report with the registry company name in SAMPro</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">branch</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">^branchfilter^</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle15">Will update the parameter “branch” in a Crystal Report with the Branch ID filter in User Record see below 1</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">pm</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">^pmfilter^</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">Will update the parameter “pm” in a Crystal Report with the PM ID filter in User Record see below 2</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">location</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle10">^locationfilter^</p>
+</td>
+<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-width: 1px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle15">Will update the parameter “location” in a Crystal Report with the location ID filter in User Record see below 3</p>
+</td>
+</tr>
+</table>
+<p style="margin-top: 27px; margin-left: 2px; margin-right: 0px; text-indent: 0px;"><img src="CrystalViewerWeb_4.0_SAMPro_Install_2_00.png" alt="" title="" width="723" height="372" border="0" /></p>
+<p class="PdfParaStyle18">Report Creation Suggestions</p>
+<p class="PdfParaStyle04">In designing a Crystal Report, to follow the consistency of security as do all SAMPro Reports, you should always include the following in your Record Selection Formulas. It is not required, but highly recommended if this report were ever to be given to other SAMPro users who may be using security:</p>
+<table style="border-collapse: separate; border-collapse: separate;" width="100%" border="1">
+<tr>
+<td style="vertical-align: top; border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;" bgcolor="#FFFFFF">
+<p style="margin-top: 6px; margin-left: 22px; margin-right: 0px; text-indent: 0px;"><img src="CrystalViewerWeb_4.0_SAMPro_Install_2_01.png" alt="" title="" width="316" height="95" border="0" /></p>
+</td>
+<td style="vertical-align: top; border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;" bgcolor="#FFFFFF">
+<p style="margin-top: 6px; margin-left: 2px; margin-right: 0px; text-indent: 0px;"><img src="CrystalViewerWeb_4.0_SAMPro_Install_2_02.png" alt="" title="" width="338" height="95" border="0" /></p>
+</td>
+</tr>
+</table>
+<p class="PdfParaStyle19">Setting up SAMPro to have Crystal Reports run in the CrystalViewer Web</p>
+<p class="PdfParaStyle04">A user defined function must be created for each report. In each user defined function, the Function ID should be a descriptive and unique identifier for this report. In the Function Name you can provide any descriptive name for the report that will be visible on the report menu. In the Application box you must point to your CRVWeb (*be aware that previous versions of CrystalViewer used CRV and would need to be changed) registry setting, and finally in the Application Parameters box provide the full report name preceded by “report=”. For example “report=mycrv.rpt”. The Function Category should always be marked as a Report. This will then show that report in the Reports Menu (if the user has permissions to the report in their User Group). Any additions or changes in the user defined function along with the User Group will require the user to log off and back on to see it. Please see below for a typical setting.</p>
+<p style="margin-top: 0px; margin-left: 0px; margin-right: 0px; text-indent: 0px;"><img src="CrystalViewerWeb_4.0_SAMPro_Install_3_00.png" alt="" title="" width="556" height="427" border="0" /></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle5">ODBC Settings for CrystalViewer</span></p>
+<p class="PdfParaStyle04">ODBC does not need to be set up on the workstation for the Web version of CrystalViewer</p>
+<p class="PdfParaStyle05">Web Server Settings</p>
+<p class="PdfParaStyle04">The settings are contained in a file called web.config in the root directory of the program. Below in yellow are the variables that will need<br />
+to be set.</p>
+<ol start="1" style="list-style: decimal;">
+<li class="p-PdfParaStyle20" style="margin-top: 2px; margin-left: 22px;">
+<p class="PdfParaStyle20">The DSN is no longer specified from the SAMPro registry. It is now contained in the web.config file.</p>
+</li>
+<li class="p-PdfParaStyle20" style="margin-top: 2px; margin-left: 22px;">
+<p class="PdfParaStyle20">The setting called VDPath seen below is a pointer to the path that the report files are shared from on the web server. This</p>
+<p class="PdfParaStyle21">stands for Virtual Directory as a Virtual Directory is required to be setup in IIS during the installation. The VDPath uses a relative path to access this folder.</p>
+</li>
+<li class="p-PdfParaStyle20" style="margin-top: 2px; margin-left: 22px;">
+<p class="PdfParaStyle20">Email settings are now stored in the web.config as well, this allows for SSL email.</p>
+</li>
+</ol>
+<p class="PdfParaStyle22">Below is a portion of the above mentioned web.config file that would need some editing. Only knowledgeable users should edit this.</p>
+<table style="border-collapse: separate; border-collapse: separate;" width="100%" border="1">
+<tr>
+<td style="vertical-align: top; border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle23">&#160;&#160;&lt;setting name="DSN" serializeAs="String"&gt;</p>
+<p class="PdfParaStyle04">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;value&gt;Server=SQL Server; Database=XYZ; Trusted_Connection=yes; Driver={SQL Server Native Client 11.0}&lt;/value&gt;<br />
+&#160;&#160;&lt;/setting&gt;<br />
+&#160;&#160;&lt;setting name="VDPath" serializeAs="String"&gt;</p>
+<p class="PdfParaStyle24">&lt;value&gt;\reports&lt;/value&gt;<br />
+&#160;&#160;&lt;/setting&gt;<br />
+&#160;&#160;&lt;setting name="smtpUseSSL" serializeAs="String"&gt;</p>
+<p class="PdfParaStyle24">&#160;&lt;value&gt;True&lt;/value&gt;<br />
+&#160;&#160;&lt;/setting&gt;<br />
+&#160;&#160;&lt;setting name="smtpPort" serializeAs="String"&gt;</p>
+<p class="PdfParaStyle24">&#160;&lt;value&gt;587&lt;/value&gt;<br />
+&#160;&#160;&lt;/setting&gt;<br />
+&#160;&#160;&lt;setting name="emailUID" serializeAs="String"&gt;</p>
+<p class="PdfParaStyle24">&#160;&#160;&lt;value&gt;Service@XYZ.com&lt;/value&gt;<br />
+&#160;&#160;&lt;/setting&gt;<br />
+&#160;&#160;&lt;setting name="emailPW" serializeAs="String"&gt;</p>
+<p class="PdfParaStyle24">&#160;&#160;&lt;value&gt;********&lt;/value&gt;<br />
+&#160;&#160;&lt;/setting&gt;<br />
+&#160;&#160;&lt;setting name="smtpServer" serializeAs="String"&gt;</p>
+<p class="PdfParaStyle24"><span class="PdfCharStyle7">&#160;&#160;&lt;value&gt;your.emailsrvr.com&lt;/value&gt;<br />
+&#160;&#160;&lt;/setting&gt;</span></p>
+</td>
+<td style="vertical-align: top; border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-top-width: 0px;" bgcolor="#FFFFFF">
+<p class="PdfParaStyle22">&#160;</p>
+</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

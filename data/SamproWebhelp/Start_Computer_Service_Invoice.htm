@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.4.5.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="service invoice"/>
+  <meta name="MS-HKWD" content="compute"/>
+  <meta name="MS-HKWD" content="starter"/>
+  <meta name="MS-HKWD" content="billing"/>
+  <meta name="MS-HKWD" content="start"/>
+  <meta name="topic-check-list" content="Ran Smart Index"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Start Compute Service Invoice</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="APT,job,service invoice,compute,starter,billing,start"/>
+<meta name="brsnext" value="PM_Master_Schedule_Master_Contract_.htm"/><meta name="brsprev" value="Work_Order_Entry.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Compute Service Invoice">
+        <span>Start Compute Service Invoice</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Start Compute Service Invoice</h1>
+  <h2>Purpose:</h2>
+  <p>This function is used to generate, print and post invoices for work orders referencing &#39;Service Compute&#39; Jobs.</p>
+  <h2>Usage:</h2>
+  
+  
+  
+  
+  
+  
+  <p>As with other types of billing, all information is ultimately stored in Job History. However, the work order itself is  used to make adjustments to revenues billed. Therefore, all work orders that you intend to bill should be properly adjusted, and flagged as Invoice Ready.</p>
+  <p>
+    <font style="font-weight: bold;">Jobs with a Tax Status of ‘Unknown’</font><br/>
+    The Service Invoice Compute skips all jobs with the ‘Unknown’ tax status. The Job must be updated to reflect the correct status before the job can be invoiced.
+  </p>
+  <p>
+    <font style="font-weight: bold;">PM Work Orders</font>
+    <font style="font-weight: bold;">- Extras</font><br/>
+    Extras may be billed on PM WO’s even if the WO’s PM Invoice Id is set. If the invoice id on the imported line matches the PM Invoice Id on the Work Order, these lines can be marked as extra and billed.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Billing Items</font>
+    <font style="font-weight: bold;">Missing or Not Flagged</font><br/>
+    Start Compute Service Billing rejects any work orders where any of the following is true:
+  </p>
+  <p style="margin-left: 36.00pt;">Any unbilled job history with Revenue that references this work order with no Job Billing Item.<br/>
+    Any unbilled job history with Revenue whose Job Billing Item does not have the OK to Bill flag set.</p>
+  <p>In either case, the system displays a description of the problem, and the work order(s) that are causing the problem. If the billing item was not flagged as ‘Ok to Bill’, simply flag it and rerun the invoice. If the billing item is missing, contact your support representative. To prevent these problems in the future, contact your support representative for a registry entry to make the Billing Item a required field in New Call. You may also wish to make the Billing Item a required field in the Job Cost Code, and the Client Site Equipment record (default service job).</p>
+  <p style="font-weight: bold;">COD Work Orders and Template Clients</p>
+  <p>Click <a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP662720078" href="#"><span data-open-text="true" data-skip-index="true">COD Work Order Validation</span><span data-close-text="true">COD Work Order Validation</span></a> for detailed information special validation for these work orders.</p>
+  <div data-targetname="POPUP662720078">
+    <p>Validation ensures that template-type clients are only billed when
+      the net invoice amount is exactly ZERO DOLLARS. When the Service Invoice
+      report is run, the system compiles a list of each WO/Job combination
+      for which a Template Clients would be billed a non-zero amount. This
+      list will be displayed in a workspace viewer that the user may choose
+      to close or print.</p>
+    <p>In addition, the system auto-saves the compiled list as a text file.
+      If the dbreportfiles registry entry exists, the system will use it
+      to get the location to save the file with the Template Client errors;
+      otherwise the Sampro base directory will be used. Work Orders that
+      make this list CANNOT be included in the invoicing run.</p>
+  </div>
+  <p style="font-weight: bold;">Service Billing Overview</p>
+  <p>Click <a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP662411620" href="#"><span data-open-text="true" data-skip-index="true">Service Invoice Overview</span><span data-close-text="true">Service Invoice Overview</span></a> for suggestions on the use of this functionality.</p>
+  <div data-targetname="POPUP662411620">
+    <p> </p>
+    <p class="Reference_Line" style="margin-bottom: 0.00pt;">1. The Service
+      Compute box on the Job&#39;s  Invoice tab must be checked. The Report
+      Id should be serviceinvoice, and the Report Query to standard, or
+      the query specified by your support representative. The Job Billing
+      Items should also reference the Report Id serviceinvoice and an applicable
+      Query.</p>
+    <p>2. If you wish to use the Gross Margin functionality, create the
+      appropriate <a href="Gross_Margin_Table.htm">Gross Margin table(s)</a>.
+      The Gross Margin must be referenced in the Client Site record’s Service
+      tab.</p>
+    <p class="Reference_Line" style="margin-bottom: 0.00pt;">3. For Service
+      Compute to operate correctly, all costs (and associated revenues)
+      must be brought into the applicable work order.<br/>
+      <img src="assets/images/image/getcosts.gif" alt="image\getcosts.gif" title="image\getcosts.gif" width="63" height="35" border="0"/> Clicking the Import Costs
+      button in the Work Order imports detailed costs that have not as yet
+      been entered directly to the work order (these costs may come from
+      the Job Journal, Labor Journal, and from Purchase Orders).
+    </p>
+    <p class="Reference_Line" style="margin-bottom: 0.00pt;">4. After importing
+      or manually entering all detail on the work order, the Gross Margin
+      tab may be used to adjust the invoice revenues to correspond to the
+      desired Gross Margin or Invoice Total. This tab may also be used to
+      adjust an invoice if it is greater than the Client Not-To-Exceed value.</p>
+    <p class="Reference_Line" style="margin-bottom: 0.00pt;">5. The Distribute
+      GM button should be used to adjust the work order detail revenues.
+      A workspace viewer will display the results of the distribution. This
+      report may be printed for reference if needed. Any Revenue Adjustments,
+      if applicable, should also be implemented.</p>
+    <p class="Reference_Line" style="margin-bottom: 0.00pt;">6. If your
+      firm computes sales tax directly on the invoice, click the Compute
+      Sales tab button on the Invoicing tab, and adjust entries on the Sales
+      Tax tab as needed.</p>
+    <p class="Reference_Line" style="margin-bottom: 0.00pt;">7. Run the
+      Compute Service Worksheets function.</p>
+    <p class="Reference_Line" style="margin-bottom: 0.00pt;">8. When you
+      are ready to bill your Service Compute work orders (typically at the
+      end of the day), run the Start Compute Service Invoice function. This
+      function will automatically run the Print Invoice and Post Invoice
+      functions for the work orders that you select.</p>
+    <p>Service invoices support Job Invoice Reverse functionality. PM Invoices
+      are managed by entering a negative line or lines on the Client Site
+      PM Billing tab, and re-invoicing (for a net zero dollar charge).</p>
+  </div>
+  <h2>Registry Entries:</h2>
+  <p style="color: #000000;"><a href="Registry_Entry_Start_Service_Billing_Compute.htm">
+      <font color="#000000">Registry Entry Start Service Billing Compute</font>
+    </a></p>
+  <p>When using a registry entry with the Branch (sys-report-serviceinvoice-branchid) specified, Service Compute uses the Branch Id of the user running the function.  However, an override may be specified to use the Site&#39;s Branch to specify the invoices&#39; bitmap.  See <a href="Registry_Entry_Report_Service_Invoice.htm#Specify_Bitmap_by_Sites_AccountManager__ServiceManager__Dispatcher_or_Branch">Specify Override Bitmap by Site&#39;s Account Manager, Service Manager, Dispatcher or Branch</a> for details on implementing this functionality.</p>
+  <h2>Important Fields: Range Screen</h2>
+  <p>
+    <font style="font-weight: bold;">Bill Thru Date:</font><br/>
+    Line item charges with effective dates after the Bill Thru Date will not be included on the invoice. This field is required.
+  </p>
+  <p class="Block_Text">
+    <font style="font-weight: bold;">Invoice Date:</font><br/>
+    The date that you wish to appear on the invoice. This date defaults to today but may be changed by the user. This is a required field.
+  </p>
+  <p class="Block_Text">
+    <font style="font-weight: bold;">Effective Date:</font><br/>
+    The date that the system will use when posting the invoices to AR. This date defaults to today but may be changed by the user. This is a required field.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Period Id:</font><br/>
+    The active accounting period to which these invoices should be posted. The system will display the default accounting period (if one is defined) when this function is opened. This required field may be changed by the user. The ability to right-click to open the Accounting Period is not allowed due to Invoice Archiving validations.
+  </p>
+  <p class="Block_Text">
+    <font style="font-weight: bold;">Invoice Comments Id:</font><br/>
+    If you would like specific comments to be included on this invoice, enter a valid Invoice Comments Id or double-click to select one from a list. Typically, this feature is used to include payment instructions on invoices or to notify the customer of special deals (e.g., spring or fall maintenance) or services available. This field is optional.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Company Id:</font><br/>
+    If Intercompany Processing is enabled, this field is required to run Service Invoices. The Service Invoices generated will use the bitmaps specified by the sys-report-serviceinvoice-securityid registry unless overridden by a user-specific registry.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Job Id:</font><br/>
+    To process all eligible service invoices for Jobs, leave this field blank. If you only wish to compute the invoices for a specific Job, enter its Id. A range of Jobs can be specified by separating the first and last Id with an underscore: 1001_1025. A series of Jobs can be specified by listing Job Id&#39;s separated by commas: 1001,1005,1025.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Workorder Id:</font><br/>
+    To process all eligible work orders, leave this field blank. If you only wish to compute the invoices for a specific workorder, enter its Id. A series of WorkOrders can be specified by their Id&#39;s separated by commas.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Bill Cycle:</font><br/>
+    This field lets you specify the Billing Cycle (maintained in the Job record) of the Invoices to be computed. To compute eligible invoices for Jobs with a blank Billing Cycle, simply leave this field blank. To compute eligible invoices for jobs that do not contain a blank Billing Cycle field, simply enter the 1-character Billing Cycle designation that you wish to post.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Billing Agent User Id:</font><br/>
+    By default, the system will enter your user Id in this field: only those invoices for which you were the billing agent will be included on the checklist. (Note that in each work order, the Billing Agent is either set in New Call or when the work order is flagged as Invoice Ready.) To include work orders for all billing agents, blank this field. <font style="font-weight: bold;">If Branches are implemented on your system, this field would rarely be cleared out (see the Registry Entries section of this help topic for details).</font>
+  </p>
+  <p><strong>Site Id: </strong></p>
+  <p>This field allows users to specify the client site. </p>
+  <p>
+    <font style="font-weight: bold;">WO Type:</font><br/>
+    If you leave this range blank, work order invoices of all types will be computed. To compute and print a specific type of work order invoice, enter that type.
+  </p>
+  <p>Example:</p>
+  <p>To compute only eligible PM Invoice Work Orders, enter <font style="font-weight: bold;">PM Invoice</font> in the WO Type field. See <a href="Registry_Create_PM_Billing_Work_Order_Invoice.htm">the Registry Entry for Creating a PM Billing Work Order Invoice</a> for details on PM Invoices.</p>
+  <p>
+    <font style="font-weight: bold;">Escalation Status:</font><br/>
+    If you leave this range blank, all eligible work orders will be computed, regardless of their Escalation Status. Recalled that work orders flagged as Invoice Ready, and whose Jobs are NOT on hold are considered eligible.
+  </p>
+  <p>To limit the compute to eligible work orders of a specific Escalation Status (e.g., Invoice Review), enter it in this range field. A series of statuses can be entered, separated by commas.</p>
+  <p>
+    <font style="font-weight: bold;">WorkOrder Status Category:</font><br/>
+    This field may be used improve performance of this function by skip archived work orders. To do so, it should be set to !=archived manually or via registry. Note that Work Orders may be set to Archived by manually adding a Technician line with status Archived, or by using the Start Archive Work Orders or Start Autoarchive Work Orders.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Equipment Detail –</font>
+    <font style="font-weight: bold;">Off On:</font><br/>
+    If you select the ‘On’ option, charges on the invoice will organized <span style="font-size: 11.0pt; font-family: Calibri, sans-serif; mso-fareast-font-family: Calibri; 
+		 mso-fareast-theme-font: minor-latin; mso-bidi-font-family: Calibri; 
+		 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;">by Equipment Name and Serial Number. </span>Work Performed (from the Equipment Tab) will also be included on the invoice.  Typically, this option would NOT be used in conjunction with the  &quot;Equipment Work Performed Addendum - Show on Invoice&quot; functionality enabled in the work order.
+  </p>
+  <p>
+    <font style="font-weight: bold;">AR Summary – Off On:</font>
+  </p>
+  <p>If you select the On option, a <span style="text-decoration: underline; ">job-specific</span> AR Summary will be included after the invoice total.</p>
+  <p><img alt="image\go.gif" border="0" height="28" src="assets/images/image/go.gif" title="image\go.gif" width="48"/> When you have completed all fields properly, click the Go button to continue and display the Service Compute Checklist.</p>
+  <h2>Important Fields: Service Compute Checklist</h2>
+  <p>
+    <font style="font-weight: bold;">Do</font><br/>
+    This field enables you to select the work orders to be invoiced. Double-click on the Ok field to select or deselect an item (alternately, press the spacebar when the caret appears on this field); a check appears in the Ok field when that work order is selected. Refer to the Important Buttons section of this Help topic for details on selecting or deselecting all items.
+  </p>
+  <p><span style="font-weight: bold;">Job Id: LAB Revenue: OTH Revenue: TOT Revenue: Job Name: Sales Tax Base:<br/>
+      WO Id: MAT Revenue: SUB Revenue: Sales Tax: Workorder Name: Invoice Total:</span><br/>
+    These informational fields are displayed to enable you to verify which work orders should be invoiced.</p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Sales Tax: M Notation</font><br/>
+    If the Sales Tax Amount has been manually entered in the WO, it will be denoted by the presence of an &#39;M&#39; to the right of the Tax Amount on each individual line.  If the &#39;M&#39; is not present, then the tax was computed by the system and is not visible from within the WO viewer.
+  </p>
+  <p><span style="font-weight: bold;">Amount Paid</span><br/>
+    This field displays the amount that is being applied to this invoice via COD or APT Credit Card Processing.</p>
+  <p style="font-weight: bold;">Invoice Email:<br/>
+    <span style="font-weight: normal;">This display field will be completed if this invoice will be emailed.</span>
+  </p>
+  <p style="font-weight: bold;">Skip Print Invoice?<br/>
+    <span style="font-weight: normal;">This display field will be flagged if this invoice will be emailed AND the functionality to skip print emailed invoices is enabled via <a href="Registry_Entry_Start_Service_Billing_Compute.htm">registry</a>.</span>
+  </p>
+  <h2>Important Buttons:</h2>
+  <p><img alt="" border="0" src="assets/images/image/SKIN1_Check.gif" style="border: none;"/> Click the Check button to check (select) every item on the list.<br/>
+    <br/>
+    <img alt="" border="0" src="assets/images/image/SKIN1_CheckOff.gif" style="border: none;"/> Click to de-select every item on the list.
+  </p>
+  <p> <img alt="" border="0" src="assets/images/image/SKIN1_Go.gif" style="border: none;"/> Click to invoice and post the selected work orders.</p>
+  <script type="text/javascript" language="JavaScript1.2">
+    //<![CDATA[
+    if (typeof(TextPopupInit) != 'function') TextPopupInit = new Function();
+    TextPopupInit('a1', 'POPUP662720078');
+    TextPopupInit('a2', 'POPUP662411620');
+    //]]>
+  </script>
+
+</body></html>

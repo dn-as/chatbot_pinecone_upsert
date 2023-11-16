@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.8.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="pm work order"/>
+<meta name="MS-HKWD" content="pm schedule"/>
+<meta name="MS-HKWD" content="master contract"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report PM Work Orders</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="pm work order,pm schedule,master contract"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report PM Work Orders">
+        <span>Report PM Work Orders</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report PM Work Orders</h1>
+<h3>Purpose:</h3>
+<p>In previous releases, it was very difficult to understand what PM Work Orders would be created from Master Contract until after the fact. This report is a &#39;predictor&#39;: it evaluates the Master Contract data and the data residing in the Client Site Equipment PM Schedule, and lists what PM Work Orders will be created when Start Create PM WorkOrders is run. This report (RPMWRKORDRLST.rpt) must be imported into your database before it can be run.</p>
+<h3>Range Screen:</h3>
+<p><font style="font-weight: bold;">Beginning Date: Ending Date:</font><br/>
+These fields define the range of Scheduled Inspection Dates that you wish to report on.</p>
+<p><font style="font-weight: bold;">Client Id: Client Site Id: Branch Id: Project Id: Work Code Id: Service Category Id:<br/></font>These ranges enable you to filter the report, just as you would the actual Create PM Work Order function. If you leave these fields blank, Work Orders for the specified Inspection Date(s) for all applicable clients will be within your security level will appear on your report.</p>
+<p><font style="font-weight: bold;">Master Contract Id:</font><br/>
+If you wish to only report on work orders for equipment assigned to a specific Master Contract enter the desired Id.</p>
+<p><font style="font-weight: bold;">WorkOrder Id:<br/></font>By default, this field is set to = so that only inspections that do not yet have a work order generated will appear on the report. To report on predicted work orders as well as those that have already been created, clear this field.</p>
+<h3>Report Format:</h3>
+<p>The report format mirrors the ‘checklist’ screen of the Start Create PM Work Order Function, displaying the following fields for each work order or predicted work order:</p>
+<p><font style="font-weight: bold;">Site Id: Site Name:  Service Tasks Id: Est Hours: Work Order Id:<br/>
+ Equipment Id: Inspect Date: Agreement # PM Invoice:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important Note: Work Order Id Begins with a #</font><font style="font-weight: bold;"><br/></font>If the Work Order Id begins with a #, it represents a place holder for a Master Contract PM Work Order that has not yet been generated.</p>
+<h3>Report Order:</h3>
+<p>Predicted Master Contract PM Work Orders (yet to be generated) will appear first in the report, followed by predicted PM Work Orders not associated with a Master Contract. If the Work Order Id range was cleared so that actual PM Work Orders would be included, Predicted Master Contract Work Orders will appear first, and actual and predicted PM Work Orders will appear second.</p>
+<p>Unless overridden by registry, the work orders in each section will be ordered as follows:</p>
+<p>By Client Site Id, Client Site PM Date Scheduled, Work Code Priority, Client Site Equipment Id.</p>
+
+</body></html>

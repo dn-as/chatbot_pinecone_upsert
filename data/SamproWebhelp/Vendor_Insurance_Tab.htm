@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.6.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="insurance"/>
+<meta name="MS-HKWD" content="subcontractor"/>
+<meta name="MS-HKWD" content="vendor"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Vendor Insurance Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="insurance,subcontractor,vendor"/><meta name="brsnext" value="Vendor_Additional_Contacts_Tab.htm"/><meta name="brsprev" value="Vendor_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Vendor Insurance Tab">
+        <span>Vendor Insurance Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Vendor Insurance Tab</h1>
+<p>This tab would typically be completed for a subcontractor that is required by your firm to carry insurance coverage.</p>
+<p>This tab is automatically sorted in descending order by the End Date when the Vendor record is saved. The most recently dated Insurance Entries will appear at the top of the tab so they are easier to review.   </p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Insurance Id:</font><br/>
+A type of coverage required for this subcontractor. Enter a valid Id or double-click to select from a list.</p>
+<p><font style="font-weight: bold;">Start Date:</font> <font style="font-weight: bold;"> End Date:</font><br/>
+The first and last dates that the insurance is in effect. Enter the dates in <font style="font-style: italic;">mmddyyyy</font> format or double-click on these fields to display the calendar viewer. The AP and PO Journals, and the AP Date to Pay list will display a warning when insurance is expired.</p>
+<p><font style="font-weight: bold;">Policy Number</font><br/>
+This 20 alphanumeric character text field may be used for informational and reporting purposes. This field is optional.</p>
+<p><font style="font-weight: bold;">Certificate on File</font><br/>
+Check this box (by double-clicking on it or pressing the Spacebar when the caret is positioned on it) if a Certificate of coverage is on file in your office for this type of insurance.</p>
+<p><font style="font-weight: bold;">Block Payment:  Description:</font><br/>
+This display-only field defaults from the Insurance Record. The AP and PO Journals, and the AP Date to Pay list are now sensitive to blocking payments; a warning will display when insurance is expired. However, the expired box will only fill in if expired insurance is combined with a &quot;block payment&quot; insurance type. Date To Pay invoices that show a checked expired box will be denied payment.</p>
+<p><font style="font-weight: bold;">Block Purchases:<br/></font> This display-only field defaults from the Insurance Record.If this field is flagged, and the Vendor’s Insurance is expired, a PO for this vendor may only be saved as Unreleased in Version 8.2. In Version 9.0 and above, if the </p>
+
+<p style="margin-left: 48px;">Vendor is marked as Insurance Required = &#39;Y&#39;  AND<br/>
+ Vendor Insurance End Date &lt; today AND <br/>
+ Block Purchases = &#39;Y&#39;</p>
+
+<p>the user will be alerted and the PO will NOT be created.</p>
+
+<p>The PO cannot be released until the Vendor’s insurance is renewed, and the Start and Date entries are updated. Note that today’s date is compared with the Start and End Dates on the Vendor Insurance tab in order to determine if the Insurance is expired. This prevents new PO’s from being backdated to when the insurance was in effect.</p>
+
+</body></html>

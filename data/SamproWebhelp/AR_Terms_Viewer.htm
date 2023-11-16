@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.1.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="ar terms"/>
+<meta name="MS-HKWD" content="finance charges"/>
+<meta name="MS-HKWD" content="interest"/>
+<meta name="MS-HKWD" content="terms"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>AR Terms Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="ar terms,finance charges,interest,terms"/><meta name="brsnext" value="Market_Sources_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AR Terms Viewer">
+        <span>AR Terms Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>AR Terms Viewer</h1>
+<h2>Purpose:</h2>
+<p>Maintain standard accounts receivable terms information.</p>
+<h2>Example:</h2>
+<p>Net30, COD, etc.</p>
+<h2>Usage:</h2>
+<p>Referenced By: Client Ship To, Client Order, Client Site, and Job.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Client Site:</span> 
+ The AR Terms referenced in the Client Site record is used for Client Order 
+ Processing to provide the default AR Terms Id for COP Invoices. It is 
+ not used in conjunction with Job or Service Invoicing.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Job:</span> 
+ The AR Terms used for Construction and Service Billed defaults from the 
+ Job record.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists 
+ the standard configuration of all fields which may be included in this 
+ record. If you are using a customized system, the fields displayed on 
+ your screen may not exactly match the order or status (required, optional, 
+ default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">AR Terms ID:</font> (10 character, 
+ only . and - special characters)<br/>
+A unique Id. This field is required.</p>
+<p><font style="font-weight: bold;">AR Terms Description:</font> (40 character)<br/>
+A brief description of these terms or how they are applied. This field 
+ is optional.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database 
+ system, this informational field displays the Security Id of the local 
+ user that created this record. If multiple location security is not implemented 
+ on your system, or if this record was created by a global user, this field 
+ will be blank.</p>
+<p><font style="font-weight: bold;">Due Days:</font><br/>
+The number of days after billing until this account is considered overdue.</p>
+<p><font style="font-weight: bold;">Discount Days<br/>
+</font>This field should only be filled in if you allow your customer a 
+ discount for early payment. This field specifies the number of days from 
+ your invoice date that the discount is available (e.g., 10).</p>
+<p style="font-weight: bold;">Discount Percent:<br/>
+<span style="font-weight: normal;">If a discount is offered for early payment, 
+ enter the value as a percent. Note that the available discount will be 
+ calculated automatically for COP Invoices and manual Sales Journal entries.</span> 
+ </p>
+<p style="font-weight: bold;"><span style="font-weight: normal;">In 
+ Version 9.1.611.058 and above, the AR Terms viewer displays the Discount 
+ Percent as 000.00. However, validation prevents setting the decimal places 
+ unless the <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#AR_Terms_Decimal_Places_Discount_Percent">Global 
+ Registry for AR Terms Discount Percent</a>  is set. Validation also 
+ controls the hundreds / tens settings (XX0.00) in AR Terms when the registry 
+ is set.</span> <br/>
+</p>
+<p><font style="font-weight: bold;">COD: </font>Check the COD box (by double-clicking 
+ or pressing the spacebar) if the terms are Cash on Delivery.</p>
+<p><font style="font-weight: bold;">Annual Finance Charge Rate:</font><br/>
+If these AR terms include a finance charge, enter the rate as an <font style="text-decoration: underline; ">annual</font> percent.</p>
+<p><font style="font-weight: bold;">Obsolete?<br/>
+</font>If this field is checked, the record is considered Obsolete, and 
+ it may not be directly specified during data-entry (either by entering 
+ the Id or selecting it from a list). Obsoleted records can be edited and 
+ the Obsolete option can be cleared when necessary. When you check the 
+ Obsolete field, the following message box will be displayed:</p>
+<p style="margin-left: 36.00pt;">“You have elected to obsolete this record. 
+ Would you like to see existing references to this record?”</p>
+<p style="margin-left: 48px;">If you click Yes, the system will display 
+ a viewer that provides click-through access to all tables referencing 
+ this record.</p>
+
+</body></html>

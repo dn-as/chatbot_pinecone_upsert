@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.2.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="KPI"/>
+<meta name="MS-HKWD" content="DBAnalytics"/>
+<meta name="MS-HKWD" content="Key Performance Indicator"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>DB Analytics Overview</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="KPI,DBAnalytics,Key Performance Indicator"/><meta name="brsnext" value="Registry_DB_Analytics_Dashboard.htm"/><meta name="brsprev" value="Calendar_Date.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="DB Analytics Overview">
+        <span>DB Analytics Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>DB Analytics Overview</h1>
+<p>DB Analytics is a browser based dashboard utility that allows users 
+ to display Key Performance Indicators (KPI) relevant to their specific 
+ department or role. The DB Analytics modules must be enabled in the vrgstry.cus 
+ file. Contact your account manager for information on purchasing this 
+ new module.</p>
+<p>Access to the KPIs in DB Analytics is managed in the much the same way 
+ as SAM Pro Reports. When a KPI is first installed, its corresponding User 
+ Defined Function (automatically created) will be available to members 
+ of User Group All only. The SAM Pro Administrator (or designated support 
+ rep) would then able access to the appropriate User Group or Groups.</p>
+<p>DB Analytics may be launched from an active SAM Pro session; when it 
+ is initiated in this fashion, it supports the launching of SAM Pro screens 
+ from DB Analytics. For example, the SAM Pro Client screen may be launched 
+ from the AR Aging Analytic. DB Analytics may also be configured for remote 
+ access. If security is a major consideration, access via VPN or a Secure 
+ Server should be considered.</p>
+<h2>Setup</h2>
+<h3>GlassFish:</h3>
+<p>DB Analytics requires that the GlassFish Server is installed and running 
+ to provide the connection between the DB Analytics browser screens and 
+ the SAM Pro database. The support document Installing Java GlassFish Server 
+ details the installation of the GlassFish Server, its configuration, and 
+ the deployment of the SAMProDB.war, SAMProDashboard.war and SAMProFiles.war 
+ files required to implement the DB Analytics module.</p>
+<p>Typically, GlassFish would be installed on a server by Data-Basics support. 
+ If users are allowed to access DB Analytics remotely, this machine will 
+ require external exposure. If security is a major consideration, access 
+ via VPN or a Secure Server should be considered.</p>
+<h3>SAM Pro Records:</h3>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">KPIs:</font></p>
+<p style="margin-left: 36.00pt;">Typically, all current KPI’s will be imported 
+ when support installs DB Analytics. The <a href="Start_KPI_Definition_Import.htm">Start 
+ KPI Definition Import</a> function is used to import the KPIs (stored 
+ as .obj files) into your database. During the import, each true analytic 
+ (Generic Charts/Tables) will have a User Defined Function created for 
+ it so that they can be flagged for access on the appropriate User Groups 
+ and Functions record(s). See <a href="KPI_Definition.htm">KPI Definition</a> 
+ additional information.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">User 
+ Groups and Functions:</font></p>
+<p style="margin-left: 36.00pt;">Start DB Analytics should be flagged as 
+ Access for User Groups that should have permission to run DB Analytics 
+ from within SAM Pro.</p>
+<p style="margin-left: 36.00pt;">Like reports, when KPI’s are initially 
+ imported, they will only be available to User Group All; access rights 
+ to other User Groups should be made as needed by the SAM Pro administrator 
+ or support.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Account 
+ Types:</font></p>
+<p style="margin-left: 36.00pt;">The successful evaluation of KPI’s for 
+ the DB Analytics Dashboard depends upon the correct setting of the Category 
+ field your <a href="GL_Account_Type_Viewer.htm">GL Account Type</a> records. 
+ Your firm’s controller / administrator should review these records and 
+ make the appropriate edits.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL</font> 
+ <font style="font-weight: bold;">Reporting Periods:</font></p>
+<p style="margin-left: 36.00pt;"><a href="GL_Reporting_Period.htm">GL Reporting 
+ Periods</a> should be created and maintained through the end of the current 
+ and following year to provide appropriate Calendar Date/Fiscal period 
+ information. In particular, if a ‘beginning’ period was established for 
+ loading data, the Start Date should be set to the beginning of the loading 
+ year, not the ‘blank’ date (01011900).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GLH Summary</font><font style="font-weight: bold;">/Start GL History Summary Rebuild</font><font style="font-weight: bold;">:</font></p>
+<p style="margin-left: 36.00pt;">This table improves performance for the 
+ DB Analytics KPIs that need financial data. This table contains a summarized 
+ version of the GL History. <a href="Start_GL_History_Summary_Rebuild.htm">Start 
+ GL History Summary Rebuild</a> updates this table, and should be scheduled 
+ for automated processing by the Scheduled Event Manager. A scheduled event 
+ should be enabled by your support rep or SAM Pro administrator so that 
+ this function is run nightly.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Registry 
+ Settings:</font></p>
+<p style="margin-left: 36.00pt;">A number of registry and users registry 
+ settings are required for DB Analytics to be run from an active SAM Pro 
+ session. These are discussed in <a href="Registry_DB_Analytics_Dashboard.htm">Registry 
+ DB Analytics Dashboard</a> , Registry and <a href="User_Registry_Entries.htm">User 
+ Registry Entries</a>.</p>
+<h2>Accessing DBAnalytics - IIS</h2>
+<h2>Accessing DB Analytics - Glassfiish</h2>
+<p>The GlassFish Server must be running to access DB Analytics.</p>
+<h3>From an Active SAM ProSession:</h3>
+<p style="margin-left: 36.00pt;">If the User Registry StartDashboard option 
+ is enabled DB Analytics will start when the user logs into SAM Pro. The 
+ user will automatically be logged into DB Analytics as well.</p>
+<p style="margin-left: 36.00pt;">If the StartDashboard option is not enabled, 
+ the user may use Start DB Analytics launch the DB Analytics Dashboard.</p>
+<h3>Remotely:</h3>
+<p style="margin-left: 36.00pt;">If configured for remote access, DB Analytics 
+ may be started as desktop shortcut or Favorite in their browser. Chrome 
+ and Firefox are preferred. You will be asked to log in using your SAM 
+ Pro user id and password.</p>
+<h2>Configuring DB Analytics</h2>
+<p>Typically, the DB Analytics screen will be a blank slate when the user 
+ first logs on.</p>
+<p>In the right-hand corner of the DB Analytics screen:</p>
+<p style="margin-left: 36.00pt;">The <font style="font-weight: bold;">+Tab 
+ button</font> allows the user to name and add Tabs (e.g., for Accounts 
+ Receivables, Financials, Service Management and so on).</p>
+<p style="margin-left: 36.00pt;">The <font style="font-weight: bold;">Settings</font> 
+ button displays a page that allows the user to select the Dashboard Theme 
+ (color scheme) for the DB Analytics Dashboard itself, and to select the 
+ Chart Theme. The Settings page also lists the Database, DB Analytics version, 
+ and the latest GL History Build Date.</p>
+<p style="margin-left: 36.00pt;">The <font style="font-weight: bold;">+Analytics</font> 
+ button is used to select and add the KPI Analytics to each tab.</p>
+<p style="margin-left: 36.00pt;">The <font style="font-weight: bold;">Tab 
+ Settings</font> button may be used to apply filters and settings to all 
+ Analytics on the selected tab. Filters and Settings may be applied to 
+ individual charts.</p>
+<p>On the individual Charts:</p>
+<p style="margin-left: 36.00pt;">The <font style="font-weight: bold;">Refresh</font> 
+ button allows you to refresh the data the Chart displays.</p>
+<p style="margin-left: 36.00pt;">The <font style="font-weight: bold;">Settings</font> 
+ button allows you to set filters and variable for this chart.</p>
+<p>Additional information on configuring and using DB Analytics is in an 
+ illustrated PowerPoint: Using DB Analytics.</p>
+<h2>Cloning / Resetting DB Analytics</h2>
+<p>If several users will be employing the same or similar DB Analytics, 
+ the Clone DB Analytics button on the User record (scroll down the parent 
+ to access this button) may be used to clone the settings from a selected 
+ user who already has them set up.</p>
+<p>The Reset DB Analytics button should only be used to clear a user’s 
+ DB Analytic configuration if there is a problem accessing it.</p>
+
+</body></html>

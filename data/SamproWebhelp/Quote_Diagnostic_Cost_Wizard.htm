@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.14.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="quote"/>
+<meta name="MS-HKWD" content="diagnotic costs"/>
+<meta name="MS-HKWD" content="wizard"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Quote Diagnostic Cost Wizard</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="quote,diagnotic costs,wizard"/><meta name="brsnext" value="Quotes_Generated_by_TechAnywhere.htm"/><meta name="brsprev" value="Start_AP_Payment_Approved_PM.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Quote Diagnostic Cost Wizard">
+        <span>Quote Diagnostic Cost Wizard</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Quote Diagnostic Cost Wizard</h1>
+<h2>Purpose:</h2>
+<p>This function is invoked when click the Import Diagnostic Cost button 
+ on the Scope tab. When you do so, the system will automatically step you 
+ through the processes needed to import all costs associated with the quote’s 
+ lead work order (or the work order you select) so that they may be presented 
+ on the quote being prepared to correct the diagnosed problem.</p>
+<h2>Usage:</h2>
+<p>A typical scenario for importing costs would be:</p>
+<p style="margin-left: 36.00pt;">A technician diagnoses a problem, but 
+ the job is big enough to require a quote.</p>
+<p style="margin-left: 36.00pt;">The real time spent on the diagnosis is 
+ entered on the work order.</p>
+<p style="margin-left: 36.00pt;">In the Quote, the tech’s work order is 
+ used as the source work order.</p>
+<p style="margin-left: 66.25pt;">Option 1 is created for the proposed work 
+ to be done.</p>
+<p style="margin-left: 66.25pt;">Option 2 is added: the Import Diagnostic 
+ Costs button is clicked to import the time spent on the lead work order.</p>
+<p style="margin-left: 36.00pt;">The Quote is printed for the customer, 
+ showing both the work to be done and the diagnostic work already incurred.</p>
+<p style="margin-left: 66.25pt;">If Option 1 is accepted, the user approves 
+ Option 1, and declines Option 2. When the Approval wizard is run, the 
+ Option 1 charges will be added to the diagnostic charges already on the 
+ work order.</p>
+<p style="margin-left: 66.25pt;">If Option 1 is declined, the user will 
+ mark Option 1 and Option 2 declined, closing the quote. The customer will 
+ be billed from the lead work order, which already includes the diagnostic 
+ charges.</p>
+<p>Note that in both cases, the option for the diagnostic charges would 
+ be declined, so that they are not billed twice on the lead work order.</p>
+<p>The Import Wizard sets the Tax Type based on the Tax Group / Tax Status 
+ in the Quote / Quote Manager (V9.0) records. This prevents the this wizard 
+ from failing if the Tax Type Id &#39; n/a&#39; is encountered in any of the Job 
+ History lines being imported (the could occur if the Tax Type was reset 
+ via the Work Order button).</p>
+<h2>Important Buttons:</h2>
+<p>Each Wizard screen includes buttons on the lower margin.</p>
+<p style="margin-left: 36.00pt;">The <font style="font-weight: bold;">Cancel</font> 
+ button should be clicked when to end the approval process.</p>
+<p style="margin-left: 36.00pt;">The <font style="font-weight: bold;">Next</font> 
+ button should be clicked to continue the approval process and proceed 
+ to the next screen when you have verified that all the options in the 
+ current screen have been set correctly.</p>
+<p style="margin-left: 36.00pt;">The <font style="font-weight: bold;">Back</font> 
+ button returns you to the previous screen.</p>
+<p style="margin-left: 36.00pt;">The <font style="font-weight: bold;">Finish</font> 
+ button is displayed on the final Wizard screen. When you click it, the 
+ system will ask you to confirm the posting of lines to your work and purchase 
+ orders.</p>
+<h2>Approval Screens</h2>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Select 
+ Cost Default</font></p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Work Order 
+ Id:</span><br/>
+The source Work Order from the Quote/Quote Manager defaults to the field. 
+ If there is no source Work Order, the user may enter an Id, or double-click 
+ to select from a filtered list of Work Orders associated with the Site 
+ in the Quote / Quote Manager record.  </p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Equipment 
+ Id:<br/>
+</font> This field defaults to the Equipment Id on the Scope line the wizard 
+ are launched from; it is display-only.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Import 
+ All Costs ?<br/>
+</font>By default, this field is blank: only those costs associated with 
+ the Equipment Id on the Scope tab will be imported. If the user sets checks 
+ this field, the wizard gets costs from all equipment from the source work 
+ order, including work order costs where the Equipment Id is blank.</p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">Import 
+ All Equipment?</span><br/>
+If this field is checked, any additional Equipment referenced on the Work 
+ Order&#39;s Equipment tab will be imported to the Scope&#39;s Equipment tab.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Show 
+ Diagnostic Labor Cost</font></p>
+<p style="margin-left: 36.00pt;">This screen displays the hours already 
+ associated with this Work Order. The user may adjust the hours field.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Show 
+ Diagnostic</font> <font style="font-weight: bold; text-decoration: underline; ">Inventory</font> 
+ <font style="font-weight: bold; text-decoration: underline; ">Cost</font></p>
+<p style="margin-left: 36.00pt;">This screen displays the parts already 
+ associated with this Work Order. The user may adjust the Quantity field.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Show 
+ Diagnostic</font> <font style="font-weight: bold; text-decoration: underline; ">Material</font> 
+ <font style="font-weight: bold; text-decoration: underline; ">Cost</font></p>
+<p style="margin-left: 36.00pt;">This screen displays the material associated 
+ with this Work Order. The user may adjust the Quantity field.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Show 
+ Diagnostic</font> <font style="font-weight: bold; text-decoration: underline; ">Other</font> 
+ <font style="font-weight: bold; text-decoration: underline; ">Cost</font></p>
+<p style="margin-left: 36.00pt;">This screen displays the Other costs associated 
+ with this Work Order. The user may adjust the Quantity field.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Show 
+ Diagnostic</font> <font style="font-weight: bold; text-decoration: underline; ">Subcontractor</font> 
+ <font style="font-weight: bold; text-decoration: underline; ">Cost</font></p>
+<p style="margin-left: 36.00pt;">This screen displays the subcontractor 
+ charges associated with this Work Order. The user may adjust the Quantity 
+ field.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold; text-decoration: underline; ">Show 
+ Diagnostic</font> <font style="font-weight: bold; text-decoration: underline; ">Revenue 
+ Adjustment</font> <font style="font-weight: bold; text-decoration: underline; ">Cost</font></p>
+<p style="margin-left: 36.00pt;">This screen displays the revenue adjustments 
+ associated with this Work Order. The user may adjust the Base field.</p>
+
+</body></html>

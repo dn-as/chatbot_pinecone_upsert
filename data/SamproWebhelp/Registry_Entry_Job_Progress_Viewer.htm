@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.22.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="job"/>
+<meta name="MS-HKWD" content="job progress"/>
+<meta name="MS-HKWD" content="sys-viewer-vjbprgrss"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Job Progress Viewer (sys-viewer-vjbprgrss)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="registry,job,job progress,sys-viewer-vjbprgrss"/><meta name="brsnext" value="Registry_Entry_Job_Billing_Item.htm"/><meta name="brsprev" value="NSF_Check_Processing.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Job Progress Viewer (sys-viewer-vjbprgrss)">
+        <span>Registry Job Progress Viewer (sys-viewer-vjbprgrss)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Job Progress Viewer (sys-viewer-vjbprgrss)</h1>
+<h2>Purpose:</h2>
+<p>Registry entry for controlling the order of the line data in the Job Progress Viewer.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline;">exactly</font> as specified in the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id:</font>   sys-viewer-vjbprgrss</p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> for additional Registry Id formats to allow entries for specific Users, Branches, Security, or User Groups to override the main entry.</p>
+<h3>Control Order of Child Lines</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> OrderBy <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">list of column names</font><br/>
+<br/>
+If this registry option is not implemented, the system will use the default ordering as follows:</p>
+<p> jbbllngitm_rprt_sqnce, jbcstcde_id, jbbllngitm_id, jbcstctgry_type, jbcstctgry_id, jbcstcde_nme<br/>
+<br/>
+This option enables you to override the default line order. The re-ordering is restricted to the fields named above in the default example.  As shown in following example, it&#39;s not necessary to include all the fields.</p>
+<p style="text-decoration: underline;">Example:</p>
+<p>Setting Key: OrderBy Setting Value: jbcstctgry_id, jbcstcde_id, jbbllngitm_id</p>
+
+<h3> <a name="Allow__Greater_Than_100_Percent_Complete" id="Allow__Greater_Than_100_Percent_Complete"></a>Option to Allow &gt;100% Complete</h3>
+
+<p>By default when Actual + Committed equals or exceeds existing Projected Cost, then the Over/Under adjustment is &quot;forced&quot; to bring the projection in line with Actual (Actual + Committed becomes the projection line IS 100% Complete): the following message will appear when a Job with this criteria is accessed:</p>
+
+<p style="margin-left: 48px;">One or more lines required adjustments to prevent Actual Costs<br/>
+ from exceeding Projected Costs.  If you exit this viewer without<br/>
+ saving, these adjustments will be discarded and will not appear<br/>
+ on subsequently produced job reports.</p>
+
+<p style="margin-left: 8px;">There may be cases when the Over/Under adjustment should not be forced: for example, assume that a budget line has more actual cost than budgeted, but revising the &quot;projected costs&quot; to the higher value is NOT desired. Perhaps there is material on site that is expected to be returned, vendor credit or rebates expected to be realized in the future, etc.  This new registry allows the system to reflect &gt;100% complete with a negative CostToComplete &quot;projection&quot;.  An additional option allows the user to control the message which appears on the new Messages column on the Job Progress Viewer child tab.</p>
+
+<p style="margin-left: 48px;">NOTE: The system will NOT automatically calculate Over/Under Adjustments for you when this registry is in effect!</p>
+
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Id:</span> sys-viewer-vjbprgrss</p>
+
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> ActualCanExceedProjected   <span style="font-weight: bold;">Setting Value:</span> true   (default false)</p>
+
+<p style="margin-left: 8px;">This option enables the option to permit &gt;100% complete.</p>
+
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> ActualExceedsProjectedMessage   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">message</span></p>
+
+<p style="margin-left: 8px;">This registry allows the default message (Actual &gt; Projected) to be customized.</p>
+
+<p style="margin-left: 48px; text-decoration: underline;">For example:</p>
+
+<p style="margin-left: 48px;">Setting Key: ActualExceedsProjectedMessage  <br/>
+Setting Value: WARNING: Actual &gt; Projected</p>
+
+<h3>Custom PM WorkBench</h3>
+
+<p>Certain Custom PM Workbench analytics depend on knowing which of a job&#39;s Cost Codes is designated as the &#39;Fee Code&#39;. This analytic uses the following registry to determine which of the Cost Code User fields is being used (typically the User4 field).</p>
+
+<p><span style="font-weight: bold;">Id:</span> sys-viewer-vjbprgrss</p>
+
+<p><span style="font-weight: bold;">Setting Key:</span> LumpSumUsrFldNmbr   <span style="font-weight: bold;">Setting Value:</span> 4   (1,2 or 3 are also permitted)</p>
+
+<p>In this case, the Job Cost User User4 field should be set to Y if it is designated as the &#39;Fee Code&#39; record or N if it is not.</p>
+
+
+</body></html>

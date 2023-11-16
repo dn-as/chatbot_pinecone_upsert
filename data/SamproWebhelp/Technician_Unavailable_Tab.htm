@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.7.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="unavailable"/>
+  <meta name="MS-HKWD" content="technician"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Technician Unavailable Tab</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="unavailable,technician"/>
+<meta name="brsnext" value="Technician_Time_Slot_Tab.htm"/><meta name="brsprev" value="Work_Order_Return_to_Inventory_Wizard.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Technician Unavailable Tab">
+        <span>Technician Unavailable Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Technician Unavailable Tab</h1>
+  <h2>Purpose:</h2>
+  <p>Specify the days a technician is unavailable for regular work.</p>
+  <h2>Usage:</h2>
+  <h5>Web Board:</h5>
+  <p>The Web Board will display Unavailable Time noted on this tab like an assigned WO. The Description from the Unavailable Line be displayed instead of the usual Work Order information.</p>
+  <p>The New Call option of the Web Board will warn you if you are scheduling a Work Order for an Unavailable Date and Time for that Technician.</p>
+  <h5>SAMPro Back Office:</h5>
+  <p>On the Classic board, unavailability is indicated with a red background on the column or row header displaying the Technician’s information for those days that he or she is unavailable. On the Power board, a currently unavailable Technician’s line in the Technician Summary (upper portion of the board) will be displayed in red.</p>
+  <p>In New Call, if the Technician and Date scheduled are both entered, a Warning will appear saying the Tech is Unavailable when the New Call is saved.<br/>
+    <br/>
+    In TechFinder, the word ‘OFF’ will appear on the Technician hours pane if the technician is Unavailable. A Warning will appear saying the Tech is Unavailable if you select an Unavailable date.<br/>
+    <br/>
+    In the Work Order Technician Tab, when the Tech Id or Date Scheduled is added or changed, the user will be warned if the Technician is Unavailable.
+  </p>
+  <p>Unavailable days (as defined on this tab) will reduce the Time Slot inventory if Time Slotting is being used. The Clone Lines button may used to keep these Unavailable days up to date.</p>
+  <h2>Registry:</h2>
+  <p>To implement this functionality, the registry option IdentifyUnavailableTechs must be set to true in sys-viewer-vdsptchbrd.</p>
+  <p><strong>Id:</strong> sys-viewer-vdsptchbrd     </p>
+  <p><strong>Setting Key</strong>: IdentifyUnavailableTechs   <strong>Setting Value</strong>: true</p>
+  <h2>Important Fields:</h2>
+  <p>
+    <font style="font-weight: bold;">Schedule Category:</font><br/>
+    The general reason for the unavailability (e.g., Sick, Jury Duty, Vacation). This field will be displayed on the Web Board for the Tech&#39;s Unavailable Time.
+  </p>
+  <p><img height="142" src="assets/images/image23.png" width="194"/></p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Tip:</font><br/>
+    An administrator may customize this field via the Custom Fields functionality to change its label and to define a list of acceptable values for it.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Start Date and End Date:</font><br/>
+    The days the Tech will not be available for work. If a technician needs an entire day or multiple days without work orders, the days put in as off are now unavailable on the Job Schedule. 
+  </p>
+  <p><img src="assets/images/image26.png"/></p>
+  <p><img height="81" src="assets/images/image27.png" width="406"/></p>
+  <p><span style="font-weight: bold;">Start Time and End Time:</span><br/>
+    These fields are currently used in conjunction with custom job scheduling for SAMPro Back Office. They are <u><strong>not</strong></u> used by the standard Unavailable functionality in TechFinder or the Dispatch Board.</p>
+  <p style="font-weight: normal;">The Web Board supports the Start and End Time:</p>
+  <p style="font-weight: bold; margin-left: 48px;"><span style="font-weight: normal;">If</span> <span style="font-weight: normal;">the Start and End Dates are specified but the Start and End Time are not, the entire date range for that Tech will display as Unavailable. </span></p>
+  <p style="margin-left: 48px;">If Start and End Time are specified but only the Start Date, the Unavailable Time is defined from the Start Time to the End Time on the Start Date  (e.g., 1:00 PM - 2:00 PM on March 4th, 2022).  See below: </p>
+  <p style="margin-left: 48px;"><span style="font-style:italic;">This technician added an unavailable hour for an appointment</span>. </p>
+  <p style="margin-left: 48px;"><img src="assets/images/image28.png"/></p>
+  <p style="margin-left: 48px;font-style: italic">On the Job Scheduler, the hour of the technician&#39;s workday is unavailable. </p>
+  <p style="margin-left: 48px;"><img src="assets/images/image30.png"/></p>
+  <p style="margin-left: 48px;"> </p>
+  <p>
+    <font style="font-weight: bold;">Schedule Note:</font><br/>
+    Any brief notes on this specific unavailable time. This Schedule Note will be displayed on the Web Board when the user hovers over the Unavailable Time.
+  </p>
+  <p><img src="assets/images/image32.png"/></p>
+  <p><img height="117531" src="assets/images/image31.png" width="511216"/></p>
+  <h2>Important Buttons:</h2>
+  <p><img alt="image\SKIN1_CloneLines.gif" border="0" height="28" src="assets/images/image/SKIN1_CloneLines.gif" title="image\SKIN1_CloneLines.gif" width="94"/></p>
+  <p>This button has made maintenance of the Technician Unavailable child table easier. When you click the tab, a selection window will appear, allowing you to select a Technician (ideally, a ‘company holiday’ Technician) to copy the current holiday (unavailable) days from. These lines will be added to the Unavailable child tab of the Technician currently being edited.</p>
+
+</body></html>

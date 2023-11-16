@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.5.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="ar"/>
+<meta name="MS-HKWD" content="client collections screen"/>
+<meta name="MS-HKWD" content="collections"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Client Collections Screen</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="ar,client collections screen,collections"/><meta name="brsnext" value="Client_Collections_Notes_Screen.htm"/><meta name="brsprev" value="Client_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Collections Screen">
+        <span>Client Collections Screen</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Client Collections Screen</h1>
+<h2>Purpose:</h2>
+<p>This view lets you drill down to invoice detail, receivables, and collections 
+ notes for this customer.</p>
+<h2>Usage:</h2>
+<p><img src="assets/images/SKIN1_Collection.bmp" alt="" style="border: none;" border="0"/> 
+ When you click the Collection button on the Client viewer&#39;s top button 
+ bar, the screen will toggle to display a collections processing view for 
+ this client.</p>
+<p><img src="assets/images/image/SKIN1_NewCallCollection.gif" alt="" style="border: none;" border="0"/> The Collection button on New Call&#39;s side button 
+ bar may also be used to access this screen.</p>
+<p><img src="assets/images/image/SKIN1_Parent.gif" alt="" style="border: none;" border="0"/> 
+ Click the Parent button to return to the main Client screen.</p>
+<h2>Screen Organization:</h2>
+<p>This view is divided into three sections; each is discussed below.</p>
+<h3>Top Section</h3>
+<p>When you initially access the Collections view, the upper section of 
+ the screen displays a collection summary for this client.</p>
+<p><span style="font-weight: bold;">Collections Summary:</span><br/>
+ These display-only fields are maintained by the system based on Client 
+ and AR History.</p>
+<p><span style="font-weight: bold;">Credit Limit:   High Balance:<br/>
+Days To Pay (This Year):    High Balance Date:<br/>
+ Days To Pay (Last Year:</span><br/>
+ Days to Pay is the average time between the Invoice Date and the Cash 
+ Receipt entry.</p>
+<p><span style="font-weight: bold;">Past Due:<br/>
+1-30 Days - 31-60 Days - 61-90 Days - Over 90 Days - Total Past Due:</span><br/>
+This summary is based on the Invoices&#39; Due Dates relative to today. Only 
+ those invoices at least one day past due are included in this summary.</p>
+<p><br/>
+<img src="assets/images/image/AllOpen_Invoices.gif" alt="image\AllOpen_Invoices.gif" title="image\AllOpen_Invoices.gif" width="94" height="28" border="0"/></p>
+<p><span>The All / Open Invoice button lets you toggle the middle section 
+ of the screen between All Invoices and Open (unpaid) Invoices. This pane 
+ can also be used to view paid invoices by clicking the All/Open Invoices 
+ button and then using the right-click list pane filtering to filter on 
+ 0.00 in the Amount Due column.  </span></p>
+<p class="Support" style="margin-left: 8px;"><span><img src="assets/images/PaidInvoices.png" alt="" style="border: none;" width="683" height="278" border="0"/></span></p>
+<p class="Support"> </p>
+<p><img src="assets/images/image/View_All_Notes.gif" alt="image\View_All_Notes.gif" title="image\View_All_Notes.gif" width="94" height="28" border="0"/></p>
+<p>Click the View All Notes button to display all collection notes for 
+ this client. Click the Parent button to return to the Collections screen. 
+ Click <a href="Client_Collections_Notes_Screen.htm">Client Collections 
+ Notes</a> for details on using this specialized screen.</p>
+<p><img src="assets/images/image/CreateBook.gif" alt="image\CreateBook.gif" title="image\CreateBook.gif" width="94" height="28" border="0"/><br/>
+When clicked, this button will launch Book Viewer with the current Client 
+ Id filled in. The <a href="Book_Viewer.htm">Book Viewer</a> may be used 
+ to assemble invoices and other collateral as a package that can be then 
+ e-mailed to the Client.</p>
+<p><span><img alt="" src="assets/images/clientCollectionPrintStatement.bmp" style="border: none;" border="0"/> When this button is clicked, a customer 
+ statement report will be launched with the Client Id completed. By default, 
+ Report Customer Statements (RCUSTSTMNT) will be launched,but a <a href="Registry_Client_Viewer_sys_viewer_vclnt_.htm#Registry_Client_Collections_Statement_Report">registry 
+ option</a> </span><span>allows a different report to be launched instead.</span></p>
+<h3>Middle Section: Open Invoices for Client</h3>
+<p>When the Collections screen is first displayed, the middle portion of 
+ the screen displays a list of Open invoices for this Client. Both Sales 
+ and NON-sales typed invoices (credit memos, debit memos, finance charge 
+ invoices, and &quot;unapplied cash&quot; invoice records) that may be 
+ relevant to the overall collection perspective will appear.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">If you double-click 
+ on an invoice line, the Collections screen will display:</p>
+<h3 style="margin-left: 48px;">Invoice Detail Top Section:</h3>
+<p class="Reference_Line" style="margin-bottom: 0.00pt; margin-left: 88px;">The 
+ Invoice header information displays here.</p>
+<p style="margin-left: 88px;">You may click the Add Note button to add 
+ a special collection note. Click <a href="Client_Collections_Notes_Screen.htm">Client 
+ Collections Notes</a> for details on using this specialized screen.</p>
+<p style="margin-left: 88px;">If Invoice archiving is implemented on your 
+ system, click the Show Invoice button to display the actual invoice. If 
+ you choose to e-mail this invoice to your client, the e-mail address and 
+ subject line will default from the Collections Email and Collections Subject 
+ fields on the Client main screen. See <a href="Registry_Entry_System_Email.htm">Registry 
+ Entry System Email</a> for information on e-mail configuration.</p>
+<h3 style="margin-left: 48px;">Invoice Detail Middle Section:</h3>
+<p style="margin-left: 88px;">This section lists all transactions pertaining 
+ to this Invoice.</p>
+<h3 style="margin-left: 48px;">Invoice Detail Bottom Section:</h3>
+<p style="margin-left: 88px;">The Collection Notes for this invoice.</p>
+<p style="margin-left: 88px;"><img src="assets/images/image/SKIN1_Parent.gif" alt="" style="border: none;" border="0"/> 
+ Click the Parent button to return to the main Collections view.</p>
+<h3>Bottom Section: Payments Received From Client</h3>
+<p>When the Collections screen is first displayed, this section displays 
+ the list of payments received from this Client (including sales journal 
+ cash receipts). The payments are listed in descending order by Invoice 
+ number. If you wish to change this order, clicking a column header selects 
+ the column to order by - clicking again reverses the order (descending/ascending). 
+ The Job Id, Work Order, and Client Order Id’s (if applicable) are listed 
+ for each receipt.</p>
+
+</body></html>

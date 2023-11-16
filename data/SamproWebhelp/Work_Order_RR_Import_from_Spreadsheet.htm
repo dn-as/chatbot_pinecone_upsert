@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.3.0_21";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Work Order RR Import from Spreadsheet</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Work Order RR Import from Spreadsheet">
+        <span>Work Order RR Import from Spreadsheet</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Work Order RR Import from Spreadsheet</h1>
+<p><img src="assets/images/image/SKIN1_ImportRR.gif" alt="" style="border: none;" border="0"/> The Import Required Resources button enables the user to add inventory items to the Required Resource tab. When you click the Import Required Resource button, the system will ask &#39;Do you want to Import Required Resources from JC History?&#39; If you answer ‘No’ to import from JC History, you will import resources from a comma delimited text file (.CSV). The following specifications must be followed:</p>
+<p style="margin-left: 48px;"> Field1 = Quantity to requisition</p>
+<p style="margin-left: 48px;"> Field2 = Inventory Item ID</p>
+<p style="margin-left: 48px;"> Field3 = Description (Only required for non-inventory items)</p>
+<p style="margin-left: 48px;"> Field4 = Vendor ID (Can be used for inventory and non-inventory items)</p>
+<p style="margin-left: 48px;"> Field5 = Y/N (This Flag Must be Y for inventory or N for non-inventory items) </p>
+<p>Note that a header line is <font style="text-decoration: underline;">not</font> required; only data lines should appear in the file.</p>
+<p>If the item is marked as Inventory (inventory flag=Y) then only the Quantity, Inventory Item Id and Vendor Id vendor id data is looked at. If the item is marked as Non-Inventory (inventory flag=N) then do not perform any validation unless a Vendor id is supplied. The wizard will validate that:</p>
+<p style="margin-left: 36.00pt;">Inventory item exists in the SAMPro database.</p>
+<p style="margin-left: 36.00pt;">The Vendor exists in the SAMPro database</p>
+<p>The form prompt window described below will appear if you choose to import from a spreadsheet;</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Note:</span> See the global settings  <a title="Registry Entries to Default the Vendor for Manually Entering Required Resources or Importing them From a Job Budget." href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#sys-ffv-global-settings_WO_RR_Vendor">Registry to Automatically Default the Vendor</a> if you want Use Default Vendor box to default to checked.  </p>
+<h3>Prompter Screen for Import from a Spreadsheet</h3>
+<p style="font-weight: bold;">Cost Category:<span style="font-weight: normal;"><br/>
+The material-type Job Cost Category to use for the imported Required Resource lines.</span></p>
+<p><span style="font-weight: bold;">Date Required:</span><br/>
+Enter the default Date Required for the new Required Resource lines.</p>
+<p><span style="font-weight: bold;">Hold?</span><br/>
+Check this box to place the imported lines on Hold.  The lines may be manually released as needed.</p>
+<p style="font-weight: bold; margin-left: 8px;">Use Default Vendor?</p>
+<p style="margin-left: 8px;">This field is initially set via registry, but may be changed by the user.</p>
+<p style="margin-left: 48px;">If Use Default Vendor? is flagged and the Vendor is specified in the spreadsheet, the system will use the spreadsheet&#39;s Vendor during the import.</p>
+<p style="margin-left: 48px;">If Use Default Vendor? is flagged, and a Vendor is NOT specified in the spreadsheet, the system will use the default Vendor from the Inventory Item record&#39;s Purchasing tab during the import.</p>
+<p style="margin-left: 48px;">If Use Default Vendor? is blank, the system will always use the Vendor from the spreadsheet during the import, even if it is blank.</p>
+<p style="margin-left: 8px;">  <input type="submit" name="button" value="OK" style="height: 22px; width: 69px;"/> Click the OK button to continue; a browser window will open that lets the user point to the import file. Select the file and click Open to import the required resources.</p>
+<p>When lines are imported <span style="font-weight: bold;"></span><span>to the Work Order</span> the Equipment Id is defaulted in the same way as for manual entries:</p>
+<p style="margin-left: 48px;">If only one piece of equipment appears on the Equipment tab, this field will default.</p>
+<p style="margin-left: 48px;">If multiple Id’s are listed on the Equipment tab, the Equipment Id will not be defaulted during the import, but may be selected by the user on the imported line.</p>
+
+</body></html>

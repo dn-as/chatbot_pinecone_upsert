@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.15.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="wildcard"/>
+<meta name="MS-HKWD" content="filter"/>
+<meta name="MS-HKWD" content="report range"/>
+<meta name="MS-HKWD" content="comparison operator"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Comparison Operators</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="wildcard,filter,report range,comparison operator"/><meta name="brsnext" value="Report_Viewer.htm"/><meta name="brsprev" value="Custom_Date_Strategies.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Comparison Operators">
+        <span>Comparison Operators</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Comparison Operators and Wildcards</h1>
+<h2>Purpose:</h2>
+<p>Using Comparison Operators in your report field ranges allows you to 
+ precisely define the information that appears on your reports. These operators 
+ may also be used to filter record listings more precisely.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Wildcard</p>
+<p>% (stands for one or more characters)</p>
+<p>For example, to query for all id&#39;s beginning with the characters TJ, 
+ you would enter <font style="font-weight: bold;">TJ%.</font> A wildcard 
+ may be inserted at the beginning, middle or end of a text string (e.g., 
+ all accounts ending with the characters 2003 would be specified as <font style="font-weight: bold;">%2003</font>).</p>
+<p>The wildcard can also be used in a date range field. For example, to 
+ include all dates in the month of April, 2003 you would enter <font style="font-weight: bold;">2003-04%</font>.</p>
+<p><font style="font-weight: bold;">Comparison Operators</font><br/>
+&gt;  (Greater Than)<br/>
+&lt;  (Less Than)<br/>
+&gt;=  (Greater Than or Equal To)<br/>
+&lt;= (Less Than or Equal To)</p>
+<p>For example, &lt;abcde means that the field value must be less than 
+ <font style="font-weight: bold;">abcde</font> to appear in the list or 
+ report.</p>
+<p>=  (Equal)</p>
+<p>To query for blank fields, enter a filter line containing only <font style="font-weight: bold;">=</font> (the equal sign). Entering no 
+ operator is equivalent to preceding the value with =. For example, entering 
+ <font style="font-weight: bold;">RT567</font> in a filter is equivalent 
+ to entering <font style="font-weight: bold;">=RT567</font>.</p>
+<p>!  (Not)</p>
+<p>This is the NOT operator. For example, <font style="font-weight: bold;">!&gt;</font> 
+ (not greater than) is equivalent to <font style="font-weight: bold;">&lt;=</font> 
+ (less than or equal to). The <font style="font-weight: bold;">!</font> 
+ may also precede a range so that <font style="font-weight: bold;">!ddd_fff</font> 
+ will include all values of the field <font style="font-style: italic;">except</font> 
+ those in the range ddd to fff.</p>
+<p>&lt;&gt;  (operator)</p>
+<p>This is synonymous with ! or !=. You may query for non-blank fields 
+ by entering a query line containing only <font style="font-weight: bold;">!</font>, 
+ <font style="font-weight: bold;">!=</font>, or <font style="font-weight: bold;">&lt;&gt;</font>.</p>
+<p>~ (Global Not)</p>
+<p>The tilde (~) is also a NOT operator. When the first character is a 
+ ~ the rest of the filter indicates which records to exclude. For example, 
+ <font style="font-weight: bold;">~a,p,m</font> will include all values 
+ except a, p or m.</p>
+<p> </p>
+<p> </p>
+
+</body></html>

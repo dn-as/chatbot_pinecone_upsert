@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.8.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="contract"/>
+<meta name="MS-HKWD" content="schedule"/>
+<meta name="MS-HKWD" content="pm schedule"/>
+<meta name="MS-HKWD" content="master contract"/>
+<meta name="MS-HKWD" content="pm"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Master Contract</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="contract,schedule,pm schedule,master contract,pm"/><meta name="brsnext" value="Release_Recurring_GL_Journal.htm"/><meta name="brsprev" value="Start_Computer_Service_Invoice.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Master Contract">
+        <span>Master Contract</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Master Contract</h1>
+<h2>Purpose:</h2>
+<p class="Body_Text_2" style="margin-left: 5.75pt;">Master Contract is 
+ designed to streamline the process of generating the PM Schedules and 
+ Billings from a single viewer.</p>
+<p>When a Master Contract is completed correctly, and the Create PM Billing 
+ and Create PM Work Orders functions are run, the system will:</p>
+<p style="margin-left: 36.00pt;">Check the Master Contract records and, 
+ if applicable, create the appropriate lines on the Client Site Billing 
+ Tab and the Client Site Equipment PM Schedule tabs.</p>
+<p style="margin-left: 36.00pt;">Create the PM Invoices (advanced billing) 
+ and the PM Work Orders if you check the Do boxes.</p>
+<p>The system will not create duplicate lines for dates that are already 
+ on the Client Site Billing Schedule or Client Site Equipment PM Schedule.</p>
+<h3>Master Contract Equipment Table Option</h3>
+<p><span>When the <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Use_Master_Contract_Equipment_Table">UseMasterContractEquipmentTable 
+ global registry</a> set to true, it effectively allows for a single Client 
+ Site Equipment (CSE) record to have simultaneous associations to multiple 
+ Master Contracts.  By using this feature, the historical perspective 
+ of all MC-CSE associations can be maintained rather than having to switch 
+ equipment from one Master Contract to another when one ends and another 
+ begins. Contact your support representative if you wish to enable this 
+ functionality (not available for Sybase databases).</span></p>
+<h2>Reports:</h2>
+<p>See <a href="Report_PM_Work_Orders.htm">Report PM Work Orders</a> for 
+ information on this useful report. This report is a &#39;predictor&#39;: it evaluates 
+ the Master Contract data and the data residing in the Client Site Equipment 
+ PM Schedule, and lists what PM Work Orders will be created when Start 
+ Create PM WorkOrders is run. This report (RPMWRKORDRLST.rpt) must be imported 
+ into your database before it can be run.</p>
+<p>See <a href="Report_PM_Billing_List.htm">Report PM Billing List</a> 
+ for details on running this useful ‘predictor’ report to see what will 
+ be billings will be generated from the Master Contract as well as from 
+ lines entered on the Client Site PM Billing schedule.</p>
+<h2>Registry:</h2>
+<p><span>See <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Use_Master_Contract_Equipment_Table">Global 
+ Registry to Enable Master Contract Equipment Table</a> functionality to 
+ allow equipment to be associated with multiple Master Contract. </span></p>
+<p>See <a href="Registry_Entry_Master_Contract_PM_Master_Scheduler_.htm">Registry 
+ Entry Master Contract (PM Master Scheduler)</a> to set the default GL 
+ Accounts, Billing Items, and Work Codes to be used when clicking the Auto 
+ Fill button to complete the Advanced Billing tab.</p>
+<p>See <a href="Registry_Entry_Create_PM_WO.htm">Registry Start Create 
+ PM WO (sys-start-scrtepmwo)</a> for information on settings used to create 
+ the PM Work Orders set up in this record.</p>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_master_contract_pm_table">Disable 
+ the Master Contract Future PM Inspection Table</a> used for KPI&#39;s and 
+ custom reporting.</p>
+<p style="margin-left: 8px;"><span>Registry to <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Disable_Equipment_Service_Task_Master_Contract_PM">Disable 
+ Use of Equipment Service Task when Master Contract PM&#39;s are Created</a>.</span></p>
+<h2>Usage:</h2>
+<p>PM Work Orders will only be generated for applicable Client Site Equipment 
+ records if they are <font style="font-weight: bold;">Active</font> (e.g., 
+ the Inactive box is not checked) and they are flagged as <font style="font-weight: bold;">Under 
+ Contract</font> (this box is checked).</p>
+<p>When the Start Create PM WO’s and Start Create PM Billing functions 
+ are run, Client Site Equipment PM Schedule and Client Site PM Billing 
+ lines will <font style="text-decoration: underline; ">not</font> be generated 
+ from the Master Contract record if the Client Site status is set to Inactive 
+ or Mail List. Lines will be generated for Sites whose status is set to 
+ Credit Hold. PM Work Orders that are generated for Credit Hold sites will 
+ be set to Credit Hold, and must be released by a Credit Manager.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">PM WorkOrders 
+ will be generated to the Technician specified in the Client Site Equipment 
+ record. If this Technician is a Subcontractor (with a Vendor Id included 
+ in the Technician record), a PO will also be generated. The Sub&#39;s PO NTE 
+ amount will be set to Cost amount on either the Inspections tab or the 
+ Provider Rates tab on the Master Contract record.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt; margin-left: 48px;">If 
+ you will be using the <font style="font-weight: bold;">Service Provider</font> 
+ tab to define costs and revenue by Equipment Type, verify that the Equipment 
+ Type field is correctly completed on the Client Sites Equipment record’s 
+ Service tab.  </p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt; margin-left: 48px;"><span>A 
+ <a href="Registry_Entry_Create_PM_WO.htm#Set_Sub_NTE_for_Master_Contracts_as_a_Last_Resort">Registry 
+ to use the Equipment Sub NTE</a> value as a last resort is also available.</span></p>
+<h5 class="Reference_Line">DBAnalytics / Master Contract Future PM Inspection 
+ Table</h5>
+<p style="margin-left: 8px;">The mstrcntrcteqpmntpm table contains data 
+ for &#39;future&#39; Master Contract Inspections for KPI&#39;s; this table is updated 
+ when Equipment and the Master Contract Records are changed. The Master 
+ Contract’s Menu option Tools&gt;Rebuild Inspections re-syncs the mstrcntrcteqpmntpm 
+ table if it has incorrect entries. Run this function after hours since 
+ it can take a long time to complete!</p>
+<p style="margin-left: 8px;">A registry entry is available to disable the 
+ use of this table if it as not required for KPI&#39;s or other reporting; 
+ see the Registry section of this topic.</p>
+<h3>Multiple Tasks</h3>
+<p>Master Contract accommodates multiple tasks for PM’s scheduled on the 
+ same date and equipment. For example, if your Master Contract Schedule 
+ tab includes two lines for the same day and month, but with different 
+ Service Task Id’s, two corresponding lines will be generated to the Client 
+ Site Equipment PM Schedule tab, and then to the PM Work Order Equipment 
+ tab when Create PM Work Orders is run.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Note on 
+ Renewing Multiple Tasks</font> <font style="font-weight: bold;">per Day 
+ Contracts:</font><br/>
+If multiple tasks per day have been manually scheduled, the Start Renew 
+ Master Contract function should NOT be used to Renew the Master Contract; 
+ the Renewal? flag must be blank in this case. These contracts should be 
+ managed from the Master Contract itself.</p>
+<h3>Multiple Contracts Use Master Contract Equipment Table Not Enabled</h3>
+<p>When the <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Use_Master_Contract_Equipment_Table">UseMasterContractEquipmentTable 
+ global registry</a> is NOT set to true, Master Contract accommodates multiple 
+ contracts per Site by associating ALL contracts for that Site with the 
+ Equipment. The following will occur when Start Create PM Work Orders is 
+ run for Sites whose equipment is associated with one or more Master Contracts: 
+  </p>
+<p style="margin-left: 36.00pt;">- A Client Site Equipment record that 
+ is flagged as Active and Under Contract – but <font style="text-decoration: underline; ">does 
+ not</font> specify a Contract Id qualifies for ALL Contracts that include 
+ the equipment&#39;s Site record. </p>
+<p style="margin-left: 36.00pt;">- A Client Site Equipment record that 
+ is flagged as Active and Under Contract that <font style="text-decoration: underline; ">does</font> 
+ specify a Contract Id will ONLY be included as part of the specified Contract. </p>
+<p><span>Note that separate work orders will be created for the different 
+ Contracts.</span></p>
+<h3>Master Contract Validations</h3>
+<p>Since Master Contract Processing now supports multiple contracts per 
+ Site, enhanced functionality and validations have been added to the Master 
+ Contract viewer to support this.</p>
+<p>1. Each time a Site Id is added to the Site List tab, the user will 
+ be prompted with a warning message if the Site is referenced on another 
+ Master Contract. </p>
+<p>2. The Equipment tab right-click action has been enhanced to allow the 
+ user to change the Contract the Equipment is assigned to. When the Equipment 
+ record is already under contract on a different Master Contract, the right-click 
+ generates the following message:</p>
+<p style="margin-left: 36.00pt;">Selected Equipment record is already covered 
+ by another contract.<br/>
+Do you wish to reassign it to this contract?</p>
+<p>Click Yes to reassign the Equipment to the current Contract. Note, however, 
+ that to remove Equipment from all Master Contracts, you must do so from 
+ the Master Contract record to which is is currently assigned.</p>
+<p>3. The Equipment tab displays the equipment records for every site listed 
+ on the Site List tab when the Master Contract Record is in Add mode. However, 
+ a new Master Contract record must be saved before doing any right-click 
+ processing on Equipment tab.</p>
+<p>4. Leapday Not Allowed<span style="font-weight: bold;"><br/>
+</span>February 29th (leapday) can cause issues with the new Master Contract 
+ Equipment functionality as well as with scheduling / billing into coming 
+ years that are not leap years. February 29th is not allowed to be entered 
+ as a date in the Adv. Bill or Schedule tabs, or the Master Contract saved 
+ with February 29th in the Adv. Bill or Schedule tabs; the error &quot;Invalid 
+ Month Number Entered&quot; will be displayed if this date is found. </p>
+<p>By default,  you can&#39;t adjust scheduled or billed lines that 
+ have been generated but the following registry allows you to do so if 
+ absolutely necessary to change 2/29 to 2/28 so a record can be saved:</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Id:</font> 
+ <font style="font-weight: bold;"> </font>sys-viewer-vmstrcntrct</p>
+<p style="font-weight: bold; margin-left: 48px;"><span>Setting Key:</span><span style="font-weight: normal;"> RemoveValidations  </span><span>Setting 
+ Value:</span><span style="font-weight: normal;"> true</span></p>
+<h3>Foreign Currency Processing</h3>
+<p>If foreign currency processing is implemented on your system (and this 
+ Master Contract record is for a foreign customer), all Contract / Billing 
+ / Earned amounts must be entered in terms of your customer’s currency.</p>
+<h2>Screen Organization:</h2>
+<p>The Main Tab in the upper section of this screen displays the header 
+ scheduling information. The Filter tab enables you to auto-populate the 
+ Site List. Click on the following buttons to see additional information.</p>
+<p><a href="PM_Master_Schedule_Master_Contract_.htm#PM_Master_Main_Tab"><img src="assets/images/image/btn_Main.gif" alt="image\btn_Main.gif" title="image\btn_Main.gif" width="42" height="24" border="0"/></a> <a href="PM_Master_Schedule_Master_Contract_.htm#PM_Master_Filter_Tab"><img src="assets/images/image/btn_Filter.gif" alt="image\btn_Filter.gif" title="image\btn_Filter.gif" width="42" height="24" border="0"/></a> <a href="PM_Master_Schedule_Master_Contract_.htm#Master_Contract_Setup/Renew_Tab"><img src="assets/images/image/btn_Setup_Renew47.gif" alt="image\btn_Setup_Renew47.gif" title="image\btn_Setup_Renew47.gif" width="98" height="24" border="0"/></a> 
+ <a href="PM_Master_Schedule_Master_Contract_.htm#Master_Contract_Billing_History_Tab"><img src="assets/images/image/btn_Billing_History32.gif" alt="image\btn_Billing_History32.gif" title="image\btn_Billing_History32.gif" width="99" height="24" border="0"/></a> 
+ <a href="PM_Master_Schedule_Master_Contract_.htm#Master_Contract_Inspection_History"><img src="assets/images/image/btn_Inspection_History32.gif" alt="image\btn_Inspection_History32.gif" title="image\btn_Inspection_History32.gif" width="127" height="24" border="0"/></a></p>
+<p>The tabs on the lower section of this screen display the scheduling 
+ and billing details for this record. Click on the following buttons to 
+ see additional information:</p>
+<p><a href="PM_Master_Schedule_Master_Contract_.htm#PM_Master_Site_List"><img src="assets/images/image/btn_Site_List32.gif" alt="image\btn_Site_List32.gif" title="image\btn_Site_List32.gif" width="62" height="24" border="0"/></a> <a href="PM_Master_Schedule_Master_Contract_.htm#PM_Master_Adv_Bill"><img src="assets/images/image/btn_Adv__Bill78.gif" alt="image\btn_Adv__Bill78.gif" title="image\btn_Adv__Bill78.gif" width="63" height="24" border="0"/></a> <a href="PM_Master_Schedule_Master_Contract_.htm#PM_Master_Schedule_Tab"><img src="assets/images/image/btn_Schedule.gif" alt="image\btn_Schedule.gif" title="image\btn_Schedule.gif" width="71" height="24" border="0"/></a> <a href="PM_Master_Schedule_Master_Contract_.htm#PM_Master_Provider_Rates"><img src="assets/images/image/btn_Provider_Rates32.gif" alt="image\btn_Provider_Rates32.gif" title="image\btn_Provider_Rates32.gif" width="108" height="24" border="0"/></a> 
+ <a href="PM_Master_Schedule_Master_Contract_.htm#Master_Contract_Equipment_Tab"><img src="assets/images/image/btn_Equipment.gif" alt="image\btn_Equipment.gif" title="image\btn_Equipment.gif" width="80" height="24" border="0"/></a> <a href="PM_Master_Schedule_Master_Contract_.htm#Master_Contract_Open_Work_Orders_Tab"><img src="assets/images/image/btn_Open_Work_Orders64.gif" alt="image\btn_Open_Work_Orders64.gif" title="image\btn_Open_Work_Orders64.gif" width="135" height="24" border="0"/></a> 
+ <a href="PM_Master_Schedule_Master_Contract_.htm#Master_Contract_Other_Work_Orders_Tab"><img src="assets/images/image/btn_Other_Work_Orders64.gif" alt="image\btn_Other_Work_Orders64.gif" title="image\btn_Other_Work_Orders64.gif" width="136" height="24" border="0"/></a></p>
+<h2>Important Fields: Upper Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="PM_Master_Main_Tab" id="PM_Master_Main_Tab"></a>Main 
+ Tab</p>
+<p><font style="font-weight: bold;">Master Contract</font> <font style="font-weight: bold;">Id</font>:<br/>
+This alphanumeric field must uniquely identify this record (ex. the Contract 
+ Number).</p>
+<p><font style="font-weight: bold;">Description:</font> (40 character)<br/>
+Briefly describes this record; this field is recommended but not required.</p>
+<p><font style="font-weight: bold;">Job Id: Cost Code: Billing Item: Cost 
+ Category:<br/>
+</font>These fields should only be filled in if one job (and one job only) 
+ will be billed and costed to this contract. If these fields are completed, 
+ the corresponding fields on the Site List tab must remain blank.</p>
+<p>The Cost Category supports enhanced filtering provided by the Cost Code&#39;s 
+ Job Cost Category Usage Filter. Cost Categories are validated (relative 
+ to Cost Codes) during data entry upon leaving the Cost Category Id field. 
+  The full relationship is validated again when leaving a child line 
+ or saving a record.</p>
+<p><span style="font-weight: bold;">Original Start Date:</span><br/>
+This informational field may be used to record the original Start Date 
+ of the Master Contract.</p>
+<p><font style="font-weight: bold;">Start Date: End Date:<br/>
+</font>These fields must define the period that this contract covers. The 
+ system will use this range when computing the year(s) for the Billing 
+ Dates (if applicable) and the PM Schedule dates when the Create PM Billing 
+ and Create PM Work Order functions are run. When a contract is renewed, 
+ only the End Date needs to be revised. These fields may be updated from 
+ Setup/Renew tab when the Auto-Populate button is clicked.</p>
+<p class="Body_Text_2" style="margin-left: 5.75pt;"><font style="font-weight: bold;">Contract 
+ Total:<br/>
+</font>This display-only field is based on the Contract Value fields on 
+ the Site List tab or the Bill Amount fields on the Adv. Billing tab. It 
+ enables you to verify that the billing detail you have entered will correctly 
+ sum to the desired amount.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Service Agreement 
+ Type Id:<br/>
+<font style="font-weight: normal;">Specifies the type of agreement this 
+ contract represents. This optional field is for informational purposes.</font></p>
+<p><font style="font-weight: bold;">Sales Rep Id:<br/>
+</font>This field provides the default value for PM Work Orders generated 
+ from this contract.</p>
+<p><font style="font-weight: bold;">Acct Mgr Id:<br/>
+</font>This field provides the default value for PM Work Orders generated 
+ from this contract.</p>
+<p><font style="font-weight: bold;">Commission%:<br/>
+</font>This field provides the default value for PM Work Orders generated 
+ from this contract.</p>
+<p><font style="font-weight: bold;">Time of Service Bill?</font><br/>
+This field enables the user to generate Time of Service Preventive Maintenance 
+ Work Orders instead of pre-billing with a PM Invoice Work Order. The Contract 
+ Value on the Site List will be evenly divided between all scheduled Preventive 
+ Maintenance Work Orders when Start Create PM Workorders is run. If multiple 
+ sites are included for this Master Contract, a separate work order (each 
+ with the appropriate Contract Value) will be generated for Site per Inspection. 
+ If multiple equipment is included in the contract, the Contract Value 
+ will be evenly divided on the Other lines, each referencing a piece of 
+ equipment.</p>
+<p>If this box is flagged:</p>
+<p style="margin-left: 36.00pt;">The Job used for PM Work Orders should 
+ be flagged as Service Compute.</p>
+<p style="margin-left: 36.00pt;">The system will not allow the Amortize 
+ Revenue box to be set.</p>
+<p style="margin-left: 36.00pt;">When the Auto Populate button is clicked, 
+ the Revenue Amount is NOT set on the Schedule tab. Instead, the Contract 
+ Amount(s) on the Site list are used to derive the appropriate values to 
+ be written to the Work Order Other tab when Start Create PM Workorders 
+ is run. </p>
+<p style="margin-left: 36.00pt;">Note that if this Contract is assigned 
+ to subcontractors, and the Provider Rates tab is used, only the Cost component 
+ will be referenced, not the Revenue.</p>
+<p><font style="font-weight: bold;">Time of Service Earn?<br/>
+</font>This field provides a way to better match the revenue and expenses 
+ associated with PM contracts.  Time-of-Service refers to the 
+ fact that the revenue is recognized at the time the PM Inspection work 
+ order is completed, as opposed a defined earnings schedule. The system 
+ will recognize an accrued liability when the contract invoices are generated, 
+ and relieve this liability and recognize income upon printing and posting 
+ the PM work order.</p>
+<p>If this field is flagged, the Site Equipment PM Schedule&#39;s Accrued flag 
+ will be checked. When PM Work Orders are generated, they will include 
+ two lines on the Revenue Adjustments tab.  One is for recognizing 
+ the PM Income.  The line designated as &#39;ApplyPrepaid&#39; will relieve 
+ the accrued liability.  Note that the Time Of Service Billed 
+ and the Time of Service Earn fields cannot both be flagged.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important:</font> 
+ *ACCRUAL* is used as a special marker when PM Work Orders are generated; 
+ these lines will not post directly to JCH.  When the PM Invoice is 
+ printed and posted, the appropriate GL and Job Cost entries will be made 
+ to recognize the earned revenue values.</p>
+<p><span style="font-weight: bold;">Multiple Sites and Revenue Proration:</span> 
+ Version 9.1 allows for handling of multiple sites when TimeOfService Earn? 
+ is set to Y. Additionally, when Revenue Values as %? is set to Y along 
+ with TimeOfService Earn? users may specify a percentage value in Revenue 
+ Per Visit on each Schedule line of the contract.</p>
+<p>If all Schedule lines for the Site have $0 Revenue Per Visit, TOS Earned 
+ is checked  and the Revenue as Percent box is blank, the Site&#39;s Total 
+ Contract amount is treated as evenly distributed across the Equipment&#39;s 
+ PMSchedule Contract Values for Scheduled lines. </p>
+<p>When both the TimeOfService? and Revenue Values as %? fields are set 
+ to Y with multiple sites specified - the system calculates the percentage 
+ of revenue specified in the Revenue Per Visit field based on the Site 
+ Contract Value. This percentage is reflected in the RevAdjust lines on 
+ the Preventive Maintenance Work Order generated through Start Create PM 
+ Workorders. The sum of the Revenue Per Visit on all Schedule lines must 
+ equal 100% in the Master Contract record. If the user fails to enter a 
+ percentage in the Revenue Per Visit field the system will evenly prorate 
+ the revenue.</p>
+<p style="margin-left: 48px;"><span>Note - the Advanced Billing will still 
+ be prorated evenly across all months set to Bill? on the Setup/Renew tab 
+ of the Master Contract.</span></p>
+<p><font style="font-weight: bold;">Revenue Values as %</font><font style="font-weight: bold;">:<br/>
+</font>This field enables the user to designate the Revenue specified on 
+ the PM Schedule line of a master contract as a percentage instead of a 
+ dollar amount for Time Of Service Bill invoices. If TimeOfService Bill 
+ is not specified, the Amount Billed on the Adv. Bill tab will be calculated 
+ as a percentage. If Amortization is enabled, the Amount Earned is also 
+ calculated as a percentage.</p>
+<p>When generating Time of Service Earn PM Work Orders or PM Billings, 
+ the system will calculate the billable amount for as a percentage of the 
+ annual contract amount specified on the Client Site list. Amortized amounts 
+ will similarly be generated using the Amount Earned percentage in the 
+ Scheduled tab.</p>
+<p>When the user saves the record, the system will verify that the sum 
+ of the Revenue percentages totals 100.00.</p>
+<p style="font-weight: bold;"><span style="font-weight: bold;">Schedule 
+ Hours as %<br/>
+<span style="font-weight: normal;">If this field is flagged, the system 
+ will treat the Hours on the Schedule tab as a percentage field and calculate 
+ the estimated hours as a percentage of the Total Site Hours on the site 
+ tab. The estimated hours will be distributed across any equipment lines 
+ added to the subsequent PM work order so that the total estimated hours 
+ for the PM work order equals the calculated percentage hours.</span></span></p>
+<p style="font-weight: normal;">The following fields are used in conjunction 
+ with this field:</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Site List 
+ Tab - Total Site Hours</span><br/>
+This field allows the total estimated hours to be assigned on a Site by 
+ Site basis. This field is used in conjunction with the Schedule Hours 
+ as % field on the Main tab.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Schedule 
+ Tab - Hours</span><br/>
+If the Schedule Hours as % field is flagged, the system treats this as 
+ a percentage field and calculates the estimated hours as a percentage 
+ of the Total Site Hours. The total hours on this tab sum to 100.00 (100%).</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Setup Renew 
+ Tab Autopopulate</span><br/>
+If the Schedule Hours as % field on the Main Tab is flagged, clicking this 
+ button will populate the Schedule Tab with the 100% of hours evenly divided 
+ among the inspections; they may be adjusted by the users.  </p>
+<p><font style="font-weight: bold;">Master Contract User 1 – 5:<br/>
+</font>These optional fields are for informational / reporting purposes.</p>
+<p><span><img src="assets/images/BuildOutPMWOs.bmp" alt="" style="border: none;" border="0"/> 
+ The Build Out PM WOs will be available to all installs using the Master 
+ Contract Equipment table in a future release. The Build Out button may 
+ be disabled via registry if needed.</span></p>
+<p><font style="font-weight: bold;">Cancelled Date</font><font style="font-weight: bold;">:</font><br/>
+This date is used in conjunction with Create PM Billings and WO’s to prevent 
+ their generation <font style="text-decoration: underline; ">past the Cancelled 
+ date</font>. Note that the Start Renew Master Contract function will ignore 
+ Master Contracts whose Cancelled Date is set. This field has also been 
+ added to the range screen so that Cancelled Master contracts will not 
+ appear on the active list of Master Contracts.</p>
+<p><font style="font-weight: bold;">Cancelled Reason</font><font style="font-weight: bold;">:</font><font style="font-weight: bold;"><br/>
+</font>This field may be used to briefly describe why this contract was 
+ cancelled.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a id="Master_Contract_Setup/Renew_Tab"></a>Setup 
+ / Renew</p>
+<p>This tab is designed to enable you to quickly generate or update the 
+ entries on the Advanced Billing and/or Schedule tabs. If you are updating 
+ your contract with this tab, be sure that all PM’s and Billings for the 
+ current contract year have already been generated (with the Create PM 
+ WO’s and Create PM Billings functions).</p>
+<p>The following validation is checked when AutoPopulate is pushed...<br/>
+1. New Start Date cannot precede Old End Date.<br/>
+2. New End Date cannot precede New Start Date.<br/>
+3. When Amortize Revenue is true, at least one of the monthly Earn? boxes 
+ must be checked.<br/>
+4. At least one of the monthly Bill? boxes must be checked if an Annual 
+ Amount is specified.</p>
+<p>5. When adjusting existing lines for the current date range, the user 
+ is only restricted from using the AutoPopulate button if any of the existing 
+ scheduled or billed lines have been used to generate corresponding lines 
+ in the Client Site PM Billing or Client Site Equipment PM tables.</p>
+<p>Alternately, the <a href="Start_Renew_Master_Contract.htm">Start Renew 
+ Master Contract</a> function may be used to update this contract.</p>
+<h3 style="margin-left: 36.00pt;">Specify Inspection Intervals Functionality</h3>
+<p style="margin-left: 36.00pt;">In addition to auto-populating the inspection 
+ lines on a monthly (implemented by flagging the desired Inspection months) 
+ or day of the week (e.g, by flagging the first and third Tuesday of the 
+ month), you may use a third option which allows the user to specify a 
+ start date and the number of days (interval) until the following inspection.  This 
+ option is implemented as follows.</p>
+<p style="margin-left: 36.00pt;">1. Complete the fields (Job, Start and 
+ End Date, Contract Amount, etc.) not pertaining to pm scheduling. You 
+ must flag at least one Bill Date. Do NOT flag any of the Monthly or Day 
+ of the Month inspection boxes.</p>
+<p style="margin-left: 36.00pt;">2. Click the Auto Populate button. If 
+ none of the Inspection boxes are flagged, the system will open a Prompt 
+ window that requests the First Inspection Date and the Interval(Days). </p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">First 
+ Inspection Date:</font><br/>
+The system uses the Contract Start Date the default date for the First 
+ Inspection, but this may be adjusted by the user (note that the date must 
+ fall between the Contract Start and End Dates).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Interval 
+ (Days):<br/>
+</font>This field defaults to zero, but must be set to greater than zero 
+ and less than 29. For example, if your first inspection date is 1/3/2010 
+ and your Interval is set to 10 days, inspections will be scheduled on 
+ the 1/3/2010, 1/13/2010, 1/23/2010 and so on.</p>
+<p style="margin-left: 36.00pt;">3. Click OK. The auto-populate logic will 
+ create Inspection lines starting with the First Inspection Date and then 
+ every Interval(Days) afterwards throughout the duration of the contract.</p>
+<p><font style="font-weight: bold;">Auto Populate Button:<br/>
+</font>When you click this button, the contents of this tab will be used 
+ to revise the Adv. Bill and Schedule tabs, and the contract Start and 
+ End Dates on the Main tab. If the Schedule Hours as % field on the Main 
+ Tab is flagged, clicking this button will populate the Schedule Tab with 
+ the 100% of hours evenly divided among the inspections; they may be adjusted 
+ by the users.  </p>
+<p style="margin-left: 48px;"><span style="text-decoration: underline; ">TimeOfService 
+ Bill:</span> For Master Contracts flagged as TimeOfService Bill, the Revenue 
+ amount will not be set in the Schedule tab when this button is clicked. 
+ Instead, the Contract Amount(s) on the Site list are used to derive the 
+ appropriate values to be written to the Work Order Other tab when Start 
+ Create PM Workorders is run. </p>
+<p>Where possible, the system will maintain existing values when a Billing 
+ or  Schedule line corresponding to the lines already present instead 
+ of regenerating the whole tab from scratch.  This allows the 
+ user to update the Billing or Schedule tabs on an existing Master Contract, 
+ or a cloned contract without having to manually reset individual fields. 
+ For the Schedule tab: </p>
+<p style="margin-left: 48px;">For the PartType Flag setting &amp; SvcTaskId 
+ - use the current values on the Schedule tab when Setup/Renew is pressed.</p>
+<p style="margin-left: 48px;">For Hours, Work Code, EscProfile - when corresponding 
+ Parent Setup/Renew tab fields are NOT set, use the existing Schedule tab 
+ values. </p>
+<p style="margin-left: 48px;">For Work Code, EscProfile.values - when corresponding 
+ Parent Setup/Renew tab fields ARE set use them to reset lines that do 
+ not have corresponding values.  </p>
+<p style="margin-left: 48px;"><span>Always Refresh &lt;Da&gt; value per 
+ designated Wks. Day setting on parent and Hours if set in the parent. 
+ </span></p>
+<p>See <a href="Registry_Entry_Master_Contract_PM_Master_Scheduler_.htm">Registry 
+ Entry Master Contract (PM Master Scheduler)</a> for a registry option 
+ that enables you to specify the work codes to be associated with inspections 
+ on a month-by-month basis as well as the GL Accounts when the Auto Populate 
+ button is clicked.</p>
+<p><b>Contact Total:<br/>
+</b>This display field calculates the total amount of the contract for 
+ all Sites when Auto Populate is hit. It is maintained by the system based 
+ on how the contract is configured - Amount By Site from the Site list 
+ and the Revenue Values from the Schedule list tab.</p>
+<p><b>Amount By Site:</b><br/>
+This field should only be used for Single Site contracts OR if multiple 
+ Sites do NOT need differing amounts specified by Site. If there are values 
+ on the Site list the system does not allow entry into this field. When 
+ this field is completed, it is used to generate the values on the Advanced 
+ Billing tab when Auto Populate is clicked. Since this field itself is 
+ not saved, the user will be reminded to Auto Populate when saving the 
+ record if it is greater than zero but the sum of the Advanced Billed lines 
+ is zero.</p>
+<p><font style="font-weight: bold;">Start Date: End Date:<br/>
+</font>The revised Start and End Dates for the renewed contract.</p>
+<p><font style="font-weight: bold;">Renewable?<br/>
+</font>Check this field if this Contract is eligible for renewal via the 
+ Start Renew Master Contracts function.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Note on 
+ Renewing Multiple Tasks</font> <font style="font-weight: bold;">per Day 
+ Contracts:</font><br/>
+If multiple inspection tasks per day have been manually scheduled, this 
+ function should NOT be used to Renew the Master Contract; the Renewal? 
+ flag must be blank in this case. These contracts should be managed from 
+ the Master Contract itself.</p>
+<p><font style="font-weight: bold;">Amortize Revenue?<br/>
+</font>If this field checked, the Amount Earned will be evenly distributed 
+ by month when the Auto Populate button is clicked.</p>
+<p>Schedule:</p>
+<p class="Normal_Indent" style="font-weight: bold;">Jan: Bill Earn Inspect</p>
+<p class="Normal_Indent"><font style="font-weight: bold;">Feb: Bill Earn Inspect</font></p>
+<p style="margin-left: 36.00pt;">...</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Dec: Bill Earn Inspect</font></p>
+<p>These fields enable you to select the months to Bill and realize Earnings 
+ on the contract, and also which months that an inspection should be scheduled 
+ for. The Adv. Bill and Schedule tabs will be updated when you click the 
+ Auto Populate button.</p>
+<p>If inspections should be spaced on even intervals (as discussed above), 
+ no inspection boxes should be flagged.</p>
+<p><font style="font-weight: bold;">Wks:  Mon:  Tue:  Wed:  Thu:  Fri:  Sat:  Sun:<br/>
+</font><font style="font-weight: bold;">1<br/>
+2<br/>
+3<br/>
+4<br/>
+</font><font style="font-weight: bold;">5<br/>
+</font>This grid enables you to select the day (or days) of the month that 
+ the inspection should take place. This grid would typically only be used 
+ if inspections take place every month.</p>
+<p>For example, to specify an inspection for the 1st and 3rd Monday of 
+ each month, the grid would be completed as follows:<br/>
+Wks:  Mon:  Tue:  Wed:  Thu:  Fri:  Sat:  Sun:<br/>
+1  X<br/>
+2<br/>
+3     X</p>
+<p>When the Autofill button is clicked, the system will calculate the correct 
+ date of each 1st and 3rd Monday, and use that information to add these 
+ inspections to the Schedule tab.</p>
+<p>The day of the month functionality may be used with the monthly inspection 
+ functionality.</p>
+<p>If the Inspect? Month fields are all blank, but one or more Day fields 
+ are checked, inspections will be checked for all months (as defined in 
+ the Days section) will be created when the Auto Populate button is clicked.</p>
+<p>If only certain Inspect? Month fields are checked, and one or more Days 
+ are checked, only those Days in the selected months will be added to the 
+ Schedule when the Auto Populate button is clicked.</p>
+<p>Note: if Days were selected, and Inspect? Months were all blank, all 
+ of the Inspect? Months will be checked when the Master Contract record 
+ is saved.</p>
+<p><font style="font-weight: bold;">Inspection Defaults: Est Hours  -  Work 
+ Code – Escalation Profile<br/>
+</font>These fields enable you to select the default values that will be 
+ used to populate the Schedule tab when you click the Auto Populate button; 
+ this it true for both Monthly and Day of the Week inspections. These fields 
+ override the registry setting sys-viewer-vmstrcntrct options (if they 
+ exist) used to set the work code. If these fields are not completed, those 
+ specified in the registry will be used.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="PM_Master_Filter_Tab" id="PM_Master_Filter_Tab"></a>Filter 
+ Tab</p>
+<p class="Body_Text_2">This tab enables you to auto-populate the sites 
+ included in this contract by filling in one or more of the following ranges, 
+ and then clicking the Auto Populate button. Note that the Site List may 
+ also be adjusted by manually adding or deleting lines.</p>
+<p><font style="font-weight: bold;">Site Id:<br/>
+</font> This range would be completed to select Sites with similar Id’s 
+ – for example, to populate the list with only those records whose Site 
+ Id begins with CVS, you would enter CVS% and then click the Auto-Populate 
+ button. Click <a href="Filter_Button.htm">Filter Button</a> for detailed 
+ information on completing range filters.</p>
+<p><font style="font-weight: bold;">Site Name</font><font style="font-weight: bold;">:</font> 
+ <font style="font-weight: bold;"><br/>
+</font>This range would be completed to select Sites with similar Name’s 
+ – for example, to populate the list with only those records whose Site 
+ Id begins with CVS, you would enter CVS% and then click the Auto-Populate 
+ button.</p>
+<p><font style="font-weight: bold;">Site City:<br/>
+</font>This range is typically used to limit Sites (defined by the Site 
+ Id range) to a specific city, or list of cities.</p>
+<p style="margin-left: 36.00pt;">Example:</p>
+<p style="margin-left: 36.00pt;">To populate the Site List with Site Id’s 
+ beginning with ‘CVS’ located in Twinsburg:</p>
+<p style="margin-left: 36.00pt;">Site Id: CVS%</p>
+<p style="margin-left: 36.00pt;">Site City: Twinsburg</p>
+<p class="Body_Text_2"><font style="font-weight: bold;">Site State: ZIP 
+ Code: Service Zone Id: Branch Id:<br/>
+Account Manager Id: Service Manager Id: Sales Rep Id:<br/>
+</font>Like the Site City, these ranges enable you to filter your list 
+ of Sites based on these selection criteria.</p>
+<p>Example:</p>
+<p>To populate the Site List with Site Id’s beginning with ‘CVS’ located 
+ in Service Zones 1 through 4:</p>
+<p class="Normal_Indent">Site Id: CVS%</p>
+<p class="Normal_Indent">Service Zone Id: 1_4</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Master_Contract_Billing_History_Tab" id="Master_Contract_Billing_History_Tab"></a>Billing 
+ History</p>
+<p>This tab lists PM Billings associated with this Contract. The following 
+ fields are displayed:</p>
+<p class="Normal_Indent" style="font-weight: bold;">Site Id – Site Name 
+ – Billed Amount – Date – Invoice (if generated) <span style="font-weight: bold;">Description 
+ – Invoice Status – Amount Earned (if amortizing)</span></p>
+<p> <span><u style="text-decoration: none; ">W</u>hen the UseMasterContractEquipmentTable 
+ global registry is set to true, the Source of the billing is displayed: 
+ </span></p>
+<p style="font-weight: bold; margin-left: 48px;">Source:<br/>
+<span style="font-weight: normal;">The Source column indicates where the 
+ information is being pulled from:</span></p>
+<p style="margin-left: 88px;">&#39;MC&#39; indicates a predicted event based on 
+ the current definition in the Master Contract.</p>
+<p style="margin-left: 88px;"><span>&#39;CS&#39; identifies lines already written 
+ to the Client Site&#39;s PM Billing tab.  This is the result of running 
+ the Start Create PM Billings function. </span></p>
+<p class="Normal_Indent" style="font-weight: bold;"> </p>
+<p style="margin-top: 0; margin-bottom: 0;">You may click on a column heading 
+ to sort the contents of the tab by that column.  </p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Master_Contract_Inspection_History" id="Master_Contract_Inspection_History"></a>Inspection 
+ History</p>
+<p>This tab lists inspections associated with this Contract that were generated 
+ in Version 6.3 and later. The following fields are displayed for each 
+ PM Work Order:</p>
+<p class="Normal_Indent">S<span style="font-weight: bold;">ite Id - Equipment 
+ Id - Equipment Name - Manufacturer – Model – Serial Number</span></p>
+<p class="Normal_Indent" style="font-weight: bold;">WorkOrder Id – Date 
+ Scheduled – Work Code – Estimated Hours – WorkOrder Status</p>
+<p class="Normal_Indent" style="margin-left: 8px;"><u style="text-decoration: none; "><span>W</span></u>hen 
+ the UseMasterContractEquipmentTable global registry is set to true, this 
+ list is built using the Advanced Analytics. It includes the additional 
+ Source column:   </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Source:<br/>
+</span>When the Source is &#39;MCE&#39;, the line is predicted based on the Master 
+ Contract definition.</p>
+<p style="margin-left: 88px;"><span>When the Source is &#39;CSE&#39;, the line 
+ exists on the Client Site Equipment PM Schedule tab.</span></p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p style="margin-top: 0; margin-bottom: 0;">You may click on a column heading 
+ to sort the contents of the tab by that column.  </p>
+<h2>Important Fields: Lower Section</h2>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="PM_Master_Site_List" id="PM_Master_Site_List"></a>Site 
+ List Tab</p>
+<p class="Body_Text_2">This tab defines which sites are included on this 
+ contract. PM Work Orders will be generated for Equipment belonging to 
+ these sites it the Equipment record is Active and Under Contract.</p>
+<p><img src="assets/images/image/SKIN1_CSV.gif" alt="" style="border: none;" border="0"/> 
+  The CSV button on the side toolbar of the Sites allows the user 
+ to add lines from a .cvs file to a brand new Master Contract record. When 
+ the .CSV button is pressed it verifies that the viewer is a New Record 
+ and that no changes have been made to the record before presenting a file 
+ selection dialog to access a provided CSV.  The .cvs file must 
+ include a header row specifying the following columns that will define 
+ the lines that will be added to the Master Contract&#39;s Sites column:</p>
+<p style="margin-left: 48px;">Site Id<br/>
+Job Id<br/>
+Job Cost Code Id<br/>
+Billing Item Id<br/>
+Cost Category Id<br/>
+Contract Values<br/>
+Contract Hours</p>
+<p style="margin-left: 48px;"><span>All of the Id lines must specify valid 
+ record Id&#39;s. the Values and Hours columns must be numeric. If any value 
+ for a new line is considered invalid, that line is skipped and after all 
+ lines have been processed the user will be presented with a text box containing 
+ a list of the errors and the error.log file will also contain the errors. 
+ Once the Site lines have been added, complete the Master Contract and 
+ be sure to save it. </span></p>
+<p><font style="font-weight: bold;">Site Id:<br/>
+</font>The Client Site Id. You may enter Sites on this list by entering 
+ their Site Id, or by double-clicking on this field to bring up a list 
+ of Sites. The Filter tab (discussed above) may also be used to add multiple 
+ Sites to the list.</p>
+<p style="margin-left: 8px;">Validation prevents adding the same Site multiple 
+ times. The Line Insert w/Copy action clears the Site Id to prevent 
+ accidental duplication of Site Ids. Adding a new Site Id adds all active 
+ Client Site Equipment records for the Site to the new Equipment tab.  Each 
+ newly added Equipment record defaults to not Covered.</p>
+<p style="margin-left: 8px;">Removing or changing a Site now has validation 
+ that prevents its removal if the Site or any of its CSE records have <b><i>posted</i></b> 
+ references to the MC.  These references might exist on either 
+ the CS-PMBilling or the CSE-PMSchedule child tabs.  When <b><i>posted</i></b> 
+ MC references exist, the Site cannot be removed but the individual CSE 
+ records can still be set to NOT Covered on the new MSE child.  See 
+ below for definitions of <b><i>posted</i></b>. Note: similar validation 
+ and messaging occurs if an attempt is made to delete a child row that 
+ violates the above.</p>
+<p style="margin-left: 48px;"><u>Posted Client Site - PMBilling Tab</u></p>
+<p style="margin-left: 48px;">References to the Master Contract found on 
+ the Client Site - PMBilling tab are considered posted when either the 
+ PM Invoice Id contains an Invoice Id or the Posted to GL flag is True.  </p>
+<p style="margin-left: 48px;"><u>Posted Client Site Equipment - PMSchedule</u></p>
+<p style="margin-left: 48px;"><span>References to the Master Contract found 
+ on the Client Site Equipment - PMSchedule are considered posted when the 
+ PM WO Id field contains a Work Order Id.  </span></p>
+<p><font style="font-weight: bold;">Job Id: Cost Code: Billing Item;<br/>
+</font> These fields define which job will be billed and costed to for 
+ this Site and contract. If these fields are completed, the corresponding 
+ fields on the Main tab in the upper section must remain blank.</p>
+<p style="margin-left: 8px; font-weight: bold;">Cost Category:<br/>
+<span style="font-weight: normal;">In some States certain Preventive Maintenances 
+ are taxable while others are not taxable. When Create PM Billings is run, 
+ the system passes the Job Cost Category (if specified) from the Master 
+ Contract to the corresponding new field in the Client Site PM Billing 
+ schedule.  If completed, this field overrides the default Cost Category 
+ derived from the sys-start-scrtepmbllng registry&#39;s Cost Category 
+ option. This allows the user to make the Billing taxable or non-taxable 
+ as needed by the selection of an appropriate Cost Category.</span></p>
+<p style="margin-left: 8px; font-weight: bold;"><span style="font-weight: normal;">Master 
+ Contract Time of Service Billings also be configured to produce a single 
+ invoice with taxable and non-taxable components.  The same site should 
+ appear twice on the Master Contract Site List, with a different Value 
+ amount and Cost Category for each line (for example, if the PM is partially 
+ taxable and partially non-taxable).  The Revenue written to the WO&#39;s 
+ Other tab is correctly calculated according to the Value / Cost Category 
+ on each Site List line, and appropriately handled as taxable/non taxable.</span></p>
+<p style="margin-left: 8px;"><span>This field supports enhanced filtering 
+ provided by the Cost Code&#39;s Job Cost Category Usage Filter. Cost Categories 
+ are validated (relative to Cost Codes) during data entry upon leaving 
+ the Cost Category Id field.  The full relationship is validated again 
+ when leaving a child line or saving a record.</span></p>
+<p><font style="font-weight: bold;">Contract Value:<br/>
+</font>The annual amount associated with this contract for this site. During 
+ PM Invoice generation, this field (if completed) will be divided by the 
+ number of number of billings specified on the Advanced Billing Tab.</p>
+<p> <font style="font-weight: bold;">Time of Service Billing Contracts:</font></p>
+<p style="margin-left: 36.00pt;">This field is also used when generating 
+ Time of Service PM Work orders: the Contract Value will be evenly divided 
+ between all scheduled PM Work Orders. If multiple sites are included for 
+ this Master Contract, a separate work order (each with the appropriate 
+ Contract Value) will be generated for Site per Inspection. If multiple 
+ equipment is included in the contract, the Contract Value will be evenly 
+ divided on the Other lines, each referencing a piece of equipment. </p>
+<p><font style="font-weight: bold;">Note:</font> only one of the following 
+ should be completed: the Contract Value <font style="font-style: italic;">or</font> 
+ the Bill Amount (on the Advance Bill tab) or the Revenue amount (on the 
+ Service Provider tab). If you wish to assign a different value to each 
+ of the Sites on this list, this field would be completed. It you wished 
+ to assign different values to the billing dates, the Bill Amount on the 
+ Adv. Bill tab would be completed.</p>
+<p><span style="font-weight: bold;">Total Site Hours</span><br/>
+This field allows the total estimated hours to been assigned on a Site 
+ by Site basis. This field is used in conjunction with the Schedule Hours 
+ as % field on the Main tab.</p>
+<p><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/> 
+ Click the Magnify Button to see the following fields.</p>
+<p><img src="assets/images/PaymentAlias.bmp" alt="" style="border: none;" border="0"/></p>
+<p>This button establishes a Payment Alias with OpenEdge <span>or Electronic 
+ Payments </span>if this functionality is implemented in your system.   This 
+ Alias will be used when PM Invoices are generated for this Master Contract 
+ to automatically bill the customer&#39;s credit card. The system will post 
+ successfully paid billings to the Sales Journal as paid and generate the 
+ appropriate AR Cash Receipts Journal Entry. The Alias may be set in the 
+ Client Site record or the Master Contract Site List tab. Note that if 
+ an Alias is set in the Client Site record, it will provide a default for 
+ Master Contact entries for that Site when the Invoice is generated. </p>
+<h5>OpenEdge / Global Payments</h5>
+<p style="margin-left: 48px;">1.Verify that the customer has their credit 
+ card ready, and then click this button to enter the customer&#39;s credit 
+ card information.</p>
+<p style="margin-left: 48px;">2. When the X-Web or <span>SAMPro&#39;s Credit 
+ Card Information for Tokenization portal opens, enter the customer&#39;s credit 
+ card number (without spaces or dashes) and expiration date and click Submit. 
+ If the Credit Card Information for Tokenization portal is being used, 
+ be sure that the Country field is completed before clicking Submit. </span></p>
+<p style="margin-left: 48px;">3. If the card is approved, the web portal 
+ will display &quot;Alias Success: Created&quot;. If it is not approved, 
+ check the number and expiration date and try submitting it again.</p>
+<p style="margin-left: 48px;">4. When the card is approved, the system 
+ will write the Alias back to the Payment Alias field, and complete the 
+ CC Masked Account and Expiration Date fields for future reference. A secure 
+ note detailing the transaction will be attached to the Master Contract 
+ record.</p>
+<p style="margin-left: 88px;">Timing Out: If the Alias is not generated 
+ within 60 seconds, it will not be written back to SAMPro, even if a success 
+ is noted in the web portal.  If this occurs, repeat the Alias process.</p>
+<p style="margin-left: 48px;">5. Save the Master Contract.</p>
+<h5><span>Electronic Payments</span></h5>
+<p style="margin-left: 48px;">1.Verify that the customer has their credit 
+ card ready, and then click this button to enter the customer&#39;s credit 
+ card information.</p>
+<p style="margin-left: 48px;">2. SAMPro will open a &#39;Please Enter Credit 
+ Card Information&#39; prompter box.  Enter the customer&#39;s credit card 
+ number (without spaces or dashes), expiration date and CVC security code. 
+ The Pre Auth Amount field will be set to $1.00 to ensure that the credit 
+ card is valid. Click OK to continue.</p>
+<p style="margin-left: 48px;">3. A progress bar will appear as the pre-authorization 
+ is processed. If the card is not approved,an error with the reason will 
+ be displayed (e.g, &quot;Credit Card has expired). Check the number and 
+ expiration date and try submitting it again.</p>
+<p style="margin-left: 48px;">4. When the card is approved, the system 
+ will write the Alias back to the Payment Alias field, and complete the 
+ CC Masked Account and Expiration Date fields for future reference. A secure 
+ note detailing the transaction will be attached to the Master Contract 
+ record.</p>
+<p style="margin-left: 48px;"><span>5. Save the Mater Contract.</span></p>
+<p style="font-weight: bold;">Payment Alias:<br/>
+<span id="BugEvents1131" style="font-weight: normal;">This field is completed 
+ by the system when a Payment Alias is successfully generated by OpenEdge 
+ or Electronic Payments via the Payment Alias button. The Payment Alias 
+ may be cleared by manually by blanking the field. This would be done if 
+ the client changed their mind and did not wish to have their recurring 
+ PM&#39;s paid via credit card. Validation also prevents the user from manually 
+ changing this field to a non-blank value; this field may only be set via 
+ the Payment Alias button.</span></p>
+<p><span style="font-weight: bold;">CC Masked Account:<br/>
+CC Expiration Date  CC Trx Id:</span><br/>
+These display fields are completed when an Alias is successfully generated 
+ by the credit card processor. <span>If Electronic Payments credit card 
+ processing is being used, the first and last four digits of the credit 
+ card will be displayed.</span> If OpenEdge credit card processing is being 
+ used, only the last four digits will appear.  </p>
+<p style="margin-left: 48px; font-weight: bold;"> </p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="PM_Master_Adv_Bill" id="PM_Master_Adv_Bill"></a>Adv. 
+ Bill Tab</p>
+<p>See <a href="Registry_Entry_Master_Contract_PM_Master_Scheduler_.htm">Registry 
+ Entry Master Contract (PM Master Scheduler)</a> to set the default GL 
+ Accounts, Billing Items, and Work Codes to be used when clicking the Auto 
+ Fill button to complete the Advanced Billing tab.</p>
+<p>This tab defines the advance billing schedule for those active Sites 
+ (that are under contract) included on the Site tab. This information will 
+ be generated to the Client Site PM Billing tab when the Create PM Invoice 
+ function is run.</p>
+<p><font style="font-weight: bold;">Mo Da<br/>
+</font>The Month (1-12) and Day (1-31) of the scheduled billing. The system 
+ will derive the year based on the Start and End Date fields on the Main 
+ tab. Note that these dates are for selection during the PM Billing generation 
+ only. The invoice date (and subsequent date for posting to GL) will be 
+ specified by the user.</p>
+<p><span>February 29th is no longer allowed to be entered as a date or 
+ the Master Contract saved with February 29th in the Adv. Bill or Schedule 
+ tabs; the error &quot;Invalid Month Number Entered&quot; will be displayed 
+ if this date is found. </span></p>
+<p><font style="font-weight: bold;">Bill Amount:<br/>
+</font>The billing amount for this date that will be associated with every 
+ Site on the Site List tab.</p>
+<p><font style="font-weight: bold;">Note:</font> <font style="font-style: italic;">either</font> 
+ the Bill Amount or the Contract Amount (on the Site List tab) or the Revenue 
+ Amount (on the Service Provider tab) should be completed – not all three. 
+ if you wish to assign a different value to each of the Sites on this list, 
+ Contract Value field on the Site List Tab would be completed. It you wished 
+ to assign different values to the billing dates, this field would be completed.</p>
+<p><font style="font-weight: bold;">Invoice Description:</font><br/>
+A brief description that will appear on the PM Invoice (e.g., Spring startup 
+ and maintenance).</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note 
+ on Extended Descriptions:</font> Client Site Billing Schedule lines already 
+ include a 3000 character Extended Description field.  When creating 
+ new Billing Schedule lines from Master Contracts, the system now sets 
+ the line&#39;s Extended Description to the associated Billing Item&#39;s Invoice 
+ Description.</p>
+<p><font style="font-weight: bold;">CR GL Account:<br/>
+</font> The Income (sales or revenue) account where the Amount Earned will 
+ post. This Account will be credited with the Amount Earned when the Start 
+ Create PM Invoice function is run.</p>
+<p><font style="font-weight: bold;">DB</font> <font style="font-weight: bold;">GL 
+ Account:<br/>
+</font>The Liability (unearned income) account where the Amount Billed 
+ will post. This Account will be debited with the Amount Billed when PM 
+ invoices are generated, printed, and posted. If you are amortizing, both 
+ accounts are required on each line. Also note, amortized amounts will 
+ post with the ending date of the corresponding accounting period.</p>
+<p>If you are amortizing, both accounts are required on each line. Also 
+ note, amortized amounts will post with the ending date of the corresponding 
+ accounting period.</p>
+<p>The GL Journal entries generated by this function will have a header 
+ Transaction Description of “pm accrual entries”. The detail transaction 
+ description will be of the form “client site id:” followed by the actual 
+ client site id.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="PM_Master_Schedule_Tab" id="PM_Master_Schedule_Tab"></a>Schedule 
+ Tab</p>
+<p>The system allows changes to all Schedule tab fields except the Month 
+ and Day even though Equipment PM lines already exist. This allows fields 
+ (such as the Work Code) to be changed now so they will be correctly set 
+ for the following year.</p>
+<p><font style="font-weight: bold;">Note: you may need to click the Magnify 
+ button to view some of these fields.</font></p>
+<p><font style="font-weight: bold;">Mo Da<br/>
+</font>The Month (1-12) and Day (1-31) of the scheduled maintenance. The 
+ system will derive the year based on the Start and End Date fields on 
+ the Main tab during PM Work Order Generation.</p>
+<p><span>February 29th is no longer allowed to be entered as a date or 
+ the Master Contract saved with February 29th in the Adv. Bill or Schedule 
+ tabs; the error &quot;Invalid Month Number Entered&quot; will be displayed 
+ if this date is found. </span></p>
+<p><font style="font-weight: bold;">Hours:<br/>
+</font>The hours allowed for the scheduled work for each piece of equipment. 
+ This field will be used to set the estimated hours field on the PM Work 
+ Order’s Technician tab, which displays on the Dispatch Board.</p>
+<p>However, if the Schedule Hours as % field on the Main Tab is flagged, 
+ the system will treat this field as a percentage field and calculate the 
+ estimated hours as a percentage of the Total Site Hours on the Site List 
+  tab. Validation ensures that the total hours on this tab sum to 
+ 100.00 (100%).</p>
+<p><font style="font-weight: bold;">Work Code:<br/>
+</font>The Work Code to be associated with this PM. This field will also 
+ display on the Dispatch Board.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Cycle 
+ Code Filtering for Metrics/Log Form Entries:<br/>
+</font>If the Cycle Code Filter is not set on this line (click the Magnify 
+ button to access this field) the Cycle Code Filter will default from the 
+ Work Code: see <a href="Log_Form_Viewer.htm">Log Form Viewer</a> for details</p>
+<p><font style="font-weight: bold;">Escalation:<br/>
+</font>If your firm uses Escalation Management, enter the Escalation Profile 
+ Id that should be associated with the PM Work Order.</p>
+<p><font style="font-weight: bold;">Filters: Belts: Other: Pleated 
+ Filters:<br/>
+</font>Check the appropriate box(es) if you wish to include items flagged 
+ as filters, pleated filters, belts or other on the Service Parts list 
+ in the Service tab of the Client Site Equipment record.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Registry 
+ Note:</font> the sys-start-scrtepmwo registry’s TechServiceParts option 
+ will ultimately determine how these parts are handled when the PM Work 
+ Order is created:</p>
+<p style="margin-left: 72.00pt;">If this registry option is set to No, 
+ AND the Technician is not a Sub, flagged Service Parts will not be used 
+ to create quoted lines on the PM Work Order.</p>
+<p style="margin-left: 72.00pt;">If this registry option is set to Sub, 
+ AND the Technician is not a Sub, handle flagged Service Parts using the 
+ subcontractor processing (that writes these parts to the Work Requested).</p>
+<p style="margin-left: 72.00pt;">If this registry option is set to Yes 
+ or is not present, use the default processing that flagged Service Parts 
+ are used to create quoted lines on the PM Work Order.</p>
+<p><font style="font-weight: bold;">Service Tasks Id:<br/>
+</font>If a Service Task List is specified, it will be used on PM&#39;s for 
+ all Equipment scheduled for from that line.</p>
+<p>If the Service Task Id is blank, the system looks to see if there is 
+ one specified in the Client Site Equipment. This Service Task will be 
+ defaulted to the Client Site Equipment PM Schedule and then to the PM 
+ Work Order itself. This enhancement allows for different Task Lists to 
+ be assigned by the Equipment scheduled. </p>
+<p style="margin-left: 8px;"><span>A Registry may be set to <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Disable_Equipment_Service_Task_Master_Contract_PM">Disable 
+ Use of Equipment Service Task when Master Contract PM&#39;s are Created</a>.</span></p>
+<p> </p>
+<p><font style="font-weight: bold;">Evaluation Table Id:<br/>
+</font>Sets the default value for PM Work Orders. It is used in conjunction 
+ with the Service Evaluation Wizard, which will be invoked when the work 
+ order is completed or invoiced, and the evaluation results will be written 
+ to the work order’s Evaluation tab.</p>
+<p><img src="assets/images/image/magnifybutton.gif" alt="image\magnifybutton.gif" title="image\magnifybutton.gif" width="16" height="16" border="0"/> Click the Magnify button 
+ to View the Following Fields</p>
+<p><font style="font-weight: bold;">Cycle Code Filter:</font><font style="font-weight: bold;"><br/>
+</font>This filter is used by Sam Pro and TechAnywhere to filter PM Work 
+ Order Log Form Metrics lists for the Equipment being maintained. Multiple 
+ cycle codes may be entered as a comma-delimited list. Note that Log Form 
+ field in the Client Site Equipment record determines which list of metrics 
+ is used.</p>
+<p>If this field is blank, the system will use the Cycle Code in the Work 
+ Code instead for filtering. Only those metrics whose CC: field corresponds 
+ to the filter or is blank will be written to the Work Order (for Techs 
+ without remote access) or uploaded to the Technician’s device (for Technicians 
+ with remote access). If the Cycle Code filter in both the Schedule and 
+ Work Code are blank, all metrics from the Log Form will be written to 
+ the Metrics tab.</p>
+<p>If one or more Cycle Codes are listed, only those metrics whose CC: 
+ field corresponds to this field or is blank will be written to the Work 
+ Order (for Techs without remote access) or uploaded to the Technician’s 
+ device.</p>
+<p>The following fields enable you to specify a flat rate per visit (by 
+ Site) for each active piece of equipment that is flagged as Under Contract. 
+ They would be completed only if you wish to bill as the work is completed.</p>
+<p><font style="font-weight: bold;">Revenue Per Visit:<br/>
+</font> The Revenue Per Visit will be used to set the corresponding Cn 
+ (Contract) Value field in the Client Site Equipment record. For billing 
+ purposes, the Cn Value will be included on the Other tab of PM Work Orders 
+ generated from this entry. This field is designed to generate a per work 
+ order amount. If multiple pieces of equipment are under contract, the 
+ Cn (Contract) Value field will only be set for one of them.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Note:</font> 
+ if multiple pieces of equipment are to be covered under a single maintenance 
+ work order, the same Technician Id should be referenced in the Main Tab 
+ of all applicable Equipment records for this site. If this is not the 
+ case, different pieces of equipment will appear on different work orders 
+ assigned to different Techs.</p>
+<p style="font-weight: bold;">Cost Per Visit:</p>
+<p><span><u style="text-decoration: none; ">W</u>hen the UseMasterContractEquipmentTable 
+ global registry is set to true, entry in the line’s Cost Per Visit field 
+ is not allowed.  The message &quot;This database is configured 
+ to use the Master Contract Equipment table. Use of this field is not permitted&quot; 
+ will be displayed.</span></p>
+<p>The Cost Per Visit will be used to set the corresponding Cn Cost field 
+ in the Client Site Equipment PM Schedule. If a subcontractor technician 
+ is specified in the Client Site Equipment Main tab, the system will automatically 
+ generate a Purchase Order (in the amount of the Contract Cost). The PO 
+ will be issued to the Vendor referenced in the Technician record.</p>
+<p><font style="font-weight: bold;">Alternate Method for Specifying Revenue 
+ and Cost:<br/>
+</font>The Provider Rates Tab (discussed below) provides an alternative 
+ method for assigning revenue and cost per visit.</p>
+<p><font style="font-weight: bold;">Invoice Description:<br/>
+</font>This field will be used to set the corresponding Invoice Description(s) 
+ in the PM Schedule tab of Client Site Equipment record(s).</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="PM_Master_Provider_Rates" id="PM_Master_Provider_Rates"></a>Provider 
+ Rates Tab</p>
+<p class="Block_Text">This tab provides an alternate method for specifying 
+ the Revenue and Cost amounts per visit based on the Equipment Type (as 
+ specified in the Client Site Equipment record) and (optionally) the Vendor. 
+ It would typically be used to set the cost and revenue amounts for PM’s 
+ that are performed by service providers / subcontractors. It is used during 
+ the auto-generation of Purchase Orders to these sub/service providers.</p>
+<p class="Block_Text"><font style="font-weight: bold;">Vendor Id:<br/>
+</font>If the Vendor Id is completed, the information on this line will 
+ only be applicable to PO’s generated for Technicians associated with this 
+ Vendor. If this field is blank, this line is applicable to all subcontractor/vendors 
+ except those specified in a separate line or lines.</p>
+<p class="Block_Text"><font style="font-weight: bold;">Equipment Type Id:<br/>
+</font>The type of equipment the cost/revenue pertains to. The system will 
+ match this up with the corresponding Equipment Type field in Client Site 
+ Equipment when generating the WO and PO.</p>
+<p class="Block_Text" style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important 
+ Note:</font> the Equipment Type field must also be completed in the client 
+ site equipment record in order for the cost and revenue values in this 
+ tab to be written to the Site Equipment PM Schedule, Work Order and Purchase 
+ Order.</p>
+<p class="Block_Text"><font style="font-weight: bold;">Cost:<br/>
+</font>The cost to your firm for this service; this field will be used 
+ to set the Cn Cost field on the Client Site Equipment PM Schedule tab. 
+ When the PO is generated, this field will be used to complete the Cost 
+ fields on the Subcontractor tab (note: the quantity on this tab will be 
+ set to 1).</p>
+<p class="Block_Text" style="font-weight: bold;">Revenue:</p>
+<p class="Block_Text"><span><u style="text-decoration: none; ">W</u>hen 
+ the UseMasterContractEquipmentTable global registry is set to true, entry 
+ in the line’s Revenue field is not allowed. The message &quot;This database 
+ is configured to use the Master Contract Equipment table. Use of this 
+ field is not permitted&quot; will be displayed.</span></p>
+<p class="Block_Text">This field should remain blank if you are doing scheduled 
+ billing (and the Bill amount on the Adv. Billing Tab or the Contract amount 
+ on the Site list are filled in.) If the PM’s will be billed as the work 
+ is performed, this field will be used to generate the billing amount on 
+ the PM Work Order’s Other tab (the Quantity will be set to 1). This field 
+ will be used to set the Cn Revenue field on the Client Site Equipment 
+ PM Schedule tab.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Master_Contract_Equipment_Tab" id="Master_Contract_Equipment_Tab"></a>Equipment 
+ Tab</p>
+<p><span>This tab lists all active equipment that is associated with the 
+ Sites on the Site List. Right-clicking on a line toggles between covered 
+ and not covered by this specific contract. Double-clicking opens the Client 
+ Site Equipment Record. </span></p>
+<p>The information is displayed for each line depends on whether or not 
+ the User Master Contract Equipment Table functionality is enabled:</p>
+<p style="font-weight: bold; text-decoration: underline; ">UseMasterContractEquipmentTable 
+ Enabled:</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Covered:</span> 
+ <br/>
+If this column is set to &#39;Yes&#39; the Equipment is covered by this Master 
+ Contract. This tab uses the right-mouse click as the toggle switch for 
+ identifying Covered vs non-Covered Client Site Equipment records.  Double-clicking 
+ a line will open the selected record. </p>
+<p style="font-weight: bold; margin-left: 48px;">Site Id:  Site Name: 
+ Equipment Id:  Equipment Name:  Mfg: Model: Serial No: Type: 
+ MCErn: SCEru:</p>
+<p style="margin-left: 48px;">This tab includes CheckAll and ClearAll buttons.  <span style="font-weight: bold;">It should be noted that CheckAll and ClearAll 
+ are sensitive to any filtering that has been applied to the list.  Only 
+ the filtered rows are affected by the check buttons.</span>  For 
+ example, filtering to a single Site and pushing CheckAll makes all CSE 
+ from that Site Covered.</p>
+<p style="font-weight: bold; text-decoration: underline; "><span>UseMasterContractEquipmentTable 
+ NOT Enabled:</span></p>
+<p class="Normal_Indent" style="font-weight: bold;">Site Id – Equipment 
+ Id – Equipment Name - Manufacturer – Model – Serial Num – Type</p>
+<p class="Normal_Indent" style="font-weight: bold;">Under Contract – Contract 
+ #</p>
+<p class="Normal_Indent" style="margin-left: 48px;">A registry entry may 
+ restrict the generation of PM’s to only that equipment that is under contract; 
+ contract your support representative for details. To change the Contract 
+ Status of a piece of equipment, right-click on the applicable Equipment 
+ line.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Tip</font>: 
+ to transfer equipment from Contract A to Contract B: REMOVE it from contract 
+ A with the right click, go to contract B, and add it with the right click.</p>
+<p class="Normal_Indent" style="margin-left: 88px;">- If a piece of equipment 
+ is added to the Contract, the Contract Id field in the Equipment record 
+ will also be set to the current Master Contract Id.</p>
+<p class="Normal_Indent" style="margin-left: 88px;">- If a piece of equipment 
+ is removed from the Contract, the Contract Id field in the Equipment record 
+ will be cleared.</p>
+<p class="Normal_Indent" style="margin-left: 48px;">Double-click on a line 
+ to access review or update the entire Equipment record.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Master_Contract_Open_Work_Orders_Tab" id="Master_Contract_Open_Work_Orders_Tab"></a>Open 
+ Work Orders Tab</p>
+<p>This tab lists all open work orders (service as well as PM) associated 
+ with the Sites on the Site List. The following fields are displayed for 
+ each Work Order:</p>
+<p class="Normal_Indent">Date Scheduled –– WorkOrder Id –– WO Type –– WorkOrder 
+ Status – Tech Id –– Tech Status</p>
+<p class="Normal_Indent">Service Category – Equipment Id – Work Code – 
+ Site Id</p>
+<p style="margin-top: 0; margin-bottom: 0;">You may click on a column heading 
+ to sort the contents of the tab by that column.  </p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; 
+	 border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; 
+	 border-right: 1.50pt solid #000000;"><a name="Master_Contract_Other_Work_Orders_Tab" id="Master_Contract_Other_Work_Orders_Tab"></a>Other 
+ Work Orders Tab</p>
+<p>This tab lists all work orders that are have been closed (e.g., Billed, 
+ Completed, Cancelled, etc.) associated with the Sites on the Site List. 
+ The following fields are displayed for each Work Order:</p>
+<p class="Normal_Indent">Date Scheduled –– WorkOrder Id –– WO Type –– WorkOrder 
+ Status – Tech Id –– Tech Status</p>
+<p class="Normal_Indent">Service Category – Equipment Id – Work Code – 
+ Site Id</p>
+<p style="margin-top: 0; margin-bottom: 0;">You may click on a column heading 
+ to sort the contents of the tab by that column.  </p>
+
+</body></html>

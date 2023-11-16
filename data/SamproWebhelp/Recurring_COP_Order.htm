@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.11.1.2.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="recurring"/>
+<meta name="MS-HKWD" content="client order"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Recurring COP Order</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="recurring,client order"/><meta name="brsnext" value="Release_Recurring_Client_Order.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Recurring COP Order">
+        <span>Recurring COP Order</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Recurring COP Order</h1>
+<h2>Purpose:</h2>
+<p>Provides for entry of records that form the basis for client orders 
+ that recur in a scheduled basis.</p>
+<h2>Usage:</h2>
+<p>This function is currently limited to orders recurring on a monthly 
+ basis. A second function ‘Start Generate Recurring Client Orders’ generates 
+ actual client orders based on information entered via this viewer.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">InterCompany 
+ Notice:</span> This function does NOT fully support Intercompany Processing 
+ if the Recurring Order will result in BackOrder situation. If your firm 
+ wishes to use this function in an InterCompany environment, please contact 
+ your support representative to see if this functionality is available 
+ in a newer release. </p>
+
+<h2>Registry:</h2>
+<p>See <a href="Registry_Entry_Client_Order_Viewer.htm#Setting_the_GL_Entity">Registry 
+ to Set GL Entity</a> when the Recurring Client Order is released. </p>
+<h2>Important Fields: Main Tab</h2>
+<p><font style="font-weight: bold;">Order Id:<br/>
+</font>This field will be completed by the system when you save this record.</p>
+<p><font style="font-weight: bold;">Start Date End Date:<br/>
+</font>Specifies the default date range for which this recurring order 
+ may be released.</p>
+<p><font style="font-weight: bold;">Important Note: Start and End Dates<br/>
+</font>Both parent and child panes contain ‘Start Date’ and ‘End Date’ 
+ fields. These dates are compared to the ‘Effective Order Date’ field entered 
+ when Recurring Orders are released. The user may use either the parent 
+ dates, the child dates, or both. If both date sets are entered, the effective 
+ date must match both sets in order for an order line to be released. If 
+ a start date or an end date is omitted, it is excluded from the test.</p>
+<p><font style="font-weight: bold;">Client Site ID:</font><br/>
+The Client Site the order is to ship to; this is a required field. Double-click 
+ on this field (or press Alt+F7) to selected from a list of Client Site 
+ Id&#39;s.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note</font><font style="font-weight: bold;">:</font> When selecting a Site, the system 
+ will validate that the Client Site&#39;s Client Id field (on the COP tab) 
+ is completed.</p>
+<p><font style="font-weight: bold;">P.O. Number</font><br/>
+Enter the client&#39;s PO number (or your internal quote number) exactly as 
+ it appears on the purchase order. </p>
+<p><font style="font-weight: bold;">AR Terms Id:</font><br/>
+This field defaults from the Client Site record.</p>
+<p><font style="font-weight: bold;">Ship Via Id:</font><br/>
+Identifies the shipping method; this field defaults from the Client Site 
+ record. Enter the Id or press Alt+F7 (or double-click on this field) to 
+ select from a list of Ship Via Id&#39;s.</p>
+<p><font style="font-weight: bold;">Location Id:</font><br/>
+Identifies the location in your firm where stock is relieved from.</p>
+<p><font style="font-weight: bold;">Freight:</font><br/>
+Specifies whether the freight charge is prepaid or collect. Double-click 
+ on this field (or press the spacebar) to select/deselect an option.</p>
+<p><font style="font-weight: bold;">Allow Partial Shipping:<br/>
+</font>Flag this field if the Client will accept a partial shipment of 
+ the items (as long as the Minimum Value is met). Double-click on this 
+ field (or press the spacebar) to flag/blank this field.</p>
+<h2>Important Fields: Shipping Tab</h2>
+<p><font style="font-weight: bold;">Client Order Shipping Address</font><br/>
+The address the order should actually be shipped to. This field defaults 
+ from the Client Site Shipping Address, but may be changed for this order 
+ if needed.</p>
+<p><font style="font-weight: bold;">Shipping Instructions:</font><br/>
+Optional shipping instructions for this order.</p>
+<h2>Important Fields: Lower Section</h2>
+<p>The lower pane is used to enter information to be placed on the ‘items’ 
+ tab of generated orders. There are twelve quantity fields, one for each 
+ month of the year.</p>
+<p><font style="font-weight: bold;">Inventory Item Id:</font><br/>
+Your company&#39;s Inventory Item Id (press Alt+F7 (or double-click) to select 
+ from a list of items).</p>
+<p><font style="font-weight: bold;">Unit Price:</font><br/>
+The price charged per unit, exclusive of discounts. If this item is flagged 
+ for unit pricing, this field defaults from the Inventory Item record based 
+ on the Pricing Level specified in the Site. If this field is left blank, 
+ the system will compute the unit price from the Site&#39;s price level and 
+ price code when the order is released.</p>
+<p><font style="font-weight: bold;">Disc:</font><br/>
+The discount (if any) for this item as a percentage (e.g., 5% would be 
+ entered as 5.0). </p>
+<p><font style="font-weight: bold;">Start Date End Date:<br/>
+</font>Specifies the default date range for which this recurring order 
+ may be released.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Important 
+ Note: Start and End Dates<br/>
+</font>Both parent and child panes contain ‘Start Date’ and ‘End Date’ 
+ fields. These dates are compared to the ‘Effective Order Date’ field entered 
+ when Recurring Orders are released. The user may use either the parent 
+ dates, the child dates, or both. If both date sets are entered, the effective 
+ date must match both sets in order for an order line to be released. If 
+ a start date or an end date is omitted, it is excluded from the test.</p>
+<p><font style="font-weight: bold;">Allow Partial Ship?</font><br/>
+Flag this field if a partial shipment of this item is allowed. Double-click 
+ on this field (or press the Spacebar) to flag/clear it.</p>
+<p><span style="font-weight: bold;">Jan - Feb - Mar - Apr - May - Jun - 
+ Jul - Aug - Sep - Oct - Nov - Dec</span><br/>
+The quantity being ordered for this month.</p>
+<h2>Full View Fields:</h2>
+<p><font style="font-weight: bold;">Price Level:</font><br/>
+The price level: this field defaults from the corresponding Price Level 
+ field in Site record. If the price level is changed for this particular 
+ item, the system will automatically use this Unit Price (if this Inventory 
+ item is flagged as using unit pricing) when this recurring entry is released.</p>
+<p><font style="font-weight: bold;">Pkg Qty</font><br/>
+This field defaults from the quantity ordered.</p>
+<p><font style="font-weight: bold;">Customer&#39;s Description</font><br/>
+Briefly describes this item.</p>
+<p><font style="font-weight: bold;">Customer Part #:</font><br/>
+The Customer&#39;s part number for this item. If the customer has previously 
+ ordered this item, the system will automatically fill in the Customer 
+ Part Number for you.</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font><br/>
+Defaults from the Location record unless 
+ overridden via registry. The GL Entity on the expanded child view of the 
+ Recurring Client Order will remain blank, but the Client Order generated 
+ from the starter function will properly pull the GL Entity from the parent 
+ of the Recurring Client Order. . </p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">Also 
+ See</font><br/>
+<a href="Release_Recurring_Client_Order.htm">Release Recurring Client Order</a></p>
+
+</body></html>

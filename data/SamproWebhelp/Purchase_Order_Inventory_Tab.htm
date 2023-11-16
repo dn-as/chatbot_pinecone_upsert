@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.13.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="purchase order"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Purchase Order Inventory Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="inventory,purchase order"/><meta name="brsnext" value="Purchase_Order_Subcontractor_Tab.htm"/><meta name="brsprev" value="Purchase_Order_General_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Purchase Order Inventory Tab">
+        <span>Purchase Order Inventory Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Purchase Order Inventory Tab</h1>
+<p><font style="font-weight: bold;">Lines Imported to Work Order<br/>
+</font>A warning will appear if you attempt to delete, cancel or change 
+ the quantities of a line that has already been imported into a work order.</p>
+<p>If the No Inventory? box is checked 
+ in the Vendor&#39;s record, users are prevented from selecting Inventory Items 
+ in this Purchase Order. <span style="font-weight: bold;"> </span></p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Qty Ordered:<br/>
+</font> The quantity of the item being ordered. This field cannot be changed 
+ if the status is Pending Cancel or Cancelled. It cannot be changed to 
+ less than the quantity already received.</p>
+<p><font style="font-weight: bold;">QtyRcvd:</font><br/>
+It is recommended that items are received via the Inventory Receipts Journal. 
+  However, if this Purchase Order is being issued to record a transaction 
+ that has already taken place,  you may enter the quantity that was 
+ already received. Serial and Lot-Controlled items may <font style="font-weight: bold;">not</font> 
+ be received in a PO line, only in the Inventory Receipts Journal.</p>
+<p style="margin-left: 48px;"><font style="font-weight: bold;">Note:</font> 
+ if Unvouchered Payables are implemented on your system, the Unvouchered 
+ Payable GL accounts must be entered in all applicable Inventory Group 
+ records.</p>
+<p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;"><font style="font-weight: bold;">Note:</font> this field may default in 
+ if specified in the <a href="Registry_Entry_Purchase_Order.htm">Registry 
+ Entry for Purchase Orders</a> . This option may be disabled on a vendor-specific 
+ basis by checking the Disable PO AutoFill box in the Vendor record’s Contacts 
+ Tab. Alternately, a registry may be enabled 
+ to <a href="Registry_Entry_Purchase_Order.htm#Auto_Receive_Credit_PO">Auto 
+ Receive Credit POs</a> only. </p>
+<p><font style="font-weight: bold;">Inventory Item Id:<br/>
+<span style="font-weight: normal;">Enter the part number or d</span></font>ouble-click 
+ on this field to select from a list of items.  The entry of an inactive 
+ item (where the Inactive box is flagged) is disallowed. If a part has 
+ been superceded (the Superceded By field on the Inventory Other Tab is 
+ filled in). When a superseded part number is entered into this field, 
+ the system will alert the user that</p>
+<p style="margin-left: 36.00pt;">Item A has been superceded by Item B. 
+ Use New Item?</p>
+<p>It the user clicks Yes, the new part (B) will be returned to the field. 
+ If the user clicks No, part A (which has been superceded) will remain 
+ in the field.</p>
+<p>This field cannot be modified if the Purchase Order Status is Printed, 
+ Changed, Pending Cancelled, or Cancelled.</p>
+<p><font style="font-weight: bold;">Unit Cost:</font><br/>
+For Items NOT flagged as Miscellaneous, this field defaults from the Inventory 
+ Vendor tab for the selected Vendor, if available, and the Last Cost if 
+ this item has not been purchased from this Vendor before. It specifies 
+ the Unit Cost of the item at the time of order. If the Item is flagged 
+ as Miscellaneous, the Unit Cost will not default and must be entered at 
+ the time the Item is ordered. If the Currency Id field is completed on 
+ the Main Tab, all costs MUST be entered in the Vendor’s currency.</p>
+<p style="margin-left: 36.00pt;"><span style="font-weight: bold;">Vendor 
+ Price:</span> Creating a Purchase Order will set the Price on the Inventory 
+ Item&#39;s Vendor tab. For this reason, it is vital to verify pricing when 
+ creating purchase orders.</p>
+<p><font style="font-weight: bold;">Extended Cost:</font><br/>
+The Unit Cost X Qty. This field is calculated by the system when you enter 
+ the Quantity and the Unit Cost. You may enter the Extended Cost and press 
+ Enter to have the system calculate the Unit Cost for you.</p>
+<p><font style="font-weight: bold;">WO Id:</font><br/>
+This field defaults from the WO Id on the Main PO tab. If a WO Id is filled 
+ in, the Job, Cost Code, and Billing Item field will default. A Purchase 
+ Order may be imported into a Work Order by clicking the Import Cost button 
+ on the Work Order. If this field is completed, it will be referenced on 
+ the printed PO.</p>
+<p><font style="font-weight: bold;">Equipment Id:<br/>
+</font>If the user enters a Work Order Id, the system will default in the 
+ first piece of equipment on the Work Order’s Equipment tab UNLESS this 
+ behavior is disabled via registry (see <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_journal_equipment_id">Registry 
+ Option - Do Not Default Equipment Id</a>). If the user double clicks on 
+ this field, the system will display a list of all equipment associated 
+ with the Client Site referenced in the Work Order.</p>
+<p>If the sys-ffv-global setting &#39;DefaultEquipmentFromWorkorder&#39; is set 
+ to false, the user is allowed to set the Equipment Id back to blank. If 
+ this registry option is not present or set to true, the Equipment Id must 
+ be completed if a Work Order Id is referenced.</p>
+<p><font style="font-weight: bold;">Job Id:</font><br/>
+The Job (if any) this item is being ordered for; this field defaults from 
+ the Job Id on the Main PO tab (if completed). This field will also default 
+ if the WO Id is completed.</p>
+<p><font style="font-weight: bold;">Job Cost Code Id:</font>  <font style="font-weight: bold;">Job Bill Itm Id:</font>  <font style="font-weight: bold;">Job 
+ Cost Category:</font><br/>
+If a Job Id is specified, these fields must be filled in with the appropriate 
+ Job Cost Category, Job Cost Code, and Billing Item Id&#39;s. The 
+ Job Cost Category will be cleared if a Job is NOT specified when the record 
+ is saved or loaded.</p>
+<p>The Cost Category supports enhanced 
+ filtering provided by the Cost Code&#39;s Job Cost Category Usage Filter. 
+ Cost Categories are validated (relative to Cost Codes) during data entry 
+ upon leaving the Cost Category Id field.  The full relationship is 
+ validated again when leaving a child line or saving a record.</p>
+<p>Cost Category Selection Types of Material, 
+ Other or Equipment are allow.  The user will be warned if Material 
+ or Labor is selected.</p>
+<p><font style="font-weight: bold;">Job Qty: Job Qty Rcvd:<br/>
+</font>If you have entered a Job Id or Work Order Id on the Purchase Order 
+ header or on this line, these fields will default from the Qty and Qty 
+ Rcvd fields. However, if this is a TechAnywhere-generated Purchase Orders, 
+ these fields do not default when the Quantity Ordered/Received is changed 
+ to prevent double-costing; they should remain at zero.</p>
+<p>The Job Qty and Job Qty Rcvd fields may be decreased if you want only 
+ some of this item to be bought to the Job; the remainder will be assigned 
+ to inventory. The Job Qty <font style="text-decoration: underline; ">cannot</font> 
+ be set to zero if the line contains either a WO Id or a Job Id.</p>
+<p><font style="font-weight: bold;">Job Accnt:<br/>
+</font>If a Job is selected, this display-only field defaults from the 
+ Cost Category’s GL Expense field. If the Job Qty exceeds zero, the Job 
+ Accnt must be completed.</p>
+<p><font style="font-weight: bold;">Job</font> <font style="font-weight: bold;">Entity:<br/>
+</font>This GL Entity defaults from the Job Cost Code record, if the Entity 
+ is specified.</p>
+<p><font style="font-weight: bold;">Invntry Accnt:<br/>
+</font>This display-only field defaults from the item’s Inventory Group 
+ record (the GL Inventory Asset Account field). This field pertains to 
+ items that are being purchased to inventory.</p>
+<p><font style="font-weight: bold;">Invntry Entity:<br/>
+</font>This display-only field pertains to items that are being purchased 
+ to inventory. It defaults from the GL Entity in the item’s Inventory Group 
+ record (if completed). If the Entity is not completed in the Inventory 
+ Group, the Inventory Entity will default from the Location record (if 
+ it is completed there).</p>
+<p><font style="font-weight: bold;">Description:</font><br/>
+This field defaults from the Name field in the Inventory Item record. If 
+ you change this field the system will automatically update the Description 
+ field in the Inventory Item record&#39;s Vendor tab.</p>
+<p>If the Item is flagged as Miscellaneous, the Description will not default 
+ and must be entered at the time the Item is ordered.</p>
+<p><font style="font-weight: bold;">Vendor&#39;s Part #:</font><br/>
+If completed, this number will be included on your printed Purchase Order. 
+ If you have previously ordered this part number from this vendor, or directly 
+ changed it on the Inventory Item Vendor tab, this cross reference information 
+ will be filled in when you enter your Inventory Item Id. If you change 
+ or add the Vendor&#39;s Part #, the system will automatically update the cross 
+ reference information in the Inventory Item record&#39;s Vendor tab.</p>
+<p><font style="font-weight: bold;">U-M:</font><br/>
+Defaults from the Inventory Item record but may be modified by the user 
+ if required.</p>
+<p><font style="font-weight: bold;">Date Requested:</font><br/>
+The date you are requesting the item; defaults from the corresponding field 
+ in the header section of the PO when the Quantity field is completed.</p>
+<p><font style="font-weight: bold;">Date Promised:</font><br/>
+The date the Vendor promised the item; defaults from the corresponding 
+ field in the header section of the PO when the Quantity field is completed.</p>
+<p><font style="font-weight: bold;">Cancel?</font><br/>
+Flag this field if this item is to be cancelled. This line cannot be cancelled 
+ if items have been received, if the line status is New, or the PO has 
+ a status of Cancelled or Closed.</p>
+<p>If the PO has a status of printed, and you need to change the quantity 
+ or Inventory Id on a line, you must do the following:</p>
+<p style="margin-left: 48px;">Un-receive the line if it has been received<br/>
+Flag the line you want to change as Canceled<br/>
+Add the line that will replace it<br/>
+Say yes to make it a change order when you save it.</p>
+<p><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/> 
+ Double-click the Magnify button to display the following fields for this 
+ line.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><img src="assets/images/image/LinesView.gif" alt="" style="border: none;" border="0"/>  Click the Lines View 
+ button to display the multiple line view again.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><span style="font-weight: bold;">Billable Quantity:</span><br/>
+This field supports the scenario where a TechAnywhere technician changes 
+ the Billable Quantity of an item so that it will be correctly imported 
+ into the Work Order. By default this field is set from the Job Quantity 
+ Ordered.  </p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Extended 
+ Description:</font><br/>
+This field defaults from the Extended PO Description field in the Inventory 
+ Item record but may be modified by the user for this PO. <span style="font-weight: bold;">By 
+ default, when the PO is saved, the contents of this field is copied to 
+ the corresponding Inventory Item&#39;s Purchase Order Description field on 
+ the PO Description tab.</span> For some customers this is an undesirable 
+ behavior; a <a href="Registry_Entry_Purchase_Order.htm">registry</a> is 
+ available to <span style="font-weight: bold;">override</span> this default 
+ behavior:</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Extra:</span><br/>
+If the Job Billing Item on this line is Fixed Fee / Allow Extras, this 
+ box must be checked to enable the calculation of the Amount Revenue field.</p>
+<p><font style="font-weight: bold;">Billing Type Id:  Revenue Rate:</font><br/>
+These fields will be completed if this line pertains to a Work Order or 
+ Job, and are jointly determined by the Inventory Item and the Job&#39;s Rate 
+ Schedule, but may be changed if needed. These fields determine how the 
+ Unit Price will be calculated to be charged to the customer:</p>
+<p style="margin-left: 36.00pt;">For Use Unit Price Inventory Items, the 
+ Billing Type Id defaults to <font style="font-weight: bold;">Unit Price.</font> 
+  The system will use the Unit Price in the Inventory record that 
+ corresponds to the Job&#39;s Material Price Level to set the Revenue Rate.</p>
+<p style="margin-left: 36.00pt;">If the Inventory Item is not flagged as 
+ Use Unit Price, the Billing Type Id <font style="font-weight: bold;">Markup</font> 
+ will default, and the Revenue Rate from the Material Markup table specified 
+ in the Rate Schedule for this Job. A 120% markup applied to an item costing 
+ $100 would generate a unit price of $220. A 30% markup applied to an item 
+ costing $100 would generate a unit price of $130.</p>
+<p><font style="font-weight: bold;">Unit Price:</font><br/>
+The Unit Price for this inventory item, based on the Unit Cost, Bill Type 
+ Id, and Revenue rate.</p>
+<p><font style="font-weight: bold;">Amount Revenue:</font><br/>
+The price that will appear ultimately appear on the customer&#39;s invoice 
+ (Unit Price x Quantity), less any applicable discounts. This field will 
+ be set when the Job Quantity Received is completed (not equal to zero).</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Tax 
+ Group Id:  </font><span style="font-weight: bold;">Tax Cost:</span> 
+ <span style="font-weight: bold;"><font style="font-weight: bold;">T</font>ax 
+ Type Id:</span><span style="font-weight: bold;"><br/>
+</span>The Tax Group Id  field will default from the Tax Group Id 
+ on the Purchase Order’s Main tab (if it is completed). If the Tax Group 
+ Id is not set on the Main tab, this field will default from the Job record 
+ (if specified). The Tax Group specified in this field is used to calculate 
+ the use tax cost for items entered on this tab.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><span style="font-weight: bold;">Job 
+ Tax Status:</span><br/>
+This display only field defaults from the Job reference on this line.</p>
+<p class="Reference_Line"><font style="font-weight: bold;">Line Status:</font><br/>
+This field is set by the system; the status of this line within the PO 
+ (e.g., New, Printed, Changed, etc.).</p>
+<p><font style="font-weight: bold;">Quantity Needed:</font><br/>
+The quantity not received that is needed to complete this line. This display-only 
+ field is maintained by the system.</p>
+<p><font style="font-weight: bold;">Quantity Vouchered: Date of Last Receipt: 
+  AP Cost:</font><br/>
+The quantity and cost of this item that have already been vouchered in 
+ the AP Journal. These fields are maintained by the system.</p>
+<p><span style="font-weight: bold;">TechAnywhere Source Rn: Technician Id</span><br/>
+If these fields are completed, this record/line was created/revised from 
+ TechAnywhere.</p>
+<h2>Custom Fields:</h2>
+<p style="font-weight: bold;">Promised: Qty Promised:<br/>
+<span style="font-weight: normal;">This informational table enables you 
+ to record the promised dates of delivery for an item that will not be 
+ delivered at one time.</span></p>
+<p><font style="font-weight: bold;">Freight C</font><br/>
+The freight charge per item (if any) charged by the Vendor. If the Estimated 
+ Unit Freight Cost field in the Inventory Item record is completed, this 
+ field will default from the Inventory Item record.</p>
+<p><font style="font-weight: bold;">Duty %</font><br/>
+Enter the Duty for this item as a percent, if applicable. The system now 
+ validates the tariff code duty percent when appropriate.</p>
+<p><font style="font-weight: bold;">Import Entry Number</font><br/>
+Enter the Import Entry Number for this item if applicable.</p>
+<p><font style="font-weight: bold;">Cont</font><br/>
+The container size (defaults from the Inventory Item record).</p>
+<p><font style="font-weight: bold;">Lead</font><br/>
+The lead time to obtain this item (defaults from the Inventory Item record).</p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">Also 
+ See<br/>
+</font><a href="Purchase_Order_Viewer.htm">Purchase Order Viewer Main Tab</a></p>
+
+</body></html>

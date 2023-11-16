@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.9.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Registry Report Customer Statement</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="registry,customer statement"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Report Customer Statement">
+        <span>Registry Report Customer Statement</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Registry Report Customer Statement (sys-report-rcuststtmnt)</h1>
+  <h3>Zero Balance Statements Text</h3>
+  <p>The revised report (RCUSTSTMNTv80b048.rpt) dated 2016-08-26  includes a <span style="font-weight: bold;">Print Zero Balance Statements?</span> option. Flagging this field enables the user to print a zero balance statement for the selected client or clients on this report.  <b><span style="font-weight: normal;">Clients with a total outstanding dollar balance in AR History equal to zero will be included on the report, subject to the setting of the other ranges. The following option</span></b> controls the text that appears when a zero balance statement shows on the report. By default, &#39;Zero Dollar Statement&#39; will appear. The following registry overrides this default.</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;"><span style="font-weight: bold;">I</span>d:</span> sys-report-rcuststmnt  </p>
+  <p><span style="font-weight: bold;">Setting Key:</span> ZeroBalanceText</p>
+  <p><span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">Text to appear on report</span>    (100 Character Maximum)</p>
+  <h3>Include PDF&#39;d Invoices</h3>
+  <p>The report (RCUSTSTMNTv80b048.rpt) dated 2016-04-21 supports an option to include the PDF&#39;d invoices referenced on the statement as part the PDF version of the statement report. Both job/service based invoices (document category INVOICE) and COP Invoices (document category COPINVOICE) will be included.</p>
+  <p>If invoices were not originally saved as PDF&#39;s, the Start Document Archive Maintenance function may be used to convert these document types to PDF.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Important:  Only the PDF&#39;d Statement Includes the Attachments</span><br/>
+    The .dbr version of the Customer Statement will not display the attached invoices; it will however include a list of attached files. Only the PDF&#39;d version of this report will include the &#39;package&#39; of invoice attachments.</p>
+  <p style="margin-left: 8px; font-weight: bold;">Required File:</p>
+  <p style="margin-left: 8px;">A whitesquare.bmp file (available from support) should be added to the directory where your bitmap graphics are stored.</p>
+  <p style="margin-left: 8px; font-weight: bold;">Required Registry:</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Id:</span> sys-report-rcuststmnt  </p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> IncludeInvoiceDocuments   <span style="font-weight: bold;">Setting Value:</span> Y    (default N)</p>
+  <p style="margin-left: 8px;">This option is required to implement the &#39;invoice package&#39; functionality.</p>
+  <p style="margin-left: 8px;"><span style="font-weight: bold;">Setting Key:</span> sectionbackerbitmap   <span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">Pathname</span>\whitesquare.bmp</p>
+  <p style="margin-left: 8px;">This registry is recommended to prevent the invoice bitmap from &#39;stepping on&#39; the attached documents. The bitmap may be obtained from support. Note that ONLY the bmp version of this file should be installed.</p>
+  <p style="margin-left: 8px; font-weight: bold;">Additional Registries:</p>
+  <p style="margin-left: 8px;">This reports support auto emailing.  The appropriate registry entries should be made to implement this functionality if invoice documents are included:</p>
+  <p style="margin-left: 8px;">
+    <font style="font-weight: bold;">Setting Key:</font> emailbysection <font style="font-weight: bold;"> Setting Value:</font> true
+  </p>
+  <p style="margin-left: 8px;">
+    <font style="font-weight: bold;"><b>S</b>etting Key:</font> autoemail<font style="font-weight: bold;">  Setting Value:</font> true  
+  </p>
+  <p style="margin-left: 8px;">The Client&#39;s Collections email will be displayed on the report if it is emailed.</p>
+
+</body></html>

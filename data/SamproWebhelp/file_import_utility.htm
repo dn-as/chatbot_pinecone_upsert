@@ -1,0 +1,253 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>File Import Utility</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nSupport Functions\nFile Import Utility");
+addAvenueInfo("System & Tools","","tools_menu_change_log.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >File Import Utility</P>
+ <P class="See_Also" >Important Notice: this help file is intended for use by Authorized Data-Basics Support Personnel only.  Incorrect implementation of the information discussed here can create problems with software functionality and/or data. </P>
+ <P class="Support" >The purpose of the File Import Utility is to read in records from an ‘input file’ and to add or update database tables based on the contents of those records. This process is controlled by a ‘command file’ which, very generally speaking,</P>
+ <P class="Support" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Wingdings'; font-size:9pt; color:red; " >q</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;</span>identifies the input file to process</P>
+ <P class="Support" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Wingdings'; font-size:9pt; color:red; " >q</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;</span>contains instructions for reading that file</P>
+ <P class="Support" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Wingdings'; font-size:9pt; color:red; " >q</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;</span>contains instructions for mapping fields within the file to columns in the database</P>
+ <P class="Support" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Wingdings'; font-size:9pt; color:red; " >q</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;</span>contains instructions for updating the database</P>
+ <P class="Support" >The import process produces a report detailing the results of the import process and reporting any errors or other anomalies it has encountered.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >The Command File</FONT></P>
+ <P class="Support" >The command file is a plain text data file that can be prepared using simple text editors such as Notepad or Wordpad. The command file consists of several sections. Each section is identified by a section header that consists of the section name surrounded by square brackets. Available sections include:</P>
+ <P class="Support" style="margin-left:72.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; color:red; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[options] This required section is used to specify various operational parameters used in the import process. Each line in the [option] section is of the form: OptionName = OptionValue. Note that spaces may proceed and follow the equals sign.</P>
+ <P class="Support" style="margin-left:72.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; color:red; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[input map] This required section is used to identify the fields found in the input file.</P>
+ <P class="Support" style="margin-left:72.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; color:red; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[column map] This required section is used to identify those columns in the database that are to be extracted from fields in the input file and to indicate how that extraction is to be accomplished. Each line in the [column map] section is of the form TableColumnName = ValueSource. Note that spaces may be proceed and follow the equals sign.</P>
+ <P class="Support" style="margin-left:72.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; color:red; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[key columns] This optional section is used to identify columns in the database table that form a unique row index. This section is unnecessary when the only index required is the base id field for the table (e.g. the ‘clnt_id’ field for the ‘clnt’ table.</P>
+ <P class="Support" style="margin-left:72.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; color:red; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[required columns] A column listed in this section is constrained to be ‘required’. A fatal error is generated if a ‘required’ column receives an ‘empty’ value during the import process.</P>
+ <P class="Support" style="margin-left:72.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; color:red; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[unique columns] A column listed in this section is constrained to be ‘unique’. A fatal error is generated if there already exists a row in the table being updated that has the imported value in the corresponding column.</P>
+ <P class="Support" style="margin-left:72.00pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; color:red; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[makeunique columns] A column in this section will be checked for uniqueness and made unique if a row already exists having an identical value for the column. The value is made unique by appending a sequence number to the value. This option is not compatible with the Replace or Update options.</P>
+ <P class="Support" >All characters following a semicolon on the command line are ignored and may be used for commentary.</P>
+ <P class="Support" >The [Options] Section</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Identifying The Table To Be Updated</FONT></P>
+ <P class="Support" >The table to be updated is identified via the ‘TableName’. Example:</P>
+ <P class="Support" >TableName = clnt</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Identifying The Input File</FONT></P>
+ <P class="Support" >The input file is identified via the ‘DataFile’ option. Example:</P>
+ <P class="Support" >DataFile = C:\datafiles\clnt.txt</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Input File Formats</FONT></P>
+ <P class="Support" >An input file may be record oriented or it may consist of a series of fixed length records.</P>
+ <P class="Support" >Record oriented files consist of strings of characters separated by the ‘Carriage-Return’ character, or by ‘Carriage-Return/Line-Feed’ pairs. Each such string of characters represents one record to be imported into the database.</P>
+ <P class="Support" >Fixed length record files consist of a series of fixed length strings of characters each of which represents one record to be imported into the database. For example, characters 1-80 in the file may contain the first record, characters 81-160 the second record, characters 161-240 the third record, etc. In this case, of course, the record size is 80 characters.</P>
+ <P class="Support" >Input file formats are indicated by the following [options] section entries in the command file:</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Fixed Length Input Files</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >RecordSize</FONT>: Indicates the number of characters in each record of the input file.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >Terminator</FONT>: Identifies characters that may be inserted between records in the input file. Possible values are:</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >NONE</FONT>: No record terminator. This is the default value.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >CR</FONT>: A single Carriage Return character (Hex 0D, Decimal 13) appears between records.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >LF</FONT>: A single Line Feed character (Hex 0A, Decimal 10) appears between records.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >CRLF</FONT>: A Carriage Return / Line Feed pair appears between records.</P>
+ <P class="Support" style="margin-left:72.00pt;">Example: If the RecordSize is 80 and the Terminator is CRLF, then an 80 character record will be found in the input file every 82 characters.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Record Oriented Input Files</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >RecordSize</FONT>: This option must be omitted to indicate Record Oriented input files. Records must be separated by Carriage Returns or Carriage Return / Line Feed pairs.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Input Record Formats</FONT></P>
+ <P class="Support" >The import process must be able to locate fields within a record. Again, there are two possibilities: records may consist of delimited or fixed length fields.</P>
+ <P class="Support" >In delimited records, fields are separated from each other with some specified delimiter character. In this type of record, fields are generally variable in length being only as large as necessary to indicate their values. In a variation of delimited records, field values may be enclosed in pairs of quotes.</P>
+ <P class="Support" >For records with fixed length fields, the size and format of each field is known in advance.</P>
+ <P class="Support" >Input record formats are indicated by the following [options] section entries in the command file:</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Delimited Records</FONT></P>
+ <P class="Support" >Delimiter: Identifies the character used to separate fields in the input record. Common delimiters are the ‘,’ and the ‘|’ characters.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >WithQuotes</FONT>: Indicates that the input file is in ‘quoted delimited’ format. In this format, fields may (or may not) be enclosed within begin quoting and an end quoting characters. The quoting characters are not part of the field value and are automatically removed. The double quote mark (“) is the standard quoting character. Note that you do not specify a value in the WithQuotes command.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >WithDoubleQuotes</FONT>: Identical to WithQuotes.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >WithSingleQuotes</FONT>: Like WithDoubleQuotes except that the single quote (‘) character is used as quoting character.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >WithTextQualifier</FONT>: Like WithQuotes except that you specify the quoting character. The first character of the string to the right of the equal sign is used as the quoting character. Example:<BR> &nbsp;WithTextQualifier = ~</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >LeadingDelimiter</FONT>: By default, it is assumed that delimiters will appear only between fields and not before the first field on a line,or after the last field on a line. Use the<BR> &nbsp;LeadingDelimiter = Yes<BR>command to indicate that a delimiter will, in fact, appear before the first field on a line.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >TrailingDelimiter</FONT>: Use the<BR> &nbsp;TrailingDelimiter = Yes<BR>command to indicate that a delimiter will appear after the last field on a line.<BR></P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Fixed Length Records<BR></FONT>Documentation for fixed length records will be supplied at a later time.</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Importing A Section Of The Input File</FONT></P>
+ <P class="Support" >You do not have to import the entire input file. The section of the input file that will be imported is controlled by the Skip and Count [options] section commands:</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >Skip</FONT>: Indicates the number of input records to be skipped. The default is zero.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >Count</FONT>: Indicates the number of input records to import. If omitted, all records following the skipped records will be imported.</P>
+ <P class="Support" >For example, use the following commands to import the second thousand records in the input file:</P>
+ <P class="Support" >Skip = 1000</P>
+ <P class="Support" >Count = 1000</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Table Update Schemes</FONT></P>
+ <P class="Support" >By default the Import Utility attempts a table insert for each record extracted from the input file. An error condition is raised if the insert fails. This scheme can be changed using the following [options] section commands:</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >Delete</FONT>: A value of ‘Yes’ amends the default processing to attempt a delete of the target database row before attempting the insert. Since the Import Utility needs to be able to identify which database row to delete, a [key columns] section may be required.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >Replace</FONT>: A value of ‘Yes’ indicates that, if the insert fails because of a duplicate key, the target database row is to be deleted and the insert tried again. An error condition will be raised if the second insert also fails. A [key columns] section may be required.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >Update</FONT>: A value of ‘Yes’ indicates that, if the insert fails because of a duplicate key, the target database row is to be updated with the data extracted from the input record. Only those fields receiving values as per the [column map] section (q.v.) will be updated. An error condition will be raised if the update operation fails. A [key columns] section may be required.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >UpdateOnly</FONT>: A value of ‘Yes’ indicates that the default scheme and the above options are to be ignored. Instead, a database update will be attempted and an error condition will be raised if the update fails. A [key columns] section may be required.</P>
+ <P class="Support" >Note that the Replace and the Update options are mutually exclusive.</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Method Escapes</FONT></P>
+ <P class="Support" >There are a number of situations where custom Smalltalk methods may be invoked while processing input file records. These may be identified in the [options] section via the following commands:</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >BOFMethod</FONT>: The specified method is invoked just before the first record in the input file is processed.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >EOFMethod</FONT>: The specified method is invoked after the last record in the input file is processed.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >ReviewMethod</FONT>: The specified method is invoked after all fields have been extracted from the input file but before any database updates are attempted. The review method is used for the computation of field values that cannot otherwise be computed.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="text-decoration:underline;" >PostRnMethod</FONT>: The specified method is invoked after the rn for the record has been assigned but before any database updates are attempted.</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Style1" >Miscellaneous Commands</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Message:</FONT> This command specifies a message to be displayed in a message box immediately before the input file is processed.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >OutputFile</FONT>: This command identifies the path of an output file to be written. If an output file is specified, no database updates will take place. Instead, a pipe (“|”) delimited output file containing the fields receiving values as per the [column map] section will be generated.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >NoWrites</FONT>: If the NoWrites command is present, the input file will be processed but no database updates will take place.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >AutoLn</FONT>: If this command has a value of ‘Yes’, then any fields ending with ‘_ln’ will be automatically set prior to updating the database. The ‘ln’ field will be set to one greater than the current maximum value of that field in the set of records identified by the [key columns] section (or to 1 if no records currently exist).</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >NoRnAllocation</FONT>: If the NoRnAllcation command is present, the Import utility will not attempt to generate a record number for a record before it is inserted into the database. This is used to improve performance when it is known that only database updates (i.e. no inserts) will take place.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >RecordRepetitions</FONT>: This is a very seldom-used option. It is useful only when all the following conditions are met:</P>
+ <P class="Support" style="margin-left:36.00pt;">The input file contains fixed length records.</P>
+ <P class="Support" style="margin-left:36.00pt;">A terminator other than NONE is present.</P>
+ <P class="Support" style="margin-left:36.00pt;">Each record contains multiple ‘sub-records’, each one of which maps to an individual row in the database. This might occur if each input file record corresponds to a COBOL data structure having an OCCURS clause at the topmost level.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >NoRnMap</FONT>: If the NoRnMap is present, RnMapping is disabled. RnMapping is a mechanism for improving performance by generating a map of [key column] values to record numbers in the database table. This is normally done before beginning the processing of the input file. However, when the database table is much larger than the input file, this process actually decreases performance instead of improving it. If the database table is large enough, the RnMapping process may not even be able to complete. In these cases, the NoRnMap command should be used to disable RnMapping.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Note: This option should be employed if a  “Low/out of memory error” occurs. </FONT></P>
+ <P class="Support" ><FONT style="font-weight:bold; " >ErrorLimit</FONT>: By default, an import operation will be aborted after 100 fatal errors are encountered.</P>
+ <P class="Support" style="margin-left:36.00pt;">Use the ErrorLimit = nnn command to raise or lower the 100 error limit.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >The [input map] Section (General)</FONT></P>
+ <P class="Support" >The [input map] section identifies the fields contained in an input file record. Each field is identified by its own line in the section. Fields appear in the [input map] section in the same order as they appear in the data file record.</P>
+ <P class="Support" >Each field identification line begins with an internal field name that will be used to identify the field in later sections. The format of the remainder of the line differs between delimited and fixed length records.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >The [input map] Section (Delimited Input Files)</FONT></P>
+ <P class="Support" >A line in the [input map] section for delimited files normally contains only the internal field name. A second ‘pattern’ field may be optionally used to indicate the formats used for fields such as dates and phone numbers. </P>
+ <P class="Support" style="margin-left:36.00pt;">For example, the line</P>
+ <P class="Support" style="margin-left:36.00pt;">Phone AAA-EEE-NNNN</P>
+ <P class="Support" style="margin-left:36.00pt;">identifies a field to be named ‘Phone’ which is stored in the input file as a 3 digit Area Code, followed by a dash, followed by a 3 digit exchange number, followed by another dash, followed by a 4 digit number. The Import Utility uses this information to reformat the field into the its valid Sampro representation.</P>
+ <P class="Support" >The available patterns are described later in Appendix A.</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >[input map] Section (Fixed Length Input Files)</FONT></P>
+ <P class="Support" >The [input map] entry for a fixed length record must identify the layout (i.e. the length and perhaps the type) of each field in the input file. For example the line</P>
+ <P class="Support" >ClientName CHAR 10</P>
+ <P class="Support" >identifies a field to be named ‘ClientName’ which is stored in the input file as a 10 character field of the type ‘Character’. The field layout specification may optionally be followed with a field pattern as described above.</P>
+ <P class="Support" >Additional documentation is to be supplied at a later time.</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >The [column map] Section</FONT></P>
+ <P class="Support" >The [column map] section may be considered the ‘heart’ of the import process. This section contains instructions for assigning values to the columns of the rows being inserted or updated in the database.</P>
+ <P class="Support" >The general format for a line in the [column map] section is</P>
+ <P class="Support" style="margin-left:36.00pt;">Constraints ColumnName = Formula</P>
+ <P class="Support" style="margin-left:36.00pt;">Where</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Constraints</FONT> is an optional list of constraint indicators separated from each other by one or more blanks. Constraints place certain restrictions on the values which may be assigned to the columns. Valid constraints indicators include:</P>
+ <P class="Support" style="margin-left:72.00pt;">REQUIRED: Generates a fatal error if a non ‘empty’ value is assigned to the column</P>
+ <P class="Support" style="margin-left:72.00pt;">UNQUE: Guarantees that there is only one row in the database which can contain a specific value for the column.</P>
+ <P class="Support" style="margin-left:72.00pt;">MAKEUNIQUE: Like UNIQUE except that if the column value fails the uniqueness test, a sequence number guaranteeing its uniqueness is appended to the value.</P>
+ <P class="Support" style="margin-left:72.00pt;">NUMSIZE. The NUMSIZE constraint forces a numeric value to be a specified length by pre-pending zero to the value. For example, the constraint<BR> &nbsp;NUMSIZE 6<BR>on a column will convert a value of ‘20’ to ‘000020’. Note that non-numeric column values will be unaffected by the NUMSIZE constraint.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >ColumnName</FONT> is the name of a column in the database table specified by the TableName command in the [options] section</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >Formula</FONT> indicates how the value for that column is to be determined. The Formula parameter can take several forms as described in the sections below.</P>
+ <P class="Support" style="margin-left:72.00pt;"><FONT style="font-weight:bold; " >Direct assignment of a field in the input file</FONT>. In this case the formula is simply the internal name provided in the [input map] section. Example:<BR> &nbsp;clnt_id = CustomerNumber<BR><BR>Input file fields may be identified by their position within the record as well as by their internal field name. For example if the Customer Number field is the 5<FONT style="vertical-align:super; " >th</FONT> field in the input file,<BR> &nbsp;clnt_id = 5<BR>is equivalent to the previous example. If all input file fields are referenced in this manner, the [input map] section may be omitted.<BR><BR>Subscripting can be used to assign only a portion of the input field. Example:<BR> &nbsp;clnt_id = CustomerNumber[2,7]<BR>This sets the clnt_id column to the six character string taken from characters 2 through 7 of the CustomerNumber.<BR><BR>When assigning values to record number (rn) columns, the Formula should contain the value of the id column of the corresponding row. The Import Utility will automatically look up the rn in the corresponding table and assign its value to the rn column. For example, the Job record contains a clntste_rn field. To assign the clntste_rn when converting Job records, the following command would be used:<BR> &nbsp;clntste_rn = SiteId<BR>where SiteId is the internal name of the field in the input record containing the id (not the rn) of the desired site.</P>
+ <P class="Support" style="margin-left:72.00pt;"><FONT style="font-weight:bold; " >Assigning a literal.</FONT> If the Formula begins with single quote mark, the contents of the formula (excluding the quote mark and the trailing quote mark) will be assigned to the column. Example:<BR> &nbsp;AreaCode = ‘216’</P>
+ <P class="Support" style="margin-left:72.00pt;"><FONT style="font-weight:bold; " >Copying the record’s own rn value to another field.</FONT> Use the CopyRN Formula for this purpose. Example:<BR> &nbsp;imhstry_id = CopyRn</P>
+ <P class="Support" style="margin-left:72.00pt;">Invoking a method. If the formula is of the form<BR> &nbsp;METHOD mmmm<BR>then the method ‘mmmm’ will be invoked and the value its return value will be assigned to the column.</P>
+ <P class="Support" style="margin-left:72.00pt;"><FONT style="font-weight:bold; " >Using a value map.</FONT> Value maps are used to map values of fields in the input file to values used within Sampro. This process is best described by the example:<BR> &nbsp;clntordr_frght_py_mthd = map(C:Collect | P:Prepaid | Other)<BR>This map instructs the Import Utility to examine the value in the input field and</P>
+ <P class="Support" style="margin-left:72.00pt;">If the input field value is ‘C’, assign ‘Collect’ to the column</P>
+ <P class="Support" style="margin-left:72.00pt;">If the input field value is ‘P’, assign ‘Prepaid’ to the column.</P>
+ <P class="Support" style="margin-left:72.00pt;">Otherwise, assign ‘Other’ to the field.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >[key columns] Section</FONT></P>
+ <P class="Support" >In order for the Import Utility to delete or update a database row, it must be able to uniquely specify which row is to be deleted or updated. For many tables the id field for the table is sufficient for this purpose. For example, the clnt_id field uniquely identifies a specific row in the clnt table. In this case, the [key columns] section may be omitted.</P>
+ <P class="Support" >There are several conditions in which the id field cannot be used for this purpose.</P>
+ <P class="Support" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; color:red; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>The table does not contain an id field.</P>
+ <P class="Support" style="margin-left:41.75pt;text-indent:-18.00pt;"><FONT style="font-family:'Symbol'; font-size:9pt; color:red; " >·</FONT><span style="font-size:8pt; font-family='Times New Roman'; letter-spacing=0pt; font-weight=normal;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>The table contains an id field but id does not uniquely identify a record (is there really such a case??)</P>
+ <P class="Support" >In these situations, the [key columns] section is necessary if rows are to be deleted or updated.</P>
+ <P class="Support" >The contents of the [key columns] section is simply a list of names of database columns. The column names are listed one per line. The list of columns must be chosen so that there can be no more than one row in the table having the same combination of values for those columns. Never use the table’s own rn column in this list.</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >[required columns] Section</FONT></P>
+ <P class="Support" >The [required columns] section is an optional section that can be used to identify columns having the ‘required’ constraint. The same results can be accomplished by use of the REQUIRED constraint in the [column map] section.<BR><BR>If the [required columns] section is used, the section consists of a list of each required column, one column name per line.</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >[unique columns] Section</FONT></P>
+ <P class="Support" >The [unique columns] section is an optional section than can be used to identify columns having the ‘unique’ constraint. The same results can be used accomplished by use of the UNIQUE constraint in the [column map] section.</P>
+ <P class="Support" ><BR>If the [unique columns] section is used, the section consists of a list of each unique column, one column name per line.</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Style1" >Appendix A: Field Patterns</P>
+ <P class="Support" >Field patterns are used to convert certain types of fields in the input file to their corresponding internal Sampro formats.</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Social Security Numbers</FONT></P>
+ <P class="Support" >The pattern ‘SSNODASH’ will convert a straight numeric field into Sampro’s internal Social Security Number format ‘NNN-NN-NNNN’. Leading zeros will be inserted if necessary. For example, a field value of ‘123456’ will be converted to ‘000-12-3456’.</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Phone Numbers</FONT></P>
+ <P class="Support" >The pattern ‘AAA-EEE-NNNN’ will convert a field of that format to Sampro’s internal Phone Number format ‘(AAA)EEE#NNNN’. Leading zeros will be inserted if necessary For example, a field value of ‘216-663-5600’ will be converted to ‘(216)663#5600’ and a value of ‘663-5600’ will be converted to (000)663#5600’.</P>
+ <P class="Support" >The pattern ‘AAAEEENNNN’ will convert a straight numeric field into Sampro’s internal Phone Number format. Leading zeros will be inserted if necessary. For example ‘2166635600’ will be converted to ‘(216)663#5600’ and ‘6635600’ will be converted to ‘(000)663-5600’.</P>
+ <P class="Support" style="margin-top:0;margin-bottom:0">&nbsp;</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Dates</FONT></P>
+ <P class="Support" >The pattern ‘YYMMDD’ will convert a date of that format to Sampro’s internal date format ‘YYYY-MM-DD’. A value of blank or zero will be converted to the null date ‘1900-01-01’. A Y2K conversion is performed as follows: A YY value of ‘30’ or less will convert to a year in the 21<FONT style="vertical-align:super; " >st</FONT> century. A YY value of ‘31’ or greater will convert to a year in the 20<FONT style="vertical-align:super; " >th</FONT> century.</P>
+ <P class="Support" >The pattern ‘MM/DD/YY’ will convert a date of that format to Sampro’s internal date format. The MM field may contain either one or two digits. Thus ‘5/31/02’ and ‘05/31/02’ are equivalent. values of blank, ‘  /  /  ‘, or ‘00/00/00’ will be converted to the null date. A Y2K conversion is performed.</P>
+ <P class="Support" >The pattern ‘MM/DD/YYYY’ is similar to the ‘MM/DD/YY’ pattern but accepts a four digit year.</P>
+ <P class="Support" >In Excel, changing the format of a Date cell to a General or Text cell generates a field containing the number of days since 1/1/1900 with 1/1/1900 generating a value of ‘1’. The pattern ExcelDate may be used to convert a date in this format to Sampro’s internal date format. Values of blank, ‘0’, and ‘1’ will be converted to the null date. Note that Excel incorrectly assumes that 1900 was a leap year but the Import Utility corrects for this error.</P>
+ <P class="Support" >Note that no date validation is done at this time.</P>
+ <P class="Support" ><FONT style="font-weight:bold; " >Appendix B: Built In Formula Functions</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >getClientSiteEquipmentRn: ClntSteId / ClntSteEqpmntId<BR></FONT>Given the names of fields holding a Client Site Id and a Client Site Equipment Id, this method returns the record number of the corresponding Client Site Equipment record.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >getJobBillingItemRn: JobId / BillingItemId<BR></FONT>Given the names of fields holding a Job Id and a Billing Item Id, this method returns the record number of the corresponding Job Billing Item record.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >getJobCostCodeRn: JobId / CostCodeId<BR></FONT>Given the names of fields holding a Job Id and a Cost Code Id, this method returns the record number of the corresponding Job Cost Code record.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >getReportQueryRn:</FONT> <FONT style="font-weight:bold; " >reportIdFieldName/reportQueryIdFieldName<BR></FONT>Given the names of fields holding a Report Id and a Query Id, this method returns the record number of the corresponding Report Query record.</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >getEncryptedvalueFor: webpassword</FONT></P>
+ <P class="Support" style="margin-left:36.00pt;">The encrypted value is the passed parameter after applying standard SAMPRO encryption logic.</P>
+ <P class="Support" style="margin-left:36.00pt;"><IMG src="images/conversionmethod.gif" border=0 height=605 width=791 alt="images\conversionmethod.gif"> </P>
+ <P class="Support" style="margin-left:36.00pt;">&nbsp;</P>
+ <P class="Support" style="margin-left:36.00pt;"><FONT style="font-weight:bold; " >getRnFor:tableFieldName/idFieldName<BR></FONT>Given the names of fields holding a table name and the id of a row in the table, returns the record number of the corresponding table row.</P>
+ <P class="Support_Heading_1" >Appendix C: Inserting Note Records</P>
+ <P class="Support" >Importing notes into the database requires the insertion of rows into both the ‘ntelst’ and ‘notes’ tables. The insertion into the ‘ntelst’ table is performed using normal the Data Import processing while the insertion into the ‘notes’ table is performed by a ‘Post Rn Method’.</P>
+ <P class="Support" >The following columns are required to be defined and present in the [column map] section:</P>
+ <P class="Support" style="margin-left:23.75pt;">netlst_tble&nbsp;This is the name of the note’s parent table (e.g. ‘clnt)</P>
+ <P class="Support" style="margin-left:23.75pt;">netlst_prnt_ky1&nbsp;This identifies a row in the parent table (see below)</P>
+ <P class="Support" >The [input map] section identifies the column in the input file containing the actual text of a note by naming the column ‘TEXT’.</P>
+ <P class="Support" >The [Options] section must contain a PostRnMethod line identifying one of the  following methods:</P>
+ <P class="Support" style="margin-left:23.75pt;">prnMakeNoteFromId<BR>In this case, the ‘ntelst_prnt_ky1’ column must be mapped to a field containing the Id of the parent record</P>
+ <P class="Support" style="margin-left:23.75pt;">prnMakeNoteFromRn<BR>In this case, the ‘ntelst_prnt_ky1’ column must be mapped to a field containing the Rn of the parent record. One of the built in formulas described in Appendix B can be used to obtain the Rn value.</P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

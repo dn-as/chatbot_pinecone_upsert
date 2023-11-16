@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.8.1.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="format"/>
+<meta name="MS-HKWD" content="general ledger"/>
+<meta name="MS-HKWD" content="gl report"/>
+<meta name="MS-HKWD" content="line"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>GL Report Format Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="format,general ledger,gl report,line,report"/><meta name="brsprev" value="General_Ledger_Report_Viewer_(Old_Version).htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="GL Report Format Viewer">
+        <span>GL Report Format Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>GL Report Format Viewer</h1>
+<h2>Purpose:</h2>
+<p>Create/maintain your line formats for your custom GL reports.</p>
+<h2>Usage:</h2>
+<p>Required for user-defined GL Reports.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of all fields that may be included in this record. If you are using a customized system, the fields displayed on your screen may not exactly match the order or status (required, optional, default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">GL Report Format Id:</font><br/>
+Uniquely describes this line format. This field is required.</p>
+<p><font style="font-weight: bold;">GL Report Format Name:</font><br/>
+Optional. Briefly describes this format.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database system, this informational field displays the Security Id of the local user that created this record. If multiple location security is not implemented on your system, or if this record was created by a global user, this field will be blank.</p>
+<p><font style="font-weight: bold;">1  5  10  15  20  25  30  35  0  45  50  55 ...<br/>
+(Column Definition)</font><br/>
+The characters in the column definition field determine the content and position of the information on this line. The numbers listed above this field indicates the column position the text or information with appear on. By default, reports will print in the fixed-width 8 point Courier New Bold font in landscape orientation. This font/orientation allows up to 156 columns to be printed per line. Other font/orientation combinations may be selected when the report is generated.</p>
+<p><font style="font-weight: bold;">Blank Lines and Text Headers</font><br/>
+You may create generic Report Formats to insert blank and dashed lines into your reports. For example, you could create a Report Format named blank with the column definition field empty. Where &#39;blank&#39; is included in a GL Report, a blank line would be generated for spacing purposes. Report Formats containing only dashes or equal signs enable you to easily demarcate subtotals, totals, or headers.</p>
+<p>Header lines (e.g., General and Administrative Expenses) should be positioned as you wish them to appear on the report (e.g., at the left-hand side, or with leading blanks added for centering). <font style="font-weight: bold;">Hint:</font> begin all header format Id&#39;s with the characters HDR to make them easy to identify when creating a GL Report.</p>
+<p><font style="font-weight: bold;">Extraction Formulas</font><br/>
+Lines that are intended to extract and display actual account information are defined using the following formats. The information will be printed beginning at the column location where the @ sign appears in the formula. Note that the Current Period and Prior Period are defined when the GL Report is run: click on <a href="GL_Report_Range_Viewer.htm">Printing GL Reports</a> for details.</p>
+<p>Report Format   Max. Columns  Result</p>
+<p><font style="font-weight: bold;">@ID</font>   10  Print Account Id</p>
+<p><font style="font-weight: bold;">@NUMBER</font>  10  Print Account Id</p>
+<p><font style="font-weight: bold;">@NAME</font>   40  Print Account Name</p>
+<p><font style="font-weight: bold;">@ENTITYID</font>  10  Print GL Entity Id</p>
+<p><font style="font-weight: bold;">@ENTITYNAME</font>  40  Print GL Entity Name</p>
+<p><font style="font-weight: bold;">@ACT</font>   10  Current Period Account Activity</p>
+<p><font style="font-weight: bold;">@ACTB</font>  10  Budget: Current Period Account Activity</p>
+<p><font style="font-weight: bold;">@PACT</font>   10  Previous Period Account Activity</p>
+<p><font style="font-weight: bold;">@PACTB</font>   10  Budget: Previous Period Account Activity</p>
+<p><font style="font-weight: bold;">@END</font>   10  Ending Balance</p>
+<p><font style="font-weight: bold;">@ENDB</font>  10  Budget: Ending Balance</p>
+<p><font style="font-weight: bold;">@BEG</font>   10  Beginning Balance</p>
+<p><font style="font-weight: bold;">@BEGB</font>  10  Budget: Beginning Balance</p>
+<p><font style="font-weight: bold;">@PEND</font>   10  Previous Ending Balance</p>
+<p><font style="font-weight: bold;">@PENDB</font>   10  Budget: Previous Ending Balance</p>
+<p><font style="font-weight: bold;">@CP</font><font style="font-style: italic;">accountid</font><font style="font-weight: bold;">%</font>  10  The current period as a percentage of the total account<br/>
+    specified by <font style="font-style: italic;">accountid</font>. When entering this format, you will replace<br/>
+    <font style="font-style: italic;">accountid</font> by the Id of a specific total account.</p>
+<p><font style="font-weight: bold;">@CY</font><font style="font-style: italic;">accountid</font><font style="font-weight: bold;">%</font> 10  The current year as a percentage of the total account<br/>
+    specified by <font style="font-style: italic;">accountid</font>. When entering this format, you will replace <font style="font-style: italic;">accountid</font><br/>
+    by the Id of a specific total account.</p>
+<p><font style="font-weight: bold;">@PP</font><font style="font-style: italic;">accountid</font><font style="font-weight: bold;">%</font>  10  The prior period as a percentage of the total account<br/>
+    specified by <font style="font-style: italic;">accountid</font>. When entering this format, you will replace <font style="font-style: italic;">accountid</font><br/>
+    by the Id of a specific total account.</p>
+<p><font style="font-weight: bold;">@PY</font><font style="font-style: italic;">accountid</font><font style="font-weight: bold;">%</font>  10  The current year as a percentage of the total account.<br/>
+    When entering this format, replace <font style="font-style: italic;">accountid</font> by the Id of a<br/>
+    specific total account.</p>
+<p><font style="font-weight: bold;">@CPB</font><font style="font-style: italic;">accountid</font><font style="font-weight: bold;">%</font> 10  The current period budget as a percentage of the total account.</p>
+<p>When entering this format, you will replace <font style="font-style: italic;">accountid</font> by the Id of a specific total account. For example, if you specified a cost of sales total account, this formula could be run against various expense accounts in the gl report definition.</p>
+<p><font style="font-weight: bold;">@CYB</font><font style="font-style: italic;">accountid</font><font style="font-weight: bold;">%</font> 10  The current year budget as a percentage of the total account.</p>
+<p>Replace <font style="font-style: italic;">accountid</font> with the Id of a specific total account. For example, if you specified a cost of sales total account, this formula could be run against various expense accounts in the gl report definition.</p>
+<p><font style="font-weight: bold;">@PPB</font><font style="font-style: italic;">accountid</font><font style="font-weight: bold;">%</font> 10  The prior period budget as a percentage of the total account.<br/>
+    Replace <font style="font-style: italic;">accountid</font> with the Id of a specific total account.</p>
+<p><font style="font-weight: bold;">@RTB</font><font style="font-style: italic;">accountid</font><font style="font-weight: bold;">%</font> 10  The prior period budget as a percentage of the total account.<br/>
+    Replace <font style="font-style: italic;">accountid</font> with the Id of a specific total account.</p>
+<p><font style="font-weight: bold;">@RT</font><font style="font-style: italic;">accountid</font><font style="font-weight: bold;">%</font> 10  The prior period as a percentage of the total account.<br/>
+    Replace <font style="font-style: italic;">accountid</font> with the Id of a specific total account.</p>
+<p><font style="font-weight: bold;">@PYB</font><font style="font-style: italic;">accountid</font><font style="font-weight: bold;">%</font> 10  The current year budget as a percentage of the total account.<br/>
+    When entering this format, replace <font style="font-style: italic;">accountid</font> by the Id of a specific total account.</p>
+<p><font style="font-weight: bold;">@VARP</font>   10  This year&#39;s current period budget - actual.</p>
+<p><font style="font-weight: bold;">@VARY</font>   10  This year&#39;s budget - actual.</p>
+<p><font style="font-weight: bold;">@PVARP</font>  10  Last year&#39;s current period budget - actual.</p>
+<p><font style="font-weight: bold;">@PVARY</font>  10  Last year&#39;s budget - actual.</p>
+<p><font style="font-weight: bold;" color="#0000FF">Hint:</font> Total Lines are generated by specifying Total Accounts.</p>
+<p><font style="font-weight: bold; font-style: italic;" color="#008000">Also See...</font> <font color="#008000"><br/></font> <font style="text-decoration: underline;" color="#008000">GL Accounts</font>GL_Accounts_Viewer  <font style="text-decoration: underline;" color="#008000">GL Reports</font>General_Ledger_Report_Viewer_(Old_Version)  <font style="text-decoration: underline;">Print GL Report</font></p>
+<h2>Example: Text Formats</h2>
+<p>The following text formats show how to enter a header at the left of the page, a centered header, and a line of dashes:</p>
+<p>General and Administrative Expenses</p>
+<p>General and Administrative Expenses</p>
+<p>--------------------------------------------------------------------------------------------------------------------------</p>
+<p><font style="font-size: 11pt; font-weight: bold;" size="2" color="#0000FF">Example: Extraction Formula<br/></font> The following extraction formula prints the account number, name, current period activity, and the current period as a percentage an account named &#39;300&#39;, and the ending balance:</p>
+<p>@ID  @NAME    @ACT  @CP300%  @END</p>
+
+</body></html>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.10.4.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="security"/>
+<meta name="MS-HKWD" content="web"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Web Security Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="security,web"/><meta name="brsnext" value="Alarm_Server.htm"/><meta name="brsprev" value="Start_Webserver.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Web Security Viewer">
+        <span>Web Security Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Web Security Viewer (deprecated in Version 6.2 + up)</h1>
+<h2>Purpose:</h2>
+<p>Before version 6.2, the Technician and Web Security records controlled web access and structure. Although these records are still supported, the new <a href="Web_Users_Viewer.htm">Web Users Viewer</a> and <a href="Web_Profile_Viewer.htm">Web Profile Viewer</a> preferred for implementing CRMAnywhere access.</p>
+<p>Usage:</p>
+<p>Filters the records that appear on the Client Web Interface.</p>
+<p>Referenced by: Technician, Client Site Equipment.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Web Security Id:<br/></font> This required alpha-numeric field identifies this web security level (F, FW, FW1, FW2, etc.) and determines the web security level that will be associated with client site equipment records referencing this value.</p>
+<p><font style="font-weight: bold;">Description:<br/></font> A brief description of the record (Farleys Store 1, Farleys All Stores, Farleys West Coast, etc.). This field is optional.</p>
+<p><font style="font-weight: bold;">Read Only?<br/></font>Check this field (by double-clicking or pressing the spacebar) if Client Web Interface users with this security level should be able to view (read only) information but not change or create it. Typically, this field would be checked to enable a user to view regional information but not request service for equipment.</p>
+<p><font style="font-weight: bold;">Like:</font></p>
+<p>This field defines how much information Client Web users with this web security level can see (recall that Client Web users are defined in the Technician record as having Client Web access). The last (right-hand) character must be the % (percent sign). The alpha-numeric characters to the left of the percent sign form an alpha-numeric template, ranging from most general (highest security level) to most specific (lowest level). This system can include as many tiers as needed but must be used consistently. The following example shows a three-tiered system:</p>
+<p>F% (sees client site equipment records at all Farleys with web security level F and below (FW1, FW2, FE1, FE2, etc.) )</p>
+<p>FW% (sees equipment records for Farleys West web security (FW11, FW12, etc.).</p>
+<p>FW1% (sees Farleys West local records created at level FW1 only)</p>
+<p>In this system, client site equipment at the Farleys West 1 store would be assigned a web security of FW1. A technician record would be created for Farleys West 1 so that they could view work order and request service for equipment at their store. In this scenario, a technician record (with read-only web security) would be created for created for the Farleys West coast regional manager, so that he could log on to the Client Web Interface and view work order activity for all store under his jurisdiction.</p>
+
+</body></html>

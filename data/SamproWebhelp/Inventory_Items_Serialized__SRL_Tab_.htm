@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.1.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="lot controlled"/>
+<meta name="MS-HKWD" content="serialized"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Inventory Item Serial Nos. Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="inventory,lot controlled,serialized"/><meta name="brsnext" value="Inventory_Items_Vendor_Parts_Cross_Ref___VEN_Tab_.htm"/><meta name="brsprev" value="Inventory_Items_Vendor_Paid_History__VHP_Tab_.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Inventory Item Serial Nos. Tab">
+        <span>Inventory Item Serial Nos. Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Inventory Item Serial Nos. Tab</h1>
+<h2>Purpose:</h2>
+<p>Lists information for all serialized and/or lot controlled units, including those that have been sold (or used in Shop Orders) and are thus no longer On Hand or In Test. All entries on this screen are maintained by the system. The data is automatically updated by receipts, sales, transfers and entry of test results for quality controlled items.</p>
+<p>Items that are not Quality Controlled are now assigned the Status of Accepted when they are received in the PO/Inventory Receipts journal. If they were bought to stock, they will appear as On Hand in their receiving Location. Items bought to Job are also assigned the status of accepted.</p>
+<h2>Important Fields:</h2>
+<p>Srl/Lot# Status On Hand InTest Rejected Vendor Vendor Lot</p>
+<p>If Quality Control is implemented, the Status of each lot will be displayed. If QC is not implemented for this item, the Status defaults to Accepted.</p>
+
+</body></html>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.2.0_21";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="date" content="05 11, 2020"/>
+<meta name="author" content="Kelly McKinley"/>
+<meta name="creator" content="Microsoft&lt;symbol name=Registered&gt;&lt;!--begin!kadov{{--&gt;®&lt;!--}}end!kadov--&gt; Word for Office 365"/>
+<meta name="keywords" content=""/>
+<meta name="producer" content="Microsoft&lt;symbol name=Registered&gt;&lt;!--begin!kadov{{--&gt;®&lt;!--}}end!kadov--&gt; Word for Office 365"/>
+<meta name="subject" content=""/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Email Processor Support</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="email,email processor,processor - email"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Email Processor Support">
+        <span>Email Processor Support</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>SAMPro Email Processor Setup</h1>
+<p>See <a href="SAMPro Email Processor Customer Instructions.htm">Email 
+ Processor Customer Notes</a> for details on using the Email Processor 
+ when it has been set up. </p>
+<h2>Files and Database Entries</h2>
+<p class="PdfParaStyle03">The software queries the sys-document-archive 
+ registry in order to place documents directly into the Archive Path. When 
+ documents are created, the software extracts the email body out as HTML 
+ and creates an HTML file in a temporary location. The system then checks 
+ for images embedded into the HTML and creates the corresponding files 
+ in the same temporary location. The temporary location is then used to 
+ create a PDF file which is put into the document archive location. The 
+ path to the PDF file is then used as the path for a newly created Document 
+ Viewer record. The record is then populated with the keyword locations 
+ for the Document List children records. When external attachments are 
+ added to the document, the document record&#39;s “Other Files” tab is populated 
+ with these files.</p>
+<p class="PdfParaStyle05">The software creates entries into the dcmnt, 
+ dcmnt_lst, dcmnt_fle_lst, nte_lst, notes, and wblg tables. It generates 
+ RN&#39;s just as SAMPro does. The entries into all these tables are truncated 
+ to the length of the corresponding field.</p>
+<h2>Installation</h2>
+<ol start="1" style="list-style: decimal;">
+	<li class="p-PdfParaStyle07" style="margin-top: 5px; margin-left: 22px;"><p class="PdfParaStyle07"><span class="PdfCharStyle3">Install latest 
+	 version of program (\\shares\FTP Updates\SAMPro Email Processor).</span> 
+	 <span class="PdfCharStyle0">Currently 1.4</span><span class="PdfCharStyle3">. 
+	 Visual C++ runtime must be installed on server.</span></p></li>
+	<li class="p-PdfParaStyle08" style="margin-top: 4px; margin-left: 22px;"><p class="PdfParaStyle08"><span class="PdfCharStyle3"> </span><span class="PdfCharStyle3">Setup config file with customer-specific information.</span></p></li>
+	<li class="p-PdfParaStyle08" style="margin-top: 4px; margin-left: 22px;"><p class="PdfParaStyle08"><span class="PdfCharStyle3">Be sure the 
+	 SAMPro Email Processor Services are running (Windows service). If 
+	 you&#39;ve made any adjustments to the config file you</span> <span class="PdfCharStyle6">must 
+	 restart the services.</span> <span class="PdfCharStyle3"> </span></p></li>
+	<li class="p-PdfParaStyle08" style="margin-top: 4px; margin-left: 22px;"><p class="PdfParaStyle08"><span class="PdfCharStyle3">Confirm a valid 
+	 UNC archive path is set in sys-document-archive.</span> <span class="PdfCharStyle0">A 
+	 setting has been added to version 1.3 that will allow an override 
+	 if a mapped drive is specified in this registry.</span> <span class="PdfCharStyle3"> </span></p></li>
+	<li class="p-PdfParaStyle08" style="margin-top: 4px; margin-left: 22px;"><p class="PdfParaStyle08"><span class="PdfCharStyle3">Confirm you 
+	 will have access/permissions to Local Disk on customer RDP.</span></p></li>
+</ol>
+<p class="PdfParaStyle10">**During the installation, a window will appear 
+ asking for a Username and Password. This will be the user used to run 
+ the service, it will communicate to the SQL Server and must be setup to 
+ a user with permissions to the database. The login credentials will be 
+ the users WINDOWS or computer login credentials.</p>
+<p class="PdfParaStyle10"> </p>
+<p style="margin-top: 0px; margin-left: 0px; margin-right: 0px; text-indent: 0px;"><img src="assets/images/Email Processor Support_2_00.png" alt="" title="" width="627" height="274" border="0"/></p>
+<p class="PdfParaStyle12">The configuration of the application is handled 
+ via an “app.config” file located in the root of the installation path. 
+ For convenience, the installation package was built to ask for user input 
+ to setup the configuration file. Below is the list of configuration options</p>
+<table style="border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:outset;width:100%;border-collapse: separate; border-collapse: separate;">
+	<tbody><tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle13"><span class="PdfCharStyle6">Option</span> 
+		 <span class="PdfCharStyle6"> </span></p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle13">Shown in<br/>
+		Installer</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle13">Description</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Email Address</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Y</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">The e-mail address used to send and<br/>
+		receive emails</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Email Password</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Y</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">The password for the e-mail address</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Email Uses SSL</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Y</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Whether the e-mail server will use 
+		 SSL</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Polling Interval (Seconds)</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Y</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">How often the software will check for 
+		 new<br/>
+		emails</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">SMTP Server Address</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Y</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Address to SMTP server</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">SMTP Server Port</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Y</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Port to SMTP server</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">POP3 Server Address</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Y</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Address to POP3 server</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">POP3 Server Port</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Y</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Port to POP3 server</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Weblog Failure Notification Address</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Y</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">E-mail address used to notify of a 
+		 failed<br/>
+		weblog</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Override Doc Archive</p></td>
+		<td style="vertical-align: top; border-left-width: 0px; border-right-width: 0px; 
+			 border-bottom-width: 0px; border-top-width: 0px;"><p> </p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">If the Windows user where the application<br/>
+		is installed does NOT have permissions to a<br/>
+		mapped drive referenced in sys-document-<br/>
+		archive, this option can be used to<br/>
+		designate the UNC path. If blank,<br/>
+		application will read sys-document-archive.</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Database Connection String</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Y</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Standard SQL Server Connection String</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Web Viewable Tech</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Y</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Boolean of whether to mark documents 
+		 as<br/>
+		Web Viewable for the Technician</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Web Viewable Other</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Y</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Boolean of whether to mark documents 
+		 as<br/>
+		Web Viewable for CSR, CRM, and Subs</p></td>
+	</tr>
+	<tr style="">
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Verbose Logging</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">N</p></td>
+		<td style="vertical-align: top; border-left-width: 1px; border-right-width: 1px; 
+			 border-bottom-width: 1px; border-top-width: 1px;"><p class="PdfParaStyle14">Turns on logging for all items not 
+		 just errors</p></td>
+	</tr>
+</tbody></table>
+<p class="PdfParaStyle15"> </p>
+<p class="PdfParaStyle16">The items in yellow are provided by the customer. 
+ The items in green are customer preference and should be discussed during 
+ implementation. You can configure the above settings during the install 
+ wizard, or directly in the configuration file after installation. The 
+ registries appear as follows in the configuration file.</p>
+<p class="PdfParaStyle17"><span class="PdfCharStyle7">&lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">UseSSL</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">True</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">EmailAddress</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><a href="mailto:email@gmail.com%3c/value"><span class="PdfCharStyle11">email@gmail.com&lt;/value</span></a><span class="PdfCharStyle7">&gt;</span> <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">EmailPassword</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">Password123</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">SMTPPort</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">587</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">SMTPAddress</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">smtp.gmail.com</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">POP3Port</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">995</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">POP3Address</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">pop.gmail.com</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">OverrideDocArchive</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle12">UNCPathtoArchiveDirectory</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">ConnString</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">Data Source=</span><span class="PdfCharStyle12">SQLSERVER</span><span class="PdfCharStyle10">;Initial Catalog=</span><span class="PdfCharStyle12">DATABASENAME</span><span class="PdfCharStyle10">;Integrated Security=True</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle20"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">WebViewableTech</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">Y</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">WebViewableCRM</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">N</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">WebViewableCSR</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">N</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">WebViewableSub</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">N</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">PollInterval</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">2</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">WeblogFailEmail</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><a href="mailto:customer@email.com%3c/value"><span class="PdfCharStyle11">customer@email.com&lt;/value</span></a><span class="PdfCharStyle7">&gt;</span> <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">VerboseLogging</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span><span class="PdfCharStyle10">False</span><span class="PdfCharStyle7">&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">EmailUser</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <a href="mailto: email@gmail.com%3c/value"><span class="PdfCharStyle13"> </span><span class="PdfCharStyle11">email@gmail.com&lt;/value</span></a><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;</span><span class="PdfCharStyle8">setting</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">name</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">StripDomain</span><span class="PdfCharStyle10">&quot;</span> <span class="PdfCharStyle7"> </span><span class="PdfCharStyle9">serializeAs</span><span class="PdfCharStyle7">=</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">String</span><span class="PdfCharStyle10">&quot;</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">                &lt;</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;email.com&lt;/</span><span class="PdfCharStyle8">value</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle10"> </span></p>
+<p class="PdfParaStyle18"><span class="PdfCharStyle7">            &lt;/</span><span class="PdfCharStyle8">setting</span><span class="PdfCharStyle7">&gt;</span> 
+ <span class="PdfCharStyle3"> </span></p>
+<h2>FAQ/Tips</h2>
+<h3>General:</h3>
+<p class="PdfParaStyle23"><span class="PdfCharStyle3">-The application 
+ should be used for internal purpose</span> <span class="PdfCharStyle6">only</span><span class="PdfCharStyle3">. External emails</span> <span class="PdfCharStyle0">may</span> 
+ <span class="PdfCharStyle3">be successfully parsed but could very easily 
+ interrupt the service until manually cleared from the inbox.</span></p>
+<h5>Gmail Settings:</h5>
+<p class="PdfParaStyle23">-Enable POP forwarding</p>
+<p class="PdfParaStyle23">-Enable Less Secure Apps</p>
+
+</body></html>

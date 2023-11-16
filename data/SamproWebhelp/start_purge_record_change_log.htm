@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Start Purge Record Change Log</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("Support Help\nSupport Functions\nStart Purge Record Change Log");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Start Purge Record Change Log</P>
+ <P class="Support_Heading_2" >Purpose:</P>
+ <P class="support" >Performance when opening viewers can be negatively impacted by the number of records in the rcrdchngelg table. This table is automatically maintained by the system and lists the record that was changed, the user that changed it, and the date and time of the change.  This function's purpose is to provide a means of managing the table’s size so as to reduce the negative effect. </P>
+ <P class="Support_Heading_2" >Usage:</P>
+ <P class="support" >This function may be run as a service on a regular basis, preferably after hours.</P>
+ <P class="Style_Support_+_Left___0_5_" >Audit Change Notes: if a greater degree of detail concerning which users are changing what records is needed, the Audit Changes Registry Entry may be implement.  This is discussed in  <A href="internal_registry_audit_changes.htm"><FONT style="color:black; " >Audit Changes in Secure Notes</FONT></A> . </P>
+ <P class="support" >Installed users interested in using this must run Function List Update and View User Groups and Functions.</P>
+ <P class="Support_Heading_2" >Registry:</P>
+ <P class="support" >See <A href="internal_registry_purge_record_change_log.htm"><FONT style="color:black; " >Internal Registry Purge Record Change Log</FONT></A>  for details on controlling how many records are deleted when this function is run.  </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

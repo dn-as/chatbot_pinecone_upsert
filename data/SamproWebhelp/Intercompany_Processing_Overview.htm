@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.4.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="gl entity"/>
+<meta name="MS-HKWD" content="Intercompany Processing"/>
+<meta name="MS-HKWD" content="company record"/>
+<meta name="MS-HKWD" content="Due To Due From"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Intercompany Processing Overview</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="gl entity,Intercompany Processing,company record,Due To Due From"/><meta name="brsnext" value="Company_Viewer.htm"/><meta name="brsprev" value="Registry_Intercompany_Processing.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Intercompany Processing Overview">
+        <span>Intercompany Processing Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Intercompany Processing Overview</h1>
+<h2>Overview:</h2>
+<p>This enhancement supports Intercompany Processing at the GL level via 
+ automated ‘Due To’ and ‘Due From’ transactions any time costs or revenue 
+ is incurred/earned by one company on behalf of another company. Anytime 
+ the system sees a difference between the company that a balance sheet 
+ G/L Entity belongs to and the company that the Income Statement G/L Entity 
+ belongs to, the automated &#39;Due To&#39; and &#39;Due From&#39; transactions will be 
+ made.</p>
+<p>For example, if monies are received in the AR Cash Receipts by Company 
+ A for work billed by Company B, the system would make the usual debit 
+ to the AR account and credit to the bank account. In addition, the Due 
+ From account in Company A would be debited, and the Due To account in 
+ Company B would be credited: this processing keeps the balance sheet accounts 
+ in balance.</p>
+<p>Alternately if monies are received in the AR Cash Receipts by Company 
+ A for work billed by Company A, the system would only make the usual debit 
+ to the AR account and credit to the bank account: the automated intercompany 
+ transactions would not be needed.</p>
+<p>Currently, Intercompany Processing does NOT support one company’s ‘profiting’ 
+ from work performed for another company. All restitutions are made via 
+ the Bank Transfer function.</p>
+<h3>Login Processing:</h3>
+<p>Data-related issues can occur if an 
+ Intercompany installation runs with a non-Interco v.cus and vice versa. 
+ In this version, the system will display warning on login if the v.cus 
+ file and global registry intercompanyenabled=true don&#39;t match.  &#39;Special&#39; 
+ users will not see the warning to avoid issues with agent type users started 
+ via batch file.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">WARNING:</span> 
+ The Inter Company settings on your v.cus and global registry do not match. 
+ Please contact your support representative for assistance.</p>
+<h3>Financial Reporting:</h3>
+<p style="font-family: Arial, sans-serif;">In SAMPro 8.2-9.0, all Companies 
+ within the database must use the same Fiscal calendar as defined in the 
+ GL Reporting Period record. <span style="font-weight: bold;">In 
+ SAMPro 9.1, </span>the 
+ Reporting Period viewer supports optional definition of company-specific 
+ Reporting Periods to allow for differing fiscal year definitions. Any 
+ install using an Interco v.cus file will see the Company Id in this viewer. 
+ This also exposes the Report Title field.  If left blank, this 
+ field will be &#39;built&#39; using the logic already in the viewer. A <a href="Registry_Intercompany_Processing.htm#Company_Specific_GL_Reporting_Period">global 
+ registry setting</a> is required to enable this feature and allow the 
+ Company Id to be set. </p>
+<h2>Registry:</h2>
+<p>See <a href="Registry_Intercompany_Processing.htm">Registry Intercompany 
+ Processing</a> for the global setting entry required to implement this 
+ functionality.</p>
+<h2>Setup:</h2>
+<p>Ideally, Intercompany Processing would be implemented when first starting 
+ to use SAM Pro. If there is any possibility of a new company being acquired 
+ in the future, new ‘one company’ firms can be set up for Intercompany 
+ Processing; if and when a new company is acquired, it can be more easily 
+ integrated into the database.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important 
+ Note:</font> Firms currently running SAM Pro without Intercompany Processing 
+ should consult their support representative if they are thinking about 
+ implementing this functionality: a significant amount of work will be 
+ required to convert an existing system.</p>
+<p>The existing GL Entity and Security records and the new Company record 
+ are at the heart of Intercompany Processing.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Company:</font> 
+ The Company record defines the Security Id, GL Entity (for balance sheet 
+ transactions), and ‘Due To’ and ‘Due’ From GL Accounts.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Security:</font> 
+ A Security record must be created /related to each Company.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Entity:</font> 
+ Each GL Entity must specify a specific Company.  In addition 
+ to the GL Entities designated for the various profit centers within a 
+ company, a ‘balance sheet’ Entity will be created for use with Intercompany 
+ postings.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">GL Account:</font> 
+ A ‘Due To’ asset account and a ‘Due From’ Liability account should be 
+ created for each company. A good technique for the Due to and Due From 
+ GL accounts is to create a root account with the company extension (i.e. 
+ DUE TO 1200-A for company A and 1200-B for company B …)</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Location:</font> 
+ complete the GL Entity field added to the Status tab.</p>
+<h2>Functions Impacted by Intercompany Processing</h2>
+<p><font style="font-weight: bold;">AP Journal Main Tab:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Changed 
+ Field: GL Entity:<br/>
+</font>If Intercompany Processing is implemented and if this Entity does 
+ not match the GL Entities referenced in the child tabs, the appropriate 
+ Intercompany postings to GL History will be made when this transaction 
+ is saved.</p>
+<p><font style="font-weight: bold;">AR Cash Receipts</font> <font style="font-weight: bold;">Main 
+ Tab</font><font style="font-weight: bold;">:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Changed 
+ Field: GL Entity:</font><br/>
+If Intercompany Processing is implemented (the sys-ffv-global-settings 
+ registry’s IntercompanyEnabled option is set to true) and if this Entity 
+ does not match the GL Entities referenced in the child tabs, the appropriate 
+ Intercompany postings to GL History will be made when this transaction 
+ is saved.</p>
+<p><font style="font-weight: bold;">Job Record</font><font style="font-weight: bold;">:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Changed 
+ Field: Job GL Entity Id<br/>
+</font>When Intercompany Processing is enabled, the GL Entities specified 
+ in the Job record MUST reference the same Company as the GL Entities specified 
+ in its Cost Codes. Validation will not allow the GL Entity to be changed 
+ to one referencing a different Company.</p>
+<p><font style="font-weight: bold;">Job Cost Code Record:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Changed 
+ Field: GL Entity Id<br/>
+</font>When Intercompany Processing is enabled, the GL Entities specified 
+ in the Job record MUST reference the same Company as the GL Entities specified 
+ in its Cost Codes. Validation will not allow the GL Entity to be changed 
+ to one referencing a different Company.</p>
+<p><font style="font-weight: bold;">Purchase Order Record:</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Status 
+ Tab</font><font style="font-weight: bold;">: GL Entity Id<br/>
+</font>This field defaults from the Location record. It is required if 
+ Intercompany Processing is enabled.</p>
+<p><font style="font-weight: bold;">New Call</font> <font style="font-weight: bold;">and 
+ Create PM Work Orders</font><font style="font-weight: bold;">:</font></p>
+<p style="margin-left: 36.00pt;">When Intercompany Processing is enabled, 
+ the Job GL Entity specified in the selected Job will determine the Work 
+ Order’s Company/Security.</p>
+<p><font style="font-weight: bold;">Compute PR:</font></p>
+<p style="margin-left: 36.00pt;">When Intercompany Processing is enabled, 
+ the GL Entity specified in the Employee record provided the override for 
+ the Company/Security of the post.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Report PR 
+ Checks:</span></p>
+<p style="margin-left: 48px;">When intercompany is enabled, the Security 
+ Id is set in the Check record when Checks are posted or voided.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Report PR 
+ Misc Deductions Checks:</span></p>
+<p style="margin-left: 48px;">When intercompany is enabled, the Security 
+ Id is set in the Check record when Checks are posted or voided.</p>
+<p><font style="font-weight: bold;">Bank Transfer Journal:</font></p>
+<p style="margin-left: 36.00pt;">When Intercompany Processing is enabled, 
+ the Bank Entity is required: it decides which Company/Service the transfer 
+ belongs to. The Transfer From Entity is also required for Intercompany 
+ Processing.</p>
+<p><font style="font-weight: bold;">Bank</font> <font style="font-weight: bold;">Deposit</font> 
+ <font style="font-weight: bold;">Journal:</font></p>
+<p style="margin-left: 36.00pt;">When Intercompany Processing is enabled, 
+ the Bank and Sweep Entities are both required. The Bank Entity controls 
+ what Company/Security the deposit is applied to. The Sweep Entity defines 
+ the Company/Security the deposit is from. If the Bank and Sweep Entities 
+ are different, an automatic Intercompany Processing GL transaction will 
+ be generated.</p>
+<p style="font-weight: bold;"><span style="font-weight: bold;">Bank Reconciliation 
+ Journal:</span></p>
+<p style="margin-left: 48px;">1. GL Entity Ids are required for Interco 
+ customizations.<br/>
+2. All entities must reference the same Company when intercompany is ON.<br/>
+3. The system posts Company Security Rn to GLH Security Rn when intercompany 
+ is ON.</p>
+<p><font style="font-weight: bold;">Record Billing Adjustments/ Progress 
+ Billing:</font></p>
+<p style="margin-left: 36.00pt;">When intercompany processing is enabled, 
+ the Company/Security is now correctly set for the AR Sales Journal and 
+ resulting history records when Progress Invoices are posted.</p>
+<p style="margin-left: 36.00pt;">The A/R Control GL Entity is now displayed 
+ on the Progress Billing Post Report. Although the GL Entities for the 
+ Sale Tax entries do not appear on this report, they are written to history 
+ correctly.</p>
+<p><font style="font-weight: bold;">Job Cost EOM Processing:</font></p>
+<p style="margin-left: 36.00pt;">When intercompany processing is enabled, 
+ the Company/Security is recorded in General Ledger History when this function 
+ is run.</p>
+<p><font style="font-weight: bold;">Voiding Checks:</font></p>
+<p style="margin-left: 36.00pt;">When intercompany processing is enabled, 
+ the Company/Security is set in history when running this function.</p>
+<p style="margin-left: 8px; font-weight: bold;"><span style="font-weight: bold;">Inventory 
+ Adjustment Journal:</span></p>
+<p style="margin-left: 48px;">The system validates that the GL Entity not 
+ blank when intercompany is enabled. When an Inventory Adjustment is created, 
+ the system generates Intercompany GLH when appropriate.  This 
+ does NOT apply to Adjustment-type entries.  No Intercompany 
+ GLH is generated when From/To entities belong to the same company.</p>
+<p style="margin-left: 48px;">The full screen view now shows To/From Company 
+ Ids.</p>
+<p style="margin-left: 8px; font-weight: bold;">Start Fill Backorders: 
+  <span style="font-weight: normal;">(for Materials Requisitioning)</span></p>
+<p>S<span style="font-weight: bold;">tart 
+ Material Requisitioning: </span></p>
+<p style="margin-left: 48px;">If Intercompany 
+ is enabled, the system will check for company security level registry 
+ settings when running this function; an error will be displayed if these 
+ registries (sys-viewer-vshpordr-<span style="font-style: italic;">securityid</span>) 
+ are not found.</p>
+<p style="margin-left: 8px; font-weight: bold;">Start Generate Purchase 
+ Orders:  <span style="font-weight: normal;">(PO header now includes 
+ GL Entity from Location).</span></p>
+<p style="margin-left: 8px; font-weight: bold;">Client 
+ Order Processing (COP)</p>
+<p style="margin-left: 48px;">In order 
+ to support Intercompany Processing, Client Orders (clntordr) &amp; COP 
+ Invoices now posts with the proper Security and Company Security information. 
+ This ensures that the COP Orders carry the correct security/company information 
+ when the COP Invoices are posted to the AR Sales Journal and carried over 
+ into the various history tables (arhstry, glhstry, txhstry, imhstry, invcemstr, 
+ etc).  In addition, the Start Fill Backorders function now works 
+ properly for Client Orders generated in this release when InterCompany 
+ is enabled.</p>
+<p style="margin-left: 48px;">If the COP 
+ module is set up to default the information from the Client Site’s COP 
+ tab instead of the Location (where sys-viewer-vclntordr GLEntityScheme=clntste 
+ registry option exists), the system will now use the Client Site’s COP 
+ tab&#39;s GL Entity for posting the invoices Freight, Dropship Freight and 
+ make sure that the COGS posting for dropships uses the same GL Entity 
+ for both the debit &amp; credit side of the AR Sales GL journal entry.</p>
+
+</body></html>

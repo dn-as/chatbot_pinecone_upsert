@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.3.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="equipment"/>
+<meta name="MS-HKWD" content="work order"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Work Order Equipment Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="equipment,work order"/><meta name="brsnext" value="Work_Order_Invoice_Labor.htm"/><meta name="brsprev" value="Work_Order_Tech_Status_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Work Order Equipment Tab">
+        <span>Work Order Equipment Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Work Order Equipment Tab</h1>
+<h1>Purpose:</h1>
+<p>The Work Order Equipment Tab identifies the work code, work requested 
+ and performed, and the equipment that should be serviced or maintained, 
+ etc. A virtually unlimited number of Equipment lines may be included on 
+ the Work Order Equipment tab.</p>
+<h1>Example:</h1>
+<p>Fix a leaking boiler, perform a PM on an air conditioner, etc.</p>
+<h2>Usage:</h2>
+<p>Required for Dispatching. Each Work Order can include one or more equipment 
+ tab lines.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Equipment Id:</font><br/>
+Enter a valid Client Site Equipment Id or double-click to select from a 
+ list. This is a required field.</p>
+<p>When you add a new piece of Equipment to the work order, the system 
+ will check to see if it includes a Log Form in the Equipment record. If 
+ so, the appropriate entries will be made to the Work Order Metrics tab 
+ from the Log Form record.</p>
+<p><font style="font-weight: bold;">Work Code Id:</font><br/>
+This field defaults from the Work Code specified in New Call or Create 
+ PM WO but may be changed by the user if needed. Enter a valid Work Code 
+ or double-click to select from a list of Work Codes. This field is optional 
+ but highly recommended since the Work Code is displayed on the Dispatch 
+ Board.</p>
+<p>If PCR functionality is enabled, the system will validate the Work Code 
+ is specified in the PCR Table (in the Client Site / Client Site Equipment) 
+ when a Work Code is entered or changed. The PCR Table in the Client Site 
+ Equipment record overrides the PCR Table in the Client Site record.</p>
+<p><font style="font-weight: bold;">Cause Code Id:<br/>
+</font>This field may be used to specify the cause of the problem defined 
+ by the Work Code. If PCR functionality is enabled, the system will validate 
+ that the Work Code / Cause Code pair is specified in the PCR Table when 
+ a Cause Code is entered or changed. The PCR Table in the Client Site Equipment 
+ record overrides the PCR Table in the Client Site record.</p>
+<p><font style="font-weight: bold;">Resolution Code Id:</font><br/>
+Enter a valid Resolution Code Id identifying how this problem was resolved. 
+ You may double-click on this field to select from a list of resolution 
+ codes. If PCR functionality is enabled, the system will validate that 
+ the Cause Code/Resolution Code pair is specified in the PCR Table when 
+ a Resolution Code is entered or changed. The PCR Table in the Client Site 
+ Equipment record overrides the PCR Table in the Client Site record.</p>
+<p><font style="font-weight: bold;">Estimated Hours</font><br/>
+The estimated hours to complete this work. This field defaults from the 
+ Work Code Id but may be changed by the user if needed. If adding multiple 
+ pieces of equipment to a Work Order, be sure to also update the Technicial 
+ tab hours that will appear on the Dispatch Board.</p>
+<p><font style="font-weight: bold;">Service Parts Id:</font><br/>
+The parts list for this task. Double-click on this field to select from 
+ a list.</p>
+<p><font style="font-weight: bold;">Service Tasks Id:</font><br/>
+The service list for this task. Double-click on this field to select from 
+ a list.</p>
+<p><font style="font-weight: bold;">Wrrnty Strt: WrrntyEnd:<br/>
+</font>If this equipment is covered under warranty, the start and end dates 
+ will default from the Site Equipment record.</p>
+<p><span style="font-weight: bold;">Under 
+ Contract</span><br/>
+This display-only field defaults from the Site Equipment&#39;s Under Contract 
+ box. </p>
+<p><font style="font-weight: bold;">Work Requested:</font><br/>
+Describes the work the customer requested for this task; it defaults from 
+ the Work Code Extended Description, if applicable. This field is optional 
+ but recommended. This field may contain more information than initially 
+ appears: position the caret in the field and use the right cursor arrow 
+ to scroll and display additional text.</p>
+<p style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;">In the case of PM Work Orders</font>, this 
+ field may also list the service tasks associated with this equipment; 
+ this information is generated when the <a href="Create_PM_Work_Order.htm">Create 
+ PM Work Order</a> function is run. Note that this default behavior may 
+ be turned off by the <a href="Registry_Entry_Create_PM_WO.htm">Registry 
+ Entry for Create PM WO</a> .</p>
+<p><font style="font-weight: bold;">Work Performed:</font><br/>
+The technician&#39;s description of the work actually performed. This field 
+ is optional but recommended. This field may contain more information than 
+ initially appears: position the caret in the field and use the right cursor 
+ arrow to scroll and display additional text.</p>
+<p><font style="font-weight: bold;">Completed<br/>
+</font>The date the work on this line was completed. Press Spacebar to 
+ insert today&#39;s date, or enter the date in <font style="font-style: italic;">mmddyyyy</font> 
+ format.</p>
+<p><font style="font-weight: bold;">Standard Filters: Belts:<br/>
+Pleated Filters: Other:<br/>
+</font>These fields default from the client site equipment record, and 
+ specify which part types should be included from the Service Parts List. 
+ If corresponding fields are checked, items on the <a href="Service_Parts_List_Viewer.htm">Service 
+ Parts List</a> will be included on the parts list recorded in the Description 
+ of Work Performed field of PM Work Orders generated for Subcontractors.</p>
+<p><img src="assets/images/image/Magnify.gif" alt="" style="border: none;" border="0"/> 
+ Click the Magnify button to view the following fields:</p>
+<p><span style="font-weight: bold;">TechAnywhere 
+ Source Rn: Technician Id:</span><br/>
+If these fields are completed, this record/line was created/revised from 
+ TechAnywhere.</p>
+
+</body></html>

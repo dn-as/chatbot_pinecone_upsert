@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.8.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="gl account type"/>
+<meta name="MS-HKWD" content="type"/>
+<meta name="MS-HKWD" content="account type"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>GL Account Type Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="gl account type,type,account type"/><meta name="brsnext" value="Call_Script_Viewer.htm"/><meta name="brsprev" value="Board_Technicians_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="GL Account Type Viewer">
+        <span>GL Account Type Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>GL Account Type Viewer (Account Types)</h1>
+<h2>Purpose:</h2>
+<p>GL Account Types are used to set the default values for GL Accounts and to enable grouping on accounting statements.</p>
+<h2>Example:</h2>
+<p>Create general Income and Expense types, such as Cash and AP Trade (assets).</p>
+<h2>Usage:</h2>
+<p>Required to complete GL Accounts.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of all fields that may be included in this record. If you are using a customized system, the fields displayed on your screen may not exactly match the order or status (required, optional, default, display-only, hidden, etc.) of the fields described in this Topic.</p>
+<p><font style="font-weight: bold;">GL Account Type Id:</font> (15 character, only . and - special characters)<br/>
+A unique Id for this record. This field is required.</p>
+<p><font style="font-weight: bold;">Account Name:</font> (40 character)<br/>
+A brief description of this type: this field is optional but recommended.</p>
+<p><font style="font-weight: bold;">Security Id:</font><br/>
+If multiple location security is implemented on your centralized database system, this informational field displays the Security Id of the local user that created this record. If multiple location security is not implemented on your system, or if this record was created by a global user, this field will be blank.</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<table style="border-spacing:0px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:outset;width:100%;border-collapse: separate;">
+<colgroup><col style="width: 20%;"/>
+<col style="width: 20%;"/>
+<col style="width: 20%;"/>
+<col style="width: 20%;"/>
+<col style="width: 20%;"/>
+</colgroup><tbody><tr style="">
+<td colspan="5" style="border-spacing:0px;width: 20%;">
+<p style="font-weight: bold;">Category</p>
+</td>
+</tr>
+<tr style="">
+<td style="border-spacing:0px;width: 20%;">
+<p>o Current Asset</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>o Current Liab</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>o Capital Inc</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>o Operating Inc</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>o Cost of Sales</p>
+</td>
+</tr>
+<tr style="">
+<td style="border-spacing:0px;width: 20%;">
+<p>o Fixed Asset</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>o Long-term Liab</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>o Ret Earnings</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>o Other Inc</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>o Operating Exp</p>
+</td>
+</tr>
+<tr style="">
+<td style="border-spacing:0px;width: 20%;">
+<p>o Other Asset</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>o Other Liability</p>
+</td>
+<td style="border-spacing:0px;width: 20%;"> </td>
+<td style="border-spacing:0px;width: 20%;">
+<p> </p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>o Other Exp</p>
+</td>
+</tr>
+<tr style="">
+<td colspan="5" style="border-spacing:0px;width: 20%;">
+<p style="font-weight: bold;">Account Type Category – Display Only</p>
+</td>
+</tr>
+<tr style="">
+<td style="border-spacing:0px;width: 20%;">
+<p>Asset</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>Liability</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>Equity</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>Income</p>
+</td>
+<td style="border-spacing:0px;width: 20%;">
+<p>Expense</p>
+</td>
+</tr>
+</tbody></table>
+<p>Select the correct Category for this type by double-clicking on the circular radio button next to the desired Category (keyboard users should Tab to the desired radio button and then press the Spacebar to select it). Setting the Category will also set the old Account Type Category field to the appropriate value.</p>
+<p>SAM Pro will continue to use the old Account Type Category field, but DB Analytics will use the new Category field. Therefore, if DB Analytics will be implemented, support or a designated user should categorize the new field in all existing GL Account Type records.</p>
+<p><font style="font-weight: bold;">Report Order</font><br/>
+This optional field enables you to control the listing order of accounting reports. If the report order field is <font style="font-weight: bold;">not</font> filled out, accounts will appear in alphanumeric order within the following sequence:</p>
+<p> Report Order<br/>
+ Account Type Category<br/>
+ GL Account Type<br/>
+ GL Account</p>
+<p>Notice that in this situation, <font style="font-weight: bold;">E</font>xpenses would fall before <font style="font-weight: bold;">I</font>ncome on your GL Reports.</p>
+<p><font style="font-weight: bold;">J</font><font style="font-weight: bold;">ob Use:</font> <font style="font-weight: bold;">All Direct Indirect None<br/></font>The default value of All preserves the existing validation behavior which means there are no restrictions on job/gl account combinations. Direct and Indirect (Overhead) are used to indicate the type of jobs that can be used with GL Accounts of a particular GL Account Type in the following journals:</p>
+<p style="margin-left: 36.00pt;">AP Journal – Inventory, General, Sub and Material Returns tabs support Job Use<br/>
+ Tax tab requires GL Account Job Use of None or All<br/>
+Recurring AP Journal<br/>
+Sales Journal<br/>
+Cash Receipts Journal – AR tab supports Job Use<br/>
+  Other tab require GL Account job use of None or All<br/>
+GL Journal – accepts only &#39;None, All&#39; accounts<br/>
+Inventory Adjustments Journal – validation works on save.<br/>
+Job Journal<br/>
+Purchase Order viewer<br/>
+Quote viewer</p>
+<p><font style="font-weight: bold; font-style: italic;">Also See...</font><br/>
+ <a href="GL_Accounts_Viewer.htm">GL Accounts Viewer</a></p>
+
+</body></html>

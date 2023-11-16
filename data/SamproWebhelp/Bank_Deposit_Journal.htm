@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="journal"/>
+<meta name="MS-HKWD" content="deposit"/>
+<meta name="MS-HKWD" content="bank"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Bank Deposit Journal</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="journal,deposit,bank"/><meta name="brsnext" value="Bank_Transfer_Journal.htm"/><meta name="brsprev" value="Currency_Master_Record.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Bank Deposit Journal">
+        <span>Bank Deposit Journal</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Bank Deposit Journal</h1>
+<h2>Purpose:</h2>
+<p>Creates a record of checks and other funds (e.g., found money, vendor 
+ refunds) deposited into your bank accounts. Amounts recorded in the Cash 
+ Receipts Journal to your sweep account are automatically loaded when you 
+ click the Auto Fill button.</p>
+<p>See <a href="NSF_Check_Processing.htm">NSF Check Processing</a> for 
+ tips on handling bad checks.</p>
+<h2>Usage:</h2>
+<p>When Intercompany Processing is enabled, the Bank and Sweep Entities 
+ are both required. The Bank Entity controls what Company/Security the 
+ deposit is applied to. The Sweep Entity defines the Company/Security the 
+ deposit is from. If the Bank and Sweep Entities are different, an automatic 
+ Intercompany Processing GL transaction will be generated.</p>
+<h3>Validations:</h3>
+<p style="margin-left: 48px;">Edits to this journal are never allowed in 
+ a closed accounting period.  When an unreconciled Bank Deposit 
+ Journal entry is accessed, the user is warned if the Accounting Period 
+ is closed, and that Reversing entries will take the Effective Date and 
+ Accounting period assigned to the new transactions. When the user changes 
+ the Effective Date and Accounting Period and saves the entry, the system 
+ writes the reversal and forwarding transactions to the current period.</p>
+<p style="margin-left: 48px;">The simultaneous use of the Cash Receipts 
+ and Bank Deposit is not allowed to prevent inappropriate changes. The 
+ user may be asked to refresh a screen or restart a transaction if needed.</p>
+<p style="margin-left: 48px;">Reconciled Bank Deposit entries may not changed. 
+ A Bank Deposit entry must be unreconciled before it can be adjusted.</p>
+<p style="margin-left: 48px;">The Bank GL Account (in the record parent) 
+ and the GL Account on the Other Tab must not match.</p>
+<p>A GL &#39;sweep&#39; (suspense) account should be used with this journal. This 
+ account should have the Attribute Bank, and the Category Type Asset. This 
+ sweep account must be referenced in the GL Bank Account field of the Cash 
+ Receipts Journal.</p>
+<p><font style="font-weight: bold;">Work Order COD Entries<br/>
+</font>The Bank Deposits Journal reads cash receipts that are generated 
+ from the COD tab within the Work Order as of this build .  <font style="text-decoration: underline; ">The GL Account referenced on 
+ the COD tab of the Work Order should be the sweep account.</font></p>
+<h2>Range Viewer:</h2>
+<p>Since multiple GL accounts are present in the ‘parent’ table of this 
+ journal, simple range filters (where you simply enter the GL Account Id) 
+ do not work for these &quot;encapsulated&quot; fields. To enable the user 
+ to filter on a specific parent GL Account, special filter ranges with 
+ the necessary SQL to filter on a specific GL Account have been added to 
+ the range filter. For example, when you first access the Range screen, 
+ the GL Bank Account range will be completed as follows:</p>
+<p><font style="font-weight: bold;">GL Bank Account Id:<br/>
+</font>sql= gl_bnk_glaccnt_rn in (select glaccnt_rn from glaccnt where 
+ glaccnt_id like &#39;%&#39;)</p>
+<p>Suppose that your firm uses more then one Bank Account. To filter Entries 
+ for a specific GL Bank Account, simply replace the % in the SQL statement 
+ with the GL Bank Account Id you wish to filter on. For example, to filter 
+ on the GL Bank Account Id 1005, simply change the SQL statement in the 
+ range to:</p>
+<p>sql= gl_bnk_glaccnt_rn in (select glaccnt_rn from glaccnt where glaccnt_id 
+ like &#39;<font style="font-weight: bold;">1005</font>&#39;)</p>
+<p>Tip: Saving Ranges</p>
+<p>Rather than adjust the SQL statement each time you use the filter, you 
+ may save your settings as a range. See <a href="Filter_Button.htm#Filter_Save_Range">Save 
+ Filter Range</a> for details.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Total Deposit:<br/>
+</font>This display-only field is calculated by the system, based on the 
+ selected entries on the Receipts and Other tabs.</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">GL Bank Account:</p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt; margin-left: 48px;">GL 
+ Account Id:<br/>
+<span style="font-weight: normal;">The bank account to be debited with 
+ your deposits and other funds. The system verifies that the GL Account 
+ Type is set to &#39;Bank&#39; for this account. This is a sticky field; when entering 
+ a new transaction, the system default in the value from the previous entry; 
+ this may be changed if needed.</span></p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt; margin-left: 48px;">GL 
+ Entity Id:<br/>
+<span style="font-weight: normal;">The GL Entity (if any) affected by this 
+ deposit.</span></p>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt; margin-left: 48px;"><span style="font-weight: normal;">The</span> <span style="font-weight: normal;">Entity 
+ controls what Company/Security the deposit is applied to. The Sweep Entity 
+ defines the Company/Security the deposit is from. If the Bank and Sweep 
+ Entities are different, an automatic Intercompany Processing GL transaction 
+ will be generated.</span></p>
+<p style="font-weight: bold;">Sweep Account:</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">GL Account:</span><br/>
+The sweep account referenced in your cash receipts entry. The system verifies 
+ that the GL Account Type is set to &#39;Bank&#39; for this account. This account 
+ will be credited as funds are (credited) swept from it into your bank 
+ account. This is a sticky field; when entering a new transaction, the 
+ system default in the value from the previous entry; this may be changed 
+ if needed before importing receipts.</p>
+<p style="margin-left: 48px;">Note that the system will prevent the sweep 
+ account from being changed in existing entries, and in new entries where 
+ lines have been added via Autoload button or on the Other tab. If you 
+ need to change the Sweep Account for a new entry, it must be done before 
+ clicking Autoload.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">GL Entity:</span><br/>
+The GL Entity (if any) affected by this deposit.</p>
+<p><font style="font-weight: bold;">Period Id:<br/>
+</font>Enter the Period Id this deposit is assigned to. This Period must 
+ be active.</p>
+<p><font style="font-weight: bold;">Effective Date:<br/>
+</font>The Effective Date of the Deposit. This date must fall within the 
+ range defined by the Period you selected.</p>
+<p>The Auto Fill functionality is sensitive to the transaction&#39;s Effective 
+ Date; receipts newer than the Effective Date will not be pulled in.</p>
+<p><font style="font-weight: bold;">Transaction Id:<br/>
+</font>This field will be completed by the system when you save/change 
+ this transaction.</p>
+<p>If the transaction is changed, it will be saved with a tack number (01,02, 
+ ...) appended to the Bank Deposit Transaction Id.</p>
+<p><font style="font-weight: bold;">Transaction Description:</font><br/>
+Briefly describes this transaction.</p>
+<h2>Important Buttons:</h2>
+<p><img src="assets/images/image/AF_PUMP.gif" alt="image\AF_PUMP.gif" title="image\AF_PUMP.gif" width="56" height="28" border="0"/> When you have entered the 
+ fields in the upper portion of the screen, click the Auto Fill Transaction 
+ button to import any entries to the Sweep Account (entered from the Cash 
+ Receipts journal) that have not yet been deposited.</p>
+<p>The Auto Fill functionality is sensitive to the transaction&#39;s Effective 
+ Date; receipts newer than the Effective Date will not be pulled in.</p>
+<p><img src="assets/images/image/checkoff.gif" alt="image\checkoff.gif" title="image\checkoff.gif" width="48" height="28" align="left" border="0"/> When you have 
+ clicked the Auto Fill Transactions button, all imported lines will be 
+ checked. The Clear All button may be clicked to clear all items (if just 
+ a few checks should be selected).</p>
+<p><img src="assets/images/image/check.gif" alt="image\check.gif" title="image\check.gif" width="48" height="28" align="left" border="0"/>The Check All 
+ button selects all Receipts.</p>
+<h2>Important Fields: Receipts Tab</h2>
+<p>You may resort the data on this tab by clicking on the desired column 
+ header.  </p>
+<p><font style="font-weight: bold;">Clear:<br/>
+</font>By default all “auto-loaded” entries that precede the “effective 
+ date” are set to Yes. Toggle this box (by double-clicking on it or pressing 
+ Spacebar when the caret is on it) to clear if you do not wish to flag 
+ this check as deposited. Only lines set to Yes will be selected for deposit.</p>
+<p>The following fields are displayed to make it easier for users to identify 
+ the checks that they depositing. They represent Cash Receipts or COD entries 
+ to your sweep account that have not as yet been deposited.</p>
+<p><font style="font-weight: bold;">Check #:</font> (the check or EFT number 
+ from the AP Journal)<br/>
+<font style="font-weight: bold;">Client Name:</font> (from the Client record)<br/>
+<font style="font-weight: bold;">Check Amount:</font><br/>
+<font style="font-weight: bold;">Invoice Id:</font> (will display as *Various* 
+ if the check or EFT covered multiple invoices)<br/>
+<font style="font-weight: bold;">Reference Id:</font> (the work order, 
+ job, or client order: will display as *Various* if multiple items)<br/>
+<font style="font-weight: bold;">CRJ#:</font> (the AR Cash Receipts Journal 
+ entry number)<br/>
+<span style="font-weight: bold;"><font style="font-weight: bold;">SJ#:</font> 
+ (the AR Sales Journal Number – for COD deposits)</span><br/>
+<span style="font-weight: bold;">Entered By:</span><span> (displays the 
+ Id of the user who recorded the Cash Receipt)</span><br/>
+<font style="font-weight: bold;">Reference Name:</font> (the name from 
+ the associated Job, if available)<br/>
+<font style="font-weight: bold;">Reference Type:</font> (Client Order, 
+ Job (construction invoices) or Work Order (Service Invoices))</p>
+<h2>Important Fields: Other Tab</h2>
+<p>This tab enables you to deposit funds such as found money or vendor 
+ refunds that were not processed in the Cash Receipts journal. In previous 
+ releases, it was necessary to enter a general journal transaction to do 
+ so.</p>
+<p><font style="font-weight: bold;">Credit Amount:<br/>
+</font>The dollar amount being entered. The account that you enter on this 
+ line will be credited - not the Sweep Account in the upper section of 
+ the screen.</p>
+<p><font style="font-weight: bold;">GL Account:<br/>
+</font>The GL Account that should be credited, typically this will be an 
+ income account.</p>
+<p><font style="font-weight: bold;">GL Entity:<br/>
+</font>The GL Entity to be credited, if your firm uses entities in this 
+ application.</p>
+<p><font style="font-weight: bold;">Description:<br/>
+</font>Briefly describes this entry. It is highly recommended that this 
+ field be completed.</p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">See 
+ Also</font><br/>
+<a href="Bank_Reconciliation_Journal.htm">Bank Reconciliation Journal</a> 
+  <a href="Bank_Transfer_Journal.htm">Bank Transfer Journal</a></p>
+
+</body></html>

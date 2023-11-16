@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.16.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="requisitioning"/>
+<meta name="MS-HKWD" content="shop order"/>
+<meta name="MS-HKWD" content="material requisitioning"/>
+<meta name="MS-HKWD" content="required resource"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Materials Requistioning</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="requisitioning,shop order,material requisitioning,required resource"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Materials Requistioning">
+        <span>Start Materials Requistioning</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Materials Requisitioning</h1>
+<h3>Purpose:</h3>
+<p>This function should be run in order to generate the Shop Transfer Orders 
+ needed to move un-requisitioned stock (on the Require Resource tabs of 
+ Work Orders) from your Stocking to Staging Locations. If items are not 
+ available at the Stocking location, a BO condition will be generated. 
+ At this point, you may use the Reorder Advice Report to identify items 
+ that be purchased to relieve the back order. Alternate, you may use Start 
+ Generate Purchase Orders to create the PO’s so that these required items 
+ may be bought to stock.</p>
+<p>After running this function:</p>
+<p style="margin-left: 36.00pt;">1. The Transfer Ticket Report should be 
+ run: this printed document instructs the user to pull the stock from the 
+ stocking location to the staging location.</p>
+<p style="margin-left: 48px;">2. Record Transfer Tickets function should 
+ be run to tell SAM Pro that the materials are now available at the staging 
+ location.</p>
+<h3>Usage:</h3>
+<p>Credit Hold Work Orders are blocked from the checklist.  The user 
+ is informed of the problem, in a workspace text box, followed by the list 
+ of excluded Credit Hold Work Orders:</p>
+<p style="margin-left: 48px;">&quot;The following WorkOrders on Credit 
+ Hold were not processed. A Credit Manager must remove the WorkOrder from 
+ Credit Hold before rerunning this function.  A WorkOrder appearing 
+ on this list multiple times has multiple items to be requisitioned.&quot;</p>
+<h5>Cancelling a Shop Order</h5>
+<p>If you discover that a Shop Transfer 
+ Order has been generated in error, the Cancel Shop Order button (in the 
+ Shop Order viewer) may be clicked; the quantities allocated or back ordered 
+ will be zeroed, and the Date Closed will be set to today. The Requisitioned 
+ flag and Shop Order Id on the Work Order&#39;s ReqResources tab will be cleared. 
+ This provided a way of undoing the Start Materials Requisitioning function 
+ which generated the Shop Order. Note that the Cancel Shop Order button 
+ is only available if the Transfer Ticket has not yet been printed or recorded.</p>
+<h3>Registry:</h3>
+<p><a href="Registry_Start_Material_Requisitioning.htm">Start Material 
+ Requisitioning</a> (set initial values for function)</p>
+<p><a href="Registry_Entry_Start_Backorder_Filling.htm"><font style="font-family: Tahoma;" face="Tahoma">Registry Entry Start Backorder Filling</font></a></p>
+<p>See <a href="Registry_Entry_Shop_Order_Mode.htm">Registry Entry Shop 
+ Order</a> for setting the default stocking and staging locations used 
+ by this function.</p>
+<p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Required_Resources"><font style="font-family: Tahoma;" face="Tahoma">Registry Entry Global Settings: 
+ Required Resources</font></a></p>
+<h3>Important Fields: Range Screen</h3>
+<p style="margin-left: 8px; font-weight: bold;">Date As Of:<br/>
+<span style="font-weight: normal;">When completed, this field will omit 
+ requisitioned items that have a date required in advance of the date. 
+ The check list screen will exclude requisitioned times with a date required 
+ greater this date.</span></p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Start Date 
+ Scheduled   -  End Date Scheduled</span><br/>
+These fields allow the user to limit the processing to only work orders 
+ with a WO Technician tab Date Scheduled within the date range specified.  </p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Note:</span> 
+ if both the Start Date Scheduled and End Date Scheduled are set to the 
+ blank date (1900-01-01), ONLY those Work Orders with an Tech Line for 
+ the blank date will be selected.</p>
+<p style="margin-left: 8px;"><span style="font-weight: bold;">Company 
+ Id:</span> <br/>
+This field (displayed if Intercompany Processing is enabled) should be 
+ completed. Intercompany filtering is made via the Work Order table.</p>
+<p style="font-weight: bold;">Branch Id:<br/>
+<span style="font-weight: normal;">This range implements Branch filtering 
+ for this function. If hard-block Branch filtering is enabled (with the 
+ sys-ffv-global-settings option BranchFilterWithHardBlock set to true), 
+ the Branch Id will automatically be set to the user’s Branch filter: even 
+ if the user clears the Branch Id range, only those Branches that match 
+ his or her Branch filter (in the User record) will appear.</span></p>
+<p><font style="font-family: Tahoma; font-weight: bold;" face="Tahoma">Job</font> 
+ <font style="font-weight: bold;">Id:  WorkOrder Id:<br/>
+</font>To limit this function to a specific Work Order or Job, enter its 
+ Id in the appropriate range. More than one record may be specified:</p>
+<p style="margin-left: 36.00pt;">Multiple Id&#39;s (commas): 100005,100010,100015<br/>
+Range of Id&#39;s (underscore): 100005_100015<br/>
+Greater Than an Id: &gt;100010</p>
+<p><font style="font-weight: bold;">WO Type</font>:<br/>
+To limit this function to only WO’s of a specific type, enter the desired 
+ type in this range.</p>
+<p style="text-indent: 30.25pt;">To limit to PM Work Orders: PreventiveMaint</p>
+<p style="text-indent: 30.25pt;">To limit to Service Work Orders: Service</p>
+<p style="text-indent: 30.25pt;">To omit PM Work Orders:</p>
+<p><img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> 
+ Click the Go button to continue.</p>
+<h3>Important Fields: Checklist Screen</h3>
+<p>This checklist allows the user to select which the items for which Shop 
+ Transfer Orders will be generated.</p>
+<p><font style="font-weight: bold;">Do</font><br/>
+This field enables you to select the Inventory Items (by Work Order) for 
+ which Shop Transfer Orders be generated. A check appears in the Do field 
+ if an item is selected; by default, all Inventory Items for all Work Orders 
+ are selected. Double-click on the Do field to deselect an item (or press 
+ the Spacebar when the caret appears on this field). Refer to the Important 
+ Buttons section of this Help topic for details on selecting or deselecting 
+ all items.</p>
+<p><font style="font-weight: bold;">Work Order Id: Inventory Item Id: Quantity: 
+ Work Order Name:<br/>
+Site Id: Inventory Item Name: Site Name:<br/>
+</font> The above fields are displayed for informational purposes so that 
+ you can verify which Shop Transfer Orders should be generated.</p>
+<h3>Important Buttons:</h3>
+<p> <img src="assets/images/image/SKIN1_Check.gif" alt="" style="border: none;" border="0"/> Click the Check button to check (select) 
+ every item on the list.<br/>
+<br/>
+<img src="assets/images/image/SKIN1_CheckOff.gif" alt="" style="border: none;" border="0"/> 
+ Click to de-select every item on the list.<br/>
+<img src="assets/images/image/SKIN1_Go.gif" alt="" style="border: none;" border="0"/> 
+ Click to generate Shop Transfer Orders for the selected Inventory Items.</p>
+
+</body></html>

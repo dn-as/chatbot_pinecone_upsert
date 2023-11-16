@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.12.3.0_12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="cost by location"/>
+<meta name="MS-HKWD" content="report"/>
+<meta name="MS-HKWD" content="rebuild"/>
+<meta name="MS-HKWD" content="location"/>
+<meta name="MS-HKWD" content="inventory"/>
+<meta name="MS-HKWD" content="start"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Rebuild Inventory Cost Table</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="cost by location,report,rebuild,location,inventory,start"/><meta name="brsnext" value="Job_Budget_Tab.htm"/><meta name="brsprev" value="ADP_Payroll_Export.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Rebuild Inventory Cost Table">
+        <span>Start Rebuild Inventory Cost Table</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Rebuild Inventory Cost Table</h1>
+<p>This new starter function creates and fills a new table &#39;Item_Costs_By_Lctn&#39; (dropping a pre-existing table if one exists). When this function is run, it will create a snapshot of inventory costs at each location at that moment in time that may be used for reporting purposes. Note that although the table will exist in your database, a View is not available in SAM Pro.</p>
+<p>If your firm has a significant amount of inventory history, you may wish to run this function after hours. Reports that access this table should be run as soon as possible after the function is run. This table will contain the following columns evaluated for each combination of item and location in the invntryitmlctn table:</p>
+<p>    invntryitm_rn<br/>
+    lctn_rn<br/>
+    qntty_on_hnd<br/>
+    avrge_cst<br/>
+    lst_cst</p>
+
+</body></html>

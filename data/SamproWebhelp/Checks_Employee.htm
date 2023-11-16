@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Checks Employee</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="payroll,check,employee,executive payroll"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Checks Employee">
+        <span>Checks Employee</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Checks Employee</h1>
+<h2>Purpose:</h2>
+<p>Executive Payroll checks are not displayed unless the User&#39;s record has Executive PR flagged.</p>
+<p>A check record is generated when a live or EFT Payroll Check is generated is SAMPro. This records should NEVER be altered by the user. Registry entries to prevent inadvertent changes to these records is highly recommended.</p>
+<p>This viewer may also be used during initial data-entry to enter check printed from a different system.</p>
+<p>This Viewer lists ONLY PR checks. It is sensitive to the user&#39;s/employee&#39;s Executive Payroll status.  If the User&#39;s record has the Executive PR? box checked, PR Checks for all Employees will be listed. If the User does not have Executive PR privileges, only checks for those Employees who are NOT flagged as Executive Payroll will be listed.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">View Checks:</span> Although this existing function is still available, we recommend reviewing which User Groups need it. It still shows PR and Vendor checks, and is NOT sensitive to Executive Payroll.</p>
+<h2>Registry:</h2>
+<p>Access to fields in this view should be disabled once initial data-entry has been completed; see <a href="Registry_Check_Employee.htm">Registry Check Employee</a> for details.</p>
+<p> </p>
+
+</body></html>

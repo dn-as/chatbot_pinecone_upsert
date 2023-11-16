@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.9.6.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report EFT Accounts Payable (United States)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="direct deposit,EFT - US AP Direct Deposit,ACH,Electronic Funds Transfer"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report EFT Accounts Payable (United States)">
+        <span>Report EFT Accounts Payable (United States)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report EFT Accounts Payable (United States)</h1>
+<h2>Purpose:</h2>
+<p>This function is designed to generate the electronic file that will 
+ be transmitted to the Automated Clearing House for direct deposit of AP 
+ checks. It will also produce a printed EFT Register report for your records. 
+ Click on <a href="AP_EFT___AFT_Direct_Deposit_Overview_(US_and_Canada).htm">Overview</a> 
+ to see a summary of the procedures needed to implement this functionality.</p>
+<h2>Usage:</h2>
+<p>A registry entry must be in place for each GL Account/GL Entity combination 
+ you intend to create direct deposit files for: see <a href="Registry_Report_EFT_Accounts_Payable_(US).htm">Registry 
+ Report EFT Accounts Payable (US)</a>. In most cases, the Vendor&#39;s EFT 
+ Bank Id, Account Number must be filled in on the Defaults tab with his 
+ or her direct deposit information. In addition, the appropriate Vendor 
+ Email address must be completed. A special 
+ registry and Vendor User Field settings are required if <a href="Registry_Report_EFT_Accounts_Payable_(US).htm#Special_Settings_for_PaymodeX">PaymodeX</a> 
+ is enabled.   The 
+ ACH file that is generated when Report EFT Accounts Payable is run now 
+ specifies the SEC code CCD in the batch header for payments to businesses. 
+ </p>
+<p>This report should be run <font style="font-weight: bold;">after</font> 
+ the Print AP Checks function has been completed. After printing the register, 
+ you will be asked to confirm that an electronic file should be created. 
+ </p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Start Date: End Date:</font><br/>
+Defines the date range for effective check dates to be included in the 
+ file. Enter these dates in a <font style="font-style: italic;">mmddyyyy</font> 
+ format or double-click to access the calendar to help you do so.</p>
+<p><font style="font-weight: bold;">GL Account Id:</font><br/>
+(Required.) The bank (cash) account on which these AP checks are drawn. 
+ Double-click on this field to select from a list of Id&#39;s.</p>
+<p><font style="font-weight: bold;">GL Entity Id:</font><br/>
+If a GL Entity was specified in the Print AP Check function, a GL Entity 
+ Id must also be specified here.</p>
+<p><font style="font-weight: bold;">Include Checks?<br/>
+Include Void Checks?<br/>
+</font>Check the field/fields to select which information to include on 
+ this file run. Note that direct deposit check information will only be 
+ included in the file if the Include Checks field is flagged. These fields 
+ may be checked/cleared by double-clicking on them (or by pressing the 
+ Spacebar when the focus is on them).</p>
+<h2>Important Buttons:</h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" align="left" border="0"/> Generate the EFT File. 
+ <font color="#000000">By default, the file will be placed in the same 
+ directory as SAMPro executable unless otherwise specified via registry.</font></p>
+
+</body></html>

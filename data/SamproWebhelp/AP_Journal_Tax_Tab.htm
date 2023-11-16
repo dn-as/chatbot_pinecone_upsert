@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.9.1.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="tax"/>
+<meta name="MS-HKWD" content="tax authority"/>
+<meta name="MS-HKWD" content="ap"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>AP Journal Tax Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="tax,tax authority,ap"/><meta name="brsnext" value="Report_AFT_Canadian_.htm"/><meta name="brsprev" value="Capture_SQL_History.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AP Journal Tax Tab">
+        <span>AP Journal Tax Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>AP Journal Taxes Tab</h1>
+<h2>Purpose:</h2>
+<p>This tab provides an alternative method of recording the tax specified 
+ on Vendor invoices instead of using the General tab to do so. The taxes 
+ entered on this Tax Tab will be written to the Tax History table’s ‘Tax 
+ Amount AP’ fields where they will be available for enhanced sales tax 
+ history reporting. <font style="text-decoration: underline; ">However,</font> 
+ <font style="text-decoration: underline; ">the</font> <font style="text-decoration: underline; ">taxes 
+ due the Vendor that are entered on this tab will NOT impact Job Costing 
+ in any way.</font></p>
+<p>If you wish tax due the Vendor to impact job costing:</p>
+<p style="margin-left: 36.00pt;">1. (Preferred) If you flag the Job Cost 
+ field in the Sales Tax Group, the anticipated tax and tax base will automatically 
+ be posted to the Job Costing (for cost and markup) then job or work order 
+ related PO items are receipted. You would then use the AP Journal Taxes 
+ Tab to record the actual tax on the Vendor’s invoice.</p>
+<p style="margin-left: 36.00pt;">Or</p>
+<p style="margin-left: 36.00pt;">2. The taxes may be entered in the old 
+ way on the General tab, referencing a specific Job.</p>
+<h2>Usage:</h2>
+<p>In Version 9.0 and above, the system 
+ uses the Sales Tax Authority&#39;s default GL Expense Account (when available) 
+ for sales tax paid.</p>
+<p>Taxes may be added to this tab in two ways:</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">1.</font> 
+ <font style="font-weight: bold;">The</font> <font style="font-weight: bold;">Add 
+ Tax</font> <font style="font-weight: bold;">Button on the Main Tab</font> 
+ <img src="assets/images/image/addtaxauth.gif" alt="image\addtaxauth.gif" title="image\addtaxauth.gif" width="54" height="17" border="0"/></p>
+<p style="margin-left: 36.00pt;">If the Tax Group Id field is completed, 
+ clicking this button defaults in one line on the Tax Tab for each tax 
+ authority in the Tax Group. The system also defaults in the Tax Base from 
+ the Total Entered field. The exact Tax amount may be adjusted by the user 
+ if needed to match the Vendor’s invoice exactly.</p>
+<p style="margin-left: 36.00pt;">When clicking the Add Tax button, the 
+ user will receive an error message if the Invoice Total (entered directly 
+ by the user) does not exceed the Invoice Entered (calculated by the system). 
+ Also, if a line is generated to a Tax Authority with a graduated rate, 
+ Tax Authority Id, GL Account, and Tax Base are completed so that the user 
+ can easily complete the information from the Vendor’s invoice.</p>
+<p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;"><font style="font-weight: bold;">2. Adding the Tax Lines Manually</font></p>
+<p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">In 
+ general, your procedure would be to:</p>
+<p style="margin-left: 66.25pt;">1. Pick a Tax Authority.<br/>
+2. Record the Tax Base according to the vendor&#39;s invoice.<br/>
+3. Correct the Tax Amount to match the vendor&#39;s invoice...only if necessary.</p>
+<p style="margin-left: 66.25pt;"><font style="font-weight: bold;">Note 
+ that if multiple authorities are due taxes (e.g., city and state), they 
+ must be entered separately.</font></p>
+<h2>Important Fields:</h2>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Tax 
+ Authority Id:<br/>
+</font>Enter the Taxing Authority Id or double-click to select from a list.</p>
+<p><font style="font-weight: bold;">GL Account</font>:<br/>
+The expense account to be debited for this tax. This field defaults from 
+ the Tax Authority.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">GL 
+ Entity:</font><br/>
+The GL Entity for which this tax expense was incurred. This field should 
+ be entered if your firm departmentalizes or tracks profit centers. This 
+ field defaults from the PO but may be changed by the user.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Tax 
+ Base:<br/>
+</font>The dollar amount subject to taxation: a warning will be displayed 
+ if the amount that you enter exceeds the amount you entered for the vendor’s 
+ invoice. You may enter this field or, alternately, you can enter the Rate 
+ &amp; Tax and the system will calculate the Base accordingly.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Rate:<br/>
+</font>The Tax Rate will default from the Tax Authority unless it uses 
+ graduated rates. You may enter this field or, alternately, you can enter 
+ the Base &amp; Tax and the system will calculate the Rate accordingly.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Tax:</font><br/>
+The amount of the tax assessed by this Authority. You may enter this field 
+ or, alternately, you can enter the Base &amp; Rate and the system will 
+ calculate the Tax accordingly. If a new Tax Amount is entered, the system 
+ will ask the user if the Tax Base should be recomputed.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Description:<br/>
+</font>May be used to briefly describe this entry.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><font style="font-weight: bold;">Tax 
+ Authority Name: GL Account Name: GL Entity Name:<br/>
+</font>These display-only fields default from the Tax Authority record, 
+ and will help the user verify that the fields on this tab have been entered 
+ correctly.</p>
+
+</body></html>

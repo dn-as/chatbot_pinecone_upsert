@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.1.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="data entry fields"/>
+<meta name="MS-HKWD" content="fields"/>
+<meta name="MS-HKWD" content="id field"/>
+<meta name="MS-HKWD" content="text field"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Fields</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="data entry fields,fields,id field,text field"/><meta name="brsnext" value="Data_Entry_Keys.htm"/><meta name="brsprev" value="Viewers.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Fields">
+        <span>Fields</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Data Entry and Information Only Fields</h1>
+<p>In many records, some fields are displayed for informational purposes only. For example, in a Client Site record, the name of the Client will be displayed, but cannot be edited directly (this would have to be done from the Client record itself). Fields that cannot be accessed directly are referred to as <font style="font-style: italic;">information only or display only fields</font>. The background of an information only field is displayed in the same color as the window itself.</p>
+<p>Fields that can be accessed within a record are known as <font style="font-style: italic;">data entry fields</font>. These fields are distinguished by their different background color.</p>
+<h2>Entering Information in a Data Entry Field</h2>
+<p>In order to enter information in a data entry field, the <font style="font-style: italic;">focus</font> must be on that field. Basically, the focus determines your typing position. When a field has the focus, its background color is reversed and it contains the rectangular, data entry caret.</p>
+<p>To use the mouse to focus on a field, simply click on that field. To use the keyboard, press the Enter or Tab key to move from one field to the next. The left and right arrow keys can be used to position the focus within a field. Once the desired field has the focus, you can type in your data from the keyboard, or (in the case of Id fields) take this information back from a list.</p>
+<h2><span style="font-weight: bold;">Right-Click in a Data Entry Field</span> to Copy or Paste</h2>
+<p style="margin-left: 8px;">When the user right clicks on a non-Id, data entry field a menu pops up. This menu displays the following options:</p>
+<p style="margin-left: 88px;">Copy (Ctrl+C)<br/>
+Paste (Ctrl+V)<br/>
+Customize Field (if allowed for the User&#39;s Group)</p>
+<p style="margin-left: 8px;">To select an option with the mouse, click on that option. To exist the menu without a selection, click off of the menu.</p>
+<p style="margin-left: 8px;">To select an option with the keyboard, use the Up or Down arrow key to highlight the option, and then press Enter to select it. To exit the menu without a making a selection using the keyboard, press Esc (Escape).</p>
+<p style="margin-left: 8px;">This functionality makes it easy to copy a field&#39;s contents to the clipboard, or paste copied text to the field. The keyboard shortcuts of Ctrl+C and Ctrl+V for Copy and Paste are also supported.</p>
+<h2>Right-Click in the Notes Text Field</h2>
+<p style="margin-left: 8px;">When the user right clicks in the Notes text field, a menu pops up with the options of Copy and Paste.  </p>
+<p>To select an option with the mouse, click on that option. To exit the menu without a selection, click off of the menu.</p>
+<p>To select an option with the keyboard, use the Up or Down arrow key to highlight the option, and then press Enter to select it. To exit the menu without making a selection using the keyboard, press Esc (Escape).</p>
+<p>Notes text may be selected to copy by holding down the left mouse button while scrolling. The selected text may be copied via the right-click menu, or by pressing Ctrl+C.</p>
+<h2>Data-Entry in Id Fields</h2>
+<p>In most cases, when entering an Id from the keyboard, you need only continue to type until the Id is unique; the system will fill in the rest for you. For example, suppose that the following inventory items are on your system:</p>
+<p> WD11-ADB<br/>
+ WD115676-01<br/>
+ WD25367-65<br/>
+ WD36436-45</p>
+<p>When you add item WD25367-65 to an invoice, you would only need to type WD2 and then the system would complete the remaining digits for you! If you continue to type, the characters will simply overstrike the ones entered by the system.</p>
+<p>Instead of typing in the contents of a field, you can pop up a listing of possible values. To display a <font style="font-weight: bold;">simple list</font> of Id&#39;s, use the left mouse button to double-click on the field that you wish to enter (or press Alt+F7 with the focus on the desired field). Select the record to take back, and then double-click the left mouse button (or press Ctrl+T).</p>
+<p><img src="assets/images/image/IdSearch.gif" alt="image\IdSearch.gif" title="image\IdSearch.gif" width="16" height="16" align="left" border="0"/> The Id Lookup button will appear at the right-hand side of Id fields if a registry setting enables it. This enhancement lets the user easily see which fields are Id fields, and also select the field AND bring up the list in a single click of the button.</p>
+<p>To display the <font style="font-weight: bold;">standard viewer</font> (so that you can view, modify or add items as needed), click the Id field with right mouse button. The underlying record will be displayed as a maximized window.</p>
+<p><img src="assets/images/image/SKIN1_ReturnId.gif" alt="image\SKIN1_ReturnId.gif" title="image\SKIN1_ReturnId.gif" width="94" height="28" border="0"/><br/>
+To select an item to take back from the list, double-click on that item with the <font style="font-weight: bold;">right</font> mouse button (or focus on the item and then click the Return (Take Back Id) button.</p>
+<p><img src="assets/images/image/SKIN1_Glasses.gif" alt="image\SKIN1_Glasses.gif" title="image\SKIN1_Glasses.gif" width="94" height="28" border="0"/><br/>
+If you are not sure which record to select, you can examine the record in detail by positioning the focus on it and then selecting the View button.</p>
+<p>The information you selected to take back will be inserted in the data entry field. Non-data entry fields will be updated appropriately when you focus on another field.</p>
+<h5>Right-Click in an Id Field</h5>
+<p>Normally, right clicking on an Id field will bring up a Viewer for the parent record. If the user would like to see the above menu instead, the user should hold down the Control key while doing the right click.</p>
+<h2>Date and Time Fields</h2>
+<p>When you initially begin to type in a date field, the system will automatically change the year to the current year.</p>
+<p>Pressing <font style="font-weight: bold;">Ctrl+b</font> or <font style="font-weight: bold;">Spacebar</font> enters the current date in a date field, or the current time in a time field. The + or - keys add or subtract days from the date field.</p>
+<p>Pressing <font style="font-weight: bold;">Alt+F7</font> pops up the Clock viewer for the Time field with focus, or the Calendar for the Date field with focus. You may use these viewers to set a Time or Date field.<br/></p>
+<p><font style="font-weight: bold;">Tip: Resetting the Blank Date (01011900)<br/></font>If the caret is in the first position of a date field, shift-delete changes the date display to 01011900 (this will appear as a blank field when you move out of the field). If the cursor is not in the first position, shift-delete works like it did before - it changes each character starting from the caret&#39;s position to the end of the date display string to a zero.</p>
+<h2>Entering Information in Tabular Records</h2>
+<p>When a tabular record is displayed (i.e., Labor Journal, Purchase Order, Work Order Labor tab, etc.), you can select a field for data entry by clicking on the field (as discussed above) or on its title. When you do so the caret will be positioned in the data-entry field in the selected row.</p>
+<p><font style="font-weight: bold;">Detail and Line</font> <font style="font-weight: bold;">View</font><font style="font-weight: bold;">s</font> <font style="font-weight: bold;"><br/></font>Many tabular viewers enable you to switch from the LineView (often requiring scrolling to view the right-hand fields) to a Detailed or Full View of one line. The Full View is a &quot;stacked&quot; view of that line in which all data-entry fields are displayed simultaneously. Scrolling is generally not required in the FullView display.</p>
+<p><img src="assets/images/image/Magnify.gif" alt="image\Magnify.gif" title="image\Magnify.gif" width="18" height="18" border="0"/> To display the Detail view, click the magnifier in the first column of the line that you wish to display. When you do so, the Detail (Full) View for that line will appear.</p>
+<p><img src="assets/images/image/LinesView.gif" alt="image\LinesView.gif" title="image\LinesView.gif" width="94" height="32" border="0"/> Clicking the Lines View button will return the tab to its initial, multiple line view. Note that you may click the Save or Change record button from either view.</p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">Also See...</font><br/>
+To see related information, click on the following:<br/>
+ <a href="Data_Entry_Keys.htm">Data Entry Keys</a>  <a href="Take_Back_Button.htm">Return Id (Take Back Button</a> <a href="Folder_Viewer.htm">Interactive Data-Entry Folders</a></p>
+
+</body></html>

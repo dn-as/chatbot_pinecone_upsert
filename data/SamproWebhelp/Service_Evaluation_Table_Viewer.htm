@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.11.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="service evaluation"/>
+<meta name="MS-HKWD" content="evaluation grading"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Service Evaluation Table Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="service evaluation,evaluation grading"/><meta name="brsnext" value="Start_Compute_Technician_Evaluation.htm"/><meta name="brsprev" value="Service_Evaluation_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Service Evaluation Table Viewer">
+        <span>Service Evaluation Table Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Service Evaluation Table Viewer</h1>
+<h2>Purpose:</h2>
+<p>The Service Evaluation script defined by this table will be run when the work order that references it is completed or invoiced , or when it achieves the Work Order Escalation Status defined via registry (see below) . The results will be written to the Evaluation Tab of the Work Order.</p>
+<p>Running the Start Compute Technician Evaluation function generates a summary of this work order service evaluation data. Doing so generates a numerical grade for the primary technician (either an employee or a vendor) that did the work. This evaluation grade is available for reporting purposes, and may be displayed on the TechFinder viewer to assist the dispatcher in assigning a suitable technician.</p>
+<h2>Usage:</h2>
+<p>When a work order is created all service evaluation questions from the Work Order’s Service Evaluation table are moved to the Work Order Evaluation child table and the answers are set to unknown. The Unanswered Service Evaluation Wizard will be at various time if the lines as set to unknown (see Category description below for details).</p>
+<p>Requires <a href="Service_Evaluation_Viewer.htm">Service Evaluation records</a> .</p>
+<p>Referenced in the Client Site Equipment record, Work Order, and Start Compute Technician Evaluation function.</p>
+<h2>Registry:</h2>
+<p>See <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#Registry_Workorder_Service_Evaluations">Work Order Registry - Service Evaluations Option</a> for details defining the Work Order Escalation Status Changes used to invoke the Unanswered Service Evaluation Wizard.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Evaluation Table Id:<br/></font>Uniquely defines this table.</p>
+<p><font style="font-weight: bold;">Description:<br/></font>Briefly describes what this evaluation is used for. It is a required field.</p>
+<p class="Tab" style="background-color: #e5e5e5; border-top: 1.50pt solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1.50pt solid #000000; border-right: 1.50pt solid #000000;">Questions Tab</p>
+<p><font style="font-weight: bold;">Evaluation Id:<br/></font> Enter a valid Service Evaluation Id (or double-click to select from a list) to add an evaluation question to this table.</p>
+<p><font style="font-weight: bold;">RV:<br/></font>The Rate Value that will be earned if this question is answered ‘Yes’ doing the work order evaluation. The sum of the RV’s for this table is the maximum number of points that can be earned by a Technician for a work order that references this table.</p>
+<p><font style="font-weight: bold;">Goal:<br/></font>The goal of this evaluation, for reporting purposes.</p>
+<p><font style="font-weight: bold;">Question:<br/></font>This display-only field defaults when an Evaluation record is selected. This question will be asked when a work order is closed or invoiced.</p>
+<p><font style="font-weight: bold;">Category</font>:<br/>
+This display-only field defaults from the Service Evaluation record. When a Work Order is Completed all Closing and General unanswered questions are displayed in a Wizard and must be answered.</p>
+<p>When a Work Order is Invoiced all unanswered questions are displayed in a Wizard and must be answered.</p>
+<p>The Unanswered Service Evaluation Questions Wizard will be also be invoked when the Work Order Escalation Status is set to the value (or one of the values) defined in the sys-viewer-vwrkordr registry’s GeneralEvaluationLogTypes option. All unanswered questions (including Closing, Invoicing and General questions) will be displayed in the wizard when it is invoked in this fashion.</p>
+
+</body></html>

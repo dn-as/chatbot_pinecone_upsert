@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>AR Cash Receipts OpenEdge Processing</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="APT,Accelerated Payment Technology,Payment Processor,Credit Card Processing,OpenEdge,XCharge,Global Payments"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AR Cash Receipts OpenEdge Processing">
+        <span>AR Cash Receipts OpenEdge Processing</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>AR Cash Receipts OpenEdge / Global Payments Processing</h1>
+<p>If you have established a MOTO account with OpenEdge / Global Payments, 
+ you may process a credit card payment or 
+ refund in the AR Cash Receipts Journal once your registry 
+ and servers have been correctly configured (see <a href="Registry_Payment_Processor_APT_Accelerated_Payment_Technology.htm">Open 
+ Edge Registry</a>).</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Note:</span> 
+ Edits and deletions to AR lines for Credit Card paid entries are not allowed 
+ for Full users. Only Special (support) users are allowed to edit or delete. </p>
+<h3>Processing Payments</h3>
+<p>Click <a href="#Processing_Credit_Refunds">Processing 
+ Credit Refunds</a> for details on issuing credits.</p>
+<p>1. If you use a different sweep account for OpenEdge payments, change 
+ the Bank Account on the GL tab.</p>
+<p>2. On the Main tab, select Invoice or Invoices that the customer wishes 
+ to pay for.</p>
+<p>3. Enter the Discount (if any) and Total Receipt; this is the amount 
+ that will be processed on the credit card.</p>
+<p><img src="assets/images/Process Payment.bmp" alt="" style="border: none;" border="0"/></p>
+<p>4. Verify that the customer has their credit card ready, and then click 
+ the Process Payment button.</p>
+<p class="MsoNormal">If 
+ your firm is set up for Payment Processing and an Invoice or Invoices 
+ have been selected for payment, the following happens when the Process 
+ Payments button is clicked:</p>
+<p class="MsoNormal" style="margin-left: .5in;">Determine 
+ the Client Site associated with each Invoice that has been selected for 
+ payment in the transaction being recorded.</p>
+<p class="MsoNormal" style="margin-left: .5in;">If 
+ an eligible alias token is NOT found, SAMPro will simply display a message 
+ reminding you that you will only have 60 seconds to enter the information; 
+ click Yes to continue.  </p>
+<p class="MsoNormal" style="margin-left: .5in;">If 
+ one or more Aliases are found, the system will display a list of the eligible 
+ Payment Alias/Token values found in the above list of Sites.  To 
+ be eligible, a Site&#39;s Alias/Token must have an expiration date greater 
+ than or equal to the current system date. </p>
+<p class="MsoNormal" style="margin-left: 88px;">If 
+ <b>No Selection</b> is highlighted and the Select button clicked SAMPro 
+ will display a message reminding you that you will only have 60 seconds 
+ to enter the information; click Yes to continue.  Another message 
+ informs you that the journal entry will be added before Payment Processing; 
+ click Yes again.  </p>
+<p class="MsoNormal" style="margin-left: 88px;">If 
+ an <b>existing Alias</b> is highlighted and the Select button clicked, 
+ the system will send the information to Open Edge; if approved, the Credit 
+ Card fields will be completed and the Cash Receipt saved.</p>
+<p class="MsoNormal" style="margin-left: 88px;">If 
+ the <b>Cancel</b> or red X button is clicked, the list will be closed 
+ SAMPro will display a message reminding you that you will only have 60 
+ seconds to enter the information; click Yes to continue or Cancel to opt 
+ out of the payment processing.</p>
+<p>5. If an existing alias was not selected, 
+ SAMPro will display a message reminding you that you will 
+ only have 60 seconds to enter the information; click Yes to continue. 
+  Another message inform you that the journal entry will be added 
+ before Payment Processing; click Yes again.  </p>
+<p>6. When the X-Web or SAMPro&#39;s Credit 
+ Card Information for Tokenization portal opens, enter the 
+ customer&#39;s credit card number (without spaces or dashes) and expiration 
+ date and click Submit. If the Credit 
+ Card Information for Tokenization portal is being used, be sure that the 
+ Country field is completed before clicking Submit. </p>
+<p>7. If the card is approved, the web portal will display &quot;Approval&quot; 
+ in red. If it is not approved, check the number and expiration date and 
+ try submitting it again.</p>
+<p style="margin-left: 48px;">In Open 
+ Edge / Global Payments, you can process a card (payment or alias) and 
+ get an Approval + an error attached. In previous releases, SAMPro treated 
+ this scenario as a failed transaction, but in reality the transaction 
+ had been approved and showed on the OpenEdge Merchant site <span style="font-weight: bold; 
+	 font-style: italic;">if</span> the Open Edge account was set up to 
+ approve transactions with these issues. SAMPro now treats the following 
+ as Approved:</p>
+<p style="margin-left: 48px;">Approved 
+ - AVS &amp; CSC Mismatch<br/>
+Approved - AVS Mismatch<br/>
+Approved - CSC Mismatch</p>
+<p style="margin-left: 48px;">Note that 
+ an AVS Mismatch occurs if the billing address does not match the address 
+ on file with the card-issuing bank or credit card company.  A CSC 
+ Mismatch occurs if the Card Security Code does not match.  </p>
+<p>8. When the payment is approved, the system will write the Approval 
+ Code back to the Check Number field, and complete the CC Masked Account 
+ field for future reference.</p>
+<p style="margin-left: 48px;">Timing Out: If the Alias is not generated 
+ within 60 seconds, it will not be written back to SAMPro, even if a success 
+ is noted in the web portal.  If this occurs, repeat the Alias process.</p>
+<p style="margin-left: 8px;">9. When preparing to enter the next Cash Receipt, 
+ remember to set the GL Bank Account to the appropriate value.</p>
+<p style="margin-left: 48px;">Note: For Cash Receipt Transactions, SAMPro 
+ will also send the SAMPro user ID to column &quot;User ID&quot; of export, 
+ and sent the User Def 1 to the Client Id.</p>
+<h3><a name="Processing_Credit_Refunds" id="Processing_Credit_Refunds"></a>Processing 
+ Credit Refunds</h3>
+<p>1. Select a Credit Memo in the AR Cash 
+ Receipts Journal, and enter the Total Receipt as a negative number.</p>
+<p>2. Verify that the customer has their 
+ credit card ready, and then click the Process Payment button.</p>
+<p>3. Click through the usual messages; 
+ when the x-web portal opens, enter the customer&#39;s credit card number (without 
+ spaces or dashes) and expiration date and click Submit.</p>
+<p>4. If the card is approved, the web 
+ portal will display &quot;Approval&quot; in red and the customer&#39;s card 
+ will be credited with the refund.  If it is not approved, check the 
+ number and expiration date and try submitting it again.</p>
+
+</body></html>

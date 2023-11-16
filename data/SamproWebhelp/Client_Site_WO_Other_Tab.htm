@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.5.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="work order"/>
+<meta name="MS-HKWD" content="client site"/>
+<meta name="MS-HKWD" content="site"/>
+<meta name="MS-HKWD" content="other rate"/>
+<meta name="MS-HKWD" content="other"/>
+<meta name="MS-HKWD" content="trip charge"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Client Site WO Other Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="work order,client site,site,other rate,other,trip charge"/><meta name="brsnext" value="Client_Site_Quote_Tab.htm"/><meta name="brsprev" value="Client_Site_Sales_Tab.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Site WO Other Tab">
+        <span>Client Site WO Other Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Client Site WO Other Tab</h1>
+<p>This tab enables you to default in trip charges and other additional 
+ charges on work orders created in New Call. These charges will be added 
+ to the Work Order Other tab. This <a href="Registry_Specify_Site_WO_Other_Lines.htm">Registry</a> may be 
+ used to specify which lines from the Site WO Other Tab should be added 
+ based is the Work Order&#39;s Service Category for Work Orders created in 
+ New Call, the Job Scheduler and the Project Work Order Generator.</p>
+<p>By default, this tab will not impact PM Work Orders created from the 
+ Create PM Work Order function. However, 
+ a <a href="Registry_Entry_Create_PM_WO.htm#Include_Site_WO_Other_Tab_Lines_on_PM_Work_Orders">Registry 
+ to Include WO Other Lines</a> may be enabled also these lines to PreventiveMaint 
+ Work Orders. </p>
+<p>The system uses the Sale Tax Group in the Job record when generating 
+ the tax information for Work Order Other line generated from this tab.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">WO Other 
+ to GL Enabled in Accounting Period</font><font style="font-weight: bold;">:</font> 
+ When a work order is created in New Call, and an Other line is automatically 
+ generated from this tab, the appropriate GL History entries will be generated 
+ if the Accounting Period’s WO Other to GL box is flagged. To determine 
+ the correct Accounting Period, the system will look at the date to use 
+ on the WO Other line (either the date scheduled, or today&#39;s date if there 
+ is no scheduled date). If the date is with the default Accounting Period, 
+ it will use that. If the date is NOT within the default Accounting Period, 
+ it will find the appropriate active Accounting Period and use that.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important 
+ Note for TechAnywhere Users<br/>
+</font>If you are running TechAnywhere, this tab should be used with caution 
+ since WO Other lines are not delivered to the TechAnywhere device, and 
+ would not be included if the Technician generated an invoice in the field.</p>
+<p style="margin-left: 8px;"><font style="font-weight: bold;">Quantity:<br/>
+</font>The amount of this charge to default to the Work Order Other tab.</p>
+<p><font style="font-weight: bold;">Other Rate Id:<br/>
+</font>Enter the Id of the Other Rate (or double-click to select from a 
+ list) to be included on the Other tab of Work Orders created for this 
+ Site in New Call. The Other Rate&#39;s Cost Category Post Type should be set 
+ to &#39;Other&#39;, and the Billing Type to Unit Price.</p>
+<p><font style="font-weight: bold;">Other Rate Description: Standard Unit:<br/>
+</font>Cost Category Id and Description: Unit:<br/>
+These display-only fields default from the Other Rate record.</p>
+
+</body></html>

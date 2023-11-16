@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.5.1_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Client Site Equipment MasterSchedule Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="pm schedule,master contract,master schedule"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Site Equipment MasterSchedule Tab">
+        <span>Client Site Equipment MasterSchedule Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Client Site Equipment MasterSchedule Tab</h1>
+<p>By default, this tab lists upcoming inspections associated with the 
+ specified Master Contract for which a PM Work Order has not each been 
+ created.  The following fields are displayed for each inspection 
+ line: </p>
+<p style="font-weight: bold;">Contract Id:  Inspect Date: Hours: Cost: 
+ Value:</p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; 
+									 margin-left: 8px; font-weight: bold;"><u style="font-weight: normal; text-decoration: none; ">However,<span style="font-weight: bold;"> </span>w</u><span style="font-weight: normal;">ith 
+ the UseMasterContractEquipmentTable global registry set to true, processing 
+ for the MasterSchedule list is produced as noted below using the Advanced 
+ Analytics function.</span> </p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; 
+									 font-weight: bold; margin-left: 48px;">Contract 
+ Id:<br/>
+<span style="font-weight: normal;">Lines without a Contract Id were entered 
+ on the Client Site Equipment PM Schedule tab. Lines with a Contract Id 
+ were manufactured from a Master Contract Id.</span> </p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; 
+									 font-weight: bold; margin-left: 48px;">Source: 
+ <br/>
+<span style="font-weight: normal;">When the Source is &#39;MCE&#39;, the line is 
+ predicted based on the Master Contract definition.</span></p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; 
+									 margin-left: 48px;">When the Source 
+ is &#39;CSE&#39;, the line exists on the Client Site Equipment PM Schedule tab.</p>
+<p style="mso-fareast-font-family: &#39;Times New Roman&#39;; 
+									 font-weight: bold; margin-left: 48px;">Work 
+ Order:<br/>
+<span style="font-weight: normal;">When a &#39;CSE&#39; line has a Work Order Id, 
+ it has already been through the Create PM Workorder process. &#39;CSE&#39; Lines 
+ with a Contract Id If but no Work Order Id were manufactured through the 
+ Build Out Process but have not yet had the PM Work Order generated.  </span></p>
+
+</body></html>

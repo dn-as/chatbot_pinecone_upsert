@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.1.0_21";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="excel"/>
+<meta name="MS-HKWD" content="Access"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="crystal reports"/>
+<meta name="MS-HKWD" content="external applications"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Launch External Apps (application name)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="excel,Access,registry,crystal reports,external applications"/><meta name="brsnext" value="Registry_Entry_for_Report_and_Function_Substitution.htm"/><meta name="brsprev" value="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm"/></head>
+
+<body page-style="x-size: Letter;">
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Launch External Apps (application name)">
+        <span>Registry Launch External Apps (application name)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Launch External Apps (application name)</h1>
+<h2>Purpose:</h2>
+<p>Any program that can be initiated from a command-line operation can 
+ be defined as a function and assigned to user groups within Data-Basics 
+ software.  Data-Basics uses a combination of Registry and User-Defined 
+ Function records to construct the command-line value that launches the 
+ external application.</p>
+<p class="Support"> </p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>1. Creating a Registry Entry to define a Link to an External Program</h2>
+<p>Create a registry entry for the application that you wish to launch.</p>
+<p><font style="font-weight: bold;"> Id:</font>            <font color="#FF0000"> </font><font style="font-weight: bold; font-style: italic;">Application 
+ name</font> (or whatever else makes sense) and contents:</p>
+<p><font style="font-weight: bold;">Setting Key:</font> path <font style="font-weight: bold;">Setting 
+ Value:</font> full path</p>
+<p>to an executable (in the case of crystal report files, each one is its 
+ own executable, so each one requires a registry entry). Instead of specifying 
+ a path, you may specify a filename extension that defines the application 
+ to be launched as shown below)</p>
+<p><span style="font-weight: bold;">Setting Key:</span> extension <span style="font-weight: bold;">Setting Value:</span><span style="font-style: italic;"> 
+ fileextention</span></p>
+<p>This option may be used INSTEAD of the path option above. This option 
+ enables you to identify the file extension appropriate for use with the 
+ external app.  Following is an example of the old and new setting 
+ as it applies to MS Excel:</p>
+<p><font style="font-weight: bold;">Registry Id:</font> excel</p>
+<p>Setting Key<font style="font-weight: bold;">:</font> exe Setting Value: 
+ EXCEL.EXE</p>
+<p>Old setting ... Setting Key: path Setting Value: C:\Program Files\Microsoft 
+ Office\Office<br/>
+New setting ... Setting Key: extension Setting Value: xls</p>
+<p>The new way is preferable because it doesn&#39;t need to assume that every 
+ SAMPRO user has Excel installed in the same path.  Instead it 
+ retrieves the necessary info for xls-type files from the Windows Registry.</p>
+<p>Setting Key: <font style="font-weight: bold;">parms</font> <font style="font-weight: bold;">Setting 
+ Value: list of parameters</font></p>
+<p>Specify any parameter that should be applied to the command-line after 
+ the executable. For example, this could be the Access database you wish 
+ to launch.<br/>
+         </p>
+<h2>2. Creating a User-Defined Function to Launch the External Application</h2>
+<p>Once you have created a registry entry defining the link to the external 
+ application, you will next create a user-defined function to actually 
+ launch the application.</p>
+<p>          <font style="font-weight: bold;">Id:</font> 
+  A unique function id.</p>
+<p>          <font style="font-weight: bold;">Name:</font> The 
+ description associated with the user-defined function for the Menu Display.</p>
+<p>          <font style="font-weight: bold;">Menu 
+ Category:</font> Report, or Starter, or Viewer (defines which menu 
+ should display the function)</p>
+<p>          Application: Application 
+ name (from your registry entry)</p>
+<p>          Application 
+ Parameters</p>
+<p>Specify any &quot;additional&quot; parameters that should be applied 
+ at the end of the command-line.</p>
+<h2>3. Examples of Registry and User-Defined Function Pairs</h2>
+<p>Example: Access</p>
+<p>        <font style="font-weight: bold;">Registry 
+ Id:</font> <font style="font-weight: bold;"> </font>access</p>
+<p>        Setting Key: path   Setting 
+ Value: c:\program files\microsoft\msaccess.exe</p>
+<p>         parms= c:\my documents\reports.mdb</p>
+<p> </p>
+<p>        <font style="font-weight: bold;">User 
+ Function Id:</font> accessreport</p>
+<p>        <font style="font-weight: bold;">User 
+ Function Name:</font> Report My Access Report</p>
+<p>        Menu Category:`Report</p>
+<p>        <font style="font-weight: bold;">Application:</font> 
+ Access</p>
+<p class="Normal_Indent"><font style="font-weight: bold;">        Application 
+ Parameters: /x myreport</font></p>
+<p>Resulting Command-line:   </p>
+<p>c:\program files\microsoft\msaccess.exe c:\my documents\reports.mdb 
+ /x myreport</p>
+<p>This command will launch the application &quot;access&quot;, open 
+ the file &quot;report.mdb&quot; , and run the macro &quot;myreport&quot;</p>
+<p>Example: Excel</p>
+<p>Registry Id:  excel</p>
+<p><font style="font-weight: bold;">Contents: </font>exe=EXCEL.EXE<br/>
+extension=xls</p>
+<p>User Function Id: excelclient</p>
+<p>         <font style="font-weight: bold;">User 
+ Function Name:</font> Report Client Spreadsheet</p>
+<p>         <font style="font-weight: bold;">Menu 
+ Category:`</font>Report</p>
+<p>         <font style="font-weight: bold;">Application:</font> 
+ excel</p>
+<p class="Normal_Indent"><font style="font-weight: bold;">       </font> <font style="font-weight: bold;"> </font><font style="font-weight: bold;">App</font><font style="font-weight: bold;">lication Parameters:</font> \\myserver\excelreport\client.xls</p>
+<p><font style="font-weight: bold;">Enhanced Capabilities</font> </p>
+<p>Enhanced capability allows for the specification of the executable 
+ &quot;path&quot; in a single registry entry as an &quot;application&quot; 
+ definition, enabling many User Defined Functions to be created from a 
+ single registry entry.  This is particularly helpful for applications 
+ such as <font style="font-weight: bold;">Crystal Reports</font> where 
+ each files is defined by a unique executable.</p>
+<p> </p>
+<p>Create a registry entry with...</p>
+<p>          <font style="font-weight: bold;">Id:</font>             <font color="#FF0000">Application name</font> (or whatever else makes sense) 
+ and contents:<br/>
+<font style="font-weight: bold;">          Contents:</font>   exeNameInParms=true</p>
+<p> </p>
+<p>Create a user-defined function with:<br/>
+<font style="font-weight: bold;">          Id</font>=unique 
+ function id</p>
+<p><font style="font-weight: bold;">          Name</font>=description 
+ associated with user-defined function for Menu Display</p>
+<p><font style="font-weight: bold;">          Menu 
+ Category</font>=Report, or Starter, or Viewer --to define which menu should 
+ display the function</p>
+<p>          <font style="font-weight: bold;">Application</font>=<font color="#FF0000">Application name</font></p>
+<p><font style="font-weight: bold;">          Application 
+ Parameters</font>= the name of the specific executable file</p>
+<p>Example</p>
+<p>        <font style="font-weight: bold;">Registry 
+ Id:</font>  Crystal</p>
+<p><font style="font-weight: bold;">        Contents:</font>    path= 
+ c:\my documents\crystal report files\</p>
+<p><font style="font-weight: bold;">        Contents2:</font>  exeNameInParms=true</p>
+<p> </p>
+<p>        User Function Id: Report_One</p>
+<p><font style="font-weight: bold;">        User 
+ Function Name:</font> Report One of My Crystal Reports</p>
+<p>        Menu Category:Report</p>
+<p>        Application: Crystal</p>
+<p>        <font style="font-weight: bold;">Application 
+ Parameters:</font> report_one.exe</p>
+
+</body></html>

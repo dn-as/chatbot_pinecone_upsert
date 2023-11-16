@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.9.7.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Report Lien Waiver Partial</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="waiver (lien),last cost:lien waiver"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Report Lien Waiver Partial">
+        <span>Report Lien Waiver Partial</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Report Lien Waiver Partial</h1>
+<h2>Purpose:</h2>
+<p>This report lists Partial Lien Waivers based on the AP Checks which were printed for Lien Waiver Required Vendor Invoices. The Job Name, Site Address, and Client Name will be printed in the left-name Project/Owner section.  The Vendor Name, Address, Check Date and the lien waiver Amount will be printed in the right-hand Contractor section.  </p>
+<h2>Usage:</h2>
+<p>If this report is set to autosave via registry, it will be attached to the applicable Job, Vendor and Check records.</p>
+<h2>Registry:</h2>
+<p>Click <a href="Registry_Report_Lien_Waiver_Partial.htm">Registry Report Lien Waiver Partial</a> for recommended registry settings for this report.</p>
+<h2>Important Fields:</h2>
+<p><span style="font-weight: bold;">Beginning Date:  Ending Date:</span><br/>
+These required fields define the AP Check date range to include when printing the Partial Waivers.</p>
+<p>The following ranges may be use to further limit the Partial Lien Waiver report:</p>
+<p><span style="font-weight: bold;">Vendor Id:</span><br/>
+Enter a Vendor Id to only print Waivers for the specified Lien Waiver Vendor.</p>
+<p><span style="font-weight: bold;">Job Id:</span><br/>
+Enter a Job Id to only print Waivers for the specified Lien Waiver Job.</p>
+<p><span style="font-weight: bold;">Purchase Order Id:</span><br/>
+If this field remains blank, the Lien Waiver Amount will reflect all Lien Waiver PO&#39;s processed each AP Check. Entering a PO Id (or list of Id&#39;s) in this range will limit the Amount listed on the Waiver to that allocated for the specified PO(s).</p>
+<p><span style="font-weight: bold;">Vendor Invoice Number:</span><br/>
+If this field remains blank, the Lien Waiver&#39;s Amount will reflect all Lien Waiver Vendor Invoices processed on each AP Check. Entering a Vendor Invoice Number (or list of numbers) in this range will limit the Amount listed on the Waiver to that allocated for the specified Vendor Invoice(s).</p>
+<p><span style="font-weight: bold;">Check Number:</span><br/>
+Enter an AP Check Number to only print the Waiver for the specified Check.</p>
+<p> </p>
+
+</body></html>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.3.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="journal"/>
+<meta name="MS-HKWD" content="bank"/>
+<meta name="MS-HKWD" content="transfer"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Bank Transfer Journal</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="journal,bank,transfer"/><meta name="brsnext" value="Bank_Reconciliation_Journal.htm"/><meta name="brsprev" value="Bank_Deposit_Journal.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Bank Transfer Journal">
+        <span>Bank Transfer Journal</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Bank Transfer Journal</h1>
+<h2>Purpose:</h2>
+<p>This function enables you to easily transfer funds from account to account, 
+ mirroring in your database the actual disposition of funds in your accounts.</p>
+<h2>Usage:</h2>
+<p><span>When in Change/Save mode, A GL Entity revision is allowed but 
+ NOT if the edit would change the Company/Security established when the 
+ journal entry was initially created. This validation should prevent Intercompany 
+ OOB Company/Security posting.</span></p>
+<p>This function eliminates the need to create general journal entries 
+ to transfer funds. The user is prevented from editing a Bank Transfer 
+ Journal entry that has been Reconciled in the Bank Reconciliation journal. 
+ The user will also be warned when accessing a Reconcile entry.</p>
+<h2>Important Fields: Upper Section</h2>
+<p><font style="font-weight: bold;">Total Transfer:<br/>
+</font>This display-only field is calculated by the system based on the 
+ total Credits you have entered in the Transfer tab.</p>
+<p><font style="font-weight: bold;">Bank Entity: Bank Account Id:<br/>
+</font>The GL Entity (if any) and GL Account the money is being transferred 
+ into. The system verifies that the GL Account Type is set to &#39;Bank&#39; for 
+ this account.</p>
+<p>When Intercompany Processing is enabled, the Bank Entity is required: 
+ it decides which Company/Service the transfer belongs to. The Transfer 
+ From Entity is also required for Intercompany Processing.</p>
+<p><font style="font-weight: bold;">Period Id:<br/>
+</font>Enter the Period Id to which this transfer is assigned. Enter an 
+ active Period Id, or double-click to select from a list.</p>
+<p><font style="font-weight: bold;">Effective Date:<br/>
+</font>The Effective Date of the Transfer. This date must fall within the 
+ range defined by the Period you selected.</p>
+<p><font style="font-weight: bold;">Transaction Id:<br/>
+</font>This field will be completed by the system when you save/change 
+ this transaction.</p>
+<p><font style="font-weight: bold;">Transaction Description:<br/>
+</font>Briefly describes this transaction.</p>
+<p><span style="font-weight: bold;">Entered By: Date Entered: Time Entered: 
+ Security Id:</span><br/>
+Completed by the system when this transaction is initially entered.</p>
+<p><span style="font-weight: bold;">Company Id:</span><br/>
+This field will be completed by the system if Intercompany Security is 
+ implemented.</p>
+<p><font style="font-weight: bold;">Date Reconciled:<br/>
+<span style="font-weight: normal;">This field will be completed if the 
+ Parent entry has been reconciled in the Bank Reconciliation Journal.</span></font></p>
+<h2>Important Fields: Transfer From Tab</h2>
+<p><font style="font-weight: bold;">GL Account: Entity:<br/>
+</font>The Account and Entity that money is being transferred out of.</p>
+<p>When Intercompany Processing is enabled, the Transfer From Entity is 
+ required.</p>
+<p><font style="font-weight: bold;">Credit Amount:<br/>
+</font>The amount that the GL Account should be credited by.</p>
+<p><font style="font-weight: bold;">Description:<br/>
+</font>Briefly describe the reason for this transaction.</p>
+<p><span style="font-weight: bold;">Company:</span><br/>
+Specifies the Company the Transfer is from if Intercompany Security is 
+ enabled.</p>
+<p><span style="font-weight: bold;">Recon Id: Recon Date:</span><br/>
+The Bank Reconciliation Transaction Id and Date for this line if it has 
+ been reconciled.</p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">See 
+ Also</font><br/>
+<a href="Bank_Reconciliation_Journal.htm">Bank Reconciliation Journal</a> 
+  <a href="Bank_Deposit_Journal.htm">Bank Deposit Journal</a></p>
+
+</body></html>

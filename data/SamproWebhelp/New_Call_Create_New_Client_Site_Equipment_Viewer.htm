@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.2.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="create new client site"/>
+  <meta name="MS-HKWD" content="new call"/>
+  <meta name="MS-HKWD" content="new client site"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>New Call Create New Client/Site/Equipment Viewer</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="create new client site,new call,new client site"/>
+<meta name="brsnext" value="TechFinder_Viewer.htm"/><meta name="brsprev" value="New_Call_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="New Call Create New Client/Site/Equipment Viewer">
+        <span>New Call Create New Client/Site/Equipment Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>New Call Create Client / Site / Equipment / Job / Work Order</h1>
+  <h2>Purpose:</h2>
+  <p>Take a New Call and create a work order for a new client, site and/or equipment. If you use the special residential template option, this function will also generate Job, Job Cost Code, and Billing Item records for this client.</p>
+  <h2>Example:</h2>
+  <p>Mrs. Jones, who is not in your firm&#39;s database, calls in with a service problem.</p>
+  <h2>Usage:</h2>
+  <p>Used to add the basic Client Site, Client (if you are creating a new client), and Equipment information to your database as well as create a work order. If you have implemented residential templates, new Job, Job Cost Code, and Job Billing Item records will also be generated for this customer.</p>
+  <h2>Important Fields:</h2>
+  <h3>Client Site Fields</h3>
+  <p>
+    <font style="font-weight: bold;">Site Id:</font><br/>
+    If you are creating a new equipment record for an existing site, enter its Site Id (or double-click on this field to select from a list of Sites).
+  </p>
+  <p>If this is a new residential customer and the residential template is implemented on your system, the client site <font style="font-weight: bold;">residential</font> should be selected; then type over <font style="font-weight: bold;">residential</font> with a unique Id for this new site. The Site Id that you enter will also be used to generate the Client Id and Job Id. This required field may include letters, numbers, and the special characters hyphen <font style="font-weight: bold;">-</font> and period <font style="font-weight: bold;">.</font>.</p>
+  <p>
+    <font style="font-weight: bold;">Site Name:</font><br/>
+    The name of the Client Site. This field will also be used to default in the Client Name if you click the Copy Site to Client button.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Client Site Alpha:</font><br/>
+    This field defaults from the Client Site Name, but may be changed by the user if needed.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Site Voice Phone:</font>  <font style="font-weight: bold;">Site Fax Phone:</font><br/>
+    The main numbers for this Site; this information will be copied to the new Client Site record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Tax Group Id:</font>  <font style="font-weight: bold;">Tax Exempt Id:</font><br/>
+    If you are creating a new site, enter the applicable sales tax information.
+  </p>
+  <p>
+    <font style="font-weight: bold;">PO Required</font><br/>
+    Double-click on this field (or press Spacebar when the focus is on it) if a Purchase Order is required to schedule service for this Site. A check mark appears in this field when it is flagged.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Store #</font><br/>
+    The Store # for this site (if any).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Market Source Id:</font><br/>
+    The advertising source (yellow pages, radio spot, etc.) that generated this call. Double-click on this field or press Alt+F7 to select from a list of Market Sources. This field is optional.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Service Zone Id:</font><br/>
+    Enter a valid Service Zone Id if they are implemented at your firm, or press Alt+F7 (or double-click) to select from a list.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Work/Ship Address:</font><br/>
+    The actual (street) address of this Site, as it will appear in the Site Record and on the Work Order.
+  </p>
+  <p><img alt="" border="0" src="assets/images/SKIN1_CopySiteToClient.bmp" style="border: none;"/></p>
+  <p>If you are creating a new Client record, clicking this button defaults the Work Ship (Site) address to the Client Mailing Address further down the screen. Clicking this button will also move the Site Name to the Client Name field.</p>
+  <p>
+    <font style="font-weight: bold;">Contact 1:</font><br/>
+    Enter the First Name, Last Name, Salutation, Title, Email, Phone and Fax numbers of your primary contact for this site. These fields are optional but recommended: they will be used to generate the Contact 1 fields in the Site and Client records that are being created. <span>The system also writes the Contact 1 Email field to the Client Site Email Address field when the Site is created.</span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Dispatch Note:</font><br/>
+    Any special notes (e.g., guard dog, alarm system).
+  </p>
+  <h3>Equipment Fields</h3>
+  <p>
+    <font style="font-weight: bold;">Equipment Id:</font><br/>
+    Required. An Id that identifies this piece of equipment. If you have implemented Equipment Master records on your system, you may double-click on this field to select from a list of your firm&#39;s standard equipment designations from the Equipment Master table. If the equipment Id is unknown, enter &quot;unknown&quot;; this field can later be edited when the equipment is clearly identified.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Equipment Name:</font><br/>
+    This optional field briefly describes the equipment.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Log Form Id: Escalation Profile Id:</font><br/>
+    These fields default from the template (if applicable) but may be changed by the user. They will be included in the new equipment record, and used to generate metrics/scheduled events on the newly generated work order.
+  </p>
+  <h3>Work Order Fields</h3>
+  <p><strong>Version 9.1.611.060 and up provide reminders for past due payments for invoices made via the New Call 2 COD Job&#39;s setup. When users create a work order, the Past Due warning messages appear if their client didn’t pay upon delivery. </strong></p>
+  <p>
+    <font style="font-weight: bold;">Original Caller:</font><br/>
+    The individual requesting service.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Work Code Id:</font><br/>
+    A valid Work Code Id identifying the problem. You may double-click on this field (or press Alt+F7) to select from a list of Work Codes. This field is optional.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Priority</font><br/>
+    The priority for this call. This field defaults from the Work Code but can be edited: 0 is the highest priority, and 9 the lowest (least critical).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Estimated Hours</font><br/>
+    The estimated hours for this task. This field defaults from the Work Code but can be edited.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Date Scheduled:</font><br/>
+    The date on which this call is scheduled. Press Spacebar to enter today&#39;s date, or access the Calendar Viewer to enter the date by double-clicking on this field or by pressing Alt+F7.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Time Scheduled:</font><br/>
+    The time this call is scheduled to start; this field is optional. Enter the time using a military or 24-hour format, or press Alt+F7 (or double-click on this field) to access the Clock viewer.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Call Sequence:</font><br/>
+    The sequence number for the new work order. This field is particularly useful if you are using the Classic board for Dispatching, as it is used to determine the order in which the Technician should attend to his work orders on a given day. If you do not set the call sequence explicitly in new call, the system will attempt to derive an appropriate call sequence number based on the Time Scheduled and the Technician assigned to the Work Order. In the case of ties, the original work order will retain its original sequence number. See <a href="Registry_Entry_for_New_Call_Options.htm">Registry Entry for New Call Options</a> for a registry entry to alter this behavior.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Technician Id:</font><br/>
+    The technician assigned to this call. This field is optional and can be set from the dispatch board. Double-click on this field (or press Alt+F7) to select from a list of active technicians.
+  </p>
+  <p>
+    <font style="font-weight: bold;">PO Number:</font><br/>
+    If the PO Required field is flagged, enter the client&#39;s purchase order number for this work order.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Work Requested:</font><br/>
+    Describes the work the customer requested for this task.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Work Order Name:</font><br/>
+    This optional field may be used to further identify the Work Order on the Dispatch Board and on the Work Order list. If blank, it will default from the Work Code Name.
+  </p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Service PreventiveMaint Installation Estimate<br/>
+    CSR  Call Back Warranty Quote  Other</p>
+  <p>The type of workorder; defaults to Service but may be changed by clicking the adjacent radio button.</p>
+  <h3>Client Fields</h3>
+  <p>
+    <font style="font-weight: bold;">Client Id:</font><br/>
+    If you are creating a new Client record, leave this field as is: it will default from the Client Site Id you specified at the top of the screen. If you are creating a new Site record for an existing Client, enter a valid Client Id (or press Alt+F7 or double-click on this field to select from a list of Client Id&#39;s).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Client Name:</font><br/>
+    The Name of the Client. If you are creating a new Client record, it will default from the Site Name you specified at the top of the screen if the field is blank.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Credit Limit</font><br/>
+    The credit limit for this Client (for reporting purposes).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Branch Id:</font><br/>
+    If Branches are implemented on your system, enter the Branch (if any) that this Client is assigned to.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Voice Phone:  Fax Phone:</font><br/>
+    If you are creating a new Client record, enter the main voice and fax phone numbers for the Client. If you are creating a new Site record for an existing Client, these fields will default from the Client record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">AR Terms Id:</font><br/>
+    Enter a valid AR Terms Id, or press Alt+F7 (or double-click) to select from a list. This field is optional.
+  </p>
+  <p>
+    <font style="font-weight: bold;">New Job for Each Wo</font>
+    <font style="font-weight: bold;">(Deprecated)</font><br/>
+    This field is now deprecated in favor of the Service Compute Job option. If you flag this field, a new job (and its associated Billing Items and Cost Codes) will be created for each Work Order for this new Site.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Material Price Level:</font><br/>
+    The price level to use for Inventory Items flagged as Use Unit Pricing (1-9).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Charge Interest</font><br/>
+    For report purposes.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Client Mailing Address:</font><br/>
+    The mailing (billing) address for this Client. If you leave this field blank, it will default from the Client Site Shipping Address. If you are creating a number job, this field will default to the new Job record. If you are creating a new site record for an existing Client these fields will default from the Client record.
+  </p>
+  <p><img alt="" border="0" src="assets/images/SKIN1_CopyClientToJob.bmp" style="border: none;"/></p>
+  <p>When you click this Client Mailing Address will default to the Invoice Address (in the Job record) further down the screen. In addition, the Client Name will be copied to the Job Name field.</p>
+  <h3>Job Fields</h3>
+  <p>
+    <font style="font-weight: bold;">Job Name:</font><br/>
+    This field defaults from the Client Name when the Copy Client to Job button is clicked.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Invoice Address:<br/>
+      Name on Invoice:</font><br/>
+    The name that should appear on this invoice. This field defaults from the Client Name when the Copy Client to Job button is clicked.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Attention Line:</font><br/>
+    This field enables you to specific an attention line for invoices generated for this job.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Street Address: City: State: Zip:</font><br/>
+    The address that invoices for this job should be sent to. This field defaults from the Client Mailing Address when the Copy Client to Job button is clicked.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Override Tech Status:</font><br/>
+    By default, this field will be set to the value ‘ default’: the technician status will be set to the appropriate value for that type of technician (referring to the sys-web-access and other registry entries, if present). The ‘ ‘ blank Override Tech Status is processed in the same way as ‘ default’ if the user accidentally cleared the field.
+  </p>
+  <p>If the user needs to select a special status (e.g., Return Trip), double-clicking in this field (or clicking the Magnify button) displays a quick pick list of valid statuses for the user to select from. By default, all statuses will be display, but a registry entry may made to control the contents of the list: <a href="Registry_Entry_for_New_Call_Options.htm">Registry New Call (sys-newcall)</a> .</p>
+
+</body></html>

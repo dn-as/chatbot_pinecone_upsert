@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.14.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry PM Authorization Web Service</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="guest,PM Authorization Web Service,web-settings-guest,web-settings,authorization pm web service"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry PM Authorization Web Service">
+        <span>Registry PM Authorization Web Service</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<p class="Support_Heading_1">Registry PM Authorization Web Service - Duthie Power</p>
+<p class="Support" style="font-weight: bold;">Version 9.0 and Above</p>
+<p class="Support" style="font-weight: bold;"><span style="font-weight: normal;">This functionality is highly customized for the client it was written to.  It should NOT be implemented for other customers.  If functionality similar to is desired for a different customer, contact Data-Basics support to request quote for this modification.</span></p>
+<p class="Support" style="font-weight: bold;">Web User Record:<br/>
+<span style="font-weight: normal;">Create a Web User record with the User Id set to guest and the Password set to guest.</span></p>
+<p class="Support" style="font-weight: bold;">Registries:</p>
+<p class="Support" style="font-weight: bold;">Id: web-settings-guest</p>
+<p class="Support"><span style="font-weight: bold;">Setting Key:</span> SubmitStatus  <span style="font-weight: bold;">Setting Value:</span> Submitted</p>
+<p class="Support"><span style="font-weight: bold;">Setting Key:</span> SubmitMessage  <span style="font-weight: bold;">Setting Value:</span> Thank you for Submitting your Authorization</p>
+<p class="Support">The Setting Value specifies the text that will be displayed after the customer has clicked the Submit on the web authorization form.</p>
+<p class="Support"><font style="font-weight: bold;">Setting Key:</font> URL <font style="font-weight: bold;">Setting Value:</font> <span style="font-style: italic;">URL of guest page</span></p>
+<p class="Support">This specifies the URL for the guest pack for maintenance authorizations.</p>
+<p class="Support"><font style="font-weight: bold;">Setting Key:</font>GuestUID <font style="font-weight: bold;">Setting Value:</font> guest</p>
+<p class="Support"><font style="font-weight: bold;">Setting Key:</font> GuestPWD <font style="font-weight: bold;">Setting Value:</font> guest</p>
+<p class="Support">This registries specify the password and user id for the Guest page. Note that system, not the user, will manage the login using the following settings.</p>
+<p class="Support"> </p>
+<p class="Support" style="font-weight: bold;">Id: web-settings-ms-authorization</p>
+<p class="Support">Setting Key: pricepergallon   Setting Value: <span style="font-style: italic;">current price per gallon</span></p>
+<p class="Support">The Setting Value will be displayed in the Authorization form.  For example, 6.00. Note that the system will provide the text and dollar sign; enter only the value itself.</p>
+<p class="Support">Key: submittedStatus  Setting Value: <span style="font-style: italic;">valid technician status</span></p>
+<p class="Support">This is the status the Work Order Tech line will be set to when the work is approved (e.g., invoiceapproved).</p>
+<p class="Support" style="mso-bidi-font-weight: normal;"><b>Id: web-settings</b></p>
+<p class="Support">See Help for additional existing registries required for web services.</p>
+<p class="Support"> </p>
+<p class="Support" style="font-weight: bold;">Graphics:</p>
+<p class="Support">The following graphics should appear in the web directory specified in the <font style="font-weight: bold;">web-settings registry&#39;s</font> web-dir option.</p>
+<p class="Support">sidebarLogoOnly.gif</p>
+<p class="Support">authorization.gif</p>
+<p class="Support">The sidebarLogoOnly.gif should be 112 pixels wide by at least 440 pixels high. The logo may appear at the top of this file if it is also being use for the Client Web login. It will appear on the right-hand side of the webpage.</p>
+<p class="Support">The authorization.gif will appear to the left of the sidebarLogoOnly.gif file at the top of the webpage.  It should display any desired text/graphics for the authorization form.</p>
+<p class="Support"> </p>
+<p class="Support" style="font-weight: bold;">To Use this Functionality:</p>
+<p class="Support" style="font-weight: normal;">1. SAMPro&#39;s Web Server must be running.  You will want this web server service to always remain running like other SAMPro services you may have.</p>
+<p class="Support">2.  Assign all of your PM&#39;s to a fictitious technician called &quot;PM Wait&quot;.  </p>
+<p class="Support">3. Create an Notification based escalation event in your PM Work Order&#39;s Escalation Profile that is triggered when the status becomes &quot;Waiting Service&quot;.  <span style="font-weight: bold;">The PM work order needs to be created with an initial status of “Waiting Service” in order for this mod to work.</span> You can control Preventative Maintenance Work Orders to be assigned a special status when they are created through the sys-web-access registry. Although, please note that PM Work Orders will always be set to a status of “Waiting Parts” (regardless of registry) when Required Resource parts are written to the PM line.</p>
+<p class="Support">New Token: ^maintenanceserviceauthorizationlink^</p>
+<p class="Support">A new Escalation Profile token has been implemented as part of this enhancement.  The token entered into the profile&#39;s Email Text should read ^maintenanceserviceauthorizationlink^.  This token will be replaced by a web link to the guest page when the scheduled event executes; the customer will simply click this link to access the Maintenance Authorization page.</p>
+<p class="Support">The authorization email will be created with the Email From specified in the Notification record; if this field is not completed, the DefaultEmailSender option in sys-email will provide this value. The Email To will default from the applicable Client or Client Site record specified in the Notification.</p>
+<p class="Support">The link consists of these components: the URL from the registry entry, the guest account login from the registry, the work order id and rn, and the scheduled event id which generated the e-mail. The id, rn and event values are extracted from the link and used to &#39;authenticate&#39; the incoming request.  SQL statements confirm that the values make sense relative to one another.  Access is denied when the link&#39;s values are not successfully authenticated.</p>
+<p class="Support" style="margin-left: 48px; text-decoration: underline;">Example: Escalation Profile</p>
+<p class="Support" style="margin-left: 48px;">Source: workorder</p>
+<p class="Support" style="margin-left: 48px;">Action Type: notification</p>
+<p class="Support" style="margin-left: 48px;">Notify Id: The Notification record pointing set for your Customer notifications.</p>
+<p class="Support" style="margin-left: 48px;">Status From: any</p>
+<p class="Support" style="margin-left: 48px;">Status To: Waiting Service</p>
+<p class="Support" style="margin-left: 48px;">Time Base: creation</p>
+<p class="Support" style="margin-left: 48px;">Day: Hrs: Min: 1 (minute)</p>
+<p class="Support">4. Create a Notification based escalation event in your PM Work Order&#39;s Escalation Profile that is triggered when the status becomes &quot;invoiceapproved&quot; (or any other existing status you specified in the web-settings-ms-authorization registry)  which will generate an email to notify an employee that a PM has been approved.<br/>
+<br/>
+5. The generated email will contain a link your customer can click on that will the linked web form with specific info related to the PM work order generated for them.<br/>
+<br/>
+6. When the customer clicks on the Submit button in the form the status of the PM WO will change to &quot;invoiceapproved&quot; (or any other existing status you choose) and update the Work Order as follows:</p>
+<p class="Support" style="margin-left: 48px;">PO#: The value the web user entered in the PO field<br/>
+User 1: The amount of fuel needed<br/>
+User 2: The capacity of the tank</p>
+<p class="Support">7. A user will then review approved PM WO&#39;s and fill in any needed fuel charges onto the Work Order Other tab and assign the work order to a technician and a date to be performed.</p>
+
+</body></html>

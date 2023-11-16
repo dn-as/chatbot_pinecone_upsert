@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.3.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="title"/>
+<meta name="MS-HKWD" content="sys-font-title"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="font"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry to Set the Title Font (sys-font-title)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="title,sys-font-title,registry,font"/><meta name="brsnext" value="Viewer_Ratios_and_Tabs.htm"/><meta name="brsprev" value="Registry_Entry_to_Set_the_Heading_Font.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry to Set the Title Font (sys-font-title)">
+        <span>Registry to Set the Title Font (sys-font-title)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry to Set the Title Font (sys-font-title)</h1>
+<h2>Purpose:</h2>
+<p>This registry entry enables you to control the font used to title tables 
+ that include at least one data-entry field.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not 
+ verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> 
+ your registry entries after completing them to verify that they are functioning 
+ correctly.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; 
+	 border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold; font-style: italic;" color="#FF0000">Setting</font> 
+ <font style="font-weight: bold; font-style: italic;" color="#FF0000">Values 
+ are Uppercase-Lowercase Sensitive:</font><br/>
+The Setting Value is case-sensitive: be sure that you enter the value <font style="text-decoration: underline; ">exactly</font> as specified in 
+ the documentation. If the documentation specifies a value of <font style="font-weight: bold;">true</font>, 
+ do NOT enter <font style="font-weight: bold;">True</font> or <font style="font-weight: bold;">TRUE</font>.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Id</font><font style="font-weight: bold;">:</font> 
+ <font style="font-weight: bold;"> sys-font-title</font></p>
+<p class="Normal_Indent" style="margin-left: 5.75pt;">See the Standard 
+ Registry section in <a href="Registry_Viewer.htm">Registry Viewer</a> 
+ for additional Registry Id formats to allow entries for specific Users, 
+ Branches, Security, or User Groups to override the main entry.</p>
+<h3>Set Font Name</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> Facename <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">aFaceName</font></p>
+<p>where <font style="font-style: italic;">aFaceName</font> is replaced 
+ by a valid font name (e.g., Arial, Tahoma). This font must be installed 
+ on the users’ computer or it will not be used.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> Bold  <font style="font-weight: bold;">Setting Value:</font> Y<font style="font-style: italic;">es</font> 
+ or <font style="font-style: italic;">N</font>o</p>
+<p>Specify yes to use the bold version of the font, or no to use the normal 
+ version.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> Points:  <font style="font-weight: bold;">Setting Value:</font> aPointSize</p>
+<p>Where aPointSize: specifies the size in points. Point sizes ranging 
+ from 8-10 are recommended.</p>
+<p>In previous releases, the registry entry (sys-font-title) used to specify 
+ the font for labeling titles and lists was restricted to a 10 point fixed 
+ width font. Changes to the way in which the titles are constructed means 
+ the registry is no longer limited to fixed-width fonts or a 10 point font 
+ size.</p>
+<p style="margin-left: 36.00pt;">Example:</p>
+<p style="margin-left: 36.00pt;">Id: sys-font-title</p>
+<p style="margin-left: 36.00pt;">Setting Key: Facename  Setting Value: 
+ Arial</p>
+<p style="margin-left: 36.00pt;">Setting Key: Bold  Setting Value: 
+ No</p>
+<p style="margin-left: 36.00pt;">Setting Key: Points  Setting Value: 
+ 9</p>
+<p style="margin-left: 36.00pt;"> </p>
+<p><font style="font-weight: bold; font-style: italic;" color="#FF0000">Also 
+ See<br/>
+</font><a href="Registry_Entry_to_Set_Label_Font.htm">Registry Entry to 
+ Set the Label Font</a> <font color="#008000"><br/>
+</font><a href="Registry_Entry_to_Set_the_Field_Font.htm">Registry Entry 
+ to Set the Field Font</a> <font color="#008000"><br/>
+</font><a href="Registry_Entry_to_Set_the_Heading_Font.htm">Registry Entry 
+ to Set the Heading Font</a></p>
+<p><a href="Registry_ListPane_Font.htm">Set the List Font</a></p>
+<p><a href="Registry_Child_Tab_Label.htm">Registry to set the Child Tab 
+ Label Font</a></p>
+<p><a href="Registry_Parent_Tab_Label_Font.htm">Registry to set the Parent 
+ Tab Label Font</a></p>
+<p><a href="Registry_Custom_Folders_Entry.htm#Workflow_Folder_Fonts">Registry 
+ to set the WorkFlow Folders Fonts</a></p>
+
+</body></html>

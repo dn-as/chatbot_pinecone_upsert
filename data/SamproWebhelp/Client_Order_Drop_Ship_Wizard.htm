@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.11.1.1.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="drop ship"/>
+<meta name="MS-HKWD" content="wizard"/>
+<meta name="MS-HKWD" content="cop"/>
+<meta name="MS-HKWD" content="client order"/>
+<meta name="MS-HKWD" content="purchase order"/>
+<meta name="MS-HKWD" content="po"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Client Order Drop Ship Wizard</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="drop ship,wizard,cop,client order,purchase order,po"/><meta name="brsnext" value="Client_Order_Transfer.htm"/><meta name="brsprev" value="Client_Order_Deposit.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Client Order Drop Ship Wizard">
+        <span>Client Order Drop Ship Wizard</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Client Order Drop Ship Wizard</h1>
+
+<h2>Purpose:</h2>
+<p>When a client orders an item that you do not have in stock, one solution 
+ is to have it drop shipped from your vendor directly to your customer. 
+ The Wizard is designed to step you though the process of completing the 
+ Client Order and Generating a Purchase Order for the merchandise. The 
+ COP Invoice for this order will be held:</p>
+<p style="margin-left: 48px;">1. Until the Purchase Order is vouchered.<br/>
+<span style="font-weight: bold;">OR</span><br/>
+2. The items are &quot;received&quot; in the Inventory Receipt Journal 
+ (to allow the invoice to be produced sooner). This option required a registry 
+ entry (Global Settings Registry to <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_receive_dropship_IRJ">Receive 
+ Dropshipped COP&#39;s in Inventory Receipts and Allow Billing</a>).</p>
+<p style="margin-left: 8px;">The Drop Ship Wizard will only be invoked 
+ if the order type is ‘order’. This implies that you can save an order 
+ with drop shipments as a ‘quote’ without invoking the wizard. When the 
+ quote becomes an order, the operator will change the order type from ‘quote’ 
+ to ‘order’. The Drop Ship Wizard will then be invoked when the order is 
+ saved.</p>
+<h2>Usage:</h2>
+<p>If the Vendor&#39;s No Inventory? field 
+ is checked, the Vendor may not be specified when running this function.</p>
+<p>The Drop Ship Agent box in the user’s record must be flagged to enable 
+ drop ship processing.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Tip</font><font style="font-weight: bold;">: Customer</font> <font style="font-weight: bold;">Changes 
+ Order</font><br/>
+Assume that your customer calls up and wants some material. You create 
+ a new Client Order, add 20 items, all of which are to be drop shipped. 
+ You create the PO through the wizard. ½ Hour later customer calls up and 
+ says that they won’t need 5 of those items.</p>
+<p style="margin-left: 36.00pt;">To correct this, you can&#39;t delete the 
+ line off the Client Order until you delete it off the PO (which it does 
+ allow). Then the line(s) will delete.</p>
+<h2>Important Fields: Verify Purchase Order Lines</h2>
+<p><font style="font-weight: bold;">Vendor Id:<br/>
+</font>Enter the Vendor that should drop ship this item, or double click 
+ to select from a list. If a Primary Vendor is specified on the Inventory 
+ Item’s Purchasing tab, it will default for you. To change the Vendor, 
+ or to specify one if it did not default, double-click on the Vendor Id 
+ to select from a list, or enter the Vendor’s Id from the keyboard.</p>
+<p><font style="font-weight: bold;">Inventory Id: <span style="font-weight: bold;">Inventory 
+ Item Name: </span><br/>
+</font>This display only fields defaults from the Items on the COP Order.</p>
+<p><font style="font-weight: bold;">Vendor Part Number: Unit Cost:<br/>
+</font>If the selected Vendor has their own part number associated with 
+ this item, it will be listed.  In addition, if this item has 
+ been purchased from this Vendor, the most recent purchase price will be 
+ listed. Both fields may be updated if needed.</p>
+<p><font style="font-weight: bold;">Quantity:<br/>
+</font>This field defaults from the Client Order; the user may adjust it.</p>
+<h2>Important Buttons:</h2>
+<p class="Block_Text">Click the <font style="font-weight: bold;">Cancel</font> 
+ button to stop the generation of the drop ship purchase orders.</p>
+<p>Click the <font style="font-weight: bold;">Finish</font> button to generate 
+ the Purchase Order; the system will display the PO Id when the generation 
+ is completed.<br/>
+</p>
+
+</body></html>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.23.0_37";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Payroll GL Import</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="payroll import,import,Wells Fargo Payroll GL Import"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Payroll GL Import">
+        <span>Registry Payroll GL Import</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Payroll GL Import</h1>
+<p>The <a href="Start_Payroll_GL_Import.htm">Start Payroll GL Import</a> 
+ function allows for the import of a PR GL file from a payroll service; 
+ currently, Wells Fargo is supported. A GL Journal entry will be created 
+ when this function is successfully run.Note that the v.rgstry must have 
+ PRInterface enabled in order to run this function.</p>
+<p>The following registry is required to import payroll data from Wells 
+ Fargo.</p>
+<p><span style="font-weight: bold;">Registry Id:</span> sys-start-sprglimprt</p>
+<p><span style="font-weight: bold;">Setting Key:</span>  Format    <span style="font-weight: bold;">Setting Value:</span> WellsFargo</p>
+<p>The Wells Fargo import file is comma-delimited. The first row is a header 
+ row, and is ignored by the import.</p>
+<p>The columns are defined as follows:</p>
+<p style="margin-left: 48px;">Columns 1-2: Wells Fargo info, skipped by 
+ the import</p>
+<p style="margin-left: 48px;">Column 3: GL Account Id</p>
+<p style="margin-left: 48px;">Column 4: GL Entity Id</p>
+<p style="margin-left: 48px;">Column 5: Debits</p>
+<p style="margin-left: 48px;">Column 6: Credits</p>
+<p style="margin-left: 48px;">Column 7: Description (skipped by the Import)</p>
+<p style="margin-left: 48px;">Columns 8-10: Skipped by the Import but must 
+ be included</p>
+
+</body></html>

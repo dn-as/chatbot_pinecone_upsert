@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.14.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Quote Scope Viewer</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="quote,scope (quote),quote scope"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Quote Scope Viewer">
+        <span>Quote Scope Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Quote Scope Viewer</h1>
+  <h2>Purpose:</h2>
+  <p>The Quote Scope allows the user to focus on building a single Quote option at a time. Detailed lines are entered and adjusted on the Scope.  </p>
+  <h2>Usage:</h2>
+  <p>The Quote Manager viewer is used for approving Scopes and printing the Quote.</p>
+  <p>All Notes attached to the Quote Manager and each of its associated Scopes will be available from the Quote Manager AND Quote Scope viewers. For example, for a quote with 2 scopes and notes entered on the Quote, Scope 1 and Scope 2, will have all 3 notes attached. </p>
+  <p><span>Validation does not allow Approved Scopes to be deleted so that the link between the Quote and the Work Order is retained.  </span></p>
+  <p><strong>Note: For versions 9.1.611.060 and up, the user IDs and time stamps on its state transition are noted in the Quote Scope. This provides history if there is an apparent need to investigate the data.</strong></p>
+  <h2>Registry Entries:</h2>
+  <p><a href="Registry_Quote_Scope.htm">Registry Quote Scope</a></p>
+  <p><a href="Registry_Quote_Manager.htm">Registry Entry Quote Manager</a></p>
+  <p>‘Imported from Quote’ fields are present in the Labor, Inventory and Other lines of the Work Order record. These fields will be checked if the line was imported from QuoteMaster. A registry entry (see <a href="Registry_Entry_to_Warn_if_Cost_Code_Requires_Certified_PR_Reporting.htm#registry_workorder_qm_lines">Work Order Registry Entry to Deny Changes to QM lines</a> ) may be implemented to deny all changes to imported lines.</p>
+  <p>See <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Registry_Entry_Global_Settings_Required_Resources">Global Settings: Material Requisitioning</a> for using Material Requisition in conjunction with Quotes.</p>
+  <p><a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#global_settings_rev_adj_management_fee_tax_type">Set Tax Type on Revenue Adjustment Management Fee</a> is a global setting that impacts the Quote and Work Order.</p>
+  <p><a href="Registry_Report_Quote_Form.htm">Registry Report Quote Form</a> discussed bitmap overrides and other configurations for the printed report.</p>
+  <h2>Screen Organization:</h2>
+  <p>The tabs in the upper section of this screen organize the primary Scope information, specify the mark up method etc. Click on one of the following links to jump to detailed information on the tab.</p>
+  <p><a href="#Main_Tab">Main Tab</a>  <a href="#Scheduling_Tab">Scheduling Tab</a>  <a href="#User_Fields_Tab">User Fields Tab</a></p>
+  <p>The tabs on the lower section of this screen are used to build the Quote Scope itself. Click on the following links to see additional information.</p>
+  <p><a href="#Labor_Tab">Labor Tab</a>  <a href="#Inventory_Tab">Inventory Tab</a>  <a href="#Material_Tab_">Material Tab</a> <a href="#Subcontractors_Tab">Subcontractors Tab</a>  <a href="#Other_Tab">Other Tab</a>   <a href="#RevAdjust_Tab">RevAdjust Tab</a>  <a href="#Addtnl_Equipment_Tab">Addtnl Equipment Tab</a>  <a href="#Techs_Tab">Techs Tab</a></p>
+  <h3>Important Fields: Upper Section</h3>
+  <p class="Tab"><a name="Main_Tab" id="Main_Tab"></a>Main Tab</p>
+  <p><span style="font-weight: bold;">Option Code:</span><br/>
+    This required field uniquely identifies this option within this Quote (1, 2, 3, etc.). This field is case insensitive - this means that you cannot create options AA, aa, aA and Aa on a single quote – they are all considered duplicates.</p>
+  <p><span style="font-weight: bold;">Quote Id:</span><br/>
+    The display-only field lists the Quote this Scope belongs to.</p>
+  <p style="font-weight: bold;">Equipment Id:<br/>
+    <span style="font-weight: normal;">If a default Work Order with a single piece of Equipment is specified in Quote Manager, the Equipment Id will also default when a new Scope is added. Double click to select from the active Equipment at the Site, or right-click to create a new Equipment record if needed.</span>
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Additional Equipment</font><br/>
+    If you wish to add additional equipment to this Scope enter it on the Additional Equipment Tab. Quantities will NOT be multiplied as a result of adding equipment.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Revenue Adjustment Id:</font><br/>
+    This field enables revenue adjustments to be applied to this Scope; it defaults from the Job in the Quote Manager but may be changed by the user.  A “total invoice” type revenue adjustment should be selected for Fixed Price quotes.
+  </p>
+  <p>When the Scope is saved, the system generates the appropriate entries the RevAdjust tab after asking you to confirm the deletion of existing entries. Existing Revenue Adjustment lines must be detailed before changing the Revenue Adjustment Id.</p>
+  <p>
+    <font style="font-weight: bold;">Scope of Services:</font><br/>
+    This field describes the services to be included on the quote. It is printed on the Quote Recap report and the Quote report. When the Approval Wizard is run to post the Quote to a Work Order, this field will default to the Work Order Work Requested and the Work Order Equipment Work Requested. <a href="Registry_Quote_Manager.htm">Registries</a> may be enabled to also write this field to the Work Order Equipment Work Performed, or (in 9.1 and above) only write it to the Work Order Equipment Work Performed.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Expanded Scope of Services:</font><br/>
+    The standard Quote report supports the ability to expand the printing of Scope Of Services by adding Notes attached to the Quote or Quote Manager record.  To enable this feature, the Notes Summary field must contain the Scope&#39;s Option Code.
+  </p>
+  <p><span style="font-weight: bold;">Work Order Id:</span><br/>
+    This field displays the source Work Order for this Scope specified in the Quote Manager record.</p>
+  <p>
+    <font style="font-weight: bold;">Quote Amount:</font><br/>
+    If this is not a fixed price option, this display-only field will be calculated by the system based on the extended prices in the detail lines associated with this Scope.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Fixed Price:</font><br/>
+    This field defaults from the Flat Rate Category (if one was selected) or be entered by the user. If completed, the Price fields in the Labor, Inventory, Materials Other and Subcontractor tabs will be forced to 0. When a Work Order is generated, the Fixed Price will be written to the Other tab. <span>A fixed price of up to $99,999,99 is supported. </span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Net Adjust:</font><br/>
+    The net amount of the adjustments for this Scope calculated by the system from the information on the RevAdjust tab.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Net Price:</font><br/>
+    The system calculates this display-only field by subtracting the Net Adjustments from the Fixed Price or Quote Amount.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Cost Category:</font><br/>
+    The default cost category for fixed price quotations. Validation ensures that the Cost Category is always completed for a Fixed Price Scope, and is blank if it is not Fixed Price.
+  </p>
+  <p class="Block_Text" style="font-weight: bold; margin-left: 8px;">Status:</p>
+  <p class="Block_Text" style="font-weight: bold; margin-left: 48px;">Open: <span style="font-weight: normal;">This field defaults to Open for new Scopes.</span></p>
+  <p class="Block_Text" style="font-weight: bold; margin-left: 48px;">Printed: <span style="font-weight: normal;">It will be set to Printed if the Quote is printed and confirmed.</span>  </p>
+  <p class="Block_Text" style="font-weight: bold; margin-left: 48px;">Accepted: <span style="font-weight: normal;">The status may be set to ‘Accepted’ in this record or in FMAnywhere( or the Client Web interface)  to indicate that the  customer has accepted it.</span></p>
+  <p class="Block_Text" style="font-weight: bold; margin-left: 48px;">Approved:  Set the <span style="font-weight: normal;">status to ‘Approved’ in this record or in Quote Manager if the customer has accepted this Option and it is ready for  processing via the Quote Manager Approval Wizard.  </span></p>
+  <p class="Block_Text" style="font-weight: bold; margin-left: 48px;">Declined:  <span style="font-weight: normal;">The status may be set to ‘Declined’ in this record or in FMAnywhere (or the Client Web interface)  to indicate that the  customer has rejected this Scope.</span></p>
+  <p class="Block_Text" style="margin-left: 48px;"><span style="font-weight: bold;">Diagnostic:</span><span>  When the Import Diagnostics wizard is run it sets the Scope Status to Diagnostic. Scopes with a Diagnostic Status will be ignored when the Approve All Options button is clicked. The Approval Wizard will all ignore Diagnostic quotes. This functionality has the added benefit of not skewing the Analytics with &#39;declined&#39; options which were really diagnostics and not lost quotes. The Report Quote includes Diagnostics options.</span></p>
+  <p class="Block_Text" style="margin-left: 8px;">
+    <font style="font-weight: bold;"><span style="font-weight: normal;">R</span>ate Schedule Id:</font><br/>
+    The Rate Schedule to use for marking up this Quote Scope. This field defaults Quote Manager from the Quote Manager but may be changed by the user. If this field is completed, the Gross Margin and Percent Markup fields must remain blank.  
+  </p>
+  <p style="margin-left: 8px;">
+    <font style="font-weight: bold;">Gross Margin Percent</font>:<br/>
+    The Gross Margin Percent to use on this Scope; this field defaults from the Quote Manager but may be changed by the user. If this field is completed, the Rate Schedule and Percent Markup fields must remain blank.
+  </p>
+  <p style="margin-left: 8px;">
+    <font style="font-weight: bold;">Markup Percent</font>:<br/>
+    The default Percent Markup to use on this Scope; this field defaults from the Quote Manager but may be changed by the user. If this field is completed, the Rate Schedule and Gross Margin fields must remain blank.
+  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Important Note:  Changing the Rate Schedule, Gross Margin % or Markup %</span><br/>
+    If the Rate Schedule, Margin or Markup is changed, the system will recompute the prices on previously entered lines as needed.  Only Scopes with a status of Open or Accepted (if enabled via registry) are eligible for the change. Clearing the Rate Schedule, Margin AND Markup fields (so that none are set) does NOT trigger the recompute.</p>
+  <p style="margin-left: 8px;"><img alt="" border="0" src="assets/images/Recompute.bmp" style="border: none;"/> Clicking the Recompute Scope button will recompute the prices based on the Rate Schedule, Gross Margin % or Markup % This button is useful to use if the Rate Schedule has recently been changed.  The button may only be used for Scopes with a status of Open or Accepted (if enabled via registry).</p>
+  <p>
+    <font style="font-weight: bold;">Skip P</font>
+    <font style="font-weight: bold;">rint?</font><br/>
+    This field designates whether or not this scope and its data should be skipped on the printed quote.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Forecast?</font><br/>
+    This field designates whether or not the scope should be included in custom sales forecast reports.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Projected Close Date</font><br/>
+    This field may be used for custom sales forecast reporting.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Probability %</font><br/>
+    This field may be used for calculations on custom sales forecast reports.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Mfg. Rep Comm:</font><br/>
+    This field may be used to specify the expected manufacturer’s representation sales commission for reporting and informational purposes.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Sales Rep Commission Amount</font><br/>
+    This field may be used to specify the expected manufacturer’s representation sales commission for reporting and informational purposes.
+  </p>
+  <p><img alt="" border="0" src="assets/images/IFR.bmp" style="border: none;"/>  Clicking the Import Flat Rate button displays a series of Wizard screens which enable you to select the Flat Rate Category, Price Level and Quantity. Additional Wizard screens for Labor, Material and Inventory allow hours, quantities and costs to be edited.  A Vendor Id may also be specified.  <a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP655661429" href="#"><span data-open-text="true" data-skip-index="true">Click to see Import Flat Rate details.</span><span data-close-text="true">Click to see Import Flat Rate details.</span></a></p>
+  <div data-targetname="POPUP655661429">
+    <p>The Import Flat Rate Wizard supports Inventory Item superceding.
+      If an item on the Flat Rate has been superceded, it is automatically
+      replaced by the current part during the import.<br/>
+      To import the flat rate without adjusting the hours or quantities,
+      or the costs and/or Vendor Id of Inventory or Material lines, click
+      the Finish button. The Flat Rate’s Pretax Price (if specified) will
+      be used to set the Fixed Price on the Quote Scope.<br/>
+      <font style="font-weight: bold;">Tax Type on</font>
+      <font style="font-weight: bold;">Flat
+        Rate</font>
+      <font style="font-weight: bold;">Imported Lines:</font><br/>
+      By default the Tax Type will be set to N/A for importing Flat Rate
+      lines. However, a registry option is available to set the Tax Type
+      appropriately to the Quote’s default Job: see <a href="Registry_Entry_Quotemaster.htm">Registry
+        Quotemaster (sys-viewer-vqte)</a> .<br/>
+      The Scope of Service from the Flat Rate Category will be added to the
+      Scope of Services text for that line. When multiple Flat Rates are
+      selected for the same option, the pretax price for all Flat Rate selections
+      will added together to obtain the Fixed Price for that option.  The
+      cost details from the Flat Rates will be extrapolated to the various
+      tabs with a revenue value of $0.<br/>
+      <font style="font-weight: bold;">Note: If the flat rate price is zero</font>,
+      all imported costs will be passed through the appropriate rate schedule,
+      margin or mark up calculations.
+    </p>
+  </div>
+  <p><img alt="" border="0" src="assets/images/Create CO.bmp" style="border: none;"/> Clicking this button will generate a Change Order to the Job on the Quote Manager&#39;s Main tab. The Change Order’s Id will be derived from the Scope’s Option Code, and the CO Amount from the Scope’s Quote Amount or Fixed Price, and its Status via registry.  </p>
+  <p>To generate Budget entries for this Change Order, approve the Scope and select Create Job Budget: in the Approval Wizard. Budget entries will be</p>
+  <p><span style="font-weight: bold;">Bill Item:</span><br/>
+    If the Create CO button generated a Change Order Billing Item, its Id will appear in this display-only field.</p>
+  <p> <img alt="" border="0" src="assets/images/IDC.bmp" style="border: none;"/>  The Import Diagnostic Cost button imports all costs associated with the quote’s lead work order so that they may be presented on the quote form. Diagnostic charges should be Declined, so that they are not billed twice. See <a href="Quote_Diagnostic_Cost_Wizard.htm">Quote Diagnostic Cost Wizard</a> for details.</p>
+  <p>This functionality is available on the Quote Scope&#39;s Main tab and Quotemaster&#39;s Scope Tab.</p>
+  <p><img alt="" border="0" src="assets/images/ImportSubCost.bmp" style="border: none;"/>  This functionality is designed for use with SubAnywhere.</p>
+  <p>When clicked a wizard will be launched to import costing information from the SubQuote tab of the WO referenced in the Quote Manager header. When the costs are imported, the markup rules defined in the Scope (Rate Schedule, Markup % or Gross Margin %) are applied to the imported costs to determine the Scope&#39;s revenues. This will be done even if Revenue has been entered on the Work Order&#39;s SubQuote tab.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Note: Wizard Requirements</span><br/>
+    The user will be alerted if no lines from the WO SubQuote Tab match the Equip. Id, or if the WO Id is not completed in Quote Manager.</p>
+  <p style="margin-left: 8px;"><img alt="" border="0" src="assets/images/CopyFromScope.bmp" style="border: none;"/> Pushing the button launches a wizard that lets the user complete the selected Scope by copying the details from other existing Scopes for this Quote. The Labor, Inventory, Material, Sub and Other lines associated with these Scopes will be imported. Click <a href="Quote_Scope_Copy_From_Button.htm">Quote Scope Copy From Button</a> for detailed information on using this button.</p>
+  <p><img alt="" border="0" src="assets/images/ParentQuote.bmp" style="border: none;"/> Clicking this button accesses the Scope&#39;s Quote Manager record.</p>
+  <p><span style="font-weight: bold;">TechAnywhere Source Rn: Technician Id:</span><br/>
+    If these fields are completed, this record/line was created/revised from TechAnywhere.</p>
+  <p> </p>
+  <p class="Tab"><a name="Scheduling_Tab" id="Scheduling_Tab"></a>Scheduling Tab</p>
+  <p>
+    <font style="font-weight: bold;">Opened By: Opened Date: Opened Time:</font><br/>
+    These display-only fields are automatically set by the system when a new Quote is created. They will not be reset if the scope is reopened.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Declined By: Declined Date: Declined Time:</font><br/>
+    These display-only fields are automatically set by the system when this Option is set to Declined and the Quote is saved. These fields will also be set when a customer declines this option in FMAnywhere. Note that these fields will only be set once, and will retain their initial date and time stamp even if the option is later set to Opened.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Accepted By: Accepted Date: Accepted Time:</font><br/>
+    These fields are automatically set by the system when this Option is set to Accepted and the Quote is saved. If the option goes directly from open to approved, the accepted values will default.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Approved By: Approved Date: Approved Time:</font><br/>
+    These fields are automatically set by the system when this Option is set to Approved and the Quote is saved. These fields will also be set when a customer approves this option in FMAnywhere.
+  </p>
+  <p class="Tab"><a name="User_Fields_Tab" id="User_Fields_Tab"></a>User Fields Tab</p>
+  <p>
+    <font style="font-weight: bold;">Quote Scope User 1-5:</font><br/>
+    These fields may be used for informational and reporting purposes.
+  </p>
+  <h3>Important Fields: Lower Section</h3>
+  <p class="Tab"><a name="Labor_Tab" id="Labor_Tab"></a>Labor Tab</p>
+  <p class="Block_Text">
+    <font style="font-weight: bold;">Hours:</font><br/>
+    The hours of labor being quoted.
+  </p>
+  <p class="Block_Text"><span>
+      <font style="font-weight: bold;">Cost Category:</font>
+    </span><br/>
+    This required field defaults from the Labor Rate (if specified in this record). When you double-click on this field to set it, the list will be filtered so that only those Job Cost Categories with a cost type of Labor are displayed.</p>
+  <p class="Block_Text" style="font-weight: bold;">Labor Rate Id:<br/>
+    The default Labor Category for this work.</p>
+  <p class="Block_Text">
+    <font style="font-weight: bold;">Tax Type Id:</font><br/>
+    The appropriate Tax Type (typically, n/a for labor) for this labor line; enter a valid Id or double-click to select from a list.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Hourly Cost:  Extended Cost:</font><br/>
+    The hourly cost for this labor defaults from the Flat Rate Category (if selected) or from the Labor Rate/Rate Schedule fields. The system calculates the extended cost by multiplying the Hours times the Hourly Cost.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Hourly Price Extended Price</font><br/>
+    If this option is not Fixed Price (which requires that these fields be $0), the hourly cost for this labor defaults from the Labor Rate/Rate Schedule fields or is calculated based on the Cost and Gross Margin or Percent Markup calculations. The system calculates the extended price by multiplying the Hours times the Hourly Price. <span>An extended price of up to $99,999,99 is supported. </span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Description:</font><br/>
+    This field defaults from the Labor Rate record but may be adjusted by the user if needed.
+  </p>
+  <p><span style="font-weight: bold;">Source Rn: TechId:</span><br/>
+    If these fields are completed, this record/line was created/revised from TechAnywhere.</p>
+  <p class="Tab"><a name="Inventory_Tab" id="Inventory_Tab"></a>Inventory Tab</p>
+  <p>The Quote Scope uses the same rules as the Work Order for the inclusion of the tax cost (if applicable) to allow for proper markup and GM% calculation for lines entered directly on the Quote, as well as from Flat Rates.</p>
+  <p class="Block_Text">
+    <font style="font-weight: bold;">Quantity:</font><br/>
+    The quantity of the part being quoted.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Cost Category:</font><br/>
+    This field defaults from the Inventory Item’s Inventory Group if it is not manually set before you enter the Inventory Item Id. If you double-click on this field  to set it manually, the list will be filtered to Job Cost Categories with a Selection Cost Type of Material <span>or Equipment.</span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Inventory Item Id</font>:<br/>
+    Enter a valid Inventory Item Id or double-click to select from a list.
+  </p>
+  <p>If a superseded part number is entered into this field, the system will alert the user that &quot;Item A has been superceded by Item B. Use New Item?&quot; It the user clicks Yes, the new part (B) will be returned to the field. If the user clicks No, part A (which has been superceded) will remain in the field.</p>
+  <p>
+    <font style="font-weight: bold;">Tax Type Id:</font><br/>
+    This field defaults based on the on the Job’s Tax status and the Cost Category.
+  </p>
+  <p><span style="font-weight: bold;">UOM:</span><br/>
+    Displays the Unit of Measure from the Inventory record.</p>
+  <p>
+    <font style="font-weight: bold;">Vendor Id</font>:<br/>
+    Complete this field if the part will be ordered from a Vendor rather than pulled from stock; validation prevents the selection of an Inactive Vendor.  If you specify a Vendor, a Purchase Order will be generated when the quote is approved. Validation prevents the Vendor Id from being completed on negative quantity Inventory and Material lines when the Quote is saved/added. <span>If the Vendor&#39;s No Inventory? field is checked, the Vendor may not be specified on this tab. </span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">PO Id</font>:<br/>
+    If you have completed the Vendor Id, this field will be completed by the system when Approval Wizard is run (if the Quote option is accepted) and the PO generated.
+  </p>
+  <p class="Block_Text">If these items should be appended to an existing PO, enter the PO Id. The approved lines will be added to the existing PO (rather than creating a new one).</p>
+  <p>
+    <font style="font-weight: bold;">Unit Cost Extended Cost</font><br/>
+    The unit cost for this item defaults from the Flat Rate Category (if selected) or from the Inventory Item. The system calculates the extended cost by multiplying the Quantity times the Unit Cost.The unit cost is determine as follows:
+  </p>
+  <p style="margin-left: 48px; font-weight: bold;">1. If inventory item references a DEFAULT VENDOR (Inventory Purchasing Tab):</p>
+  <p style="margin-left: 48px;">That Vendor defaults into the quote line as the item is entered (unless disabled via registry).  The cost value is set to the LAST PRICE paid for the item to THAT vendor (see Inventory Item – Vendors Tab; detailed on the Purchases Tab).  <br/>
+    <span style="text-indent: -.25in; mso-list: l0 level2 lfo1;">a. Selecting a</span> DIFFERENT VENDOR will recalculate the cost:
+  </p>
+  <p style="margin-left: 128px;">i. If the new Vendor has a different LAST PRICE paid, then that value replaces the cost value previously loaded; if no differing history is found, then cost value remains as is.</p>
+  <p style="margin-left: 128px;"><span style="text-indent: -1.5in; mso-text-indent-alt: -9.0pt;">ii. Clearing the default Vendor results in NO LAST PRICE history found for VENDOR &lt;blank&gt; and does NOT invoke the protocol in option 2 below.</span></p>
+  <p style="margin-left: 48px; font-weight: bold;"><span style="text-indent: -1.5in; 
+														 mso-text-indent-alt: -9.0pt;">2.</span> <span style="text-indent: -.25in; mso-list: l0 level1 lfo1;">If the item has NO default Vendor:</span></p>
+  <p style="margin-left: 48px;"><span style="text-indent: -.25in; mso-list: l0 level1 lfo1;">The applicable Cost Method (last, average, standard) is used at the overall level: the quote does not attempt to determine which stocking locations may be utilized in satisfying the inventory needs of the quote.</span></p>
+  <p style="margin-left: 88px;"><span style="text-indent: -.25in; mso-list: l0 level1 lfo1;">a. If a VENDOR is selected on this line, the cost will be updated as described in 1.a.i above.</span></p>
+  <p>
+    <font style="font-weight: bold;">Unit Price - Extended Price</font><br/>
+    If this option is not Fixed Price (which requires that these fields be $0), and this Inventory Item is not flagged as ‘Use Unit Price’, the price for this item is calculated from the Inventory Item/Rate Schedule fields or is calculated based on the Cost and Gross Margin or Percent Markup calculations. <span>The Unit Price will be rounded to 2 decimal places if needed to prevent issues with fractional pennies causing discrepancies between printed quotes and service invoices. The system calculates the extended price by multiplying the Quantity times the Unit Price. An extended price of up to $99,999.99 is supported. </span>
+  </p>
+  <p>If an Inventory Item flagged as ‘Use Unit Price’ is selected:</p>
+  <p style="margin-left: 48px;">If the Quote references a Site (but not a Job), the Site&#39;s Price Level is used<br/>
+    If the Quote references a Job, the Job&#39;s Price Level is used<br/>
+    When the Job &amp; Site Levels are both blank use the Price Level 1.</p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Price Code Handling:</font><br/>
+    The Inventory Item allows for 10 levels of Material Pricing, but Price Codes only allow for 5. If price codes are in effect, and the default price level from the Client Site is greater than 5, the system now defaults price level 1 from the Price Code. A registry entry <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#globel_settings_price_code">Price Code Handling (sys-ffv-global-settings)</a> is available to always default the value from the Price Code level 1, regardless of the Material Price Level in the Client Site.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Description:</font><br/>
+    This field defaults from the Inventory Item record but may be adjusted by the user if needed.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Vendor Part Number:</font><br/>
+    The Vendor’s Part Number for this item , if available. This will be written to the PO if the line is approved.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Vendor Quote Number:</font><br/>
+    If the Vendor provided you with Quote number, enter it here. It will be included on the Vendor Approval Form for their reference.
+  </p>
+  <p><span style="font-weight: bold;">Source Rn: TechId:</span><br/>
+    If these fields are completed, this record/line was created/revised from TechAnywhere.</p>
+  <p class="Tab"><a name="Material_Tab_" id="Material_Tab_"></a>Material Tab</p>
+  <p>This tab should be used to enter non-inventoried material. The Quote Scope uses the same rules as the Work Order for the inclusion of the tax cost (if applicable) to allow for proper markup and GM% calculation for lines entered directly on the Quote, as well as from Flat Rates.</p>
+  <p><span style="font-weight: bold;">Quantity:</span><br/>
+    The quantity of the material being quoted.</p>
+  <p style="font-weight: bold;">Other Rate Id:<br/>
+    <span style="font-weight: normal;">This optional field may be used to specify miscellaneous materials or other items on quotes; it may default in the Cost Category.</span>
+  </p>
+  <p style="font-weight: bold;"><strong><span style="font-weight: normal;">V</span>endor Id:</strong><br/>
+    <span style="font-weight: normal;">The vendor from which you wish to obtain this material; validation prevents the selection of an Inactive Vendor. Validation prevents the Vendor Id from being completed on negative quantity Inventory and Material lines when the Quote is saved/added.</span>
+  </p>
+  <p>
+    <font style="font-weight: bold;"><span style="font-weight: bold;">P</span>O Id</font>:<br/>
+    If you have completed the Vendor Id, this field will be completed by the system when Approval Wizard is run (if the Quote option is accepted) and the PO generated.  If these items should be appended to an existing PO, enter the PO Id. The approved lines will be added to the existing PO (rather than creating a new one).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Tax Type Id:</font><br/>
+    The appropriate Tax Type for this line; enter a valid Id or double-click to select from a list. If you enter a Vendor Id, it will default to Prepaid.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Cost Category:</font><br/>
+    This field is required. If you double-click on this field to manually set it, the list will be filtered to Job Cost Categories with a cost type of Material <span>or Equipment.</span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Unit Cost:   Extended Cost:</font><br/>
+    The unit cost for this item defaults from the Flat Rate Category (if selected) or may be entered by the user. The system calculates the extended cost by multiplying the Quantity times the Unit Cost.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Unit Price: Extended Price:</font><br/>
+    If this option is not Fixed Price (which requires that these fields be $0), the price for this item defaults from the Rate Schedule fields or is calculated based on the Cost and Gross Margin or Percent Markup calculations. <span>The Unit Price will be rounded to 2 decimal places if needed to prevent issues with fractional pennies causing discrepancies between printed quotes and service invoices. The system calculates the extended price by multiplying the Quantity times the Unit Price. An extended price of up to $99,999,99 is supported. </span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Description:</font><br/>
+    This field should contain a brief description of the material.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Vendor Part Number:</font><br/>
+    The Vendor’s Part Number for this item, if available. This will be written to the PO if the line is approved.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Vendor Quote Number:</font><br/>
+    If the Vendor provided you with Quote number, enter it here. It will be included on the Vendor Approval Form.
+  </p>
+  <p><span style="font-weight: bold;">Source Rn: TechId:</span><br/>
+    If these fields are completed, this record/line was created/revised from TechAnywhere.</p>
+  <p class="Tab"><a name="Subcontractors_Tab" id="Subcontractors_Tab"></a>Subcontractors Tab</p>
+  <p>
+    <font style="font-weight: bold;">Quantity:</font><br/>
+    The quantity of the subbed work being quoted.
+  </p>
+  <p><span>The PO Id will default from the source Work Order&#39;s Purchase Order Id (if completed)  when the user enters the Quantity and then tabs out of the field. The Vendor Id will be defaulted from the PO.  </span></p>
+  <p style="font-weight: bold;">Cost Category:<br/>
+    <span style="font-weight: normal;">This required field normally defaults when you select a Vendor or Other Rate Id. Cost Category Selection Types of Other, Equipment or Subcontract are allowed; the user will be warned if a Type of Labor or Material is selected.</span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Tax Type Id:</font><br/>
+    The appropriate Tax Type for this line; enter a valid Id or double-click to select from a list. If you enter a Vendor Id, it will default to Prepaid.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Other Rate Id</font>:<br/>
+    This optional field is typically used to specify standard subcontractor charges.  It will in turn default the Cost Category.
+  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Note:</span> If the Equipment specified this Scope references a Service Provider Rate Schedule, then any Other Rate Id&#39;s specified on the Sub tab default the Unit Cost values from the Equipment&#39;s Service Provider Rate Schedule table instead of the one referenced in the Vendor record.</p>
+  <p>
+    <font style="font-weight: bold;">Vendor Id</font>:<br/>
+    The vendor from which you wish to obtain this material; validation prevents the selection of an Inactive Vendor.
+  </p>
+  <p>Validation requires a Vendor Id to be entered on Subcontract lines when that option is approved. This prevents an invalid Technician from being associated with Subcontract lines, and the PO post from failing because a Vendor was not specified.  </p>
+  <p>
+    <font style="font-weight: bold;"><span style="font-weight: bold;">P</span>O Id</font>:<br/>
+    This field will be completed by the system when Approval Wizard is run (if the Quote option is accepted) and the PO generated.  If these charges should be appended to an existing PO, enter the PO Id. The approved lines will be added to the existing PO (rather than creating a new one).
+  </p>
+  <p>
+    <font style="font-weight: bold;">Unit Cost Extended Cost</font><br/>
+    The unit cost for this item defaults from the Flat Rate Category (if selected), the Other Rate, or may be entered by the user. The system calculates the extended cost by multiplying the Quantity times the Unit Cost.
+  </p>
+  <p>If the Equipment specified on this Scope references a Service Provider Rate Schedule, then any Other Rate Id&#39;s specified on the Sub tab should default the Unit Cost values from the Equipment&#39;s Service Provider Rate Schedule table instead of the one referenced in the Vendor record.</p>
+  <p>
+    <font style="font-weight: bold;">Unit Price Extended Price</font><br/>
+    If this option is not Fixed Price (which requires that these fields be $0), the price for this item defaults from the Rate Schedule fields or is calculated based on the Cost and Gross Margin or Percent Markup calculations. <span>The Unit Price will be rounded to 2 decimal places if needed to prevent issues with fractional pennies causing discrepancies between printed quotes and service invoices. The system calculates the extended price by multiplying the Quantity times the Unit Price. An extended price of up to $99,999,99 is supported. </span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Description:</font><br/>
+    This field should contain a brief description of the work.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Vendor Quote Number:</font><br/>
+    If the Vendor provided you with Quote number, enter it here. It will be included on the Vendor Approval Form for their reference.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Work Requested:</font><br/>
+    The description of the work requested. This will appear on the work order that will be generated to this subcontractor.
+  </p>
+  <p class="Tab"><a name="Other_Tab" id="Other_Tab"></a>Other Tab</p>
+  <p>
+    <font style="font-weight: bold;">Quantity:</font><br/>
+    The number of units being quoted (e.g., backhoe hours, mileage, permits, etc.).
+  </p>
+  <p style="font-weight: bold;">Cost Category:<br/>
+    <span style="font-weight: normal;">This field is required; it typically defaults from the Other Rate Id.</span>
+  </p>
+  <p style="font-weight: bold;"><span style="font-weight: normal;">O</span>ther Rate Id:<br/>
+    <span style="font-weight: normal;">Enter a valid Other Rate Id or double-click to select from a list (for example, permits, fees, etc.).</span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Tax Type Id:</font><br/>
+    The appropriate Tax Type for this line; this field is set based on the Quote Manager&#39;s Tax Type and Cost Category.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Unit Cost Extended Cost</font><br/>
+    The unit cost for this defaults from the Flat Rate Category (if selected) or may be entered by the user. The system calculates the extended cost by multiplying the Quantity times the Unit Cost.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Unit Price Extended Price</font><br/>
+    If this option is not Fixed Price (which requires that these fields be 0$), the price for this item defaults from the Rate Schedule fields or is calculated based on the Cost and Gross Margin or Percent Markup calculations. <span>The Unit Price will be rounded to 2 decimal places if needed to prevent issues with fractional pennies causing discrepancies between printed quotes and service invoices. </span>The system calculates the extended price by multiplying the Quantity times the Unit Price.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Description:</font><br/>
+    This field defaults from the Other Rate record (if specified). It should contain a brief description of the charge.
+  </p>
+  <p><span style="font-weight: bold;">Source Rn: TechId:</span><br/>
+    If these fields are completed, this record/line was created/revised from TechAnywhere.</p>
+  <p class="Tab"><a name="Addtnl_Equipment_Tab" id="Addtnl_Equipment_Tab"></a>Addtnl Equipment Tab</p>
+  <p>This tab is used to append additional equipment to this Scope.</p>
+  <p class="Block_Text"><span style="font-weight: bold;">Equipment Id:</span><br/>
+    Enter an Equipment Id to add it onto this option for reporting purposes. The system will <font style="text-decoration: underline; ">not</font> factor in multiple quantities to account for additional equipment listed on this tab when work orders or purchase orders for this Quote are generated. Multiple quantities must be set either when Importing a Flat Rate (on the scope tab), or by entering them directly on the detail lines.</p>
+  <p class="Tab"><a name="RevAdjust_Tab" id="RevAdjust_Tab"></a>RevAdjust Tab</p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">Revenue adjustments enable you apply discount and management fees to the quote total. Saving this Scope, or clicking the Adjust Revenue button on the Quote Manager Managers tab populates this tab with adjustments based on the Revenue Adjustment record for this Scope. When the Quote is approved and a Work Order is generated the information on this tab will be applied to the Work Order&#39;s RevAdjust tab. </p>
+  <p>
+    <font style="font-weight: bold;">Invoice Description:</font><br/>
+    This field will be printed next to this discount or addition on the printed quote and invoice generated from this quote (e.g., ‘Loyal Customer Discount’). This field defaults from the Revenue Adjustment record.
+  </p>
+  <p>
+    <font style="font-weight: bold;">o Add o Deduct</font><br/>
+    This field controls whether the dollars on this line will be added to or deducted from the quote.
+  </p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">Important Note:</span><span> When SAMPro calculates the AdjBase,  if its value is negative, the Add / Deduct button is automatically flipped from its default setting. This supports the correct setting of Revenue Adjustments for negative scopes. </span> </p>
+  <p>
+    <font style="font-weight: bold;">AdjBase: Rate: Amount:</font><br/>
+    For Discounts, the AdjBase would be typically be set to the Fixed or Total Quote amount for this option. The Rate should be set to the discount to be applied to this option. The Amount is calculated by the system by multiplying the Adjustment Base times the Rate. To deduct a specific dollar value, leave the AdjBase and Rate fields blank, and simply enter the amount.
+  </p>
+  <p>‘Adds’ (such as management or trip fees) are generally entered as a flat amount. Both the Adjustment Base and the Rate will be blank, and the Amount will be the flat fee.</p>
+  <p>
+    <font style="font-weight: bold;">Cost Category:</font><br/>
+    The default Cost Category for this adjustment.
+  </p>
+  <p class="Reference_Line" style="margin-bottom: 0.00pt;">
+    <font style="font-weight: bold;">GL Account Id:</font><br/>
+    This field sets the default discount account for the entries that will be generated on the RevAdjust Work Order tab, and is typically an income type account. It will be debited (as an offset to the credits for this type of income) when the work order invoice is posted. It is defaulted from the Revenue Adjustment Record (if completed) or the Cost Category.
+  </p>
+  <p>
+    <font style="font-weight: bold;">GL Entity:</font><br/>
+    The default GL Entity for this adjustment. This field defaults from the Default Service Job Cost Code found in the Client Site Equipment referenced on the specified scope line.
+  </p>
+  <p>
+    <font style="font-weight: bold;">PSeq#:</font><br/>
+    The Print Sequence Number sets the order that multiple revenue adjustment lines will print on the invoice.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Tax Type:</font><br/>
+    The Tax Type will default to &quot;n/a&quot; and will be evaluated and properly handled by invoicing should this quote become an actual work order.
+  </p>
+  <p class="Tab"><a name="Techs_Tab" id="Techs_Tab"></a>Techs Tab</p>
+  <p>The Techs tab lists all Work Order Technician lines for Work Orders referenced by this Scope. When a line is right-clicked, a prompt appears displaying Work Order information. The Technician Status may be changed from this prompt.</p>
+  <script type="text/javascript" language="JavaScript1.2">
+    //<![CDATA[
+    if (typeof(TextPopupInit) != 'function') TextPopupInit = new Function();
+    TextPopupInit('a2', 'POPUP655661429');
+    //]]>
+  </script>
+
+</body></html>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.13.1.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="po"/>
+<meta name="MS-HKWD" content="purchase order"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Changing A PO</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="po,purchase order"/><meta name="brsprev" value="Cancelling_A_PO.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Changing A PO">
+        <span>Changing A PO</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Changing a Purchase Order</h1>
+<h2>Purpose:</h2>
+<p>A PO can be changed for a number of reasons including:<br/>
+ Items are added or removed from the order<br/>
+ The quantities of one or more items are changed<br/>
+ The GL Account detail for one or more items is changed<br/>
+ The Vendor assigned to the PO is changed</p>
+<p>The actions that you should take when changing a PO depend on its current 
+ status as well as the nature of the change. Note that PO&#39;s with a status 
+ of Cancelled cannot be changed. Closed PO&#39;s can be reopened using the 
+ Reopen Closed PO button on Purchase Order Viewer&#39;s Status. </p>
+<h2>Changing a Purchase Order with a Status of Released or Unreleased</h2>
+<p><font style="font-weight: bold;">1.</font> Make any needed changes to 
+ the PO.</p>
+<p><font style="font-weight: bold;">2.</font> Click the Save Record button; 
+ the system will automatically update Inventory (if the status is Released) 
+ as needed.</p>
+<h2>Changing a Purchase Order With a Status of Printed</h2>
+<p>If the PO has already been printed, you may or may not have to print 
+ a change order depending upon the nature of the change. For example, if 
+ you changed the number of one type of item being ordered, you would generate 
+ and print a change order. However, if you simply revised your internal 
+ data on an item, such as the GL Account Id, printing a change order would 
+ not be necessary.</p>
+<p><font style="font-weight: bold;">Note:</font> If an item has already 
+ been received, you cannot change the quantity to less than the quantity 
+ already received (e.g., if 5 have been received, you could change the 
+ quantity to 6 but not to 4).</p>
+<p><font style="font-weight: bold;">1.</font> Make any needed changes to 
+ the head or detail of the purchase order as needed the system will automatically 
+ update Inventory as needed.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">If you 
+ are changing the quantity ordered or Inventory Item Id, you will also 
+ need to do the following:</font></p>
+<p style="margin-left: 36.00pt;">a. ‘Unreceive’ the line if it has been 
+ received.</p>
+<p style="margin-left: 36.00pt;">b. Flag the Cancel box in the line you 
+ want to change.</p>
+<p style="margin-left: 36.00pt;">b. Add a line that will replace it (if 
+ needed).</p>
+<p><font style="font-weight: bold;">2.</font> Click the Save Record button; 
+ click OK when the system asks you to confirm the change to the record.</p>
+<p><font style="font-weight: bold;">3.</font> Next, the system will ask 
+ if you wish to create a change order. If you changed any information that 
+ should be sent to the Vendor (e.g., an item or quantity) click the Yes 
+ button.</p>
+<p>If you only changed information internal to your company that does not 
+ pertain to the Vendor (for example, a GL Account), click the No button. 
+ In this case, the system will not create a new PO number and will not 
+ reset the status.</p>
+<p><font style="font-weight: bold;">4.</font> If you opted to create a 
+ change order in the previous step, the system will ask you if want to 
+ save the PO with a status of *** Changed ***. Click the Yes button. In 
+ this case, the system will create a new PO number (old PO Id: 1112, new 
+ PO Id: 1112-01) with a status of Changed.</p>
+<p><font style="font-weight: bold;">5.</font> Print the Change Order (e.g., 
+ 1112-01) from the Report PO Form function and send it to the vendor.</p>
+
+</body></html>

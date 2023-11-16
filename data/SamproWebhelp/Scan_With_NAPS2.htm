@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.2.0_14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Scan With NAPS2</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="scanning,document,NAPS2 Scanning,sys-document-archive,user registry"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Scan With NAPS2">
+        <span>Scan With NAPS2</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Scan With NAPS2</h1>
+<h2>Overview</h2>
+<p class="MsoNormal">SAMPro has used a program called Acquire for a long 
+ time to interface the program to the local scanner. This program has not 
+ been updated or changed in many years. Due to the introduction of 64bit 
+ machines and newer Operating Systems, there have been problems with some 
+ environments recently. Due to this, we have another created another method 
+ for scanning. The program is called NAPS2. The current version is 2.6.3.</p>
+<p class="MsoNormal">The NAPS2 interface may be enabled for all users or 
+ on a user by user basis via registry.  </p>
+<h2>Installation</h2>
+<p class="MsoListParagraph" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">1.<span style="font: 7.0pt &#39;Times New Roman&#39;;">      </span></span></span> You 
+ must install your current scanner to the PC. You must install at least 
+ the WIA driver for your particular scanner. You can also install the TWAIN 
+ driver if provided. Please verify that you scanner will work on the PC. 
+ Once that is done, you will need to install the SAMPro scanner software.</p>
+<p class="MsoListParagraph" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; 
+	 mso-list: Ignore;">2.     </span>Install 
+ the SAMPro interface software (naps2-5.5.0-setup.exe or higher); this 
+ will be available from your SAMPro support representative. Install the 
+ program on every PC that is going to scan using this protocol. Once set 
+ up, you must open up the program and set up a Profile.</p>
+
+
+
+
+<p class="MsoNormal" style="margin-left: .5in;"> </p>
+<p class="MsoNormal" style="mso-no-proof: yes;"><img src="assets/images/naps1.jpg" alt="" style="border: none;" width="645" height="303" border="0"/></p>
+<p class="MsoNormal"> </p>
+<p class="MsoListParagraph" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin;"><span style="mso-list: Ignore;">3.<span style="font: 7.0pt &#39;Times New Roman&#39;;">      </span></span></span> Click 
+ on the Profiles button and then click on Add and enter in a Display name. 
+ The <b style="mso-bidi-font-weight: normal;">name is IMPORTANT</b> because 
+ it is the profile SAMPro will reference. In this example, I will name 
+ it SamproWIA.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal" style="margin-left: .25in;"><span style="mso-no-proof: yes;"><img src="assets/images/clip_image003.png" alt="" width="540" height="162" border="0"/></span></p>
+<p class="MsoNormal" style="margin-left: .5in;">You can use either the 
+ TWAIN Driver or the WIA Driver. We recommend using the WIA Driver since 
+ it is the default in most Windows versions. Click on the Choose Device 
+ button and select the scanner you will use.</p>
+<p class="MsoNormal" style="margin-left: .5in;">There are two settings 
+ that can be used. One is the “Use predefined settings” and the other is 
+ “Use native WIA UI”. If you use the predefined settings, you can set all 
+ of the settings that will be used EVERY time you scan. If this is not 
+ acceptable, you can use the native WIA settings. This will pull up the 
+ software interface that was installed with your scanner. This will allow 
+ you to change settings each time you scan. There is a process when using 
+ this setting which will be explained later.</p>
+<p class="MsoNormal" style="margin-left: 48px;"><img src="assets/images/naps7.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="MsoListParagraph" style="text-indent: -.25in; mso-list: l0 level1 lfo1;"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin; 
+	 mso-list: Ignore;">4.     </span>Once the 
+ above has been done, you will need to set up the registry setting in SAMPro. 
+ There are two ways to set up the registries in SAMPro. Either in the sys-document-archive 
+ (global setup) or in the user record&#39;s Registry tab. The settings are 
+ the same, just in different places.</p>
+<p class="MsoNormal"> </p>
+<p class="MsoNormal" style="margin-left: 1.0in;"><i style="mso-bidi-font-style: normal;"><u>Setting 
+ Key</u><span style="mso-tab-count: 2;">                        </span> <u>Setting 
+ Value</u></i></p>
+<p class="MsoNormal" style="margin-left: 1.0in;">scanProgramName<span style="mso-tab-count: 1;">        </span>      NAPS2</p>
+<p class="MsoNormal" style="margin-left: 1.0in;">scanProgram<span style="mso-tab-count: 2;">                     </span> C:\Program 
+ Files (x86)\NAPS2\NAPS2.Console.exe</p>
+<p class="MsoNormal" style="margin-left: 1.0in;">scanProfile<span style="mso-tab-count: 2;">                         </span> SamproWIA</p>
+<p class="MsoNormal" style="margin-left: .5in;"> </p>
+<p class="MsoNormal" style="margin-left: .5in;">The scanProgramName will 
+ always be NAPS2</p>
+<p class="MsoNormal" style="margin-left: .5in;">The scanProgram will be 
+ the directory where it was installed. Note the .exe file is NAPS2.Console.exe, 
+ not the NAPS2.exe</p>
+<p class="MsoNormal" style="margin-left: .5in;">The scanProfile is the 
+ name you put in NAPS2 when you created the Profile. They must be identical.</p>
+<p class="MsoNormal" style="margin-left: .25in;">The registries must be 
+ entered in the User record or…….</p>
+<p class="MsoNormal" style="margin-left: .25in; mso-no-proof: yes;"><img src="assets/images/naps4.jpg" alt="" style="border: none;" border="0"/></p>
+<p class="MsoNormal" style="margin-left: .25in;"> </p>
+<p class="MsoNormal" style="margin-left: .25in;">In the registry sys-document-archive 
+ setting for ALL Users who scan. (Note that I disabled the Acquire setting)</p>
+<p class="MsoNormal" style="margin-left: .25in;"><span style="mso-no-proof: yes;"><img src="assets/images/clip_image009.jpg" alt="" width="568" height="213" border="0"/></span></p>
+<p class="MsoNormal" style="margin-left: .25in;"> </p>
+<p class="MsoNormal" style="margin-left: .25in;">Scanning is the same as 
+ Acquire. If you decided to use the native software UI, there is one thing 
+ to Note. There will be two windows that open up: the NAPS2 Console in 
+ a command prompt window and the native software UI. The UI may be behind 
+ the console.</p>
+<p class="MsoNormal" style="margin-left: .25in;"><span style="mso-no-proof: yes;"><img src="assets/images/clip_image011.jpg" alt="" width="577" height="310" border="0"/></span></p>
+<p class="MsoNormal" style="margin-left: .25in;">You can minimize the Console, 
+ but do NOT CLOSE it. When you are done scanning, you will need to close 
+ the UI interface by closing the window by way of the “X”. Do not cancel, 
+ or you will not have a scan to be saved. After you close the UI, the console 
+ will automatically close.</p>
+
+</body></html>

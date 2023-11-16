@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.5.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="clone job"/>
+<meta name="MS-HKWD" content="template"/>
+<meta name="MS-HKWD" content="job"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Job Template Overview</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="clone job,template,job"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Job Template Overview">
+        <span>Job Template Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Job Templates Overview</h1>
+<h2>Purpose:</h2>
+<p>Job Templates enable you to define various types of standard job, site and equipment structures that facilitate the creation of new customers and/or Sites from the Job Record or from New Call.</p>
+<p>Once the Templates have been created in the special Templates viewers (for Clients, Sites and Jobs), they are used in regular Job (and New Call) viewers for Cloning. A Template may be selected in the Job viewer for Cloning – but the selected Template cannot be changed in the Job viewer.</p>
+<p>Jobs should NOT be cloned from the Job Template viewer.</p>
+<h2>Accessing the Templates Viewers:</h2>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;">In order to access the Job, Client Site and Client Template viewers, your user group must have rights to these viewers. It is recommended this ability is limited to supervisory or other advanced users.</p>
+<h2>Registry:</h2>
+<p><a href="Registry_Entry_Job_and_Job_Cloning.htm">Registry Entry Job and Job Cloning</a></p>
+<p><a href="Registry_Entry_for_New_Call_Options.htm">Registry Entry for New Call Options</a></p>
+<h2>Setting Up Your Templates for Jobs that will NOT use New Call 2/COD Processing:</h2>
+<h3 style="text-indent: 36.00pt;">Step 1: Decide on your Job Structures</h3>
+<p class="Reference_Line" style="margin-left: 36.00pt; margin-bottom: 0.00pt;">Decide how your various template jobs should be structured in terms of cost codes, billing items and so on. You may wish to have several types of templates – for residential clients, commercial clients, and so on.</p>
+<h3 style="text-indent: 36.00pt;">Step 2: Create the Client Template Record</h3>
+<p style="margin-left: 36.00pt;">Create a Client Template record in View Client Templates. The Template box must be checked. Only those fields that will be common to ALL clients generated from this Template should be filled in. All other fields in this template record (except those required to save the record) should be blank.</p>
+<h3 style="text-indent: 36.00pt;">Step 3: Create the Client Site Template Record</h3>
+<p style="margin-left: 36.00pt;">Create a Client Site Template record in View Client Site Templates. The Template box must be checked. Only those fields that will be common to ALL sites generated from this Template should be filled in. All other fields in this template record (except those required to save the record) should be blank.</p>
+<h3 style="text-indent: 36.00pt;">Step 4: Create the Job Template Record</h3>
+<p style="margin-left: 36.00pt;">Create a Job Template record in View Job Templates. The Template box must be checked. Set the Client and Client Site Id’s to the Client and Client Site Templates you just created.</p>
+<p style="margin-left: 36.00pt;">Aside from the Client and Client Site fields, only those fields that will be common to ALL jobs generated from this Template should be filled in. All other fields in this template record (except those required to save the record) should be blank.</p>
+<h3 style="text-indent: 36.00pt;">Step 5: Create the Job Billing Item Record(s)</h3>
+<p style="margin-left: 36.00pt;">Create at least one Job Billing Item record for each of your template jobs. The information on this record will be used for invoicing. All Billing Items associated with the Job will be cloned during the New Call Create and Clone Job Wizard processes. Typically, the Invoice and Billing Worksheeting fields would be completed.</p>
+<h3 style="text-indent: 36.00pt;">Step 6: Create the Job Cost Code Record(s)</h3>
+<p style="margin-left: 36.00pt;">Create at least one Job Cost Code Billing Item record for each of your your template jobs. All Cost Codes associated with the Job will be cloned during the New Call Create and Clone Job Wizard processes.</p>
+<h3 style="text-indent: 36.00pt;">Step 7: Create a Site Equipment Record</h3>
+<p style="margin-left: 36.00pt;">Create at least one Site Equipment record for each of your template sites. Be sure to complete the Job fields in this record with your Template Job.</p>
+<h2>Using your Template Files with Job Clone Wizard</h2>
+<p>You may select a Template Job in the regular Job Account Viewer. You will not be able to edit the Template, but you will be launch the Clone Job wizard. When the Job has been cloned, it will appear in Job Viewer so the you can easily edit it and its associated record.</p>
+<h2>Using your Template Files With New Call Create (not New Call 2 / COD)</h2>
+<p>Once your template records have been created, using them in New Call is as simple as A-B-C.</p>
+<h3 style="text-indent: 36.00pt;">Step A: Verify the Customer is Not Already in your Database</h3>
+<p>Use the New Call&#39;s Search Text feature to verify that the customer is not already included on your database: be sure to search by Name and at least one other parameter, such as phone number or street address.</p>
+<h3 style="text-indent: 36.00pt;">Step B: Select the residential Client Site and Switch to New Call Create</h3>
+<p>Once you are sure that the customer is not in your database, select the residential site on the Client Site list in New Call.</p>
+<p><img src="assets/images/image/FLASH.gif" alt="image\FLASH.gif" title="image\FLASH.gif" width="48" height="28" border="0"/> With residential selected, click the Search button to turn Search Off and Create on.</p>
+<h3 style="text-indent: 36.00pt;">Step C: Enter the New Client Site, Equipment and Work Order Information</h3>
+<p>In the New Call Create screen, type over the Client Site Id residential with your firm&#39;s id for this client site. Enter the work order and equipment fields as discussed in the <a href="New_Call_Create_New_Client_Site_Equipment_Viewer.htm">New Call Create</a> Help Topic. The Client Id and Name must remain blank: when you click the Add record button, the system will also create a new client record with the same Id as that of the new client site.</p>
+<h2>Using Template Files with New Call 2 / COD Processing</h2>
+<h3 style="text-indent: 30.25pt;">Create the Client Template Record</h3>
+<p>Create a COD Client Template record in View Client Templates. In COD processing, AR will be applied against this record: individual Client Records will not be created for each customer.</p>
+<p>The Template box must be checked.</p>
+<p>In the Client Address, enter COD / Do Not Mail.</p>
+<h3 style="text-indent: 30.25pt;">Create the Client Site Template Record</h3>
+<p>Create your COD Client Site Template records in View Client Site Templates.</p>
+<p>The Template must reference an AR Terms Id that has the COD box checked; these are the only Template Sites that will appear on the New COD Site screen.</p>
+<p>The Template box must be checked.</p>
+<p>Only those fields that will be common to ALL sites generated from this Template (In New Call 2 / COD processing) should be filled in. All other fields in this template record (except those required to save the record) should be blank.</p>
+<p>To accommodate taxation issues, you may need to create multiple Template COD Sites – one for each sale tax region (tax group) you will serve.</p>
+<h3 style="text-indent: 30.25pt;">Job Templates</h3>
+<p>Create your COD Job Template records in View Job Templates.</p>
+<p><font style="font-weight: bold;">When creating Job Templates for COD Sites, the Site Id in the Job record must be blank.</font> New Call 2/COD is smart enough to use the Job referenced in the Equipment record you select in the New Call process.</p>
+<p>To accommodate taxation issues, you may need to create multiple Template COD Jobs – one for each sale tax region (tax groups) you will serve.</p>
+<p>The Template box must be checked.</p>
+<p>On the Invoice Tax, copy the Client address.</p>
+<h3 style="text-indent: 30.25pt;">Job Billing Item Record(s)</h3>
+<p>Create at least one Job Billing Item record for each of your template jobs. The information on this record will be used for COD invoicing. Typically, the Invoice Report Query fields would be completed.</p>
+<h3 style="text-indent: 30.25pt;">Job Cost Code Record(s)</h3>
+<p>Create at least one Job Cost Code record for each of your COD template jobs.</p>
+<h3 style="text-indent: 30.25pt;">Create a Site Equipment Record</h3>
+<p>Create at least one Site Equipment record for each of your template COD sites. Be sure to complete the Job fields in this record with your Template COD Job.</p>
+
+</body></html>

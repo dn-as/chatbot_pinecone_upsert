@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.3.0_17";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="insurance"/>
+  <meta name="MS-HKWD" content="labor"/>
+  <meta name="MS-HKWD" content="workers comp"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Worker_s_Comp_Category_Viewer</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="insurance,labor,workers comp"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Worker_s_Comp_Category_Viewer">
+        <span>Worker_s_Comp_Category_Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Worker&#39;s Comp Category Viewer</h1>
+  <h2>Purpose:</h2>
+  <p>Create and maintain the Worker&#39;s Compensation Category tables for each state in which your firm is insured for Worker&#39;s Compensation.</p>
+  <h2>Example:</h2>
+  <p>Clerical tables for Ohio and New York, etc.</p>
+  <h2>Usage:</h2>
+  <p>Required for Payroll. This viewer is divided into two sections. The upper section consists of the data-entry fields that identify this table, the insurance rate for this category, and the earnings limit (if any). The lower section of the screen lists your firm&#39;s Pay Types and the rate at which insurance premiums are calculated.</p>
+  <p>Referenced in Records: Work Order, Employee<br/>
+    Reference in Journals: Labor, Payroll<br/>
+    Reference in Starters: Compute Payroll</p>
+  <h3>Support for Employee Portion of Worker’s Compensation Expense</h3>
+  <p>In some states (e.g., Washington), a portion of the worker’s compensation expense (the employee rate) is the responsibility of the employee. SAMPro supports the ability to specify the employee contribution portion (if any) on the worker’s compensation record itself. Since this portion frequently varies by the worker’s compensation category, this functionality accurately assesses the employee’s portion to the employee. <a class="dropspot" data-rhwidget="DropSpot" data-target="POPUP641293967" href="#"><span data-open-text="true" data-skip-index="true">Click for additional details.</span><span data-close-text="true">Click for additional details.</span></a></p>
+  <div data-targetname="POPUP641293967">
+    <p>When an employee rate is designated, that portion of the total workers comp liability should be withheld from the employee as if it were a deduction. In previous releases, a miscellaneous deduction (per employee or deduction group) was used to handle this situation. However, since it was a single deduction (covering all workers comp categories to which an employee might be assigned), the employee rate variability among the different workers comp categories was not fully addressed.</p>
+    <p style="margin-left: 36.00pt;">
+      <font style="font-weight: bold;">Note:</font> If you already have a deduction implemented for Worker’s Comp, you may wish to convert to this enhanced functionality. If so, be sure to discuss this with your support rep. Depending upon how your system is configured, you will need to change the end date of the current worker’s comp deduction on the Employee Deductions tab, or remove the WC Deduction from the Deduction Group. In addition, the Deduction and Employee Rate fields must be completed for all applicable Workers Comp Categories. <font style="font-weight: bold;"> </font>
+    </p>
+  </div>
+  <h3>Support for Security Filtering</h3>
+  <p style="margin-left: 8px;">This enhancement is applicable to a scenario where the WC state from the Job is used to determine the Cost Cat Workers Comp codes to use in the Labor Journal and WO Labor tab. In addition, unique Security-specific WC codes are implemented for each company containing the proper rates, and then added multiple WC codes with the same state to the cost category. Security has been built into this matching process so that it uses the appropriate WC code for the company that the job/labor journal transaction resides in.</p>
+  <p style="margin-left: 8px;">In version 9.1.611.062 and up, SAMPro now defaults into the Labor Journal the correct Workers Comp category from the security that matches the employee&#39;s security for the following tabs: Employee Rate Test, Labor Journal, WO Labor Tab, and import from Labor Journal into WO, based on the Job Cost Category &quot;Workers Comp&quot; tab and the Workers Comp&#39;s State from the Job.</p>
+  <h3><span style="font-weight: bold;">Compute PR Sample Calculation</span></h3>
+  <p style="margin-left: 8px;">Sample Calculation of Workers Comp amounts (per $100) during the Compute PR function. This example is calculated with experience modifier, discount factor &amp; employees WC category rate:  </p>
+  <p style="margin-left: 48px;">1. Divide Earnings by 100 for &#39;Per $100&#39; ... $5650.00 / 100 = $56.50</p>
+  <p style="margin-left: 48px;">2. Multiply by WC Rate ... $56.50 x .29 = $16.385</p>
+  <p style="margin-left: 48px;">3. Apply Experience Modifier ... $16.385 x .89 = $14.58265</p>
+  <p style="margin-left: 48px;">4. Apply Discount ... $14.58265 x (1 - .5818) = $6.09846423</p>
+  <p style="margin-left: 48px;">5. Round amount to $6.10.</p>
+  <h2>Important Fields: Upper Section</h2>
+  <p>
+    <font style="font-weight: bold;">Note:</font> this Help Topic lists the standard configuration of all fields that may be included in this record. If you are using a customized system, the fields displayed on your screen may not exactly match the order or status of the fields described in this Topic.
+  </p>
+  <p>
+    <font style="font-weight: bold;">WC Category Id:</font> (10 character, only . and - special characters)<br/>
+    The compensation category provided by your insurer.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Description:</font> (40 character)<br/>
+    A brief description of the category (e.g., clerical, etc.).
+  </p>
+  <p>
+    <font style="font-weight: bold;">State Id:</font><br/>
+    This required field specifies the Worker&#39;s Comp State record this table is created for. Enter the State Id or double-click to select from a list.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Security Id:</font><br/>
+    If multiple location security is implemented on your system, this informational field displays the Security Id of the local user that created this record. If multiple location security is not implemented on your system, or if this record was created by a global user, this field will be blank.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Total Rate:<br/>
+      T</font>he total of the employer and employee worker’s comp rates. The difference of the Total Rate less the Employee Rate will be the resulting &quot;expense&quot; to be posted to the expense account for W. C.
+  </p>
+  <p>The rate for this category. WC premiums are also modified by the Experience Modifier and Discount Fields in the Worker&#39;s Comp State record. Depending on your state, wages paid for bonus, holiday and vacation time may or may not be liable for insurance premiums. Refer to your accountant or Worker&#39;s Compensation Policy Manual for details on rates, limits, and type of pay to be included.</p>
+  <p>
+    <font style="font-weight: bold;">Rate Type:</font><br/>
+    Select Per $100 (by double-clicking on its radio button or pressing the Spacebar) if premiums are based on each $100 dollars of pay. Select Per Hour if premiums are based on hours worked.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Earnings Limit:</font><br/>
+    If there is a cap on earnings above which premiums are not assessed, enter its dollar amount. If there is no earnings limit, enter 99,999,999.99 so that all earnings will be included in the calculation of premiums.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Limit by Pay Period:</font><br/>
+    If the Earning Limit is by Payroll Period, check this box by double-click or pressing the spacebar. If this field is blank, the Earnings Limit will pertain to annual earnings.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Deduction Id:</font><br/>
+    This field should be used to reference a Deduction record created for use with the employee portion (if applicable) of the worker’s comp. The Deduction should be of Type Miscellaneous, with an appropriate Check Label filled in (e.g., WC), the Amount field blank; typically, the Amount Type is set to hourly. Although the GL Account needs to be completed in the Deduction record, the system will actually credit the GL Debit Account from the Worker’s Comp State record to record the employee’s contributions as an offset to the WC expense.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Important:</font> Do NOT specify this Deduction Id in either the Employee Record Deductions Tab or the Deductions Group record. The software will manage the deduction correctly with it specified in the applicable Workers Comp Category records.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Employee Rate:</font><br/>
+    Enter the rate for the employee’s portion of the Worker Comp rate. For example, if this is an hour rate, this rate times the hours worked will appear as a miscellaneous deduction on the employee’s paycheck.
+  </p>
+  <h2>Important Fields: Lower Section</h2>
+  <p>
+    <font style="font-weight: bold;">Pay Type Id:</font><br/>
+    Enter a valid Pay Type Id or double-click to select from a list. <font style="font-weight: bold;">Note:</font> all your firm&#39;s active Pay Types should be included in this table.
+  </p>
+  <p>
+    <font style="font-weight: bold;">First RF Field</font><br/>
+    This field specifies the Rate Factor at which the insurance premium rate (in the upper portion of the screen) is assessed relative to the employee&#39;s regular base pay rate. <font size="2" style="font-size: 10pt;">This field should be left blank if WC insurance should not be assessed on this type of pay.</font>
+  </p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Second RF Field</p>
+  <p>The display-only RF: (Rate Factor) field on the right defaults from the Pay Type record, and shows how the employee is actually paid. Consider the following example:</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="text-decoration: underline;">Example 1:</font> WC applied to Hours Worked and Sick Time
+  </p>
+  <p style="margin-left: 36.00pt;"> Rate: 2.2   Rate Type: Per $100<br/>
+     Earnings Limit: 1,400.00   X Limit by Pay Period</p>
+  <p style="margin-left: 36.00pt;"> Pay Type Id:  RF  RF:<br/>
+     regular   1.0  1.0<br/>
+     overtime  1.0  1.5<br/>
+     doubletime  1.0 2.0<br/>
+     bonus    1.0<br/>
+     sick   1.0  1.0<br/>
+     holiday    1.0<br/>
+     vacation   1.0</p>
+  <p style="margin-left: 36.00pt;">In the above example, WC premiums are assessed on regular, overtime, doubletime and sick wages at the employee regular (base) rate of pay (1.0), up to a limit of $1,400 per pay period</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="text-decoration: underline;">Example 2:</font> WC applied to Wages Paid for Hours Worked
+  </p>
+  <p style="margin-left: 36.00pt;"> Rate: 2.2   Rate Type: Per $100<br/>
+     Earnings Limit: 1,400.00   X Limit by Pay Period</p>
+  <p style="margin-left: 36.00pt;"> Pay Type Id:  RF  RF:<br/>
+     regular   1.0  1.0<br/>
+     overtime  1.5 1.5<br/>
+     doubletime  2.0 2.0<br/>
+     bonus    1.0<br/>
+     sick    1.0<br/>
+     holiday    1.0<br/>
+     vacation   1.0</p>
+  <p style="margin-left: 36.00pt;">In the above example, WC premiums are assessed on regular, overtime, and doubletime wages <font style="text-decoration: underline;">paid</font>, up to a limit of $1,400 per pay period</p>
+  <script type="text/javascript" language="JavaScript1.2">
+    //<![CDATA[
+    if (typeof(TextPopupInit) != 'function') TextPopupInit = new Function();
+    TextPopupInit('a1', 'POPUP641293967');
+    //]]>
+  </script>
+
+</body></html>

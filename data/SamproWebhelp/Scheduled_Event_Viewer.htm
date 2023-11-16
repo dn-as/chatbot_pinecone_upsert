@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.10.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="escalation"/>
+  <meta name="MS-HKWD" content="event"/>
+  <meta name="MS-HKWD" content="scheduled event"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Scheduled_Event_Viewer</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="escalation,event,scheduled event"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Scheduled_Event_Viewer">
+        <span>Scheduled_Event_Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>Scheduled Event Viewer</h1>
+  <h2>Purpose:</h2>
+  <p>Access the scheduled events associated with a work order, web log or report.</p>
+  <h2>Usage:</h2>
+  <p>This viewer may be used to cancel a scheduled event, or change its parameters (such as an email address). It may also be used to attach a new scheduled event directly to a work order.</p>
+  <p>The system will display a warning when editing an event that contains data replacement tokens. Tokens will be replace by the appropriate data when the event is executed.</p>
+  <p>If the following registry entry is implemented in your system, SAMPRO will <font style="font-weight: bold;">prevent</font> manual changes to Scheduled Events that were initially created from an Escalation Profile. </p>
+  
+  <h2>Registry Entries:</h2>
+  <p><a href="Registry_Entry_for_Scheduled_Events.htm">Registry Entry for Scheduled Events</a></p>
+  <h2>Important Fields: Upper Section</h2>
+  <p>
+    <font style="font-weight: bold;">Event Id:</font><br/>
+    This field is maintained by the system.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Description:</font><br/>
+    This field defaults from the Escalation Profile used to create this event.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Date Created: Time Created:</font><br/>
+    These display-only fields are set by the system when this event is created.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Date: Time:</font><br/>
+    The Date and Time this event is scheduled to execute.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Event Status: Pending - Triggered - Executed - Cancel - OnHold</font><br/>
+    These fields are usually maintained by the system. When the Scheduled Event Manager is running, it will periodically review its list of pending/triggered events to see if any of them should be executed. When the system clock ticks to execution time, the event will be executed and the status set to Executed.
+  </p>
+  <p>The status of a scheduled event may also be changed by the user (typically, canceling it or putting it on hold) by double-clicking the adjacent radio button.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Pending</font> events have been released to system and will be triggered for execution at the appropriate date and time.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Triggered</font> events will execute when the server clock matches the Date and Time listed above.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Executed</font> events have already occurred at the Date and Time listed above.
+  </p>
+  <p style="margin-left: 36.00pt;">When the <font style="font-weight: bold;">Cancel</font> status is set (by the user or the system), the scheduled event will not occur.</p>
+  <p style="margin-left: 36.00pt;">An event will be created with a status of <font style="font-weight: bold;">OnHold</font> if the Contingent box is checked. OnHold events will will not be set to Pending until the Escalation Status of the Work Order or Web Log matches the Status From field.</p>
+  <p>
+    <font style="font-weight: bold;">Event Type: Alarm - Notification - Process – Report – SQL – Crystal - AlarmR - NotificationR</font><br/>
+    The Event Type should not be changed for an existing event, but may be set if a new event is being appended to a work order or web log. Two types of events relating directly to work orders and web logs are supported: notifications and alarms.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Notifications</font> occur when an action takes place or at a set time after an event takes place. For example,
+  </p>
+  <p style="margin-left: 66.25pt;">An e-mail is sent to a technician when a work order is assigned to him</p>
+  <p style="margin-left: 66.25pt;">A fax is sent to a customer an hour after a work order is completed</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Alarms</font> are triggered when an action fails to occur. An alarm is automatically cancelled if the action that it was waiting for occurs. In the first example, the alarm would be cancelled when the work order did go active within two hours. In the second example, the alarm would be cancelled if the work order were in fact completed within 24 hours.
+  </p>
+  <p style="margin-left: 66.25pt;">A message appears on the Alarm Board when a work order fails to go active within two hours<br/>
+    An e-mail is sent to a CSR when a work order fails to be completed within 24 hours.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Process</font> events enable certain Starter functions to be scheduled and run on a daily or weekly basis.
+  </p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Report</font> Event Types are created when a report is scheduled to run from the Report Range viewer; they should not be created in the Scheduled Event viewer due to the number of parameters which must be set.  See <a href="Report_Options.htm">Report Options</a> for details.
+  </p>
+  <p style="margin-left: 36.00pt;">The <font style="font-weight: bold;">SQL</font> action type is reserved for use by support services.</p>
+  <p style="margin-left: 36.00pt;">
+    <font style="font-weight: bold;">Crystal</font> Event Types can NOT be set manually.  This option can only be set from the Crystal Viewer&#39;s scheduling functionality.
+  </p>
+  <p style="margin-left: 36.00pt; font-weight: bold;">Recurring Notifications (NotificationR) work like Notifications except that:</p>
+  <p style="margin-left: 88px;">They are set back to OnHold after execution<br/>
+    They must be flagged as Contingent<br/>
+    They cannot be used for Tech-based notifications</p>
+  <p style="font-weight: bold; margin-left: 56px;">Recurring Alarms (AlarmR) work like Alarms except that:</p>
+  <p style="margin-left: 96px; font-weight: normal;">They are set back to OnHold after execution<br/>
+    They cannot be used for Tech-based notifications<br/>
+    Note that Recurring Alarms must also be Contingent.</p>
+  <p>
+    <font style="font-weight: bold;">Contingent:</font><br/>
+    If the Contingent box is checked, the scheduled event will initially be created with a status of OnHold. Contingent events will not be set to Pending (so that the Events Manager can &quot;release&quot; them) until the Escalation Status of the Work Order or Web Log matches the Status From field. This feature is designed to limit the number of alarms and notifications released to the system.
+  </p>
+  <p><span style="font-weight: bold;">Profile Time Base Id:</span><br/>
+    This field can be set to Scheduled or Creation.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">For Work Orders:</span> If the field is set to Scheduled, time calculations will be based on when the work order is scheduled, or when it changed status (for example, send an email to the customer 5 minutes after the work order is completed). If this field is set to Created, times are relative to the when the work order was actually generated.</p>
+  <p style="margin-left: 48px;"><span style="font-weight: bold;">For Processes:</span> If this Scheduled Event is being set up to run a Starter Function, it should be set to Scheduled.</p>
+  <p>
+    <font style="font-weight: bold;">Notification Text:</font><br/>
+    The Notification Text is displayed in the list of scheduled events and/or the Alarm Board.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Email:</font><br/>
+    If this event is being implemented via email, the Email fields must be completed.
+  </p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Email From:</font><br/>
+    The email address of the machine or individual sending the message. <font style="font-weight: bold;">This must be a valid address on your email server.</font>
+  </p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Email Address:</font><br/>
+    The address(es) this message will be sent to.
+  </p>
+  <p style="margin-left: 48px;">
+    <font style="font-weight: bold;">Email Subject: Email Message:</font><br/>
+    The Email fields define the contents of the e-mail subject line and contents of the notifications and alarms implemented via e-mail.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Function Id:</font><br/>
+    This field would be completed for an Event defined as a Process or Report.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Parameters: Source Type: Source Rn:</font><br/>
+    These fields are typically completed when a scheduled event is generated via an Escalation Profile.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Technician Id:</font><br/>
+    This field would be completed when a scheduled event is generated via an Escalation Profile for a Technician type event.
+  </p>
+  <p>
+    <font style="font-weight: bold;">Status From: Status To:</font><br/>
+    These fields refer to the Escalation Status of the web log or work order. The To and From statuses are used by the Scheduled Event manager to determine if a notification should be sent or an alarm triggered or cancelled. You may double-click to select from a list. Note that only the following statuses are valid for web logs:
+  </p>
+  <p style="text-indent: 30.25pt;">unacknowledged  acknowledged  cancelled any   new</p>
+  <p>The status of &#39;any&#39; refers to any escalation status.</p>
+  <p>
+    <font style="font-weight: bold;">Acknowledged:</font><br/>
+    Reserved for future use.
+  </p>
+  <p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Repeat Options:</p>
+  <p>
+    <font style="font-weight: bold;">Repeat Event</font><br/>
+    This box would be checked for a repeating report. Refer to <a href="Report_Options.htm">Report Options</a> for details on scheduling a repeating report.
+  </p>
+  <p><strong>Note: To save when Repeat Event is checked, users must provide a time. If time is not provided</strong></p>
+  <h2>Important Fields: Lower Section</h2>
+  <p>
+    <font style="font-weight: bold;">Event Parameters:</font><br/>
+    These fields are typically completed when a scheduled event is generated via an Escalation Profile.
+  </p>
+
+</body></html>

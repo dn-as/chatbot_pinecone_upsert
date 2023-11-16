@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.9.8.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="accounts payable"/>
+<meta name="MS-HKWD" content="ap"/>
+<meta name="MS-HKWD" content="billed"/>
+<meta name="MS-HKWD" content="pay when paid"/>
+<meta name="MS-HKWD" content="payables"/>
+<meta name="MS-HKWD" content="pwp"/>
+<meta name="MS-HKWD" content="vendor"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Pay-When-Paid Billed List</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="accounts payable,ap,billed,pay when paid,payables,pwp,vendor"/><meta name="brsprev" value="Pay_When_Paid_Approved_List.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Pay-When-Paid Billed List">
+        <span>Pay-When-Paid Billed List</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Pay-When-Paid Billed List</h1>
+<h2>Purpose:</h2>
+<p>This function enables you to associate costs (which will never be billed in SAM Pro) with a specific AR Invoice. This will allow you to avoid having unbilled costs clutter up end of month processing.</p>
+<h2>Usage:</h2>
+<h3>If Invoicing Is Not Run in SAM Pro</h3>
+<p style="margin-left: 36.00pt;">This function must be run if you are not using Automated Invoicing (e.g., you create your invoices manually and then create a Sales Journal entry). It is designed to enable you to relate costs with the invoices on which they were billed. This step <font style="text-decoration: underline;">must</font> be performed in order for PWP Reporting and Approval to be possible.</p>
+<p style="margin-left: 36.00pt;">This function would be run after creating the Sales Journal entry. When you start this function (by selecting Start PWP Billed List from the Starter menu) an initial Range screen will appear.</p>
+<h3>If Construction Invoicing is Run In SAM Pro</h3>
+<p style="margin-left: 36.00pt;">This function enables you to associate unbilled costs with job invoices. To do so, you would enter the costs against a specific job, and then run this function for the desired AR Invoice to wish to match it up with.</p>
+<h3>If Service Invoicing is Run In SAM Pro</h3>
+<p style="margin-left: 36.00pt;">This function also enables you to associate unbilled costs with service invoices. To do so, you would enter the costs against the specific work order that was invoiced. You would then run this function for the AR Invoice for this work order. This is particularly useful for PM Work Orders.</p>
+<p style="margin-left: 36.00pt;">UNBILLED Job History lines for Service Compute Jobs lacking a Work Order reference are also included in this function.  </p>
+<h2>Registry Entry:</h2>
+<p>See <a href="Registry_Entry_PWP_Billed_List.htm">Registry Entry PWP Billed List</a> for details on relaxing the validation used for Service Invoice type jobs.</p>
+<h2>PWP Billed List: Initial Screen Fields</h2>
+<p><font style="font-weight: bold;">AR Invoice Id:</font><br/>
+Enter a valid Invoice Id. The display-only Job Id, and Job Name fields will default when you do so.</p>
+<p><font style="font-weight: bold;">Description:  Invoice Date:<br/>
+Job Id:  Job Name: WorkOrder Id:<br/></font>These display-only fields default when you enter the AR Invoice Id to help you confirm that you are running this function for the correct job. If this WorkOrder Id is completed, this is a Service Invoice, and overrides the JCH WO Id field.</p>
+<p><font style="font-weight: bold;">Source Journal:<br/></font>This range enables you to limit the items on the list screen to a specific journal or journals (e.g., AP Journal, WO Inventory, WO Other, etc.).</p>
+<p><font style="font-weight: bold;">Transaction Id:<br/></font>This range enables you to limit the items on the list screen to a specific transaction id.</p>
+<p><font style="font-weight: bold;">Pay-When-Paid:<br/></font>To limit the items on the list to those provided by PWP Vendors, enter a <font style="font-weight: bold;">Y</font> in this field. A selection of N will enable the assignment of non-PWP costs to an invoice.</p>
+<p><font style="font-weight: bold;">JCH WO Id:<br/></font>You may wish to filter on the WO Id when cleaning up old costs in construction invoicing. This avoids pulling in everything from a job for an invoice. It is not necessary to complete this field for service invoices . </p>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Click the Go button to continue.</p>
+<h2>PWP Billed: List Screen Fields</h2>
+<p>The List screen displays the AP information referenced for this Job, including the (PWP) Vendor Id and Name, the Invoice Id and Date, and the Total Job Cost amount.</p>
+<p><font style="font-weight: bold;">Billed?</font><br/>
+When First Displayed:</p>
+<p style="margin-left: 36.00pt;">1) Costs already billed on an AR Invoice appear on the list with the box checked.</p>
+<p style="margin-left: 36.00pt;">2) Costs that are eligible to add to the invoice appear on the list but are not checked.</p>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Click the Go button to cross-reference the AP and AR sides. When you run the PWP Approval function (discussed above), your PWP vouchers will be included.</p>
+<p>The JCH entries on the list are updated to reflect the value of the billed field:</p>
+<p style="margin-left: 36.00pt;">1) Checked lines have their AR Invoice Id set</p>
+<p style="margin-left: 36.00pt;">2) Unchecked lines have their AR Invoice Id cleared</p>
+
+</body></html>

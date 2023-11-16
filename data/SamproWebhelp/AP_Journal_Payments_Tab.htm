@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="MS-HKWD" content="accounts payable"/>
+  <meta name="MS-HKWD" content="ap"/>
+  <meta name="MS-HKWD" content="inventory"/>
+  <meta name="MS-HKWD" content="journal"/>
+  <meta name="MS-HKWD" content="payables"/>
+  <meta name="topic-status" content="Sent for Review"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>AP Journal Payments Tab</title>
+  <link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+  <meta name="rh-index-keywords" content="accounts payable,ap,inventory,journal,payables"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AP Journal Payments Tab">
+        <span>AP Journal Payments Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1>AP Journal Payments Tab</h1>
+  <h2>Purpose:</h2>
+  <p>The information on this screen displays payment information <span>directly from the AP Journal for paid Vendor Invoices.</span></p>
+  <p><img src="assets/images/image78.png"/></p>
+  <h2>Important Fields<font color="#000000" size="2" style="font-size: 9pt;">:</font>
+  </h2>
+  <p>Double-click a row to open the Check viewers. If the Check Reference Type is V then it opens View Check Vendor, if it&#39;s blank then it just opens the regular View Check, Reference Type Employee was filtered out in the query.</p>
+  <p>
+    <font style="font-weight: bold;">Payment Status Bar:</font>
+  </p>
+  <p><strong>TrxId:</strong> Displays the Transaction Id</p>
+  <p><strong>Vendor: </strong>Displays the company name of the vendor for the paid invoice</p>
+  <p><strong>Invoice:</strong> Displays the invoice number. </p>
+  <p>
+    <font style="font-weight: bold;">Payment Details:</font><br/>
+    Check ID, Check #, Date, Payee Name, Amount, and Vendor populate from the <span>AP Journal</span>
+  </p>
+  <p>
+    <font style="font-weight: bold;">If a check(s) has been generated for this vendor invoice, launch and filter the View Check or View Check (Vendor) for this entry. </font>
+  </p>
+  <p>
+    <font style="font-weight: bold;">Users must have access to View Check or View Check (Vendor) for this button to appear (or be functional).</font>
+  </p>
+
+</body></html>

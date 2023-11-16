@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Registry RTD Remote Tech Device (sys-rtd)</title>
+<meta name="generator" content="Adobe RoboHelp 10" />
+<link rel="StyleSheet" href="sampro.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+        origWidth = innerWidth;
+        origHeight = innerHeight;
+        onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+/*<![CDATA[*/
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+/*]]>*/
+</style>
+
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8">
+</script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8">
+</script>
+</head>
+<body>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+        var strUrl = document.location.href;
+        var bc = 0;
+        var n = strUrl.toLowerCase().indexOf("bc-");
+        if(n != -1)
+        {
+                document.location.href = strUrl.substring(0, n);
+                bc = strUrl.substring(n+3);
+        }
+
+        if (window.addTocInfo)
+        {
+        addTocInfo("SAMPro Help\nRegistry Entries\nTechAnywhere RTD - Blackberry\nRegistry Entry RTD Remote Tech Device");
+addAvenueInfo("MAIN","Start_RTD_Daily_Work_Order_Export.htm","Currency_Conversion_Notes.htm");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+        }
+        if (window.writeBtnStyle)
+                writeBtnStyle();
+
+        if (window.writeIntopicBar)
+                writeIntopicBar(1);
+
+        
+        document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("sampro.htm", "", "&gt;", "Home", "Contents.htm");
+document.write("<a href=\"Logging_On.htm\">SAMPro Help<\/a> &gt; <a href=\"Registry_Viewer.htm\">Registry Entries<\/a> &gt; <a href=\"Registry_Entry_RTD_Remote_Tech_Device.htm\">TechAnywhere RTD - Blackberry<\/a> &gt; Registry Entry RTD Remote Tech Device<\/p>");
+
+}
+else
+        if (window.gbIE4)
+                document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+        {
+        setTimeout("setRelStartPage('sampro.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+        }
+}
+
+if (window.addEventListener){  
+        window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+        window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]>
+</script><script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2">
+</script>
+<h1>Registry RTD TechAnywhere Remote Tech Device (sys-rtd)</h1>
+<h2>Purpose:</h2>
+<p>This registry entry controls the operation of the Start RTD Daily Work Order Export function used to send work orders to Blackberry-type devices. It also controls how out- and in-bound files are handled.</p>
+<p>See <a href="RTD_TechAnywhere_Blackberry_Setup.htm">RTD TechAnywhere Blackberry Setup</a> for additional information on setting up this functionality.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight:bold;">Id: sys-rtd</font></p>
+<h3>Outbound File Settings</h3>
+<p><font style="font-weight:bold;">Version 7.1</font> <font style="font-weight:bold;">Additional Contents</font><font style="font-weight:bold;">:</font> OutboundWOFolder=<font style="font-style:italic;">path</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> OutboundWOFolder <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">path</font></p>
+<p>Identifies the pathname of the folder in which generated XML documents representing Work Orders will be placed.</p>
+<p><font style="font-weight:bold;">Version 7.1</font><font style="font-weight:bold;">:</font> OutboundWOFileName=NewWO&lt;wrkordr_id&gt;-&lt;wrkordr_stts&gt;-&lt;tchncn_id&gt;.XML</p>
+<p><font style="font-weight:bold;">Version 7.2</font> <font style="font-weight:bold;">Setting Key:</font> OutboundWOFileName<br />
+<font style="font-weight:bold;">Setting Value:</font> NewWO&lt;wrkordr_id&gt;-&lt;wrkordr_stts&gt;-&lt;tchncn_id&gt;.XML</p>
+<p>This option serves as the model for the filename of XML files generated for outbound Work Orders. In the model</p>
+<p>The string ‘&lt;wrkordr_id&gt;’ will be replaced by Id of the generated Work Order</p>
+<p>The string ‘&lt;wrkordr_stts&gt;’ will be replaced by the (internal) escalation status of the Work Order</p>
+<p>The string ‘&lt;tchncn_id&gt;’ will be replaced by the ID of the corresponding Technician</p>
+<p>All other characters will be directly copied.</p>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> OutboundManagedListFolder=<font style="font-style:italic;">path</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> OutboundManagedListFolder <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">path</font></p>
+<p>Identifies the pathname of the folder in which generated XML documents representing Managed Lists will be placed.</p>
+<h3>Inbound Document Settings</h3>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> InboundDocumentSourceFolder=<font style="font-style:italic;">path</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> InboundDocumentSourceFolder <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">path</font></p>
+<p>Identifies the pathname of the folder in which inbound XML documents are to be found.</p>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> InboundDocumentDisposition=<font style="font-style:italic;">value</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> InboundDocumentDisposition <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">value</font></p>
+<p>Indicates what is to be done with inbound documents after they have been processed by Sampro. Possible values are ’delete’ and ‘archive’. If ‘delete’ is indicated, the document will be discarded after processing. If ‘archive’ is indicated, the document will be moved to an archive folder after processing.</p>
+<p>If no InboundDocumentDisposition is provided, ‘archive’ will be presumed if an InboundDocumentArchiveFolder key is present and ‘delete’ otherwise.</p>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> InboundDocumentArchiveFolder=<font style="font-style:italic;">path</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> InboundDocumentArchiveFolder <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">path</font></p>
+<p>Identifies the pathname of the folder in which incoming XML documents will be moved after they are successfully processed by Sampro.</p>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> InboundDocumentRejectFolder=<font style="font-style:italic;">path</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> InboundDocumentRejectFolder <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">path</font></p>
+<p>Identifies the pathname of the folder in which incoming XML documents will be moved after their processing by Sampro generated an error or a warning.</p>
+<h3>Log File Defaults</h3>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> LogMode=<font style="font-style:italic;">value</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> LogMode <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">value</font></p>
+<p>Indicates how messages sent to the log are to be processed.</p>
+<p>A value of ‘off’ indicates that no logging is to be performed.<br />
+A value of ‘on’ indicates the log messages are to be written to the log file defined by the ‘LogPath’ key.<br />
+A value of ‘debug’ indicates that the log messages are to be displayed via a MessageBox.</p>
+<p>If no LogMode is provided, ‘on’ will be presumed if a ‘LogPath’ key is present and ‘off’ otherwise.<br /></p>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> LogPath=<font style="font-style:italic;">path</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> LogPath <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">path</font></p>
+<p>Identifies the pathname of the file in which log messages are to be written.</p>
+<h3>Cost Category Defaults</h3>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> CostCategoryLabor=<font style="font-style:italic;">costcategoryid</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> CostCategoryLabor <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">costcategoryid</font></p>
+<p>Identifies the cost category (of posting type Labor) to be used when posting technician entries for Labor from incoming Work Orders.</p>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> CostCategoryMaterial=<font style="font-style:italic;">costcategoryid</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> CostCategoryMaterial <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">costcategoryid</font></p>
+<p>Identifies the cost category (of posting type Material) to be used when posting technician entries for Inventory from incoming Work Orders.</p>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> CostCategoryOther=<font style="font-style:italic;">costcategoryid</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> CostCategoryOther <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">costcategoryid</font></p>
+<p>Identifies the cost category to be used when posting technician entries for Miscellaneous from incoming Work Orders. Typically you would select a category of posting type Other.</p>
+<h3>Default Pay Type</h3>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> PayType=<font style="font-style:italic;">paytypeid</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> PayType <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">paytypeid</font></p>
+<p>Identifies the default pay type id to be used when posting technician entries for Labor from incoming Work Orders.</p>
+<h3>Status Code Mapping</h3>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> StatusCode=<font style="font-style:italic;">status , category ,</font> <font style="font-style:italic;">externalname</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> StatusCode <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">status , category ,</font> <font style="font-style:italic;">externalname</font></p>
+<p>Identifies the Log Type Ids which you expect to see in inbound and outbound XML files.</p>
+<p>There may be as many of these entries as required. At least two values, separated by commas, are required for each entry. Internally, the contents of the StatusCode entries are used to populate the WorkOrderStatusCode Managed List file.</p>
+<p>The first is a valid SAM Pro Log Type Id (waiting service, unacknowledged, cancelled, etc.)</p>
+<p>The second is the category of the status (‘Open’ or ‘Closed). A ‘Closed’ category informs SAM Pro to post status changes and technician entries (e.g., of hours worked or materials used) from the inbound XML to the Work Order in SAM Pro. For any other category (Open, at this point) only the Log Type Id for the appropriate technician is updated (on the Work Order’s Technician Tab).</p>
+<p>An optional third value identifies an optional ‘external’ name for use in the Remote Device. If the third value is omitted, it defaults to the first value.</p>
+<h3>Daily Export</h3>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> DailyExportDate = <font style="font-style:italic;">ddddd</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> DailyExportDate <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">ddddd</font></p>
+<p>Any other value (or absence of this parameter) will result in no daily export being performed. This registry entry is used within the optional Daily Work Order Export function to identify which Technician tab lines are used to generate the outbound XML files. Valid values are ‘Today’ and ‘Tomorrow’.Only lines having Scheduled Dates matching this parameter trigger XML generation.</p>
+<p><font style="font-weight:bold;">Version 7.1 Additional Contents:</font> DailyExportStatusCodes <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">statusCodeList</font></p>
+<p><font style="font-weight:bold;">Version 7.2 Setting Key:</font> DailyExportStatusCodes <font style="font-weight:bold;">Setting Value:</font> <font style="font-style:italic;">statusCodeList</font></p>
+<p>where statusCodeList is a list of Sampro status codes (Log Type Ids, actually) separated by commas. Only those Work Orders with Technician lines set to these statuses (and with dates corresponding to today or tomorrow, as specified above) will be exported. This registry option is used within the optional Daily Work Order Export function to identify which Technician tab lines are used to generate the outbound XML files. This entry consists of a list of Log Type Ids separated by commas. Only lines having a Log Type Id matching one of the values in the list will trigger XML generation.</p>
+<h2>Sample Sampro Registry Entry</h2>
+<p><img src="image/IMG00032.gif" border="0" height="1239" width="1069" alt="image\IMG00032.gif" /></p>
+<script type="text/javascript" language="javascript1.2">
+//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+        writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]>
+</script>
+</body>
+</html>

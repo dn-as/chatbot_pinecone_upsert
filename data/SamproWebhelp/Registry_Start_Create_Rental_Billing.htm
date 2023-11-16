@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.20.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Start Create Rental Billing</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="registry,rental billing,equipment rental,asset,create rental billing,sys-start-scrterntlbllng"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Start Create Rental Billing">
+        <span>Registry Start Create Rental Billing</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Start Create Rental Billing</h1>
+<h3>Purpose:</h3>
+<p>This registry configures the <a href="Start_Create_Rental_Billing.htm">Start 
+ Create Rental Billing</a> function that is used to generate rental billings 
+ associated with Assets as a Rental Invoice type Work Order. Rental billings 
+ are defined by the presence of an Asset Id on the Client Site PM Billing 
+ Tab. Unlike PM invoices, the Rental revenue is written to the WO-Other 
+ Tab, not the WO-RevAdjust Tab.</p>
+<h2>Related Registries:</h2>
+<p>See <a href="Registry_Entry_Global_Settings__Column_Compression__Dispatch_Board_Rows__History_Log_Inventory_Markup.htm#Global_Settings_Default_PM_Billing_GL">Default 
+ PM GL Accounts</a> for a Global Settings option which provides default 
+ GL Accounts for the system to use if the corresponding fields on the Client 
+ Site PM Billing tab are blank when Start Create Rental Billing is run.</p>
+<h3>Important Fields:</h3>
+<p><span style="font-weight: bold;">Id:</span> sys-start-scrterntlbllng</p>
+<p>See the Standard Registry section in <a href="Registry_Viewer.htm">Registry 
+ Viewer</a> for additional Registry Id formats to allow entries for specific 
+ Users, Branches, Security, or User Groups to override the main entry.</p>
+<h3>Specify Cost Category on Rental Invoice Work Orders</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> CostCategory <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">costcategoryid</font></p>
+<p>where <span style="font-style: italic;">costcategoryid</span> is replaced 
+ with the cost category that should default to the Other tab of the Rental 
+ Invoice Work Order. This option is required for consolidated (no line 
+ item detail for each asset) invoices.</p>
+<h3><span style="font-family: Verdana, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; 
+			 font-size: 14px; font-variant-ligatures: normal; font-variant-caps: normal; 
+			 orphans: 2; text-align: start; widows: 2; -webkit-text-stroke-width: 0px; 
+			 background-color: #ffffff; text-decoration-style: initial; 
+			 text-decoration-color: initial; display: inline	 ! important ; 
+			 float: none;">S</span>pecify Technician for Rental Invoice 
+ Work Order</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> TechId <font style="font-weight: bold;">Setting 
+ Value:</font> <font style="font-style: italic;">techid</font></p>
+<p>where <font style="font-style: italic;">techid</font> is replaced with 
+ a valid Technician Id. Typically, this option would be implemented in 
+ conjunction with Escalation Management and a ‘billing clerk’ technician.</p>
+<h3>Specify Work Code for PM Invoice Work Orders</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> WorkCode <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">workcodeid</font></p>
+<p>Specifies a valid work code Id for all Rental Invoice work orders. If 
+ this line is omitted, the work code field will be blank.</p>
+<h3>Specify Escalation Profile for Rental Invoice Work Order</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> EscalationProfileId 
+ <font style="font-weight: bold;">Setting Value:</font> escalationprofileid</p>
+<p>where <font style="font-style: italic;">escalationprofileid</font> is 
+ replaced with a valid Escalation Profile Id. If implemented. An escalation 
+ profile would typically be used to alert the billing clerk (or other appropriate 
+ individuals) that Rental Invoice work orders exists and should be invoiced 
+ via Compute Service Invoice.</p>
+<h3>Specify Invoice Description</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> InvoiceDescription 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">description</font></p>
+<p>Replace <font style="font-style: italic;">description</font> with a 
+ brief description to print on this invoice if the Invoice Description 
+ is blank on the Site&#39;s PM Billing Tab.</p>
+<p> </p>
+
+</body></html>

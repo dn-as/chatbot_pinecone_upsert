@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.14.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="client web interface"/>
+<meta name="MS-HKWD" content="CRMAnywhere"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="web-settings"/>
+<meta name="MS-HKWD" content="web"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry CRMAnywhere (web-settings)</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="client web interface,CRMAnywhere,registry,web-settings,web"/><meta name="brsnext" value="Registry_Entry_to_Remap_WO_Status_on_Web_Client.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry CRMAnywhere (web-settings)">
+        <span>Registry CRMAnywhere (web-settings)</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry CRMAnywhere (web-settings)</h1>
+<h2>Purpose:</h2>
+<p>This registry entry enables is used to specify style, graphics, email and text settings for the CRMAnywhere (the Client Web Interface). This registry entry also is used to define the location of the graphics files for CSRAnywhere.</p>
+<p class="Body_Text_Indent" style="border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;" color="#FF0000">Testing Your Registry Entries</font><br/>
+<font style="font-weight: bold; font-style: italic;">The system does not verify the validity of registry entries.</font> Be sure to <font style="font-weight: bold;">test</font> your registry entries after completing them to verify that they are functioning correctly.</p>
+<h2>Related Registry Settings:</h2>
+<p>To set the CSRAnywhere Locations: <a href="Registry_for_CSRAnywhere.htm">Registry Entry for CSRAnywhere</a> .</p>
+<p>To override web-settings values for by Web Profile: <a href="Web_Profile_Viewer.htm">Web Profile Viewer</a> .</p>
+<p>To override web-settings values for by Web User: <a href="Web_Users_Viewer.htm">Web Users Viewer</a></p>
+<p>To Specify Web-viewer Document Categories: <a href="Registry_Entry_CRMAnywhere_Viewable_Document_Categories.htm">Registry Web Viewable Document Categories</a></p>
+<p>To set up the guest login registry for the Confirm Appointment pages, see <a href="CRMAnywhere_Guest_Login_for_Confirm_Appointment.htm">Guest Login for Appointment Confirmation</a></p>
+<h2>Usage:</h2>
+<p>Please note that the values from &#39;web-settings&#39; are loaded when the web service is started: if you change this registry entry, you will need to restart the web server to see the results.</p>
+<p>Registry options entered on the Registry tab of the Web Profile / Web User viewer overridden entries in web-settings.</p>
+<h2>Important Fields:</h2>
+<p class="Tip_Note_Heading" style="margin-top: 4.00pt;">Id</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">web-settings</font></p>
+<h3>Web Files Location (required):</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> web-dir <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">/subdirectory/</font></p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> web-dir= <font style="font-style: italic;">/subdirectory/</font></p>
+<p>Specifies the subdirectory (in the base Data-Basics software directory containing the v.exe executable) where web files are kept (logos, banners). Note the &#39;/&#39; at the beginning and end of this entry are required. If you have multiple application servers, all should contain this subdirectory.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> web-dir-temp <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">/subdirectory/</font></p>
+<p>Specified the subdirectory (in the base Data-Basics software directory containing the v.exe executable) where temporary web files are kept (these are cleaned on server startup, and on session logout). If you have multiple application servers, all should contain this subdirectory.</p>
+<h3>Email Addresses (default is required):</h3>
+<p style="margin-left: 36.00pt; border-top: 0.50pt solid #000000; border-bottom: 0.50pt solid #000000; border-left: 0.50pt solid #000000; border-right: 0.50pt solid #000000;"><font style="font-weight: bold;">Email Groups Supported:</font> Email Groups are now supported for Informational (pop up) email links as well as the New Site request form (from email-default). An email group is specified in brackets in the registry setting: for example, email-default=[custserv] specifies that all members of the email group custserv will be emailed when a new site request is made.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> email-default <font style="font-weight: bold;">Setting Value:</font> <font style="font-weight: bold; font-style: italic;">info</font><font style="font-weight: bold;">@mycompany.com</font></p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> email-default=<font style="font-style: italic;">info</font>@mycompany.com</p>
+<p>The default email address for information requests. This must be a valid email address on your company’s email server.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> email-woinvviewdetail <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">invoices@mycompany.com</font></p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> email-woinvviewdetail=<font style="font-style: italic;">invoices@mycompany.com</font></p>
+<p>Replace <font style="font-style: italic;">invoices@mycompany.com</font> with an address for an information request from &#39;View Invoice Detail&#39; screen. This must be a valid email address on your company’s email server.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> email-woviewdetail <font style="font-weight: bold;">Setting Value:</font> openworkorders@mycompany.com</p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> email-woviewdetail=openworkorders@mycompany.com</p>
+<p>Replace openworkorders@mycompany.com with an email address for an information request from &#39;Open WO Detail&#39; screen. This must be a valid email address on your company’s email server.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> email-quotedetail <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">quotes@mycompany.com</font></p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> email-quotedetail=<font style="font-style: italic;">quotes@mycompany.com</font></p>
+<p>Email address for an information request from &#39;Quote Detail&#39; screen. This must be a valid email address on your company’s email server. This email address will also be used when a CRMAnywhere user accepts a quote option in CRMAnywhere: an e-mail being sent when the web user pushes the Save Decisions button on the Manage Quotes page. This email will include the Quote Id and Description in the Subject line, and the following information in the body:</p>
+<p style="margin-left: 36.00pt;">Quote Option Id(s) and Description(s)<br/>
+Site Id and Name<br/>
+Web User Id (or Technician Id if using old style configuration)<br/>
+Date and Time acceptance given</p>
+<p>When sending the e-mail, the system will first look in the Web User registry tab, then (if not found) in the Web Profile registry tab, and finally in the web-settings registry. If the system does not find this option, the email address specified in the <font style="font-weight: bold;">email-default</font> option will be used. If a valid address is not located, no action will be taken.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> email-password <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">emailaddress@mycompany.com</font></p>
+<p>A temporary password may be emailed users if they forget theirs. Note that this functionality is not supported if the Client Web or CSRAnywhere login is via a Technician (rather than a Web User) record. This registry option enables you to specify the From Address to use in the password reset email. This must be a valid email address on your company’s email server. Note that if this option is not present, the ‘from’ address is derived from web-settings email-default.</p>
+<h3>Web User Help (highly recommended)</h3>
+<p>This registry entry enables our clients to link to their own custom Help page that is hosted on their website (HelpURL) or a file located in the designated web directory (HelpFile). A basic pdf help file is available from support for your use with this feature.</p>
+<p>If one of these registry option is enabled, a Help link will appear in the left menu frame of CRMAnywhere, and also on the Login page (if implemented as a URL). The link will point to a specific help page or document; it is not context specific for the Client Web page the link is on. Howwever, it may be made Web User or Web Profile Specific via the Registry tabs in the Web Profile/Web User viewers. Note that the web-settings registry must be enabled to support Help on the Log In screen.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> HelpFile <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">filename of</font> <font style="font-style: italic;">help document</font></p>
+<p>Note that the file should be located in the web directory with the Setting Key web-dir indicated in the web-settings registry or in the applicable Web User or Web Profile Registry tab. A .pdf file for your users is available from support, or you may generate your own.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> HelpURL <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">url of help webpage</font></p>
+<p>This option would be implemented to point the CRM user to a specific page on their website for Help.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline;">Example:</font></p>
+<p style="margin-left: 36.00pt;">Setting Key: HelpURL Setting Value: http://www.mycompany.com/CRM/help.html</p>
+<p>  <font style="font-weight: bold;">In Web Profile/User Registry Tab:</font></p>
+<p>  HelpURL=<font style="font-style: italic;">url of help webpage</font> <font style="font-style: italic;">for this customer</font></p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Note:</font> <font style="font-weight: bold;">Web User/Web Profile Registry Tabs</font><font style="font-weight: bold;">:</font></p>
+<p style="margin-left: 36.00pt;">The Web Profile and Web User registry tabs support both the HelpURL and HelpFile formats. However, if both the HelpURL and HelpFile have been defined, HelpURL wins.</p>
+<p style="margin-left: 36.00pt;">After a successful login, the Client Web session has registry settings that are compiled from web-settings, Web Profile and Web User.  Individual settings from web-settings are trumped by settings from Web Profile which are in turn trumped by settings from Web User.</p>
+<h3>Mark Fields on Request New Site Page as Required (recommended):</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> newsiterequiredfields <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">clntste_nme, clntste_addrss, etc</font></p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> newsiterequiredfields=<font style="font-style: italic;">clntste_nme, clntste_addrss, etc</font></p>
+<p>You can mark fields on the Request New Site screen as required by specifying a comma-delimited list of fields selected from the following:</p>
+<p style="margin-left: 72.00pt;">clntste_nme  (Site Name)<br/>
+clntste_addrss (Street Address)<br/>
+clntste_cty (City)<br/>
+clntste_stte (State)<br/>
+clntste_zp (Zip)<br/>
+clntste_phne (Phone)</p>
+<p>This feature is recommended to insure that a reasonable amount of information will be collected from this form.</p>
+<h3>New Header Styles (recommended):</h3>
+<p>This enhancement improves the way the page headers are handled. If Client Web was implemented in an earlier release, modifications to your existing graphics will be needed to support the change. To be more suitable for larger screen, the following registry entry may be used to enable the centering of headers with an appropriated background graphic, and a right-justified graphic to complete the screen:</p>
+<p><font style="font-weight: bold;">Setting Key:</font> NewHeaders <font style="font-weight: bold;">Setting Value:</font> true</p>
+<p>See <a href="Client_Web_Interface_Installation.htm">(Client Web Interface) Installation</a> for details on the graphics needed to support this option.</p>
+<h3>Allow Sorting of Open Work Order and Service Request Lists for Multiple Sites</h3>
+<p>Registry entry to allow sorting of open work orders and service request lists if multiple sites are involved. This option should be use with caution as it may impact performance.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> AllowMultiSiteSorting <font style="font-weight: bold;">Setting Value:</font> true</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<h3>Display Reports as PDF’s (recommended):</h3>
+<p>The Client Web HTML display of the Report Service History and Site Equipment is not always clear past the first page. To ameliorate this problem, the following registry option has been added:</p>
+<p><font style="font-weight: bold;">Setting Key:</font> CRMReportType <font style="font-weight: bold;">Setting Value:</font> pdf (if absent, default as html)</p>
+<p>If this option is implemented, a PDF widget will appear in the Report screen instead of the HMTL display. The report itself will be displayed in pdf format.</p>
+<h3>Session Timeout (recommended):</h3>
+<p>This option is also supported in the Web Profile / User Registry tabs.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> InactivityTimeout <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">N</font></p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> InactivityTimeout=N</p>
+<p>Due to a lack of standardization in the way browsers close, it is not always possible for SAM Pro to know that a web user has left, and that the session should be closed. This registry option enables you to specify the number of seconds (where N is number of seconds) that a web user may be logged on before the session is closed. If any sessions for this user are inactive for more the N seconds the sessions will be closed and the logon history records will be terminated.</p>
+<p style="margin-left: 36.00pt;"><font style="text-decoration: underline;">Example:</font></p>
+<p style="margin-left: 36.00pt;">To terminate a session after 30 minutes:</p>
+<p style="margin-left: 36.00pt;">Web Profile/User Registry Tab: InactivityTimeout=1800</p>
+<h3>Days of History Displayed (recommended):</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> dayshistorylimit <font style="font-weight: bold;"> Setting Value:</font> <font style="font-style: italic;">numberofdays</font></p>
+<p>This optional setting limits the amount of history displayed on completed work order lists to improve performance. For example, to limit history to the last year a setting value of 365 would be specified.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> usedayshistorylimitforopen <font style="font-weight: bold;">Setting Value:</font> true<font style="font-weight: bold;"><br/></font>By default there is no age control on open work orders/service requests. If this is set to true the days history limit will be used when querying the database for open service requests and open work orders.</p>
+<p>If this is set to anything other than true or not present at all, the days history limit will not be used when querying the database for open service requests and open work orders.</p>
+<h3>Web Page Titles (optional):</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> web-prefix <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">prefix</font></p>
+<p>Sets the string that gets prepended to the titles of web pages (e.g. &#39;Acme AC&#39;,&#39;Finest Facilites&#39; “Excellent Electrical’, etc)..</p>
+<h3>Customizable Messages (optional):</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> newcallmessage <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">Text of message to be displayed</font></p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> newcallmessage=<font style="font-style: italic;">Text of message to be displayed</font></p>
+<p>This message is displayed at the beginning of the New Work Request process (Step One) and at the end of this process (the confirmation page for the service request). It can be used to display instructions for after-hours emergency service or other important information.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> quotesmessage <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">Text of message to be displayed</font></p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> quotesmessage=<font style="font-style: italic;">Text of message to be displayed</font></p>
+<p>The message defined by this option will be displayed on the CRMAnywhere Quotes detail page.</p>
+<h3>Options to Remove Page Links (optional):</h3>
+<p>Registry entry controls exist at the Webuser, Webuser Profile, or All Users level for the following options. The following entries at the web-settings level will remove links from all users:</p>
+<p><font style="font-weight: bold;">Setting Key:</font> DisableCSRNewLeads  <font style="font-weight: bold;">Setting Value:</font> true<font style="font-weight: bold;"><br/></font><font style="font-weight: bold;">Setting Key:</font> DisableCSRManageLeads <font style="font-weight: bold;"> Setting Value:</font> true<font style="font-weight: bold;"><br/></font><font style="font-weight: bold;">Setting Key:</font> DisableCRMReports <font style="font-weight: bold;"> Setting Value:</font> true<br/>
+<font style="font-weight: bold;">Setting Key:</font> DisableCRMNewCall <font style="font-weight: bold;"> Setting Value:</font> true<font style="font-weight: bold;"><br/></font><font style="font-weight: bold;">Setting Key:</font> DisableCRMSiteView <font style="font-weight: bold;"> Setting Value:</font> true<font style="font-weight: bold;"><br/></font><font style="font-weight: bold;">Setting Key:</font> DisableCRMOpenWO <font style="font-weight: bold;"> Setting Value:</font> true<font style="font-weight: bold;"><br/></font><font style="font-weight: bold;">Setting Key:</font> DisableCRMCompletedWO <font style="font-weight: bold;"> Setting Value:</font> true<font style="font-weight: bold;"><br/></font><font style="font-weight: bold;">Setting Key:</font> DisableCRMManageQuotes <font style="font-weight: bold;"> Setting Value:</font> true</p>
+<p><font style="font-weight: bold;">Setting Key:</font> DisableChangePassword   <font style="font-weight: bold;">Setting Value:</font>true<br/>
+(currently only supported in the web-settings registry)</p>
+<p style="margin-top: 0; margin-bottom: 0;"> </p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font></p>
+<p>DisableCSRNewLeads=true<font style="font-weight: bold;"><br/></font>DisableCSRManageLeads=true<font style="font-weight: bold;"><br/></font>DisableCRMReports=true<br/>
+DisableCRMNewCall=true<font style="font-weight: bold;"><br/></font>DisableCRMSiteView=true<font style="font-weight: bold;"><br/></font>DisableCRMOpenWO=true<font style="font-weight: bold;"><br/></font>DisableCRMCompletedWO=true<font style="font-weight: bold;"><br/></font>DisableCRMManageQuotes=true</p>
+<p>Make these entries in the Registry child table of the Web User account to disable links for a single user.<br/>
+Make these entries in the Registry child table of the Web Profile to disable links for users with that web profile. <font style="font-weight: bold;">Note that these registry options are cumulative: ones entered in the Web Profile or Web User tab are in addition to those entered in the web-settings registry entry.</font></p>
+<h3>Select Columns/Titles to Display on Open Work Order Table (optional):</h3>
+<p>This option may be used to customize which work order columns will be displayed on the Open WorkOrder table.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> woopencolumns <font style="font-weight: bold;">Setting Value:</font> list of columns</p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> woopencolumns=list of columns</p>
+<p><font color="#000000">The following columns may be specified:</font></p>
+<p><font style="font-style: italic;" color="#000000">type,id,rn,created,scheduled,tech,description,status,sitename,siteid</font><font style="font-style: italic;" color="#000000">,womane,servicerequest</font></p>
+<p>Note that ‘id’ refers to the work order id. You may select from the list of valid options shown above; be sure to separate options with a comma.</p>
+<p>If you do not create this entry, the following columns will appear by default:</p>
+<p style="text-indent: 30.25pt;">i<font color="#000000">d,sitename,siteid,created,scheduled,description,status</font><font color="#000000">,servicerequest</font></p>
+<p>The Web Log Id (labeled Service Request) has been added to the Work Order list default displays so that users can better track their Service Requests as the default display. To add the Service Request to a custom list use the column name servicerequest.</p>
+<p>Be sure that the columns and titles (in the following entry) are listed in the same order.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> woopentitles <font style="font-weight: bold;">Setting Value:</font><font style="font-style: italic;">Title1,Title2,Title3, …</font></p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> woopentitles=<font style="font-style: italic;">Title1,Title2,Title3,</font></p>
+<p>This entry lets you customize the column titles on the Open Work Orders table. Be sure to specify the exact text that you want, and to sure to separate options with a comma.</p>
+<h3>Select Columns/Titles to Display on Completed Work Order Table (optional):</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> woinvoicedcolumns <font style="font-weight: bold;">Setting Value:</font> list of columns</p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> woinvoicedcolumns=list of columns</p>
+<p><font color="#000000">The following columns may be specified:</font></p>
+<p><font color="#000000">id,sitename,</font><font style="font-style: italic;">site</font><font style="font-style: italic;">id,created,workcode,closed,invoice #,invoiced, amt billed</font> ,servicerequest</p>
+<p>Note that ‘id’ refers to the work order id and servicerequest refers to the Web Log id. This entry may be used to customize which work order columns will actually be displayed on the Completed Work Orders screen. You may select from the list of valid options shown above; be sure to separate options with a comma. <font style="font-weight: bold;">Be sure that the columns and titles (in the previous entry) are listed in the same order.</font></p>
+<p>If you do not use this entry, the following columns will appear by default:</p>
+<p style="text-indent: 30.25pt;"><font color="#000000">id,sitename,siteid,created,workcode,closed,invoicenum,invoiced,amt billed</font><font color="#000000">,servicerequest</font></p>
+<p><font style="font-weight: bold;">Setting Key:</font> woinvoicedtitles <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">Title1,Title2,Title3, …</font></p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> woinvoicedtitles=<font style="font-style: italic;">Title1,Title2,Title3, …</font></p>
+<p>This entry lets you customize the column titles that will appear on the Completed Work Orders table. Be sure to specify the exact text that you want, and to separate options with a comma.</p>
+<h3>Select Columns/Titles to Display on Service Request Table (optional):</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> sropencolumns <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;" color="#000000">list of columns</font></p>
+<p><font style="font-weight: bold;" color="#000000">W</font><font style="font-weight: bold;">eb Profile/User Registry Tab:</font> sropencolumns<font style="font-style: italic;">=</font> <font style="font-style: italic;" color="#000000">list of columns</font></p>
+<p><font color="#000000">The following columns may be specified:</font></p>
+<p><font style="font-style: italic;" color="#000000">type,id,rn,created,scheduled,tech,description,status,sitename,siteid</font></p>
+<p>This option may be used to customize which service request columns will be displayed on the Service Request table. Note that ‘id’ refers to the service request (weblog) id, and type refers to the record type (weblog in this case). You may select from the list of valid options shown above; be sure to separate options with a comma.</p>
+<p>If you do not use this entry, the following columns will appear by default:</p>
+<p style="text-indent: 30.25pt;"><font color="#000000">id,sitename,siteid,description,status</font></p>
+<p>Be sure that the columns and titles (in the following entry) are listed in the same order.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> sropentitles <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">Title1,Title2,Title3, …</font></p>
+<p><font style="font-weight: bold;" color="#000000">W</font><font style="font-weight: bold;">eb Profile/User Registry Tab:</font> sropentitles=<font style="font-style: italic;">Title1,Title2,Title3, …</font></p>
+<p>This entry lets you customize the column titles on the Service Requests table. Be sure to specify the exact text that you want, and to separate options with a comma.</p>
+<h3>Registry Entry to Block Quotes without a Quote Report Id (optional):</h3>
+<p>This registry option may be enabled to block partially built quotes from appearing in CRMAnywhere. If the following registry option is implemented, the absence of the report id in the QuoteMaster header will be used to determine if the Quote should appear in CRMAnywhere. Note that the absence of a report id prevents CRMAnywhere from listing the quote. <font style="font-weight: bold;">Note: the Web Viewable CRM field in the Quote Viewer must be flagged in order for the Quote to appear in CRMAnywhere.</font></p>
+<p><font style="font-weight: bold;">Setting Key:</font> BlockedQuotes <font style="font-weight: bold;">Setting Value</font>: true</p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font> BlockedQuotes=true</p>
+<p><font style="font-weight: bold; font-style: italic;">If</font> <font style="font-weight: bold; font-style: italic;">any</font> <font style="font-weight: bold; font-style: italic;">registry settings have been made in the Web User or Web Profile registry tabs, this option must be set in these tabs to implement this option.</font></p>
+<h3>CSR Anywhere – Registry Entry to Specify WO Report (Obsolete in 9.0 and above)</h3>
+<p>On the Acknowledge Leads page, the WO Id is a clickable link. If you click it, runs the WOList report and displays it by default. This works fine UNLESS there is a function substitution registry entry that points rwolist to something else (e.g., a crystal report the user doesn’t have access to). To handle this problem, the following registry option should be added to web-settings to allow the standard WO Report function id (rwolist – and whatever function substitution it points to) to overridden.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> CSR-Workorder-Report</p>
+<p><font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">WOTICKET</font> (or any valid <font style="text-decoration: underline;">function id</font> for a valid workorder report).</p>
+<h3>Control Columns in the Site List (optional)</h3>
+<p>The following registry options enables the user to control the columns that are included in the Site List.  <font style="font-weight: bold;">They can be entered either in the Web Profile (Registry tab) or the Web User (Registry tab) records.  They do NOT seem to work when entered in the &#39;web-settings&#39; registry entry.</font></p>
+<p><font style="font-weight: bold;">In Web Profile/User Registry Tab:</font></p>
+<p>clntstecolumns = comma-delimited list of columns to include<br/>
+clntstetitles = comma-delimited list of titles for included columns</p>
+<p>The clntstecolumns are the internal column names that are understood by SAMPRO.  The choices are select, siteid, sitename, store, city, state, zip, openrequests, completedrequests. These are the default values.</p>
+<p>The values for clntstetitles define the titles the user sees on the web pages.  These can be changed as necessary.  For example, &#39;Building Name&#39; could be used in place of &#39;Site Name&#39; and SAMPRO wouldn&#39;t care.  The defaults are Sel, Site Id, Site Name, Store #, City, State, Zip, Open, Completed.<br/>
+<br/>
+The two registry settings MUST stay synchronized with each other.  If the clntstecolumns setting is used to rearrange or remove columns, then the corresponding changes must be made for clntstetitles. The clntstetitles seting can be used by itself when the only desired change is to relabel one or more column titles.</p>
+<h3>CRM Anywhere Other Documents Page</h3>
+<p>This page is desired to allow your CRMAnywhere customers the ability to access and download .pdf documents such as sales and service specials and other company literature. The page will display the Document Category, Document Id, and Document Description of the documents that qualify for the list. Clicking on the Document Id will display the Document. The graphic for the top banner must be named view_other_documents.gif and should be formatted in the same manner as your other banner title files (such as siteview.gif).</p>
+<p>This page will only appear if the following new registry setting is present AND these documents are located in your data. When the Web User selects the new option, the list of Other Documents will be displayed.</p>
+<p><font style="font-weight: bold;">Registry Id:</font> web-settings</p>
+<p><font style="font-weight: bold;">Setting Key:</font> GlobalDocumentCategories</p>
+<p><font style="font-weight: bold;">Setting Value:</font> comma-delimited list of Document Categories</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Setting Up the Global Documents</font></p>
+<p style="margin-left: 36.00pt;">A document record must be made for each .pdf document that you wish to appear on the CRMAnywhere Other Documents page.</p>
+<p style="margin-left: 66.25pt;">The Document Category must exactly correspond to one referenced in the registry setting</p>
+<p style="margin-left: 66.25pt;">The Document Name should briefly describe the document: it will be displayed on the Other Documents page.</p>
+<p style="margin-left: 66.25pt;">The Document must be flagged as CRM Web Viewable</p>
+<p style="margin-left: 30.25pt;">In the References list, enter the Table Name field as Document, and select any Reference Id. If you do not complete this step, your document will not appear on SAM Pro’s View Document list (although it will appear in CRMAnywhere).</p>
+<p style="margin-left: 30.25pt;">If the document is only good for a limited time, clearing the CRM Web Viewable flag will remove it from the CRMAnywhere View Document list.</p>
+<h3>Web Front End Style (obsolete)</h3>
+<p><font style="font-weight: bold;">Setting Key:</font> web-front-end <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">style</font></p>
+<p>Where <font style="font-style: italic;">style</font> is &#39;new&#39; or &#39;old&#39;. Defaults to &#39;new&#39;. Old style refers to the web interface prior to version 5.01.</p>
+
+</body></html>

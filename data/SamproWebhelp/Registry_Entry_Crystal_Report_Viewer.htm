@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=utf-8">
+<TITLE>Registry Crystal Report Viewer (crv)</TITLE>
+<META NAME="generator" CONTENT="Adobe RoboHelp - www.adobe.com">
+<link rel="stylesheet" href="sampro_jk_ns.css"><script type="text/javascript" language="JavaScript" title="WebHelpSplitCss">
+<!--
+if (navigator.appName !="Netscape")
+{   document.write("<link rel='stylesheet' href='sampro_jk.css'>");}
+//-->
+</script>
+<SCRIPT LANGUAGE="JavaScript" TITLE="BSSC Special Effects" SRC="./ehlpdhtm.js" name="EHELP_DHTM"></SCRIPT>
+<script type="text/javascript" language="JavaScript" title="WebHelpInlineScript">
+<!--
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//-->
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute; left:0px; top:0px; z-index:4; visibility:hidden; }
+-->
+</style><script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+</HEAD>
+<BODY><script type="text/javascript" language="javascript1.2">
+<!--
+if (window.gbWhTopic)
+{
+	if (window.addTocInfo)
+	{
+	addTocInfo("SAM Pro Help\nRegistry Entries\nGeneral Reporting / Printing Registry Entries\nCrystal Report Viewer");
+addAvenueInfo("General Reporting and Email","registry_entry_to_retain_inet_log_file.htm","");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("sampro.htm");
+
+		autoSync(1);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+</script>
+<P class="Support_Heading_1" >Registry Crystal Report Viewer (crv)</P>
+ <P class="Support_Heading_2" >Purpose:</P>
+ <P class="support" >This registry setting is required to enable Crystal Report Viewer functionality within SAM Pro’s Service and Back Office modules.</P>
+ <P class="Support_Heading_2" >Usage:</P>
+ <P class="support" >In addition to this registry entry, the Crystal View application from Data-Basics must be installed. This is available in Install Shield format from Data-Basics support.  It may be installed as a fat client on the Windows Desktop, or under Citrix. </P>
+ <P class="support" >A User Defined Function record must be created for each Crystal Report. The following fields must be completed:</P>
+ <P class="Style_Support_+_Left___0_5_" >Function Id:  Function Name:<BR>Both fields must be unique.</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >Application:  <BR></FONT>Set this field to ‘crv’</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >Menu Category: <BR></FONT>Select ‘Report’.</P>
+ <P class="Style_Support_+_Left___0_5_" >Application Parameters:<BR>Specify the Crystal Report as follows:  report=<FONT style="font-style:italic; " >areportname.rpt</FONT></P>
+ <P class="support" >&nbsp;The system will look in the directory specified in the registry entry for this report. </P>
+ <P class="support" >Remember to enable your new User-Defined Functions for all applicable User Groups. </P>
+ <P class="support" >Crystal Reports run from within SAM Pro are designed and created using off-the-shelf Crystal Reports software.  Documentation and training courses for this software is readily available. </P>
+ <P class="Support_Heading_2" >Important Fields</P>
+ <P class="support" >Id:</P>
+ <P class="support" >&nbsp;CRV-securityid</P>
+ <P class="support" >&nbsp;CRV-branchid-userid</P>
+ <P class="support" >&nbsp;CRV<FONT style="font-style:italic; " >--userid</FONT>  (if branches are not implemented)</P>
+ <P class="support" >&nbsp;CRV</P>
+ <P class="support" ><FONT style="font-weight:bold; " >Description:<BR></FONT>Although this field is optional, we strongly recommend that you use it to briefly describe this registry entry (e.g., Crystal Report Viewer). </P>
+ <P class="support" >Contents:</P>
+ <P class="support" >&nbsp;RegistryASStringSeparatedBy=~</P>
+ <P class="support" >&nbsp;This line is required and must be entered as listed. </P>
+ <P class="support" >Additional Contents:</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >exe=</FONT><FONT style="font-weight:bold; font-style:italic; " >path</FONT><FONT style="font-weight:bold; " >\CrystalView2005.exe <BR></FONT>where <FONT style="font-style:italic; " >path</FONT> is replaced by the full path (share path or drive designation) to the directory containing the Crystal Viewer executable. Avoid specifying a path with a blank in it.</P>
+ <P class="support" ><FONT style="text-decoration:underline;" >Example of a Share Path:<BR></FONT>exe=\\myserver\sampro\crystal\crystalview2005.eve</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >rptpath=</FONT><FONT style="font-weight:bold; font-style:italic; " >path</FONT><FONT style="font-weight:bold; " > <BR></FONT>where <FONT style="font-style:italic; " >path</FONT> is replaced by the full path (share path or drive designation) to the directory containing the Crystal Reports used by this company.  </P>
+ <P class="support" ><FONT style="text-decoration:underline;" >Example of a Share Path:<BR></FONT>rptpath=\\myserver\sampro\crystal\reports</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >dsn=</FONT><FONT style="font-weight:bold; font-style:italic; " >samprodsn<BR></FONT>where samprodsn is replaced by the data source name for your SAM Pro database.</P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >mode=u  or mode=a<BR></FONT>Enter mode=u to enable users to specify report settings, or mode=a to automatically launch the selected report. One of these options must be specified. </P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >companyname=^companyname^<BR>user=^user^<BR>branch=^branchfilter^<BR>pm=^pmfilter^<BR>location=^locationfilter^<BR></FONT>These contents lines are required for correct filtering of reports, and must be entered exactly as exactly as shown above. </P>
+ <P class="Style_Support_+_Left___0_5_" >AdditionalRegistrySettings=<FONT style="font-style:italic; " >registry1,registry2,...</FONT></P>
+ <P class="Style_Support_+_Left___0_5_" >This option will pass the registry settings implemented by the specified registry entries to Crystal View. Note that if multiple registry entries are specified, they should be separated with commas.</P>
+ <P class="support" >Example:</P>
+ <P class="support" >AdditionalRegistrySettings=sys-email</P>
+ <P class="support" >This passes the sys-email registry options settings to CrystalView so that email settings used for SAM Pro will also be available for Crystal View. </P>
+ <P class="Style_Support_+_Left___0_5_" ><FONT style="font-weight:bold; " >ReportAnywhere=Enable_ReportAnywhere<BR></FONT>This option is required in order to enable the scheduling of Crystal reports.  This causes SAMPRO to pass the licensing info to the Crystal Viewer app so that its facilities may be used for scheduling. </P>
+<script type="text/javascript" language="javascript1.2">
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+//-->
+</script>
+</BODY>
+</HTML>

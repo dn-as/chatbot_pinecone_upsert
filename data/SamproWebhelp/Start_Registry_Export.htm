@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="registry export"/>
+<meta name="MS-HKWD" content="registry"/>
+<meta name="MS-HKWD" content="export registry"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Start Registry Export</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="registry export,registry,export registry"/><meta name="brsnext" value="Reports_that_Support_Section_Key_Logic.htm"/><meta name="brsprev" value="Start_Registry_Import.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Start Registry Export">
+        <span>Start Registry Export</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Start Registry Export</h1>
+<p>This function allows the user to export a registry entry, or set of registry entries, to the file system as an XML file. In the case of multiple registry entries, all the entries are encapsulated in a single XML file.</p>
+<h2>Usage:</h2>
+<p>This function would typically be run to provide Data-Basics support with your registry settings for analysis or upgrading purposes. It is recommended that ONLY the system administrator at a client installation be given access to this function.</p>
+<p>See <a href="Start_Registry_Import.htm">Start Registry Import</a> for details on importing registry entries.</p>
+<h2>Important Fields:</h2>
+<p>Id:</p>
+<p>The user may specify one or more registry id’s to export, or double-click to select from a list.</p>
+<p>Example: to export all folder-viewer registry entries: sys-folder%</p>
+<p>Example: to export all registry entries: %</p>
+<p>When you click the Go button, the system will ask you to select a directory to export the XML file to. Be sure to note the location and filename so that you can easily locate the file.</p>
+
+</body></html>

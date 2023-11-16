@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.8.0_13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="billing"/>
+<meta name="MS-HKWD" content="client site"/>
+<meta name="MS-HKWD" content="create"/>
+<meta name="MS-HKWD" content="new"/>
+<meta name="MS-HKWD" content="pm"/>
+<meta name="MS-HKWD" content="schedule"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Create New Billing Schedule from Old</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="billing,client site,create,new,pm,schedule"/><meta name="brsnext" value="Record_Billing_Adjustments_Tax_Tab.htm"/><meta name="brsprev" value="Start_Record_Billing_Adjustments.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Create New Billing Schedule from Old">
+        <span>Create New Billing Schedule from Old</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Create New Billing Schedule from Old</h1>
+<h2>Purpose:</h2>
+<p>Uses the existing information in a Client Site Billing Schedule to add 
+ new entries to the schedule for the following year or years. <font style="font-weight: bold; 
+	 font-style: italic;">Only Client Sites with a status of Active will 
+ be affected by this function. </font></p>
+<h2>Usage:</h2>
+<p>This function should <span style="font-weight: bold;">NOT</span> be 
+ used in conjunction with Master Contract; the <a href="PM_Master_Schedule_Master_Contract_.htm">Master 
+ Contract</a> viewer and / or <a href="Start_Renew_Master_Contract.htm">Renew 
+ Master Contract</a> should be used instead. </p>
+<p style="margin-left: 48px;"><u style="text-decoration: none; "><span style="font-weight: bold;">Master Contract Equipment Table Note:</span> 
+ W</u>ith the UseMasterContractEquipmentTable global registry set to true, 
+ lines from the <i>Old</i> schedule are ignored when they have references 
+ to Master Contracts. </p>
+<p>The <a href="Renew_Service_Contract.htm">Renew Service Contract</a> 
+ provides another method of updating the billing and pm inspection schedules.</p>
+<p style="margin-left: 36.00pt;"><font style="font-weight: bold;">Important:</font> 
+ <font style="font-weight: bold;">If your Client is No Longer a PM Customers<br/>
+</font>Click <a href="Client_Site_PM_Billing_Tips.htm">Client Site PM Billing 
+ Tips</a> for details on how to handle existing billings and prevent future 
+ ones.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Years to Add</font><br/>
+The number of years (1-9) to add to each existing billing entry to create 
+ a new billing entry.</p>
+<p><font style="font-weight: bold;">Client Id:</font><br/>
+To add billing dates for a specific Client (as defined in the PM Job record 
+ on the Client Site PM Schedule tab), enter the appropriate Client Id. 
+ To enter a range of Clients, enter the first and last Id&#39;s of the range 
+ separated by an underscore (ACME_ZENITH). Several Id&#39;s can be specified 
+ by separating their Id&#39;s with a comma (ACME,MESA,ZENITH).</p>
+<p><font style="font-weight: bold;">Client Site Id:</font><br/>
+To add billing dates for a specific site, enter the appropriate Client 
+ Site Id. To enter a range of Client Sites, enter the first and last Id&#39;s 
+ of the range separated by an underscore (ACME_ZENITH). Several Id&#39;s can 
+ be specified by separating their Id&#39;s with a comma (ACME,MESA,ZENITH).</p>
+<p><font style="font-weight: bold;">Bill Date:</font><br/>
+This range enables you to control which billing dates will be copied by 
+ selecting a date range. To copy only a single billing date, enter the 
+ date in <font style="font-style: italic;">yyyy-mm-dd</font> format. To 
+ copy a range of billing dates, enter the first and last dates of the range 
+ separated by an underscore (1997-01-01_1997-01-31). Several billing dates 
+ can be copied by separating them with a comma (1997-01-01,1997-01-03).</p>
+<p><font style="font-weight: bold;">Examples:</font><br/>
+Suppose that you had scheduled monthly billings in 1996 for Client Site 
+ Id: 1044. To create a new billing schedule for the first quarter of 1997 
+ for this site, you would enter a <font style="font-weight: bold;">1</font> 
+ in the Years to Add field, <font style="font-weight: bold;">1044</font> 
+ in the Client Site Id field, and <font style="font-weight: bold;">&amp;,1996-01-01_1996-03-31</font> 
+ in the Bill Date field.</p>
+<p>Assume that Client Site 1099 is under a 2 year contract, with a quarterly 
+ billing schedule for 1997 and 1998. At the end of 1998, the customer renews 
+ the contract. To create the new billing schedule from the old one, you 
+ would enter a <font style="font-weight: bold;">2</font> in the Years to 
+ Add field, <font style="font-weight: bold;">1099</font> in the Client 
+ Site Id field, and <font style="font-weight: bold;">&amp;,1997-01-01_1998-12-31</font> 
+ in the Bill Date field. When you clicked the Go button, the system will 
+ display a checklist showing 4 billing dates for 1999 and 4 for 2000.</p>
+<p><font style="font-weight: bold;">Ok to Renew?<br/>
+</font>To limit the new PM Billing lines created to those with the Ok to 
+ Renew? flag set in the Client Site PM Billing tab, enter a <font style="font-weight: bold;">Y</font> 
+ in this range.</p>
+<h2>Important Buttons:</h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Click to add the billing dates to the 
+ schedule. When you do so, the system will display a list of proposed dates, 
+ based on the parameters that you entered. At this point, you can select 
+ the ones that you wish to add to the schedule.</p>
+<p>See <a href="Create_New_Billing_Schedule_Checklist.htm">Create New Billing 
+ Schedule from Old Checklist</a> for details.</p>
+
+</body></html>

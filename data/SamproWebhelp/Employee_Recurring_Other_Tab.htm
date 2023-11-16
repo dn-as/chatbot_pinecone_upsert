@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.7.2.0_10";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="recurring"/>
+<meta name="MS-HKWD" content="employee"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Employee Recurring Other Tab</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="recurring,employee"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Employee Recurring Other Tab">
+        <span>Employee Recurring Other Tab</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Employee Recurring Other Tab</h1>
+<h2>Purpose:</h2>
+<p>This tab is used in conjunction with the Start Generate Recurring Labor Entries (see <a href="Start_Generate_Recurring_Labor_Entries.htm">Start Generate Recurring Labor Entries</a> ) function to generate Labor Journal Other entries for expenses that will be applied to a job and reimbursed to the employee on his or her payroll check.</p>
+<h2>Usage:</h2>
+<p>Enter parking expense, cell phone charges, etc.</p>
+<p>See <a href="Employee_Recurring_Wages_Tab.htm">Employee Recurring Wages Tab</a> for details on entering recurring hours.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Start Date:</font> <font style="font-weight: bold;">End Date:</font><br/>
+Enter starting and ending <font style="font-weight: bold;">working</font> dates to define the time period that this recurring entry is valid for. These fields are compared with the date range of the selected payroll period when the Generate Recurring Labor Entries function is run. If the Start/End Dates intersect at ANY point within the Period Start/End (work) dates, then the line qualifies as &quot;eligible&quot; when Start Regenerate Labor Entries is run.</p>
+<p><font style="font-weight: bold;">Cycle:<br/></font>This field defines the cycle for which this recurring entry would be generated. For example, Q (quarterly), W (weekly), P (payroll period) and so on.</p>
+<p><font style="font-weight: bold;">Day:</font><br/>
+This field specifies which day in the payroll period the labor journal entry will be assigned to.</p>
+<p><font style="font-weight: bold;">Other Rate Id: Quantity: Unit Cost: Amount Cost:<br/></font> The Other Rate Id: field is required; it provides the GL Account required during Compute Payroll. Note that although the Bill Type and Revenue Rate fields default from the Other Rate record, the Cost fields must be filled in if applicable.</p>
+<p><font style="font-weight: bold;">Job Id: Cost Code: Cost Category:<br/></font>Complete these fields as you wish them to appear when the Labor Journal Entries are generated. Note that &#39;Operation Lockdown&#39; validation is implemented so that the Cost Category’s Job Use field (All, Direct or Indirect) does not conflict with the status of the Overhead field in the Job record.</p>
+
+<p>The Cost Category supports enhanced filtering provided by the Cost Code&#39;s Job Cost Category Usage Filter.</p>
+
+<p><img src="assets/images/image/magnifybutton.gif" alt="image\magnifybutton.gif" title="image\magnifybutton.gif" width="16" height="16" border="0"/> Click the Magnify button to view the following fields.</p>
+<p><font style="font-weight: bold;">Billing Item:<br/></font> This field should be completed if this other charge is billable to the above Job.</p>
+<p><font style="font-weight: bold;">WorkOrder Id:</font><br/>
+This field would only be completed if these recurring hours were charged to a specific work order. This is not recommended.</p>
+
+</body></html>

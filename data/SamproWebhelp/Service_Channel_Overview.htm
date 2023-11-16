@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.15.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="Data Bridge"/>
+<meta name="MS-HKWD" content="Service Channel"/>
+<meta name="MS-HKWD" content="FMMS"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Service Channel Overview</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="Data Bridge,Service Channel,FMMS"/><meta name="brsnext" value="Service_Channel_Background_and_Setup.htm"/><meta name="brsprev" value="Registry_Report_Mailing_Label_Employee_sys_report_PRELABEL_.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Service Channel Overview">
+        <span>Service Channel Overview</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Service Channel Overview</h1>
+<h3>Introduction</h3>
+<p>The ServiceChannel FMMS Data Bridge provides an automated interface 
+ between Sampro and ServiceChannel’s FMMS web site. The Data Bridge provides 
+ the following services:<br/>
+</p>
+<p>Transference of service requests entered on the ServiceChannel web site 
+ into the service provider’s Sampro system.</p>
+<p>The ability of SAMPro service dispatchers to accept or decline incoming 
+ service requests.</p>
+<p>The attaching of accepted service requests to Sampro work orders.</p>
+<p>The ability of uploading Proposals to ServiceChannel from Quote Master.</p>
+<p>The posting of Check-In and Check-Out messages received from ServiceChannel 
+ to work orders.</p>
+<p>The forwarding to ServiceChannel of changes to a work order’s status.</p>
+<p>The forwarding to ServiceChannel of changes to a work order’s ETA.</p>
+<p>Uploading invoices to ServiceChannel when they are generated in Sampro.</p>
+<h3>Registry Configuration Settings</h3>
+<p>See <a href="Registry_Service_Channel_sys_FMMS_.htm">Registry Service 
+ Channel (sys-FMMS)</a> for the registry settings required to support the 
+ Service Channel data bridge.</p>
+<p>Note that it will be necessary to obtain a vrstry.cus file with the 
+ FMMS option enable to support the Data Bridge.</p>
+<h3>Operational Scenario</h3>
+<p>From a Sampro user’s point of view, Sampro/ServiceChannel interactions 
+ go as follows:<br/>
+</p>
+<p style="margin-left: 48px;">- The service requester logs into ServiceChannel’s 
+ web site and initiates a service request.</p>
+<p style="margin-left: 48px;">- ServiceChannel forward’s the service request 
+ to the service provider’s SAMPro system where it appears in the ‘Web Log’.</p>
+<p style="margin-left: 48px;">- Within SAMPro’s New Call function, the 
+ dispatcher or other user double clicks on the Web Log Id field. A list 
+ of unacknowledged service requests will appear.</p>
+<p style="margin-left: 48px;">- When the dispatcher picks a new service 
+ request from the list, a window showing details of the service request 
+ pops up. An example appears in the Appendix to this document.</p>
+<p style="margin-left: 48px;">- After reviewing the service request, the 
+ dispatcher selects one of three buttons appearing at the bottom of the 
+ window:</p>
+<p style="margin-left: 88px;"> Cancel – Returns to New Call. The service 
+ requests stays on the Web Log list.</p>
+<p style="margin-left: 88px;">Decline – The dispatcher is asked to choose 
+ from a list of permissible reason codes. After a reason code is selected, 
+ ServiceChannel is notified that the service request has been declined 
+ and the service request is removed from the Web Log list.</p>
+<p style="margin-left: 88px;">Accept – The service request screen is closed 
+ and the New Call process continues with certain fields automatically populated 
+ with information gleaned from the service request. If and when New Call 
+ results in the creation of a new Sampro work order,</p>
+<p style="margin-left: 48px;">- A Note containing the contents of the service 
+ request is attached to the work order.</p>
+<p style="margin-left: 48px;">- The service request is removed from the 
+ Web Log list.</p>
+<p style="margin-left: 48px;">- If the service requestor requires a proposal 
+ before commencing work, the user can create a Sampro Quote and upload 
+ it to ServiceChannel as a Proposal. The Proposal can include previously 
+ incurred charges.</p>
+<p style="margin-left: 48px;">- As technicians use ServiceChannel’s IVR 
+ system to check-in and check-out of work orders, the Data Bridge automatically 
+ updates the work orders accordingly.</p>
+<p style="margin-left: 48px;">- Sampro tracks the work order as it changes 
+ status and ETAs. Service Channel is automatically notified when either 
+ of these changes takes place.</p>
+<p style="margin-left: 48px;">- When the work order is invoiced, a spreadsheet 
+ containing invoice details is assembled and emailed to ServiceChannel. 
+ The Invoice Date uploaded to Service Channel now includes the time using 
+ the format &#39;mm/dd/yyyy hh:mm&#39; where the hh:mm represents the current time.</p>
+<h3>Reverse Posted Invoices</h3>
+<p>When ServiceChannel work order are 
+ billed, the invoice is automatically uploaded to ServiceChannel. This 
+ release supports the automatic resending of the re-invoiced invoice. Specifically, 
+ when an Invoice Master is marked as &#39;Reversed&#39;, any FMMSInfo records meeting 
+ the following requirements are located:</p>
+<p style="margin-left: 48px;">The FMMSInfo 
+ record&#39;s wrkordr_rn field matches the reversed Invoice Master&#39;s srvceinvce_wrkordr_rn 
+ field.</p>
+<p style="margin-left: 48px;">The FMMSInfo 
+ record has it&#39;s fmmsinfo_invce_qd column set to &quot;Y&quot;.</p>
+<p style="margin-left: 8px;">IF any such 
+ FMMSInfo records are found, their fmmsinfo_invce_qd column is reset to 
+ &#39;N&#39;.</p>
+<p><span style="font-weight: bold;">Work 
+ Order Document Viewer</span></p>
+<p style="margin-left: 8px;"><img src="assets/images/image/ServiceChannel_Upld_new.gif" alt="" style="border: none;" border="0"/></p>
+<p>ServiceChannel Upload<br/>
+The &#39;ServiceChannel Upload&#39; button will appear on the Document Viewer&#39;s 
+ list and record screens if the Work Order is integrated with ServiceChannel. 
+ Pressing this button from the Document list will give a checklist of all 
+ attachments to allow the user to select multiple attachments to send at 
+ once. Pressing from the Document record will upload that single attachment. 
+ The attachment(s) will be emailed to ServiceChannel where they will be 
+ processed at a set interval and attached to the ServiceChannel system.</p>
+<p>In Version 9.1, the ServiceChannel 
+ document upload uses the document from the Archive File Location in preference 
+ to the File Location. This change was made because the Archive File Location 
+ is more form stable and accessible to the function since the File Location 
+ might be a different user&#39;s PC. </p>
+
+</body></html>

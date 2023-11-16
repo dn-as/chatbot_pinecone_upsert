@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.18.9.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Registry Report Lien Waiver Fillable AR</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+<meta name="rh-index-keywords" content="last cost:lien waiver,pdf,Report Lien Waiver Fillable (AR),ar lien waiver,fillable form"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Registry Report Lien Waiver Fillable AR">
+        <span>Registry Report Lien Waiver Fillable AR</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Registry Report Lien Waiver Fillable AR</h1>
+<h2>Purpose:</h2>
+<p>SAMPro&#39;s Fillable Form functionality allows an AR Lien Waiver to generated 
+ as a fillable PDF.  This uses the boilerplate information included 
+ in a standard AR Lien Waiver to be combined with the information from 
+ SAMPro to quickly and easily generate the document. This Lien Waiver may 
+ then be emailed to the customer when payment is received.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Important:</span> 
+ Note that this feature requires use of the XmlToPdf[2019-01-16 Java 8-11].jar 
+ file (or higher).  </p>
+<p>The following tasks are needed to support the Fillable Form:</p>
+<p><span style="font-weight: bold;">1.</span> The <a href="Report_Lien_Waiver_Fillable_AR.htm">Report 
+ Lien Waiver Fillable (AR)</a> must be installed.</p>
+<p><span style="font-weight: bold;">2.</span> The following Registry must 
+ be implemented:</p>
+<p><span style="font-weight: bold;">Id:</span> sys-report-RLNWVRFLLBLEAR</p>
+<p><span style="font-weight: bold;">Setting Key: </span>autosavefiletype 
+   <span style="font-weight: bold;">Setting Value:</span> PDF</p>
+<p><span style="font-weight: bold;">Setting Key:</span> autosavefilename 
+   <span style="font-weight: bold;">Setting Value:</span> =^sectionkeyvalue^,^date^,^time^</p>
+<p>The ^sectionkeyvalue^ token consists of the Job Id-Invoice Id followed 
+ by the type of waiver specified when the report is run (conditional or 
+ final). In this example, the sectionkey is followed by a date and time 
+ stamp; if the date and time tokens are not included, a registry to allow 
+ autosaveoverwrite should be added. </p>
+<p><font style="font-weight: bold;">Setting Key:</font> autosavebysection<font style="font-weight: bold;"> Setting Value:</font> true</p>
+<p>This option is used to save the report sections as individual files.</p>
+<p><font style="font-weight: bold;">Setting Key:</font> autosavedirectory 
+ <font style="font-weight: bold;">Setting Value:</font> <font style="font-style: italic;">path</font> 
+   </p>
+<p>Where <font style="font-style: italic;">path</font> is replaced by full 
+ path to the existing directory that you want your reports stored in. </p>
+<p><span style="font-weight: bold;">Setting Key:</span> fillableform   <span style="font-weight: bold;">Setting Value:</span> true</p>
+<p>Required for fillable forms.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> sectionfillableform 
+  <span style="font-weight: bold;">Setting Value:</span> true </p>
+<p>Required for fillable forms to be generated by section. </p>
+<p><span style="font-weight: bold;">Setting Key:</span> sectionfillableformflatten 
+  <span style="font-weight: bold;">Setting Value:</span> Y</p>
+<p>This optional setting allows the PDF to be &#39;flattened&#39; so that it may 
+ not be edited after creation. </p>
+<p><span style="font-weight: bold;">Setting Key:</span> FillableFormPathConditionalProgress 
+ </p>
+<p><span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">path\</span>ConditionalWaiverAndReleaseOnProgressPayment.pdf</p>
+<p>This entry provides the full path to the pdf template used for the conditional 
+ waiver and release.</p>
+<p><span style="font-weight: bold;">Setting Key:</span> FillableFormPathConditionalFinal 
+  </p>
+<p><span style="font-weight: bold;">Setting Value:</span> <span style="font-style: italic;">path\</span>ConditionalWaiverAndReleaseOnFinalPayment.pdf</p>
+<p>This entry provides the full path to the pdf template used for the final 
+ waiver and release.</p>
+<h5>Option to Prevent Auto-Open of PDF</h5>
+<p><span style="font-weight: bold;">Setting Key:</span> showdocumentfillableform 
+   <span style="font-weight: bold;">Setting Value:</span> false 
+ (default true)</p>
+<p>If this registry is not in place, clicking the Fillable Form button 
+ to generate the formatted, PDF version of the report will open the PDF. 
+ If the above registry option is in place, the PDF will be created but 
+ not opened.</p>
+<p><span style="font-weight: bold;">3.</span> The template PDF files must 
+ be located in the directory specified by the Setting Values above. Sample 
+ templates may be obtained from Data-Basics.  The text and signature 
+ graphic of the Claimant may be adjusted as needed.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Important:</span> 
+ Be sure that the sample template is approved for your state; some states 
+ require a notary. The individual/attorney responsible for Lien Waivers 
+ at your firm should carefully review the proposed template before it is 
+ implemented. </p>
+
+</body></html>

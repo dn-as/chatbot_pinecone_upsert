@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.17.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="classic board"/>
+<meta name="MS-HKWD" content="work order summary"/>
+<meta name="MS-HKWD" content="dispatch board"/>
+<meta name="MS-HKWD" content="day board"/>
+<meta name="MS-HKWD" content="summary"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Classic/Day Board Dispatch Summary</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="classic board,work order summary,dispatch board,day board,summary"/><meta name="brsnext" value="Start_AP_Payment_Approved_PM.htm"/><meta name="brsprev" value="Service_Account_Manager_Viewer.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Classic/Day Board Dispatch Summary">
+        <span>Classic/Day Board Dispatch Summary</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Classic/Day Board Dispatch Summary</h1>
+<h2>Purpose:</h2>
+<p>When you select a work order in the upper section of the Classic or Day Board (by clicking on it) the dispatch summary detail screen appears in the lower section. This section is scrollable, and enables you to make changes to the fields listed below. You must click the Save Changes button to retain these changes.</p>
+<h2>Important Buttons:</h2>
+<p><font style="font-weight: bold;">Save Changes:<br/></font>You must click this button to save any changes you have made to this summary.</p>
+<p><img src="assets/images/image/TimeSlotWizard.gif" alt="image\TimeSlotWizard.gif" title="image\TimeSlotWizard.gif" width="88" height="28" align="left" border="0"/> Clicking this button will launch the wizard to select an available Time Slot for this Work Order.</p>
+<p class="Reference_Line" style="margin-bottom: 0.00pt;"><img src="assets/images/image/releaseline.gif" alt="image\releaseline.gif" title="image\releaseline.gif" width="72" height="15" border="0"/> Click this button to change the status from Pending to the Default Status for the technician. This button is designed for use with TechAnywhere to send the work order to the technician’s wireless device.</p>
+<h2>Important Fields:</h2>
+<p><font style="font-weight: bold;">Technician Id:</font><br/>
+The technician(s) assigned to this Work Order. Double-click on this field (or press Alt+F7) to select from a list of Technicians. The system will warn you if you add an inactive technician.</p>
+<p><font style="font-weight: bold;">NTE Client: NTE Sub:<br/></font>These fields default from the Client Site record but may be changed by the user if necessary. The NTE Sub field is used to limit auto-generated PO&#39;s to this dollar value.</p>
+<p><font style="font-weight: bold;">Date Scheduled:</font> <font style="font-weight: bold;">Time Scheduled:<br/></font>Enter the scheduled date / time or double-click to access the calendar/clock to do so. To enter today&#39;s date, simply press the Spacebar. These fields cannot be changed if a Time Slot has been selected.</p>
+<p><font style="font-weight: bold;">Status:<br/></font> The current status (waiting parts, waiting service, etc.) of this work order. See <a href="Escalation_Status.htm">Escalation Status</a> for a discussion of log types and escalation statuses.</p>
+<p><font style="font-weight: bold;">Call Seq:</font><font style="font-weight: bold;"><br/></font>The sequence of this call for this technician on this day. This field is also set when drag and drop is used on the upper section of the classic board to re-sequence work orders.</p>
+<p><font style="font-weight: bold;">Work Code Id:<br/></font> This field controls which Work Code appears on the Dispatch Board. It is originally set by the system when the Work Order is created in New Call or generated as a PM Work Order.</p>
+<p>If PCR functionality is enabled, the system will validate the Work Code is specified in the PCR Table (in the Client Site / Client Site Equipment) when a Work Code is entered or changed. The PCR Table in the Client Site Equipment record overrides the PCR Table in the Client Site record.</p>
+<p><font style="font-weight: bold;">Priority:<br/></font> The priority for this service or PM call (0 is highest priority).</p>
+<p><font style="font-weight: bold;">Time Slot Id:<br/></font>This display only field is set by using the Time Slot Wizard in New Call or from the Classic board. .</p>
+<p><font style="font-weight: bold;">Work Requested:<br/></font>The Work Requested field in the Work Order Main tab.</p>
+
+<p><span style="font-weight: bold;">Dispatcher Comments</span><br/>
+This 3000 character text box may be used to record conversation/activity notes about the selected Work Order. This field also appears on the Work Order&#39;s Main tab.</p>
+
+<p><font style="font-weight: bold;">Invoice Description of Work Performed:<br/></font>This field controls the corresponding field on the Work Order Invoice tab. In most cases, it will appear on the customer’s invoice.</p>
+<p><font style="font-weight: bold;">Work Order Comments: Dispatch Notes<br/></font>These display-only fields fault from the Work Order’s Site record.</p>
+
+</body></html>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.4.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="invoice"/>
+<meta name="MS-HKWD" content="internal"/>
+<meta name="MS-HKWD" content="support document"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Invoice Master Viewer</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="invoice,internal,support document"/><meta name="brsnext" value="Registry_Report_Mailing_Labels_Client_sys_report_ARCLABEL_.htm"/><meta name="brsprev" value="Create_PDF_Button.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Invoice Master Viewer">
+        <span>Invoice Master Viewer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h2>Invoice Master Viewer</h2>
+<p class="Body_Text">The records in this viewer should NEVER be altered 
+ without the explicit instructions of Data-Basics Support.</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Clearing 
+ the Unknown Status</span><br/>
+The user may clear the &#39;Unknown&#39; Status condition using the Invoice Master 
+ viewer&#39;s Record &gt; Clear Unknown menu option to Full users with access 
+ to the Invoice Master record. Doing so will clear the Invoice Id from 
+ Job History, set the Invoice Master Status to Computed making it eligible 
+ to be reused, and set the Effective Date to 1900-01-01. </p>
+<p style="margin-left: 48px;">Usage restrictions 
+ are as follows ... </p>
+<p style="margin-left: 88px;">1. Status 
+ = Unknown </p>
+<p style="margin-left: 88px;">2. Entry 
+ Type = Sales </p>
+<p style="margin-left: 88px;">3. Can&#39;t 
+ have any prior AR activity.</p>
+<p style="margin-left: 88px;">4. Must 
+ be Full or Special User with ability to Access/Change Invoice Master Record 
+ (this functionality was previously restricted to users running in development 
+ mode).</p>
+<p style="margin-left: 48px; font-weight: bold;">Note 
+ On Compute Service Invoice </p>
+<p style="margin-left: 48px;">When Compute 
+ Service Invoice is run, the Invoice Master Status is now set to &#39;Computed&#39; 
+ when gracefully rolling back a cancelled invoice run (where the user did 
+ not confirm that the invoices had printed successfully). Previously, the 
+ Service Invoice code set the Invoice Master Status to &#39;Unknown&#39; for both 
+ normal and abnormal termination of the process. Immediately following 
+ an abnormal termination the Status will be the #UserId temporary marker.  Next 
+ time the same User processes ANY service invoices, the Status will be 
+ changed from the temporary marker to &#39;Unknown&#39;.</p>
+<p class="Body_Text"><span style="font-weight: bold;">AR Invoice Id:</span><br/>
+<span style="font-weight: bold;">Invoice Amount: Sales Tab Total:  Currency 
+ Id:</span><br/>
+These fields are maintained by the system when the Invoice is generated 
+ using one of the many methods available (COP, Job, Service, etc.).</p>
+<p class="Body_Text"><span style="font-weight: bold;">Effective Date:</span><span><br/>
+ The Effective Date of the Invoice. In Version 9.0 and below, this field 
+ was revised if the Invoice was reversed so that it falls within the reversal 
+ Accounting Period.  In Version 9.1, the reversal function retains 
+ the Effective Date, but writes the reversal&#39;s Effective Date to the Invoice 
+ Reversed field.</span></p>
+<p class="Body_Text"><span style="font-weight: bold;"> Invoice Date: 
+ Due Date: Discount Date</span><br/>
+The Invoice Date, Due Date and Discount Date recorded when the invoice 
+ was generated.</p>
+<p class="Body_Text"><span style="font-weight: bold;">Job Id:</span>  <br/>
+This field will be completed for Job and Service Invoices.</p>
+<p class="Body_Text"><span style="font-weight: bold;">Order Id:</span><br/>
+This field will be completed for Client Order Invoices (COP).</p>
+<p class="Body_Text"><span style="font-weight: bold;">Workorder Id:</span><br/>
+This field will be completed for Service Invoices.</p>
+<p class="Body_Text"><span style="font-weight: bold;">PO#</span><br/>
+The Customer&#39;s PO number. This field supports the Customer&#39;s PO# for Service 
+ Compute and Progress Jobs.</p>
+<p style="font-weight: bold;">Invoice 
+ Reversed:</p>
+<p style="margin-left: 48px;"><span style="font-weight: bold;">Period 
+ Id:   Effective Date: Description:</span><br/>
+ These fields allow an invoice to be reversed 
+ without changing the original Effective Date of the invoice. These fields 
+ will be updated when Reverse Job Invoice is run. </p>
+
+
+
+
+
+</body></html>

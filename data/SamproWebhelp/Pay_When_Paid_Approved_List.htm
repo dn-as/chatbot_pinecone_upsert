@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.9.8.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="accounts payable"/>
+<meta name="MS-HKWD" content="ap"/>
+<meta name="MS-HKWD" content="approval"/>
+<meta name="MS-HKWD" content="pay when paid"/>
+<meta name="MS-HKWD" content="payables"/>
+<meta name="MS-HKWD" content="pwp"/>
+<meta name="MS-HKWD" content="vendor"/>
+<meta name="topic-check-list" content="Ran Smart Index"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Pay-When-Paid Approved List</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="accounts payable,ap,approval,pay when paid,payables,pwp,vendor"/><meta name="brsnext" value="Pay_When_Paid_Billed_List.htm"/><meta name="brsprev" value="Pay_When_Paid_Overview.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Pay-When-Paid Approved List">
+        <span>Pay-When-Paid Approved List</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Pay-When-Paid Approved List</h1>
+<h2>Purpose:</h2>
+<p>This function must be run in order to allow payment of a pay-when-paid voucher.</p>
+<h2>Usage:</h2>
+<p>Typically, you will use the Pay When Paid Report as an input document for this function. Note that the payment amount cannot exceed approved amount.</p>
+<p>When you start this function (by clicking the Approve PWP Payments on the Payables tab or by selecting Start PWP Approved List from the Starter menu) an initial Range screen will appear.</p>
+<h2>Registry:</h2>
+<p>See <a href="Registry_Entry_Start_PWP_Approved.htm">Registry Entry Start PWP Approved</a> for details on making the PWP Approved List more sensitive to the AR balance.</p>
+<h2>PWP Approved List: Initial Screen Fields</h2>
+<p><font style="font-weight: bold;">AR Invoice Id:</font><br/>
+If you are releasing payment to a vendor because your client paid you, enter the Invoice Id of your invoice to the client. If you use automated invoicing, this will be the system generated Id. If you do not use automated invoicing, enter the manual Invoice Id you created in your sales journal entry. The display-only Description, Invoice Date, Job Id, and Job Name fields will default when you tab out of the field. The system will alert you if no client payments have been applied to this invoice.</p>
+<p><font style="font-weight: bold;">Note:</font> do not fill in the Vendor Id if you complete this field.</p>
+<p><font style="font-weight: bold;">Date to Pay:</font><br/>
+Enter the date that you wish to pay this Vendor in mm-dd-yyyy format (or double-click to select from a Calendar). This is the date that you want all the eligible invoices to default to in the next processing screen.</p>
+<p><font style="font-weight: bold;">Vendor Id:</font><br/>
+<font style="font-weight: bold; font-style: italic;">This field should only be completed if you wish to override the PWP Approval process.</font> Typically, you would enter a Vendor Id in this field (and leave the AR Invoice field blank) if you want to release payment to a paid-when-paid vendor in advance of your billing (and/or receiving payment from) your client.</p>
+<p><font style="font-weight: bold;">AP Invoice Id:</font><br/>
+This field should only be completed if you wish to override the PWP Approval process. If you wish to release payment for a specific voucher, enter the Vendor&#39;s Invoice number.</p>
+<h2>Initial Screen Buttons:</h2>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Click the Go button to continue and display the Approved List.</p>
+<h2>Approved Screen: Important Fields</h2>
+<p>Once you have filled in the ranges in the initial PWP Approved screen and clicked the Go button, the system will display a list of eligible payments. You may reduce the Approved amount, but it may not exceed the amount due.</p>
+<p><img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Click the Go button to complete the approval process. When you run the Date to Pay function, your approved PWP vouchers will be included.</p>
+
+</body></html>

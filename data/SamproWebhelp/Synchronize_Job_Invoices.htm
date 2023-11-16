@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = ".";
+    gCommonRootRelPath = ".";
+    gTopicId = "2.7.4.1.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="./template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="./template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="./whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="./template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./template/single_page/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="MS-HKWD" content="job invoice"/>
+<meta name="MS-HKWD" content="synchronize"/>
+<meta name="MS-HKWD" content="start"/>
+<meta name="topic-status" content="Sent for Review"/>
+<meta name="generator" content="Adobe RoboHelp 2020"/>
+<title>Synchronize Job Invoices</title>
+<link rel="StyleSheet" href="assets/css/sampro.css" type="text/css"/>
+
+<meta name="rh-index-keywords" content="job invoice,synchronize,start"/><meta name="brsprev" value="Start_Reverse_Job_Invoice.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Synchronize Job Invoices">
+        <span>Synchronize Job Invoices</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+<h1>Synchronize Job Invoices</h1>
+<h2>Purpose:</h2>
+<p>This function makes job invoicing corrections to synchronize t&amp;m amounts. It will synchronize jobs such that:</p>
+<p>T&amp;Mbilled = T&amp;Mrevenue - T&amp;Mwrittenoff</p>
+<h2>Important Fields: Initial Screen</h2>
+<p><font style="font-weight: bold;">Job Id:</font><br/>
+If the Job and AR Invoice range fields are blank, the synchronization will be run for all Jobs and AR Invoices. You can limit the synchronization to a specific Job by entering its Id. Several Jobs can be specified by entering their Id&#39;s separated by commas (1005,1007,1020). See <a href="Comparison_Operators.htm">Comparison Operators</a> for details on other range field options.</p>
+<p><font style="font-weight: bold;">AR Invoice Id:</font><br/>
+Limit the synchronization to a specific AR Invoice by entering its Id.</p>
+<h3>Important Fields: List Screen</h3>
+<p><font style="font-weight: bold;">Do</font><br/>
+This field enables you to select which Jobs will be added to the schedule. By default, all Jobs on the list are selected.</p>
+<p>Double-click on the Do field to select or deselect an item (alternately, press the spacebar when the caret appears on this field); a check appears in the Do field when that Job is selected. Refer to the Important Buttons section of this Help topic for details on selecting or deselecting all items.</p>
+<h3>Important Buttons:</h3>
+<p><img src="assets/images/image/check.gif" alt="image\check.gif" title="image\check.gif" width="48" height="28" border="0"/> Click the Check button to check (select) every item on the list.<br/>
+<br/>
+<img src="assets/images/image/checkoff.gif" alt="image\checkoff.gif" title="image\checkoff.gif" width="48" height="28" border="0"/> Click to de-select every item on the list. <img src="assets/images/image/go.gif" alt="image\go.gif" title="image\go.gif" width="48" height="28" border="0"/> Click to synchronize the selected Jobs.</p>
+
+</body></html>
