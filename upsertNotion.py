@@ -44,26 +44,74 @@ namespace = "notion-kb"
 print(f"Building namespace: {namespace} under index {index_name} ...\n")
 # Get documents from notion
 client = Client(auth=notion_key)
-# TODO: recursively get all pages
-response = client.search(
-    query="",
-    filter={"value": "page", "property": "object"}
-)
-notion_pages = response['results']
+
+# Recursively gets all notion pages
+start_cursor = None
+results = []
+has_more = True
+while has_more:
+    if start_cursor is None:
+        response = client.search(
+            query="",
+            filter={"value": "page", "property": "object"}
+        )
+    else:
+        response = client.search(
+            query="",
+            start_cursor=start_cursor,
+            filter={"value": "page", "property": "object"}
+        )
+    results.extend(response.get('results', []))
+    has_more = response.get('has_more', False)
+    
+    if has_more:
+        start_cursor = response.get('next_cursor')
+
+
+# response = client.search(
+#     query="",
+#     filter={"value": "page", "property": "object"}
+# )
+# notion_pages = response['results']
+notion_pages = results
+
+# Remove Notion pages that do not have a title
+notion_valid_pages = []
+for i, page in enumerate(notion_pages):
+    if 'title' in page['properties'].keys():
+        notion_valid_pages.extend([page])
+        # if ('SOPs' not in page['properties']['title']) and ('How To\'s' not in page['properties']['title']) and ('Others' not in page['properties']['title']):
+        #     notion_valid_pages.extend([page])
+print("Total count of valid Notion pages:", len(notion_valid_pages))
 
 NotionPageReader = download_loader('NotionPageReader')
-notion_pages_ids = [str(page['id']) for page in notion_pages]
-notion_pages_urls = [str(page['url']) for page in notion_pages]
-# if len(notion_pages_ids) == 0:
-#     return "Sorry, there is no relevant information in Notion."
-# else:
+notion_pages_ids = [str(page['id']) for page in notion_valid_pages]
+notion_pages_urls = [str(page['url']) for page in notion_valid_pages]
+# notion_pages_titles = [page['properties']['title']['title'][0]['plain_text'] for page in notion_pages]
+
 reader = NotionPageReader(integration_token=notion_key)
 documents = reader.load_data(notion_pages_ids)
-# index = VectorStoreIndex.from_documents(docments)
-# query_engine = index.as_query_engine()
-# return query_engine.query(question).response + "\nReferences:\n" + "\n".join(notion_pages_urls)
 
-# documents = SimpleDirectoryReader(input_dir=input_dir).load_data()
+# # Add metadata
+# for i, doc in enumerate(documents):
+#     doc.metadata['url'] = notion_pages_urls[i]
+#     # doc.metadata['title'] = notion_pages_titles[i]
+#     if 'title' in notion_pages[i]['properties'].keys():
+#         # notion_pages[10]['properties']['title']['title'][0]['plain_text']
+#         doc.metadata['title'] = notion_pages[i]['properties']['title']['title'][0]['plain_text']
+#         print("Indexing", doc.metadata['title'])
+#     else:
+#         doc.metadata['title'] = notion_pages_urls[i]
+
+# Add metadata
+for i, doc in enumerate(documents):
+    doc.metadata['url'] = notion_pages_urls[i]
+    # doc.metadata['title'] = notion_pages_titles[i]
+    # notion_pages[10]['properties']['title']['title'][0]['plain_text']
+    doc.metadata['title'] = notion_valid_pages[i]['properties']['title']['title'][0]['plain_text']
+    doc.metadata['file_name'] = notion_valid_pages[i]['properties']['title']['title'][0]['plain_text']
+    print("Indexing:", doc.metadata['title'])
+    
 
 # create the index if it does not exist already
 if index_name not in pinecone.list_indexes():

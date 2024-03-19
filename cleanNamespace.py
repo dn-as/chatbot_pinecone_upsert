@@ -19,7 +19,8 @@ pinecone.init(
 # pinecone.list_indexes()
 # pinecone.index.delete(delete_all=True, namespace="notion-kb") 
 
-index = pinecone.Index("dnas-wiki")
+# index = pinecone.Index("dnas-wiki")
+index = pinecone.Index("notion-kb-spare-dense")
 
 delete_response = index.delete(delete_all=True, namespace="notion-kb")
 
