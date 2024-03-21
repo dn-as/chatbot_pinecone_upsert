@@ -14,6 +14,7 @@ import openai
 from notion_client import Client
 from pinecone_text.sparse import BM25Encoder
 import re
+import logging
 
 #####################################################
 #                                                   #
@@ -29,6 +30,12 @@ notion_key = os.getenv("notion_key")
 os.environ['PINECONE_API_KEY'] = os.getenv('pinecone_api_key')
 # environment is found next to API key in the console
 os.environ['PINECONE_ENVIRONMENT'] = os.getenv('pinecone_env')
+
+# Configure the logging system
+logging.basicConfig(filename='upsertNotion.log',  # Log file path
+                    filemode='w',  # 'a' for append, 'w' for overwrite
+                    format='%(asctime)s - %(levelname)s - %(message)s',  # Format of log messages
+                    level=logging.INFO)  # Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 
 # initialize connection to pinecone
 pinecone.init(
@@ -48,6 +55,7 @@ bm25 = BM25Encoder()
 index_name = "notion-kb-spare-dense"
 # namespace = "notion-kb"
 print(f"Building index {index_name} ...\n")
+logging.info(f"Building index {index_name} ...\n")
 # Get documents from notion
 client = Client(auth=notion_key)
 
@@ -58,14 +66,14 @@ has_more = True
 while has_more:
     if start_cursor is None:
         response = client.search(
-            query="",
-            filter={"value": "page", "property": "object"}
+            # query="",
+            # filter={"value": "page", "property": "object"}
         )
     else:
         response = client.search(
-            query="",
+            # query="",
             start_cursor=start_cursor,
-            filter={"value": "page", "property": "object"}
+            # filter={"value": "page", "property": "object"}
         )
     results.extend(response.get('results', []))
     has_more = response.get('has_more', False)
@@ -81,12 +89,14 @@ for i, page in enumerate(notion_pages):
     if 'title' in page['properties'].keys() and (
         page['properties']['title']['title'][0]['plain_text'] != '' and 
         page['properties']['title']['title'][0]['plain_text'] != 'SOPs' and
-        page['properties']['title']['title'][0]['plain_text'] != 'How To\'s' and
+        page['properties']['title']['title'][0]['plain_text'] != "How To's" and
         page['properties']['title']['title'][0]['plain_text'] != 'Other'
     ):
         notion_valid_pages.extend([page])
+        # print("API found", page['properties']['title']['title'][0]['plain_text'], "\n")
 
 print("Total count of valid Notion pages:", len(notion_valid_pages))
+logging.info("Total count of valid Notion pages: %s", len(notion_valid_pages))
 
 NotionPageReader = download_loader('NotionPageReader')
 notion_pages_ids = [str(page['id']) for page in notion_valid_pages]
@@ -146,11 +156,13 @@ for i, doc in enumerate(documents):
         text = normalize_whitespace(text) # remove whitespaces, tabs, new line char, etc.
         chunks = divide_string_with_overlap(text=text)
         print("Indexing title:", meta['title'])
+        logging.info("Indexing title: %s", meta['title'])
         for chunk in chunks:
             valid_documents.append(Document(text=chunk.strip(), metadata=meta))
       
 # report chunks of text
 print("Count of chunks of text:", len(valid_documents))
+logging.info("Count of chunks of text: %s", len(valid_documents))
 
 # create the index if it does not exist already
 if index_name not in pinecone.list_indexes():
@@ -191,9 +203,27 @@ for i, (dense, sparse, text, meta) in enumerate(zip(dense_embeds, spare_embeds, 
     })
 
 print("Upserts length:", len(upserts))
+logging.info("Upserts length: %s", len(upserts))
 
 # upsert into vector db and report status
-pineconeIndex.upsert(vectors=upserts, namespace="notion-kb")
+def divide_list(input_list, chunk_size=25):
+    """
+    Divides a list into chunks of specified size.
+
+    Parameters:
+    - input_list: The list to be divided.
+    - chunk_size: The maximum size of each chunk.
+
+    Returns:
+    - A list of lists, where each inner list has at most `chunk_size` elements.
+    """
+    # Using list comprehension to create chunks
+    return [input_list[i:i + chunk_size] for i in range(0, len(input_list), chunk_size)]
+
+# Example usage
+upserts_batch = divide_list(upserts, 25)
+for batch in upserts_batch:
+    pineconeIndex.upsert(vectors=batch, namespace="notion-kb")
 pineconeIndex.describe_index_stats()
 # vectorStore = PineconeVectorStore(
 #     pinecone_index=pineconeIndex,
@@ -211,3 +241,4 @@ pineconeIndex.describe_index_stats()
 #     service_context=service_context
 # )
 print(f"Done building {index_name}!\n{len(documents)} notion pages upserted.")
+logging.info(f"Done building {index_name}!\n{len(documents)} notion pages upserted.")
