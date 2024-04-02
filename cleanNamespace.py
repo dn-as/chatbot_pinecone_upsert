@@ -24,4 +24,5 @@ index = pinecone.Index("notion-kb-spare-dense")
 
 delete_response = index.delete(delete_all=True, namespace="notion-kb")
 
-print(delete_response)
+if len(delete_response) == 0:
+    print("Delete successful")

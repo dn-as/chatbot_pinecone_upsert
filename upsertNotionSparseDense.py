@@ -1,15 +1,8 @@
-from pathlib import Path
-from llama_hub.file.unstructured import UnstructuredReader
-from pathlib import Path
-from llama_index import download_loader
-from llama_index import SimpleDirectoryReader, VectorStoreIndex, Document
+from llama_index.core import download_loader
+from llama_index.core import Document
 from dotenv import load_dotenv
 import os
-from llama_index.node_parser import SimpleNodeParser
 import pinecone
-from llama_index.vector_stores import PineconeVectorStore
-from llama_index import GPTVectorStoreIndex, StorageContext, ServiceContext
-# from llama_index.embeddings.openai import OpenAIEmbedding
 import openai
 from notion_client import Client
 from pinecone_text.sparse import BM25Encoder
@@ -24,7 +17,7 @@ import logging
 
 load_dotenv()
 openai.api_key = os.getenv('api_key')
-notion_key = os.getenv("notion_key")
+notion_key = os.getenv("test_notion_key")
 
 # find API key in console at app.pinecone.io
 os.environ['PINECONE_API_KEY'] = os.getenv('pinecone_api_key')
@@ -43,17 +36,18 @@ pinecone.init(
     environment=os.environ['PINECONE_ENVIRONMENT']
 )
 
-# setup the index/query process, i.e. the embedding model (and completion if used)
-# embed_model = OpenAIEmbedding(model='text-embedding-ada-002', embed_batch_size=100)
-# service_context = ServiceContext.from_defaults(embed_model=embed_model)
+# Delete old vectors
+index = pinecone.Index("notion-kb-spare-dense")
+delete_response = index.delete(delete_all=True, namespace="notion-kb")
+if len(delete_response) == 0:
+    logging.info("Delete successful, Index: notion-kb-spare-dense, Namespace: notion-kb")
+    print("Delete successful")
 
 # setup Spare vector encoder
 bm25 = BM25Encoder()
-# embed_model.aget_text_embedding()
 
 # Building namespace
 index_name = "notion-kb-spare-dense"
-# namespace = "notion-kb"
 print(f"Building index {index_name} ...\n")
 logging.info(f"Building index {index_name} ...\n")
 # Get documents from notion
@@ -66,14 +60,14 @@ has_more = True
 while has_more:
     if start_cursor is None:
         response = client.search(
-            # query="",
-            # filter={"value": "page", "property": "object"}
+            query="",
+            filter={"value": "page", "property": "object"}
         )
     else:
         response = client.search(
-            # query="",
+            query="",
             start_cursor=start_cursor,
-            # filter={"value": "page", "property": "object"}
+            filter={"value": "page", "property": "object"}
         )
     results.extend(response.get('results', []))
     has_more = response.get('has_more', False)
@@ -85,22 +79,23 @@ notion_pages = results
 
 # Remove Notion pages that do not have a title
 notion_valid_pages = []
-for i, page in enumerate(notion_pages):
-    if 'title' in page['properties'].keys() and (
-        page['properties']['title']['title'][0]['plain_text'] != '' and 
-        page['properties']['title']['title'][0]['plain_text'] != 'SOPs' and
-        page['properties']['title']['title'][0]['plain_text'] != "How To's" and
-        page['properties']['title']['title'][0]['plain_text'] != 'Other'
-    ):
-        notion_valid_pages.extend([page])
-        # print("API found", page['properties']['title']['title'][0]['plain_text'], "\n")
+notion_valid_page_titles = []
+
+for page in notion_pages:
+    page_title_object = client.pages.properties.retrieve(page_id=page['id'], property_id="title")
+    # Filter out pages with no title
+    if len(page_title_object['results']) != 0:
+        page_title = page_title_object['results'][0]['title']['plain_text']
+        if page_title != '' and page_title != 'SOPs' and page_title != "How To’s" and page_title != 'Other':
+            notion_valid_pages.extend([page])
+            notion_valid_page_titles.extend([page_title])
 
 print("Total count of valid Notion pages:", len(notion_valid_pages))
 logging.info("Total count of valid Notion pages: %s", len(notion_valid_pages))
 
 NotionPageReader = download_loader('NotionPageReader')
 notion_pages_ids = [str(page['id']) for page in notion_valid_pages]
-notion_pages_urls = [str(page['public_url']) for page in notion_valid_pages]
+notion_pages_urls = [str(page['url']) for page in notion_valid_pages]
 
 reader = NotionPageReader(integration_token=notion_key)
 documents = reader.load_data(notion_pages_ids)
@@ -108,9 +103,7 @@ documents = reader.load_data(notion_pages_ids)
 # Add metadata
 for i, doc in enumerate(documents):
     doc.metadata['url'] = notion_pages_urls[i]
-    doc.metadata['title'] = notion_valid_pages[i]['properties']['title']['title'][0]['plain_text']
-    # doc.metadata['file_name'] = notion_valid_pages[i]['properties']['title']['title'][0]['plain_text']
-
+    doc.metadata['title'] = notion_valid_page_titles[i]
 
 def divide_string_with_overlap(text, chunk_size=200, overlap=50):
     # Split the text into words
@@ -225,20 +218,6 @@ upserts_batch = divide_list(upserts, 25)
 for batch in upserts_batch:
     pineconeIndex.upsert(vectors=batch, namespace="notion-kb")
 pineconeIndex.describe_index_stats()
-# vectorStore = PineconeVectorStore(
-#     pinecone_index=pineconeIndex,
-#     namespace=namespace
-# )
 
-# # setup our storage (vector db)
-# storageContext = StorageContext.from_defaults(
-#     vector_store=vectorStore
-# )
-
-# index = GPTVectorStoreIndex.from_documents(
-#     documents=documents, 
-#     storage_context=storageContext,
-#     service_context=service_context
-# )
 print(f"Done building {index_name}!\n{len(documents)} notion pages upserted.")
 logging.info(f"Done building {index_name}!\n{len(documents)} notion pages upserted.")
