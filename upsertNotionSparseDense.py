@@ -1,5 +1,5 @@
-from llama_index.core import download_loader
-from llama_index.core import Document
+from llama_index import download_loader
+from llama_index import Document
 from dotenv import load_dotenv
 import os
 import pinecone

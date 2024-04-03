@@ -18,5 +18,6 @@ RUN pip install --no-cache-dir pinecone-client==2.2.4 pinecone-text==0.8.0 opena
 # (Optional: Use this section to set any environment variables you need)
 # ENV NAME World
 
+
 # Run upsertNotionSparseDense.py when the container launches
 CMD ["python", "./upsertNotionSparseDense.py"]
