@@ -17,7 +17,7 @@ import logging
 
 load_dotenv()
 openai.api_key = os.getenv('api_key')
-notion_key = os.getenv("test_notion_key")
+notion_key = os.getenv("notion_key")
 
 # find API key in console at app.pinecone.io
 os.environ['PINECONE_API_KEY'] = os.getenv('pinecone_api_key')
@@ -221,3 +221,4 @@ pineconeIndex.describe_index_stats()
 
 print(f"Done building {index_name}!\n{len(documents)} notion pages upserted.")
 logging.info(f"Done building {index_name}!\n{len(documents)} notion pages upserted.")
+
