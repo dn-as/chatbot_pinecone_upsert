@@ -8,6 +8,7 @@ from notion_client import Client
 from pinecone_text.sparse import BM25Encoder
 import re
 import logging
+from emailSender import sendEmail
 
 #####################################################
 #                                                   #
@@ -222,3 +223,4 @@ pineconeIndex.describe_index_stats()
 print(f"Done building {index_name}!\n{len(documents)} notion pages upserted.")
 logging.info(f"Done building {index_name}!\n{len(documents)} notion pages upserted.")
 
+logging.info(sendEmail())

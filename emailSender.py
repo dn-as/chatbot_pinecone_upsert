@@ -7,10 +7,6 @@ def emailSender(
         email_address: str,
         ccRecipients: list[str],
         my_email: str,
-        question: str,
-        answer: str,
-        references: str,
-        rating: str
     ):
     headers = {'Authorization': 'Bearer ' + access_token,
                'Content-Type' : 'application/json'}
@@ -47,11 +43,7 @@ def emailSender(
                            headers=headers, json=json.loads(json.dumps(msg)))
     return status
 
-def sendEmail(
-        question: str,
-        answer: str,
-        references: str,
-        rating: str):
+def sendEmail():
     ccRecipients = [
         "lguo@wearetheone.com"
     ]
@@ -61,11 +53,7 @@ def sendEmail(
         access_token,
         "it@wearetheone.com",
         ccRecipients,
-        "it@wearetheone.com",
-        question,
-        answer,
-        references,
-        rating
+        "it@wearetheone.com"
     )
     if status.status_code == 202:
         return "Email sent successfully."
