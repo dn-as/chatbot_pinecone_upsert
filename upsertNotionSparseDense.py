@@ -100,11 +100,14 @@ notion_pages_urls = [str(page['url']) for page in notion_valid_pages]
 
 reader = NotionPageReader(integration_token=notion_key)
 documents = reader.load_data(notion_pages_ids)
+logging.info("Finished loading docs")
 
 # Add metadata
 for i, doc in enumerate(documents):
     doc.metadata['url'] = notion_pages_urls[i]
     doc.metadata['title'] = notion_valid_page_titles[i]
+
+logging.info("Finished loading metadata")
 
 def divide_string_with_overlap(text, chunk_size=200, overlap=50):
     # Split the text into words
@@ -153,7 +156,7 @@ for i, doc in enumerate(documents):
         logging.info("Indexing title: %s", meta['title'])
         for chunk in chunks:
             valid_documents.append(Document(text=chunk.strip(), metadata=meta))
-      
+            
 # report chunks of text
 print("Count of chunks of text:", len(valid_documents))
 logging.info("Count of chunks of text: %s", len(valid_documents))
