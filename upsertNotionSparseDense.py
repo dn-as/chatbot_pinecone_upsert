@@ -9,6 +9,7 @@ from pinecone_text.sparse import BM25Encoder
 import re
 import logging
 from emailSender import sendEmail
+import time
 
 #####################################################
 #                                                   #
@@ -58,6 +59,10 @@ client = Client(auth=notion_key)
 start_cursor = None
 results = []
 has_more = True
+
+# Throttle parameters
+request_delay = 1 # 1 second delay between requests
+
 while has_more:
     if start_cursor is None:
         response = client.search(
@@ -75,6 +80,9 @@ while has_more:
     
     if has_more:
         start_cursor = response.get('next_cursor')
+
+    # Add delay to throttle requests
+    time.sleep(request_delay)
 
 notion_pages = results
 
